@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Lato|Noto+Sans+TC|Roboto);
+.nav-before .nav-bar-wrapper a.logo-set .en-title {
+  font-family: "Lato"; }
+
+html,
+body {
+  background-color: #eeeeee;
+  font-family: "Noto Sans TC", "Lato"; }
+
+a {
+  color: white; }
+
+.nav-before {
+  background-color: #00000067;
+  width: 100%;
+  position: fixed;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .nav-before .nav-bar-wrapper {
+    display: inline-block;
+    margin: 0 auto;
+    width: 1150px;
+    max-width: 1150px; }
+    .nav-before .nav-bar-wrapper a.logo-set {
+      color: #fff;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+      .nav-before .nav-bar-wrapper a.logo-set li {
+        float: left; }
+      .nav-before .nav-bar-wrapper a.logo-set img.logo {
+        margin-top: 7px;
+        margin-right: 10px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        -webkit-filter: brightness(5) grayscale(1);
+        filter: brightness(5) grayscale(1); }
+      .nav-before .nav-bar-wrapper a.logo-set .cn-title {
+        letter-spacing: 1px; }
+      .nav-before .nav-bar-wrapper a.logo-set .en-title {
+        display: block;
+        font-size: xx-small; }
+      .nav-before .nav-bar-wrapper a.logo-set:hover {
+        color: #000;
+        font-weight: 500; }
+        .nav-before .nav-bar-wrapper a.logo-set:hover img.logo {
+          -webkit-filter: brightness(0);
+          filter: brightness(0); }
+    .nav-before .nav-bar-wrapper .main-menu {
+      display: inline-block; }
+      .nav-before .nav-bar-wrapper .main-menu a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 1.5rem;
+        margin: 0 10px;
+        border-radius: 5px;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+        .nav-before .nav-bar-wrapper .main-menu a:hover {
+          background: #fff;
+          color: #000; }
+      .nav-before .nav-bar-wrapper .main-menu ul {
+        float: left; }
+        .nav-before .nav-bar-wrapper .main-menu ul li {
+          display: inline-block;
+          position: relative; }
+          .nav-before .nav-bar-wrapper .main-menu ul li ul {
+            position: absolute;
+            display: block;
+            width: 250px;
+            padding-top: 50px;
+            top: 100%;
+            left: -100000%;
+            z-index: 9999; }
+            .nav-before .nav-bar-wrapper .main-menu ul li ul .bg-fix {
+              background: #000;
+              padding-top: 10px;
+              margin-top: -22px;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px; }
+            .nav-before .nav-bar-wrapper .main-menu ul li ul .bg-fix-sm {
+              background: #000;
+              padding-top: 10px;
+              margin-top: -22px;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+              width: 150px; }
+            .nav-before .nav-bar-wrapper .main-menu ul li ul li {
+              display: block; }
+              .nav-before .nav-bar-wrapper .main-menu ul li ul li a {
+                background: #000;
+                display: inline-block;
+                border-radius: 5px;
+                margin-top: 0px;
+                margin-bottom: 10px; }
+              .nav-before .nav-bar-wrapper .main-menu ul li ul li img {
+                -webkit-transition: .5s;
+                -o-transition: .5s;
+                transition: .5s;
+                margin-right: 5px;
+                margin-top: -5px; }
+              .nav-before .nav-bar-wrapper .main-menu ul li ul li:hover img {
+                -webkit-filter: brightness(0);
+                filter: brightness(0); }
+          .nav-before .nav-bar-wrapper .main-menu ul li:hover ul {
+            left: 0%; }
+    .nav-before .nav-bar-wrapper .log-search {
+      float: right;
+      margin-top: 1rem; }
+      .nav-before .nav-bar-wrapper .log-search a {
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        margin-right: 10px; }
+        .nav-before .nav-bar-wrapper .log-search a:hover {
+          color: #000; }
+      .nav-before .nav-bar-wrapper .log-search button {
+        background: none;
+        border: 1px solid white;
+        outline: none;
+        font-family: "Lato";
+        font-size: small;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 15px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        .nav-before .nav-bar-wrapper .log-search button:hover {
+          color: #000;
+          font-weight: 700;
+          background-color: #fff; }
+  .nav-before.sticky {
+    background-color: #474747;
+    position: fixed;
+    top: 0;
+    border-top: 3px solid #b39368;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+    .nav-before.sticky a.logo-set:hover {
+      color: #b39368; }
+      .nav-before.sticky a.logo-set:hover img.logo {
+        -webkit-filter: brightness(1) grayscale(0);
+        filter: brightness(1) grayscale(0); }
+    .nav-before.sticky .log-search > a:hover {
+      color: #b39368; }
+    .nav-before.sticky .log-search > button:hover {
+      color: #000;
+      border-color: #b39368; }
+
+.banner-test {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/lecture/lec-img-001.jpg);
+  background-position: center;
+  background-size: cover; }
+
+.content-test {
+  width: 100%;
+  height: 100vh;
+  background-color: sandybrown; }
