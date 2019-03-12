@@ -170,3 +170,12 @@ $(window).on("resize.slickVideoPlayer", function () {
     resizePlayer(iframes, 16 / 9);
     $('.item').lazyLoad();
 });
+
+// 前端愛心收藏按鈕動畫
+$(document).ready(function () {
+    $('.add').click(function () {
+        $('.thumb-header').toggleClass('liked');
+        $('.thumb-header .add').html('<i class="far fa-heart"></i>');
+        $('.thumb-header.liked .add').html('<i class="fas fa-heart"></i>');
+    });
+});

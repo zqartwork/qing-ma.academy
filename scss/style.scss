@@ -6,7 +6,8 @@ $font-d: #b39368;
 $font-w: #fff;
 $font-dark: #474747;
 $font-bk: #000;
-$font-gray: #bdbdbd;
+$font-gray: #969696;
+
 %cn {
     font-family: $font-cn;
 }
@@ -47,42 +48,52 @@ button {
     position: fixed;
     transition: .5s;
     z-index: 9999;
+
     .nav-bar-wrapper {
         display: inline-block;
         margin: 0 auto;
         width: 1150px;
         max-width: 1150px;
+
         a.logo-set {
             color: $font-w;
             transition: .5s;
+
             li {
                 float: left;
             }
+
             img.logo {
                 margin-top: 7px;
                 margin-right: 10px;
                 transition: .3s;
                 filter: brightness(5) grayscale(1);
             }
+
             .cn-title {
                 letter-spacing: 1px;
             }
+
             .en-title {
                 display: block;
                 @extend %en;
                 font-size: xx-small;
             }
+
             &:hover {
                 color: $font-d;
                 font-weight: 500;
+
                 img.logo {
                     filter: brightness(1);
                 }
             }
         }
+
         // hover-dropdown-menu
         .main-menu {
             display: inline-block;
+
             a {
                 color: $font-w;
                 text-decoration: none;
@@ -91,16 +102,20 @@ button {
                 margin: 0 10px;
                 border-radius: 5px;
                 transition: .5s;
+
                 &:hover {
                     background: #fff;
                     color: $font-bk;
                 }
             }
+
             ul {
                 float: left;
+
                 li {
                     display: inline-block;
                     position: relative;
+
                     ul {
                         position: absolute;
                         display: block;
@@ -109,6 +124,7 @@ button {
                         top: 100%;
                         left: -100000%;
                         z-index: 9999;
+
                         .bg-fix {
                             background: #000;
                             padding-top: 10px;
@@ -116,6 +132,7 @@ button {
                             border-bottom-left-radius: 5px;
                             border-bottom-right-radius: 5px;
                         }
+
                         .bg-fix-sm {
                             background: #000;
                             padding-top: 10px;
@@ -124,8 +141,10 @@ button {
                             border-bottom-right-radius: 5px;
                             width: 150px;
                         }
+
                         li {
                             display: block;
+
                             a {
                                 background: #000;
                                 display: inline-block;
@@ -133,11 +152,13 @@ button {
                                 margin-top: 0px;
                                 margin-bottom: 10px;
                             }
+
                             img {
                                 transition: .5s;
                                 margin-right: 5px;
                                 margin-top: -5px;
                             }
+
                             &:hover {
                                 img {
                                     filter: brightness(0);
@@ -145,6 +166,7 @@ button {
                             }
                         }
                     }
+
                     &:hover {
                         ul {
                             left: 0%;
@@ -153,10 +175,12 @@ button {
                 }
             }
         }
+
         //login-search
         .log-search {
             float: right;
             margin-top: 1rem;
+
             button {
                 background: none;
                 border: 1px solid white;
@@ -167,25 +191,30 @@ button {
                 padding: 5px 15px;
                 border-radius: 15px;
                 transition: .3s;
+
                 &#logOut {
                     border-radius: 40px;
                     padding: 5px 15px 5px 10px;
                     margin-top: -1rem;
                 }
+
                 &:hover {
                     color: $font-bk;
                     font-weight: 700;
                     background-color: #fff;
                 }
             }
+
             #logOut {
                 display: none;
                 font-family: $font-cn;
+
                 span {
                     position: relative;
                     top: 2px;
                     margin-left: 3px;
                 }
+
                 .user__photo {
                     width: 2rem;
                     border-radius: 100%;
@@ -193,21 +222,26 @@ button {
             }
         }
     }
+
     &.sticky {
         background-color: $font-dark;
         position: fixed;
         top: 0;
         border-top: 3px solid #b39368;
         transition: .5s;
+
         & a.logo-set:hover {
             color: #b39368;
+
             img.logo {
                 filter: brightness(1) grayscale(0);
             }
         }
+
         .log-search>a:hover {
             color: #b39368;
         }
+
         .log-search>button:hover {
             color: $font-bk;
             border-color: #b39368;
@@ -329,6 +363,7 @@ button {
     top: -0.3rem;
     cursor: pointer;
     transition-duration: .3s;
+
     .btn-material {
         position: absolute;
         width: 38px;
@@ -340,6 +375,7 @@ button {
         transform-origin: 50%;
         transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     .icon-material-search {
         color: #fff;
         transition: opacity 0.3s ease-in-out;
@@ -348,6 +384,7 @@ button {
         top: -2px;
         line-height: 40px;
     }
+
     &.left-shift-5rem {
         right: 13rem;
     }
@@ -358,6 +395,7 @@ $bg_color: #2d3042;
 $font_color: #efefef;
 $link_color: #efefef;
 $link_hover_color: #fff;
+
 %bv_hidden {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -380,6 +418,7 @@ $link_hover_color: #fff;
     opacity: 0;
     visibility: hidden;
     transition: all 1.2s ease;
+
     &.slick-initialized {
         opacity: 1;
         visibility: visible;
@@ -391,6 +430,7 @@ $link_hover_color: #fff;
     height: 33vw;
     min-height: 25vw;
     @extend %bv_hidden;
+
     &::before {
         @extend %filled_obj;
         @extend %bv_hidden;
@@ -398,6 +438,7 @@ $link_hover_color: #fff;
         opacity: .3;
         z-index: 1;
     }
+
     video {
         display: block;
         position: absolute;
@@ -409,33 +450,41 @@ $link_hover_color: #fff;
         height: auto;
         transform: translate(-50%, -50%);
     }
+
     iframe {
         position: relative;
         pointer-events: none;
     }
+
     figure {
         position: relative;
         height: 100%;
     }
+
     .image-entity {
         width: 100%;
         opacity: 0;
         visibility: hidden;
     }
+
     .loading {
         position: absolute;
         top: 44%;
         left: 0;
         width: 100%;
     }
+
     .slide-media {
         animation: slideOut .4s cubic-bezier(0.4, 0.29, 0.01, 1);
     }
+
     &.slick-active {
         z-index: 1;
+
         .slide-media {
             animation: slideIn 2.4s cubic-bezier(0.4, 0.29, 0.01, 1);
         }
+
         .caption {
             opacity: 1;
             transform: translateY(0);
@@ -453,6 +502,7 @@ $link_hover_color: #fff;
     // background-color:rgba(#c46897,.38);
     // background-blend-mode:overlay;
     transition: all .8s ease;
+
     &.show {
         opacity: 1;
     }
@@ -462,6 +512,7 @@ $link_hover_color: #fff;
 .slick-slide,
 .slide-image {
     height: 33vw;
+
     @media (max-width: 995px) {
         height: 40vw;
     }
@@ -478,12 +529,15 @@ $link_hover_color: #fff;
     font-size: 70px;
     transition: .5s;
     top: 45%;
+
     &:hover {
         color: rgba(255, 255, 255, 0.829);
     }
+
     @media (max-width: 1420px) {
         font-size: 60px;
     }
+
     @media (max-width: 990px) {
         font-size: 50px;
     }
@@ -491,6 +545,7 @@ $link_hover_color: #fff;
 
 .slick-prev {
     left: 15%;
+
     @media (max-width: 995px) {
         left: 10%;
     }
@@ -498,6 +553,7 @@ $link_hover_color: #fff;
 
 .slick-next {
     right: 15%;
+
     @media (max-width: 995px) {
         right: 10%;
     }
@@ -524,6 +580,7 @@ $link_hover_color: #fff;
     transform: translateY(100px);
     @extend %bv_hidden;
     $colors: (fill: #a972cb, pulse-btn: #ef6eae, close-btn: #ff7f82, raise-btn: #ffa260, up-btn: #e4cb58, slide-btn: #fff, offse-btnt: #19bc8b);
+
     @each $button,
     $color in $colors {
         .#{$button} {
@@ -531,10 +588,12 @@ $link_hover_color: #fff;
             --hover: #{adjust-hue($color, 45deg)};
         }
     }
+
     .slide-btn:hover,
     .slide-btn:focus {
         box-shadow: inset 8.5em 0 0 0 var(--hover);
     }
+
     button {
         display: block;
         margin: 15px auto;
@@ -544,12 +603,14 @@ $link_hover_color: #fff;
         padding: 5px 15px;
         color: var(--color);
         transition: 0.25s;
+
         &:hover,
         &:focus {
             border-color: var(--hover);
             color: #000;
         }
     }
+
     .name {
         display: block;
         font-size: 18px;
@@ -559,10 +620,12 @@ $link_hover_color: #fff;
 .slick-dots {
     text-align: center;
     padding-top: 15px;
+
     li {
         display: inline-block;
         vertical-align: top;
         margin: 0 8px;
+
         button {
             width: 16px;
             height: 16px;
@@ -576,13 +639,16 @@ $link_hover_color: #fff;
             background-color: #fff;
             transition: all .3s ease;
             opacity: .4;
+
             &:focus {
                 outline: none;
             }
+
             &:hover {
                 opacity: 1;
             }
         }
+
         &.slick-active {
             button {
                 border-color: $bg_color;
@@ -597,6 +663,7 @@ $link_hover_color: #fff;
     from {
         filter: blur(15px);
     }
+
     to {
         filter: blur(0);
     }
@@ -606,6 +673,7 @@ $link_hover_color: #fff;
     from {
         filter: blur(0);
     }
+
     to {
         filter: blur(15px);
     }
@@ -615,6 +683,7 @@ $link_hover_color: #fff;
 .web-intro {
     position: relative;
     width: 100%;
+
     .three-part {
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -627,50 +696,58 @@ $link_hover_color: #fff;
         width: 100%;
         background-image: linear-gradient(to right, rgb(100, 100, 100), rgb(179, 95, 0));
         margin-bottom: 0;
+
         .infoG,
         .MobileG,
         .teacherG {
             flex: 0.2;
             height: 70px;
             border-right: 1px solid lightgray;
-            // border-radius: 20px;
             margin: 0 10px;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            margin-top: 10px;
+
             @media (max-width: 1150px) {
                 display: flex;
                 color: white;
                 flex: 0.25;
             }
+
             @media (max-width: 990px) {
                 display: flex;
                 color: white;
                 flex: 0.3;
             }
+
             .icon {
                 flex: 0.2;
                 color: white;
                 font-size: 60px;
+
                 @media (max-width: 1420px) {
                     font-size: 55px;
                 }
             }
+
             .cont {
                 flex: 0.6;
                 color: white;
                 font-weight: lighter;
                 font-size: 15px;
+
                 @media (max-width: 1420px) {
                     flex: 0.7;
                 }
+
                 @media (max-width: 1150px) {
                     display: none;
                 }
+
                 &-md {
                     display: none;
+
                     @media (max-width: 1150px) {
                         display: flex;
                         color: white;
@@ -680,6 +757,7 @@ $link_hover_color: #fff;
                 }
             }
         }
+
         .teacherG {
             border: none;
         }
@@ -688,28 +766,156 @@ $link_hover_color: #fff;
 
 .index-class {
     padding-top: 2rem;
+
+    &.rec-class-section {
+        padding-top: 5rem;
+    }
+
     .flex-ls-wrapper {
         margin: 0 auto;
         flex-wrap: wrap;
-        width: 80%;
+        width: 60%;
+        min-width: 1050px;
+
+        .title-wrapper.col-12 {
+            padding-left: 10px;
+        }
+
+        .coursetitle {
+            color: $font-dark;
+            font-size: 30px;
+
+            img {
+                margin-bottom: 10px;
+                margin-right: 10px;
+            }
+        }
+
         .class-thumb {
-            height: 320px;
+            height: 400px;
             // background: gray;
             padding: 10px;
+            cursor: pointer;
+
+
+
             .thumb {
                 background: #fff;
                 width: 100%;
                 height: 100%;
+                transition: .3s;
+
+                &:hover {
+                    box-shadow: 3px 3px 5px $font-gray;
+                }
+
                 ul {
+                    overflow: hidden;
+
                     li {
-                        &.poster {
+                        font-weight: lighter;
+                        overflow: hidden;
+
+                        &.thumb-header {
+                            height: 170px;
+
+                            .add {
+                                position: absolute;
+                                display: inline-block;
+                                z-index: 1;
+                                font-size: 25px;
+                                color: white;
+                                background: none;
+                                border: 3px solid white;
+                                border-radius: 100%;
+                                height: 50px;
+                                width: 50px;
+                                top: 23%;
+                                left: 50%;
+                                margin-top: -25px;
+                                margin-left: -25px;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: .5s;
+
+                            }
+
+                            .add-mark {
+                                position: absolute;
+                                display: inline-block;
+                                z-index: 1;
+                                font-size: 25px;
+                                color: white;
+                                background: none;
+                                border-radius: 100%;
+                                height: 50px;
+                                width: 50px;
+                                top: 40%;
+                                right: 0%;
+                                margin-top: -25px;
+                                margin-left: -25px;
+                                transition: .5s;
+                            }
+
+                            &:hover .add {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+
+                            &:hover .add-mark {
+                                visibility: hidden;
+                                opacity: 0;
+                            }
+
+                            &:hover .poster {
+                                background-size: 130%;
+                                filter: blur(2px);
+                            }
+                        }
+
+
+
+                        & .poster {
                             position: relative;
                             display: block;
                             width: 100%;
-                            height: 150px;
+                            height: 170px;
                             overflow: hidden;
-                            background-size: cover;
+                            background-size: 125%;
                             background-position: center;
+                            transition-duration: .5s;
+                        }
+
+
+
+                        &.title {
+                            font-size: 22px;
+                            padding: 10px 10px 0 10px;
+                        }
+
+                        &.cont,
+                        &.time,
+                        &.name {
+                            padding: 2px 10px;
+                            color: $font-gray;
+
+                            span.star {
+                                color: #ffc240;
+                                margin-right: 5px;
+                            }
+                        }
+
+                        &.price {
+                            display: inline;
+                            position: absolute;
+                            right: 25px;
+                            bottom: 15px;
+
+                            span {
+                                display: inline-block;
+                                color: rgb(214, 139, 0);
+                                font-size: 28px;
+                            }
                         }
                     }
                 }
