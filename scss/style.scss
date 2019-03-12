@@ -2,7 +2,9 @@
 
 $font-cn: 'Noto Sans TC';
 $font-en: 'Lato';
-$bgColor: #eeeeee;
+$bgColor: #e4e4e4;
+
+$font-d: #b39368;
 $font-w: #fff;
 $font-dark: #474747;
 $font-bk: #000;
@@ -20,12 +22,26 @@ html,
 body {
     background-color: $bgColor;
     font-family: $font-cn, $font-en;
+    outline: none;
+    background: $bgColor;
 }
 
 a {
     color: white;
+    outline: none;
 }
 
+button {
+    outline: none !important;
+}
+
+.en {
+    @extend %en;
+}
+
+.cursor-default {
+    cursor: default;
+}
 
 
 // before-sticky
@@ -34,6 +50,7 @@ a {
     width: 100%;
     position: fixed;
     transition: .5s;
+    z-index: 9999;
 
     .nav-bar-wrapper {
         display: inline-block;
@@ -67,11 +84,11 @@ a {
             }
 
             &:hover {
-                color: $font-bk;
+                color: $font-d;
                 font-weight: 500;
 
                 img.logo {
-                    filter: brightness(0);
+                    filter: brightness(1);
                 }
             }
         }
@@ -373,5 +390,330 @@ a {
     &.left-shift-4rem {
         right: 12rem;
 
+    }
+}
+
+// 輪播 Banner 區塊
+$bg_color: #2d3042;
+$font_color: #efefef;
+$link_color: #efefef;
+$link_hover_color: #fff;
+
+%bv_hidden {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+%filled_obj {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-slider {
+    position: relative;
+    width: 100%;
+    height: 32vw;
+    min-height: 8vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.2s ease;
+
+    &.slick-initialized {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.slick-slide {
+    position: relative;
+    height: 32vw;
+    @extend %bv_hidden;
+
+    &::before {
+        @extend %filled_obj;
+        @extend %bv_hidden;
+        background-color: #000;
+        opacity: .3;
+        z-index: 1;
+    }
+
+    video {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    iframe {
+        position: relative;
+        pointer-events: none;
+    }
+
+    figure {
+        position: relative;
+        height: 100%;
+    }
+
+    .image-entity {
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .loading {
+        position: absolute;
+        top: 44%;
+        left: 0;
+        width: 100%;
+    }
+
+    .slide-media {
+        animation: slideOut .4s cubic-bezier(0.4, 0.29, 0.01, 1);
+    }
+
+    &.slick-active {
+        z-index: 1;
+
+        .slide-media {
+            animation: slideIn 2.4s cubic-bezier(0.4, 0.29, 0.01, 1);
+        }
+
+        .caption {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all .7s cubic-bezier(0.32, 0.34, 0, 1.62) .6s;
+        }
+    }
+
+}
+
+.slide-image {
+    opacity: 0;
+    height: 32vw;
+    background-size: cover;
+    background-position: center;
+    // background-color:rgba(#c46897,.38);
+    // background-blend-mode:overlay;
+    transition: all .8s ease;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+.slick-next,
+.slick-prev {
+    position: absolute;
+    z-index: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.322);
+    font-size: 70px;
+    transition: .5s;
+
+    &:hover {
+
+        color: rgba(255, 255, 255, 0.829);
+    }
+}
+
+.slick-prev {
+    top: 45%;
+    left: 15%;
+}
+
+.slick-next {
+    top: 45%;
+    right: 15%;
+}
+
+.caption {
+    position: absolute;
+    top: 36%;
+    left: 29%;
+    width: 800px;
+    text-align: center;
+    padding: 30px 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: #fff;
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: .03em;
+    opacity: 0;
+    z-index: 1;
+    transition: all .3s ease;
+    transform: translateY(100px);
+    @extend %bv_hidden;
+
+    $colors: (fill: #a972cb,
+        pulse-btn: #ef6eae,
+        close-btn: #ff7f82,
+        raise-btn: #ffa260,
+        up-btn: #e4cb58,
+        slide-btn: #fff,
+        offse-btnt: #19bc8b);
+
+    @each $button,
+    $color in $colors {
+        .#{$button} {
+            --color: #{$color};
+            --hover: #{adjust-hue($color, 45deg)};
+        }
+    }
+
+    .slide-btn:hover,
+    .slide-btn:focus {
+        box-shadow: inset 8.5em 0 0 0 var(--hover);
+    }
+
+    button {
+        display: block;
+        margin: 15px auto;
+        font-size: 20px;
+        background: none;
+        border: 1px solid white;
+        padding: 5px 15px;
+        color: var(--color);
+        transition: 0.25s;
+
+        &:hover,
+        &:focus {
+            border-color: var(--hover);
+            color: #000;
+        }
+    }
+
+
+
+    .name {
+        display: block;
+        font-size: 18px;
+    }
+
+}
+
+.slick-dots {
+    text-align: center;
+    padding-top: 15px;
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 8px;
+
+        button {
+            width: 16px;
+            height: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 0 transparent;
+            vertical-align: middle;
+            color: #fff;
+            background-color: #fff;
+            transition: all .3s ease;
+            opacity: .4;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &.slick-active {
+            button {
+                border-color: $bg_color;
+                box-shadow: 0 0 0 2px #fff;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        filter: blur(15px);
+    }
+
+    to {
+        filter: blur(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        filter: blur(0);
+    }
+
+    to {
+        filter: blur(15px);
+    }
+}
+
+// 網站特色 內容簡介區塊
+.web-intro {
+    position: relative;
+    width: 100%;
+
+    .three-part {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        background-image:
+            linear-gradient(to right, rgb(100, 100, 100), rgb(179, 95, 0));
+
+        .infoG,
+        .MobileG,
+        .teacherG {
+            flex: 0.2;
+            height: 70px;
+            border-right: 1px solid lightgray;
+            // border-radius: 20px;
+            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            .icon {
+                flex: 0.2;
+                color: white;
+                font-size: 60px;
+            }
+
+            .cont {
+                flex: 0.6;
+                color: white;
+                font-weight: lighter;
+                font-size: 18px;
+            }
+        }
+
+        .teacherG {
+            border: none;
+        }
     }
 }
