@@ -300,8 +300,8 @@ button {
     left: 10px;
     top: -2px;
     line-height: 40px; }
-  .control.left-shift-4rem {
-    right: 12rem; }
+  .control.left-shift-5rem {
+    right: 13rem; }
 
 .slick-slide, .slick-slide::before, .caption {
   -webkit-backface-visibility: hidden;
@@ -318,8 +318,8 @@ button {
 .main-slider {
   position: relative;
   width: 100%;
-  height: 32vw;
-  min-height: 8vw;
+  height: 33vw;
+  min-height: 25vw;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 1.2s ease;
@@ -331,7 +331,8 @@ button {
 
 .slick-slide {
   position: relative;
-  height: 32vw; }
+  height: 33vw;
+  min-height: 25vw; }
   .slick-slide::before {
     background-color: #000;
     opacity: .3;
@@ -382,7 +383,8 @@ button {
 
 .slide-image {
   opacity: 0;
-  height: 32vw;
+  height: 33vw;
+  min-height: 25vw;
   background-size: cover;
   background-position: center;
   -webkit-transition: all .8s ease;
@@ -390,6 +392,16 @@ button {
   transition: all .8s ease; }
   .slide-image.show {
     opacity: 1; }
+
+.main-slider,
+.slick-slide,
+.slide-image {
+  height: 33vw; }
+  @media (max-width: 995px) {
+    .main-slider,
+    .slick-slide,
+    .slide-image {
+      height: 40vw; } }
 
 .slick-next,
 .slick-prev {
@@ -402,31 +414,46 @@ button {
   font-size: 70px;
   -webkit-transition: .5s;
   -o-transition: .5s;
-  transition: .5s; }
+  transition: .5s;
+  top: 45%; }
   .slick-next:hover,
   .slick-prev:hover {
     color: rgba(255, 255, 255, 0.829); }
+  @media (max-width: 1420px) {
+    .slick-next,
+    .slick-prev {
+      font-size: 60px; } }
+  @media (max-width: 990px) {
+    .slick-next,
+    .slick-prev {
+      font-size: 50px; } }
 
 .slick-prev {
-  top: 45%;
   left: 15%; }
+  @media (max-width: 995px) {
+    .slick-prev {
+      left: 10%; } }
 
 .slick-next {
-  top: 45%;
   right: 15%; }
+  @media (max-width: 995px) {
+    .slick-next {
+      right: 10%; } }
 
 .caption {
   position: absolute;
-  top: 36%;
-  left: 29%;
-  width: 800px;
+  top: 56.5%;
+  left: 50%;
+  width: 600px;
+  height: 200px;
   text-align: center;
   padding: 30px 50px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   color: #fff;
-  margin: 0;
-  font-size: 40px;
+  margin-top: -100px;
+  margin-left: -300px;
+  font-size: 30px;
   letter-spacing: .03em;
   opacity: 0;
   z-index: 1;
@@ -464,7 +491,7 @@ button {
   .caption button {
     display: block;
     margin: 15px auto;
-    font-size: 20px;
+    font-size: 18px;
     background: none;
     border: 1px solid white;
     padding: 5px 15px;
@@ -589,6 +616,28 @@ button {
       text-align: center;
       margin-top: 10px;
       margin-bottom: 10px; }
+      @media (max-width: 1150px) {
+        .web-intro .three-part .infoG,
+        .web-intro .three-part .MobileG,
+        .web-intro .three-part .teacherG {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          color: white;
+          -webkit-box-flex: 0.25;
+          -ms-flex: 0.25;
+          flex: 0.25; } }
+      @media (max-width: 990px) {
+        .web-intro .three-part .infoG,
+        .web-intro .three-part .MobileG,
+        .web-intro .three-part .teacherG {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          color: white;
+          -webkit-box-flex: 0.3;
+          -ms-flex: 0.3;
+          flex: 0.3; } }
       .web-intro .three-part .infoG .icon,
       .web-intro .three-part .MobileG .icon,
       .web-intro .three-part .teacherG .icon {
@@ -597,6 +646,11 @@ button {
         flex: 0.2;
         color: white;
         font-size: 60px; }
+        @media (max-width: 1420px) {
+          .web-intro .three-part .infoG .icon,
+          .web-intro .three-part .MobileG .icon,
+          .web-intro .three-part .teacherG .icon {
+            font-size: 55px; } }
       .web-intro .three-part .infoG .cont,
       .web-intro .three-part .MobileG .cont,
       .web-intro .three-part .teacherG .cont {
@@ -605,6 +659,34 @@ button {
         flex: 0.6;
         color: white;
         font-weight: lighter;
-        font-size: 18px; }
+        font-size: 15px; }
+        @media (max-width: 1420px) {
+          .web-intro .three-part .infoG .cont,
+          .web-intro .three-part .MobileG .cont,
+          .web-intro .three-part .teacherG .cont {
+            -webkit-box-flex: 0.7;
+            -ms-flex: 0.7;
+            flex: 0.7; } }
+        @media (max-width: 1150px) {
+          .web-intro .three-part .infoG .cont,
+          .web-intro .three-part .MobileG .cont,
+          .web-intro .three-part .teacherG .cont {
+            display: none; } }
+        .web-intro .three-part .infoG .cont-md,
+        .web-intro .three-part .MobileG .cont-md,
+        .web-intro .three-part .teacherG .cont-md {
+          display: none; }
+          @media (max-width: 1150px) {
+            .web-intro .three-part .infoG .cont-md,
+            .web-intro .three-part .MobileG .cont-md,
+            .web-intro .three-part .teacherG .cont-md {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              color: white;
+              -webkit-box-flex: 0.7;
+              -ms-flex: 0.7;
+              flex: 0.7;
+              padding-left: 20px; } }
     .web-intro .three-part .teacherG {
       border: none; }

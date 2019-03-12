@@ -168,4 +168,5 @@ $(function () {
 // Resize event
 $(window).on("resize.slickVideoPlayer", function () {
     resizePlayer(iframes, 16 / 9);
+    $('.item').lazyLoad();
 });

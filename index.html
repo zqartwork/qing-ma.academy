@@ -181,14 +181,14 @@
         </nav>
 
         <!-- main banner silder -->
-        <section class="main-slider fade">
+        <section class="main-slider">
             <div class="item youtube">
-                <iframe class="embed-player slide-media" src="https://www.youtube.com/embed/6sm-8QFOBs4?enablejsapi=1&controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist=6sm-8QFOBs4&start=1"
+                <iframe class="embed-player slide-media" src="https://www.youtube.com/embed/hATtDc0TdCY?enablejsapi=1&controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist=hATtDc0TdCY&start=1"
                     frameborder="0" allowfullscreen></iframe>
                 <p class="caption">
-                    <span class="en">Davinci</span> 微電影調光調色課程
+                    <span class="en">DJI INSPIRE 2 + LAOWA 7.5mm</span>
                     <button class="slide-btn en"> LEARN MORE</button>
-                    <span class="name">許顯隆 Hank Hsu</span>
+                    <span class="name">岳飛影像創作</span>
                 </p>
             </div>
             <div class="slide-image slide-media" style="background-image:url('img/slide/002.jpg');">
@@ -199,13 +199,14 @@
                     <span class="name">Ocean 拍片教學</span>
                 </p>
             </div>
+
             <div class="item youtube">
-                <iframe class="embed-player slide-media" src="https://www.youtube.com/embed/hATtDc0TdCY?enablejsapi=1&controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist=hATtDc0TdCY&start=1"
+                <iframe class="embed-player slide-media" src="https://www.youtube.com/embed/6sm-8QFOBs4?enablejsapi=1&controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist=6sm-8QFOBs4&start=1"
                     frameborder="0" allowfullscreen></iframe>
                 <p class="caption">
-                    <span class="en">DJI INSPIRE 2 + LAOWA 7.5mm</span>
+                    <span class="en">Davinci</span> 微電影調光調色課程
                     <button class="slide-btn en"> LEARN MORE</button>
-                    <span class="name">岳飛影像創作</span>
+                    <span class="name">許顯隆 Hank Hsu</span>
                 </p>
             </div>
             <div class="slide-image slide-media" style="background-image:url('img/slide/001.jpg');">
@@ -226,14 +227,19 @@
                     <div class="cont">
                         課程橫跨影視音藝 <br> 資訊內容最完整
                     </div>
+                    <div class="cont-md">
+                        課程橫跨影視音藝 <br> 資訊內容最完整
+                    </div>
                 </li>
                 <li class="MobileG">
                     <div class="icon"><i class="fas fa-mobile-alt"></i></div>
                     <div class="cont">支援電腦與行動裝置 <br> 隨時隨地跨平台學習</div>
+                    <div class="cont-md">支援電腦與行動裝置 <br> 隨時隨地跨平台學習</div>
                 </li>
                 <li class="teacherG">
                     <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
                     <div class="cont">師資陣容重量級 <br> 專業秘笈不藏私</div>
+                    <div class="cont-md">師資陣容重量級 <br> 專業秘笈不藏私</div>
                 </li>
             </ul>
         </section>
@@ -255,8 +261,8 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="lazyload.min.js"></script> <!-- 延遲載入 -->
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <!-- 延遲載入 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -309,12 +315,12 @@
         $('#logIn').click(function () {
             $('#logIn').hide();
             $('#logOut').fadeIn(300);
-            $('.control').addClass('left-shift-4rem');
+            $('.control').addClass('left-shift-5rem');
         });
         $('#logOut').click(function () {
             $('#logOut').hide();
             $('#logIn').show();
-            $('.control').removeClass('left-shift-4rem');
+            $('.control').removeClass('left-shift-5rem');
         })
     </script>
     <!-- slick-arrows 調整 -->
@@ -326,11 +332,7 @@
             $('.slick-next').html('<i class="fas fa-chevron-circle-right"></i>');
         });
     </script>
-    <script>
-        $(document).ready(function () {
-            $(".fade").hide(0).delay(500).fadeIn(3000)
-        });
-    </script>
+
 </body>
 
 </html>

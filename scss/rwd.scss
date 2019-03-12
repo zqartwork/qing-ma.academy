@@ -6,13 +6,13 @@ $font-dark: #474747;
 $font-bk: #000;
 $font-gray: #bdbdbd;
 
-@media (min-width: 1050px) {
+@media (min-width: 1151px) {
     .header {
         display: none;
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
 
     .nav-before .nav-bar-wrapper .main-menu,
     .log-search {

@@ -387,9 +387,8 @@ button {
         line-height: 40px;
     }
 
-    &.left-shift-4rem {
-        right: 12rem;
-
+    &.left-shift-5rem {
+        right: 13rem;
     }
 }
 
@@ -416,8 +415,8 @@ $link_hover_color: #fff;
 .main-slider {
     position: relative;
     width: 100%;
-    height: 32vw;
-    min-height: 8vw;
+    height: 33vw;
+    min-height: 25vw;
     opacity: 0;
     visibility: hidden;
     transition: all 1.2s ease;
@@ -430,7 +429,8 @@ $link_hover_color: #fff;
 
 .slick-slide {
     position: relative;
-    height: 32vw;
+    height: 33vw;
+    min-height: 25vw;
     @extend %bv_hidden;
 
     &::before {
@@ -498,7 +498,8 @@ $link_hover_color: #fff;
 
 .slide-image {
     opacity: 0;
-    height: 32vw;
+    height: 33vw;
+    min-height: 25vw;
     background-size: cover;
     background-position: center;
     // background-color:rgba(#c46897,.38);
@@ -508,6 +509,18 @@ $link_hover_color: #fff;
     &.show {
         opacity: 1;
     }
+}
+
+.main-slider,
+.slick-slide,
+.slide-image {
+    height: 33vw;
+
+    @media (max-width: 995px) {
+        height: 40vw;
+
+    }
+
 }
 
 .slick-next,
@@ -520,35 +533,53 @@ $link_hover_color: #fff;
     color: rgba(255, 255, 255, 0.322);
     font-size: 70px;
     transition: .5s;
+    top: 45%;
 
     &:hover {
 
         color: rgba(255, 255, 255, 0.829);
     }
+
+    @media (max-width: 1420px) {
+        font-size: 60px;
+    }
+
+    @media (max-width: 990px) {
+        font-size: 50px;
+    }
+
 }
 
 .slick-prev {
-    top: 45%;
     left: 15%;
+
+    @media (max-width: 995px) {
+        left: 10%;
+    }
 }
 
 .slick-next {
-    top: 45%;
     right: 15%;
+
+    @media (max-width: 995px) {
+        right: 10%;
+    }
 }
 
 .caption {
     position: absolute;
-    top: 36%;
-    left: 29%;
-    width: 800px;
+    top: 56.5%;
+    left: 50%;
+    width: 600px;
+    height: 200px;
     text-align: center;
     padding: 30px 50px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     color: #fff;
-    margin: 0;
-    font-size: 40px;
+    margin-top: -100px;
+    margin-left: -300px;
+    font-size: 30px;
     letter-spacing: .03em;
     opacity: 0;
     z-index: 1;
@@ -580,7 +611,7 @@ $link_hover_color: #fff;
     button {
         display: block;
         margin: 15px auto;
-        font-size: 20px;
+        font-size: 18px;
         background: none;
         border: 1px solid white;
         padding: 5px 15px;
@@ -698,18 +729,57 @@ $link_hover_color: #fff;
             margin-top: 10px;
             margin-bottom: 10px;
 
+            @media (max-width: 1150px) {
+                display: flex;
+                color: white;
+                flex: 0.25;
+            }
+
+            @media (max-width: 990px) {
+                display: flex;
+                color: white;
+                flex: 0.3;
+            }
+
             .icon {
                 flex: 0.2;
                 color: white;
                 font-size: 60px;
+
+                @media (max-width: 1420px) {
+                    font-size: 55px;
+                }
             }
+
+
 
             .cont {
                 flex: 0.6;
                 color: white;
                 font-weight: lighter;
-                font-size: 18px;
+                font-size: 15px;
+
+                @media (max-width: 1420px) {
+                    flex: 0.7;
+                }
+
+                @media (max-width: 1150px) {
+                    display: none;
+                }
+
+                &-md {
+                    display: none;
+
+                    @media (max-width: 1150px) {
+                        display: flex;
+                        color: white;
+                        flex: 0.7;
+                        padding-left: 20px;
+                    }
+                }
             }
+
+
         }
 
         .teacherG {

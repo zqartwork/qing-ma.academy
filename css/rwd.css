@@ -1,8 +1,8 @@
-@media (min-width: 1050px) {
+@media (min-width: 1151px) {
   .header {
     display: none; } }
 
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
   .nav-before .nav-bar-wrapper .main-menu,
   .log-search {
     display: none; }
