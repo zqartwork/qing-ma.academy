@@ -49,13 +49,12 @@
                         <li><a href="">關於青馬</a>
                             <ul class="sub-menu">
                                 <div class="bg-fix">
-                                    <li><a href="">青馬基金會</a></li>
-                                    <li><a href="">青馬影展</a></li>
-                                    <li><a href="">青馬影藝學院</a></li>
-                                    <li><a href="">台北創客</a></li>
-                                    <li><a href="">青馬台瘋館</a></li>
-                                    <li><a href=""><img src="img/supplier/016.png" height="15" width="auto" alt=""
-                                                class="moviecool">影史庫</a></li>
+                                    <li><a href="http://www.youthgoldenhorse.org/" target="__blank">青馬基金會</a></li>
+                                    <li><a href="http://www.youthgoldenhorse.com/" target="__blank">青馬影展</a></li>
+                                    <li><a href="http://www.youthgoldenhorse.org/base?p=base" target="__blank">創客台北</a></li>
+                                    <li><a href="http://www.youthgoldenhorse.org/youthleague?p=base" target="__blank">青馬台瘋館</a></li>
+                                    <li><a href="https://moviecool.asia/" target="__blank"><img src="img/supplier/016.png"
+                                                height="15" width="auto" alt="" class="moviecool-mmenu">影史庫</a></li>
                                 </div>
 
                             </ul>
@@ -63,28 +62,28 @@
                         <li><a href="">探索課程</a>
                             <ul class="sub-menu">
                                 <div class="bg-fix-sm">
-                                    <li><a href="">推薦課程</a></li>
-                                    <li><a href="">舞蹈</a></li>
-                                    <li><a href="">影片後期</a></li>
-                                    <li><a href="">攝影技巧</a></li>
-                                    <li><a href="">軟體教學</a></li>
-                                    <li><a href="">器材介紹</a></li>
-                                    <li><a href="">配音</a></li>
-                                    <li><a href="">空拍教學</a></li>
-                                    <li><a href="">影片分享</a></li>
-                                    <li><a href="">音樂教學</a></li>
-                                    <li><a href="">器材教學</a></li>
-                                    <li><a href="">妝容教學</a></li>
-                                    <li><a href="">其他</a></li>
+                                    <li><a href="index-course-ls.html">推薦課程</a></li>
+                                    <li><a href="index-course-ls.html">舞蹈</a></li>
+                                    <li><a href="index-course-ls.html">影片後期</a></li>
+                                    <li><a href="index-course-ls.html">攝影技巧</a></li>
+                                    <li><a href="index-course-ls.html">軟體教學</a></li>
+                                    <li><a href="index-course-ls.html">器材介紹</a></li>
+                                    <li><a href="index-course-ls.html">配音</a></li>
+                                    <li><a href="index-course-ls.html">空拍教學</a></li>
+                                    <li><a href="index-course-ls.html">影片分享</a></li>
+                                    <li><a href="index-course-ls.html">音樂教學</a></li>
+                                    <li><a href="index-course-ls.html">器材教學</a></li>
+                                    <li><a href="index-course-ls.html">妝容教學</a></li>
+                                    <li><a href="index-course-ls.html">其他</a></li>
                                 </div>
                             </ul>
                         </li>
                         <li><a href="">資源廣場</a>
                             <ul class="sub-menu">
                                 <div class="bg-fix-sm">
-                                    <li><a href="">配對人才</a></li>
-                                    <li><a href="">商家優惠</a></li>
-                                    <li><a href="">限時活動</a></li>
+                                    <li><a href="sub-index-source.html">配對人才</a></li>
+                                    <li><a href="sub-index-source.html">商家優惠</a></li>
+                                    <li><a href="sub-index-source.html">限時活動</a></li>
                                     <li><a href="supplier-ls.html">合作廠商</a></li>
                                 </div>
                             </ul>
@@ -92,9 +91,9 @@
                         <li><a href="">資訊廣場</a>
                             <ul class="sub-menu">
                                 <div class="bg-fix-sm">
-                                    <li><a href="">專題</a></li>
-                                    <li><a href="">新聞</a></li>
-                                    <li><a href="">論壇</a></li>
+                                    <li><a href="/about/history">相關新聞</a></li>
+                                    <li><a href="/about/team">影藝專題</a></li>
+                                    <li><a href="/about/address">青馬學院論壇</a></li>
                                 </div>
                             </ul>
                         </li>
@@ -102,10 +101,25 @@
                 </div>
                 <!-- login-search-part -->
                 <div class="log-search">
-                    <a href="">
-                        <i class="fas fa-search"></i>
-                    </a>
-                    <button>LOGIN</button>
+                    <div class="search-box">
+                        <div class="control">
+                            <div class="btn-material"></div>
+                            <span class="material-icons icon-material-search"><i class="fas fa-search"></i></span>
+                        </div>
+                        <span class="icon-close material-icons"><img src="img/icon/x.svg"></span>
+                        <div class="search-input">
+                            <input class="input-search" placeholder="請輸入關鍵字" type="text">
+                        </div>
+                    </div>
+                </div>
+                <!-- 尚未登入狀態 -->
+                <div class="log-search">
+                    <button id="logIn">LOGIN</button>
+                    <!-- 登入狀態 -->
+                    <button id="logOut">
+                        <img src="img/profile/portrait-001.jpg" alt="" class="user__photo">
+                        <span>我是會員名稱</span>
+                    </button>
                 </div>
                 <!-- mmenu-hamburgur -->
                 <div class="header">
@@ -162,6 +176,7 @@
             </div>
 
         </nav>
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -172,7 +187,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script onload="customMmenu();" src="plugins/mmenu/jquery.mmenu.all.js"></script> <!-- 7.3.2 -->
+    <script onload="" src="plugins/mmenu/jquery.mmenu.all.js"></script> <!-- 7.3.2 -->
     <script>
         jQuery(document).ready(function ($) {
             $("#menu").mmenu({
@@ -201,7 +216,32 @@
             });
         });
     </script>
+    <!-- search-bar-style -->
+    <script>
+        $('.control').click(function () {
+            $('.navbar').addClass('search-active');
+            $('.input-search').focus();
+            $('.icon-close').show();
+            console.log('hihih');
+        });
+        $('.icon-close').click(function () {
+            $('.navbar').removeClass('search-active');
+            $('.icon-close').hide();
 
+        });
+
+        // 調整登入按鈕的位置
+        $('#logIn').click(function () {
+            $('#logIn').hide();
+            $('#logOut').fadeIn(300);
+            $('.control').addClass('left-shift-4rem');
+        });
+        $('#logOut').click(function () {
+            $('#logOut').hide();
+            $('#logIn').show();
+            $('.control').removeClass('left-shift-4rem');
+        })
+    </script>
     <script src="js/custom.js"></script>
 
 </body>
