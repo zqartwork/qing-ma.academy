@@ -23,6 +23,16 @@ $(document).ready(function () {
     })
     $('.mm-navbar__title').prepend('<div class="logo-set-mmenu"><img src="img/logo-school.png"></div>');
     $('.mm-navbar__title').attr('href', 'index.html');
+
+    $('#logOut').click(function () {
+        $('.user__option-wrapper').toggleClass('show');
+    });
+    $(document).click(function (event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+        if (!$(event.target).closest("#logOut,.user__option-wrapper").length) {
+            $("body").find(".user__option-wrapper").removeClass("show");
+        }
+    });
 });
 
 

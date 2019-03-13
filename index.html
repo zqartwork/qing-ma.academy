@@ -107,7 +107,7 @@
                 <!-- login-search-part -->
                 <div class="log-search">
                     <div class="search-box">
-                        <div class="control">
+                        <div class="control left-shift-5rem">
                             <div class="btn-material"></div>
                             <span class="material-icons icon-material-search"><i class="fas fa-search"></i></span>
                         </div>
@@ -119,23 +119,36 @@
                 </div>
                 <div class="log-search">
                     <!-- 尚未登入狀態 -->
-                    <button id="logIn">LOGIN</button>
+                    <!-- <button id="logIn">LOGIN</button> -->
                     <!-- 登入狀態 -->
                     <button id="logOut">
-                        <div class="user__photo user__photo-30" style="background-image:url(img/profile/portrait-001.jpg)"></div>
+                        <div class="user__photo user__photo-30" style="background-image:url(img/profile/portrait-005.jpg)"></div>
                         <span>我是會員名稱</span>
                     </button>
                     <div class="user__option-wrapper">
                         <div class="arrow"></div>
                         <div class="user__option-modal">
-                            <div class="modal__header row">
+                            <a href="#" class="modal__header row">
                                 <div class="col-3">
-                                    <div class="user__photo user__photo-50" style="background-image:url(img/profile/portrait-001.jpg)"></div>
+                                    <div class="user__photo user__photo-50" style="background-image:url(img/profile/portrait-005.jpg)"></div>
                                 </div>
-                                <div class="user__name col-9"></div>
+                                <div class="user__name col-9">嗨嗨我是餅乾 <i class="fas fa-edit"></i></div>
+                            </a>
+                            <div class="modal__body">
+                                <ul>
+                                    <li id="point"><a><i class="fas fa-coins"></i>持有點數<span class="num emph">200</span>點
+                                            <i class="fas fa-question-circle" id="point-tooltip" data="toggle" title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i></a></li>
+                                    <li><a href=""><i class="fas fa-heart"></i>收藏課程</a></li>
+                                    <li><a href=""><i class="far fa-eye"></i>觀看紀錄</a></li>
+                                    <li><a href=""><i class="fas fa-shopping-cart"></i>購買歷程</a></li>
+                                    <li><a href=""><i class="fas fa-file-signature"></i>發佈資訊</a></li>
+                                    <li><a href=""><i class="far fa-handshake"></i>分享資源</a></li>
+                                    <li id="rec"><a href=""><i class="fas fa-award"></i>推薦好友</a></li>
+                                </ul>
                             </div>
-                            <div class="modal__body"></div>
-                            <div class="modal__footer"></div>
+                            <div class="modal__footer">
+                                <button class="logout__btn">登出<i class="fas fa-sign-out-alt"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -144,7 +157,7 @@
                     <a href="#menu"><i class="fas fa-bars"></i></a>
                 </div>
                 <!-- mmenu-place -->
-                <nav id="menu">
+                <nav id="menu" class="mmenu-place">
                     <ul>
                         <li><a href="/"><i class="fas fa-home"></i> 課程首頁</a></li>
                         <li><a class="cur-arr"><i class="fas fa-info-circle"></i> 關於青馬</a>
@@ -191,6 +204,28 @@
                                 <li><a href="/about/address">青馬學院論壇</a></li>
                             </ul>
                         </li>
+                        <a href="#" class="modal__header">
+                            <div class="user__photo user__photo-50" style="background-image:url(img/profile/portrait-005.jpg)"></div>
+                            <div class="user__name">嗨嗨我是餅乾 <i class="fas fa-edit"></i></div>
+                        </a>
+                        <div class="user__option-modal">
+                            <div class="modal__body">
+                                <ul>
+                                    <li id="point"><a><i class="fas fa-coins"></i>持有點數<span class="num emph">200</span>點
+                                            <i class="fas fa-question-circle" id="point-tooltip" data="toggle" title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i></a></li>
+                                    <li><a href=""><i class="fas fa-heart"></i>收藏課程</a></li>
+                                    <li><a href=""><i class="far fa-eye"></i>觀看紀錄</a></li>
+                                    <li><a href=""><i class="fas fa-shopping-cart"></i>購買歷程</a></li>
+                                    <li><a href=""><i class="fas fa-file-signature"></i>發佈資訊</a></li>
+                                    <li><a href=""><i class="far fa-handshake"></i>分享資源</a></li>
+                                    <li id="rec"><a href=""><i class="fas fa-award"></i>推薦好友</a></li>
+                                </ul>
+                            </div>
+                            <div class="modal__footer">
+                                <button class="logout__btn">登出<i class="fas fa-sign-out-alt"></i></button>
+                            </div>
+                        </div>
+
                     </ul>
                 </nav>
             </div>
@@ -791,17 +826,17 @@
 
         });
 
-        // 調整登入按鈕的位置
-        $('#logIn').click(function () {
-            $('#logIn').hide();
-            $('#logOut').fadeIn(300);
-            $('.control').addClass('left-shift-5rem');
-        });
-        $('#logOut').click(function () {
-            $('#logOut').hide();
-            $('#logIn').show();
-            $('.control').removeClass('left-shift-5rem');
-        })
+        // // 調整登入按鈕的位置
+        // $('#logIn').click(function () {
+        //     $('#logIn').hide();
+        //     $('#logOut').fadeIn(300);
+        //     $('.control').addClass('left-shift-5rem');
+        // });
+        // $('#logOut').click(function () {
+        //     $('#logOut').hide();
+        //     $('#logIn').show();
+        //     $('.control').removeClass('left-shift-5rem');
+        // })
     </script>
     <!-- slick-arrows 調整 -->
     <script src="js/custom.js"></script>
@@ -816,6 +851,9 @@
             placement: 'right'
         });
         $('#almost-tooltip').tooltip({
+            placement: 'right'
+        });
+        $('#point-tooltip').tooltip({
             placement: 'right'
         });
     </script>

@@ -31,6 +31,7 @@ body {
 a {
     color: white;
     outline: none;
+    text-decoration: none !important;
 }
 
 button {
@@ -49,7 +50,7 @@ button {
 .tooltip-inner {
     font-family: 'Noto Sans TC';
     max-width: 70%;
-    font-size: 17px;
+    font-size: 15px;
     padding: 8px 15px;
     color: #fff;
     text-align: center;
@@ -68,6 +69,16 @@ button {
     background-position: center;
     background-size: cover;
     border-radius: 100%;
+
+    &-50 {
+        height: 50px;
+        width: 50px;
+    }
+
+    &-30 {
+        height: 30px;
+        width: 30px;
+    }
 
 }
 
@@ -265,7 +276,6 @@ button {
             }
 
             #logOut {
-                display: none;
                 font-family: $font-cn;
 
                 span {
@@ -275,6 +285,139 @@ button {
                 }
             }
         }
+
+        //登入後會員選單介面
+        .user__option-wrapper {
+            margin-top: 10px;
+            position: fixed;
+            z-index: 1;
+            // background: #fff;
+            transform: translateX(-10rem);
+            display: none;
+
+            &.show {
+                display: initial;
+            }
+
+            .arrow {
+                height: 15px;
+                width: 15px;
+                background: $bgColor;
+                transform: rotate(45deg);
+                position: absolute;
+                z-index: -1;
+                right: 10%;
+                border-top-left-radius: 4px;
+            }
+
+            .user__option-modal {
+                background: $bgColor;
+                margin-top: 8px;
+                padding: 15px 25px;
+                border-radius: 4px;
+
+                .modal__header {
+                    justify-items: center;
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: 1px solid lightgray;
+                    padding-bottom: 8px;
+
+                    .user__name {
+                        font-size: 18px;
+                        color: $font-dark;
+                        letter-spacing: 0.02rem;
+                        transition: .3s;
+
+                        i {
+                            margin-left: 5px;
+                            color: $font-gray;
+                            font-size: 20px;
+                            transition: .3s;
+                        }
+
+                        &:hover,
+                        &:hover i {
+                            color: black;
+                        }
+                    }
+                }
+
+                .modal__body {
+                    color: $font-dark;
+                    letter-spacing: 0.02rem;
+                    line-height: 55px;
+
+                    i {
+                        color: $font-gray;
+                        width: 25px;
+                        font-size: 20px;
+                        margin-right: 8px;
+                        transition: .5s;
+                    }
+
+                    a {
+                        color: $font-dark;
+
+                        &:hover {
+                            color: black;
+
+                            i {
+                                color: black;
+                            }
+                        }
+                    }
+
+                    #point {
+                        margin-top: 10px;
+                        cursor: default;
+
+                        & a:hover {
+                            color: $font-dark;
+                            cursor: default;
+                        }
+
+                        .emph {
+                            margin: 0 10px;
+                            font-size: 25px;
+                            color: $brown;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .modal__footer {
+                    position: relative;
+                    width: 100%;
+                    text-align: right;
+                    color: $font-dark;
+                    letter-spacing: 0.02rem;
+                    line-height: 40px;
+                    border-top: 1px solid lightgray;
+                    padding-top: 10px;
+                    font-size: 18px;
+
+                    .logout__btn {
+                        display: inline-block;
+                        padding: 0px 10px 0 12px;
+                        border-radius: 5px;
+                        font-family: 'Noto Sans TC';
+                        border: 1px solid lightgray;
+                        color: $font-dark;
+                        font-size: 16px;
+
+                        i {
+                            margin-left: 5px;
+                            color: $font-gray;
+                            font-size: 18px;
+                            transition: .3s;
+                        }
+
+                    }
+                }
+            }
+        }
+
     }
 
     &.sticky {
@@ -302,6 +445,41 @@ button {
         }
     }
 }
+
+.mmenu-place {
+    ul a.modal__header {
+        padding-top: 25px;
+        padding-left: 25px;
+        width: 80%;
+
+        .user__photo {
+            float: left;
+        }
+
+        .user__name {
+            float: left;
+            font-size: 18px;
+            color: $font-dark;
+            letter-spacing: 0.02rem;
+            transition: .3s;
+            margin-top: 13px;
+            margin-left: 10px;
+
+            i {
+                margin-left: 5px;
+                color: $font-gray;
+                font-size: 20px;
+                transition: .3s;
+            }
+
+            &:hover,
+            &:hover i {
+                color: black;
+            }
+        }
+    }
+}
+
 
 /* search form */
 
