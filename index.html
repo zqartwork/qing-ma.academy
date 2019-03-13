@@ -252,85 +252,149 @@
         <!-- 推薦 Recommend -->
         <section class="rec-class-section index-class">
             <div class="flex-ls-wrapper row">
+                <!-- 推薦課程標題 -->
                 <div class="title-wrapper col-12">
-                    <!-- <div class="coursetitle"> 推薦課程 </div> -->
+                    <div class="coursetitle">
+                        <img src="img/logo-school.png" alt=""> 推薦課程
+                        <a href="index-course-ls.html" class="more">更多推薦課程 <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
                 </div>
+                <!-- 已收藏課程 -->
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-12">
-                    <div class="thumb">
+                    <div class="thumb thumb__on">
                         <ul>
-                            <!-- 有 Class="liked" 的 Button中的愛心icon要改成 fas -->
+                            <!--喜歡會有標籤 liked-->
                             <li class="thumb-header liked">
-                                <button class="add"><i class="fas fa-heart"></i></button>
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);"></div>
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                    <div class="mark mark__on">已開課</div>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                </div>
                             </li>
-                            <li class="title">如何捕捉美好景物照</li>
-                            <li class="cont">
-                                <span class="star">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </span>
-                                <span class=""><span class="num">1,200</span> 則評價</span>
+                            <li class="thumb-body">
+                                <div class="title">如何捕捉美好景照</div>
+                                <div class="cont">
+                                    <span class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class=""><span class="num">1,200</span> 則評價</span>
+                                </div>
+                                <div class="time"><i class="far fa-clock"></i>
+                                    <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                </div>
+                                <div class="name"> 講師 <span>維妮姊姊</span> </div>
                             </li>
-                            <li class="time"><i class="far fa-clock"></i> 240分鐘</li>
-                            <li class="name"> 講師 <span>維妮姊姊</span> </li>
-                            <li class="price"><span>NT$</span> <span>2,400</span></li>
+
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
+                            <li class="price"><span>NT$</span> <span class="num">2,400</span></li>
                         </ul>
                     </div>
                 </div>
+                <!-- 未收藏課程 -->
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-12">
-                    <div class="thumb">
+                    <div class="thumb thumb__on">
                         <ul>
-                            <!-- 沒有 Class="liked" 的 Button中的愛心icon要改成 far -->
+                            <!--喜歡會有標籤 liked-->
                             <li class="thumb-header">
-                                <button class="add"><i class="far fa-heart"></i></button>
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);"></div>
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
+                                    <div class="mark mark__on">已開課</div>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="far fa-heart"></i></button>
+                                </div>
                             </li>
-                            <li class="title">ZQ 教每天10分鐘，單月就學會攝影</li>
-                            <li class="cont"> <span class="star"> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
-                                </span> <span class=""><span class="num">200</span> 則評價</span> </li>
-                            <li class="time"><i class="far fa-clock"></i> 1140分鐘</li>
-                            <li class="name"> 講師 <span>限制名字不能超過十字</span> </li>
-                            <li class="price"><span>NT$</span> <span>2,400</span></li>
+                            <li class="thumb-body">
+                                <div class="title">教你一天10分鐘 - 不用單月就學會攝影</div>
+                                <div class="cont">
+                                    <span class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class=""><span class="num">200</span> 則評價</span>
+                                </div>
+                                <div class="time"><i class="far fa-clock"></i>
+                                    <span class="num">540</span> 分鐘&nbsp;&nbsp;
+                                </div>
+                                <div class="name"> 講師 <span>賈立傑 </span> </div>
+                            </li>
+                            <li class="price"><span>NT$</span> <span class="num">3,200</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-12">
-                    <div class="thumb">
+                    <div class="thumb thumb__on">
                         <ul>
+                            <!--喜歡會有標籤 liked-->
                             <li class="thumb-header liked">
-                                <button class="add"><i class="fas fa-heart"></i></button>
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);"></div>
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
+                                    <div class="mark mark__on">已開課</div>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                </div>
                             </li>
-                            <li class="title">成為導演之路：必學的20項絕招</li>
-                            <li class="cont"> <span class="star"> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
-                                </span> <span class=""><span class="num">1,200</span> 則評價</span> </li>
-                            <li class="time"><i class="far fa-clock"></i> 240分鐘</li>
-                            <li class="name"> 講師 <span>Killer</span> </li>
-                            <li class="price"><span>NT$</span> <span>3,400</span></li>
+                            <li class="thumb-body">
+                                <div class="title">拍電影前必備 - 如何學會看電影</div>
+                                <div class="cont">
+                                    <span class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class=""><span class="num">1,000</span> 則評價</span>
+                                </div>
+                                <div class="time"><i class="far fa-clock"></i>
+                                    <span class="num">840</span> 分鐘&nbsp;&nbsp;
+                                </div>
+                                <div class="name"> 講師 <span>這裡是十個字的工作室</span> </div>
+                            </li>
+
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
+                            <li class="price"><span>NT$</span> <span class="num">5,700</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-12">
-                    <div class="thumb">
+                    <div class="thumb thumb__on">
                         <ul>
-                            <li class="thumb-header">
-                                <button class="add"><i class="far fa-heart"></i></button>
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-004.jpg);"></div>
+                            <!--喜歡會有標籤 liked-->
+                            <li class="thumb-header liked">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-004.jpg);">
+                                    <div class="mark mark__on">已開課</div>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                </div>
                             </li>
-                            <li class="title">專業影片後製教學（AfterEffect / PR）</li>
-                            <li class="cont"> <span class="star"> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i>
-                                </span> <span class=""><span class="num">1,200</span> 則評價</span> </li>
-                            <li class="time"><i class="far fa-clock"></i> 240分鐘</li>
-                            <li class="name"> 講師 <span>小鹿好可愛</span> </li>
-                            <li class="price"><span>NT$</span> <span>5,400</span></li>
+                            <li class="thumb-body">
+                                <div class="title">場景擺設手法教學 - 絕不藏私</div>
+                                <div class="cont">
+                                    <span class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class=""><span class="num">1,200</span> 則評價</span>
+                                </div>
+                                <div class="time"><i class="far fa-clock"></i>
+                                    <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                </div>
+                                <div class="name"> 講師 <span>小鹿好可愛</span> </div>
+                            </li>
+
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
+                            <li class="price"><span>NT$</span> <span class="num">2,400</span></li>
                         </ul>
                     </div>
                 </div>
@@ -338,7 +402,153 @@
 
         </section>
         <!-- 募資中 Fundraising -->
-        <section class="fund-class-section"></section>
+        <section class="fund-class-section index-class">
+            <div class="flex-ls-wrapper row">
+                <!-- 推薦課程標題 -->
+                <div class="title-wrapper col-12">
+                    <div class="coursetitle">
+                        <img src="img/logo-school.png" alt=""> 募資中課程課程 <i class="fas fa-question-circle" id="fund-tooltip"
+                            data="toggle" title="這些課程必須達到募資門檻才能成功開課，揪團協助完成募資吧！"></i>
+                        <a href="index-course-ls.html" class="more">更多募資中課程 <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+                <!-- 已收藏課程 -->
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-12">
+                    <div class="thumb thumb__fund">
+                        <ul>
+                            <!--喜歡會有標籤 liked-->
+                            <li class="thumb-header liked">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-005.jpg);">
+                                    <div class="mark mark__fund">募資中</div>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </li>
+                            <li class="thumb-body">
+                                <div class="title">後製必備基礎工具（AE / PR）</div>
+                                <div class="cont">
+                                    <div class="process__title">
+                                        <span class="titl">募資時間</span>
+                                        <span class="date">剩 <span class="num">20</span> 天</span>
+                                    </div>
+                                    <div class="process__bar">
+                                        <div class="process__thumb"></div>
+                                    </div>
+                                    <div class="process__people">
+                                        <span class="process__static">已募資 <span class="num">10</span> /30 人</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
+                            <li class="price"><span>預購 NT$</span> <span class="num">1,400</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 未收藏課程 -->
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-12">
+                    <div class="thumb thumb__fund">
+                        <ul>
+                            <!--喜歡會有標籤 liked-->
+                            <li class="thumb-header">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-006.jpg);">
+                                    <div class="mark mark__fund">募資中</div>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="far fa-heart"></i></button>
+                                </div>
+                            </li>
+                            <li class="thumb-body">
+                                <div class="title">教你一天10分鐘 - 不用單月就學會攝影</div>
+                                <div class="cont">
+                                    <span class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class=""><span class="num">200</span> 則評價</span>
+                                </div>
+                                <div class="time"><i class="far fa-clock"></i>
+                                    <span class="num">540</span> 分鐘&nbsp;&nbsp;
+                                </div>
+                            </li>
+                            <li class="price"><span>預購 NT$</span> <span class="num">3,200</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-12">
+                    <div class="thumb thumb__fund">
+                        <ul>
+                            <!--喜歡會有標籤 liked-->
+                            <li class="thumb-header liked">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-007.jpg);">
+                                    <div class="mark mark__fund">募資中</div>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </li>
+                            <li class="thumb-body">
+                                <div class="title">拍電影前必備 - 如何學會看電影</div>
+                                <div class="cont">
+                                    <span class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class=""><span class="num">1,000</span> 則評價</span>
+                                </div>
+                                <div class="time"><i class="far fa-clock"></i>
+                                    <span class="num">840</span> 分鐘&nbsp;&nbsp;
+                                </div>
+                            </li>
+
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
+                            <li class="price"><span>預購 NT$</span> <span class="num">5,700</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-12">
+                    <div class="thumb thumb__fund">
+                        <ul>
+                            <!--喜歡會有標籤 liked-->
+                            <li class="thumb-header liked">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-008.jpg);">
+                                    <div class="mark mark__fund">募資中</div>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </li>
+                            <li class="thumb-body">
+                                <div class="title">場景擺設手法教學 - 絕不藏私</div>
+                                <div class="cont">
+                                    <span class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class=""><span class="num">1,200</span> 則評價</span>
+                                </div>
+                                <div class="time"><i class="far fa-clock"></i>
+                                    <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                </div>
+                            </li>
+
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
+                            <li class="price"><span>預購 NT$</span> <span class="num">2,400</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <!-- 熱門 Hot -->
         <section class="hot-class-section"></section>
         <!-- 免費 Free -->
@@ -412,12 +622,16 @@
         })
     </script>
     <!-- slick-arrows 調整 -->
-
     <script src="js/custom.js"></script>
     <script>
         $(document).ready(function () {
             $('.slick-prev').html('<i class="fas fa-chevron-circle-left"></i>');
             $('.slick-next').html('<i class="fas fa-chevron-circle-right"></i>');
+        });
+    </script>
+    <script>
+        $('#fund-tooltip').tooltip({
+            placement: 'right'
         });
     </script>
 
