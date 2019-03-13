@@ -30,6 +30,30 @@ button {
   -moz-border-radius: 4px;
   border-radius: 4px; }
 
+.show-610 {
+  display: none; }
+
+@media (max-width: 991px) {
+  .hidden-md {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .hidden-sm {
+    display: none; } }
+
+@media (max-width: 610px) {
+  .hidden-610 {
+    display: none; }
+  .show-610 {
+    display: initial; } }
+
+@media (max-width: 570px) {
+  .hidden-md,
+  .hidden-sm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
 .nav-before {
   background-color: #00000067;
   width: 100%;
@@ -413,6 +437,11 @@ button {
     .slick-slide,
     .slide-image {
       height: 40vw; } }
+  @media (max-width: 768px) {
+    .main-slider,
+    .slick-slide,
+    .slide-image {
+      height: 60vw; } }
 
 .slick-next,
 .slick-prev {
@@ -438,18 +467,22 @@ button {
     .slick-next,
     .slick-prev {
       font-size: 50px; } }
+  @media (max-width: 768px) {
+    .slick-next,
+    .slick-prev {
+      font-size: 40px; } }
 
 .slick-prev {
   left: 15%; }
   @media (max-width: 995px) {
     .slick-prev {
-      left: 10%; } }
+      left: 5%; } }
 
 .slick-next {
   right: 15%; }
   @media (max-width: 995px) {
     .slick-next {
-      right: 10%; } }
+      right: 5%; } }
 
 .caption {
   position: absolute;
@@ -474,6 +507,12 @@ button {
   -webkit-transform: translateY(100px);
   -ms-transform: translateY(100px);
   transform: translateY(100px); }
+  @media (max-width: 995px) {
+    .caption {
+      height: 200px;
+      width: 500px;
+      margin-left: -250px;
+      margin-top: -80px; } }
   .caption .fill {
     --color: #a972cb;
     --hover: #cb72aa; }
@@ -661,6 +700,11 @@ button {
           .web-intro .three-part .MobileG .icon,
           .web-intro .three-part .teacherG .icon {
             font-size: 55px; } }
+        @media (max-width: 768px) {
+          .web-intro .three-part .infoG .icon,
+          .web-intro .three-part .MobileG .icon,
+          .web-intro .three-part .teacherG .icon {
+            font-size: 35px; } }
       .web-intro .three-part .infoG .cont,
       .web-intro .three-part .MobileG .cont,
       .web-intro .three-part .teacherG .cont {
@@ -698,6 +742,27 @@ button {
               -ms-flex: 0.7;
               flex: 0.7;
               padding-left: 20px; } }
+          @media (max-width: 768px) {
+            .web-intro .three-part .infoG .cont-md,
+            .web-intro .three-part .MobileG .cont-md,
+            .web-intro .three-part .teacherG .cont-md {
+              display: none; } }
+        .web-intro .three-part .infoG .cont-sm,
+        .web-intro .three-part .MobileG .cont-sm,
+        .web-intro .three-part .teacherG .cont-sm {
+          display: none; }
+          @media (max-width: 768px) {
+            .web-intro .three-part .infoG .cont-sm,
+            .web-intro .three-part .MobileG .cont-sm,
+            .web-intro .three-part .teacherG .cont-sm {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              color: white;
+              -webkit-box-flex: 0.75;
+              -ms-flex: 0.75;
+              flex: 0.75;
+              padding-left: 20px; } }
     .web-intro .three-part .teacherG {
       border: none; }
 
@@ -705,12 +770,29 @@ button {
   padding-top: 5rem; }
   .index__class.rec-class-section {
     padding-top: 6rem; }
+    @media (max-width: 991px) {
+      .index__class.rec-class-section {
+        padding-top: 4rem; } }
   .index__class .flex-ls-wrapper {
     margin: 0 auto;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 60%;
-    min-width: 1050px; }
+    min-width: 1100px; }
+    @media (max-width: 1150px) {
+      .index__class .flex-ls-wrapper {
+        min-width: 970px; } }
+    @media (max-width: 990px) {
+      .index__class .flex-ls-wrapper {
+        width: 80%;
+        min-width: 750px; } }
+    @media (max-width: 768px) {
+      .index__class .flex-ls-wrapper {
+        width: 90%;
+        min-width: 550px; } }
+    @media (max-width: 600px) {
+      .index__class .flex-ls-wrapper {
+        min-width: 500px; } }
     .index__class .flex-ls-wrapper .title-wrapper.col-12 {
       padding-left: 10px;
       margin-bottom: 1rem; }
@@ -741,6 +823,9 @@ button {
       height: 430px;
       padding: 10px;
       cursor: pointer; }
+      @media (max-width: 990px) {
+        .index__class .flex-ls-wrapper .class-thumb {
+          height: 410px; } }
       .index__class .flex-ls-wrapper .class-thumb .thumb {
         background: #fff;
         width: 100%;
@@ -763,25 +848,34 @@ button {
         .index__class .flex-ls-wrapper .class-thumb .thumb__on {
           border-color: #b90000; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span {
-            font-size: 30px; }
+            font-size: 28px; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont {
+            max-height: 31px;
+            overflow: hidden; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .name {
+            max-height: 30px;
+            overflow: hidden; }
         .index__class .flex-ls-wrapper .class-thumb .thumb__fund {
           border-color: #3a9bd3; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__fund .price span {
             font-size: 22px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header {
-          height: 165px;
+          height: 150px;
           overflow: hidden; }
           .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster {
             position: relative;
             display: block;
             width: 100%;
-            height: 165px;
+            height: 150px;
             overflow: hidden;
-            background-size: 125%;
+            background-size: 110%;
             background-position: center;
             -webkit-transition-duration: .5s;
             -o-transition-duration: .5s;
             transition-duration: .5s; }
+            @media (max-width: 1150px) {
+              .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster {
+                background-size: 120%; } }
             .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .add {
               background: none;
               border: 3px solid white;
@@ -815,14 +909,14 @@ button {
               .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__fund {
                 background: #3a9bd3; }
         .index__class .flex-ls-wrapper .class-thumb .thumb:hover .poster {
-          background-size: 150%; }
+          background-size: 130%; }
           .index__class .flex-ls-wrapper .class-thumb .thumb:hover .poster .add {
             visibility: visible;
             opacity: 1; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .title {
-          font-size: 25px;
+          font-size: 24px;
           padding: 10px 15px 5px 15px;
-          max-height: 100px;
+          max-height: 80px;
           overflow: hidden; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont,
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .time,

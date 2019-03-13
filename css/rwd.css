@@ -40,3 +40,7 @@
     margin-right: 5px;
     margin-top: -3px;
     margin-left: 2px; } }
+
+@media (max-width: 600px) {
+  .class-thumb {
+    height: 200px; } }

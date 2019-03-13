@@ -168,7 +168,6 @@ $(function () {
 // Resize event
 $(window).on("resize.slickVideoPlayer", function () {
     resizePlayer(iframes, 16 / 9);
-    $('.item').lazyLoad();
 });
 
 // 前端愛心收藏按鈕動畫

@@ -58,6 +58,40 @@ button {
     border-radius: 4px
 }
 
+.show-610 {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .hidden-md {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-sm {
+        display: none;
+    }
+}
+
+@media(max-width: 610px) {
+    .hidden-610 {
+        display: none;
+    }
+
+    .show-610 {
+        display: initial;
+    }
+}
+
+@media (max-width: 570px) {
+
+    .hidden-md,
+    .hidden-sm {
+        display: flex;
+    }
+}
+
 // before-sticky
 .nav-before {
     background-color: #00000067;
@@ -533,6 +567,10 @@ $link_hover_color: #fff;
     @media (max-width: 995px) {
         height: 40vw;
     }
+
+    @media (max-width: 768px) {
+        height: 60vw;
+    }
 }
 
 .slick-next,
@@ -558,13 +596,17 @@ $link_hover_color: #fff;
     @media (max-width: 990px) {
         font-size: 50px;
     }
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
 }
 
 .slick-prev {
     left: 15%;
 
     @media (max-width: 995px) {
-        left: 10%;
+        left: 5%;
     }
 }
 
@@ -572,7 +614,7 @@ $link_hover_color: #fff;
     right: 15%;
 
     @media (max-width: 995px) {
-        right: 10%;
+        right: 5%;
     }
 }
 
@@ -597,6 +639,14 @@ $link_hover_color: #fff;
     transform: translateY(100px);
     @extend %bv_hidden;
     $colors: (fill: #a972cb, pulse-btn: #ef6eae, close-btn: #ff7f82, raise-btn: #ffa260, up-btn: #e4cb58, slide-btn: #fff, offse-btnt: #19bc8b);
+
+    @media (max-width: 995px) {
+        height: 200px;
+        width: 500px;
+        margin-left: -250px;
+        margin-top: -80px;
+
+    }
 
     @each $button,
     $color in $colors {
@@ -746,6 +796,10 @@ $link_hover_color: #fff;
                 @media (max-width: 1420px) {
                     font-size: 55px;
                 }
+
+                @media(max-width: 768px) {
+                    font-size: 35px;
+                }
             }
 
             .cont {
@@ -771,6 +825,21 @@ $link_hover_color: #fff;
                         flex: 0.7;
                         padding-left: 20px;
                     }
+
+                    @media(max-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                &-sm {
+                    display: none;
+
+                    @media(max-width: 768px) {
+                        display: flex;
+                        color: white;
+                        flex: 0.75;
+                        padding-left: 20px;
+                    }
                 }
             }
         }
@@ -786,13 +855,36 @@ $link_hover_color: #fff;
 
     &.rec-class-section {
         padding-top: 6rem;
+
+        @media(max-width: 991px) {
+            padding-top: 4rem;
+
+        }
     }
 
     .flex-ls-wrapper {
         margin: 0 auto;
         flex-wrap: wrap;
         width: 60%;
-        min-width: 1050px;
+        min-width: 1100px;
+
+        @media(max-width: 1150px) {
+            min-width: 970px;
+        }
+
+        @media(max-width: 990px) {
+            width: 80%;
+            min-width: 750px;
+        }
+
+        @media(max-width: 768px) {
+            width: 90%;
+            min-width: 550px;
+        }
+
+        @media(max-width: 600px) {
+            min-width: 500px;
+        }
 
         .title-wrapper.col-12 {
             padding-left: 10px;
@@ -838,6 +930,10 @@ $link_hover_color: #fff;
             padding: 10px;
             cursor: pointer;
 
+            @media (max-width: 990px) {
+                height: 410px;
+            }
+
             .thumb {
                 background: #fff;
                 width: 100%;
@@ -864,7 +960,17 @@ $link_hover_color: #fff;
                     border-color: $red;
 
                     .price span {
-                        font-size: 30px;
+                        font-size: 28px;
+                    }
+
+                    .cont {
+                        max-height: 31px;
+                        overflow: hidden;
+                    }
+
+                    .name {
+                        max-height: 30px;
+                        overflow: hidden;
                     }
                 }
 
@@ -877,18 +983,22 @@ $link_hover_color: #fff;
                 }
 
                 .thumb-header {
-                    height: 165px;
+                    height: 150px;
                     overflow: hidden;
 
                     .poster {
                         position: relative;
                         display: block;
                         width: 100%;
-                        height: 165px;
+                        height: 150px;
                         overflow: hidden;
-                        background-size: 125%;
+                        background-size: 110%;
                         background-position: center;
                         transition-duration: .5s;
+
+                        @media(max-width: 1150px) {
+                            background-size: 120%;
+                        }
 
                         .add {
                             background: none;
@@ -935,7 +1045,7 @@ $link_hover_color: #fff;
                 &:hover {
 
                     .poster {
-                        background-size: 150%;
+                        background-size: 130%;
 
                         .add {
                             visibility: visible;
@@ -946,9 +1056,9 @@ $link_hover_color: #fff;
 
                 .thumb-body {
                     .title {
-                        font-size: 25px;
+                        font-size: 24px;
                         padding: 10px 15px 5px 15px;
-                        max-height: 100px;
+                        max-height: 80px;
                         overflow: hidden;
                     }
 
