@@ -8,9 +8,9 @@ $font-dark: #474747;
 $font-bk: #000;
 $font-gray: #969696;
 $gold: #ffc240;
-$brown: #d68b00;
-$red: #b40606;
-$blue: #00a2ff;
+$brown: #ac7000;
+$red: #b90000;
+$blue: #3a9bd3;
 
 %cn {
     font-family: $font-cn;
@@ -711,7 +711,7 @@ $link_hover_color: #fff;
         align-items: center;
         text-align: center;
         width: 100%;
-        background-image: linear-gradient(to right, rgb(100, 100, 100), rgb(179, 95, 0));
+        background-image: linear-gradient(to right, rgb(100, 100, 100), rgb(134, 87, 32));
         margin-bottom: 0;
 
         .infoG,
@@ -781,7 +781,7 @@ $link_hover_color: #fff;
     }
 }
 
-.index-class {
+.index__class {
     padding-top: 5rem;
 
     &.rec-class-section {
@@ -801,7 +801,7 @@ $link_hover_color: #fff;
 
         .coursetitle {
             color: $font-dark;
-            font-size: 30px;
+            font-size: 28px;
 
             img {
                 margin-bottom: 10px;
@@ -821,9 +821,10 @@ $link_hover_color: #fff;
                 }
             }
 
-            #fund-tooltip {
+            #fund-tooltip,
+            #almost-tooltip {
                 display: inline-block;
-                font-size: 25px;
+                font-size: 22px;
                 margin-left: 5px;
                 color: $font-gray;
             }
@@ -832,7 +833,7 @@ $link_hover_color: #fff;
         }
 
         .class-thumb {
-            height: 445px;
+            height: 430px;
             // background: gray;
             padding: 10px;
             cursor: pointer;
@@ -843,6 +844,7 @@ $link_hover_color: #fff;
                 height: 100%;
                 transition: .3s;
                 overflow: hidden;
+                border-top: 5px solid;
                 border-bottom: 5px solid;
 
                 .price {
@@ -862,7 +864,7 @@ $link_hover_color: #fff;
                     border-color: $red;
 
                     .price span {
-                        font-size: 32px;
+                        font-size: 30px;
                     }
                 }
 
@@ -870,7 +872,7 @@ $link_hover_color: #fff;
                     border-color: $blue;
 
                     .price span {
-                        font-size: 25px;
+                        font-size: 22px;
                     }
                 }
 
@@ -908,15 +910,15 @@ $link_hover_color: #fff;
 
                         .mark {
                             height: 40px;
-                            width: 150px;
+                            width: 80px;
                             line-height: 31px;
                             font-size: 18px;
                             text-align: center;
                             color: $font-w;
-                            transform: rotate(45deg);
+                            // transform: rotate(45deg);
                             position: absolute;
-                            right: -15%;
-                            top: 9%;
+                            right: 0%;
+                            top: 0%;
 
                             &__on {
                                 background: $red;
@@ -944,8 +946,8 @@ $link_hover_color: #fff;
 
                 .thumb-body {
                     .title {
-                        font-size: 27px;
-                        padding: 15px 15px 15px 15px;
+                        font-size: 25px;
+                        padding: 10px 15px 5px 15px;
                         max-height: 100px;
                         overflow: hidden;
                     }
@@ -974,7 +976,7 @@ $link_hover_color: #fff;
                                 margin-right: 3px;
 
                                 .num {
-                                    color: $blue;
+                                    color: $red;
                                 }
                             }
                         }
@@ -989,8 +991,8 @@ $link_hover_color: #fff;
 
                             .process__thumb {
                                 height: 15px;
-                                width: 33.33333%;
-                                background-color: $blue;
+                                max-width: 100%;
+                                background-image: linear-gradient(to right, #b3f6ff, $blue);
                             }
                         }
 
@@ -1004,7 +1006,7 @@ $link_hover_color: #fff;
                                 text-align: left;
 
                                 .num {
-                                    color: $blue;
+                                    color: $red;
                                 }
                             }
                         }

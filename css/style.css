@@ -602,10 +602,10 @@ button {
     align-items: center;
     text-align: center;
     width: 100%;
-    background-image: -webkit-gradient(linear, left top, right top, from(#646464), to(#b35f00));
-    background-image: -webkit-linear-gradient(left, #646464, #b35f00);
-    background-image: -o-linear-gradient(left, #646464, #b35f00);
-    background-image: linear-gradient(to right, #646464, #b35f00);
+    background-image: -webkit-gradient(linear, left top, right top, from(#646464), to(#865720));
+    background-image: -webkit-linear-gradient(left, #646464, #865720);
+    background-image: -o-linear-gradient(left, #646464, #865720);
+    background-image: linear-gradient(to right, #646464, #865720);
     margin-bottom: 0; }
     .web-intro .three-part .infoG,
     .web-intro .three-part .MobileG,
@@ -701,26 +701,26 @@ button {
     .web-intro .three-part .teacherG {
       border: none; }
 
-.index-class {
+.index__class {
   padding-top: 5rem; }
-  .index-class.rec-class-section {
+  .index__class.rec-class-section {
     padding-top: 6rem; }
-  .index-class .flex-ls-wrapper {
+  .index__class .flex-ls-wrapper {
     margin: 0 auto;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 60%;
     min-width: 1050px; }
-    .index-class .flex-ls-wrapper .title-wrapper.col-12 {
+    .index__class .flex-ls-wrapper .title-wrapper.col-12 {
       padding-left: 10px;
       margin-bottom: 1rem; }
-    .index-class .flex-ls-wrapper .coursetitle {
+    .index__class .flex-ls-wrapper .coursetitle {
       color: #474747;
-      font-size: 30px; }
-      .index-class .flex-ls-wrapper .coursetitle img {
+      font-size: 28px; }
+      .index__class .flex-ls-wrapper .coursetitle img {
         margin-bottom: 10px;
         margin-right: 10px; }
-      .index-class .flex-ls-wrapper .coursetitle .more {
+      .index__class .flex-ls-wrapper .coursetitle .more {
         float: right;
         font-size: 20px;
         line-height: 50px;
@@ -728,19 +728,20 @@ button {
         -webkit-transition: .2s;
         -o-transition: .2s;
         transition: .2s; }
-        .index-class .flex-ls-wrapper .coursetitle .more:hover {
+        .index__class .flex-ls-wrapper .coursetitle .more:hover {
           text-decoration: none;
           color: #000; }
-      .index-class .flex-ls-wrapper .coursetitle #fund-tooltip {
+      .index__class .flex-ls-wrapper .coursetitle #fund-tooltip,
+      .index__class .flex-ls-wrapper .coursetitle #almost-tooltip {
         display: inline-block;
-        font-size: 25px;
+        font-size: 22px;
         margin-left: 5px;
         color: #969696; }
-    .index-class .flex-ls-wrapper .class-thumb {
-      height: 445px;
+    .index__class .flex-ls-wrapper .class-thumb {
+      height: 430px;
       padding: 10px;
       cursor: pointer; }
-      .index-class .flex-ls-wrapper .class-thumb .thumb {
+      .index__class .flex-ls-wrapper .class-thumb .thumb {
         background: #fff;
         width: 100%;
         height: 100%;
@@ -748,28 +749,29 @@ button {
         -o-transition: .3s;
         transition: .3s;
         overflow: hidden;
+        border-top: 5px solid;
         border-bottom: 5px solid; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb .price {
+        .index__class .flex-ls-wrapper .class-thumb .thumb .price {
           display: inline;
           position: absolute;
           right: 25px;
           bottom: 25px; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb .price span {
+          .index__class .flex-ls-wrapper .class-thumb .thumb .price span {
             display: inline-block;
             color: #d68b00;
             font-size: 28px; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb__on {
-          border-color: #b40606; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb__on .price span {
-            font-size: 32px; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb__fund {
-          border-color: #00a2ff; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb__fund .price span {
-            font-size: 25px; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-header {
+        .index__class .flex-ls-wrapper .class-thumb .thumb__on {
+          border-color: #b90000; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span {
+            font-size: 30px; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb__fund {
+          border-color: #3a9bd3; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__fund .price span {
+            font-size: 22px; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header {
           height: 165px;
           overflow: hidden; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster {
+          .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster {
             position: relative;
             display: block;
             width: 100%;
@@ -780,7 +782,7 @@ button {
             -webkit-transition-duration: .5s;
             -o-transition-duration: .5s;
             transition-duration: .5s; }
-            .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .add {
+            .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .add {
               background: none;
               border: 3px solid white;
               height: 60px;
@@ -798,75 +800,75 @@ button {
               -webkit-transition: .5s;
               -o-transition: .5s;
               transition: .5s; }
-            .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark {
+            .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark {
               height: 40px;
-              width: 150px;
+              width: 80px;
               line-height: 31px;
               font-size: 18px;
               text-align: center;
               color: #fff;
-              -webkit-transform: rotate(45deg);
-              -ms-transform: rotate(45deg);
-              transform: rotate(45deg);
               position: absolute;
-              right: -15%;
-              top: 9%; }
-              .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__on {
-                background: #b40606; }
-              .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__fund {
-                background: #00a2ff; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb:hover .poster {
+              right: 0%;
+              top: 0%; }
+              .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__on {
+                background: #b90000; }
+              .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__fund {
+                background: #3a9bd3; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb:hover .poster {
           background-size: 150%; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb:hover .poster .add {
+          .index__class .flex-ls-wrapper .class-thumb .thumb:hover .poster .add {
             visibility: visible;
             opacity: 1; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .title {
-          font-size: 27px;
-          padding: 15px 15px 15px 15px;
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .title {
+          font-size: 25px;
+          padding: 10px 15px 5px 15px;
           max-height: 100px;
           overflow: hidden; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont,
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .time,
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .name,
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .progress {
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont,
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .time,
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .name,
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .progress {
           padding: 2px 15px;
           color: #969696;
           font-size: 18px; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont span.star,
-          .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .time span.star,
-          .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .name span.star,
-          .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .progress span.star {
+          .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont span.star,
+          .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .time span.star,
+          .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .name span.star,
+          .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .progress span.star {
             color: #ffc240;
             margin-right: 5px; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__title {
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__title {
           width: 100%;
           font-size: 18px; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__title .date {
+          .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__title .date {
             float: right;
             margin-right: 3px; }
-            .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__title .date .num {
-              color: #00a2ff; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__bar {
+            .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__title .date .num {
+              color: #b90000; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__bar {
           width: 100%;
           height: 15px;
           border-radius: 10px;
           background: #e4e4e4;
           overflow: hidden;
           margin: 5px 0; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__bar .process__thumb {
+          .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__bar .process__thumb {
             height: 15px;
-            width: 33.33333%;
-            background-color: #00a2ff; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people {
+            max-width: 100%;
+            background-image: -webkit-gradient(linear, left top, right top, from(#b3f6ff), to(#3a9bd3));
+            background-image: -webkit-linear-gradient(left, #b3f6ff, #3a9bd3);
+            background-image: -o-linear-gradient(left, #b3f6ff, #3a9bd3);
+            background-image: linear-gradient(to right, #b3f6ff, #3a9bd3); }
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people {
           width: 100%; }
-          .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people .process__static {
+          .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people .process__static {
             font-size: 18px;
             display: inline-block;
             width: 100%;
             text-align: left; }
-            .index-class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people .process__static .num {
-              color: #00a2ff; }
-        .index-class .flex-ls-wrapper .class-thumb .thumb .add-mark {
+            .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people .process__static .num {
+              color: #b90000; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb .add-mark {
           display: inline;
           position: absolute;
           left: 30px;
