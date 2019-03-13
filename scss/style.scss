@@ -62,6 +62,15 @@ button {
     display: none;
 }
 
+.user__photo {
+    display: inline-block;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+
+}
+
 @media (max-width: 991px) {
     .hidden-md {
         display: none;
@@ -148,8 +157,7 @@ button {
             a {
                 color: $font-w;
                 text-decoration: none;
-                padding: 5px 1.5rem;
-                // border: 1px solid red;
+                padding: 5px 1.5rem; // border: 1px solid red;
                 margin: 0 10px;
                 border-radius: 5px;
                 transition: .5s;
@@ -245,8 +253,8 @@ button {
 
                 &#logOut {
                     border-radius: 40px;
-                    padding: 5px 15px 5px 10px;
-                    margin-top: -1rem;
+                    padding: 5px 15px 0px 10px;
+                    margin-top: -0.3rem;
                 }
 
                 &:hover {
@@ -262,13 +270,8 @@ button {
 
                 span {
                     position: relative;
-                    top: 2px;
+                    top: -10px;
                     margin-left: 3px;
-                }
-
-                .user__photo {
-                    width: 2rem;
-                    border-radius: 100%;
                 }
             }
         }
@@ -299,7 +302,6 @@ button {
         }
     }
 }
-
 
 /* search form */
 
@@ -337,7 +339,6 @@ button {
     position: relative;
 }
 
-
 /* Close Icon */
 
 .icon-close {
@@ -358,7 +359,6 @@ button {
 .icon-close:hover {
     transform: rotate(0);
 }
-
 
 /* Search Input */
 
@@ -404,7 +404,6 @@ button {
 .search-input :-ms-input-placeholder {
     color: #eee;
 }
-
 
 /* Control btn */
 
@@ -549,8 +548,7 @@ $link_hover_color: #fff;
     height: 33vw;
     min-height: 25vw;
     background-size: cover;
-    background-position: center;
-    // background-color:rgba(#c46897,.38);
+    background-position: center; // background-color:rgba(#c46897,.38);
     // background-blend-mode:overlay;
     transition: all .8s ease;
 
@@ -645,7 +643,6 @@ $link_hover_color: #fff;
         width: 500px;
         margin-left: -250px;
         margin-top: -80px;
-
     }
 
     @each $button,
@@ -858,7 +855,6 @@ $link_hover_color: #fff;
 
         @media(max-width: 991px) {
             padding-top: 4rem;
-
         }
     }
 
@@ -920,13 +916,10 @@ $link_hover_color: #fff;
                 margin-left: 5px;
                 color: $font-gray;
             }
-
-
         }
 
         .class-thumb {
-            height: 430px;
-            // background: gray;
+            height: 430px; // background: gray;
             padding: 10px;
             cursor: pointer;
 
@@ -1024,8 +1017,7 @@ $link_hover_color: #fff;
                             line-height: 31px;
                             font-size: 18px;
                             text-align: center;
-                            color: $font-w;
-                            // transform: rotate(45deg);
+                            color: $font-w; // transform: rotate(45deg);
                             position: absolute;
                             right: 0%;
                             top: 0%;
@@ -1039,11 +1031,9 @@ $link_hover_color: #fff;
                             }
                         }
                     }
-
                 }
 
                 &:hover {
-
                     .poster {
                         background-size: 130%;
 

@@ -33,6 +33,13 @@ button {
 .show-610 {
   display: none; }
 
+.user__photo {
+  display: inline-block;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%; }
+
 @media (max-width: 991px) {
   .hidden-md {
     display: none; } }
@@ -169,8 +176,8 @@ button {
         transition: .3s; }
         .nav-before .nav-bar-wrapper .log-search button#logOut {
           border-radius: 40px;
-          padding: 5px 15px 5px 10px;
-          margin-top: -1rem; }
+          padding: 5px 15px 0px 10px;
+          margin-top: -0.3rem; }
         .nav-before .nav-bar-wrapper .log-search button:hover {
           color: #000;
           font-weight: 700;
@@ -180,11 +187,8 @@ button {
         font-family: "Noto Sans TC"; }
         .nav-before .nav-bar-wrapper .log-search #logOut span {
           position: relative;
-          top: 2px;
+          top: -10px;
           margin-left: 3px; }
-        .nav-before .nav-bar-wrapper .log-search #logOut .user__photo {
-          width: 2rem;
-          border-radius: 100%; }
   .nav-before.sticky {
     background-color: #474747;
     position: fixed;
