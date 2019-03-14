@@ -198,3 +198,30 @@ $(document).ready(function () {
         $('.thumb-header.liked .add').html('<i class="fas fa-heart"></i>');
     });
 });
+
+$('.master-main-slider').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 5,
+    autoplay: true,
+    responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }
+    ]
+
+});
