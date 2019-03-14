@@ -205,6 +205,14 @@ $('.master-main-slider').slick({
     slidesToShow: 5,
     autoplay: true,
     responsive: [{
+            breakpoint: 1150,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        }, {
             breakpoint: 768,
             settings: {
                 arrows: false,
@@ -214,7 +222,7 @@ $('.master-main-slider').slick({
             }
         },
         {
-            breakpoint: 480,
+            breakpoint: 576,
             settings: {
                 arrows: false,
                 centerMode: true,
