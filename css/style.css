@@ -1146,6 +1146,8 @@ button {
           border-color: #3a9bd3; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__fund .price span {
             font-size: 20px; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb__free {
+          border-color: #474747; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header {
           height: 150px;
           overflow: hidden; }
@@ -1196,6 +1198,8 @@ button {
                 background: #b90000; }
               .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__fund {
                 background: #3a9bd3; }
+              .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__free {
+                background: #474747; }
         .index__class .flex-ls-wrapper .class-thumb .thumb:hover .poster {
           background-size: 130%; }
           .index__class .flex-ls-wrapper .class-thumb .thumb:hover .poster .add {
@@ -1260,3 +1264,9 @@ button {
           bottom: 23px;
           font-size: 30px;
           color: #ffc240; }
+
+.free-class-section.index__class .flex-ls-wrapper .class-thumb {
+  height: 400px; }
+  .free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
+    color: #969696;
+    font-size: 22px; }

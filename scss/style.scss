@@ -1331,6 +1331,10 @@ $link_hover_color: #fff;
                     }
                 }
 
+                &__free {
+                    border-color: $font-dark;
+                }
+
                 .thumb-header {
                     height: 150px;
                     overflow: hidden;
@@ -1385,6 +1389,10 @@ $link_hover_color: #fff;
 
                             &__fund {
                                 background: $blue;
+                            }
+
+                            &__free {
+                                background: $font-dark;
                             }
                         }
                     }
@@ -1488,5 +1496,20 @@ $link_hover_color: #fff;
                 }
             }
         }
+    }
+}
+
+.free-class-section.index__class .flex-ls-wrapper .class-thumb {
+    height: 400px;
+
+    .thumb-header {}
+
+    .thumb-body {}
+
+    .add-mark {}
+
+    .price span {
+        color: #969696;
+        font-size: 22px;
     }
 }
