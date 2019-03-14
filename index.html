@@ -137,7 +137,7 @@
                             <div class="modal__body">
                                 <ul>
                                     <li id="point"><a><i class="fas fa-coins"></i>持有點數<span class="num emph">200</span>點
-                                            <i class="fas fa-question-circle" id="point-tooltip" data="toggle" title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i></a></li>
+                                            <i class="fas fa-question-circle" id="tooltip" data="toggle" title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i></a></li>
                                     <li><a href=""><i class="fas fa-heart"></i>收藏課程</a></li>
                                     <li><a href=""><i class="far fa-eye"></i>觀看紀錄</a></li>
                                     <li><a href=""><i class="fas fa-shopping-cart"></i>購買歷程</a></li>
@@ -204,15 +204,19 @@
                                 <li><a href="/about/address">青馬學院論壇</a></li>
                             </ul>
                         </li>
-                        <a href="#" class="modal__header">
-                            <div class="user__photo user__photo-50" style="background-image:url(img/profile/portrait-005.jpg)"></div>
-                            <div class="user__name">嗨嗨我是餅乾 <i class="fas fa-edit"></i></div>
-                        </a>
+                        <!-- mmenu 已登入區塊 -->
                         <div class="user__option-modal">
+                            <a href="#" class="modal__header">
+                                <div class="user__photo user__photo-50" style="background-image:url(img/profile/portrait-005.jpg)"></div>
+                                <div class="user__name">嗨嗨我是餅乾 <i class="fas fa-edit"></i></div>
+                            </a>
                             <div class="modal__body">
                                 <ul>
-                                    <li id="point"><a><i class="fas fa-coins"></i>持有點數<span class="num emph">200</span>點
-                                            <i class="fas fa-question-circle" id="point-tooltip" data="toggle" title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i></a></li>
+                                    <li id="point">
+                                        <a><i class="fas fa-coins" data="tooltip" title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i>持有點數<span
+                                                class="num emph">200</span>點</a>
+                                        <a href="" class="point-q">點數是什麼？</a>
+                                    </li>
                                     <li><a href=""><i class="fas fa-heart"></i>收藏課程</a></li>
                                     <li><a href=""><i class="far fa-eye"></i>觀看紀錄</a></li>
                                     <li><a href=""><i class="fas fa-shopping-cart"></i>購買歷程</a></li>
@@ -461,7 +465,7 @@
                 <!-- 募資中課程標題 -->
                 <div class="title-wrapper col-12">
                     <div class="coursetitle">
-                        <img src="img/logo-school.png" alt=""> 募資中課程課程 <i class="fas fa-question-circle" id="fund-tooltip"
+                        <img src="img/logo-school.png" alt=""> 募資中課程課程 <i class="fas fa-question-circle" id="tooltip"
                             data="toggle" title="這些課程必須達到募資門檻才能成功開課，揪團協助完成募資吧！"></i>
                         <a href="index-course-ls.html" class="more hidden-610">更多募資中課程 <i class="fas fa-arrow-circle-right"></i></a>
                         <a href="index-course-ls.html" class="more show-610">更多 <i class="fas fa-arrow-circle-right"></i></a>
@@ -615,7 +619,7 @@
                 <!-- 即將結束募資課程標題 -->
                 <div class="title-wrapper col-12">
                     <div class="coursetitle">
-                        <img src="img/logo-school.png" alt=""> 課程募資即將結束 <i class="fas fa-question-circle" id="almost-tooltip"
+                        <img src="img/logo-school.png" alt=""> 課程募資即將結束 <i class="fas fa-question-circle" id="tooltip"
                             data="toggle" title="這些課程距離募資期限已經不遠，把握優惠價格就趁現在！"></i>
                         <a href="index-course-ls.html" class="more hidden-610">更多募資中課程 <i class="fas fa-arrow-circle-right"></i></a>
                         <a href="index-course-ls.html" class="more show-610">更多 <i class="fas fa-arrow-circle-right"></i></a>
@@ -801,13 +805,6 @@
                     ]
                 }, {
                     "position": "top"
-                }, {
-                    "position": "bottom",
-                    "content": [
-                        "<a class='fa fa-envelope' href='#/'></a>",
-                        "<a class='fa fa-twitter' href='#/'></a>",
-                        "<a class='fa fa-facebook' href='#/'></a>"
-                    ]
                 }]
             });
         });
@@ -818,7 +815,6 @@
             $('.navbar').addClass('search-active');
             $('.input-search').focus();
             $('.icon-close').show();
-            console.log('hihih');
         });
         $('.icon-close').click(function () {
             $('.navbar').removeClass('search-active');
@@ -847,13 +843,7 @@
         });
     </script>
     <script>
-        $('#fund-tooltip').tooltip({
-            placement: 'right'
-        });
-        $('#almost-tooltip').tooltip({
-            placement: 'right'
-        });
-        $('#point-tooltip').tooltip({
+        $('.fa-question-circle').tooltip({
             placement: 'right'
         });
     </script>

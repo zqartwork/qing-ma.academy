@@ -50,7 +50,7 @@ button {
 .tooltip-inner {
     font-family: 'Noto Sans TC';
     max-width: 70%;
-    font-size: 15px;
+    font-size: 12px;
     padding: 8px 15px;
     color: #fff;
     text-align: center;
@@ -294,6 +294,7 @@ button {
             // background: #fff;
             transform: translateX(-10rem);
             display: none;
+            min-width: 272px;
 
             &.show {
                 display: initial;
@@ -447,29 +448,41 @@ button {
 }
 
 .mmenu-place {
-    ul a.modal__header {
-        padding-top: 25px;
-        padding-left: 25px;
-        width: 80%;
+    .user__option-modal.mm-listitem {
+        background: $bgColor;
+        padding: 5px 15px 25px 15px;
+        border-radius: 4px;
+        width: 100%;
+        display: block;
 
-        .user__photo {
-            float: left;
-        }
+        .modal__header {
+            padding-top: 25px;
+            padding-left: 25px;
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            background: $bgColor;
 
-        .user__name {
-            float: left;
-            font-size: 18px;
-            color: $font-dark;
-            letter-spacing: 0.02rem;
-            transition: .3s;
-            margin-top: 13px;
-            margin-left: 10px;
+            .user__photo {
+                float: left;
+            }
 
-            i {
-                margin-left: 5px;
-                color: $font-gray;
-                font-size: 20px;
+            .user__name {
+                float: left;
+                font-size: 18px;
+                color: $font-dark;
+                letter-spacing: 0.02rem;
                 transition: .3s;
+                margin-top: 13px;
+                margin-left: 10px;
+
+                i {
+                    margin-left: 5px;
+                    color: $font-gray;
+                    font-size: 20px;
+                    transition: .3s;
+                }
+
+
             }
 
             &:hover,
@@ -477,6 +490,91 @@ button {
                 color: black;
             }
         }
+
+        .modal__body {
+            color: $font-dark;
+            letter-spacing: 0.02rem;
+            line-height: 50px;
+            padding-left: 25px;
+            padding-bottom: 20px;
+
+            i {
+                color: $font-gray;
+                width: 25px;
+                font-size: 20px;
+                margin-right: 8px;
+                transition: .5s;
+            }
+
+            a {
+                color: $font-dark;
+
+                &:hover {
+                    color: black;
+
+                    i {
+                        color: black;
+                    }
+                }
+            }
+
+            #point {
+                margin-top: 10px;
+                cursor: default;
+
+                &:hover {
+                    color: $font-dark;
+                    cursor: default;
+                }
+
+                .emph {
+                    margin: 0 10px;
+                    font-size: 25px;
+                    color: $brown;
+                    font-weight: 600;
+                }
+
+                .point-q {
+                    border: 1px solid gray;
+                    color: gray;
+                    font-size: 12px;
+                    padding: 1px 5px;
+                    margin-left: 5px;
+                    border-radius: 3px;
+                }
+            }
+        }
+
+        .modal__footer {
+            position: relative;
+            width: 100%;
+            text-align: right;
+            color: $font-dark;
+            letter-spacing: 0.02rem;
+            line-height: 40px;
+            border-top: 1px solid lightgray;
+            padding-top: 25px;
+            font-size: 18px;
+
+            .logout__btn {
+                display: inline-block;
+                padding: 0px 10px 0 12px;
+                border-radius: 5px;
+                font-family: 'Noto Sans TC';
+                border: 1px solid lightgray;
+                color: $font-dark;
+                font-size: 16px;
+
+                i {
+                    margin-left: 5px;
+                    color: $font-gray;
+                    font-size: 18px;
+                    transition: .3s;
+                }
+
+            }
+        }
+
     }
 }
 
@@ -1087,8 +1185,7 @@ $link_hover_color: #fff;
                 }
             }
 
-            #fund-tooltip,
-            #almost-tooltip {
+            #tooltip {
                 display: inline-block;
                 font-size: 22px;
                 margin-left: 5px;

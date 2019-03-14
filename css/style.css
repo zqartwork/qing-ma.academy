@@ -23,7 +23,7 @@ button {
 .tooltip-inner {
   font-family: 'Noto Sans TC';
   max-width: 70%;
-  font-size: 15px;
+  font-size: 12px;
   padding: 8px 15px;
   color: #fff;
   text-align: center;
@@ -202,7 +202,8 @@ button {
       -webkit-transform: translateX(-10rem);
       -ms-transform: translateX(-10rem);
       transform: translateX(-10rem);
-      display: none; }
+      display: none;
+      min-width: 272px; }
       .nav-before .nav-bar-wrapper .user__option-wrapper.show {
         display: initial; }
       .nav-before .nav-bar-wrapper .user__option-wrapper .arrow {
@@ -321,32 +322,103 @@ button {
       color: #000;
       border-color: #b39368; }
 
-.mmenu-place ul a.modal__header {
-  padding-top: 25px;
-  padding-left: 25px;
-  width: 80%; }
-  .mmenu-place ul a.modal__header .user__photo {
-    float: left; }
-  .mmenu-place ul a.modal__header .user__name {
-    float: left;
-    font-size: 18px;
-    color: #474747;
-    letter-spacing: 0.02rem;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    margin-top: 13px;
-    margin-left: 10px; }
-    .mmenu-place ul a.modal__header .user__name i {
-      margin-left: 5px;
-      color: #969696;
-      font-size: 20px;
+.mmenu-place .user__option-modal.mm-listitem {
+  background: #e4e4e4;
+  padding: 5px 15px 25px 15px;
+  border-radius: 4px;
+  width: 100%;
+  display: block; }
+  .mmenu-place .user__option-modal.mm-listitem .modal__header {
+    padding-top: 25px;
+    padding-left: 25px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background: #e4e4e4; }
+    .mmenu-place .user__option-modal.mm-listitem .modal__header .user__photo {
+      float: left; }
+    .mmenu-place .user__option-modal.mm-listitem .modal__header .user__name {
+      float: left;
+      font-size: 18px;
+      color: #474747;
+      letter-spacing: 0.02rem;
       -webkit-transition: .3s;
       -o-transition: .3s;
-      transition: .3s; }
-    .mmenu-place ul a.modal__header .user__name:hover,
-    .mmenu-place ul a.modal__header .user__name:hover i {
+      transition: .3s;
+      margin-top: 13px;
+      margin-left: 10px; }
+      .mmenu-place .user__option-modal.mm-listitem .modal__header .user__name i {
+        margin-left: 5px;
+        color: #969696;
+        font-size: 20px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+    .mmenu-place .user__option-modal.mm-listitem .modal__header:hover,
+    .mmenu-place .user__option-modal.mm-listitem .modal__header:hover i {
       color: black; }
+  .mmenu-place .user__option-modal.mm-listitem .modal__body {
+    color: #474747;
+    letter-spacing: 0.02rem;
+    line-height: 50px;
+    padding-left: 25px;
+    padding-bottom: 20px; }
+    .mmenu-place .user__option-modal.mm-listitem .modal__body i {
+      color: #969696;
+      width: 25px;
+      font-size: 20px;
+      margin-right: 8px;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+    .mmenu-place .user__option-modal.mm-listitem .modal__body a {
+      color: #474747; }
+      .mmenu-place .user__option-modal.mm-listitem .modal__body a:hover {
+        color: black; }
+        .mmenu-place .user__option-modal.mm-listitem .modal__body a:hover i {
+          color: black; }
+    .mmenu-place .user__option-modal.mm-listitem .modal__body #point {
+      margin-top: 10px;
+      cursor: default; }
+      .mmenu-place .user__option-modal.mm-listitem .modal__body #point:hover {
+        color: #474747;
+        cursor: default; }
+      .mmenu-place .user__option-modal.mm-listitem .modal__body #point .emph {
+        margin: 0 10px;
+        font-size: 25px;
+        color: #ac7000;
+        font-weight: 600; }
+      .mmenu-place .user__option-modal.mm-listitem .modal__body #point .point-q {
+        border: 1px solid gray;
+        color: gray;
+        font-size: 12px;
+        padding: 1px 5px;
+        margin-left: 5px;
+        border-radius: 3px; }
+  .mmenu-place .user__option-modal.mm-listitem .modal__footer {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    color: #474747;
+    letter-spacing: 0.02rem;
+    line-height: 40px;
+    border-top: 1px solid lightgray;
+    padding-top: 25px;
+    font-size: 18px; }
+    .mmenu-place .user__option-modal.mm-listitem .modal__footer .logout__btn {
+      display: inline-block;
+      padding: 0px 10px 0 12px;
+      border-radius: 5px;
+      font-family: 'Noto Sans TC';
+      border: 1px solid lightgray;
+      color: #474747;
+      font-size: 16px; }
+      .mmenu-place .user__option-modal.mm-listitem .modal__footer .logout__btn i {
+        margin-left: 5px;
+        color: #969696;
+        font-size: 18px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
 
 /* search form */
 .navbar.search-active {
@@ -957,8 +1029,7 @@ button {
         .index__class .flex-ls-wrapper .coursetitle .more:hover {
           text-decoration: none;
           color: #000; }
-      .index__class .flex-ls-wrapper .coursetitle #fund-tooltip,
-      .index__class .flex-ls-wrapper .coursetitle #almost-tooltip {
+      .index__class .flex-ls-wrapper .coursetitle #tooltip {
         display: inline-block;
         font-size: 22px;
         margin-left: 5px;
