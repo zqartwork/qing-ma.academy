@@ -31,7 +31,9 @@
   #menu ul li a i {
     color: #969696;
     font-size: 18px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 20px; }
   #menu ul li a.cur-arr {
     cursor: default; }
   #menu .moviecool-mmenu {
@@ -110,13 +112,13 @@
                 -webkit-transform: rotate(45deg);
                 -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
-                right: -20%;
+                right: -23%;
                 top: 8%;
                 font-size: 20px;
                 line-height: 30px; } }
               @media (max-width: 575px) and (max-width: 425px) {
                 .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-header .poster .mark {
-                  right: -28%;
+                  right: -35%;
                   top: 8%;
                   font-size: 16px;
                   height: 35px;

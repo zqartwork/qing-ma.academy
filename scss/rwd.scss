@@ -62,6 +62,8 @@ $blue: #3a9bd3;
         color: $font-gray;
         font-size: 18px;
         margin-right: 10px;
+        margin-left: 10px;
+        width: 20px;
     }
 
     #menu ul li a.cur-arr {
@@ -156,13 +158,13 @@ $blue: #3a9bd3;
                                     height: 40px;
                                     width: 180px;
                                     transform: rotate(45deg);
-                                    right: -20%;
+                                    right: -23%;
                                     top: 8%;
                                     font-size: 20px;
                                     line-height: 30px;
 
                                     @media(max-width: 425px) {
-                                        right: -28%;
+                                        right: -35%;
                                         top: 8%;
                                         font-size: 16px;
                                         height: 35px;

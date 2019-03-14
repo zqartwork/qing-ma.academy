@@ -21,10 +21,12 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="plugins/mmenu/jquery.mmenu.all.css">
+    <!-- Animate.css v3.5.2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
     <!-- core.css -->
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rwd.css">
+    <link rel="stylesheet" href="css/animate.css">
     <!-- 20190311-built -->
 </head>
 
@@ -34,6 +36,7 @@
         <!-- nav-bar -->
         <nav class="navbar navbar-expand-lg navbar-light nav-before" id="nav-top">
             <div class="nav-bar-wrapper">
+
                 <!-- logo__set -->
                 <a class="navbar-brand nav-lg-brand logo-set" href="#">
                     <ul>
@@ -46,6 +49,7 @@
                         </li>
                     </ul>
                 </a>
+
                 <!-- dropdown-menu -->
                 <div class="main-menu">
                     <ul id="nav">
@@ -104,6 +108,7 @@
                         </li>
                     </ul>
                 </div>
+
                 <!-- login-search-part -->
                 <div class="log-search">
                     <div class="search-box">
@@ -152,10 +157,12 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- mmenu-hamburgur -->
                 <div class="header">
                     <a href="#menu"><i class="fas fa-bars"></i></a>
                 </div>
+
                 <!-- mmenu-place -->
                 <nav id="menu" class="mmenu-place">
                     <ul>
@@ -204,6 +211,11 @@
                                 <li><a href="/about/address">青馬學院論壇</a></li>
                             </ul>
                         </li>
+                        <!-- mmenu 尚未登入區塊 -->
+                        <!-- <li>
+                            <a href="/" class="login__btn"><i class="fas fa-sign-out-alt"></i>登入</a>
+                        </li> -->
+
                         <!-- mmenu 已登入區塊 -->
                         <div class="user__option-modal">
                             <a href="#" class="modal__header">
@@ -276,7 +288,7 @@
         </section>
 
         <!-- 主要內容敘述區塊 -->
-        <section class="web-intro">
+        <section class="web-intro ">
             <ul class="three-part">
                 <li class="infoG">
                     <div class="icon xs"><i class="fab fa-slideshare"></i></div>
@@ -310,9 +322,11 @@
             </ul>
         </section>
 
+
+
         <!-- 課程列表開始 -->
         <!-- 推薦 Recommend -->
-        <section class="rec-class-section index__class">
+        <section class="rec-class-section index__class wow fadeInUp" data-wow-delay="0.1s">
             <div class="flex-ls-wrapper row">
                 <!-- 推薦課程標題 -->
                 <div class="title-wrapper col-12">
@@ -326,11 +340,11 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs">
                     <div class="thumb thumb__on">
                         <ul>
-                            <li class="thumb-header ">
+                            <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -361,12 +375,10 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs">
                     <div class="thumb thumb__on">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
                                     <div class="mark mark__on">已開課</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -393,11 +405,11 @@
                 <div class="class-thumb col-lg-3 col-md-4 hidden-sm hidden-xs show-575">
                     <div class="thumb thumb__on">
                         <ul>
-                            <li class="thumb-header ">
+                            <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -427,12 +439,10 @@
                 <div class="class-thumb col-lg-3 hidden-md hidden-xs show-575">
                     <div class="thumb thumb__on">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-004.jpg);">
                                     <div class="mark mark__on">已開課</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -452,9 +462,6 @@
                                 </div>
                                 <div class="name"> 講師 <span>小鹿好可愛</span> </div>
                             </li>
-
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="add-mark"><i class="fas fa-heart"></i></li>
                             <li class="price"><span>NT$</span> <span class="num">2,400</span></li>
                         </ul>
                     </div>
@@ -462,8 +469,9 @@
             </div>
 
         </section>
+
         <!-- 募資中 Fundraising -->
-        <section class="fund-class-section index__class">
+        <section class="fund-class-section index__class wow fadeInUp" data-wow-delay="0.1s">
             <div class="flex-ls-wrapper row">
                 <!-- 募資中課程標題 -->
                 <div class="title-wrapper col-12">
@@ -478,11 +486,12 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <li class="thumb-header ">
+                            <!--喜歡會有標籤 liked-->
+                            <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-005.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -515,12 +524,10 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
                             <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-008.jpg);">
                                     <div class="mark mark__fund">募資中</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -548,11 +555,11 @@
                 <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <li class="thumb-header ">
+                            <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-006.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -582,12 +589,10 @@
                 <div class="class-thumb col-lg-3 hidden-md show-575">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-007.jpg);">
                                     <div class="mark mark__fund">募資中</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -606,9 +611,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
                                 <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
@@ -617,8 +620,9 @@
                 </div>
             </div>
         </section>
+
         <!-- 即將結束募資 NearOn -->
-        <section class="fund-class-section index__class">
+        <section class="fund-class-section index__class wow fadeInUp" data-wow-delay="0.1s">
             <div class="flex-ls-wrapper row">
                 <!-- 即將結束募資課程標題 -->
                 <div class="title-wrapper col-12">
@@ -633,25 +637,27 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <li class="thumb-header ">
+                            <!--喜歡會有標籤 liked-->
+                            <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-009.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
-                                <div class="title">後製必備基礎工具（AE / PR）</div>
+                                <div class="title">小資女的質感照 - 小成本大製作</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">4</span> 天</span>
+                                        <span class="date">剩 <span class="num">3</span> 天</span>
                                     </div>
                                     <div class="process__bar">
                                         <div class="process__thumb" style="width: 60%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static"><span class="hidden-xs">已募資</span> <span class="num">20</span>
+                                        <span class="process__static"><span class="hidden-xs"><span class="hidden-xs">已募資</span>
+                                            </span> <span class="num">20</span>
                                             /30 人</span>
                                     </div>
                                 </div>
@@ -659,7 +665,7 @@
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">800</span></div>
                             </li>
 
                         </ul>
@@ -669,20 +675,18 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
                             <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-010.jpg);">
                                     <div class="mark mark__fund">募資中</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
-                                <div class="title">後製必備基礎工具（AE / PR）</div>
+                                <div class="title">古典芭蕾走到現代芭蕾 - 從來不變</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">5</span> 天</span>
+                                        <span class="date">剩 <span class="num">4</span> 天</span>
                                     </div>
                                     <div class="process__bar">
                                         <div class="process__thumb" style="width: 33.33333%;"></div>
@@ -692,10 +696,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,500</span></div>
                             </li>
 
                         </ul>
@@ -704,19 +706,19 @@
                 <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <li class="thumb-header ">
+                            <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-011.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
-                                <div class="title">後製必備基礎工具（AE / PR）</div>
+                                <div class="title">喫貓所 - 我們是這樣愛著貓的攝影</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">8</span> 天</span>
+                                        <span class="date">剩 <span class="num">5</span> 天</span>
                                     </div>
                                     <div class="process__bar">
                                         <div class="process__thumb" style="width: 580%;"></div>
@@ -729,7 +731,7 @@
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,100</span></div>
                             </li>
 
                         </ul>
@@ -738,20 +740,18 @@
                 <div class="class-thumb col-lg-3 hidden-md show-575">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-012.jpg);">
                                     <div class="mark mark__fund">募資中</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
-                                <div class="title">後製必備基礎工具（AE / PR）</div>
+                                <div class="title">用顏色說故事 - 不只有畫面</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">9</span> 天</span>
+                                        <span class="date">剩 <span class="num">10</span> 天</span>
                                     </div>
                                     <div class="process__bar">
                                         <div class="process__thumb" style="width: 80%;"></div>
@@ -762,9 +762,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
                                 <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
@@ -773,8 +771,9 @@
                 </div>
             </div>
         </section>
+
         <!-- 熱門課程 Hot -->
-        <section class="hot-class-section index__class">
+        <section class="hot-class-section index__class wow fadeInUp" data-wow-delay="0.1s">
             <div class="flex-ls-wrapper row">
                 <!-- 熱門課程標題 -->
                 <div class="title-wrapper col-12">
@@ -791,7 +790,7 @@
                         <ul>
                             <!-- 已收藏課程 -->
                             <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-013.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="fas fa-heart"></i></button>
@@ -826,7 +825,7 @@
                         <ul>
                             <!--喜歡會有標籤 liked-->
                             <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-014.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
@@ -856,7 +855,7 @@
                     <div class="thumb thumb__on">
                         <ul>
                             <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-015.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="fas fa-heart"></i></button>
@@ -891,7 +890,7 @@
                         <ul>
                             <!--喜歡會有標籤 liked-->
                             <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-004.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-016.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="far fa-heart"></i></button>
@@ -924,16 +923,17 @@
             </div>
 
         </section>
+
         <!-- 免費 Free -->
-        <section class="free-class-section index__class">
+        <section class="free-class-section index__class wow fadeInUp" data-wow-delay="0.1s">
             <div class="flex-ls-wrapper row">
-                <!-- 熱門課程標題 -->
+                <!-- 免費課程標題 -->
                 <div class="title-wrapper col-12">
                     <div class="coursetitle">
-                        <img src="img/logo-school.png" alt=""> 熱門課程 <i class="fas fa-question-circle" id="tooltip" data="toggle"
+                        <img src="img/logo-school.png" alt=""> 免費課程 <i class="fas fa-question-circle" id="tooltip" data="toggle"
                             title="購買人數最多的課程，跟風一探究竟大家都喜歡什麼課程吧！"></i></a></li>
 
-                        <a href="index-course-ls.html" class="more hidden-610">更多熱門課程 <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="index-course-ls.html" class="more hidden-610">更多免費課程 <i class="fas fa-arrow-circle-right"></i></a>
                         <a href="index-course-ls.html" class="more show-610">更多 <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
@@ -942,14 +942,14 @@
                         <ul>
                             <!-- 已收藏課程 -->
                             <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-017.jpg);">
                                     <div class="mark mark__free">免費</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
-                                <div class="title">如何捕捉美好景照</div>
+                                <div class="title">找回生活的樣貌 - 大型藝術</div>
                                 <div class="cont">
                                     <span class="star">
                                         <i class="fas fa-star"></i>
@@ -977,13 +977,13 @@
                         <ul>
                             <!--喜歡會有標籤 liked-->
                             <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-018.jpg);">
                                     <div class="mark mark__free">免費</div>
                                     <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
-                                <div class="title">教你一天10分鐘 - 不用單月就學會攝影</div>
+                                <div class="title">電影配樂的世界 - 比你想像中更加有趣</div>
                                 <div class="cont">
                                     <span class="star">
                                         <i class="fas fa-star"></i>
@@ -1007,14 +1007,14 @@
                     <div class="thumb thumb__free">
                         <ul>
                             <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-019.jpg);">
                                     <div class="mark mark__free">免費</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
-                                <div class="title">拍電影前必備 - 如何學會看電影</div>
+                                <div class="title">水、動物、小孩 是三大禁忌克服教學</div>
                                 <div class="cont">
                                     <span class="star">
                                         <i class="fas fa-star"></i>
@@ -1042,14 +1042,14 @@
                         <ul>
                             <!--喜歡會有標籤 liked-->
                             <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-004.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-020.jpg);">
                                     <div class="mark mark__free">免費</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
-                                <div class="title">場景擺設手法教學 - 絕不藏私</div>
+                                <div class="title">製作團隊的重要性 - 了解電影產業合作的重要</div>
                                 <div class="cont">
                                     <span class="star">
                                         <i class="fas fa-star"></i>
@@ -1075,16 +1075,20 @@
             </div>
 
         </section>
+
         <!-- 延伸 Ex -->
-        <section class="sub-index-section"></section>
+        <section class="sub-index-section wow fadeInUp" data-wow-delay="0.1s"></section>
 
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="js/jquery.appear.js"></script>
+    <script src="js/wow.min.js"></script>
     <!-- 延遲載入 -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -1148,7 +1152,6 @@
             placement: 'top'
         });
     </script>
-
 </body>
 
 </html>

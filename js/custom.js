@@ -1,5 +1,15 @@
 //hover dropdown-nav-menu
 $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+
+    var wow = new WOW({
+        boxClass: 'wow', // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: false // trigger animations on mobile devices (true is default)
+    });
+    wow.init();
+
     $('ul#nav ul.sub-menu').css('opacity', 0.0);
     $('ul#nav li').hover(function () {
             $(this).find('.sub-menu').stop().animate({

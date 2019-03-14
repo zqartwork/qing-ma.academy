@@ -24,7 +24,7 @@ button {
 .tooltip-inner {
   font-family: 'Noto Sans TC';
   max-width: 65%;
-  font-size: 12px;
+  font-size: 13px;
   padding: 8px 15px;
   color: #fff;
   text-align: center;
@@ -328,6 +328,24 @@ button {
     .nav-before.sticky .log-search > button:hover {
       color: #000;
       border-color: #b39368; }
+
+.mmenu-place .logout__btn {
+  display: inline-block;
+  padding: 0px 10px 0 12px;
+  border-radius: 5px;
+  font-family: 'Noto Sans TC';
+  border: none;
+  color: #474747;
+  font-size: 16px;
+  background: none;
+  cursor: pointer; }
+  .mmenu-place .logout__btn i {
+    margin-left: 5px;
+    color: #969696;
+    font-size: 18px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
 
 .mmenu-place .user__option-modal.mm-listitem {
   background: #e4e4e4;
@@ -1121,8 +1139,8 @@ button {
         -o-transition: .3s;
         transition: .3s;
         overflow: hidden;
-        border-top: 3px solid;
-        border-bottom: 3px solid; }
+        border-top: 4px solid;
+        border-bottom: 4px solid; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .price {
           display: inline;
           position: absolute;
@@ -1265,8 +1283,11 @@ button {
           font-size: 30px;
           color: #ffc240; }
 
-.free-class-section.index__class .flex-ls-wrapper .class-thumb {
-  height: 400px; }
-  .free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
-    color: #969696;
-    font-size: 22px; }
+.free-class-section.index__class .flex-ls-wrapper .class-thumb .thumb-body .cont,
+.free-class-section.index__class .flex-ls-wrapper .class-thumb .thumb-body .name {
+  max-height: 31px;
+  overflow: hidden; }
+
+.free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
+  color: #969696;
+  font-size: 22px; }

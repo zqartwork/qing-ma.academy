@@ -51,7 +51,7 @@ button {
 .tooltip-inner {
     font-family: 'Noto Sans TC';
     max-width: 65%;
-    font-size: 12px;
+    font-size: 13px;
     padding: 8px 15px;
     color: #fff;
     text-align: center;
@@ -459,6 +459,27 @@ button {
 }
 
 .mmenu-place {
+
+    .logout__btn {
+        display: inline-block;
+        padding: 0px 10px 0 12px;
+        border-radius: 5px;
+        font-family: 'Noto Sans TC';
+        border: none;
+        color: $font-dark;
+        font-size: 16px;
+        background: none;
+        cursor: pointer;
+
+        i {
+            margin-left: 5px;
+            color: $font-gray;
+            font-size: 18px;
+            transition: .3s;
+        }
+
+    }
+
     .user__option-modal.mm-listitem {
         background: $bgColor;
         padding: 5px 15px 25px 15px;
@@ -1289,8 +1310,8 @@ $link_hover_color: #fff;
                 height: 100%;
                 transition: .3s;
                 overflow: hidden;
-                border-top: 3px solid;
-                border-bottom: 3px solid;
+                border-top: 4px solid;
+                border-bottom: 4px solid;
 
                 .price {
                     display: inline;
@@ -1500,11 +1521,16 @@ $link_hover_color: #fff;
 }
 
 .free-class-section.index__class .flex-ls-wrapper .class-thumb {
-    height: 400px;
-
     .thumb-header {}
 
-    .thumb-body {}
+    .thumb-body {
+
+        .cont,
+        .name {
+            max-height: 31px;
+            overflow: hidden;
+        }
+    }
 
     .add-mark {}
 
