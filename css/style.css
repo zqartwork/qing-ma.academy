@@ -7,7 +7,8 @@ body {
   background-color: #e4e4e4;
   font-family: "Noto Sans TC", "Lato";
   outline: none;
-  background: #e4e4e4; }
+  background: #e4e4e4;
+  min-width: 375px; }
 
 a {
   color: white;
@@ -22,7 +23,7 @@ button {
 
 .tooltip-inner {
   font-family: 'Noto Sans TC';
-  max-width: 70%;
+  max-width: 65%;
   font-size: 12px;
   padding: 8px 15px;
   color: #fff;
@@ -61,12 +62,9 @@ button {
   .show-610 {
     display: initial; } }
 
-@media (max-width: 570px) {
-  .hidden-md,
-  .hidden-sm {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
+@media (max-width: 575px) {
+  .show-575 {
+    display: initial; } }
 
 .nav-before {
   background-color: #00000067;
@@ -98,9 +96,16 @@ button {
         filter: brightness(5) grayscale(1); }
       .nav-before .nav-bar-wrapper a.logo-set .cn-title {
         letter-spacing: 1px; }
+        @media (max-width: 425px) {
+          .nav-before .nav-bar-wrapper a.logo-set .cn-title {
+            display: inline-block;
+            margin-top: 8px; } }
       .nav-before .nav-bar-wrapper a.logo-set .en-title {
         display: block;
         font-size: xx-small; }
+        @media (max-width: 425px) {
+          .nav-before .nav-bar-wrapper a.logo-set .en-title {
+            display: none; } }
       .nav-before .nav-bar-wrapper a.logo-set:hover {
         color: #b39368;
         font-weight: 500; }
@@ -196,7 +201,7 @@ button {
           top: -10px;
           margin-left: 3px; }
     .nav-before .nav-bar-wrapper .user__option-wrapper {
-      margin-top: 10px;
+      margin-top: 5px;
       position: fixed;
       z-index: 1;
       -webkit-transform: translateX(-10rem);
@@ -214,14 +219,16 @@ button {
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         right: 10%;
         border-top-left-radius: 4px; }
       .nav-before .nav-bar-wrapper .user__option-wrapper .user__option-modal {
         background: #e4e4e4;
         margin-top: 8px;
         padding: 15px 25px;
-        border-radius: 4px; }
+        border-radius: 4px;
+        -webkit-box-shadow: 0 0 5px #00000057;
+        box-shadow: 0 0 5px #00000057; }
         .nav-before .nav-bar-wrapper .user__option-wrapper .user__option-modal .modal__header {
           justify-items: center;
           -webkit-box-align: center;
@@ -658,6 +665,16 @@ button {
     .slick-slide,
     .slide-image {
       height: 60vw; } }
+  @media (max-width: 576px) {
+    .main-slider,
+    .slick-slide,
+    .slide-image {
+      height: 70vw; } }
+  @media (max-width: 425px) {
+    .main-slider,
+    .slick-slide,
+    .slide-image {
+      height: 90vw; } }
 
 .slick-next,
 .slick-prev {
@@ -687,6 +704,11 @@ button {
     .slick-next,
     .slick-prev {
       font-size: 40px; } }
+  @media (max-width: 425px) {
+    .slick-next,
+    .slick-prev {
+      font-size: 40px;
+      top: 55%; } }
 
 .slick-prev {
   left: 15%; }
@@ -728,7 +750,15 @@ button {
       height: 200px;
       width: 500px;
       margin-left: -250px;
-      margin-top: -80px; } }
+      margin-top: -100px;
+      font-size: 25px; } }
+  @media (max-width: 425px) {
+    .caption {
+      height: 200px;
+      width: 500px;
+      margin-left: -250px;
+      margin-top: -100px;
+      font-size: 22px; } }
   .caption .fill {
     --color: #a972cb;
     --hover: #cb72aa; }
@@ -862,6 +892,11 @@ button {
     background-image: -o-linear-gradient(left, #646464, #865720);
     background-image: linear-gradient(to right, #646464, #865720);
     margin-bottom: 0; }
+    @media (max-width: 576px) {
+      .web-intro .three-part {
+        border: none;
+        display: inline-block;
+        text-align: center; } }
     .web-intro .three-part .infoG,
     .web-intro .three-part .MobileG,
     .web-intro .three-part .teacherG {
@@ -903,6 +938,13 @@ button {
           -webkit-box-flex: 0.3;
           -ms-flex: 0.3;
           flex: 0.3; } }
+      @media (max-width: 576px) {
+        .web-intro .three-part .infoG,
+        .web-intro .three-part .MobileG,
+        .web-intro .three-part .teacherG {
+          border: none;
+          display: inline-block;
+          margin: 0 20px; } }
       .web-intro .three-part .infoG .icon,
       .web-intro .three-part .MobileG .icon,
       .web-intro .three-part .teacherG .icon {
@@ -921,6 +963,11 @@ button {
           .web-intro .three-part .MobileG .icon,
           .web-intro .three-part .teacherG .icon {
             font-size: 35px; } }
+        @media (max-width: 576px) {
+          .web-intro .three-part .infoG .icon.xs,
+          .web-intro .three-part .MobileG .icon.xs,
+          .web-intro .three-part .teacherG .icon.xs {
+            display: block; } }
       .web-intro .three-part .infoG .cont,
       .web-intro .three-part .MobileG .cont,
       .web-intro .three-part .teacherG .cont {
@@ -979,16 +1026,36 @@ button {
               -ms-flex: 0.75;
               flex: 0.75;
               padding-left: 20px; } }
+          @media (max-width: 576px) {
+            .web-intro .three-part .infoG .cont-sm,
+            .web-intro .three-part .MobileG .cont-sm,
+            .web-intro .three-part .teacherG .cont-sm {
+              display: none; } }
+        .web-intro .three-part .infoG .cont-xs,
+        .web-intro .three-part .MobileG .cont-xs,
+        .web-intro .three-part .teacherG .cont-xs {
+          display: none; }
+          @media (max-width: 576px) {
+            .web-intro .three-part .infoG .cont-xs,
+            .web-intro .three-part .MobileG .cont-xs,
+            .web-intro .three-part .teacherG .cont-xs {
+              display: block; } }
     .web-intro .three-part .teacherG {
       border: none; }
 
 .index__class {
   padding-top: 5rem; }
+  @media (max-width: 576px) {
+    .index__class {
+      padding-top: 3rem; } }
   .index__class.rec-class-section {
     padding-top: 6rem; }
     @media (max-width: 991px) {
       .index__class.rec-class-section {
         padding-top: 4rem; } }
+    @media (max-width: 576px) {
+      .index__class.rec-class-section {
+        padding-top: 3rem; } }
   .index__class .flex-ls-wrapper {
     margin: 0 auto;
     -ms-flex-wrap: wrap;
@@ -1006,9 +1073,9 @@ button {
       .index__class .flex-ls-wrapper {
         width: 90%;
         min-width: 550px; } }
-    @media (max-width: 600px) {
+    @media (max-width: 576px) {
       .index__class .flex-ls-wrapper {
-        min-width: 500px; } }
+        min-width: 375px; } }
     .index__class .flex-ls-wrapper .title-wrapper.col-12 {
       padding-left: 10px;
       margin-bottom: 1rem; }
@@ -1049,8 +1116,8 @@ button {
         -o-transition: .3s;
         transition: .3s;
         overflow: hidden;
-        border-top: 5px solid;
-        border-bottom: 5px solid; }
+        border-top: 3px solid;
+        border-bottom: 3px solid; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .price {
           display: inline;
           position: absolute;
@@ -1073,7 +1140,7 @@ button {
         .index__class .flex-ls-wrapper .class-thumb .thumb__fund {
           border-color: #3a9bd3; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__fund .price span {
-            font-size: 22px; }
+            font-size: 20px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header {
           height: 150px;
           overflow: hidden; }
@@ -1110,15 +1177,16 @@ button {
               -o-transition: .5s;
               transition: .5s; }
             .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark {
-              height: 40px;
+              height: 30px;
               width: 80px;
-              line-height: 31px;
+              line-height: 20px;
               font-size: 18px;
               text-align: center;
               color: #fff;
               position: absolute;
               right: 0%;
-              top: 0%; }
+              top: 0%;
+              border-bottom-left-radius: 5px; }
               .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__on {
                 background: #b90000; }
               .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__fund {
@@ -1177,6 +1245,9 @@ button {
             text-align: left; }
             .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people .process__static .num {
               color: #b90000; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-footer .pre {
+          font-size: 18px;
+          color: #969696; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .add-mark {
           display: inline;
           position: absolute;

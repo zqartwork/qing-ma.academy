@@ -29,7 +29,7 @@
   .mm-panels > .mm-panel {
     top: 3rem; }
   #menu ul li a i {
-    color: #bdbdbd;
+    color: #969696;
     font-size: 18px;
     margin-right: 10px; }
   #menu ul li a.cur-arr {
@@ -41,6 +41,104 @@
     margin-top: -3px;
     margin-left: 2px; } }
 
-@media (max-width: 600px) {
-  .class-thumb {
-    height: 200px; } }
+@media (max-width: 575px) {
+  .index__class .flex-ls-wrapper {
+    width: 100%; }
+    .index__class .flex-ls-wrapper .class-thumb {
+      height: 200px;
+      padding: 5px 0; } }
+    @media (max-width: 575px) and (max-width: 425px) {
+      .index__class .flex-ls-wrapper .class-thumb {
+        height: 210px; } }
+
+@media (max-width: 575px) {
+      .index__class .flex-ls-wrapper .class-thumb .thumb {
+        border: none; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-flex: wrap;
+          -ms-flex: wrap;
+          flex: wrap; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-header {
+            -webkit-box-flex: 0.45;
+            -ms-flex: 0.45;
+            flex: 0.45;
+            height: 100%;
+            overflow: hidden; }
+            .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-header .poster {
+              position: relative;
+              display: inline-block;
+              width: 100%;
+              height: 200px;
+              background-position: center;
+              background-size: cover; }
+              .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-header .poster .add {
+                opacity: 1;
+                visibility: visible;
+                top: 70%;
+                left: 15%;
+                color: #ffc240;
+                border-color: #ffc240;
+                background: #fff; }
+              .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-header .poster .mark {
+                height: 40px;
+                width: 180px;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                right: -20%;
+                top: 8%;
+                font-size: 20px;
+                line-height: 30px; } }
+              @media (max-width: 575px) and (max-width: 425px) {
+                .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-header .poster .mark {
+                  right: -28%;
+                  top: 8%; } }
+
+@media (max-width: 575px) {
+          .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body {
+            -webkit-box-flex: 0.55;
+            -ms-flex: 0.55;
+            flex: 0.55;
+            display: inline-block; }
+            .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .title {
+              display: inline-block;
+              font-size: 24px;
+              padding: 10px 15px 5px 15px;
+              max-height: 80px;
+              overflow: hidden; }
+            .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .name {
+              display: none; }
+            .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .cont .process__people .process__static .hidden-xs {
+              display: none; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb .price {
+          display: inline;
+          position: absolute;
+          right: 15px;
+          bottom: 15px; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb .price span {
+            display: inline-block;
+            color: #d68b00;
+            font-size: 28px; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb__on {
+          border-color: #b90000; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span {
+            font-size: 28px; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont {
+            max-height: 31px;
+            overflow: hidden; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .name {
+            max-height: 30px;
+            overflow: hidden; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb__fund {
+          border-color: #3a9bd3; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__fund .price span {
+            font-size: 20px; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb .add-mark {
+          display: none; } }
+
+@media (max-width: 425px) {
+  .flex-ls-wrapper {
+    min-width: 425px; } }

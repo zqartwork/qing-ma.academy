@@ -215,7 +215,7 @@
                                     <li id="point">
                                         <a><i class="fas fa-coins" data="tooltip" title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i>持有點數<span
                                                 class="num emph">200</span>點</a>
-                                        <a href="" class="point-q">點數是什麼？</a>
+                                        <!-- <a href="" class="point-q">點數是什麼？</a> -->
                                     </li>
                                     <li><a href=""><i class="fas fa-heart"></i>收藏課程</a></li>
                                     <li><a href=""><i class="far fa-eye"></i>觀看紀錄</a></li>
@@ -279,7 +279,7 @@
         <section class="web-intro">
             <ul class="three-part">
                 <li class="infoG">
-                    <div class="icon"><i class="fab fa-slideshare"></i></div>
+                    <div class="icon xs"><i class="fab fa-slideshare"></i></div>
                     <div class="cont">
                         課程橫跨影視音藝 <br> 資訊內容最完整
                     </div>
@@ -289,18 +289,23 @@
                     <div class="cont-sm">
                         影視音藝 <br> 資訊完整
                     </div>
+                    <div class="cont-xs">
+                        資訊完整
+                    </div>
                 </li>
                 <li class="MobileG">
-                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="icon xs"><i class="fas fa-mobile-alt"></i></div>
                     <div class="cont">支援電腦與行動裝置 <br> 隨時隨地跨平台學習</div>
                     <div class="cont-md">支援行動裝置 <br> 學習不受限制</div>
                     <div class="cont-sm">支援行動 <br> 不受限制</div>
+                    <div class="cont-xs">支援行動</div>
                 </li>
                 <li class="teacherG">
-                    <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="icon xs"><i class="fas fa-chalkboard-teacher"></i></div>
                     <div class="cont">師資陣容重量級 <br> 專業秘笈不藏私</div>
                     <div class="cont-md">大師師資陣容 <br> 秘笈絕不藏私</div>
-                    <div class="cont-sm">大師陣容 <br> 絕不藏私</div>
+                    <div class="cont-sm">大師師資 <br> 絕不藏私</div>
+                    <div class="cont-xs">大師陣容</div>
                 </li>
             </ul>
         </section>
@@ -321,12 +326,11 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs">
                     <div class="thumb thumb__on">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header ">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -358,11 +362,11 @@
                     <div class="thumb thumb__on">
                         <ul>
                             <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header">
+                            <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -386,15 +390,14 @@
                         </ul>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 col-md-4 hidden-sm hidden-xs">
+                <div class="class-thumb col-lg-3 col-md-4 hidden-sm hidden-xs show-575">
                     <div class="thumb thumb__on">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header ">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
                                     <div class="mark mark__on">已開課</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -421,7 +424,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 hidden-md hidden-xs">
+                <div class="class-thumb col-lg-3 hidden-md hidden-xs show-575">
                     <div class="thumb thumb__on">
                         <ul>
                             <!--喜歡會有標籤 liked-->
@@ -475,12 +478,11 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header ">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-005.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -494,14 +496,16 @@
                                         <div class="process__thumb" style="width: 60%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static">已募資 <span class="num">20</span> /30 人</span>
+                                        <span class="process__static"><span class="hidden-xs"><span class="hidden-xs">已募資</span>
+                                            </span> <span class="num">20</span>
+                                            /30 人</span>
                                     </div>
                                 </div>
                             </li>
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span>預購 NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
                         </ul>
@@ -512,7 +516,7 @@
                     <div class="thumb thumb__fund">
                         <ul>
                             <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header">
+                            <li class="thumb-header liked">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-008.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
@@ -530,26 +534,25 @@
                                         <div class="process__thumb" style="width: 33.33333%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static">已募資 <span class="num">33</span>%</span>
+                                        <span class="process__static"><span class="hidden-xs">已募資</span> <span class="num">33</span>%</span>
                                     </div>
                                 </div>
                             </li>
                             <li class="thumb-footer">
-                                <div class="price"><span>預購 NT$</span> <span class="num">1,200</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,200</span></div>
                             </li>
 
                         </ul>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 col-md-4 hidden-sm">
+                <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header ">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-006.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -563,20 +566,20 @@
                                         <div class="process__thumb" style="width: 580%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static">已募資 <span class="num">580</span>%</span>
+                                        <span class="process__static"><span class="hidden-xs">已募資</span> <span class="num">580</span>%</span>
                                     </div>
                                 </div>
                             </li>
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span>預購 NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
                         </ul>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 hidden-md">
+                <div class="class-thumb col-lg-3 hidden-md show-575">
                     <div class="thumb thumb__fund">
                         <ul>
                             <!--喜歡會有標籤 liked-->
@@ -598,14 +601,15 @@
                                         <div class="process__thumb" style="width: 80%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static">已募資 <span class="num">24</span> /30 人</span>
+                                        <span class="process__static"><span class="hidden-xs">已募資</span> <span class="num">24</span>
+                                            /30 人</span>
                                     </div>
                                 </div>
                             </li>
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span>預購 NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
                         </ul>
@@ -629,12 +633,11 @@
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header ">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-009.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -648,14 +651,15 @@
                                         <div class="process__thumb" style="width: 60%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static">已募資 <span class="num">20</span> /30 人</span>
+                                        <span class="process__static"><span class="hidden-xs">已募資</span> <span class="num">20</span>
+                                            /30 人</span>
                                     </div>
                                 </div>
                             </li>
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span>預購 NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
                         </ul>
@@ -684,28 +688,27 @@
                                         <div class="process__thumb" style="width: 33.33333%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static">已募資 <span class="num">33</span>%</span>
+                                        <span class="process__static"><span class="hidden-xs">已募資</span> <span class="num">33</span>%</span>
                                     </div>
                                 </div>
                             </li>
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span>預購 NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
                         </ul>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 col-md-4 hidden-sm">
+                <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header liked">
+                            <li class="thumb-header ">
                                 <div class="poster" style="background-image: url(img/lecture/lec-img-011.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
+                                    <button class="add"><i class="far fa-heart"></i></button>
                                 </div>
                             </li>
                             <li class="thumb-body">
@@ -719,20 +722,20 @@
                                         <div class="process__thumb" style="width: 580%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static">已募資 <span class="num">580</span>%</span>
+                                        <span class="process__static"><span class="hidden-xs">已募資</span> <span class="num">580</span>%</span>
                                     </div>
                                 </div>
                             </li>
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span>預購 NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
                         </ul>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 hidden-md">
+                <div class="class-thumb col-lg-3 hidden-md show-575">
                     <div class="thumb thumb__fund">
                         <ul>
                             <!--喜歡會有標籤 liked-->
@@ -754,14 +757,15 @@
                                         <div class="process__thumb" style="width: 80%;"></div>
                                     </div>
                                     <div class="process__people">
-                                        <span class="process__static">已募資 <span class="num">24</span> /30 人</span>
+                                        <span class="process__static"><span class="hidden-xs">已募資</span> <span class="num">24</span>
+                                            /30 人</span>
                                     </div>
                                 </div>
                             </li>
                             <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
                                 <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span>預購 NT$</span> <span class="num">1,400</span></div>
+                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span class="num">1,400</span></div>
                             </li>
 
                         </ul>
@@ -844,7 +848,7 @@
     </script>
     <script>
         $('.fa-question-circle').tooltip({
-            placement: 'right'
+            placement: 'top'
         });
     </script>
 
