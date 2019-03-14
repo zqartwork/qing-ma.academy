@@ -692,7 +692,7 @@ button {
     .top-slider.main-slider,
     .top-slider .slick-slide,
     .slide-image {
-      height: 90vw; } }
+      height: 80vw; } }
 
 .slick-next,
 .slick-prev {
@@ -772,11 +772,12 @@ button {
       font-size: 25px; } }
   @media (max-width: 425px) {
     .caption {
-      height: 200px;
-      width: 500px;
-      margin-left: -250px;
-      margin-top: -100px;
-      font-size: 22px; } }
+      background: none;
+      height: 190px;
+      width: 400px;
+      margin-left: -200px;
+      margin-top: -70px;
+      font-size: 18px; } }
   .caption .fill {
     --color: #a972cb;
     --hover: #cb72aa; }
@@ -816,9 +817,15 @@ button {
     .caption button:hover, .caption button:focus {
       border-color: var(--hover);
       color: #000; }
+    @media (max-width: 425px) {
+      .caption button {
+        font-size: 15px; } }
   .caption .name {
     display: block;
     font-size: 18px; }
+    @media (max-width: 425px) {
+      .caption .name {
+        font-size: 15px; } }
 
 .slick-dots {
   text-align: center;
@@ -1291,6 +1298,9 @@ button {
 .free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
   color: #969696;
   font-size: 22px; }
+  @media (max-width: 576px) {
+    .free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
+      color: #969696 !important; } }
 
 .master-section {
   text-align: center;

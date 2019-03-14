@@ -883,7 +883,7 @@ $link_hover_color: #fff;
     }
 
     @media (max-width: 425px) {
-        height: 90vw;
+        height: 80vw;
     }
 }
 
@@ -968,11 +968,12 @@ $link_hover_color: #fff;
     }
 
     @media (max-width: 425px) {
-        height: 200px;
-        width: 500px;
-        margin-left: -250px;
-        margin-top: -100px;
-        font-size: 22px;
+        background: none;
+        height: 190px;
+        width: 400px;
+        margin-left: -200px;
+        margin-top: -70px;
+        font-size: 18px;
     }
 
     @each $button,
@@ -1003,11 +1004,20 @@ $link_hover_color: #fff;
             border-color: var(--hover);
             color: #000;
         }
+
+        @media (max-width: 425px) {
+            font-size: 15px;
+        }
     }
 
     .name {
         display: block;
         font-size: 18px;
+
+        @media (max-width: 425px) {
+            font-size: 15px;
+
+        }
     }
 }
 
@@ -1537,6 +1547,11 @@ $link_hover_color: #fff;
     .price span {
         color: #969696;
         font-size: 22px;
+
+        @media(max-width: 576px) {
+            color: #969696 !important;
+
+        }
     }
 }
 
