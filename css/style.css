@@ -944,7 +944,8 @@ button {
         .web-intro .three-part .teacherG {
           border: none;
           display: inline-block;
-          margin: 0 20px; } }
+          margin: 0 15px;
+          width: 22%; } }
       .web-intro .three-part .infoG .icon,
       .web-intro .three-part .MobileG .icon,
       .web-intro .three-part .teacherG .icon {
@@ -1039,7 +1040,8 @@ button {
             .web-intro .three-part .infoG .cont-xs,
             .web-intro .three-part .MobileG .cont-xs,
             .web-intro .three-part .teacherG .cont-xs {
-              display: block; } }
+              display: block;
+              min-width: 92px; } }
     .web-intro .three-part .teacherG {
       border: none; }
 
@@ -1085,6 +1087,9 @@ button {
       .index__class .flex-ls-wrapper .coursetitle img {
         margin-bottom: 10px;
         margin-right: 10px; }
+        @media (max-width: 425px) {
+          .index__class .flex-ls-wrapper .coursetitle img {
+            display: none; } }
       .index__class .flex-ls-wrapper .coursetitle .more {
         float: right;
         font-size: 20px;

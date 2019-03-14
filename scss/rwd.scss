@@ -77,17 +77,41 @@ $blue: #3a9bd3;
 }
 
 @media(max-width: 575px) {
+    .nav-before {
+        background-color: $font-dark;
+    }
 
     .index__class {
         .flex-ls-wrapper {
             width: 100%;
+
+            .title-wrapper.col-12 {
+                margin-bottom: 0;
+
+                .coursetitle {
+                    @media(max-width: 425px) {
+                        font-size: 25px;
+                    }
+
+                    .more {
+                        line-height: 40px;
+                    }
+
+                    img {
+                        width: 60px;
+                        margin-right: 5px;
+
+
+                    }
+                }
+            }
 
             .class-thumb {
                 height: 200px;
                 padding: 5px 0;
 
                 @media(max-width: 425px) {
-                    height: 210px;
+                    height: 190px;
                 }
 
                 .thumb {
@@ -118,6 +142,14 @@ $blue: #3a9bd3;
                                     color: #ffc240;
                                     border-color: #ffc240;
                                     background: #fff;
+
+                                    @media(max-width: 575px) {
+                                        display: none;
+                                    }
+
+                                    @media(max-width: 425px) {
+                                        display: none;
+                                    }
                                 }
 
                                 .mark {
@@ -132,6 +164,9 @@ $blue: #3a9bd3;
                                     @media(max-width: 425px) {
                                         right: -28%;
                                         top: 8%;
+                                        font-size: 16px;
+                                        height: 35px;
+                                        line-height: 27px;
                                     }
 
                                 }
@@ -149,6 +184,71 @@ $blue: #3a9bd3;
                                 padding: 10px 15px 5px 15px;
                                 max-height: 80px;
                                 overflow: hidden;
+
+                                @media(max-width: 425px) {
+                                    font-size: 22px;
+                                    max-height: 75px;
+                                }
+                            }
+
+                            .cont,
+                            .time,
+                            .name,
+                            .progress {
+                                padding: 2px 15px;
+                                color: $font-gray;
+                                font-size: 15px;
+
+                                span.star {
+                                    color: $gold;
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .cont {
+                                .process__title {
+                                    width: 100%;
+                                    font-size: 15px;
+
+                                    .date {
+                                        float: right;
+                                        margin-right: 3px;
+
+                                        .num {
+                                            color: $red;
+                                        }
+                                    }
+                                }
+
+                                .process__bar {
+                                    width: 100%;
+                                    height: 10px;
+                                    border-radius: 10px;
+                                    background: $bgColor;
+                                    overflow: hidden;
+                                    margin: 5px 0 0 0;
+
+                                    .process__thumb {
+                                        height: 15px;
+                                        max-width: 100%;
+                                        background-image: linear-gradient(to right, #b3f6ff, $blue);
+                                    }
+                                }
+
+                                .process__people {
+                                    width: 100%;
+
+                                    .process__static {
+                                        font-size: 15px;
+                                        display: inline-block;
+                                        width: 100%;
+                                        text-align: left;
+
+                                        .num {
+                                            color: $red;
+                                        }
+                                    }
+                                }
                             }
 
                             .name {
@@ -190,6 +290,10 @@ $blue: #3a9bd3;
                         .cont {
                             max-height: 31px;
                             overflow: hidden;
+
+                            @media(max-width: 425px) {
+                                max-height: 25px;
+                            }
                         }
 
                         .name {

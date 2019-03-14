@@ -138,6 +138,7 @@ button {
                 margin-right: 10px;
                 transition: .3s;
                 filter: brightness(5) grayscale(1);
+
             }
 
             .cn-title {
@@ -1102,7 +1103,8 @@ $link_hover_color: #fff;
             @media(max-width: 576px) {
                 border: none;
                 display: inline-block;
-                margin: 0 20px;
+                margin: 0 15px;
+                width: 22%;
             }
 
             .icon {
@@ -1175,6 +1177,7 @@ $link_hover_color: #fff;
 
                     @media(max-width: 576px) {
                         display: block;
+                        min-width: 92px;
                     }
                 }
             }
@@ -1244,6 +1247,10 @@ $link_hover_color: #fff;
             img {
                 margin-bottom: 10px;
                 margin-right: 10px;
+
+                @media(max-width: 425px) {
+                    display: none;
+                }
             }
 
             .more {
@@ -1477,6 +1484,7 @@ $link_hover_color: #fff;
                     bottom: 23px;
                     font-size: 30px;
                     color: $gold;
+
                 }
             }
         }
