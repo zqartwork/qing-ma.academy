@@ -11,6 +11,8 @@ $gold: #ffc240;
 $brown: #ac7000;
 $red: #b90000;
 $blue: #3a9bd3;
+$on: #d69200;
+$fund: #7e6530;
 
 %cn {
     font-family: $font-cn;
@@ -1415,15 +1417,15 @@ $link_hover_color: #fff;
                             border-bottom-left-radius: 5px;
 
                             &__on {
-                                background: $red;
+                                background: $on; //標記顏色 已開課
                             }
 
                             &__fund {
-                                background: $blue;
+                                background: $fund; //標記顏色 募資中
                             }
 
                             &__free {
-                                background: $font-dark;
+                                background: $font-dark; //標記顏色 免費
                             }
                         }
                     }
