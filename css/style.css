@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Lato|Noto+Sans+TC|Roboto);
 .en, .nav-before .nav-bar-wrapper a.logo-set .en-title {
   font-family: "Lato"; }
@@ -1407,7 +1408,7 @@ button {
         .master-section .master-main-slider .slide__image.slick-slide.slick-current.slick-active.slick-center .mask .titl {
           background: #000;
           padding: 5px 35px;
-          border-radius: 5px; }
+          width: 100%; }
           @media (max-width: 576px) {
             .master-section .master-main-slider .slide__image.slick-slide.slick-current.slick-active.slick-center .mask .titl {
               padding: 5px 25px; } }
@@ -1493,3 +1494,54 @@ button {
     .sub-index-section .sub-index-wrapper .box__header {
       height: 210px;
       background-size: cover; }
+    .sub-index-section .sub-index-wrapper .box__body .title {
+      padding: 10px 0px; }
+    .sub-index-section .sub-index-wrapper .box__body .cont {
+      display: inline-block;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      margin-bottom: 1rem; }
+    .sub-index-section .sub-index-wrapper .box__footer .continue {
+      background: #969696;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      color: white;
+      letter-spacing: 0.02rem;
+      font-size: 15px;
+      font-weight: thin;
+      font-family: 微軟正黑體;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+      .sub-index-section .sub-index-wrapper .box__footer .continue:hover {
+        background: none;
+        color: black;
+        border: 1px solid #474747; }
+
+footer {
+  width: 100%;
+  background: #000;
+  color: lightgray;
+  font-size: 15px; }
+  footer .footer-wrapper {
+    width: 1150px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+    footer .footer-wrapper li {
+      margin-top: 10px; }
+      footer .footer-wrapper li a {
+        color: #969696;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+        footer .footer-wrapper li a:hover {
+          color: white; }
+    footer .footer-wrapper .title {
+      font-size: 20px;
+      padding: 0; }
