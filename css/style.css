@@ -1145,9 +1145,7 @@ button {
         -webkit-transition: .3s;
         -o-transition: .3s;
         transition: .3s;
-        overflow: hidden;
-        border-top: 4px solid;
-        border-bottom: 4px solid; }
+        overflow: hidden; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .price {
           display: inline;
           position: absolute;
@@ -1158,7 +1156,7 @@ button {
             color: #d68b00;
             font-size: 28px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb__on {
-          border-color: #b90000; }
+          border-color: #d69200; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span {
             font-size: 28px; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont {
@@ -1168,7 +1166,7 @@ button {
             max-height: 30px;
             overflow: hidden; }
         .index__class .flex-ls-wrapper .class-thumb .thumb__fund {
-          border-color: #3a9bd3; }
+          border-color: #7e6530; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__fund .price span {
             font-size: 20px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb__free {
@@ -1216,9 +1214,9 @@ button {
               text-align: center;
               color: #fff;
               position: absolute;
-              right: 0%;
+              left: 0%;
               top: 0%;
-              border-bottom-left-radius: 5px; }
+              border-bottom-right-radius: 5px; }
               .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__on {
                 background: #d69200; }
               .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster .mark__fund {
