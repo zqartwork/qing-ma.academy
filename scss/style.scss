@@ -1461,7 +1461,7 @@ $link_hover_color: #fff;
 
                         .process__bar {
                             width: 100%;
-                            height: 15px;
+                            height: 12px;
                             border-radius: 10px;
                             background: $bgColor;
                             overflow: hidden;
@@ -1470,7 +1470,7 @@ $link_hover_color: #fff;
                             .process__thumb {
                                 height: 15px;
                                 max-width: 100%;
-                                background-image: linear-gradient(to right, #b3f6ff, $blue);
+                                background-image: linear-gradient(to right, $on, $gold);
                             }
                         }
 
@@ -1720,6 +1720,61 @@ $link_hover_color: #fff;
                     }
                 }
             }
+        }
+    }
+}
+
+.sub-index-section {
+    margin: 0 auto;
+    width: 65%;
+    .title-wrapper{
+        padding-left: 10px;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .title {
+        color: $font-dark;
+        font-size: 28px;
+
+        img {
+            margin-bottom: 10px;
+            margin-right: 10px;
+
+            @media(max-width: 425px) {
+                display: none;
+            }
+        }
+
+        .more {
+            float: right;
+            font-size: 20px;
+            line-height: 50px;
+            color: $font-dark;
+            transition: .2s;
+
+            &:hover {
+                text-decoration: none;
+                color: $font-bk;
+            }
+        }
+
+        #tooltip {
+            display: inline-block;
+            font-size: 22px;
+            margin-left: 5px;
+            color: $font-gray;
+        }
+    }
+
+    .sub-index-wrapper {
+        height: 500px;
+        width: 100%;
+        margin: 0 auto;
+        
+        .box__header{
+            height: 210px;
+            background-size: cover;
         }
     }
 }
