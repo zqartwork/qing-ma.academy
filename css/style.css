@@ -1558,6 +1558,9 @@ footer {
     footer .footer-wrapper .title {
       font-size: 20px;
       padding: 0; }
+    footer .footer-wrapper img.moviecool-footer {
+      -webkit-filter: brightness(0.5);
+      filter: brightness(0.5); }
     footer .footer-wrapper .col-12 {
       margin-top: 10px;
       margin-bottom: 0px;
