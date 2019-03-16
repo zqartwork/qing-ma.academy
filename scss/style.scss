@@ -1728,6 +1728,14 @@ $link_hover_color: #fff;
     margin: 0 auto;
     width: 65%;
 
+    @media(max-width: 576px) {
+        width: 90%;
+    }
+
+    @media(max-width: 425px) {
+        width: 100%;
+    }
+
     .title-wrapper {
         padding-left: 10px;
         margin-bottom: 1rem;
@@ -1776,6 +1784,7 @@ $link_hover_color: #fff;
         .box__header {
             height: 210px;
             background-size: cover;
+            background-position: center;
         }
 
         .box__body {
@@ -1839,20 +1848,27 @@ footer {
                 &:hover {
                     color: white;
                 }
+
+                i {
+                    width: 20px;
+                }
             }
         }
 
         .title {
             font-size: 20px;
             padding: 0;
+
         }
 
         .col-12 {
             margin-top: 10px;
             margin-bottom: 0px;
-            padding-top: 10px;
             color: $font-gray;
-            border-top: 1px solid rgba(128, 128, 128, 0.418);
+
+            iframe {
+                margin-bottom: 10px;
+            }
         }
 
 
