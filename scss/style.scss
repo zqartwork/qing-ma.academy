@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato|Noto+Sans+TC|Roboto);
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
 $font-cn: 'Noto Sans TC';
 $font-en: 'Lato';
 $bgColor: #e4e4e4;
@@ -13,6 +15,9 @@ $red: #b90000;
 $blue: #3a9bd3;
 $on: #d69200;
 $fund: #7e6530;
+$font-size: 26px;
+$line-height: 1.4;
+$lines-to-show: 3;
 
 %cn {
     font-family: $font-cn;
@@ -82,6 +87,10 @@ button {
         height: 30px;
         width: 30px;
     }
+}
+
+.right:hover {
+    transform: translateX(6px);
 }
 
 @media (max-width: 991px) {
@@ -1290,7 +1299,7 @@ $link_hover_color: #fff;
         }
 
         .class-thumb {
-            height: 430px; // background: gray;
+            height: 390px; // background: gray;
             padding: 10px;
             cursor: pointer;
 
@@ -1304,6 +1313,144 @@ $link_hover_color: #fff;
                 height: 100%;
                 transition: .3s;
                 overflow: hidden;
+
+                .thumb-tooltip {
+                    visibility: hidden;
+                    z-index: 2;
+                    opacity: .40;
+
+                    width: 100%;
+                    height: 350px;
+                    padding: 0px 20px;
+
+                    background: #fff;
+                    color: $font-gray;
+
+                    position: absolute;
+                    top: 0%;
+                    left: 100%;
+
+
+                    border-radius: 5px;
+                    font-size: 16px;
+
+                    transform: translateY(8px);
+                    transition: 0.3s ease-in-out;
+
+                    box-shadow: 0 0 10px rgba(77, 77, 77, 0.274);
+
+                    @media(max-width: 1150px) {
+                        display: none;
+                    }
+
+                    .tooltip__header {
+                        padding-top: 1rem;
+
+                        .update {
+                            font-size: 12px;
+                        }
+
+                        .title {
+                            font-size: 20px;
+                            color: $font-dark;
+                            margin-top: .5rem;
+                        }
+                    }
+
+                    .tooltip__body {
+                        .intro {
+                            display: block;
+                            display: -webkit-box;
+                            max-width: 300px;
+                            height: 16px * $line-height * 5;
+                            margin: 0 auto;
+                            font-size: 16px;
+                            line-height: $line-height;
+                            -webkit-line-clamp: 5;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            margin-top: 1rem;
+                        }
+                    }
+
+                    .tooltip__footer {
+                        margin-top: 1rem;
+
+                        button {
+                            font-size: 13px;
+                            background: none;
+                            border: none;
+                            border-radius: 3px;
+                            padding: 5px 10px;
+                            margin-right: 5px;
+
+                            &.add {
+                                background-color: #f3788d;
+                                color: $font-w;
+
+                                &:hover {
+                                    background-color: #eb3654;
+                                }
+                            }
+
+                            &.buy {
+                                background-color: $gold;
+
+                                &:hover {
+                                    background-color: #e9a003;
+                                }
+                            }
+                        }
+
+                    }
+
+                    &::after {
+                        content: " ";
+                        width: 30px;
+                        height: 30px;
+
+                        background-color: #fff;
+                        border-radius: 3px;
+
+                        position: absolute;
+                        z-index: -1;
+                        left: -3%;
+                        top: 5%;
+                        transform: rotate(45deg);
+
+
+                    }
+                }
+
+                &:hover .thumb-tooltip {
+                    visibility: visible;
+                    transform: translateY(-2px);
+                    opacity: 1;
+                    transition: .3s;
+                }
+
+                &.right .thumb-tooltip {
+                    top: -20%;
+                    left: 115%;
+                }
+
+                &.right .thumb-tooltip::after {
+                    top: 40%;
+                    left: -12%;
+                }
+
+                & .left.thumb-tooltip {
+                    top: 0%;
+                    left: -100%;
+                }
+
+                & .left.thumb-tooltip::after {
+                    top: 5%;
+                    left: 93%;
+                    transform: rotate(45deg);
+                    background: #fff;
+                }
 
                 .price {
                     display: inline;
@@ -1434,17 +1581,64 @@ $link_hover_color: #fff;
                     .time,
                     .name,
                     .progress {
-                        padding: 2px 15px;
+                        padding: 5px 15px;
                         color: $font-gray;
                         font-size: 18px;
 
-                        span.star {
-                            color: $gold;
-                            margin-right: 5px;
-                        }
                     }
 
                     .cont {
+                        .star-rating {
+                            display: flex;
+                            font-size: 15px;
+                            justify-content: flex-start;
+                            width: 100%;
+
+                            div {
+                                position: relative;
+                                display: inline-block;
+                                margin-right: 4px;
+
+                                &.detail-num span {
+                                    font-size: 16px;
+                                    margin-left: 5px;
+                                }
+
+                                .star-progress {
+                                    position: relative;
+
+                                    &::before {
+                                        font-family: 'Font Awesome 5 Free';
+                                        content: '\f005';
+                                        color: lightgray;
+                                        font-weight: 900;
+                                        z-index: 0;
+                                        position: relative;
+                                        display: inline-block;
+                                    }
+                                }
+
+                                .star-progress-filled {
+                                    position: absolute;
+                                    overflow: hidden;
+                                    top: 0;
+                                    left: 0;
+
+                                    &::before {
+                                        font-family: 'Font Awesome 5 Free';
+                                        content: '\f005';
+                                        color: #ffc240;
+                                        font-weight: 900;
+                                        z-index: 1;
+                                        position: relative;
+                                        display: inline-block;
+                                    }
+                                }
+
+
+                            }
+                        }
+
                         .process__title {
                             width: 100%;
                             font-size: 18px;
@@ -1508,6 +1702,7 @@ $link_hover_color: #fff;
                 }
             }
         }
+
     }
 }
 
@@ -1858,7 +2053,6 @@ footer {
         .title {
             font-size: 20px;
             padding: 0;
-
         }
 
         img.moviecool-footer {
@@ -1874,7 +2068,5 @@ footer {
                 margin-bottom: 10px;
             }
         }
-
-
     }
 }
