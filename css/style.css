@@ -1305,14 +1305,16 @@ button {
   text-align: center;
   width: 100%;
   overflow: hidden;
-  padding-top: 8rem;
-  padding-bottom: 5rem; }
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  background: #000;
+  margin: 5rem 0; }
   .master-section .title-wrapper.col-12 {
     padding-left: 10px;
-    margin-bottom: 1rem; }
+    margin-bottom: 3rem; }
   .master-section .title {
-    color: #474747;
-    font-size: 28px; }
+    color: #fff;
+    font-size: 35px; }
     .master-section .title img {
       margin-bottom: 10px;
       margin-right: 10px; }
@@ -1383,7 +1385,8 @@ button {
         .master-section .master-main-slider .slick-next {
           right: 5%; } }
     .master-section .master-main-slider .slide__image {
-      height: 20vw;
+      height: 25vw;
+      background: #fff;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -1406,12 +1409,12 @@ button {
         background: #00000000;
         color: #ffc240; }
         .master-section .master-main-slider .slide__image.slick-slide.slick-current.slick-active.slick-center .mask .titl {
-          background: #000;
-          padding: 5px 35px;
+          background: #00000090;
+          padding: 25px 35px;
           width: 100%; }
           @media (max-width: 576px) {
             .master-section .master-main-slider .slide__image.slick-slide.slick-current.slick-active.slick-center .mask .titl {
-              padding: 5px 25px; } }
+              padding: 25px 25px; } }
       .master-section .master-main-slider .slide__image .mask {
         width: 100%;
         height: 100%;
@@ -1433,12 +1436,13 @@ button {
           margin: 0; }
         .master-section .master-main-slider .slide__image .mask .titl {
           font-size: 28px;
-          margin-bottom: 15px;
+          margin-bottom: 0px;
           font-weight: 500;
           letter-spacing: 0.02rem;
           -webkit-transition: .3s;
           -o-transition: .3s;
-          transition: .3s; }
+          transition: .3s;
+          padding: 15px 0; }
           @media (max-width: 1150px) {
             .master-section .master-main-slider .slide__image .mask .titl {
               font-size: 25px; } }
@@ -1529,10 +1533,10 @@ footer {
   color: lightgray;
   font-size: 15px; }
   footer .footer-wrapper {
-    width: 1150px;
+    width: 70%;
     margin: 0 auto;
     padding-top: 3rem;
-    padding-bottom: 3rem; }
+    padding-bottom: .5rem; }
     footer .footer-wrapper li {
       margin-top: 10px; }
       footer .footer-wrapper li a {
@@ -1545,3 +1549,9 @@ footer {
     footer .footer-wrapper .title {
       font-size: 20px;
       padding: 0; }
+    footer .footer-wrapper .col-12 {
+      margin-top: 10px;
+      margin-bottom: 0px;
+      padding-top: 10px;
+      color: #969696;
+      border-top: 1px solid rgba(128, 128, 128, 0.418); }

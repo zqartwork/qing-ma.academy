@@ -1512,8 +1512,6 @@ $link_hover_color: #fff;
 }
 
 .free-class-section.index__class .flex-ls-wrapper .class-thumb {
-    .thumb-header {}
-
     .thumb-body {
 
         .cont,
@@ -1522,8 +1520,6 @@ $link_hover_color: #fff;
             overflow: hidden;
         }
     }
-
-    .add-mark {}
 
     .price span {
         color: #969696;
@@ -1539,17 +1535,19 @@ $link_hover_color: #fff;
     text-align: center;
     width: 100%;
     overflow: hidden;
-    padding-top: 8rem;
+    padding-top: 3rem;
     padding-bottom: 5rem;
+    background: #000;
+    margin: 5rem 0;
 
     .title-wrapper.col-12 {
         padding-left: 10px;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
     }
 
     .title {
-        color: $font-dark;
-        font-size: 28px;
+        color: $font-w;
+        font-size: 35px;
 
         img {
             margin-bottom: 10px;
@@ -1637,7 +1635,8 @@ $link_hover_color: #fff;
         }
 
         .slide__image {
-            height: 20vw;
+            height: 25vw;
+            background: #fff;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1664,12 +1663,12 @@ $link_hover_color: #fff;
                     color: $gold;
 
                     .titl {
-                        background: #000;
-                        padding: 5px 35px;
+                        background: #00000090;
+                        padding: 25px 35px;
                         width: 100%;
 
                         @media(max-width: 576px) {
-                            padding: 5px 25px;
+                            padding: 25px 25px;
                         }
                     }
                 }
@@ -1693,10 +1692,11 @@ $link_hover_color: #fff;
 
                 .titl {
                     font-size: 28px;
-                    margin-bottom: 15px;
+                    margin-bottom: 0px;
                     font-weight: 500;
                     letter-spacing: 0.02rem;
                     transition: .3s;
+                    padding: 15px 0;
 
                     @media(max-width: 1150px) {
                         font-size: 25px;
@@ -1824,10 +1824,10 @@ footer {
     font-size: 15px;
 
     .footer-wrapper {
-        width: 1150px;
+        width: 70%;
         margin: 0 auto;
         padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-bottom: .5rem;
 
         li {
             margin-top: 10px;
@@ -1845,6 +1845,14 @@ footer {
         .title {
             font-size: 20px;
             padding: 0;
+        }
+
+        .col-12 {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            padding-top: 10px;
+            color: $font-gray;
+            border-top: 1px solid rgba(128, 128, 128, 0.418);
         }
 
 
