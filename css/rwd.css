@@ -61,11 +61,11 @@
         width: 60px;
         margin-right: 5px; }
     .index__class .flex-ls-wrapper .class-thumb {
-      height: 200px;
+      height: 180px;
       padding: 5px 0; } }
     @media (max-width: 575px) and (max-width: 425px) {
       .index__class .flex-ls-wrapper .class-thumb {
-        height: 190px; } }
+        height: 180px; } }
 
 @media (max-width: 575px) {
       .index__class .flex-ls-wrapper .class-thumb .thumb {
@@ -132,21 +132,21 @@
             display: inline-block; }
             .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .title {
               display: inline-block;
-              font-size: 24px;
-              padding: 10px 15px 5px 15px;
+              font-size: 20px;
+              padding: 10px 15px 0px 15px;
               max-height: 80px;
               overflow: hidden; } }
             @media (max-width: 575px) and (max-width: 425px) {
               .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .title {
-                font-size: 22px;
-                max-height: 75px; } }
+                font-size: 20px;
+                max-height: 65px; } }
 
 @media (max-width: 575px) {
             .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .cont,
             .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .time,
             .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .name,
             .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .progress {
-              padding: 2px 15px;
+              padding: 0px 15px;
               color: #969696;
               font-size: 15px; }
               .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .cont span.star,
@@ -173,10 +173,10 @@
               .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .cont .process__bar .process__thumb {
                 height: 15px;
                 max-width: 100%;
-                background-image: -webkit-gradient(linear, left top, right top, from(#b3f6ff), to(#3a9bd3));
-                background-image: -webkit-linear-gradient(left, #b3f6ff, #3a9bd3);
-                background-image: -o-linear-gradient(left, #b3f6ff, #3a9bd3);
-                background-image: linear-gradient(to right, #b3f6ff, #3a9bd3); }
+                background-image: -webkit-gradient(linear, left top, right top, from(#d69200), to(#ffc240));
+                background-image: -webkit-linear-gradient(left, #d69200, #ffc240);
+                background-image: -o-linear-gradient(left, #d69200, #ffc240);
+                background-image: linear-gradient(to right, #d69200, #ffc240); }
             .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .cont .process__people {
               width: 100%; }
               .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .cont .process__people .process__static {
@@ -186,8 +186,6 @@
                 text-align: left; }
                 .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .cont .process__people .process__static .num {
                   color: #b90000; }
-            .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .name {
-              display: none; }
             .index__class .flex-ls-wrapper .class-thumb .thumb ul .thumb-body .cont .process__people .process__static .hidden-xs {
               display: none; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .price {
@@ -198,11 +196,11 @@
           .index__class .flex-ls-wrapper .class-thumb .thumb .price span {
             display: inline-block;
             color: #d68b00;
-            font-size: 28px; }
+            font-size: 22px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb__on {
           border-color: #b90000; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span {
-            font-size: 28px; }
+            font-size: 23px; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont {
             max-height: 31px;
             overflow: hidden; } }
@@ -217,7 +215,7 @@
         .index__class .flex-ls-wrapper .class-thumb .thumb__fund {
           border-color: #3a9bd3; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__fund .price span {
-            font-size: 20px; }
+            font-size: 18px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .add-mark {
           display: none; } }
 

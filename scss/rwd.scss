@@ -10,6 +10,12 @@ $gold: #ffc240;
 $brown: #ac7000;
 $red: #b90000;
 $blue: #3a9bd3;
+$on: #d69200;
+$fund: #7e6530;
+$font-size: 26px;
+$line-height: 1.4;
+$lines-to-show: 3;
+
 
 @media (min-width: 1151px) {
     .header {
@@ -109,11 +115,11 @@ $blue: #3a9bd3;
             }
 
             .class-thumb {
-                height: 200px;
+                height: 180px;
                 padding: 5px 0;
 
                 @media(max-width: 425px) {
-                    height: 190px;
+                    height: 180px;
                 }
 
                 .thumb {
@@ -164,7 +170,7 @@ $blue: #3a9bd3;
                                     line-height: 30px;
 
                                     @media(max-width: 425px) {
-                                    left: -35%;
+                                        left: -35%;
                                         top: 8%;
                                         font-size: 16px;
                                         height: 35px;
@@ -182,14 +188,14 @@ $blue: #3a9bd3;
 
                             .title {
                                 display: inline-block;
-                                font-size: 24px;
-                                padding: 10px 15px 5px 15px;
+                                font-size: 20px;
+                                padding: 10px 15px 0px 15px;
                                 max-height: 80px;
                                 overflow: hidden;
 
                                 @media(max-width: 425px) {
-                                    font-size: 22px;
-                                    max-height: 75px;
+                                    font-size: 20px;
+                                    max-height: 65px;
                                 }
                             }
 
@@ -197,7 +203,7 @@ $blue: #3a9bd3;
                             .time,
                             .name,
                             .progress {
-                                padding: 2px 15px;
+                                padding: 0px 15px;
                                 color: $font-gray;
                                 font-size: 15px;
 
@@ -233,7 +239,7 @@ $blue: #3a9bd3;
                                     .process__thumb {
                                         height: 15px;
                                         max-width: 100%;
-                                        background-image: linear-gradient(to right, #b3f6ff, $blue);
+                                        background-image: linear-gradient(to right, $on, $gold);
                                     }
                                 }
 
@@ -253,9 +259,7 @@ $blue: #3a9bd3;
                                 }
                             }
 
-                            .name {
-                                display: none;
-                            }
+                            .name {}
 
                             .cont {
                                 .process__people {
@@ -278,7 +282,7 @@ $blue: #3a9bd3;
                         span {
                             display: inline-block;
                             color: rgb(214, 139, 0);
-                            font-size: 28px;
+                            font-size: 22px;
                         }
                     }
 
@@ -286,7 +290,7 @@ $blue: #3a9bd3;
                         border-color: $red;
 
                         .price span {
-                            font-size: 28px;
+                            font-size: 23px;
                         }
 
                         .cont {
@@ -308,7 +312,7 @@ $blue: #3a9bd3;
                         border-color: $blue;
 
                         .price span {
-                            font-size: 20px;
+                            font-size: 18px;
                         }
                     }
 
