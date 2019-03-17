@@ -2092,6 +2092,10 @@ footer {
 
                 &:hover {
                     color: white;
+
+                    img.moviecool-footer {
+                        filter: brightness(1);
+                    }
                 }
 
                 i {
@@ -2107,6 +2111,9 @@ footer {
 
         img.moviecool-footer {
             filter: brightness(0.5);
+            transition: .5s;
+            margin-right: 5px;
+            margin-top: -3px;
         }
 
         .col-12 {
@@ -2118,5 +2125,218 @@ footer {
                 margin-bottom: 10px;
             }
         }
+    }
+}
+
+.video-main-section {
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    margin: 0;
+
+    &::before {
+        content: '';
+        background-image: url(../img/lecture/001.jpg);
+        background-size: cover;
+        background-position: center;
+
+        filter: brightness(.3);
+
+        width: 100%;
+        height: 25vw;
+
+        position: absolute;
+        z-index: -1;
+    }
+
+    .course-intro {
+
+        flex: .48;
+
+        color: #fff;
+
+        margin-top: 8rem;
+        margin-left: 2rem;
+        padding: 0 3rem;
+
+        height: 18vw;
+        width: 50%;
+
+        .title {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .cont {
+            color: lightgray;
+            font-weight: 100;
+
+            .short {
+                display: inline-block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3; // max nb lines to show
+                -webkit-box-orient: vertical;
+                margin-bottom: 1rem;
+            }
+
+            .item {
+                display: inline-block;
+                width: 100%;
+                overflow: hidden;
+
+                .row {
+                    padding: 0 1rem;
+                    width: 100%;
+                    justify-content: flex-start;
+
+                    span {
+                        margin-right: 15px;
+                    }
+                }
+
+            }
+
+            .star-rating {
+                display: flex;
+                font-size: 15px;
+                justify-content: flex-start;
+                width: 100%;
+
+                div {
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 4px;
+
+                    &.detail-num span {
+                        font-size: 16px;
+                        margin-left: 5px;
+                    }
+
+                    .star-progress {
+                        position: relative;
+
+                        &::before {
+                            font-family: 'Font Awesome 5 Free';
+                            content: '\f005';
+                            color: lightgray;
+                            font-weight: 900;
+                            z-index: 0;
+                            position: relative;
+                            display: inline-block;
+                        }
+                    }
+
+                    .star-progress-filled {
+                        position: absolute;
+                        overflow: hidden;
+                        top: 0;
+                        left: 0;
+
+                        &::before {
+                            font-family: 'Font Awesome 5 Free';
+                            content: '\f005';
+                            color: #ffc240;
+                            font-weight: 900;
+                            z-index: 1;
+                            position: relative;
+                            display: inline-block;
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+    }
+
+    .video-section-wrapper {
+
+        height: 700px;
+        width: 25%;
+
+        background-color: #fff;
+
+        padding: 1rem 1rem 1rem 1rem;
+        margin-right: 1rem;
+        margin-top: 6rem;
+
+        border-radius: 5px;
+
+        $primary-foreground-color: #fff; // #fff default
+        $primary-background-color: #474747; // #2B333F default
+        $center-big-play-button: true; // true default
+
+
+        .video-js {
+            font-size: 10px;
+            color: $primary-foreground-color;
+        }
+
+        .vjs-default-skin .vjs-big-play-button {
+            font-size: 2em;
+            $big-play-width: 2.5em;
+            $big-play-height: 1.5em;
+
+            line-height: 2.5em;
+            height: $big-play-width;
+            width: $big-play-width;
+
+            border: 0em solid $primary-foreground-color;
+            border-radius: 100%;
+
+            @if $center-big-play-button {
+                left: 50%;
+                top: 45%;
+                margin-left: -($big-play-width / 2);
+                margin-top: -($big-play-height / 2);
+            }
+
+            @else {
+                left: 0.5em;
+                top: 0.5em;
+            }
+        }
+
+        .video-js .vjs-control-bar,
+        .video-js .vjs-big-play-button,
+        .video-js .vjs-menu-button .vjs-menu-content {
+            /* IE8 - has no alpha support */
+            background-color: $primary-background-color;
+            /* Opacity: 1.0 = 100%, 0.0 = 0% */
+            background-color: rgba($primary-background-color, 0.7);
+        }
+
+        $slider-bg-color: lighten($primary-background-color, 33%);
+
+        .video-js .vjs-slider {
+            background-color: $slider-bg-color;
+            background-color: rgba($slider-bg-color, 0.5);
+        }
+
+        .video-js .vjs-volume-level,
+        .video-js .vjs-play-progress,
+        .video-js .vjs-slider-bar {
+            background: $primary-foreground-color;
+        }
+
+        .video-js .vjs-load-progress {
+            /* For IE8 we'll lighten the color */
+            background: lighten($slider-bg-color, 25%);
+            /* Otherwise we'll rely on stacked opacities */
+            background: rgba($slider-bg-color, 0.5);
+        }
+
+        .video-js .vjs-load-progress div {
+            /* For IE8 we'll lighten the color */
+            background: lighten($slider-bg-color, 50%);
+            /* Otherwise we'll rely on stacked opacities */
+            background: rgba($slider-bg-color, 0.75);
+        }
+
+
     }
 }

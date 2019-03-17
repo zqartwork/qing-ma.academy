@@ -1736,6 +1736,9 @@ footer {
         transition: .5s; }
         footer .footer-wrapper li a:hover {
           color: white; }
+          footer .footer-wrapper li a:hover img.moviecool-footer {
+            -webkit-filter: brightness(1);
+            filter: brightness(1); }
         footer .footer-wrapper li a i {
           width: 20px; }
     footer .footer-wrapper .title {
@@ -1743,10 +1746,157 @@ footer {
       padding: 0; }
     footer .footer-wrapper img.moviecool-footer {
       -webkit-filter: brightness(0.5);
-      filter: brightness(0.5); }
+      filter: brightness(0.5);
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      margin-right: 5px;
+      margin-top: -3px; }
     footer .footer-wrapper .col-12 {
       margin-top: 10px;
       margin-bottom: 0px;
       color: #969696; }
       footer .footer-wrapper .col-12 iframe {
         margin-bottom: 10px; }
+
+.video-main-section {
+  width: 100%;
+  justify-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0; }
+  .video-main-section::before {
+    content: '';
+    background-image: url(../img/lecture/001.jpg);
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+    width: 100%;
+    height: 25vw;
+    position: absolute;
+    z-index: -1; }
+  .video-main-section .course-intro {
+    -webkit-box-flex: .48;
+    -ms-flex: .48;
+    flex: .48;
+    color: #fff;
+    margin-top: 8rem;
+    margin-left: 2rem;
+    padding: 0 3rem;
+    height: 18vw;
+    width: 50%; }
+    .video-main-section .course-intro .title {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 10px; }
+    .video-main-section .course-intro .cont {
+      color: lightgray;
+      font-weight: 100; }
+      .video-main-section .course-intro .cont .short {
+        display: inline-block;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 1rem; }
+      .video-main-section .course-intro .cont .item {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden; }
+        .video-main-section .course-intro .cont .item .row {
+          padding: 0 1rem;
+          width: 100%;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start; }
+          .video-main-section .course-intro .cont .item .row span {
+            margin-right: 15px; }
+      .video-main-section .course-intro .cont .star-rating {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 15px;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        width: 100%; }
+        .video-main-section .course-intro .cont .star-rating div {
+          position: relative;
+          display: inline-block;
+          margin-right: 4px; }
+          .video-main-section .course-intro .cont .star-rating div.detail-num span {
+            font-size: 16px;
+            margin-left: 5px; }
+          .video-main-section .course-intro .cont .star-rating div .star-progress {
+            position: relative; }
+            .video-main-section .course-intro .cont .star-rating div .star-progress::before {
+              font-family: 'Font Awesome 5 Free';
+              content: '\f005';
+              color: lightgray;
+              font-weight: 900;
+              z-index: 0;
+              position: relative;
+              display: inline-block; }
+          .video-main-section .course-intro .cont .star-rating div .star-progress-filled {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0; }
+            .video-main-section .course-intro .cont .star-rating div .star-progress-filled::before {
+              font-family: 'Font Awesome 5 Free';
+              content: '\f005';
+              color: #ffc240;
+              font-weight: 900;
+              z-index: 1;
+              position: relative;
+              display: inline-block; }
+  .video-main-section .video-section-wrapper {
+    height: 700px;
+    width: 25%;
+    background-color: #fff;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-right: 1rem;
+    margin-top: 6rem;
+    border-radius: 5px; }
+    .video-main-section .video-section-wrapper .video-js {
+      font-size: 10px;
+      color: #fff; }
+    .video-main-section .video-section-wrapper .vjs-default-skin .vjs-big-play-button {
+      font-size: 2em;
+      line-height: 2.5em;
+      height: 2.5em;
+      width: 2.5em;
+      border: 0em solid #fff;
+      border-radius: 100%;
+      left: 50%;
+      top: 45%;
+      margin-left: -1.25em;
+      margin-top: -0.75em; }
+    .video-main-section .video-section-wrapper .video-js .vjs-control-bar,
+    .video-main-section .video-section-wrapper .video-js .vjs-big-play-button,
+    .video-main-section .video-section-wrapper .video-js .vjs-menu-button .vjs-menu-content {
+      /* IE8 - has no alpha support */
+      background-color: #474747;
+      /* Opacity: 1.0 = 100%, 0.0 = 0% */
+      background-color: rgba(71, 71, 71, 0.7); }
+    .video-main-section .video-section-wrapper .video-js .vjs-slider {
+      background-color: #9b9b9b;
+      background-color: rgba(155, 155, 155, 0.5); }
+    .video-main-section .video-section-wrapper .video-js .vjs-volume-level,
+    .video-main-section .video-section-wrapper .video-js .vjs-play-progress,
+    .video-main-section .video-section-wrapper .video-js .vjs-slider-bar {
+      background: #fff; }
+    .video-main-section .video-section-wrapper .video-js .vjs-load-progress {
+      /* For IE8 we'll lighten the color */
+      background: #dbdbdb;
+      /* Otherwise we'll rely on stacked opacities */
+      background: rgba(155, 155, 155, 0.5); }
+    .video-main-section .video-section-wrapper .video-js .vjs-load-progress div {
+      /* For IE8 we'll lighten the color */
+      background: white;
+      /* Otherwise we'll rely on stacked opacities */
+      background: rgba(155, 155, 155, 0.75); }
