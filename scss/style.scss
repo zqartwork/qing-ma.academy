@@ -1456,8 +1456,8 @@ $link_hover_color: #fff;
                 .price {
                     display: inline;
                     position: absolute;
-                    right: 25px;
-                    bottom: 25px;
+                    right: 1.5rem;
+                    bottom: 1.2rem;
 
                     span {
                         display: inline-block;
@@ -1572,7 +1572,7 @@ $link_hover_color: #fff;
 
                 .thumb-body {
                     .title {
-                        font-size: 24px;
+                        font-size: 22px;
                         padding: 10px 15px 5px 15px;
                         max-height: 80px;
                         overflow: hidden;
@@ -1584,7 +1584,7 @@ $link_hover_color: #fff;
                     .progress {
                         padding: 5px 15px;
                         color: $font-gray;
-                        font-size: 18px;
+                        font-size: 16px;
 
                     }
 
@@ -1697,8 +1697,8 @@ $link_hover_color: #fff;
                     display: inline;
                     position: absolute;
                     left: 30px;
-                    bottom: 23px;
-                    font-size: 30px;
+                    bottom: 1.5rem;
+                    font-size: 22px;
                     color: $gold;
                 }
             }

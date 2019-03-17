@@ -1260,8 +1260,8 @@ button {
         .index__class .flex-ls-wrapper .class-thumb .thumb .price {
           display: inline;
           position: absolute;
-          right: 25px;
-          bottom: 25px; }
+          right: 1.5rem;
+          bottom: 1.2rem; }
           .index__class .flex-ls-wrapper .class-thumb .thumb .price span {
             display: inline-block;
             color: #d68b00;
@@ -1340,7 +1340,7 @@ button {
             visibility: visible;
             opacity: 1; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .title {
-          font-size: 24px;
+          font-size: 22px;
           padding: 10px 15px 5px 15px;
           max-height: 80px;
           overflow: hidden; }
@@ -1350,7 +1350,7 @@ button {
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .progress {
           padding: 5px 15px;
           color: #969696;
-          font-size: 18px; }
+          font-size: 16px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .star-rating {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -1428,8 +1428,8 @@ button {
           display: inline;
           position: absolute;
           left: 30px;
-          bottom: 23px;
-          font-size: 30px;
+          bottom: 1.5rem;
+          font-size: 22px;
           color: #ffc240; }
 
 .free-class-section.index__class .flex-ls-wrapper .class-thumb .thumb-body .cont,
