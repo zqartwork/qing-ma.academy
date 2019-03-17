@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,800|Noto+Sans+TC:400,800|Open+Sans:400,800);
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
 $font-cn: 'Noto Sans TC';
 $font-en: 'Lato';
 $bgColor: #e4e4e4;
@@ -29,13 +28,6 @@ $lines-to-show: 3;
     font-family: $font-en;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    right: 0;
-    transition: .5s;
-}
-
 html,
 body {
     background-color: $bgColor;
@@ -49,6 +41,10 @@ a {
     color: white;
     outline: none;
     text-decoration: none !important;
+}
+
+.row {
+    margin: 0;
 }
 
 button {
@@ -127,6 +123,55 @@ button {
 @media (max-width: 575px) {
     .show-575 {
         display: initial;
+    }
+}
+
+.star-rating {
+    display: flex;
+    font-size: 15px;
+    justify-content: flex-start;
+    width: 100%;
+
+    div {
+        position: relative;
+        display: inline-block;
+        margin-right: 4px;
+
+        &.detail-num span {
+            font-size: 16px;
+            margin-left: 5px;
+        }
+
+        .star-progress {
+            position: relative;
+
+            &::before {
+                font-family: 'Font Awesome 5 Free';
+                content: '\f005';
+                color: lightgray;
+                font-weight: 900;
+                z-index: 0;
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+        .star-progress-filled {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+
+            &::before {
+                font-family: 'Font Awesome 5 Free';
+                content: '\f005';
+                color: #ffc240;
+                font-weight: 900;
+                z-index: 1;
+                position: relative;
+                display: inline-block;
+            }
+        }
     }
 }
 
@@ -604,11 +649,9 @@ button {
 
                             &::before {
                                 content: '';
-
                                 border-style: solid;
                                 border-width: 8px 8px 0 8px;
                                 border-color: #000 transparent transparent transparent;
-
                                 position: absolute;
                                 transform: rotate(180deg);
                                 right: 5%;
@@ -622,7 +665,6 @@ button {
                         }
                     }
                 }
-
             }
         }
 
@@ -1367,25 +1409,18 @@ $link_hover_color: #fff;
                     visibility: hidden;
                     z-index: 2;
                     opacity: .40;
-
                     width: 100%;
                     height: 400px;
                     padding: 0px 20px;
-
                     background: #fff;
                     color: $font-gray;
-
                     position: absolute;
                     top: 0%;
                     left: 100%;
-
-
                     border-radius: 5px;
                     font-size: 16px;
-
                     transform: translateY(8px);
                     transition: 0.3s ease-in-out;
-
                     box-shadow: 0 0 10px rgba(77, 77, 77, 0.274);
 
                     @media(max-width: 1150px) {
@@ -1451,24 +1486,19 @@ $link_hover_color: #fff;
                                 }
                             }
                         }
-
                     }
 
                     &::after {
                         content: " ";
                         width: 30px;
                         height: 30px;
-
                         background-color: #fff;
                         border-radius: 3px;
-
                         position: absolute;
                         z-index: -1;
                         left: -3%;
                         top: 5%;
                         transform: rotate(45deg);
-
-
                     }
                 }
 
@@ -1633,7 +1663,6 @@ $link_hover_color: #fff;
                         padding: 5px 15px;
                         color: $font-gray;
                         font-size: 16px;
-
                     }
 
                     .cont {
@@ -1683,8 +1712,6 @@ $link_hover_color: #fff;
                                         display: inline-block;
                                     }
                                 }
-
-
                             }
                         }
 
@@ -1751,7 +1778,6 @@ $link_hover_color: #fff;
                 }
             }
         }
-
     }
 }
 
@@ -2138,39 +2164,28 @@ footer {
 }
 
 .video-main-section {
-    width: 100%;
-    justify-items: center;
-    justify-content: center;
-    margin: 0;
+    width: 75%;
+    height: 400px;
 
     &::before {
         content: '';
         background-image: url(../img/lecture/001.jpg);
         background-size: cover;
         background-position: center;
-
         filter: brightness(.3);
-
         width: 100%;
-        height: 500px;
-
+        height: 400px;
         position: absolute;
         z-index: -1;
     }
 
     .course-intro {
-
-        flex: .5;
-
+        display: inline-block;
         color: #fff;
-
-        margin-top: 8rem;
-        margin-left: 2rem;
+        margin: 8rem auto 0 auto;
         padding: 0 3rem;
-
-        height: 18vw;
-        width: 50%;
-        min-width: 735px;
+        height: 14vw;
+        width: 744px;
 
         .title {
             font-size: 32px;
@@ -2212,7 +2227,6 @@ footer {
                         }
                     }
                 }
-
             }
 
             .star-rating {
@@ -2261,27 +2275,28 @@ footer {
                             display: inline-block;
                         }
                     }
-
-
                 }
             }
-
         }
     }
 
     .video-section-wrapper {
-
         height: 700px;
         width: 25%;
         min-width: 375px;
-
         background-color: #fff;
-
         padding: 1rem 1rem 1rem 1rem;
         margin-right: 1rem;
         margin-top: 6rem;
-
         border-radius: 5px;
+        position: fixed;
+        right: 15%;
+
+        &.sticky {
+            position: fixed;
+            transition: .5s;
+            transform: translateX(0px);
+        }
 
         .video-thumb {
             position: relative;
@@ -2321,12 +2336,10 @@ footer {
                 }
 
                 &::before {
-
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     z-index: 1;
-
                     content: '\f04b';
                     font-family: 'Font Awesome 5 Free';
                     font-size: 25px;
@@ -2334,17 +2347,13 @@ footer {
                     color: white;
                     line-height: 2.4;
                     vertical-align: middle;
-
                     background: rgba(0, 0, 0, 0.623);
-
                     border-radius: 100%;
-
                     height: $height;
                     width: $width;
                     margin-top: -$height / 2;
                     margin-left: -$width / 2;
                     padding: 0 0 0 5px;
-
                     transition: .3s;
                 }
             }
@@ -2367,6 +2376,8 @@ footer {
             .panel-header {
                 font-size: 22px;
                 color: black;
+                max-height: 66px;
+                overflow: hidden;
             }
 
             .panel-tag {
@@ -2384,17 +2395,12 @@ footer {
 
             button {
                 background: $gold;
-
                 border: none;
                 border-radius: 5px;
-
-                padding: 15px 20px;
+                padding: 10px 20px;
                 margin-bottom: 10px;
-
                 width: 100%;
-
                 font-size: 20px;
-
                 transition: .3s;
 
                 &:hover {
@@ -2432,11 +2438,58 @@ footer {
 
 .course-content-section {
     //test
-    height: 200vw;
+    height: 3000px;
+    width: 100%;
+
+    .course-content-wrapper {
+        margin: 0 auto;
+        width: 1150px;
+
+        .teacher-info {
+            width: 1150px;
+            height: 100px;
+            margin: 0 auto;
+
+            font-size: 30px;
+
+            .teacher-photo {
+                position: relative;
+                top: -40%;
+                left: 0%;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+
+                    height: 140px;
+                    width: 140px;
+
+                    background-size: cover;
+                    background-position: center;
+
+                    border-radius: 5px;
+                    border: 3px solid $font-w;
+                }
+            }
+
+            .name {
+                display: inline-block;
+                font-weight: 600;
+                margin-left: 10rem;
+                padding-top: 1.5rem;
+            }
+
+            .car {
+                display: inline-block;
+                font-size: 18px;
+                color: $font-dark;
+                margin-left: 10px;
+            }
+        }
+    }
 }
 
 // 影片設定
-
 $primary-foreground-color: #fff; // #fff default
 $primary-background-color: #474747; // #2B333F default
 $center-big-play-button: true; // true default
@@ -2450,11 +2503,9 @@ $center-big-play-button: true; // true default
     font-size: 2em;
     $big-play-width: 2.5em;
     $big-play-height: 1.5em;
-
     line-height: 2.5em;
     height: $big-play-width;
     width: $big-play-width;
-
     border: 0em solid $primary-foreground-color;
     border-radius: 100%;
 

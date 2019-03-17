@@ -32,13 +32,15 @@ $(document).ready(function () {
         }
     });
     $(window).scroll(function () {
-        var nav = $('.video-section-wrapper');
+        var Wrapper = $('.video-section-wrapper');
+        var WrapperSticky = $('.video-section-wrapper.sticky');
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 94) {
-            nav.addClass('sticky');
+        if (scroll >= 0) {
+            Wrapper.addClass('sticky');
         } else {
-            nav.removeClass('sticky');
+            Wrapper.removeClass('sticky');
+
         }
     });
     $('.mm-navbar__title').prepend('<div class="logo-set-mmenu"><img src="img/logo-school.png"></div>');
