@@ -1302,6 +1302,7 @@ $link_hover_color: #fff;
             height: 390px; // background: gray;
             padding: 10px;
             cursor: pointer;
+            color: $font-bk;
 
             @media (max-width: 990px) {
                 height: 410px;

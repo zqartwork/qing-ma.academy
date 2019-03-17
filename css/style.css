@@ -1141,7 +1141,8 @@ button {
     .index__class .flex-ls-wrapper .class-thumb {
       height: 390px;
       padding: 10px;
-      cursor: pointer; }
+      cursor: pointer;
+      color: #000; }
       @media (max-width: 990px) {
         .index__class .flex-ls-wrapper .class-thumb {
           height: 410px; } }
