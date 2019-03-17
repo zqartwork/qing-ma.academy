@@ -419,13 +419,45 @@ button {
         font-size: 25px;
         color: #ac7000;
         font-weight: 600; }
-      .mmenu-place .user__option-modal.mm-listitem .modal__body #point .point-q {
-        border: 1px solid gray;
-        color: gray;
-        font-size: 12px;
-        padding: 1px 5px;
-        margin-left: 5px;
-        border-radius: 3px; }
+      .mmenu-place .user__option-modal.mm-listitem .modal__body #point .point-tooltip-wrapper {
+        display: inline-block;
+        width: 25px;
+        position: relative; }
+        .mmenu-place .user__option-modal.mm-listitem .modal__body #point .point-tooltip-wrapper .point-tooltip {
+          color: gray;
+          font-size: 15px;
+          margin-left: 5px;
+          position: relative; }
+          .mmenu-place .user__option-modal.mm-listitem .modal__body #point .point-tooltip-wrapper .point-tooltip .point-tooltip__inner {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            background: #000;
+            color: white;
+            font-size: 12px;
+            right: 0%;
+            top: 130%;
+            width: 200px;
+            padding: 8px 10px 8px 18px;
+            border-radius: 5px;
+            line-height: 1.5;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s; }
+            .mmenu-place .user__option-modal.mm-listitem .modal__body #point .point-tooltip-wrapper .point-tooltip .point-tooltip__inner::before {
+              content: '';
+              border-style: solid;
+              border-width: 8px 8px 0 8px;
+              border-color: #000 transparent transparent transparent;
+              position: absolute;
+              -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+              transform: rotate(180deg);
+              right: 5%;
+              top: -15%; }
+          .mmenu-place .user__option-modal.mm-listitem .modal__body #point .point-tooltip-wrapper .point-tooltip:hover .point-tooltip__inner {
+            visibility: visible;
+            opacity: 1; }
   .mmenu-place .user__option-modal.mm-listitem .modal__footer {
     position: relative;
     width: 100%;
@@ -1392,7 +1424,7 @@ button {
                 display: inline-block; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__title {
           width: 100%;
-          font-size: 18px; }
+          font-size: 16px; }
           .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__title .date {
             float: right;
             margin-right: 3px; }
@@ -1415,7 +1447,7 @@ button {
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people {
           width: 100%; }
           .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-body .cont .process__people .process__static {
-            font-size: 18px;
+            font-size: 16px;
             display: inline-block;
             width: 100%;
             text-align: left; }

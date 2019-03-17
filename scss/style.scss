@@ -567,14 +567,53 @@ button {
                     font-weight: 600;
                 }
 
-                .point-q {
-                    border: 1px solid gray;
-                    color: gray;
-                    font-size: 12px;
-                    padding: 1px 5px;
-                    margin-left: 5px;
-                    border-radius: 3px;
+                .point-tooltip-wrapper {
+                    display: inline-block;
+                    width: 25px;
+                    position: relative;
+
+                    .point-tooltip {
+                        color: gray;
+                        font-size: 15px;
+                        margin-left: 5px;
+                        position: relative;
+
+                        .point-tooltip__inner {
+                            visibility: hidden;
+                            opacity: 0;
+                            position: absolute;
+                            background: #000;
+                            color: white;
+                            font-size: 12px;
+                            right: 0%;
+                            top: 130%;
+                            width: 200px;
+                            padding: 8px 10px 8px 18px;
+                            border-radius: 5px;
+                            line-height: 1.5;
+                            transition: .3s;
+
+                            &::before {
+                                content: '';
+
+                                border-style: solid;
+                                border-width: 8px 8px 0 8px;
+                                border-color: #000 transparent transparent transparent;
+
+                                position: absolute;
+                                transform: rotate(180deg);
+                                right: 5%;
+                                top: -15%;
+                            }
+                        }
+
+                        &:hover .point-tooltip__inner {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
                 }
+
             }
         }
 
@@ -1642,7 +1681,7 @@ $link_hover_color: #fff;
 
                         .process__title {
                             width: 100%;
-                            font-size: 18px;
+                            font-size: 16px;
 
                             .date {
                                 float: right;
@@ -1673,7 +1712,7 @@ $link_hover_color: #fff;
                             width: 100%;
 
                             .process__static {
-                                font-size: 18px;
+                                font-size: 16px;
                                 display: inline-block;
                                 width: 100%;
                                 text-align: left;
