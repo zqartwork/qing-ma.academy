@@ -1,8 +1,16 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Lato|Noto+Sans+TC|Roboto);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,800|Noto+Sans+TC:400,800|Open+Sans:400,800);
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 .en, .nav-before .nav-bar-wrapper a.logo-set .en-title {
   font-family: "Lato"; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 html,
 body {
@@ -1774,19 +1782,20 @@ footer {
     -webkit-filter: brightness(0.3);
     filter: brightness(0.3);
     width: 100%;
-    height: 25vw;
+    height: 500px;
     position: absolute;
     z-index: -1; }
   .video-main-section .course-intro {
-    -webkit-box-flex: .48;
-    -ms-flex: .48;
-    flex: .48;
+    -webkit-box-flex: .5;
+    -ms-flex: .5;
+    flex: .5;
     color: #fff;
     margin-top: 8rem;
     margin-left: 2rem;
     padding: 0 3rem;
     height: 18vw;
-    width: 50%; }
+    width: 50%;
+    min-width: 735px; }
     .video-main-section .course-intro .title {
       font-size: 32px;
       font-weight: 500;
@@ -1815,6 +1824,10 @@ footer {
           justify-content: flex-start; }
           .video-main-section .course-intro .cont .item .row span {
             margin-right: 15px; }
+            .video-main-section .course-intro .cont .item .row span.update {
+              font-size: 12px;
+              font-style: italic;
+              line-height: 2; }
       .video-main-section .course-intro .cont .star-rating {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1857,46 +1870,155 @@ footer {
   .video-main-section .video-section-wrapper {
     height: 700px;
     width: 25%;
+    min-width: 375px;
     background-color: #fff;
     padding: 1rem 1rem 1rem 1rem;
     margin-right: 1rem;
     margin-top: 6rem;
     border-radius: 5px; }
-    .video-main-section .video-section-wrapper .video-js {
-      font-size: 10px;
-      color: #fff; }
-    .video-main-section .video-section-wrapper .vjs-default-skin .vjs-big-play-button {
-      font-size: 2em;
-      line-height: 2.5em;
-      height: 2.5em;
-      width: 2.5em;
-      border: 0em solid #fff;
-      border-radius: 100%;
-      left: 50%;
-      top: 45%;
-      margin-left: -1.25em;
-      margin-top: -0.75em; }
-    .video-main-section .video-section-wrapper .video-js .vjs-control-bar,
-    .video-main-section .video-section-wrapper .video-js .vjs-big-play-button,
-    .video-main-section .video-section-wrapper .video-js .vjs-menu-button .vjs-menu-content {
-      /* IE8 - has no alpha support */
-      background-color: #474747;
-      /* Opacity: 1.0 = 100%, 0.0 = 0% */
-      background-color: rgba(71, 71, 71, 0.7); }
-    .video-main-section .video-section-wrapper .video-js .vjs-slider {
-      background-color: #9b9b9b;
-      background-color: rgba(155, 155, 155, 0.5); }
-    .video-main-section .video-section-wrapper .video-js .vjs-volume-level,
-    .video-main-section .video-section-wrapper .video-js .vjs-play-progress,
-    .video-main-section .video-section-wrapper .video-js .vjs-slider-bar {
-      background: #fff; }
-    .video-main-section .video-section-wrapper .video-js .vjs-load-progress {
-      /* For IE8 we'll lighten the color */
-      background: #dbdbdb;
-      /* Otherwise we'll rely on stacked opacities */
-      background: rgba(155, 155, 155, 0.5); }
-    .video-main-section .video-section-wrapper .video-js .vjs-load-progress div {
-      /* For IE8 we'll lighten the color */
-      background: white;
-      /* Otherwise we'll rely on stacked opacities */
-      background: rgba(155, 155, 155, 0.75); }
+    .video-main-section .video-section-wrapper .video-thumb {
+      position: relative;
+      height: 200px;
+      width: 100%; }
+      .video-main-section .video-section-wrapper .video-thumb::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        -webkit-filter: brightness(0.5);
+        filter: brightness(0.5);
+        border-radius: 5px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+      .video-main-section .video-section-wrapper .video-thumb .play-btn {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        text-align: center; }
+        .video-main-section .video-section-wrapper .video-thumb .play-btn .test {
+          display: inline-block;
+          text-align: left;
+          width: 100%;
+          padding-left: 15px;
+          padding-top: 10px; }
+        .video-main-section .video-section-wrapper .video-thumb .play-btn:hover .test {
+          color: #fff; }
+        .video-main-section .video-section-wrapper .video-thumb .play-btn::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 1;
+          content: '\f04b';
+          font-family: 'Font Awesome 5 Free';
+          font-size: 25px;
+          font-weight: 900;
+          color: white;
+          line-height: 2.4;
+          vertical-align: middle;
+          background: rgba(0, 0, 0, 0.623);
+          border-radius: 100%;
+          height: 60px;
+          width: 60px;
+          margin-top: -30px;
+          margin-left: -30px;
+          padding: 0 0 0 5px;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+      .video-main-section .video-section-wrapper .video-thumb:hover::before {
+        -webkit-filter: brightness(0.55);
+        filter: brightness(0.55); }
+      .video-main-section .video-section-wrapper .video-thumb:hover .play-btn::before {
+        background: rgba(54, 50, 44, 0.842); }
+    .video-main-section .video-section-wrapper .panel-wrapper {
+      padding: 10px 10px;
+      color: #474747; }
+      .video-main-section .video-section-wrapper .panel-wrapper .panel-header {
+        font-size: 22px;
+        color: black; }
+      .video-main-section .video-section-wrapper .panel-wrapper .panel-tag span {
+        margin-right: 10px; }
+      .video-main-section .video-section-wrapper .panel-wrapper .panel-price {
+        font-family: 'Open Sans';
+        font-size: 35px;
+        font-weight: 800;
+        color: #ac7000; }
+      .video-main-section .video-section-wrapper .panel-wrapper button {
+        background: #ffc240;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: 20px;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        .video-main-section .video-section-wrapper .panel-wrapper button:hover {
+          background-color: #ffa600; }
+        .video-main-section .video-section-wrapper .panel-wrapper button.add {
+          background: none;
+          border: 1px solid #000; }
+          .video-main-section .video-section-wrapper .panel-wrapper button.add:hover {
+            background-color: #f3788d;
+            border-color: #f3788d; }
+      .video-main-section .video-section-wrapper .panel-wrapper .panel-cont {
+        margin-top: 10px;
+        font-size: 15px;
+        color: #969696; }
+        .video-main-section .video-section-wrapper .panel-wrapper .panel-cont div {
+          margin-top: 3px; }
+          .video-main-section .video-section-wrapper .panel-wrapper .panel-cont div i {
+            width: 25px;
+            padding-left: 3px; }
+
+.course-content-section {
+  height: 200vw; }
+
+.video-js {
+  font-size: 10px;
+  color: #fff; }
+
+.vjs-default-skin .vjs-big-play-button {
+  font-size: 2em;
+  line-height: 2.5em;
+  height: 2.5em;
+  width: 2.5em;
+  border: 0em solid #fff;
+  border-radius: 100%;
+  left: 50%;
+  top: 45%;
+  margin-left: -1.25em;
+  margin-top: -0.75em; }
+
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+  /* IE8 - has no alpha support */
+  background-color: #474747;
+  /* Opacity: 1.0 = 100%, 0.0 = 0% */
+  background-color: rgba(71, 71, 71, 0.7); }
+
+.video-js .vjs-slider {
+  background-color: #9b9b9b;
+  background-color: rgba(155, 155, 155, 0.5); }
+
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+  background: #fff; }
+
+.video-js .vjs-load-progress {
+  /* For IE8 we'll lighten the color */
+  background: #dbdbdb;
+  /* Otherwise we'll rely on stacked opacities */
+  background: rgba(155, 155, 155, 0.5); }
+
+.video-js .vjs-load-progress div {
+  /* For IE8 we'll lighten the color */
+  background: white;
+  /* Otherwise we'll rely on stacked opacities */
+  background: rgba(155, 155, 155, 0.75); }

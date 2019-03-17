@@ -30,7 +30,17 @@ $(document).ready(function () {
         } else {
             nav.removeClass('sticky');
         }
-    })
+    });
+    $(window).scroll(function () {
+        var nav = $('.video-section-wrapper');
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 94) {
+            nav.addClass('sticky');
+        } else {
+            nav.removeClass('sticky');
+        }
+    });
     $('.mm-navbar__title').prepend('<div class="logo-set-mmenu"><img src="img/logo-school.png"></div>');
     $('.mm-navbar__title').attr('href', 'index.html');
 

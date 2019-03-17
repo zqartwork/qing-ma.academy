@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato|Noto+Sans+TC|Roboto);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,800|Noto+Sans+TC:400,800|Open+Sans:400,800);
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
 $font-cn: 'Noto Sans TC';
@@ -13,6 +13,8 @@ $gold: #ffc240;
 $brown: #ac7000;
 $red: #b90000;
 $blue: #3a9bd3;
+$pink: #f3788d;
+$pink-hover:#eb3654;
 $on: #d69200;
 $fund: #7e6530;
 $font-size: 26px;
@@ -25,6 +27,13 @@ $lines-to-show: 3;
 
 %en {
     font-family: $font-en;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: .5s;
 }
 
 html,
@@ -2143,7 +2152,7 @@ footer {
         filter: brightness(.3);
 
         width: 100%;
-        height: 25vw;
+        height: 500px;
 
         position: absolute;
         z-index: -1;
@@ -2151,7 +2160,7 @@ footer {
 
     .course-intro {
 
-        flex: .48;
+        flex: .5;
 
         color: #fff;
 
@@ -2161,6 +2170,7 @@ footer {
 
         height: 18vw;
         width: 50%;
+        min-width: 735px;
 
         .title {
             font-size: 32px;
@@ -2194,6 +2204,12 @@ footer {
 
                     span {
                         margin-right: 15px;
+
+                        &.update {
+                            font-size: 12px;
+                            font-style: italic;
+                            line-height: 2;
+                        }
                     }
                 }
 
@@ -2257,6 +2273,7 @@ footer {
 
         height: 700px;
         width: 25%;
+        min-width: 375px;
 
         background-color: #fff;
 
@@ -2266,77 +2283,226 @@ footer {
 
         border-radius: 5px;
 
-        $primary-foreground-color: #fff; // #fff default
-        $primary-background-color: #474747; // #2B333F default
-        $center-big-play-button: true; // true default
+        .video-thumb {
+            position: relative;
+            height: 200px;
+            width: 100%;
 
-
-        .video-js {
-            font-size: 10px;
-            color: $primary-foreground-color;
-        }
-
-        .vjs-default-skin .vjs-big-play-button {
-            font-size: 2em;
-            $big-play-width: 2.5em;
-            $big-play-height: 1.5em;
-
-            line-height: 2.5em;
-            height: $big-play-width;
-            width: $big-play-width;
-
-            border: 0em solid $primary-foreground-color;
-            border-radius: 100%;
-
-            @if $center-big-play-button {
-                left: 50%;
-                top: 45%;
-                margin-left: -($big-play-width / 2);
-                margin-top: -($big-play-height / 2);
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                filter: brightness(.5);
+                border-radius: 5px;
+                transition: .3s;
             }
 
-            @else {
-                left: 0.5em;
-                top: 0.5em;
+            .play-btn {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                text-align: center;
+                $height: 60px;
+                $width: 60px;
+
+                .test {
+                    display: inline-block;
+                    text-align: left;
+                    width: 100%;
+                    padding-left: 15px;
+                    padding-top: 10px;
+                }
+
+                &:hover .test {
+                    color: $font-w;
+                }
+
+                &::before {
+
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 1;
+
+                    content: '\f04b';
+                    font-family: 'Font Awesome 5 Free';
+                    font-size: 25px;
+                    font-weight: 900;
+                    color: white;
+                    line-height: 2.4;
+                    vertical-align: middle;
+
+                    background: rgba(0, 0, 0, 0.623);
+
+                    border-radius: 100%;
+
+                    height: $height;
+                    width: $width;
+                    margin-top: -$height / 2;
+                    margin-left: -$width / 2;
+                    padding: 0 0 0 5px;
+
+                    transition: .3s;
+                }
+            }
+
+            &:hover::before {
+                filter: brightness(.55);
+            }
+
+            &:hover {
+                .play-btn::before {
+                    background: rgba(54, 50, 44, 0.842);
+                }
             }
         }
 
-        .video-js .vjs-control-bar,
-        .video-js .vjs-big-play-button,
-        .video-js .vjs-menu-button .vjs-menu-content {
-            /* IE8 - has no alpha support */
-            background-color: $primary-background-color;
-            /* Opacity: 1.0 = 100%, 0.0 = 0% */
-            background-color: rgba($primary-background-color, 0.7);
+        .panel-wrapper {
+            padding: 10px 10px;
+            color: $font-dark;
+
+            .panel-header {
+                font-size: 22px;
+                color: black;
+            }
+
+            .panel-tag {
+                span {
+                    margin-right: 10px;
+                }
+            }
+
+            .panel-price {
+                font-family: 'Open Sans';
+                font-size: 35px;
+                font-weight: 800;
+                color: $brown;
+            }
+
+            button {
+                background: $gold;
+
+                border: none;
+                border-radius: 5px;
+
+                padding: 15px 20px;
+                margin-bottom: 10px;
+
+                width: 100%;
+
+                font-size: 20px;
+
+                transition: .3s;
+
+                &:hover {
+                    background-color: rgb(255, 166, 0);
+                }
+
+                &.add {
+                    background: none;
+                    border: 1px solid $font-bk;
+
+                    &:hover {
+                        background-color: $pink;
+                        border-color: $pink;
+                    }
+                }
+            }
+
+            .panel-cont {
+                margin-top: 10px;
+                font-size: 15px;
+                color: $font-gray;
+
+                div {
+                    margin-top: 3px;
+
+                    i {
+                        width: 25px;
+                        padding-left: 3px;
+                    }
+                }
+            }
         }
-
-        $slider-bg-color: lighten($primary-background-color, 33%);
-
-        .video-js .vjs-slider {
-            background-color: $slider-bg-color;
-            background-color: rgba($slider-bg-color, 0.5);
-        }
-
-        .video-js .vjs-volume-level,
-        .video-js .vjs-play-progress,
-        .video-js .vjs-slider-bar {
-            background: $primary-foreground-color;
-        }
-
-        .video-js .vjs-load-progress {
-            /* For IE8 we'll lighten the color */
-            background: lighten($slider-bg-color, 25%);
-            /* Otherwise we'll rely on stacked opacities */
-            background: rgba($slider-bg-color, 0.5);
-        }
-
-        .video-js .vjs-load-progress div {
-            /* For IE8 we'll lighten the color */
-            background: lighten($slider-bg-color, 50%);
-            /* Otherwise we'll rely on stacked opacities */
-            background: rgba($slider-bg-color, 0.75);
-        }
-
-
     }
+}
+
+.course-content-section {
+    //test
+    height: 200vw;
+}
+
+// 影片設定
+
+$primary-foreground-color: #fff; // #fff default
+$primary-background-color: #474747; // #2B333F default
+$center-big-play-button: true; // true default
+
+.video-js {
+    font-size: 10px;
+    color: $primary-foreground-color;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+    font-size: 2em;
+    $big-play-width: 2.5em;
+    $big-play-height: 1.5em;
+
+    line-height: 2.5em;
+    height: $big-play-width;
+    width: $big-play-width;
+
+    border: 0em solid $primary-foreground-color;
+    border-radius: 100%;
+
+    @if $center-big-play-button {
+        left: 50%;
+        top: 45%;
+        margin-left: -($big-play-width / 2);
+        margin-top: -($big-play-height / 2);
+    }
+
+    @else {
+        left: 0.5em;
+        top: 0.5em;
+    }
+}
+
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+    /* IE8 - has no alpha support */
+    background-color: $primary-background-color;
+    /* Opacity: 1.0 = 100%, 0.0 = 0% */
+    background-color: rgba($primary-background-color, 0.7);
+}
+
+$slider-bg-color: lighten($primary-background-color, 33%);
+
+.video-js .vjs-slider {
+    background-color: $slider-bg-color;
+    background-color: rgba($slider-bg-color, 0.5);
+}
+
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+    background: $primary-foreground-color;
+}
+
+.video-js .vjs-load-progress {
+    /* For IE8 we'll lighten the color */
+    background: lighten($slider-bg-color, 25%);
+    /* Otherwise we'll rely on stacked opacities */
+    background: rgba($slider-bg-color, 0.5);
+}
+
+.video-js .vjs-load-progress div {
+    /* For IE8 we'll lighten the color */
+    background: lighten($slider-bg-color, 50%);
+    /* Otherwise we'll rely on stacked opacities */
+    background: rgba($slider-bg-color, 0.75);
 }
