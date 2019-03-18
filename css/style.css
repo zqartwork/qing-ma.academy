@@ -2208,8 +2208,8 @@ button {
   .main-player .video-wrapper.row {
     margin: 0 auto;
     width: 85%;
-    height: 75%;
-    padding: 0;
+    height: 68%;
+    padding: 20px;
     background: #000;
     justify-items: center;
     -webkit-box-align: center;
@@ -2236,7 +2236,12 @@ button {
       .main-player .video-wrapper.row .playlist ul {
         margin: 1rem 0; }
         .main-player .video-wrapper.row .playlist ul li {
-          padding: 10px 15px; }
+          padding: 10px 15px;
+          font-weight: 200; }
+          .main-player .video-wrapper.row .playlist ul li.title {
+            font-size: 18px;
+            font-weight: 500;
+            padding-left: 2rem; }
           .main-player .video-wrapper.row .playlist ul li ol li.col-2 {
             text-align: center; }
 

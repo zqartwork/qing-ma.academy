@@ -2700,8 +2700,8 @@ $link_hover_color: #fff;
     .video-wrapper.row {
         margin: 0 auto;
         width: 85%;
-        height: 75%;
-        padding: 0;
+        height: 68%;
+        padding: 20px;
         
         background: #000;
 
@@ -2736,6 +2736,14 @@ $link_hover_color: #fff;
                     // background: pink;
                     // border: 1px solid red;
                     padding: 10px 15px;
+                    font-weight: 200;
+
+                    &.title {
+                        font-size: 18px;
+                        font-weight: 500;
+                        padding-left: 2rem;
+                    }
+
                     ol {
                         li.col-2{
                             text-align: center;

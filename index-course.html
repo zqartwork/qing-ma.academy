@@ -32,8 +32,50 @@
     <link rel="stylesheet" href="css/rwd.css">
     <link rel="stylesheet" href="css/animate.css">
     <!-- 20190311-built -->
+    <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
 
 </head>
+<style>
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        margin: 80px 0 5px 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        background: rgb(219, 219, 219);
+    }
+</style>
+<style type="text/css">
+    .vjs-default-skin {
+        color: #ffffff;
+    }
+
+    .vjs-default-skin .vjs-play-progress,
+    .vjs-default-skin .vjs-volume-level {
+        background-color: #ffa83f
+    }
+
+    .vjs-default-skin .vjs-control-bar,
+    .vjs-default-skin .vjs-big-play-button {
+        background: rgba(23, 23, 23, 0.7)
+    }
+
+    .vjs-default-skin .vjs-slider {
+        background: rgba(23, 23, 23, 0.2333333333333333)
+    }
+
+    .vjs-default-skin .vjs-control-bar {
+        font-size: 104%
+    }
+</style>
 
 <body>
     <div class="wrapper">
@@ -505,7 +547,9 @@
     <section class="main-player row">
         <div class="video-wrapper row">
             <div class="canvas col-8">
-                <video controls autoplay id="videoarea"></video>
+                <video controls autoplay id="videoarea">
+
+                </video>
             </div>
             <div class="playlist col-4">
                 <ul id="playlist">
@@ -517,107 +561,107 @@
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-play"></i></li>
                             <li class="col-7">課程試看：五分鐘試播集</li>
-                            <li class="col-3"></li>
+                            <li class="col-3 timer">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第一堂課：認識攝影機</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第二堂課：從基礎開始，認識美食</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第一堂課：認識攝影機</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第二堂課：從基礎開始，認識美食</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第一堂課：認識攝影機</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第二堂課：從基礎開始，認識美食</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第一堂課：認識攝影機</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第二堂課：從基礎開始，認識美食</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第一堂課：認識攝影機</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第二堂課：從基礎開始，認識美食</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第一堂課：認識攝影機</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第二堂課：從基礎開始，認識美食</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://grochtdreis.de/fuer-jsfiddle/video/sintel_trailer-480.mp4">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第一堂課：認識攝影機</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
                     </li>
                     <li movieurl="http://www.ioncannon.net/examples/vp8-webm/big_buck_bunny_480p.webm">
                         <ol class="row">
                             <li class="col-2"><i class="fas fa-lock"></i></li>
                             <li class="col-7">第二堂課：從基礎開始，認識美食</li>
-                            <li class="col-3"></li>
+                            <li class="col-3">05:00</li>
                         </ol>
-                    </li>s
+                    </li>
                 </ul>
             </div>
         </div>
