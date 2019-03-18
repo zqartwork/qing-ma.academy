@@ -2104,64 +2104,6 @@ $link_hover_color: #fff;
         }
     }
 }
-
-footer {
-    width: 100%;
-    background: #000;
-    color: lightgray;
-    font-size: 15px;
-
-    .footer-wrapper {
-        width: 70%;
-        margin: 0 auto;
-        padding-top: 3rem;
-        padding-bottom: .5rem;
-
-        li {
-            margin-top: 10px;
-
-            a {
-                color: $font-gray;
-                transition: .5s;
-
-                &:hover {
-                    color: white;
-
-                    img.moviecool-footer {
-                        filter: brightness(1);
-                    }
-                }
-
-                i {
-                    width: 20px;
-                }
-            }
-        }
-
-        .title {
-            font-size: 20px;
-            padding: 0;
-        }
-
-        img.moviecool-footer {
-            filter: brightness(0.5);
-            transition: .5s;
-            margin-right: 5px;
-            margin-top: -3px;
-        }
-
-        .col-12 {
-            margin-top: 10px;
-            margin-bottom: 0px;
-            color: $font-gray;
-
-            iframe {
-                margin-bottom: 10px;
-            }
-        }
-    }
-}
-
 .video-main-section {
     margin: 0 auto;
     width: 65%;
@@ -2291,7 +2233,6 @@ footer {
     }
 
     .video-section-wrapper {
-
         height: 700px;
         width: 25%;
         min-width: 375px;
@@ -2299,15 +2240,16 @@ footer {
         background-color: #fff;
 
         padding: 1rem 1rem 1rem 1rem;
-        margin-right: 1rem;
+        margin-right: -5rem;
         margin-top: 6rem;
 
         border-radius: 5px;
 
-
-        &.sticky {
+        &.is-sticky {
             position: fixed;
-            right: 0%;
+            right: 17.5%;
+            transition: .5s;
+            transform: translateY(135%);
 
             @media(max-width: 1340px) {
                 right: 0;
@@ -2612,6 +2554,7 @@ footer {
             
         }
 
+        // 所有區塊的預設值
         .inner-section {
             background: #fff;
             color: $font-dark;
@@ -2673,10 +2616,20 @@ footer {
             a {
                 color: $brown;
                 font-weight: 500;
+                transition: .3s;
+                
+                &:hover {
+                    color: $on;
+                }
+            }
+
+            .Q {
+                font-weight: 500;
+                font-size: 18px;
+                margin: 10px 0;
             }
             
             .sidebar-box {
-                max-height: 1200px;
                 position: relative;
                 overflow: hidden;
                 .read-more { 
@@ -2687,16 +2640,16 @@ footer {
                     text-align: center; 
                     margin: 0; 
                     padding: 20px 0; 
-                    font-weight: 800;
 
-                    a {
+                    a.button {
                         display: inline-block;
                         margin-top: 20px;
                         font-family: 'Open Sans';
                         color: $font-dark;
                         border-radius: 5px;
                         border: 1px solid $font-dark;
-                        padding: 5px 10px;
+                        padding: 3px 10px;
+                        font-weight: 800;
                     }
                       
                     /* "transparent" only works here because == rgba(0,0,0,0) */
@@ -2710,7 +2663,17 @@ footer {
                 }
     
               }
+            &.prepare .sidebar-box {
+                max-height: 185px;
+            }
 
+            &.course-content .sidebar-box {
+                max-height: 500px;
+            }
+
+            &.course-problem .sidebar-box {
+                max-height: 200px;
+            }
         }
     }
 }
@@ -2783,3 +2746,62 @@ $slider-bg-color: lighten($primary-background-color, 33%);
     /* Otherwise we'll rely on stacked opacities */
     background: rgba($slider-bg-color, 0.75);
 }
+
+footer {
+    display: block;
+    width: 100%;
+    background: #000;
+    color: lightgray;
+    font-size: 15px;
+
+    .footer-wrapper {
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 3rem;
+        padding-bottom: .5rem;
+
+        li {
+            margin-top: 10px;
+
+            a {
+                color: $font-gray;
+                transition: .5s;
+
+                &:hover {
+                    color: white;
+
+                    img.moviecool-footer {
+                        filter: brightness(1);
+                    }
+                }
+
+                i {
+                    width: 20px;
+                }
+            }
+        }
+
+        .title {
+            font-size: 20px;
+            padding: 0;
+        }
+
+        img.moviecool-footer {
+            filter: brightness(0.5);
+            transition: .5s;
+            margin-right: 5px;
+            margin-top: -3px;
+        }
+
+        .col-12 {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            color: $font-gray;
+
+            iframe {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+

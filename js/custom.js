@@ -30,18 +30,12 @@ $(document).ready(function () {
         } else {
             nav.removeClass('sticky');
         }
-    });
-    $(window).scroll(function () {
-        var Wrapper = $('.video-section-wrapper');
-        var WrapperSticky = $('.video-section-wrapper.sticky');
-        var scroll = $(window).scrollTop();
 
-        if (scroll >= 790) {
-            Wrapper.addClass('sticky');
-        } else {
-            Wrapper.removeClass('sticky');
-        }
+        var stickyBottomOffset = $('footer').height();
+        $(".video-section-wrapper").sticky({ topSpacing: 0, bottomSpacing: stickyBottomOffset + $('.video-section-wrapper').height() / 5 });
     });
+
+
     $('.mm-navbar__title').prepend('<div class="logo-set-mmenu"><img src="img/logo-school.png"></div>');
     $('.mm-navbar__title').attr('href', 'index.html');
 
