@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,800|Noto+Sans+TC:400,800|Open+Sans:400,800);
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Noto+Sans+TC:100,300,400,500,700,900|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=chinese-traditional,cyrillic,cyrillic-ext,greek,greek-ext,japanese,latin-ext,vietnamese");
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 .en, .nav-before .nav-bar-wrapper a.logo-set .en-title {
   font-family: "Lato"; }
@@ -2021,28 +2021,28 @@ footer {
           max-height: 120px;
           position: relative;
           overflow: hidden; }
-        .video-main-section .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .read-more {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          text-align: center;
-          margin: 0;
-          padding: 20px 0;
-          font-weight: 800;
-          /* "transparent" only works here because == rgba(0,0,0,0) */
-          background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
-          background-image: -webkit-linear-gradient(top, transparent, #fff);
-          background-image: -o-linear-gradient(top, transparent, #fff);
-          background-image: linear-gradient(to bottom, transparent, #fff); }
-          .video-main-section .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .read-more a {
-            display: inline-block;
-            margin-top: 20px;
-            font-family: 'Open Sans';
-            color: #474747;
-            border-radius: 5px;
-            border: 1px solid #474747;
-            padding: 5px 10px; }
+          .video-main-section .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .read-more {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            font-weight: 800;
+            /* "transparent" only works here because == rgba(0,0,0,0) */
+            background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+            background-image: -webkit-linear-gradient(top, transparent, #fff);
+            background-image: -o-linear-gradient(top, transparent, #fff);
+            background-image: linear-gradient(to bottom, transparent, #fff); }
+            .video-main-section .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .read-more a {
+              display: inline-block;
+              margin-top: 20px;
+              font-family: 'Open Sans';
+              color: #474747;
+              border-radius: 5px;
+              border: 1px solid #474747;
+              padding: 5px 10px; }
         .video-main-section .video-section-wrapper .panel-wrapper .panel-cont div {
           margin-top: 3px; }
           .video-main-section .video-section-wrapper .panel-wrapper .panel-cont div i {
@@ -2050,7 +2050,6 @@ footer {
             padding-left: 3px; }
 
 .course-content-section {
-  height: 3000px;
   width: 100%; }
   .course-content-section .course-content-wrapper {
     margin: 0 auto;
@@ -2136,6 +2135,59 @@ footer {
               background-image: url(../img/icon/face.png); }
             .course-content-section .course-content-wrapper .teacher-info .cont .btns a.yt {
               background-image: url(../img/icon/yt.png); }
+    .course-content-section .course-content-wrapper .prepare {
+      background: #fff;
+      color: #474747;
+      font-size: 16px;
+      width: 68%;
+      margin-top: 2rem;
+      padding: 15px 2rem;
+      border-radius: 5px; }
+      .course-content-section .course-content-wrapper .prepare::before {
+        position: absolute;
+        content: '';
+        top: 15.34%;
+        height: 25px;
+        width: 25px;
+        background: #fff;
+        border-radius: 5px;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .course-content-section .course-content-wrapper .prepare .sidebar-box {
+        max-height: 235px;
+        position: relative;
+        overflow: hidden; }
+        .course-content-section .course-content-wrapper .prepare .sidebar-box .read-more {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 20px 0;
+          font-weight: 800;
+          /* "transparent" only works here because == rgba(0,0,0,0) */
+          background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+          background-image: -webkit-linear-gradient(top, transparent, #fff);
+          background-image: -o-linear-gradient(top, transparent, #fff);
+          background-image: linear-gradient(to bottom, transparent, #fff); }
+          .course-content-section .course-content-wrapper .prepare .sidebar-box .read-more a {
+            display: inline-block;
+            margin-top: 20px;
+            font-family: 'Open Sans';
+            color: #474747;
+            border-radius: 5px;
+            border: 1px solid #474747;
+            padding: 5px 10px; }
+        .course-content-section .course-content-wrapper .prepare .sidebar-box .title {
+          font-weight: 600;
+          font-size: 22px;
+          margin-bottom: 10px; }
+        .course-content-section .course-content-wrapper .prepare .sidebar-box .sub-title {
+          font-weight: 600; }
+        .course-content-section .course-content-wrapper .prepare .sidebar-box .inner {
+          padding: 10px 0; }
 
 .video-js {
   font-size: 10px;

@@ -247,9 +247,9 @@ $('.master-main-slider').slick({
 
 var $el, $ps, $up, totalHeight;
 
-$(".sidebar-box .button").click(function () {
+$(".video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .button").click(function () {
 
-    totalHeight = 150
+    totalHeight = 150;
 
     $el = $(this);
     $p = $el.parent();
@@ -278,3 +278,42 @@ $(".sidebar-box .button").click(function () {
     return false;
 
 });
+
+$(".course-content-section .course-content-wrapper .prepare .sidebar-box .read-more .button").click(function () {
+
+    totalHeight = $(".course-content-section .course-content-wrapper .prepare .sidebar-box .cont").outerHeight();
+
+    $el = $(this);
+    $p = $el.parent();
+    $up = $p.parent();
+    $ps = $up.find("p:not('.read-more')");
+
+    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+    $ps.each(function () {
+        totalHeight += $(this).outerHeight();
+    });
+
+    $up
+        .css({
+            // Set height to prevent instant jumpdown when max height is removed
+            "height": $up.height(),
+            "max-height": 9999
+        })
+        .animate({
+            "height": totalHeight
+        });
+
+    // fade out read-more
+    if ($(this).hasClass("less")) {
+        $(this).removeClass("less");
+        $(this).html("Read More");
+    } else {
+        $(this).addClass("less");
+        $(this).html("Read Less");
+    }
+    $(this).parent().prev().toggle();
+    $(this).prev().toggle();
+    return false;
+
+});
+
