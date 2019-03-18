@@ -12,10 +12,10 @@ $(document).ready(function () {
 
     $('ul#nav ul.sub-menu').css('opacity', 0.0);
     $('ul#nav li').hover(function () {
-            $(this).find('.sub-menu').stop().animate({
-                opacity: 1.0
-            }, 300);
-        },
+        $(this).find('.sub-menu').stop().animate({
+            opacity: 1.0
+        }, 300);
+    },
         function () {
             $(this).find('.sub-menu').stop().animate({
                 opacity: 0.0
@@ -36,11 +36,10 @@ $(document).ready(function () {
         var WrapperSticky = $('.video-section-wrapper.sticky');
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 0) {
+        if (scroll >= 790) {
             Wrapper.addClass('sticky');
         } else {
             Wrapper.removeClass('sticky');
-
         }
     });
     $('.mm-navbar__title').prepend('<div class="logo-set-mmenu"><img src="img/logo-school.png"></div>');
@@ -217,31 +216,65 @@ $('.master-main-slider').slick({
     slidesToShow: 5,
     autoplay: true,
     responsive: [{
-            breakpoint: 1150,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
-            }
-        }, {
-            breakpoint: 768,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
-            }
-        },
-        {
-            breakpoint: 576,
-            settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
-            }
+        breakpoint: 1150,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
         }
+    }, {
+        breakpoint: 768,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+        }
+    },
+    {
+        breakpoint: 576,
+        settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+        }
+    }
     ]
+
+});
+
+var $el, $ps, $up, totalHeight;
+
+$(".sidebar-box .button").click(function () {
+
+    totalHeight = 150
+
+    $el = $(this);
+    $p = $el.parent();
+    $up = $p.parent();
+    $ps = $up.find("p:not('.read-more')");
+
+    // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+    $ps.each(function () {
+        totalHeight += $(this).outerHeight();
+    });
+
+    $up
+        .css({
+            // Set height to prevent instant jumpdown when max height is removed
+            "height": $up.height(),
+            "max-height": 9999
+        })
+        .animate({
+            "height": totalHeight
+        });
+
+    // fade out read-more
+    $p.fadeOut();
+
+    // prevent jump-down
+    return false;
 
 });
