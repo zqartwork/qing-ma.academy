@@ -2139,6 +2139,8 @@ footer {
       background: #fff;
       color: #474747;
       font-size: 16px;
+      font-weight: 300;
+      text-align: left;
       width: 68%;
       position: relative;
       margin-top: 2rem;
@@ -2154,9 +2156,31 @@ footer {
         border-left: 5px solid #ffc240;
         margin: 15px 0;
         padding: 0px 20px;
-        font-size: large；; }
+        font-size: 18px;
+        font-weight: 500; }
+        .course-content-section .course-content-wrapper .inner-section blockquote p {
+          font-size: .8em !important; }
+      .course-content-section .course-content-wrapper .inner-section p {
+        line-height: 1.8;
+        font-weight: 300; }
+      .course-content-section .course-content-wrapper .inner-section h1, .course-content-section .course-content-wrapper .inner-section h2, .course-content-section .course-content-wrapper .inner-section h3, .course-content-section .course-content-wrapper .inner-section h4, .course-content-section .course-content-wrapper .inner-section h5, .course-content-section .course-content-wrapper .inner-section h6 {
+        margin-bottom: 16px;
+        margin-top: 40px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+      .course-content-section .course-content-wrapper .inner-section pre {
+        font-size: 14px;
+        line-height: 1.8em;
+        margin: 24px 0;
+        padding: 8px 16px;
+        border-radius: 0;
+        border: 0;
+        background-color: #e4e4e4; }
+      .course-content-section .course-content-wrapper .inner-section a {
+        color: #ac7000;
+        font-weight: 500; }
       .course-content-section .course-content-wrapper .inner-section .sidebar-box {
-        max-height: 235px;
+        max-height: 1200px;
         position: relative;
         overflow: hidden; }
         .course-content-section .course-content-wrapper .inner-section .sidebar-box .read-more {
