@@ -2307,7 +2307,7 @@ footer {
 
         &.sticky {
             position: fixed;
-            right: 6%;
+            right: 0%;
 
             @media(max-width: 1340px) {
                 right: 0;
@@ -2438,10 +2438,12 @@ footer {
             .panel-cont {
                 font-size: 15px;
                 color: $font-gray;
+
                 .sidebar-box {
                     max-height: 120px;
                     position: relative;
                     overflow: hidden;
+
                     .read-more { 
                         position: absolute; 
                         bottom: 0; 
@@ -2464,9 +2466,9 @@ footer {
                           
                         /* "transparent" only works here because == rgba(0,0,0,0) */
                         background-image: linear-gradient(to bottom, transparent, #fff);
-                      }
+                      }        
                   }
-                div {
+                    li {
                     margin-top: 3px;
 
                     i {
@@ -2486,7 +2488,8 @@ footer {
     .course-content-wrapper {
         margin: 0 auto;
         width: 1150px;
-
+        
+        
         .teacher-info {
             width: 1150px;
             height: 100px;
@@ -2609,32 +2612,36 @@ footer {
             
         }
 
-        .prepare {
+        .inner-section {
             background: #fff;
             color: $font-dark;
 
             font-size: 16px;
 
             width: 68%;
-
+            position: relative;
             margin-top: 2rem;
             padding: 15px 2rem;
 
             border-radius: 5px;
 
-            &::before {
-                position: absolute;
-                content:'';
-                top: 15.34%;
-
-                height: 25px;
-                width: 25px;
-
-                background: #fff;
-                border-radius: 5px;
-
-                transform: rotate(45deg);
+            .title {
+                font-weight: 600;
+                font-size: 25px;
+                margin-bottom: 10px;
             }
+            
+            img {
+                width: 100%;
+            }
+
+            blockquote {
+                border-left: 5px solid #ffc240;
+                margin: 15px 0;
+                padding: 0px 20px;
+                font-size: large；
+            }
+            
             .sidebar-box {
                 max-height: 235px;
                 position: relative;
@@ -2662,11 +2669,6 @@ footer {
                     /* "transparent" only works here because == rgba(0,0,0,0) */
                     background-image: linear-gradient(to bottom, transparent, #fff);
                   }
-                .title {
-                    font-weight: 600;
-                    font-size: 22px;
-                    margin-bottom: 10px;
-                }
                 .sub-title {
                     font-weight: 600;
                 }

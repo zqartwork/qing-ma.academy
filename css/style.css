@@ -1918,7 +1918,7 @@ footer {
     border-radius: 5px; }
     .video-main-section .video-section-wrapper.sticky {
       position: fixed;
-      right: 6%; }
+      right: 0%; }
       @media (max-width: 1340px) {
         .video-main-section .video-section-wrapper.sticky {
           right: 0; } }
@@ -2043,9 +2043,9 @@ footer {
               border-radius: 5px;
               border: 1px solid #474747;
               padding: 5px 10px; }
-        .video-main-section .video-section-wrapper .panel-wrapper .panel-cont div {
+        .video-main-section .video-section-wrapper .panel-wrapper .panel-cont li {
           margin-top: 3px; }
-          .video-main-section .video-section-wrapper .panel-wrapper .panel-cont div i {
+          .video-main-section .video-section-wrapper .panel-wrapper .panel-cont li i {
             width: 25px;
             padding-left: 3px; }
 
@@ -2135,30 +2135,31 @@ footer {
               background-image: url(../img/icon/face.png); }
             .course-content-section .course-content-wrapper .teacher-info .cont .btns a.yt {
               background-image: url(../img/icon/yt.png); }
-    .course-content-section .course-content-wrapper .prepare {
+    .course-content-section .course-content-wrapper .inner-section {
       background: #fff;
       color: #474747;
       font-size: 16px;
       width: 68%;
+      position: relative;
       margin-top: 2rem;
       padding: 15px 2rem;
       border-radius: 5px; }
-      .course-content-section .course-content-wrapper .prepare::before {
-        position: absolute;
-        content: '';
-        top: 15.34%;
-        height: 25px;
-        width: 25px;
-        background: #fff;
-        border-radius: 5px;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg); }
-      .course-content-section .course-content-wrapper .prepare .sidebar-box {
+      .course-content-section .course-content-wrapper .inner-section .title {
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 10px; }
+      .course-content-section .course-content-wrapper .inner-section img {
+        width: 100%; }
+      .course-content-section .course-content-wrapper .inner-section blockquote {
+        border-left: 5px solid #ffc240;
+        margin: 15px 0;
+        padding: 0px 20px;
+        font-size: large；; }
+      .course-content-section .course-content-wrapper .inner-section .sidebar-box {
         max-height: 235px;
         position: relative;
         overflow: hidden; }
-        .course-content-section .course-content-wrapper .prepare .sidebar-box .read-more {
+        .course-content-section .course-content-wrapper .inner-section .sidebar-box .read-more {
           position: absolute;
           bottom: 0;
           left: 0;
@@ -2172,7 +2173,7 @@ footer {
           background-image: -webkit-linear-gradient(top, transparent, #fff);
           background-image: -o-linear-gradient(top, transparent, #fff);
           background-image: linear-gradient(to bottom, transparent, #fff); }
-          .course-content-section .course-content-wrapper .prepare .sidebar-box .read-more a {
+          .course-content-section .course-content-wrapper .inner-section .sidebar-box .read-more a {
             display: inline-block;
             margin-top: 20px;
             font-family: 'Open Sans';
@@ -2180,13 +2181,9 @@ footer {
             border-radius: 5px;
             border: 1px solid #474747;
             padding: 5px 10px; }
-        .course-content-section .course-content-wrapper .prepare .sidebar-box .title {
-          font-weight: 600;
-          font-size: 22px;
-          margin-bottom: 10px; }
-        .course-content-section .course-content-wrapper .prepare .sidebar-box .sub-title {
+        .course-content-section .course-content-wrapper .inner-section .sidebar-box .sub-title {
           font-weight: 600; }
-        .course-content-section .course-content-wrapper .prepare .sidebar-box .inner {
+        .course-content-section .course-content-wrapper .inner-section .sidebar-box .inner {
           padding: 10px 0; }
 
 .video-js {
