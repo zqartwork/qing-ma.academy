@@ -272,4 +272,3 @@ $(".read-more .button").click(function () {
     return false;
 
 });
-

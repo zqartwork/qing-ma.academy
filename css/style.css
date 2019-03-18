@@ -2204,35 +2204,6 @@ button {
   margin-left: -1.25em;
   margin-top: -0.75em; }
 
-.video-js .vjs-control-bar,
-.video-js .vjs-big-play-button,
-.video-js .vjs-menu-button .vjs-menu-content {
-  /* IE8 - has no alpha support */
-  background-color: #474747;
-  /* Opacity: 1.0 = 100%, 0.0 = 0% */
-  background-color: rgba(71, 71, 71, 0.7); }
-
-.video-js .vjs-slider {
-  background-color: #9b9b9b;
-  background-color: rgba(155, 155, 155, 0.5); }
-
-.video-js .vjs-volume-level,
-.video-js .vjs-play-progress,
-.video-js .vjs-slider-bar {
-  background: #fff; }
-
-.video-js .vjs-load-progress {
-  /* For IE8 we'll lighten the color */
-  background: #dbdbdb;
-  /* Otherwise we'll rely on stacked opacities */
-  background: rgba(155, 155, 155, 0.5); }
-
-.video-js .vjs-load-progress div {
-  /* For IE8 we'll lighten the color */
-  background: white;
-  /* Otherwise we'll rely on stacked opacities */
-  background: rgba(155, 155, 155, 0.75); }
-
 footer {
   display: block;
   width: 100%;

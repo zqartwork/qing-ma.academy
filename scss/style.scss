@@ -2677,7 +2677,7 @@ $link_hover_color: #fff;
         }
     }
 }
-
+    
 // 影片設定
 $primary-foreground-color: #fff; // #fff default
 $primary-background-color: #474747; // #2B333F default
@@ -2710,43 +2710,6 @@ $center-big-play-button: true; // true default
         top: 0.5em;
     }
 }
-
-.video-js .vjs-control-bar,
-.video-js .vjs-big-play-button,
-.video-js .vjs-menu-button .vjs-menu-content {
-    /* IE8 - has no alpha support */
-    background-color: $primary-background-color;
-    /* Opacity: 1.0 = 100%, 0.0 = 0% */
-    background-color: rgba($primary-background-color, 0.7);
-}
-
-$slider-bg-color: lighten($primary-background-color, 33%);
-
-.video-js .vjs-slider {
-    background-color: $slider-bg-color;
-    background-color: rgba($slider-bg-color, 0.5);
-}
-
-.video-js .vjs-volume-level,
-.video-js .vjs-play-progress,
-.video-js .vjs-slider-bar {
-    background: $primary-foreground-color;
-}
-
-.video-js .vjs-load-progress {
-    /* For IE8 we'll lighten the color */
-    background: lighten($slider-bg-color, 25%);
-    /* Otherwise we'll rely on stacked opacities */
-    background: rgba($slider-bg-color, 0.5);
-}
-
-.video-js .vjs-load-progress div {
-    /* For IE8 we'll lighten the color */
-    background: lighten($slider-bg-color, 50%);
-    /* Otherwise we'll rely on stacked opacities */
-    background: rgba($slider-bg-color, 0.75);
-}
-
 footer {
     display: block;
     width: 100%;
@@ -2804,4 +2767,5 @@ footer {
         }
     }
 }
+
 
