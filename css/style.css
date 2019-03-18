@@ -2203,8 +2203,16 @@ button {
   position: fixed;
   z-index: 9999;
   top: 0;
+  visibility: hidden;
+  opacity: 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.486); }
+  background: rgba(0, 0, 0, 0.486);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .main-player.show {
+    visibility: visible;
+    opacity: 1; }
   .main-player .video-wrapper.row {
     margin: 0 auto;
     width: 85%;

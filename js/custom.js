@@ -285,4 +285,14 @@ $(function () {
         "src": $("#playlist li").eq(0).attr("movieurl"),
         "poster": $("#playlist li").eq(0).attr("moviesposter")
     })
+});
+
+$('.play-btn').click(function () {
+    $('#popupvideo').toggleClass('show');
+    $(document).click(function (event) {
+        //if you click on anything except the modal itself or the "open modal" link, close the modal
+        if (!$(event.target).closest(".play-btn,.video-wrapper").length) {
+            $("body").find("#popupvideo").removeClass("show");
+        }
+    });
 })

@@ -2692,10 +2692,18 @@ $link_hover_color: #fff;
     position: fixed;
     z-index: 9999;
     top: 0;
+    visibility: hidden;
+    opacity: 0;
 
     text-align: center;
 
     background: rgba(0, 0, 0, 0.486);
+    transition: .5s;
+    
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
 
     .video-wrapper.row {
         margin: 0 auto;
