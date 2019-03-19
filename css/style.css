@@ -2300,7 +2300,7 @@ button {
           .course-content-section .course-content-wrapper .inner-section.tab-wrapper button:hover {
             background: #4e4e4e2c; }
           .course-content-section .course-content-wrapper .inner-section.tab-wrapper button.active {
-            background: #969696;
+            background: #474747;
             color: #fff; }
       .course-content-section .course-content-wrapper .inner-section.prepare .sidebar-box {
         max-height: 185px; }
@@ -2663,75 +2663,45 @@ button {
                 transition: .2s; }
                 .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row button:hover {
                   background: #969696; }
-          .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square fieldset,
-          .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square label {
-            margin: 0;
-            padding: 0; }
-          .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .notice {
-            float: right; }
-          .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating {
-            float: right;
-            width: 160px;
-            margin-top: -7px;
-            /***** CSS Magic to Highlight Stars on Hover *****/
-            /* hover previous stars in list */ }
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating {
-              border: none; }
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > input {
-              display: none; }
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > label:before {
-              margin: 5px;
-              font-size: 1.2em;
-              font-family: 'Font Awesome 5 Free';
-              display: inline-block;
-              content: "\f005";
-              font-weight: 900; }
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > .half:before {
-              content: "\f089";
-              position: absolute; }
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > label {
-              color: #ddd;
+            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main fieldset,
+            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main label {
+              margin: 0;
+              padding: 0; }
+            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .notice {
               float: right; }
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > input:checked ~ label,
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating:not(:checked) > label:hover,
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating:not(:checked) > label:hover ~ label {
-              color: #FFD700; }
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > input:checked + label:hover,
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > input:checked ~ label:hover,
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > label:hover ~ input:checked ~ label,
-            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .star-rating .rating > input:checked ~ label:hover ~ label {
-              color: #FFED85; }
-  .course-content-section .main-player {
-    justify-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    visibility: hidden;
-    opacity: 0;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.486);
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s; }
-    .course-content-section .main-player.show {
-      visibility: visible;
-      opacity: 1; }
-    .course-content-section .main-player .video-wrapper.row {
-      margin: 0 auto;
-      width: 85%;
-      height: 68%;
-      padding: 20px;
-      background: #000;
+            .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating {
+              float: right;
+              width: 160px;
+              margin-top: -7px;
+              /***** CSS Magic to Highlight Stars on Hover *****/
+              /* hover previous stars in list */ }
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating {
+                border: none; }
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input {
+                display: none; }
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > label:before {
+                margin: 5px;
+                font-size: 1.2em;
+                font-family: 'Font Awesome 5 Free';
+                display: inline-block;
+                content: "\f005";
+                font-weight: 900; }
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > .half:before {
+                content: "\f089";
+                position: absolute; }
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > label {
+                color: #ddd;
+                float: right; }
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label,
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating:not(:checked) > label:hover,
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating:not(:checked) > label:hover ~ label {
+                color: #FFD700; }
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked + label:hover,
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label:hover,
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > label:hover ~ input:checked ~ label,
+              .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label:hover ~ label {
+                color: #FFED85; }
+    .course-content-section .course-content-wrapper .main-player {
       justify-items: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2740,31 +2710,61 @@ button {
       -ms-flex-pack: center;
       justify-content: center;
       -ms-flex-line-pack: center;
-      align-content: center; }
-      .course-content-section .main-player .video-wrapper.row .canvas {
-        padding: 0; }
-        .course-content-section .main-player .video-wrapper.row .canvas video {
-          width: 100%;
-          background: #000; }
-      .course-content-section .main-player .video-wrapper.row .playlist {
-        height: 100%;
-        max-height: 100%;
-        overflow: scroll;
-        color: white;
+      align-content: center;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      visibility: hidden;
+      opacity: 0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.486);
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+      .course-content-section .course-content-wrapper .main-player.show {
+        visibility: visible;
+        opacity: 1; }
+      .course-content-section .course-content-wrapper .main-player .video-wrapper.row {
+        margin: 0 auto;
+        width: 85%;
+        height: 68%;
+        padding: 20px;
         background: #000;
-        text-align: left;
-        padding: 0; }
-        .course-content-section .main-player .video-wrapper.row .playlist ul {
-          margin: 1rem 0; }
-          .course-content-section .main-player .video-wrapper.row .playlist ul li {
-            padding: 10px 15px;
-            font-weight: 200; }
-            .course-content-section .main-player .video-wrapper.row .playlist ul li.title {
-              font-size: 18px;
-              font-weight: 500;
-              padding-left: 2rem; }
-            .course-content-section .main-player .video-wrapper.row .playlist ul li ol li.col-2 {
-              text-align: center; }
+        justify-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center; }
+        .course-content-section .course-content-wrapper .main-player .video-wrapper.row .canvas {
+          padding: 0; }
+          .course-content-section .course-content-wrapper .main-player .video-wrapper.row .canvas video {
+            width: 100%;
+            background: #000; }
+        .course-content-section .course-content-wrapper .main-player .video-wrapper.row .playlist {
+          height: 100%;
+          max-height: 100%;
+          overflow: scroll;
+          color: white;
+          background: #000;
+          text-align: left;
+          padding: 0; }
+          .course-content-section .course-content-wrapper .main-player .video-wrapper.row .playlist ul {
+            margin: 1rem 0; }
+            .course-content-section .course-content-wrapper .main-player .video-wrapper.row .playlist ul li {
+              padding: 10px 15px;
+              font-weight: 200; }
+              .course-content-section .course-content-wrapper .main-player .video-wrapper.row .playlist ul li.title {
+                font-size: 18px;
+                font-weight: 500;
+                padding-left: 2rem; }
+              .course-content-section .course-content-wrapper .main-player .video-wrapper.row .playlist ul li ol li.col-2 {
+                text-align: center; }
 
 footer {
   display: block;
