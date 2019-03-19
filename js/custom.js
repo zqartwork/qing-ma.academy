@@ -272,27 +272,40 @@ $(".read-more .button").click(function () {
     return false;
 
 });
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+};
 
-$(function () {
-    $("#playlist li").on("click", function () {
-        $("#videoarea").attr({
-            "src": $(this).attr("movieurl"),
-            "poster": "",
-            "autoplay": "autoplay"
-        })
-    })
-    $("#videoarea").attr({
-        "src": $("#playlist li").eq(0).attr("movieurl"),
-        "poster": $("#playlist li").eq(0).attr("moviesposter")
-    })
-});
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
-$('.play-btn').click(function () {
-    $('#popupvideo').toggleClass('show');
-    $(document).click(function (event) {
-        //if you click on anything except the modal itself or the "open modal" link, close the modal
-        if (!$(event.target).closest(".play-btn,.video-wrapper").length) {
-            $("body").find("#popupvideo").removeClass("show");
-        }
-    });
+$('#replybtn').click(function () {
+    $('#replySection')
+        .css('display', 'flex')
+        .animate({
+            opacity: 1
+        });
+    $('#replybtn').hide();
+})
+
+$('#exitbtn').click(function () {
+    $('#replySection')
+        .css('display', 'none')
+        .animate({
+            opacity: 0
+        });
+    $('#replybtn').hide(); $('#replybtn').css('display', 'inline-block')
+        .animate({
+            opacity: 1
+        });
 })
