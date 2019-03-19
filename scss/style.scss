@@ -3162,6 +3162,12 @@ $link_hover_color: #fff;
                         .chat-box {
 <<<<<<< HEAD
                             .cont {
+
+                                input.file {
+                                    border: none;
+                                    padding: 0;
+                                }
+
                                 textarea {
                                     width: 100%;
                                     font-size: 14px;
