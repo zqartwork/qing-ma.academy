@@ -27,7 +27,6 @@ $lines-to-show: 3;
 %en {
     font-family: $font-en;
 }
-        
 
 html,
 body {
@@ -45,9 +44,22 @@ a {
 }
 
 .col {
-    &-1 ,&-2 ,&-3 ,&-4 ,&-5 ,&-6 ,&-7 ,&-8 ,&-9 ,&-10 ,&-11 ,&-12{
+
+    &-1,
+    &-2,
+    &-3,
+    &-4,
+    &-5,
+    &-6,
+    &-7,
+    &-8,
+    &-9,
+    &-10,
+    &-11,
+    &-12 {
         padding: 0;
     }
+
     padding: 0;
 }
 
@@ -83,6 +95,7 @@ button {
     -moz-border-radius: 4px;
     border-radius: 4px
 }
+
 .show-610 {
     display: none;
 }
@@ -196,20 +209,23 @@ button {
     }
 }
 
-
 .padding-top {
     &-10 {
         padding-top: 10px;
     }
+
     &-20 {
         padding-top: 20px;
     }
+
     &-30 {
         padding-top: 30px;
     }
+
     &-40 {
         padding-top: 40px;
     }
+
     &-50 {
         padding-top: 50px;
     }
@@ -219,15 +235,19 @@ button {
     &-10 {
         margin-top: 10px;
     }
+
     &-20 {
         margin-top: 20px;
     }
+
     &-30 {
         margin-top: 30px;
     }
+
     &-40 {
         margin-top: 40px;
     }
+
     &-50 {
         margin-top: 50px;
     }
@@ -237,15 +257,19 @@ button {
     &-10 {
         padding-bottom: 10px;
     }
+
     &-20 {
         padding-bottom: 20px;
     }
+
     &-30 {
         padding-bottom: 30px;
     }
+
     &-40 {
         padding-bottom: 40px;
     }
+
     &-50 {
         padding-bottom: 50px;
     }
@@ -255,15 +279,19 @@ button {
     &-10 {
         margin-bottom: 10px;
     }
+
     &-20 {
         margin-bottom: 20px;
     }
+
     &-30 {
         margin-bottom: 30px;
     }
+
     &-40 {
         margin-bottom: 40px;
     }
+
     &-50 {
         margin-bottom: 50px;
     }
@@ -2199,6 +2227,7 @@ $link_hover_color: #fff;
         }
     }
 }
+
 .video-main-section {
     margin: 0 auto;
     width: 65%;
@@ -2237,6 +2266,7 @@ $link_hover_color: #fff;
         .cata {
             height: 30px;
             font-weight: 400;
+
             span {
                 cursor: pointer;
                 margin: 10px 10px 10px 0;
@@ -2348,13 +2378,10 @@ $link_hover_color: #fff;
         height: 700px;
         width: 25%;
         min-width: 375px;
-
         background-color: #fff;
-
         padding: 1rem 1rem 1rem 1rem;
         margin-right: -5rem;
         margin-top: 6rem;
-
         border-radius: 5px;
 
         &.is-sticky {
@@ -2498,16 +2525,16 @@ $link_hover_color: #fff;
                     position: relative;
                     overflow: hidden;
 
-                    .read-more { 
-                        position: absolute; 
-                        bottom: 0; 
+                    .read-more {
+                        position: absolute;
+                        bottom: 0;
                         left: 0;
-                        width: 100%; 
-                        text-align: center; 
-                        margin: 0; 
-                        padding: 20px 0; 
+                        width: 100%;
+                        text-align: center;
+                        margin: 0;
+                        padding: 20px 0;
                         font-weight: 800;
-    
+
                         a {
                             display: inline-block;
                             margin-top: 20px;
@@ -2517,12 +2544,15 @@ $link_hover_color: #fff;
                             border: 1px solid $font-dark;
                             padding: 5px 10px;
                         }
-                          
+
                         /* "transparent" only works here because == rgba(0,0,0,0) */
-                        background-image: linear-gradient(to bottom, transparent, #fff);
-                      }        
-                  }
-                    li {
+                        background-image: linear-gradient(to bottom,
+                        transparent,
+                        #fff);
+                    }
+                }
+
+                li {
                     margin-top: 3px;
 
                     i {
@@ -2542,15 +2572,14 @@ $link_hover_color: #fff;
     .course-content-wrapper {
         margin: 0 auto;
         width: 1150px;
-        
-        
+
         .teacher-info {
             width: 1150px;
             height: 100px;
             margin: 0 auto;
             font-size: 30px;
             color: $font-dark;
-            
+
             @media(max-width: 1235px) {
                 width: 950px;
             }
@@ -2563,19 +2592,15 @@ $link_hover_color: #fff;
                 &::before {
                     position: absolute;
                     content: '';
-
                     height: 140px;
                     width: 140px;
-
-    
-
                     background-size: cover;
                     background-position: center;
-
                     border-radius: 5px;
                     border: 3px solid $font-w;
                 }
             }
+
             .cont {
                 width: 500px;
                 padding-left: 10rem;
@@ -2585,7 +2610,7 @@ $link_hover_color: #fff;
                     font-weight: 600;
                     padding-top: .5rem;
                 }
-    
+
                 .car {
                     display: inline-block;
                     font-size: 18px;
@@ -2595,54 +2620,48 @@ $link_hover_color: #fff;
                         color: $font-bk;
                         opacity: .5;
                         margin-left: 15px;
-                        transition:.3s;
+                        transition: .3s;
 
                         &:hover {
                             opacity: 1;
                         }
                     }
                 }
-    
+
                 .about {
                     display: inline-block;
                     background: $font-gray;
-                    
                     border: none;
                     border-radius: 5px;
-                    
                     font-size: 15px;
                     color: $font-w;
-    
                     padding: 5px 15px;
-    
                     transition: .3s;
-    
-                    &:hover{
+
+                    &:hover {
                         background: $font-dark;
                     }
                 }
+
                 .btns {
                     display: inline-block;
                     position: relative;
                     margin-top: 5px;
-    
                     $L: 30px;
-    
-                    a{  
+
+                    a {
                         display: inline-block;
-    
                         font-size: 25px;
                         color: $font-gray;
-    
                         padding-top: 5px;
-                        &.ins, &.face, &.yt {
-    
+
+                        &.ins,
+                        &.face,
+                        &.yt {
                             height: $L;
                             width: $L;
-    
                             background-size: cover;
                             background-position: center;
-    
                             opacity: .5;
                             transition: .3s;
 
@@ -2650,40 +2669,38 @@ $link_hover_color: #fff;
                                 opacity: 1;
                             }
                         }
-                        &.ins{
+
+                        &.ins {
                             background-image: url(../img/icon/ins.png);
-                        } 
-                        &.face{
+                        }
+
+                        &.face {
                             background-image: url(../img/icon/face.png);
-                        } 
-                        &.yt{
+                        }
+
+                        &.yt {
                             background-image: url(../img/icon/yt.png);
                         }
                     }
-    
                 }
             }
-            
         }
 
         .tabcontent {
-            animation: fadeInDown 1s; 
+            animation: fadeInDown 1s;
         }
 
         // 所有區塊的預設值
         .inner-section {
             background: #fff;
             color: $font-dark;
-
             font-size: 16px;
             font-weight: 300;
             text-align: left;
-
             width: 68%;
             position: relative;
             margin-top: 2rem;
             padding: 15px 2rem;
-
             border-radius: 5px;
 
             .title {
@@ -2691,7 +2708,7 @@ $link_hover_color: #fff;
                 font-size: 25px;
                 margin-bottom: 10px;
             }
-            
+
             img {
                 width: 100%;
             }
@@ -2700,23 +2717,30 @@ $link_hover_color: #fff;
                 border-left: 5px solid #ffc240;
                 margin: 15px 0;
                 padding: 0px 20px;
-                p{
+
+                p {
                     font-size: .8em !important;
                 }
+
                 font-size: 18px;
                 font-weight: 500;
             }
-            
+
             p {
                 line-height: 1.8;
                 font-weight: 300;
             }
 
-            h1,h2,h3,h4,h5,h6 {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 margin-bottom: 16px;
                 margin-top: 40px;
                 padding-bottom: 8px;
-                border-bottom: 1px solid rgba(0,0,0,0.12);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
             }
 
             pre {
@@ -2733,7 +2757,7 @@ $link_hover_color: #fff;
                 color: $brown;
                 font-weight: 500;
                 transition: .3s;
-                
+
                 &:hover {
                     color: $on;
                 }
@@ -2744,18 +2768,19 @@ $link_hover_color: #fff;
                 font-size: 18px;
                 margin: 10px 0;
             }
-            
+
             .sidebar-box {
                 position: relative;
                 overflow: hidden;
-                .read-more { 
-                    position: absolute; 
-                    bottom: 0; 
+
+                .read-more {
+                    position: absolute;
+                    bottom: 0;
                     left: 0;
-                    width: 100%; 
-                    text-align: center; 
-                    margin: 0; 
-                    padding: 20px 0; 
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    padding: 20px 0;
 
                     a.button {
                         display: inline-block;
@@ -2767,40 +2792,38 @@ $link_hover_color: #fff;
                         padding: 3px 10px;
                         font-weight: 800;
                     }
-                      
+
                     /* "transparent" only works here because == rgba(0,0,0,0) */
-                    background-image: linear-gradient(to bottom, transparent, #fff);
-                  }
+                    background-image: linear-gradient(to bottom,
+                    transparent,
+                    #fff);
+                }
+
                 .sub-title {
                     font-weight: 600;
                 }
+
                 .inner {
                     padding: 10px 0;
                 }
-    
-              }
+            }
 
             // 最上方TAB按鈕
-            &.tab-wrapper{
-
-                justify-content: space-between; 
+            &.tab-wrapper {
+                justify-content: space-between;
                 background: none;
                 padding-right: 0;
                 padding-left: 0;
                 padding-bottom: 0;
 
                 button {
-                    padding: 10px 4rem; 
-                    
+                    padding: 10px 4rem;
                     background: #fff;
                     color: $font-dark;
                     font-weight: 500;
-
                     box-shadow: none;
                     border: none;
-                    
                     border-radius: 5px;
-
                     transition: .3s;
 
                     &:hover {
@@ -2812,8 +2835,6 @@ $link_hover_color: #fff;
                         color: $font-w;
                     }
                 }
-                
-
             }
 
             &.prepare .sidebar-box {
@@ -2826,6 +2847,7 @@ $link_hover_color: #fff;
 
             &.course-problem {
                 margin-bottom: 2.36rem;
+
                 .sidebar-box {
                     max-height: 200px;
                 }
@@ -2834,18 +2856,17 @@ $link_hover_color: #fff;
             &.qanda-wrapper {
                 padding: 15px 0;
                 background: none;
+
                 .qanda-square {
                     background: #fff;
                     border-radius: 5px;
-
                     padding: 2rem 1.5rem;
-
                     justify-content: flex-start;
                     align-content: flex-start;
-                    
+
                     .user__photo-wrapper {
                         text-align: center;
-                        
+
                         .user__photo {
                             margin: 0 auto;
                         }
@@ -2858,20 +2879,17 @@ $link_hover_color: #fff;
 
                     .reply-wrapper {
                         width: 100%;
-
                         justify-content: flex-end;
                         align-content: flex-end;
-
                     }
-                    
+
                     .chat-box {
                         justify-content: center;
-                        align-content: center; 
+                        align-content: center;
                         align-items: center;
                         justify-items: center;
-                        
-                        .tag {
 
+                        .tag {
                             span {
                                 margin-right: 10px;
                             }
@@ -2880,19 +2898,16 @@ $link_hover_color: #fff;
                                 font-weight: 500;
 
                                 &__teacher {
-                                    
                                     font-weight: 500;
                                     color: $font-w;
                                     background: $font-dark;
-
                                     padding: 3px 10px;
-
                                     border-radius: 15px;
                                 }
                             }
                         }
-                        
                     }
+
                     #replySection {
                         display: none;
                         opacity: 0;
@@ -2904,28 +2919,27 @@ $link_hover_color: #fff;
                                 font-weight: 300;
                                 padding: 5px 10px;
                                 color: $font-dark;
-    
                                 border-color: rgb(168, 168, 168);
                                 border-radius: 5px;
                             }
+
                             .btns.row {
                                 width: 100%;
-        
                                 justify-content: flex-end;
                                 align-content: flex-end;
                                 align-items: flex-end;
                                 justify-items: flex-end;
                                 text-align: right;
                                 vertical-align: middle;
-                                                                
+
                                 &.signin-btn {
                                     justify-content: flex-start;
                                     align-content: flex-start;
                                     align-items: flex-start;
                                     justify-items: flex-start;
-                                    
+
                                     button {
-                                         margin: 10px 0 0 0;
+                                        margin: 10px 0 0 0;
                                     }
                                 }
 
@@ -2941,10 +2955,9 @@ $link_hover_color: #fff;
                                 }
 
                                 i {
-                                    padding: 5px 5px 10px 5px ;
+                                    padding: 5px 5px 10px 5px;
                                     margin-right: 10px;
                                 }
-
 
                                 button {
                                     background: $bgColor;
@@ -2952,18 +2965,16 @@ $link_hover_color: #fff;
                                     border-radius: 5px;
                                     padding: 5px 0;
                                     margin-left: 10px;
-    
                                     transition: .2s;
-    
+
                                     &:hover {
                                         background: $font-gray;
                                     }
                                 }
                             }
                         }
-                        
-    
                     }
+
                     .replySection-main {
                         width: 100%;
 
@@ -2974,7 +2985,6 @@ $link_hover_color: #fff;
                                 font-weight: 300;
                                 padding: 5px 10px;
                                 color: $font-dark;
-    
                                 border-color: rgb(168, 168, 168);
                                 border-radius: 5px;
 
@@ -2983,26 +2993,27 @@ $link_hover_color: #fff;
                                     display: inline-block;
                                 }
                             }
+
                             .btns.row {
                                 width: 100%;
-        
                                 justify-content: flex-end;
                                 align-content: flex-end;
                                 align-items: flex-end;
                                 justify-items: flex-end;
                                 text-align: right;
                                 vertical-align: middle;
-                                
+
                                 &.signin-btn {
                                     justify-content: flex-start;
                                     align-content: flex-start;
                                     align-items: flex-start;
                                     justify-items: flex-start;
-                                    
+
                                     button {
-                                         margin: 10px 0 0 0;
+                                        margin: 10px 0 0 0;
                                     }
                                 }
+
                                 .code {
                                     padding: 5px;
                                     border-radius: 5px;
@@ -3015,7 +3026,7 @@ $link_hover_color: #fff;
                                 }
 
                                 i {
-                                    padding: 5px 5px 10px 5px ;
+                                    padding: 5px 5px 10px 5px;
                                     margin-right: 10px;
                                 }
 
@@ -3025,40 +3036,32 @@ $link_hover_color: #fff;
                                     border-radius: 5px;
                                     padding: 5px 0;
                                     margin-left: 10px;
-    
                                     transition: .2s;
-    
+
                                     &:hover {
                                         background: $font-gray;
                                     }
-                                    
                                 }
                             }
                         }
-                        
-    
                     }
-
                 }
             }
 
             &.rate-wrapper {
-
                 padding: 15px 0;
-
                 background: none;
+
                 .rate-square {
                     background: #fff;
                     border-radius: 5px;
-
                     padding: 2rem 1.5rem;
-
                     justify-content: flex-start;
                     align-content: flex-start;
-                    
+
                     .user__photo-wrapper {
                         text-align: center;
-                        
+
                         .user__photo {
                             margin: 0 auto;
                         }
@@ -3071,20 +3074,17 @@ $link_hover_color: #fff;
 
                     .rate-wrapper {
                         width: 100%;
-
                         justify-content: flex-end;
                         align-content: flex-end;
-
                     }
-                    
+
                     .chat-box {
                         justify-content: center;
-                        align-content: center; 
+                        align-content: center;
                         align-items: center;
                         justify-items: center;
-                        
-                        .tag {
 
+                        .tag {
                             span {
                                 margin-right: 10px;
                             }
@@ -3093,13 +3093,10 @@ $link_hover_color: #fff;
                                 font-weight: 500;
 
                                 &__teacher {
-                                    
                                     font-weight: 500;
                                     color: $font-w;
                                     background: $font-dark;
-
                                     padding: 3px 10px;
-
                                     border-radius: 15px;
                                 }
                             }
@@ -3110,16 +3107,16 @@ $link_hover_color: #fff;
                                     font-size: 16px;
                                     justify-content: flex-start;
                                     width: 100%;
-                    
+
                                     div {
                                         position: relative;
                                         display: inline-block;
                                         margin: 10px 0 0 0;
-                    
+
                                         .star-progress {
                                             position: relative;
                                             margin-right: 5px;
-                    
+
                                             &::before {
                                                 font-family: 'Font Awesome 5 Free';
                                                 content: '\f005';
@@ -3130,14 +3127,14 @@ $link_hover_color: #fff;
                                                 display: inline-block;
                                             }
                                         }
-                    
+
                                         .star-progress-filled {
                                             position: absolute;
                                             overflow: hidden;
                                             top: 0;
                                             left: 0;
                                             margin: 0;
-                    
+
                                             &::before {
                                                 font-family: 'Font Awesome 5 Free';
                                                 content: '\f005';
@@ -3150,19 +3147,15 @@ $link_hover_color: #fff;
                                         }
                                     }
                                 }
-                    
                             }
-
                         }
-                        
                     }
+
                     .ratesection-main {
                         width: 100%;
 
                         .chat-box {
-<<<<<<< HEAD
                             .cont {
-
                                 input.file {
                                     border: none;
                                     padding: 0;
@@ -3174,48 +3167,37 @@ $link_hover_color: #fff;
                                     font-weight: 300;
                                     padding: 5px 10px;
                                     color: $font-dark;
-        
                                     border-color: rgb(168, 168, 168);
                                     border-radius: 5px;
-=======
-                            .cont textarea {
-                                width: 100%;
-                                font-size: 14px;
-                                font-weight: 300;
-                                padding: 5px 10px;
-                                color: $font-dark;
->>>>>>> parent of ca50b4c... 分區最後一個部分
-    
-                                border-color: rgb(168, 168, 168);
-                                border-radius: 5px;
 
-                                &::placeholder {
-                                    color: lightgray;
-                                    display: inline-block;
+                                    &::placeholder {
+                                        color: lightgray;
+                                        display: inline-block;
+                                    }
                                 }
+
                             }
+
                             .btns.row {
                                 width: 100%;
-        
                                 justify-content: flex-end;
                                 align-content: flex-end;
                                 align-items: flex-end;
                                 justify-items: flex-end;
                                 text-align: right;
                                 vertical-align: middle;
-                                                                
+
                                 &.signin-btn {
                                     justify-content: flex-start;
                                     align-content: flex-start;
                                     align-items: flex-start;
                                     justify-items: flex-start;
-                                    
+
                                     button {
-                                         margin: 10px 0 0 0;
+                                        margin: 10px 0 0 0;
                                     }
                                 }
 
-                                
                                 .code {
                                     padding: 5px;
                                     border-radius: 5px;
@@ -3228,7 +3210,7 @@ $link_hover_color: #fff;
                                 }
 
                                 i {
-                                    padding: 5px 5px 10px 5px ;
+                                    padding: 5px 5px 10px 5px;
                                     margin-right: 10px;
                                 }
 
@@ -3238,145 +3220,75 @@ $link_hover_color: #fff;
                                     border-radius: 5px;
                                     padding: 5px 0;
                                     margin-left: 10px;
-    
                                     transition: .2s;
-    
+
                                     &:hover {
                                         background: $font-gray;
                                     }
                                 }
                             }
                         }
-                        
-    
                     }
 
-                }
-                fieldset, label { margin: 0; padding: 0; }
-                .notice {
-                    float: right;                    
-                }
-                .star-rating {
-                    float: right;
-                    width: 160px;
-                    margin-top: -7px;
-
-                    .rating { 
-                        border: none;
-                    }
-                    
-                    .rating > input { display: none; } 
-                    .rating > label:before { 
-                        margin: 5px;
-                        font-size: 1.2em;
-                        font-family: 'Font Awesome 5 Free';
-                        display: inline-block;
-                        content: "\f005";
-                        font-weight: 900;
-                    }
-                    
-                    .rating > .half:before { 
-                        content: "\f089";
-                        position: absolute;
-                    }
-                    
-                    .rating > label { 
-                        color: #ddd; 
-                    float: right; 
-                    }
-                    
-                    /***** CSS Magic to Highlight Stars on Hover *****/
-                    
-                    .rating > input:checked ~ label, /* show gold star when clicked */
-                    .rating:not(:checked) > label:hover, /* hover current star */
-                    .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-                    
-                    .rating > input:checked + label:hover, /* hover current star when changing rating */
-                    .rating > input:checked ~ label:hover,
-                    .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-                    .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
-                }
-            }
-        }
-    }
-}
-
-// 正式課程影片播放
-
-.main-player {
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    visibility: hidden;
-    opacity: 0;
-
-    text-align: center;
-
-    background: rgba(0, 0, 0, 0.486);
-    transition: .5s;
-    
-    &.show {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .video-wrapper.row {
-        margin: 0 auto;
-        width: 85%;
-        height: 68%;
-        padding: 20px;
-        
-        background: #000;
-
-        justify-items: center;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-
-        .canvas {
-            padding: 0;
-            video {
-                width: 100%;
-                background: #000;
-            }
-        }
-        .playlist {
-            height: 100%;
-            max-height: 100%;
-            overflow: scroll;
-            color: white;
-            background: #000;
-
-            text-align: left;
-
-            padding: 0;
-
-            ul{
-                // background: red;
-                margin: 1rem 0;
-                
-                li{
-                    // background: pink;
-                    // border: 1px solid red;
-                    padding: 10px 15px;
-                    font-weight: 200;
-
-                    &.title {
-                        font-size: 18px;
-                        font-weight: 500;
-                        padding-left: 2rem;
+                    fieldset,
+                    label {
+                        margin: 0;
+                        padding: 0;
                     }
 
-                    ol {
-                        li.col-2{
-                            text-align: center;
+                    .notice {
+                        float: right;
+                    }
+
+                    .star-rating {
+                        float: right;
+                        width: 160px;
+                        margin-top: -7px;
+
+                        .rating {
+                            border: none;
+                        }
+
+                        .rating>input {
+                            display: none;
+                        }
+
+                        .rating>label:before {
+                            margin: 5px;
+                            font-size: 1.2em;
+                            font-family: 'Font Awesome 5 Free';
+                            display: inline-block;
+                            content: "\f005";
+                            font-weight: 900;
+                        }
+
+                        .rating>.half:before {
+                            content: "\f089";
+                            position: absolute;
+                        }
+
+                        .rating>label {
+                            color: #ddd;
+                            float: right;
+                        }
+
+                        /***** CSS Magic to Highlight Stars on Hover *****/
+                        .rating>input:checked~label,
+                        /* show gold star when clicked */
+                        .rating:not(:checked)>label:hover,
+                        /* hover current star */
+                        .rating:not(:checked)>label:hover~label {
+                            color: #FFD700;
+                        }
+
+                        /* hover previous stars in list */
+                        .rating>input:checked+label:hover,
+                        /* hover current star when changing rating */
+                        .rating>input:checked~label:hover,
+                        .rating>label:hover~input:checked~label,
+                        /* lighten current selection */
+                        .rating>input:checked~label:hover~label {
+                            color: #FFED85;
                         }
                     }
                 }
@@ -3384,6 +3296,83 @@ $link_hover_color: #fff;
         }
     }
 
+    // 正式課程影片播放
+    .main-player {
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.486);
+        transition: .5s;
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .video-wrapper.row {
+            margin: 0 auto;
+            width: 85%;
+            height: 68%;
+            padding: 20px;
+            background: #000;
+            justify-items: center;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+
+            .canvas {
+                padding: 0;
+
+                video {
+                    width: 100%;
+                    background: #000;
+                }
+            }
+
+            .playlist {
+                height: 100%;
+                max-height: 100%;
+                overflow: scroll;
+                color: white;
+                background: #000;
+                text-align: left;
+                padding: 0;
+
+                ul {
+                    // background: red;
+                    margin: 1rem 0;
+
+                    li {
+                        // background: pink;
+                        // border: 1px solid red;
+                        padding: 10px 15px;
+                        font-weight: 200;
+
+                        &.title {
+                            font-size: 18px;
+                            font-weight: 500;
+                            padding-left: 2rem;
+                        }
+
+                        ol {
+                            li.col-2 {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer {
@@ -3443,5 +3432,3 @@ footer {
         }
     }
 }
-
-
