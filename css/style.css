@@ -2598,9 +2598,6 @@ button {
               .course-content-section .course-content-wrapper .inner-section.homework-wrapper .homework-square .homeworksection-main input::placeholder {
                 font-size: 15px;
                 color: lightgray; }
-            .course-content-section .course-content-wrapper .inner-section.homework-wrapper .homework-square .homeworksection-main .chat-box .cont input.file {
-              border: none;
-              padding: 0; }
             .course-content-section .course-content-wrapper .inner-section.homework-wrapper .homework-square .homeworksection-main .chat-box .cont textarea {
               width: 100%;
               font-size: 14px;
