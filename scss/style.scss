@@ -2861,10 +2861,6 @@ $link_hover_color: #fff;
 
                         justify-content: flex-end;
                         align-content: flex-end;
-                        
-                        .reply{
-                            cursor: pointer;
-                        }
 
                     }
                     
@@ -3046,12 +3042,12 @@ $link_hover_color: #fff;
                 }
             }
 
-            &.homework-wrapper {
+            &.rate-wrapper {
 
                 padding: 15px 0;
 
                 background: none;
-                .homework-square {
+                .rate-square {
                     background: #fff;
                     border-radius: 5px;
 
@@ -3073,7 +3069,7 @@ $link_hover_color: #fff;
                         margin: 2rem 0;
                     }
 
-                    .homework-wrapper {
+                    .rate-wrapper {
                         width: 100%;
 
                         justify-content: flex-end;
@@ -3160,20 +3156,11 @@ $link_hover_color: #fff;
                         }
                         
                     }
-                    .homeworksection-main {
+                    .ratesection-main {
                         width: 100%;
 
-                        input {
-                            padding: 5px;
-                            border-radius: 5px;
-                            border: 1px solid $font-gray;
-
-                            &::placeholder {
-                                font-size: 15px;
-                                color: lightgray;
-                            }
-                        }
                         .chat-box {
+<<<<<<< HEAD
                             .cont {
                                 textarea {
                                     width: 100%;
@@ -3184,14 +3171,23 @@ $link_hover_color: #fff;
         
                                     border-color: rgb(168, 168, 168);
                                     border-radius: 5px;
+=======
+                            .cont textarea {
+                                width: 100%;
+                                font-size: 14px;
+                                font-weight: 300;
+                                padding: 5px 10px;
+                                color: $font-dark;
+>>>>>>> parent of ca50b4c... 分區最後一個部分
     
-                                    &::placeholder {
-                                        color: lightgray;
-                                        display: inline-block;
-                                    }
+                                border-color: rgb(168, 168, 168);
+                                border-radius: 5px;
+
+                                &::placeholder {
+                                    color: lightgray;
+                                    display: inline-block;
                                 }
                             }
-                            
                             .btns.row {
                                 width: 100%;
         
