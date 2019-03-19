@@ -2861,6 +2861,10 @@ $link_hover_color: #fff;
 
                         justify-content: flex-end;
                         align-content: flex-end;
+                        
+                        .reply{
+                            cursor: pointer;
+                        }
 
                     }
                     
@@ -3042,12 +3046,12 @@ $link_hover_color: #fff;
                 }
             }
 
-            &.rate-wrapper {
+            &.homework-wrapper {
 
                 padding: 15px 0;
 
                 background: none;
-                .rate-square {
+                .homework-square {
                     background: #fff;
                     border-radius: 5px;
 
@@ -3069,7 +3073,7 @@ $link_hover_color: #fff;
                         margin: 2rem 0;
                     }
 
-                    .rate-wrapper {
+                    .homework-wrapper {
                         width: 100%;
 
                         justify-content: flex-end;
@@ -3156,25 +3160,44 @@ $link_hover_color: #fff;
                         }
                         
                     }
-                    .ratesection-main {
+                    .homeworksection-main {
                         width: 100%;
 
-                        .chat-box {
-                            .cont textarea {
-                                width: 100%;
-                                font-size: 14px;
-                                font-weight: 300;
-                                padding: 5px 10px;
-                                color: $font-dark;
-    
-                                border-color: rgb(168, 168, 168);
-                                border-radius: 5px;
+                        input {
+                            padding: 5px;
+                            border-radius: 5px;
+                            border: 1px solid $font-gray;
 
-                                &::placeholder {
-                                    color: lightgray;
-                                    display: inline-block;
+                            &::placeholder {
+                                font-size: 15px;
+                                color: lightgray;
+                            }
+                        }
+                        .chat-box {
+                            .cont {
+
+                                input.file {
+                                    border: none;
+                                    padding: 0;
+                                }
+
+                                textarea {
+                                    width: 100%;
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                    padding: 5px 10px;
+                                    color: $font-dark;
+        
+                                    border-color: rgb(168, 168, 168);
+                                    border-radius: 5px;
+    
+                                    &::placeholder {
+                                        color: lightgray;
+                                        display: inline-block;
+                                    }
                                 }
                             }
+                            
                             .btns.row {
                                 width: 100%;
         
