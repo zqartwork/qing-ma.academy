@@ -444,20 +444,10 @@
                                 <div class="left-part col-5 ">
                                     <a style="cursor:pointer;">
                                         <div class="video-thumb-md">
-                                            <div class="video-poster">
-                                                <style>
-                                                    .video-poster::before {
-                                                        background-image: url(../img/lecture/001.jpg);
-                                                    }
-                                                </style>
-                                                <div class="play-btn">
-                                                    <span class="test"><i class="fas fa-eye"></i> 課程預覽</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="right-part col-7">
+                                <div class="right-part col-12">
                                     <div class="panel-wrapper">
                                         <div class="panel-header">
                                             <span class="title">美食攝影師：配色、擺盤、光影的視覺饗宴</span>
@@ -520,15 +510,16 @@
                         <!-- 主要按鈕 -->
                         <div class="tab-wrapper row inner-section">
                             <button class="tablinks" onclick="openTab(event, 'Part1')">課程資訊</button>
-                            <button class="tablinks en" onclick="openTab(event, 'Part2')">Q & A</button>
+                            <button class="tablinks en" onclick="openTab(event, 'Part2')" id="defaultOpen">Q &
+                                A</button>
                             <button class="tablinks" onclick="openTab(event, 'Part3')">課程評價</button>
-                            <button class="tablinks" onclick="openTab(event, 'Part4')" id="defaultOpen">作業區</button>
+                            <button class="tablinks" onclick="openTab(event, 'Part4')">作業區</button>
                         </div>
 
                         <!-- 第一部分 -->
                         <div id="Part1" class="tabcontent">
                             <div class="prepare inner-section">
-                                <div class="title">課前資訊 ─</div>
+                                <div class="title">課前資訊</div>
                                 <div class="sidebar-box">
                                     <div class="cont box-inner">
                                         <ul>
@@ -578,7 +569,7 @@
                             <div class="course-content inner-section">
                                 <div class="sidebar-box">
                                     <div class="cont box-inner">
-                                        <div class="title">課程簡介 ─</div>
+                                        <div class="title">課程簡介</div>
                                         <img src="https://hahow.in/images/5bd198f3669f6d001e39875a" alt="">
                                         <blockquote>為什麼你一定要學會手機攝影？</blockquote>
                                         <h1>這裡是H1的樣子</h1>
@@ -614,7 +605,7 @@
                             <div class="course-problem inner-section">
                                 <div class="sidebar-box">
                                     <div class="cont box-inner">
-                                        <div class="title">常見問題 ─</div>
+                                        <div class="title">常見問題 </div>
                                         <ul>
                                             <li class="Q">Q: 請問在哪裡上課？上課時間？</li>
                                             <li class="A">青馬影藝學院 裡面的所有課程都是『線上課程』喔！隨時隨地都可以透過手機、平板、與電腦在 青馬影藝學院
@@ -632,186 +623,86 @@
 
                         </div>
                         <div id="Part2" class="tabcontent">
-                            <div class="qanda-wrapper inner-section">
-                                <div class="title">Q & A 問答區 ─</div>
-                                <ul>
-                                    <!-- 會員主要留言區塊 - 未登入 -->
-                                    <!-- <li class="qanda-square row margin-bottom-10">
-        
-                                        <div class="col-2 user__photo-wrapper">
-                                            <a href="personal-info.html" class="user__photo user__photo-70" style="background-image: url(img/profile/portrait-006.jpg)"></a>
+                            <div class="qanda ">
+                                <div class="title"> <span> Q & A 問答區 </span> </div>
+                                <!-- 會員主要留言區塊 - 未登入 -->
+                                <!-- 會員主要留言區塊 - 已登入 -->
+                                <div class="qanda-square margin-bottom-10 inner-section">
+                                    <div class="main-qanda">
+                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                            style="background-image: url(img/profile/portrait-005.jpg)">
                                         </div>
-                                        <div class="replySection-main col-10">
-                                            <div class="chat-box ">
-                                                <ul>
-                                                    <li class="tag">
-                                                        <span class="name">這裡是會員名稱</span>
-                                                    </li>
-                                                    <li class="row btns signin-btn">
-                                                        <button type="submit" class="col-3 ">請先登入會員</button>
-                                                    </li>
-                                                </ul>
+                                        <div class="inner-wrapper">
+                                            <div class="top-text">
+                                                <span class="name">我是會員名稱</span>
+                                            </div>
+                                            <div class="bot-text">
+                                                <textarea name="" id="" cols="50" rows="3"
+                                                    placeholder="請在這裡輸入想回覆的答案"></textarea>
+                                            </div>
+                                            <div class="btns">
+                                                <button type="submit"> 送出 </button>
+                                                <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
+                                                <span class="refresh"><i class="fas fa-sync-alt"></i></span>
+                                                <input type="text" placeholder="請輸入驗證碼" class="code">
                                             </div>
                                         </div>
-                                    </li> -->
+                                    </div>
+                                </div>
 
-                                    <!-- 會員主要留言區塊 - 已登入 -->
-                                    <li class="qanda-square row margin-bottom-10">
-
-                                        <div class="col-2 user__photo-wrapper">
-                                            <a href="personal-info.html" class="user__photo user__photo-70"
-                                                style="background-image: url(img/profile/portrait-006.jpg)"></a>
+                                <div class="qanda-square margin-bottom-10 inner-section">
+                                    <div>
+                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                            style="background-image: url(img/profile/portrait-003.jpg)">
                                         </div>
-                                        <div class="replySection-main col-10">
-                                            <div class="chat-box ">
-                                                <ul>
-                                                    <li class="tag">
-                                                        <span class="name">這裡是會員名稱</span>
-                                                    </li>
-                                                    <li class="cont padding-top-10 padding-bottom-10">
-                                                        <textarea name="" id="" cols="50" rows="3"
-                                                            placeholder="請在這裡輸入您的問題。例如：這個（課程軟體）版本可以嗎？"></textarea>
-                                                    </li>
-                                                    <li class="row btns">
-                                                        <input type="text" class="col-3 code" placeholder="請輸入驗證碼">
-                                                        <i class="fas fa-sync-alt"></i>
-                                                        <img src="img/icon/captcha.ashx.gif" alt="" class="col-3">
-                                                        <button type="submit" class="col-2">送出</button>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!-- 別人留言區塊 -->
-                                    <li class="qanda-square row margin-bottom-10">
-                                        <!-- 頭像 -->
-                                        <div class="col user__photo-wrapper row">
-                                            <a href="personal-info.html" class="user__photo user__photo-70"
-                                                style="background-image: url(img/profile/portrait-001.jpg)"></a>
-                                        </div>
-                                        <!-- 主要留言 -->
-                                        <div class="chat-box col-10">
-                                            <ul class="col-12 padding-bottom-10">
-                                                <!-- 主要留言標示 -->
-                                                <li class="tag">
-                                                    <span class="name">這裡是會員名稱</span>
-                                                    <span class="date">2019-03-19</span>
+                                        <div class="inner-wrapper">
+                                            <div class="top-text">
+                                                <span class="name">這裡是我的會員名稱</span>
+                                                <span class="time">2019-03-20</span>
+                                                <span class="like">
                                                     <a href="">
-                                                        <span class="like">
-                                                            <i class="far fa-heart"></i>
-                                                            <span class="num">10</span>
-                                                        </span>
+                                                        <i class="far fa-heart"></i><span class="num">10</span>
                                                     </a>
-                                                </li>
-                                                <!-- 主要留言內容 -->
-                                                <li class="cont padding-top-10">
-                                                    <p>這裡是我想提出的問題，請問您可以解答我嗎？</p>
-                                                </li>
-                                            </ul>
-                                            <!-- 次要留言 -->
-                                            <div class="col-12 row margin-top-20">
-                                                <!-- 次要頭像 -->
-                                                <div class="col-2 user__photo-wrapper">
-                                                    <a href="personal-info.html" target="__blank"
-                                                        class="user__photo user__photo-50"
-                                                        style="background-image: url(img/profile/portrait-002.jpg)"></a>
-                                                </div>
-                                                <!-- 次要留言內容 -->
-                                                <div class="col-10 chat-box">
-                                                    <ul>
-                                                        <!-- 次要留言標示 -->
-                                                        <li class="tag">
-                                                            <span class="name">這裡是會員名稱</span>
-                                                            <span class="date">2019-03-19</span>
-                                                            <a href="">
-                                                                <span class="like">
-                                                                    <i class="far fa-heart"></i>
-                                                                    <span class="num"></span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <!-- 次要留言內容 -->
-                                                        <li class="cont  padding-top-10">
-                                                            <p>這裡是我提出的回答，希望您滿意。</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
+                                                </span>
                                             </div>
-                                            <!-- 老師留言 -->
-                                            <div class="col-12 row margin-top-20">
-                                                <!-- 次要頭像 -->
-                                                <div class="col-2 user__photo-wrapper">
-                                                    <a href="personal-info.html" target="__blank"
-                                                        class="user__photo user__photo-50"
-                                                        style="background-image: url(img/profile/portrait-002.jpg)"></a>
-                                                </div>
-                                                <!-- 次要留言內容 -->
-                                                <div class="col-10 chat-box">
-                                                    <ul>
-                                                        <!-- 次要留言標示 -->
-                                                        <li class="tag">
-                                                            <span class="name__teacher">這裡是講師名稱</span>
-                                                            <span class="date">2019-03-19</span>
-                                                            <a href="">
-                                                                <span class="like">
-                                                                    <i class="far fa-heart"></i>
-                                                                    <span class="num"></span>
-                                                                </span>
-                                                            </a>
-                                                        </li>
-                                                        <!-- 次要留言內容 -->
-                                                        <li class="cont  padding-top-10">
-                                                            <p>這裡是我提出的回答，希望您滿意。</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
+                                            <div class="bot-text">
+                                                <p>這裡是我想問的問題，請問您能告訴我解答嗎？購買這堂課能夠擁有什麼樣的權利或未來呢？有什麼更值得我相信的論點？</p>
                                             </div>
                                         </div>
-                                        <!-- 分隔線 -->
-                                        <div class="col-12 hr"></div>
-
-                                        <!-- 會員回答別人留言區塊 -->
-                                        <div class="col-12 row replySection" id="replySection">
-                                            <div class="col-2 user__photo-wrapper">
-                                                <a href="" class="user__photo user__photo-70"
-                                                    style="background-image: url(img/profile/portrait-006.jpg)"></a>
+                                        <div class="hr"></div>
+                                        <div id="reply">
+                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                                style="background-image: url(img/profile/portrait-005.jpg)">
                                             </div>
-                                            <div class="col-10 chat-box padding-bottom-10">
-                                                <ul>
-                                                    <li class="tag">
-                                                        <span class="name">這裡是會員名稱</span>
-                                                    </li>
-                                                    <li class="cont padding-top-10 padding-bottom-10">
-                                                        <textarea name="" id="" cols="50" rows="3"></textarea>
-                                                    </li>
-                                                    <li class="row btns">
-                                                        <input type="text" class="col-3 code" placeholder="請輸入驗證碼">
-                                                        <i class="fas fa-sync-alt"></i>
-                                                        <img src="img/icon/captcha.ashx.gif" alt="" class="col-3">
-
-                                                        <button type="cancel" class="col-2" id="exitbtn">取消</button>
-                                                        <button type="submit" class="col-2">送出</button>
-
-                                                    </li>
-
-                                                </ul>
+                                            <div class="inner-wrapper">
+                                                <div class="top-text">
+                                                    <span class="name">我是會員名稱</span>
+                                                </div>
+                                                <div class="bot-text">
+                                                    <textarea name="" id="" cols="50" rows="3"
+                                                        placeholder="請在這裡輸入想回覆的答案"></textarea>
+                                                </div>
+                                                <div class="btns">
+                                                    <button type="submit"> 送出 </button>
+                                                    <button type="submit" id="exitbtn"> 取消 </button>
+                                                    <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
+                                                    <span class="refresh"><i class="fas fa-sync-alt"></i></span>
+                                                    <input type="text" placeholder="請輸入驗證碼" class="code">
+                                                </div>
                                             </div>
 
                                         </div>
-
-                                        <div class="reply-wrapper row">
-                                            <a class="reply col-2" id="replybtn"> <i class="fas fa-reply"></i> 回覆留言</a>
+                                        <div class="reply-wrapper">
+                                            <a id="reply-btn"><i class="fas fa-reply"></i> 回覆問題</a>
                                         </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
+                                <!-- 別人留言區塊 -->
                             </div>
                         </div>
                         <div id="Part3" class="tabcontent">
                             <div class="rate-wrapper inner-section">
-                                <div class="title">課程評價 ─</div>
+                                <div class="title">課程評價 </div>
                                 <ul>
                                     <!-- 會員主要評價區塊 -->
                                     <li class="rate-square row margin-bottom-10">
@@ -937,7 +828,7 @@
                         </div>
                         <div id="Part4" class="tabcontent">
                             <div class="homework-wrapper inner-section">
-                                <div class="title">作業區 ─</div>
+                                <div class="title">作業區 </div>
                                 <ul>
                                     <!-- 會員主要評價區塊 - 未登入 -->
                                     <!-- <li class="rate-square row margin-bottom-10">

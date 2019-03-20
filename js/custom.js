@@ -291,22 +291,24 @@ function openTab(evt, tabName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-$('#replybtn').click(function () {
-    $('#replySection')
-        .css('display', 'flex')
+$('#reply-btn').click(function () {
+    $('#reply')
+        .css('display', 'block')
         .animate({
             opacity: 1
         });
-    $('#replybtn').hide();
+    $('#reply-btn, .reply-wrapper').hide();
 })
 
 $('#exitbtn').click(function () {
-    $('#replySection')
+    $('#reply')
         .css('display', 'none')
         .animate({
             opacity: 0
         });
-    $('#replybtn').hide(); $('#replybtn').css('display', 'inline-block')
+    $('#reply-btn').hide();
+    $('#reply-btn, .reply-wrapper')
+        .css('display', 'inherit')
         .animate({
             opacity: 1
         });

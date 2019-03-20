@@ -1953,8 +1953,9 @@ $link_hover_color: #fff;
             max-width: 990px;
         }
         @media(max-width: 1024px) {
-            min-width: 768px;
+            max-width: 90%;
         }
+        
 
         .left-part, .right-part {
             float: left;
@@ -1991,6 +1992,9 @@ $link_hover_color: #fff;
                 font-size: 32px;
                 font-weight: 500;
                 margin-bottom: 10px;
+
+                max-height: 48px;
+                overflow: hidden;
             }
             .cont {
                 color: lightgray;
@@ -2071,9 +2075,6 @@ $link_hover_color: #fff;
             margin-top: 6rem;
             border-radius: 5px;
 
-            @media(max-width: 1024px) {
-                visibility: hidden;
-            }
             .video-thumb {
                 position: relative;
                 height: 200px;
@@ -2277,6 +2278,19 @@ $link_hover_color: #fff;
                 max-width: 90%;
             }
 
+            @media(max-width: 700px) {
+                max-width: 95%;
+                padding: 0 15px;
+            }
+
+            @media(max-width: 675px) {
+                max-width: 100%;
+            }
+
+            @media (max-width: 425px) {
+                padding: 0;
+            }
+
             .teacher-info {
                 height: 100px;
                 font-size: 30px;
@@ -2382,8 +2396,13 @@ $link_hover_color: #fff;
                 width: 100%;
                 position: relative;
                 margin-top: 1rem;
-                padding: 15px 2rem;
+                padding: 1rem 2rem;
                 border-radius: 5px;
+
+                @media (max-width: 425px) {
+                    border-radius: 0 0 0 0;
+                }
+
                 .title {
                     font-weight: 600;
                     font-size: 25px;
@@ -2478,6 +2497,10 @@ $link_hover_color: #fff;
                     padding-right: 0;
                     padding-left: 0;
                     padding-bottom: 0;
+                    @media (max-width: 425px) {
+                        margin-top: 0;
+                        border-radius: 0 0 0 0;
+                    }
 
                     button {
                         padding: 10px;
@@ -2491,10 +2514,16 @@ $link_hover_color: #fff;
 
                         &:first-child {
                             border-radius: 5px 0px 0px 5px;
+                            @media (max-width: 425px) {
+                                border-radius: 0 0 0 0;
+                            }
                         }
 
                         &:last-child {
                             border-radius: 0px 5px 5px 0px;
+                            @media (max-width: 425px) {
+                                border-radius: 0 0 0 0;
+                            }
                         }
 
                         &:hover {
@@ -2512,6 +2541,10 @@ $link_hover_color: #fff;
                 &.course-content .sidebar-box {
                     max-height: 500px;
                 }
+
+
+                //
+                //有待修改
                 &.course-problem {
                     margin-bottom: 2.36rem;
                     .sidebar-box {
@@ -2521,23 +2554,58 @@ $link_hover_color: #fff;
                 &.qanda-wrapper {
                     padding: 15px 0;
                     background: none;
-                    .qanda-square.row {
 
-                        flex-wrap: nowrap;
-
+                    .qanda-square {
                         background: #fff;
                         border-radius: 5px;
-                        padding: 2rem 1.5rem;
-                        justify-content: flex-start;
-                        align-content: flex-start;
+                        padding: 2rem 0;
 
-                        .user__photo-wrapper {
-                            text-align: center;
+                        @media (max-width: 420px) {
+                            border-radius: 0px;
 
-                            .user__photo {
-                                margin: 0 auto;
+                        }
+
+                        .main-container {
+                            width: 100%;
+
+                            .left-part, .right-part {
+                                display: inline-block;
+                            }
+
+                            .left-part {
+
+                                height: 100%;
+                                width: 20%;
+
+                                .user__photo-wrapper {
+                                    position: relative;
+                                    top: -5rem;
+                                    text-align: center;
+                                    min-width: 100px;
+                                    @media (max-width: 525px) {
+                                        top: -6rem;
+                                        left: -1rem;
+                                    }
+        
+                                    .user__photo {
+                                        margin: 0 auto;
+                                        @media (max-width: 675px) {
+                                            width: 60px;
+                                            height: 60px;
+                                        }
+                                        @media (max-width: 525px) {
+                                            width: 55px;
+                                            height: 55px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .right-part {
+                                width: 70%;
                             }
                         }
+                        
                         .hr {
                             border-bottom: 1px solid lightgray;
                             margin: 2rem 0;
@@ -2900,6 +2968,219 @@ $link_hover_color: #fff;
                 }
             
             }
+            .qanda {
+
+                margin-bottom: 1rem;
+
+                .title{
+                    color: $font-dark;
+                    font-weight: 600;
+                    font-size: 25px;
+                    margin-top: 1rem;
+                    margin-left: 2rem;
+                }
+
+                .qanda-square {
+
+                    padding: 2rem 2rem;
+
+                    .main-qanda {
+                        padding-top: 0rem;
+                        padding-bottom: 1rem;
+
+                        textarea, input {
+                            width: 100%;
+                            font-size: 14px;
+                            font-weight: 300;
+                            padding: 5px 10px;
+                            color: $font-dark;
+
+                            text-decoration: none;
+                            box-decoration: none;
+                            box-shadow: none;
+
+                            border-width: 1px;
+                            border-color: rgb(168, 168, 168);
+                            border-radius: 5px;
+                            border-style: solid;
+
+                            &::placeholder {
+                                color: lightgray;
+                                display: inline-block;
+                            }
+                        }
+
+                        
+                        .btns {
+                            width: 100%;
+                            margin-top: .7rem;
+
+                            .code {
+                                padding: 5px;
+                                border-radius: 5px;
+                                border: 1px solid $font-gray;
+                                &::placeholder {
+                                    font-size: 15px;
+                                    color: lightgray;
+                                }
+                            }
+
+                            i {
+                                cursor: pointer;
+                                padding: 8px 5px 0px 5px;
+                                margin-right: 10px;
+                                float: right;
+                            }
+
+                            button {
+                                float: right;
+                                background: $bgColor;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 5px 15px;
+                                margin-left: 10px;
+                                transition: .2s;
+                                &:hover {
+                                    background: $font-gray;
+                                }
+                            }
+
+                            .code-img{
+                                float: right;
+                                img{
+                                    height: 34px;
+                                    width: auto;
+                                }
+                            }
+
+                            input.code {
+                                width: 20%;
+                                float: right;
+                            }
+                        }
+                    }
+
+
+                    .qa-pic{
+
+                        position: absolute;
+                        z-index: 1;
+
+                    }
+
+                    .inner-wrapper {
+
+                        margin-bottom: 2rem;
+
+                        .top-text{
+
+                            padding-left: 5rem;
+
+                            span {
+                                margin-right: 10px;
+                            }
+                        }
+                        .bot-text {
+
+                            padding-left: 5rem;
+                            padding-top: 1rem;
+
+                        }
+                        
+                    }
+
+                    .hr {
+                        border-top: 1px solid lightgray;
+                    }
+
+                    #reply {
+                        padding-top: 2rem;
+                        padding-bottom: 1rem;
+                        display: none;
+
+                        textarea, input {
+                            width: 100%;
+                            font-size: 14px;
+                            font-weight: 300;
+                            padding: 5px 10px;
+                            color: $font-dark;
+
+                            text-decoration: none;
+                            box-decoration: none;
+                            box-shadow: none;
+
+                            border-width: 1px;
+                            border-color: rgb(168, 168, 168);
+                            border-radius: 5px;
+                            border-style: solid;
+
+                            &::placeholder {
+                                color: lightgray;
+                                display: inline-block;
+                            }
+                        }
+
+                        
+                        .btns {
+                            width: 100%;
+                            margin-top: .7rem;
+
+                            .code {
+                                padding: 5px;
+                                border-radius: 5px;
+                                border: 1px solid $font-gray;
+                                &::placeholder {
+                                    font-size: 15px;
+                                    color: lightgray;
+                                }
+                            }
+
+                            i {
+                                cursor: pointer;
+                                padding: 8px 5px 0px 5px;
+                                margin-right: 10px;
+                                float: right;
+                            }
+
+                            button {
+                                float: right;
+                                background: $bgColor;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 5px 15px;
+                                margin-left: 10px;
+                                transition: .2s;
+                                &:hover {
+                                    background: $font-gray;
+                                }
+                            }
+
+                            .code-img{
+                                float: right;
+                                img{
+                                    height: 34px;
+                                    width: auto;
+                                }
+                            }
+
+                            input.code {
+                                width: 20%;
+                                float: right;
+                            }
+                        }
+                    }
+                    
+                    .reply-wrapper {
+                        padding: 1rem 0;
+                        a#reply-btn{
+                            
+                            cursor: pointer;
+                            float: right;
+    
+                        }
+                    }
+                }
+            }
 
             .left-part.col-8 {
 
@@ -2994,7 +3275,7 @@ $link_hover_color: #fff;
                             }
                         }
 
-                        .right-part.col-7 {
+                        .right-part{
                             .panel-wrapper {
                                 padding: 10px 10px;
                                 color: $font-dark;
@@ -3210,7 +3491,16 @@ $link_hover_color: #fff;
 .left-part.col-8 {
     @media(max-width: 1024px) {
         flex: 1 !important;
-        max-width: unset;
+        max-width: 100%;
+    }
+}
+
+.right-part.col-4 {
+    @media(max-width: 1024px) {
+        visibility: hidden;
+        position: absolute;
+        opacity: 0;
+        right: -100%;
     }
 }
 
