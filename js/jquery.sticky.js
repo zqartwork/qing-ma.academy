@@ -94,7 +94,6 @@
               .css('width', newWidth)
               .css('position', 'fixed')
               .css('top', newTop)
-              .css('right', '22.5%')
               .css('z-index', s.zIndex);
 
             s.stickyElement.parent().addClass(s.className);
@@ -126,6 +125,7 @@
               .css('position', 'absolute')
               .css('top', '')
               .css('bottom', 0)
+              .css('transition', '.5s')
               .css('z-index', '');
           } else {
             s.stickyElement

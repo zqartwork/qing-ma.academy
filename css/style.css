@@ -1836,18 +1836,12 @@ button {
 
 .video-main-section {
   margin: 0 auto;
-  width: 65%;
+  width: 100%;
   height: 400px;
   justify-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  @media (max-width: 1388px) {
-    .video-main-section {
-      width: 90%; } }
-  @media (max-width: 1235px) {
-    .video-main-section {
-      width: 95%; } }
   .video-main-section::before {
     content: '';
     background-image: url(../img/lecture/001.jpg);
@@ -1859,262 +1853,300 @@ button {
     height: 400px;
     position: absolute;
     z-index: -1; }
-  .video-main-section .course-intro {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    color: #fff;
-    margin: 6rem auto 0 auto;
-    padding: 0 3rem;
-    height: 14vw;
-    min-width: 500px; }
-    .video-main-section .course-intro .cata {
-      height: 30px;
-      font-weight: 400; }
-      .video-main-section .course-intro .cata span {
-        cursor: pointer;
-        margin: 10px 10px 10px 0;
-        padding: 5px;
-        border-radius: 5px;
-        -webkit-transition: .3s;
-        -o-transition: .3s;
-        transition: .3s; }
-        .video-main-section .course-intro .cata span:hover {
-          background: #fff;
-          color: black; }
-    .video-main-section .course-intro .title {
-      font-size: 32px;
-      font-weight: 500;
-      margin-bottom: 10px; }
-    .video-main-section .course-intro .cont {
-      color: lightgray;
-      font-weight: 100; }
-      .video-main-section .course-intro .cont .short {
-        display: inline-block;
-        overflow: hidden;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        margin-bottom: 1rem; }
-      .video-main-section .course-intro .cont .item {
-        display: inline-block;
-        width: 100%;
-        overflow: hidden; }
-        .video-main-section .course-intro .cont .item .row {
-          padding: 0 1rem;
-          width: 100%;
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: flex-start; }
-          .video-main-section .course-intro .cont .item .row span {
-            margin-right: 15px; }
-            .video-main-section .course-intro .cont .item .row span.update {
-              font-size: 12px;
-              font-style: italic;
-              line-height: 2; }
-      .video-main-section .course-intro .cont .star-rating {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-size: 15px;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        width: 100%; }
-        .video-main-section .course-intro .cont .star-rating div {
-          position: relative;
-          display: inline-block;
-          margin-right: 4px; }
-          .video-main-section .course-intro .cont .star-rating div.detail-num span {
-            font-size: 16px;
-            margin-left: 5px; }
-          .video-main-section .course-intro .cont .star-rating div .star-progress {
-            position: relative; }
-            .video-main-section .course-intro .cont .star-rating div .star-progress::before {
-              font-family: 'Font Awesome 5 Free';
-              content: '\f005';
-              color: lightgray;
-              font-weight: 900;
-              z-index: 0;
-              position: relative;
-              display: inline-block; }
-          .video-main-section .course-intro .cont .star-rating div .star-progress-filled {
-            position: absolute;
-            overflow: hidden;
-            top: 0;
-            left: 0; }
-            .video-main-section .course-intro .cont .star-rating div .star-progress-filled::before {
-              font-family: 'Font Awesome 5 Free';
-              content: '\f005';
-              color: #ffc240;
-              font-weight: 900;
-              z-index: 1;
-              position: relative;
-              display: inline-block; }
-  .video-main-section .video-section-wrapper {
-    height: 700px;
-    width: 25%;
-    min-width: 375px;
-    background-color: #fff;
-    padding: 1rem 1rem 1rem 1rem;
-    margin-right: -5rem;
-    margin-top: 6rem;
-    border-radius: 5px; }
-    .video-main-section .video-section-wrapper.is-sticky {
-      position: fixed;
-      right: 17.5%;
-      -webkit-transition: .5s;
-      -o-transition: .5s;
-      transition: .5s;
-      -webkit-transform: translateY(135%);
-      -ms-transform: translateY(135%);
-      transform: translateY(135%); }
-      @media (max-width: 1340px) {
-        .video-main-section .video-section-wrapper.is-sticky {
-          right: 0; } }
-    .video-main-section .video-section-wrapper .video-thumb {
-      position: relative;
-      height: 200px;
-      width: 100%; }
-      .video-main-section .video-section-wrapper .video-thumb::before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        -webkit-filter: brightness(0.5);
-        filter: brightness(0.5);
-        border-radius: 5px;
-        -webkit-transition: .3s;
-        -o-transition: .3s;
-        transition: .3s; }
-      .video-main-section .video-section-wrapper .video-thumb .play-btn {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        text-align: center; }
-        .video-main-section .video-section-wrapper .video-thumb .play-btn .test {
-          display: inline-block;
-          text-align: left;
-          width: 100%;
-          padding-left: 15px;
-          padding-top: 10px; }
-        .video-main-section .video-section-wrapper .video-thumb .play-btn:hover .test {
-          color: #fff; }
-        .video-main-section .video-section-wrapper .video-thumb .play-btn::before {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          z-index: 1;
-          content: '\f04b';
-          font-family: 'Font Awesome 5 Free';
-          font-size: 25px;
-          font-weight: 900;
-          color: white;
-          line-height: 2.4;
-          vertical-align: middle;
-          background: rgba(0, 0, 0, 0.623);
-          border-radius: 100%;
-          height: 60px;
-          width: 60px;
-          margin-top: -30px;
-          margin-left: -30px;
-          padding: 0 0 0 5px;
+  .video-main-section .row.main-container {
+    margin: 0 auto;
+    width: 1185px;
+    padding: 0; }
+    @media (max-width: 1210px) {
+      .video-main-section .row.main-container {
+        width: 990px; } }
+    .video-main-section .row.main-container .left-part, .video-main-section .row.main-container .right-part {
+      float: left; }
+    .video-main-section .row.main-container .left-part {
+      padding: 0 15px; }
+    .video-main-section .row.main-container .right-part {
+      padding: 0 25px; }
+    .video-main-section .row.main-container .course-intro {
+      color: #fff;
+      margin-top: 6rem;
+      height: 14vw; }
+      .video-main-section .row.main-container .course-intro .cata {
+        height: 30px;
+        font-weight: 400; }
+        .video-main-section .row.main-container .course-intro .cata span {
+          cursor: pointer;
+          margin: 10px 10px 10px 0;
+          padding: 5px;
+          border-radius: 5px;
           -webkit-transition: .3s;
           -o-transition: .3s;
           transition: .3s; }
-      .video-main-section .video-section-wrapper .video-thumb:hover::before {
-        -webkit-filter: brightness(0.55);
-        filter: brightness(0.55); }
-      .video-main-section .video-section-wrapper .video-thumb:hover .play-btn::before {
-        background: rgba(54, 50, 44, 0.842); }
-    .video-main-section .video-section-wrapper .panel-wrapper {
-      padding: 10px 10px;
-      color: #474747; }
-      .video-main-section .video-section-wrapper .panel-wrapper .panel-header {
-        font-size: 22px;
-        color: black;
-        max-height: 66px;
-        overflow: hidden; }
-      .video-main-section .video-section-wrapper .panel-wrapper .panel-tag span {
-        margin-right: 10px; }
-      .video-main-section .video-section-wrapper .panel-wrapper .panel-price {
-        font-family: 'Open Sans';
-        font-size: 35px;
-        font-weight: 800;
-        color: #ac7000;
-        margin: 5px 0; }
-      .video-main-section .video-section-wrapper .panel-wrapper button {
-        background: #ffc240;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        margin-bottom: 10px;
-        width: 100%;
-        font-size: 20px;
-        -webkit-transition: .3s;
-        -o-transition: .3s;
-        transition: .3s; }
-        .video-main-section .video-section-wrapper .panel-wrapper button:hover {
-          background-color: #ffa600; }
-        .video-main-section .video-section-wrapper .panel-wrapper button.add {
-          background: none;
-          border: 1px solid #000; }
-          .video-main-section .video-section-wrapper .panel-wrapper button.add:hover {
-            background-color: #f3788d;
-            border-color: #f3788d; }
-      .video-main-section .video-section-wrapper .panel-wrapper .panel-cont {
-        font-size: 15px;
-        color: #969696; }
-        .video-main-section .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box {
-          max-height: 120px;
-          position: relative;
+          .video-main-section .row.main-container .course-intro .cata span:hover {
+            background: #fff;
+            color: black; }
+      .video-main-section .row.main-container .course-intro .title {
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 10px; }
+      .video-main-section .row.main-container .course-intro .cont {
+        color: lightgray;
+        font-weight: 100; }
+        .video-main-section .row.main-container .course-intro .cont .short {
+          display: inline-block;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          margin-bottom: 1rem; }
+        .video-main-section .row.main-container .course-intro .cont .item {
+          display: inline-block;
+          width: 100%;
           overflow: hidden; }
-          .video-main-section .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .read-more {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+          .video-main-section .row.main-container .course-intro .cont .item .row {
             width: 100%;
-            text-align: center;
-            margin: 0;
-            padding: 20px 0;
-            font-weight: 800;
-            /* "transparent" only works here because == rgba(0,0,0,0) */
-            background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
-            background-image: -webkit-linear-gradient(top, transparent, #fff);
-            background-image: -o-linear-gradient(top, transparent, #fff);
-            background-image: linear-gradient(to bottom, transparent, #fff); }
-            .video-main-section .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .read-more a {
-              display: inline-block;
-              margin-top: 20px;
-              font-family: 'Open Sans';
-              color: #474747;
-              border-radius: 5px;
-              border: 1px solid #474747;
-              padding: 5px 10px; }
-        .video-main-section .video-section-wrapper .panel-wrapper .panel-cont li {
-          margin-top: 3px; }
-          .video-main-section .video-section-wrapper .panel-wrapper .panel-cont li i {
-            width: 25px;
-            padding-left: 3px; }
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start; }
+            .video-main-section .row.main-container .course-intro .cont .item .row span {
+              margin-right: 15px; }
+              .video-main-section .row.main-container .course-intro .cont .item .row span.update {
+                font-size: 12px;
+                font-style: italic;
+                line-height: 2; }
+        .video-main-section .row.main-container .course-intro .cont .star-rating {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          font-size: 15px;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          width: 100%; }
+          .video-main-section .row.main-container .course-intro .cont .star-rating div {
+            position: relative;
+            display: inline-block;
+            margin-right: 4px; }
+            .video-main-section .row.main-container .course-intro .cont .star-rating div.detail-num span {
+              font-size: 16px;
+              margin-left: 5px; }
+            .video-main-section .row.main-container .course-intro .cont .star-rating div .star-progress {
+              position: relative; }
+              .video-main-section .row.main-container .course-intro .cont .star-rating div .star-progress::before {
+                font-family: 'Font Awesome 5 Free';
+                content: '\f005';
+                color: lightgray;
+                font-weight: 900;
+                z-index: 0;
+                position: relative;
+                display: inline-block; }
+            .video-main-section .row.main-container .course-intro .cont .star-rating div .star-progress-filled {
+              position: absolute;
+              overflow: hidden;
+              top: 0;
+              left: 0; }
+              .video-main-section .row.main-container .course-intro .cont .star-rating div .star-progress-filled::before {
+                font-family: 'Font Awesome 5 Free';
+                content: '\f005';
+                color: #ffc240;
+                font-weight: 900;
+                z-index: 1;
+                position: relative;
+                display: inline-block; }
+    .video-main-section .row.main-container .video-section-wrapper {
+      background-color: #fff;
+      padding: 1rem 1rem 1rem 1rem;
+      margin-top: 6rem;
+      border-radius: 5px; }
+      .video-main-section .row.main-container .video-section-wrapper.is-sticky {
+        position: fixed;
+        right: 0;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        -webkit-transform: translateY(135%);
+        -ms-transform: translateY(135%);
+        transform: translateY(135%); }
+        @media (max-width: 1340px) {
+          .video-main-section .row.main-container .video-section-wrapper.is-sticky {
+            right: 0; } }
+      .video-main-section .row.main-container .video-section-wrapper .video-thumb {
+        position: relative;
+        height: 200px;
+        width: 100%; }
+        .video-main-section .row.main-container .video-section-wrapper .video-thumb::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-size: cover;
+          background-position: center;
+          -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+          border-radius: 5px;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+        .video-main-section .row.main-container .video-section-wrapper .video-thumb .play-btn {
+          position: relative;
+          height: 100%;
+          width: 100%;
+          text-align: center; }
+          .video-main-section .row.main-container .video-section-wrapper .video-thumb .play-btn .test {
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            padding-left: 15px;
+            padding-top: 10px; }
+          .video-main-section .row.main-container .video-section-wrapper .video-thumb .play-btn:hover .test {
+            color: #fff; }
+          .video-main-section .row.main-container .video-section-wrapper .video-thumb .play-btn::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
+            content: '\f04b';
+            font-family: 'Font Awesome 5 Free';
+            font-size: 25px;
+            font-weight: 900;
+            color: white;
+            line-height: 2.4;
+            vertical-align: middle;
+            background: rgba(0, 0, 0, 0.623);
+            border-radius: 100%;
+            height: 60px;
+            width: 60px;
+            margin-top: -30px;
+            margin-left: -30px;
+            padding: 0 0 0 5px;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s; }
+        .video-main-section .row.main-container .video-section-wrapper .video-thumb:hover::before {
+          -webkit-filter: brightness(0.55);
+          filter: brightness(0.55); }
+        .video-main-section .row.main-container .video-section-wrapper .video-thumb:hover .play-btn::before {
+          background: rgba(54, 50, 44, 0.842); }
+      .video-main-section .row.main-container .video-section-wrapper .panel-wrapper {
+        padding: 10px 10px;
+        color: #474747; }
+        .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-header {
+          font-size: 22px;
+          color: black;
+          max-height: 66px;
+          overflow: hidden; }
+        .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .star-rating {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          font-size: 16px;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          width: 100%; }
+          .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .star-rating div {
+            position: relative;
+            display: inline-block;
+            margin: 10px 0 0 0; }
+            .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .star-rating div .star-progress {
+              position: relative;
+              margin-right: 5px; }
+              .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .star-rating div .star-progress::before {
+                font-family: 'Font Awesome 5 Free';
+                content: '\f005';
+                color: lightgray;
+                font-weight: 900;
+                z-index: 0;
+                position: relative;
+                display: inline-block; }
+            .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .star-rating div .star-progress-filled {
+              position: absolute;
+              overflow: hidden;
+              top: 0;
+              left: 0;
+              margin: 0; }
+              .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .star-rating div .star-progress-filled::before {
+                font-family: 'Font Awesome 5 Free';
+                content: '\f005';
+                color: #ffc240;
+                font-weight: 900;
+                z-index: 1;
+                position: relative;
+                display: inline-block; }
+        .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-tag span {
+          margin-right: 10px; }
+        .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-price {
+          font-family: 'Open Sans';
+          font-size: 35px;
+          font-weight: 800;
+          color: #ac7000;
+          margin: 5px 0; }
+        .video-main-section .row.main-container .video-section-wrapper .panel-wrapper button {
+          background: #ffc240;
+          border: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          margin-bottom: 10px;
+          width: 100%;
+          font-size: 20px;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+          .video-main-section .row.main-container .video-section-wrapper .panel-wrapper button:hover {
+            background-color: #ffa600; }
+          .video-main-section .row.main-container .video-section-wrapper .panel-wrapper button.add {
+            background: none;
+            border: 1px solid #000; }
+            .video-main-section .row.main-container .video-section-wrapper .panel-wrapper button.add:hover {
+              background-color: #f3788d;
+              border-color: #f3788d; }
+        .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-cont {
+          font-size: 15px;
+          color: #969696; }
+          .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box {
+            max-height: 120px;
+            position: relative;
+            overflow: hidden; }
+            .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .read-more {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              text-align: center;
+              margin: 0;
+              padding: 20px 0;
+              font-weight: 800;
+              /* "transparent" only works here because == rgba(0,0,0,0) */
+              background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+              background-image: -webkit-linear-gradient(top, transparent, #fff);
+              background-image: -o-linear-gradient(top, transparent, #fff);
+              background-image: linear-gradient(to bottom, transparent, #fff); }
+              .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-cont .sidebar-box .read-more a {
+                display: inline-block;
+                margin-top: 20px;
+                font-family: 'Open Sans';
+                color: #474747;
+                border-radius: 5px;
+                border: 1px solid #474747;
+                padding: 5px 10px; }
+          .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-cont li {
+            margin-top: 3px; }
+            .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-cont li i {
+              width: 25px;
+              padding-left: 3px; }
 
 .course-content-section {
   width: 100%; }
   .course-content-section .course-content-wrapper {
     margin: 0 auto;
-    width: 1150px; }
+    width: 1170px; }
     .course-content-section .course-content-wrapper .teacher-info {
-      width: 1150px;
+      width: 1170px;
       height: 100px;
       margin: 0 auto;
       font-size: 30px;
       color: #474747; }
-      @media (max-width: 1235px) {
-        .course-content-section .course-content-wrapper .teacher-info {
-          width: 950px; } }
       .course-content-section .course-content-wrapper .teacher-info .teacher-photo {
         position: relative;
         top: -25%;
@@ -2198,7 +2230,7 @@ button {
       text-align: left;
       width: 68%;
       position: relative;
-      margin-top: 2rem;
+      margin-top: 1rem;
       padding: 15px 2rem;
       border-radius: 5px; }
       .course-content-section .course-content-wrapper .inner-section .title {
@@ -2336,6 +2368,8 @@ button {
             justify-content: flex-end;
             -ms-flex-line-pack: end;
             align-content: flex-end; }
+            .course-content-section .course-content-wrapper .inner-section.qanda-wrapper .qanda-square .reply-wrapper .reply {
+              cursor: pointer; }
           .course-content-section .course-content-wrapper .inner-section.qanda-wrapper .qanda-square .chat-box {
             -webkit-box-pack: center;
             -ms-flex-pack: center;
@@ -2671,7 +2705,7 @@ button {
               float: right; }
             .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating {
               float: right;
-              width: 160px;
+              width: 139px;
               margin-top: -7px;
               /***** CSS Magic to Highlight Stars on Hover *****/
               /* hover previous stars in list */ }
@@ -2680,7 +2714,7 @@ button {
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input {
                 display: none; }
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > label:before {
-                margin: 5px;
+                margin: 3px;
                 font-size: 1.2em;
                 font-family: 'Font Awesome 5 Free';
                 display: inline-block;
@@ -2695,12 +2729,12 @@ button {
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label,
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating:not(:checked) > label:hover,
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating:not(:checked) > label:hover ~ label {
-                color: #FFD700; }
+                color: #ffc240; }
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked + label:hover,
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label:hover,
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > label:hover ~ input:checked ~ label,
               .course-content-section .course-content-wrapper .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label:hover ~ label {
-                color: #FFED85; }
+                color: #ffcb5c; }
     .course-content-section .course-content-wrapper .main-player {
       justify-items: center;
       -webkit-box-align: center;

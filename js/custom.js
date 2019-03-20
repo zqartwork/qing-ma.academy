@@ -22,15 +22,17 @@ $(document).ready(function () {
             }, 300);
         });
     $(window).scroll(function () {
-        var nav = $('.nav-before');
+        var nav = $('.navbar');
         var scroll = $(window).scrollTop();
 
-        if (scroll >= 80) {
+        if (scroll >= 96) {
             nav.addClass('sticky');
         } else {
             nav.removeClass('sticky');
         }
+    });
 
+    $(window).scroll(function () {
         var stickyBottomOffset = $('footer').height();
         $(".video-section-wrapper").sticky({ topSpacing: 0, bottomSpacing: stickyBottomOffset + $('.video-section-wrapper').height() / 5 });
     });
