@@ -1949,7 +1949,7 @@ $link_hover_color: #fff;
         width: 1185px;
         padding: 0;
 
-        @media(max-width: 1210px) {
+        @media(max-width: 1215px) {
             width: 990px;
         }
 
@@ -1961,7 +1961,7 @@ $link_hover_color: #fff;
             padding: 0 15px;
         }
         .right-part {
-            padding: 0 25px;
+            padding: 0 0 0 25px;
         }
 
         .course-intro {
@@ -2067,6 +2067,9 @@ $link_hover_color: #fff;
             padding: 1rem 1rem 1rem 1rem;
             margin-top: 6rem;
             border-radius: 5px;
+
+            @media (max-width: 1215px) {
+            }
 
             &.is-sticky {
                 position: fixed;
@@ -2268,507 +2271,365 @@ $link_hover_color: #fff;
 }
 
 .course-content-section {
-    //test
     width: 100%;
     .course-content-wrapper {
-        margin: 0 auto;
-        width: 1170px;
-        .teacher-info {
-            width: 1170px;
-            height: 100px;
+
+        .main-container{
             margin: 0 auto;
-            font-size: 30px;
-            color: $font-dark;
-            @media(max-width: 1250px) {
+            width: 1150px;
+
+            @media(max-width: 1215px) {
+                width: 990px;
             }
-            .teacher-photo {
-                position: relative;
-                top: -25%;
-                left: 0%;
-                &::before {
-                    position: absolute;
-                    content: '';
-                    height: 140px;
-                    width: 140px;
-                    background-size: cover;
-                    background-position: center;
-                    border-radius: 5px;
-                    border: 3px solid $font-w;
-                }
-            }
-            .cont {
-                width: 500px;
-                padding-left: 10rem;
-                .name {
-                    display: inline-block;
-                    font-weight: 600;
-                    padding-top: .5rem;
-                }
-                .car {
-                    display: inline-block;
-                    font-size: 18px;
-                    margin-left: 10px;
-                    a {
-                        color: $font-bk;
-                        opacity: .5;
-                        margin-left: 15px;
-                        transition: .3s;
-                        &:hover {
-                            opacity: 1;
-                        }
-                    }
-                }
-                .about {
-                    display: inline-block;
-                    background: $font-gray;
-                    border: none;
-                    border-radius: 5px;
-                    font-size: 15px;
-                    color: $font-w;
-                    padding: 5px 15px;
-                    transition: .3s;
-                    &:hover {
-                        background: $font-dark;
-                    }
-                }
-                .btns {
-                    display: inline-block;
+
+            .teacher-info {
+                height: 100px;
+                font-size: 30px;
+                color: $font-dark;
+    
+                .teacher-photo {
                     position: relative;
-                    margin-top: 5px;
-                    $L: 30px;
-                    a {
+                    top: -25%;
+                    left: 0%;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        height: 140px;
+                        width: 140px;
+                        background-size: cover;
+                        background-position: center;
+                        border-radius: 5px;
+                        border: 3px solid $font-w;
+                    }
+                }
+                .cont {
+                    padding-left: 10rem;
+                    .name {
                         display: inline-block;
-                        font-size: 25px;
-                        color: $font-gray;
-                        padding-top: 5px;
-                        &.ins,
-                        &.face,
-                        &.yt {
-                            height: $L;
-                            width: $L;
-                            background-size: cover;
-                            background-position: center;
+                        font-weight: 600;
+                        padding-top: .5rem;
+                    }
+                    .car {
+                        display: inline-block;
+                        font-size: 18px;
+                        margin-left: 10px;
+                        a {
+                            color: $font-bk;
                             opacity: .5;
+                            margin-left: 15px;
                             transition: .3s;
                             &:hover {
                                 opacity: 1;
                             }
                         }
-                        &.ins {
-                            background-image: url(../img/icon/ins.png);
-                        }
-                        &.face {
-                            background-image: url(../img/icon/face.png);
-                        }
-                        &.yt {
-                            background-image: url(../img/icon/yt.png);
-                        }
                     }
-                }
-            }
-        }
-        .tabcontent {
-            animation: fadeInDown 1s;
-        } // 所有區塊的預設值
-        .inner-section {
-            background: #fff;
-            color: $font-dark;
-            font-size: 16px;
-            font-weight: 300;
-            text-align: left;
-            width: 68%;
-            position: relative;
-            margin-top: 1rem;
-            padding: 15px 2rem;
-            border-radius: 5px;
-            .title {
-                font-weight: 600;
-                font-size: 25px;
-                margin-bottom: 10px;
-            }
-            img {
-                width: 100%;
-            }
-            blockquote {
-                border-left: 5px solid #ffc240;
-                margin: 15px 0;
-                padding: 0px 20px;
-                p {
-                    font-size: .8em !important;
-                }
-                font-size: 18px;
-                font-weight: 500;
-            }
-            p {
-                line-height: 1.8;
-                font-weight: 300;
-            }
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                margin-bottom: 16px;
-                margin-top: 40px;
-                padding-bottom: 8px;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-            }
-            pre {
-                font-size: 14px;
-                line-height: 1.8em;
-                margin: 24px 0;
-                padding: 8px 16px;
-                border-radius: 0;
-                border: 0;
-                background-color: $bgColor;
-            }
-            a {
-                color: $brown;
-                font-weight: 500;
-                transition: .3s;
-                &:hover {
-                    color: $on;
-                }
-            }
-            .Q {
-                font-weight: 500;
-                font-size: 18px;
-                margin: 10px 0;
-            }
-            .sidebar-box {
-                position: relative;
-                overflow: hidden;
-                .read-more {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    text-align: center;
-                    margin: 0;
-                    padding: 20px 0;
-                    a.button {
+                    .about {
                         display: inline-block;
-                        margin-top: 20px;
-                        font-family: 'Open Sans';
-                        color: $font-dark;
+                        background: $font-gray;
+                        border: none;
                         border-radius: 5px;
-                        border: 1px solid $font-dark;
-                        padding: 3px 10px;
-                        font-weight: 800;
+                        font-size: 15px;
+                        color: $font-w;
+                        padding: 5px 15px;
+                        transition: .3s;
+                        &:hover {
+                            background: $font-dark;
+                        }
                     }
-                    /* "transparent" only works here because == rgba(0,0,0,0) */
-                    background-image: linear-gradient(to bottom,
-                    transparent,
-                    #fff);
+                    .btns {
+                        display: inline-block;
+                        position: relative;
+                        margin-top: 5px;
+                        $L: 30px;
+                        a {
+                            display: inline-block;
+                            font-size: 25px;
+                            color: $font-gray;
+                            padding-top: 5px;
+                            &.ins,
+                            &.face,
+                            &.yt {
+                                height: $L;
+                                width: $L;
+                                background-size: cover;
+                                background-position: center;
+                                opacity: .5;
+                                transition: .3s;
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                            &.ins {
+                                background-image: url(../img/icon/ins.png);
+                            }
+                            &.face {
+                                background-image: url(../img/icon/face.png);
+                            }
+                            &.yt {
+                                background-image: url(../img/icon/yt.png);
+                            }
+                        }
+                    }
                 }
-                .sub-title {
+            }
+            .tabcontent {
+                animation: fadeInDown 1s;
+            } // 所有區塊的預設值
+            .inner-section {
+                background: #fff;
+                color: $font-dark;
+                font-size: 16px;
+                font-weight: 300;
+                text-align: left;
+                width: 100%;
+                position: relative;
+                margin-top: 1rem;
+                padding: 15px 2rem;
+                border-radius: 5px;
+                .title {
                     font-weight: 600;
+                    font-size: 25px;
+                    margin-bottom: 10px;
                 }
-                .inner {
-                    padding: 10px 0;
+                img {
+                    width: 100%;
                 }
-            } // 最上方TAB按鈕
-            &.tab-wrapper {
-                justify-content: space-between;
-                background: none;
-                padding-right: 0;
-                padding-left: 0;
-                padding-bottom: 0;
-                button {
-                    padding: 10px 4rem;
-                    background: #fff;
-                    color: $font-dark;
+                blockquote {
+                    border-left: 5px solid #ffc240;
+                    margin: 15px 0;
+                    padding: 0px 20px;
+                    p {
+                        font-size: .8em !important;
+                    }
+                    font-size: 18px;
                     font-weight: 500;
-                    box-shadow: none;
-                    border: none;
-                    border-radius: 5px;
+                }
+                p {
+                    line-height: 1.8;
+                    font-weight: 300;
+                }
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    margin-bottom: 16px;
+                    margin-top: 40px;
+                    padding-bottom: 8px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                }
+                pre {
+                    font-size: 14px;
+                    line-height: 1.8em;
+                    margin: 24px 0;
+                    padding: 8px 16px;
+                    border-radius: 0;
+                    border: 0;
+                    background-color: $bgColor;
+                }
+                a {
+                    color: $brown;
+                    font-weight: 500;
                     transition: .3s;
                     &:hover {
-                        background: #4e4e4e2c;
-                    }
-                    &.active {
-                        background: $font-dark;
-                        color: $font-w;
+                        color: $on;
                     }
                 }
-            }
-            &.prepare .sidebar-box {
-                max-height: 185px;
-            }
-            &.course-content .sidebar-box {
-                max-height: 500px;
-            }
-            &.course-problem {
-                margin-bottom: 2.36rem;
+                .Q {
+                    font-weight: 500;
+                    font-size: 18px;
+                    margin: 10px 0;
+                }
                 .sidebar-box {
-                    max-height: 200px;
-                }
-            }
-            &.qanda-wrapper {
-                padding: 15px 0;
-                background: none;
-                .qanda-square {
-                    background: #fff;
-                    border-radius: 5px;
-                    padding: 2rem 1.5rem;
-                    justify-content: flex-start;
-                    align-content: flex-start;
-                    .user__photo-wrapper {
-                        text-align: center;
-                        .user__photo {
-                            margin: 0 auto;
-                        }
-                    }
-                    .hr {
-                        border-bottom: 1px solid lightgray;
-                        margin: 2rem 0;
-                    }
-                    .reply-wrapper {
+                    position: relative;
+                    overflow: hidden;
+                    .read-more {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
                         width: 100%;
-                        justify-content: flex-end;
-                        align-content: flex-end;
+                        text-align: center;
+                        margin: 0;
+                        padding: 20px 0;
+                        a.button {
+                            display: inline-block;
+                            margin-top: 20px;
+                            font-family: 'Open Sans';
+                            color: $font-dark;
+                            border-radius: 5px;
+                            border: 1px solid $font-dark;
+                            padding: 3px 10px;
+                            font-weight: 800;
+                        }
+                        /* "transparent" only works here because == rgba(0,0,0,0) */
+                        background-image: linear-gradient(to bottom,
+                        transparent,
+                        #fff);
+                    }
+                    .sub-title {
+                        font-weight: 600;
+                    }
+                    .inner {
+                        padding: 10px 0;
+                    }
+                } // 最上方TAB按鈕
+                &.tab-wrapper {
+                    justify-content: space-between;
+                    background: none;
+                    padding-right: 0;
+                    padding-left: 0;
+                    padding-bottom: 0;
 
-                        .reply {
-                            cursor: pointer;
+                    button {
+                        padding: 10px;
+                        width: 25%;
+                        background: #fff;
+                        color: $font-dark;
+                        font-weight: 500;
+                        box-shadow: none;
+                        border: none;
+                        transition: .3s;
+
+                        &:first-child {
+                            border-radius: 5px 0px 0px 5px;
                         }
-                    }
-                    .chat-box {
-                        justify-content: center;
-                        align-content: center;
-                        align-items: center;
-                        justify-items: center;
-                        .tag {
-                            span {
-                                margin-right: 10px;
-                            }
-                            .name {
-                                font-weight: 500;
-                                &__teacher {
-                                    font-weight: 500;
-                                    color: $font-w;
-                                    background: $font-dark;
-                                    padding: 3px 10px;
-                                    border-radius: 15px;
-                                }
-                            }
+
+                        &:last-child {
+                            border-radius: 0px 5px 5px 0px;
                         }
-                    }
-                    #replySection {
-                        display: none;
-                        opacity: 0;
-                        .chat-box {
-                            .cont textarea {
-                                width: 100%;
-                                font-size: 14px;
-                                font-weight: 300;
-                                padding: 5px 10px;
-                                color: $font-dark;
-                                border-color: rgb(168, 168, 168);
-                                border-radius: 5px;
-                            }
-                            .btns.row {
-                                width: 100%;
-                                justify-content: flex-end;
-                                align-content: flex-end;
-                                align-items: flex-end;
-                                justify-items: flex-end;
-                                text-align: right;
-                                vertical-align: middle;
-                                &.signin-btn {
-                                    justify-content: flex-start;
-                                    align-content: flex-start;
-                                    align-items: flex-start;
-                                    justify-items: flex-start;
-                                    button {
-                                        margin: 10px 0 0 0;
-                                    }
-                                }
-                                .code {
-                                    padding: 5px;
-                                    border-radius: 5px;
-                                    border: 1px solid $font-gray;
-                                    &::placeholder {
-                                        font-size: 15px;
-                                        color: lightgray;
-                                    }
-                                }
-                                i {
-                                    padding: 5px 5px 10px 5px;
-                                    margin-right: 10px;
-                                }
-                                button {
-                                    background: $bgColor;
-                                    border: none;
-                                    border-radius: 5px;
-                                    padding: 5px 0;
-                                    margin-left: 10px;
-                                    transition: .2s;
-                                    &:hover {
-                                        background: $font-gray;
-                                    }
-                                }
-                            }
+
+                        &:hover {
+                            background: #4e4e4e2c;
                         }
-                    }
-                    .replySection-main {
-                        width: 100%;
-                        .chat-box {
-                            .cont textarea {
-                                width: 100%;
-                                font-size: 14px;
-                                font-weight: 300;
-                                padding: 5px 10px;
-                                color: $font-dark;
-                                border-color: rgb(168, 168, 168);
-                                border-radius: 5px;
-                                &::placeholder {
-                                    color: lightgray;
-                                    display: inline-block;
-                                }
-                            }
-                            .btns.row {
-                                width: 100%;
-                                justify-content: flex-end;
-                                align-content: flex-end;
-                                align-items: flex-end;
-                                justify-items: flex-end;
-                                text-align: right;
-                                vertical-align: middle;
-                                &.signin-btn {
-                                    justify-content: flex-start;
-                                    align-content: flex-start;
-                                    align-items: flex-start;
-                                    justify-items: flex-start;
-                                    button {
-                                        margin: 10px 0 0 0;
-                                    }
-                                }
-                                .code {
-                                    padding: 5px;
-                                    border-radius: 5px;
-                                    border: 1px solid $font-gray;
-                                    &::placeholder {
-                                        font-size: 15px;
-                                        color: lightgray;
-                                    }
-                                }
-                                i {
-                                    padding: 5px 5px 10px 5px;
-                                    margin-right: 10px;
-                                }
-                                button {
-                                    background: $bgColor;
-                                    border: none;
-                                    border-radius: 5px;
-                                    padding: 5px 0;
-                                    margin-left: 10px;
-                                    transition: .2s;
-                                    &:hover {
-                                        background: $font-gray;
-                                    }
-                                }
-                            }
+                        &.active {
+                            background: $font-dark;
+                            color: $font-w;
                         }
                     }
                 }
-            }
-            &.rate-wrapper {
-                padding: 15px 0;
-                background: none;
-                .rate-square {
-                    background: #fff;
-                    border-radius: 5px;
-                    padding: 2rem 1.5rem;
-                    justify-content: flex-start;
-                    align-content: flex-start;
-                    .user__photo-wrapper {
-                        text-align: center;
-                        .user__photo {
-                            margin: 0 auto;
-                        }
+                &.prepare .sidebar-box {
+                    max-height: 185px;
+                }
+                &.course-content .sidebar-box {
+                    max-height: 500px;
+                }
+                &.course-problem {
+                    margin-bottom: 2.36rem;
+                    .sidebar-box {
+                        max-height: 200px;
                     }
-                    .hr {
-                        border-bottom: 1px solid lightgray;
-                        margin: 2rem 0;
-                    }
-                    .rate-wrapper {
-                        width: 100%;
-                        justify-content: flex-end;
-                        align-content: flex-end;
-                    }
-                    .chat-box {
-                        justify-content: center;
-                        align-content: center;
-                        align-items: center;
-                        justify-items: center;
-                        .tag {
-                            span {
-                                margin-right: 10px;
+                }
+                &.qanda-wrapper {
+                    padding: 15px 0;
+                    background: none;
+                    .qanda-square {
+                        background: #fff;
+                        border-radius: 5px;
+                        padding: 2rem 1.5rem;
+                        justify-content: flex-start;
+                        align-content: flex-start;
+                        .user__photo-wrapper {
+                            text-align: center;
+                            .user__photo {
+                                margin: 0 auto;
                             }
-                            .name {
-                                font-weight: 500;
-                                &__teacher {
+                        }
+                        .hr {
+                            border-bottom: 1px solid lightgray;
+                            margin: 2rem 0;
+                        }
+                        .reply-wrapper {
+                            width: 100%;
+                            justify-content: flex-end;
+                            align-content: flex-end;
+    
+                            .reply {
+                                cursor: pointer;
+                            }
+                        }
+                        .chat-box {
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+                            justify-items: center;
+                            .tag {
+                                span {
+                                    margin-right: 10px;
+                                }
+                                .name {
                                     font-weight: 500;
-                                    color: $font-w;
-                                    background: $font-dark;
-                                    padding: 3px 10px;
-                                    border-radius: 15px;
+                                    &__teacher {
+                                        font-weight: 500;
+                                        color: $font-w;
+                                        background: $font-dark;
+                                        padding: 3px 10px;
+                                        border-radius: 15px;
+                                    }
                                 }
                             }
-                            .star-rated-tag {
-                                .star-rating {
-                                    display: flex;
-                                    font-size: 16px;
-                                    justify-content: flex-start;
+                        }
+                        #replySection {
+                            display: none;
+                            opacity: 0;
+                            .chat-box {
+                                .cont textarea {
                                     width: 100%;
-                                    div {
-                                        position: relative;
-                                        display: inline-block;
-                                        margin: 10px 0 0 0;
-                                        .star-progress {
-                                            position: relative;
-                                            margin-right: 5px;
-                                            &::before {
-                                                font-family: 'Font Awesome 5 Free';
-                                                content: '\f005';
-                                                color: lightgray;
-                                                font-weight: 900;
-                                                z-index: 0;
-                                                position: relative;
-                                                display: inline-block;
-                                            }
+                                    font-size: 14px;
+                                    font-weight: 300;
+                                    padding: 5px 10px;
+                                    color: $font-dark;
+                                    border-color: rgb(168, 168, 168);
+                                    border-radius: 5px;
+                                }
+                                .btns.row {
+                                    width: 100%;
+                                    justify-content: flex-end;
+                                    align-content: flex-end;
+                                    align-items: flex-end;
+                                    justify-items: flex-end;
+                                    text-align: right;
+                                    vertical-align: middle;
+                                    &.signin-btn {
+                                        justify-content: flex-start;
+                                        align-content: flex-start;
+                                        align-items: flex-start;
+                                        justify-items: flex-start;
+                                        button {
+                                            margin: 10px 0 0 0;
                                         }
-                                        .star-progress-filled {
-                                            position: absolute;
-                                            overflow: hidden;
-                                            top: 0;
-                                            left: 0;
-                                            margin: 0;
-                                            &::before {
-                                                font-family: 'Font Awesome 5 Free';
-                                                content: '\f005';
-                                                color: #ffc240;
-                                                font-weight: 900;
-                                                z-index: 1;
-                                                position: relative;
-                                                display: inline-block;
-                                            }
+                                    }
+                                    .code {
+                                        padding: 5px;
+                                        border-radius: 5px;
+                                        border: 1px solid $font-gray;
+                                        &::placeholder {
+                                            font-size: 15px;
+                                            color: lightgray;
+                                        }
+                                    }
+                                    i {
+                                        padding: 5px 5px 10px 5px;
+                                        margin-right: 10px;
+                                    }
+                                    button {
+                                        background: $bgColor;
+                                        border: none;
+                                        border-radius: 5px;
+                                        padding: 5px 0;
+                                        margin-left: 10px;
+                                        transition: .2s;
+                                        &:hover {
+                                            background: $font-gray;
                                         }
                                     }
                                 }
                             }
                         }
-                    }
-                    .ratesection-main {
-                        width: 100%;
-                        .chat-box {
-                            .cont {
-                                input.file {
-                                    border: none;
-                                    padding: 0;
-                                }
-                                textarea {
+                        .replySection-main {
+                            width: 100%;
+                            .chat-box {
+                                .cont textarea {
                                     width: 100%;
                                     font-size: 14px;
                                     font-weight: 300;
@@ -2781,173 +2642,331 @@ $link_hover_color: #fff;
                                         display: inline-block;
                                     }
                                 }
-                            }
-                            .btns.row {
-                                width: 100%;
-                                justify-content: flex-end;
-                                align-content: flex-end;
-                                align-items: flex-end;
-                                justify-items: flex-end;
-                                text-align: right;
-                                vertical-align: middle;
-                                &.signin-btn {
-                                    justify-content: flex-start;
-                                    align-content: flex-start;
-                                    align-items: flex-start;
-                                    justify-items: flex-start;
+                                .btns.row {
+                                    width: 100%;
+                                    justify-content: flex-end;
+                                    align-content: flex-end;
+                                    align-items: flex-end;
+                                    justify-items: flex-end;
+                                    text-align: right;
+                                    vertical-align: middle;
+                                    &.signin-btn {
+                                        justify-content: flex-start;
+                                        align-content: flex-start;
+                                        align-items: flex-start;
+                                        justify-items: flex-start;
+                                        button {
+                                            margin: 10px 0 0 0;
+                                        }
+                                    }
+                                    .code {
+                                        padding: 5px;
+                                        border-radius: 5px;
+                                        border: 1px solid $font-gray;
+                                        &::placeholder {
+                                            font-size: 15px;
+                                            color: lightgray;
+                                        }
+                                    }
+                                    i {
+                                        padding: 5px 5px 10px 5px;
+                                        margin-right: 10px;
+                                    }
                                     button {
-                                        margin: 10px 0 0 0;
+                                        background: $bgColor;
+                                        border: none;
+                                        border-radius: 5px;
+                                        padding: 5px 0;
+                                        margin-left: 10px;
+                                        transition: .2s;
+                                        &:hover {
+                                            background: $font-gray;
+                                        }
                                     }
                                 }
-                                .code {
-                                    padding: 5px;
-                                    border-radius: 5px;
-                                    border: 1px solid $font-gray;
-                                    &::placeholder {
-                                        font-size: 15px;
-                                        color: lightgray;
-                                    }
-                                }
-                                i {
-                                    padding: 5px 5px 10px 5px;
-                                    margin-right: 10px;
-                                }
-                                button {
-                                    background: $bgColor;
-                                    border: none;
-                                    border-radius: 5px;
-                                    padding: 5px 0;
-                                    margin-left: 10px;
-                                    transition: .2s;
-                                    &:hover {
-                                        background: $font-gray;
-                                    }
-                                }
-                            }
-                        }
-                        fieldset,
-                        label {
-                            margin: 0;
-                            padding: 0;
-                        }
-                        .notice {
-                            float: right;
-                        }
-                        .star-rating {
-                            float: right;
-                            width: 139px;
-                            margin-top: -7px;
-                            .rating {
-                                border: none;
-                            }
-                            .rating>input {
-                                display: none;
-                            }
-                            .rating>label:before {
-                                margin: 3px;
-                                font-size: 1.2em;
-                                font-family: 'Font Awesome 5 Free';
-                                display: inline-block;
-                                content: "\f005";
-                                font-weight: 900;
-                            }
-                            .rating>.half:before {
-                                content: "\f089";
-                                position: absolute;
-                            }
-                            .rating>label {
-                                color: #ddd;
-                                float: right;
-                            }
-                            /***** CSS Magic to Highlight Stars on Hover *****/
-                            .rating>input:checked~label,
-                            /* show gold star when clicked */
-                            .rating:not(:checked)>label:hover,
-                            /* hover current star */
-                            .rating:not(:checked)>label:hover~label {
-                                color: #ffc240;
-                            }
-                            /* hover previous stars in list */
-                            .rating>input:checked+label:hover,
-                            /* hover current star when changing rating */
-                            .rating>input:checked~label:hover,
-                            .rating>label:hover~input:checked~label,
-                            /* lighten current selection */
-                            .rating>input:checked~label:hover~label {
-                                color: #ffcb5c;
                             }
                         }
                     }
                 }
-            }
-        } // 正式課程影片播放
-        .main-player {
-            justify-items: center;
-            align-items: center;
-            justify-content: center;
-            align-content: center;
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            z-index: 9999;
-            top: 0;
-            visibility: hidden;
-            opacity: 0;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.486);
-            transition: .5s;
-            &.show {
-                visibility: visible;
-                opacity: 1;
-            }
-            .video-wrapper.row {
-                margin: 0 auto;
-                width: 85%;
-                height: 68%;
-                padding: 20px;
-                background: #000;
+                &.rate-wrapper {
+                    padding: 15px 0;
+                    background: none;
+                    .rate-square {
+                        background: #fff;
+                        border-radius: 5px;
+                        padding: 2rem 1.5rem;
+                        justify-content: flex-start;
+                        align-content: flex-start;
+                        .user__photo-wrapper {
+                            text-align: center;
+                            .user__photo {
+                                margin: 0 auto;
+                            }
+                        }
+                        .hr {
+                            border-bottom: 1px solid lightgray;
+                            margin: 2rem 0;
+                        }
+                        .rate-wrapper {
+                            width: 100%;
+                            justify-content: flex-end;
+                            align-content: flex-end;
+                        }
+                        .chat-box {
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+                            justify-items: center;
+                            .tag {
+                                span {
+                                    margin-right: 10px;
+                                }
+                                .name {
+                                    font-weight: 500;
+                                    &__teacher {
+                                        font-weight: 500;
+                                        color: $font-w;
+                                        background: $font-dark;
+                                        padding: 3px 10px;
+                                        border-radius: 15px;
+                                    }
+                                }
+                                .star-rated-tag {
+                                    .star-rating {
+                                        display: flex;
+                                        font-size: 16px;
+                                        justify-content: flex-start;
+                                        width: 100%;
+                                        div {
+                                            position: relative;
+                                            display: inline-block;
+                                            margin: 10px 0 0 0;
+                                            .star-progress {
+                                                position: relative;
+                                                margin-right: 5px;
+                                                &::before {
+                                                    font-family: 'Font Awesome 5 Free';
+                                                    content: '\f005';
+                                                    color: lightgray;
+                                                    font-weight: 900;
+                                                    z-index: 0;
+                                                    position: relative;
+                                                    display: inline-block;
+                                                }
+                                            }
+                                            .star-progress-filled {
+                                                position: absolute;
+                                                overflow: hidden;
+                                                top: 0;
+                                                left: 0;
+                                                margin: 0;
+                                                &::before {
+                                                    font-family: 'Font Awesome 5 Free';
+                                                    content: '\f005';
+                                                    color: #ffc240;
+                                                    font-weight: 900;
+                                                    z-index: 1;
+                                                    position: relative;
+                                                    display: inline-block;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .ratesection-main {
+                            width: 100%;
+                            .chat-box {
+                                .cont {
+                                    input.file {
+                                        border: none;
+                                        padding: 0;
+                                    }
+                                    textarea {
+                                        width: 100%;
+                                        font-size: 14px;
+                                        font-weight: 300;
+                                        padding: 5px 10px;
+                                        color: $font-dark;
+                                        border-color: rgb(168, 168, 168);
+                                        border-radius: 5px;
+                                        &::placeholder {
+                                            color: lightgray;
+                                            display: inline-block;
+                                        }
+                                    }
+                                }
+                                .btns.row {
+                                    width: 100%;
+                                    justify-content: flex-end;
+                                    align-content: flex-end;
+                                    align-items: flex-end;
+                                    justify-items: flex-end;
+                                    text-align: right;
+                                    vertical-align: middle;
+                                    &.signin-btn {
+                                        justify-content: flex-start;
+                                        align-content: flex-start;
+                                        align-items: flex-start;
+                                        justify-items: flex-start;
+                                        button {
+                                            margin: 10px 0 0 0;
+                                        }
+                                    }
+                                    .code {
+                                        padding: 5px;
+                                        border-radius: 5px;
+                                        border: 1px solid $font-gray;
+                                        &::placeholder {
+                                            font-size: 15px;
+                                            color: lightgray;
+                                        }
+                                    }
+                                    i {
+                                        padding: 5px 5px 10px 5px;
+                                        margin-right: 10px;
+                                    }
+                                    button {
+                                        background: $bgColor;
+                                        border: none;
+                                        border-radius: 5px;
+                                        padding: 5px 0;
+                                        margin-left: 10px;
+                                        transition: .2s;
+                                        &:hover {
+                                            background: $font-gray;
+                                        }
+                                    }
+                                }
+                            }
+                            fieldset,
+                            label {
+                                margin: 0;
+                                padding: 0;
+                            }
+                            .notice {
+                                float: right;
+                            }
+                            .star-rating {
+                                float: right;
+                                width: 139px;
+                                margin-top: -7px;
+                                .rating {
+                                    border: none;
+                                }
+                                .rating>input {
+                                    display: none;
+                                }
+                                .rating>label:before {
+                                    margin: 3px;
+                                    font-size: 1.2em;
+                                    font-family: 'Font Awesome 5 Free';
+                                    display: inline-block;
+                                    content: "\f005";
+                                    font-weight: 900;
+                                }
+                                .rating>.half:before {
+                                    content: "\f089";
+                                    position: absolute;
+                                }
+                                .rating>label {
+                                    color: #ddd;
+                                    float: right;
+                                }
+                                /***** CSS Magic to Highlight Stars on Hover *****/
+                                .rating>input:checked~label,
+                                /* show gold star when clicked */
+                                .rating:not(:checked)>label:hover,
+                                /* hover current star */
+                                .rating:not(:checked)>label:hover~label {
+                                    color: #ffc240;
+                                }
+                                /* hover previous stars in list */
+                                .rating>input:checked+label:hover,
+                                /* hover current star when changing rating */
+                                .rating>input:checked~label:hover,
+                                .rating>label:hover~input:checked~label,
+                                /* lighten current selection */
+                                .rating>input:checked~label:hover~label {
+                                    color: #ffcb5c;
+                                }
+                            }
+                        }
+                    }
+                }
+            } // 正式課程影片播放
+            .main-player {
                 justify-items: center;
                 align-items: center;
                 justify-content: center;
                 align-content: center;
-                .canvas {
-                    padding: 0;
-                    video {
-                        width: 100%;
-                        background: #000;
-                    }
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                z-index: 9999;
+                top: 0;
+                visibility: hidden;
+                opacity: 0;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.486);
+                transition: .5s;
+                &.show {
+                    visibility: visible;
+                    opacity: 1;
                 }
-                .playlist {
-                    height: 100%;
-                    max-height: 100%;
-                    overflow: scroll;
-                    color: white;
+                .video-wrapper.row {
+                    margin: 0 auto;
+                    width: 85%;
+                    height: 68%;
+                    padding: 20px;
                     background: #000;
-                    text-align: left;
-                    padding: 0;
-                    ul {
-                        // background: red;
-                        margin: 1rem 0;
-                        li {
-                            // background: pink;
-                            // border: 1px solid red;
-                            padding: 10px 15px;
-                            font-weight: 200;
-                            &.title {
-                                font-size: 18px;
-                                font-weight: 500;
-                                padding-left: 2rem;
-                            }
-                            ol {
-                                li.col-2 {
-                                    text-align: center;
+                    justify-items: center;
+                    align-items: center;
+                    justify-content: center;
+                    align-content: center;
+                    .canvas {
+                        padding: 0;
+                        video {
+                            width: 100%;
+                            background: #000;
+                        }
+                    }
+                    .playlist {
+                        height: 100%;
+                        max-height: 100%;
+                        overflow: scroll;
+                        color: white;
+                        background: #000;
+                        text-align: left;
+                        padding: 0;
+                        ul {
+                            // background: red;
+                            margin: 1rem 0;
+                            li {
+                                // background: pink;
+                                // border: 1px solid red;
+                                padding: 10px 15px;
+                                font-weight: 200;
+                                &.title {
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    padding-left: 2rem;
+                                }
+                                ol {
+                                    li.col-2 {
+                                        text-align: center;
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
+    
         }
+
+        
     }
 }
 
