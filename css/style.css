@@ -2166,17 +2166,25 @@ button {
           border-radius: 5px;
           border: 3px solid #fff; }
       .course-content-section .course-content-wrapper .main-container .teacher-info .cont {
-        padding-left: 10rem; }
+        padding-left: 10rem;
+        width: 100%; }
         .course-content-section .course-content-wrapper .main-container .teacher-info .cont .name {
           display: inline-block;
           font-weight: 600;
           padding-top: .5rem; }
+          @media (max-width: 425px) {
+            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .name {
+              display: block;
+              font-size: 25px;
+              width: 100%;
+              margin-bottom: -1rem; } }
         .course-content-section .course-content-wrapper .main-container .teacher-info .cont .car {
           display: inline-block;
           font-size: 18px; }
           @media (max-width: 425px) {
             .course-content-section .course-content-wrapper .main-container .teacher-info .cont .car {
-              font-size: 15px; } }
+              font-size: 15px;
+              width: 100%; } }
           .course-content-section .course-content-wrapper .main-container .teacher-info .cont .car a {
             color: #000;
             opacity: .5;
@@ -2202,14 +2210,19 @@ button {
           display: inline-block;
           position: relative;
           margin-top: 5px; }
+          @media (max-width: 425px) {
+            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns {
+              display: block;
+              margin-top: -5px;
+              width: 100%; } }
           .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a {
             display: inline-block;
             font-size: 25px;
             color: #969696;
             padding-top: 5px; }
             .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.face, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt {
-              height: 30px;
-              width: 30px;
+              height: 25px;
+              width: 25px;
               background-size: cover;
               background-position: center;
               opacity: .5;
@@ -2380,208 +2393,6 @@ button {
         margin-bottom: 2.36rem; }
         .course-content-section .course-content-wrapper .main-container .inner-section.course-problem .sidebar-box {
           max-height: 200px; }
-      .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper {
-        padding: 15px 0;
-        background: none; }
-        .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square {
-          background: #fff;
-          border-radius: 5px;
-          padding: 2rem 1.5rem;
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
-          justify-content: flex-start;
-          -ms-flex-line-pack: start;
-          align-content: flex-start; }
-          .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .user__photo-wrapper {
-            text-align: center; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .user__photo-wrapper .user__photo {
-              margin: 0 auto; }
-          .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .hr {
-            border-bottom: 1px solid lightgray;
-            margin: 2rem 0; }
-          .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .rate-wrapper {
-            width: 100%;
-            -webkit-box-pack: end;
-            -ms-flex-pack: end;
-            justify-content: flex-end;
-            -ms-flex-line-pack: end;
-            align-content: flex-end; }
-          .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box {
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -ms-flex-line-pack: center;
-            align-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            justify-items: center; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag span {
-              margin-right: 10px; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag .name {
-              font-weight: 500; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag .name__teacher {
-                font-weight: 500;
-                color: #fff;
-                background: #474747;
-                padding: 3px 10px;
-                border-radius: 15px; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag .star-rated-tag .star-rating {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              font-size: 16px;
-              -webkit-box-pack: start;
-              -ms-flex-pack: start;
-              justify-content: flex-start;
-              width: 100%; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag .star-rated-tag .star-rating div {
-                position: relative;
-                display: inline-block;
-                margin: 10px 0 0 0; }
-                .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag .star-rated-tag .star-rating div .star-progress {
-                  position: relative;
-                  margin-right: 5px; }
-                  .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag .star-rated-tag .star-rating div .star-progress::before {
-                    font-family: 'Font Awesome 5 Free';
-                    content: '\f005';
-                    color: lightgray;
-                    font-weight: 900;
-                    z-index: 0;
-                    position: relative;
-                    display: inline-block; }
-                .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag .star-rated-tag .star-rating div .star-progress-filled {
-                  position: absolute;
-                  overflow: hidden;
-                  top: 0;
-                  left: 0;
-                  margin: 0; }
-                  .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .chat-box .tag .star-rated-tag .star-rating div .star-progress-filled::before {
-                    font-family: 'Font Awesome 5 Free';
-                    content: '\f005';
-                    color: #ffc240;
-                    font-weight: 900;
-                    z-index: 1;
-                    position: relative;
-                    display: inline-block; }
-          .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main {
-            width: 100%; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .cont input.file {
-              border: none;
-              padding: 0; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .cont textarea {
-              width: 100%;
-              font-size: 14px;
-              font-weight: 300;
-              padding: 5px 10px;
-              color: #474747;
-              border-color: #a8a8a8;
-              border-radius: 5px; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .cont textarea::-webkit-input-placeholder {
-                color: lightgray;
-                display: inline-block; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .cont textarea:-ms-input-placeholder {
-                color: lightgray;
-                display: inline-block; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .cont textarea::-ms-input-placeholder {
-                color: lightgray;
-                display: inline-block; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .cont textarea::placeholder {
-                color: lightgray;
-                display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row {
-              width: 100%;
-              -webkit-box-pack: end;
-              -ms-flex-pack: end;
-              justify-content: flex-end;
-              -ms-flex-line-pack: end;
-              align-content: flex-end;
-              -webkit-box-align: end;
-              -ms-flex-align: end;
-              align-items: flex-end;
-              justify-items: flex-end;
-              text-align: right;
-              vertical-align: middle; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row.signin-btn {
-                -webkit-box-pack: start;
-                -ms-flex-pack: start;
-                justify-content: flex-start;
-                -ms-flex-line-pack: start;
-                align-content: flex-start;
-                -webkit-box-align: start;
-                -ms-flex-align: start;
-                align-items: flex-start;
-                justify-items: flex-start; }
-                .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row.signin-btn button {
-                  margin: 10px 0 0 0; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row .code {
-                padding: 5px;
-                border-radius: 5px;
-                border: 1px solid #969696; }
-                .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row .code::-webkit-input-placeholder {
-                  font-size: 15px;
-                  color: lightgray; }
-                .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row .code:-ms-input-placeholder {
-                  font-size: 15px;
-                  color: lightgray; }
-                .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row .code::-ms-input-placeholder {
-                  font-size: 15px;
-                  color: lightgray; }
-                .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row .code::placeholder {
-                  font-size: 15px;
-                  color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row i {
-                padding: 5px 5px 10px 5px;
-                margin-right: 10px; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row button {
-                background: #e4e4e4;
-                border: none;
-                border-radius: 5px;
-                padding: 5px 0;
-                margin-left: 10px;
-                -webkit-transition: .2s;
-                -o-transition: .2s;
-                transition: .2s; }
-                .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .chat-box .btns.row button:hover {
-                  background: #969696; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main fieldset,
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main label {
-              margin: 0;
-              padding: 0; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .notice {
-              float: right; }
-            .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating {
-              float: right;
-              width: 139px;
-              margin-top: -7px;
-              /***** CSS Magic to Highlight Stars on Hover *****/
-              /* hover previous stars in list */ }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating {
-                border: none; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input {
-                display: none; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > label:before {
-                margin: 3px;
-                font-size: 1.2em;
-                font-family: 'Font Awesome 5 Free';
-                display: inline-block;
-                content: "\f005";
-                font-weight: 900; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > .half:before {
-                content: "\f089";
-                position: absolute; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > label {
-                color: #ddd;
-                float: right; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label,
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating:not(:checked) > label:hover,
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating:not(:checked) > label:hover ~ label {
-                color: #ffc240; }
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked + label:hover,
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label:hover,
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > label:hover ~ input:checked ~ label,
-              .course-content-section .course-content-wrapper .main-container .inner-section.rate-wrapper .rate-square .ratesection-main .star-rating .rating > input:checked ~ label:hover ~ label {
-                color: #ffcb5c; }
     .course-content-section .course-content-wrapper .main-container .qanda {
       margin-bottom: 1rem; }
       .course-content-section .course-content-wrapper .main-container .qanda .qanda-square {
@@ -2859,6 +2670,359 @@ button {
         .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .reply-wrapper {
           padding: 1rem 0; }
           .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .reply-wrapper a#reply-btn {
+            cursor: pointer;
+            float: right; }
+    .course-content-section .course-content-wrapper .main-container .rate {
+      margin-bottom: 1rem; }
+      .course-content-section .course-content-wrapper .main-container .rate .rate-square {
+        padding: 2rem 2rem 1.5rem 2rem; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square.user {
+          padding-bottom: 3rem; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate {
+          padding-top: 0rem;
+          padding-bottom: 3.5rem; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate.signin {
+            padding-bottom: .7rem; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate.signin .inner-wrapper.signin {
+              margin-bottom: 0rem; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate.signin .inner-wrapper.signin .top-text {
+                padding-top: .8rem; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate textarea, .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate textarea::-webkit-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate textarea:-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate textarea::-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate textarea::placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .note {
+            display: block;
+            float: right;
+            margin-top: 5px; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating {
+            float: right;
+            width: 139px;
+            /***** CSS Magic to Highlight Stars on Hover *****/
+            /* hover previous stars in list */ }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating {
+              border: none; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input {
+              display: none; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > label:before {
+              margin: 3px;
+              font-size: 1.2em;
+              font-family: 'Font Awesome 5 Free';
+              display: inline-block;
+              content: "\f005";
+              font-weight: 900; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > .half:before {
+              content: "\f089";
+              position: absolute; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > label {
+              color: #ddd;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label,
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating:not(:checked) > label:hover,
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating:not(:checked) > label:hover ~ label {
+              color: #ffc240; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked + label:hover,
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label:hover,
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > label:hover ~ input:checked ~ label,
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label:hover ~ label {
+              color: #ffcb5c; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns {
+            width: 100%;
+            margin-top: .7rem;
+            padding-left: 4.5rem; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code-wrapper {
+              width: 100%;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns button {
+              float: right;
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns button:hover {
+                background: #969696; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code-img {
+              float: right; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns input.code {
+              width: 30%;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .signin-btn {
+              float: left; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square .qa-pic {
+          position: absolute;
+          z-index: 1; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text {
+          padding-left: 5rem; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text span {
+            margin-right: 10px; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .signin-btn {
+            background: #e4e4e4;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-left: 10px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .signin-btn:hover {
+              background: #969696; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag {
+            float: right; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              font-size: 16px;
+              -webkit-box-pack: start;
+              -ms-flex-pack: start;
+              justify-content: flex-start;
+              width: 100%; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div {
+                position: relative;
+                display: inline-block; }
+                .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div .star-progress {
+                  position: relative;
+                  margin-right: 5px; }
+                  .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div .star-progress::before {
+                    font-family: 'Font Awesome 5 Free';
+                    content: '\f005';
+                    color: lightgray;
+                    font-weight: 900;
+                    z-index: 0;
+                    position: relative;
+                    display: inline-block; }
+                .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div .star-progress-filled {
+                  position: absolute;
+                  overflow: hidden;
+                  top: 0;
+                  left: 0;
+                  margin: 0; }
+                  .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div .star-progress-filled::before {
+                    font-family: 'Font Awesome 5 Free';
+                    content: '\f005';
+                    color: #ffc240;
+                    font-weight: 900;
+                    z-index: 1;
+                    position: relative;
+                    display: inline-block; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .bot-text {
+          padding-left: 5rem;
+          padding-top: 1rem; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square .hr {
+          border-top: 1px solid lightgray; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply {
+          padding-top: 2rem;
+          padding-bottom: 3.5rem;
+          display: none; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btn-wrapper {
+            width: 51%;
+            float: right; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply textarea, .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply textarea::-webkit-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply textarea:-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply textarea::-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply textarea::placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns {
+            width: 100%;
+            margin-top: .7rem;
+            float: right; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns button:hover {
+                background: #969696; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code-img {
+              float: right; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply {
+          padding-top: 2rem;
+          padding-bottom: 1rem;
+          padding: 2rem 1rem 1rem 5rem; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btn-wrapper {
+            float: right; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea, .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::-webkit-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea:-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::placeholder, .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns {
+            width: 100%;
+            margin-top: .7rem; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns button:hover {
+                background: #969696; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code-img {
+              float: right; }
+              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section .course-content-wrapper .main-container .rate .rate-square .reply-wrapper {
+          padding: 1rem 0; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .reply-wrapper a#reply-btn {
             cursor: pointer;
             float: right; }
     .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md {
