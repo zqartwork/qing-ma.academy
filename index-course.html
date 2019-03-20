@@ -280,6 +280,8 @@
 
         <section class="video-main-section">
             <div class="row main-container">
+
+                <!-- 簡介區 -->
                 <div class="left-part  col-8">
                     <div class="course-intro">
                         <ul>
@@ -329,6 +331,8 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- 影片浮動區 -->
                 <div class="right-part  col-4">
                     <!-- 五分鐘預告片 -->
                     <div class="video-section-wrapper">
@@ -399,8 +403,10 @@
 
                     </div>
                 </div>
+
             </div>
         </section>
+
         <section class="course-content-section">
             <div class="course-content-wrapper">
                 <div class="main-container">
@@ -416,9 +422,14 @@
                         </div>
                         <div class="cont">
                             <span class="name">Ada Lin</span>
-                            <span class="car">攝影師 <a href="lecturer-info.html"><i class="fas fa-caret-right"></i>
-                                    了解更多</a>
-                            </span><br>
+                            <span class="car">攝影師
+                                <a href="lecturer-info.html" target="__blank">
+                                    <i class="fas fa-caret-right"></i>
+                                    了解更多
+                                </a>
+                            </span>
+
+                            <br>
                             <div class="btns">
                                 <a href="" class="ins"></a>
                                 <a href="" class="face"></a>
@@ -426,14 +437,95 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="left-part col-8">
-                        <!-- 第一部分 -->
+                        <div class="video-section-wrapper-md">
+                            <div class="inner-section row">
+                                <div class="left-part col-5 ">
+                                    <a style="cursor:pointer;">
+                                        <div class="video-thumb-md">
+                                            <div class="video-poster">
+                                                <style>
+                                                    .video-poster::before {
+                                                        background-image: url(../img/lecture/001.jpg);
+                                                    }
+                                                </style>
+                                                <div class="play-btn">
+                                                    <span class="test"><i class="fas fa-eye"></i> 課程預覽</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="right-part col-7">
+                                    <div class="panel-wrapper">
+                                        <div class="panel-header">
+                                            <span class="title">美食攝影師：配色、擺盤、光影的視覺饗宴</span>
+                                        </div>
+                                        <div class="star-rating">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 50%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.5</span> <span>(1,200)</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel-tag">
+                                            <span class="name">講師 - ADA LIN</span>
+                                            <span class="time"><i class="fas fa-clock"></i> 7.5 hr</span>
+                                        </div>
+                                        <div class="panel-price">
+                                            NT$<span class="num">2,400</span>
+                                        </div>
+                                        <button class="buy"><i class="fas fa-shopping-cart"></i> 立即購買</button>
+                                        <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
+                                        <div class="panel-cont">
+                                            <div class="sidebar-box">
+                                                <ul class="box-inner">
+                                                    <li>購買的課程內容包含：</li>
+                                                    <li><i class="fas fa-video"></i>450 分鐘的課程影片</li>
+                                                    <li><i class="far fa-newspaper"></i>10 則閱讀文章內容</li>
+                                                    <li><i class="fas fa-ribbon"></i>此課程終身存取權</li>
+                                                    <li><i class="fas fa-mobile-alt"></i>可透過行動裝置觀看</li>
+                                                    <li><i class="fas fa-medal"></i>結業證書</li>
+                                                </ul>
+                                                <p class="read-more"><a href="#" class="button">Read More</a></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 主要按鈕 -->
                         <div class="tab-wrapper row inner-section">
                             <button class="tablinks" onclick="openTab(event, 'Part1')">課程資訊</button>
                             <button class="tablinks en" onclick="openTab(event, 'Part2')">Q & A</button>
                             <button class="tablinks" onclick="openTab(event, 'Part3')">課程評價</button>
                             <button class="tablinks" onclick="openTab(event, 'Part4')" id="defaultOpen">作業區</button>
                         </div>
+
+                        <!-- 第一部分 -->
                         <div id="Part1" class="tabcontent">
                             <div class="prepare inner-section">
                                 <div class="title">課前資訊 ─</div>
@@ -909,7 +1001,7 @@
         <div class="footer-wrapper row">
             <div class="col-lg-4 col-sm-12 wow fadeInLeft">
                 <ul>
-                    <li class="title"> <span class="en">|| ABOUT US </span> 關於青馬</li>
+                    <li class="title"> <span class="en">|| ABOUT US </span></li>
                     <li><a href="http://www.youthgoldenhorse.org/" target="__blank">青馬基金會</a></li>
                     <li><a href="http://www.youthgoldenhorse.com/" target="__blank">青馬影展</a></li>
                     <li><a href="http://www.youthgoldenhorse.org/base?p=base" target="__blank">創客台北</a>
@@ -923,7 +1015,7 @@
             </div>
             <div class="col-lg-4 col-sm-12  wow fadeInLeft">
                 <ul>
-                    <li class="title"> <span class="en">|| FOLLOW US </span> 追隨我們 </li>
+                    <li class="title"> <span class="en">|| FOLLOW US </span> </li>
                     <li><a href="">青馬基金會</a></li>
                     <li><a href="">Facebook</a></li>
                     <li><a href="">資訊廣場</a></li>
@@ -933,7 +1025,7 @@
             </div>
             <div class="col-lg-4 col-sm-12  wow fadeInLeft">
                 <ul>
-                    <li class="title"><span class="en">|| CONTACT US </span>聯絡資料 </li>
+                    <li class="title"><span class="en">|| CONTACT US </span> </li>
                     <li><a href=""><i class="fas fa-phone"></i> Phone | +886-2-2506-3611</a></li>
                     <li><a href=""><i class="fas fa-fax"></i> Fax | +886-2-2506-3220</a></li>
                     <li><a href=""><i class="far fa-envelope"></i> E-mail | service@youthgoldenhorse.org</a></li>

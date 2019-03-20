@@ -1932,7 +1932,7 @@ $link_hover_color: #fff;
     height: 400px;
     justify-items: center;
     justify-content: center;
-
+    
     &::before {
         content: '';
         background-image: url(../img/lecture/001.jpg);
@@ -1950,7 +1950,10 @@ $link_hover_color: #fff;
         padding: 0;
 
         @media(max-width: 1215px) {
-            width: 990px;
+            max-width: 990px;
+        }
+        @media(max-width: 1024px) {
+            min-width: 768px;
         }
 
         .left-part, .right-part {
@@ -2068,17 +2071,8 @@ $link_hover_color: #fff;
             margin-top: 6rem;
             border-radius: 5px;
 
-            @media (max-width: 1215px) {
-            }
-
-            &.is-sticky {
-                position: fixed;
-                right: 0;
-                transition: .5s;
-                transform: translateY(135%);
-                @media(max-width: 1340px) {
-                    right: 0;
-                }
+            @media(max-width: 1024px) {
+                visibility: hidden;
             }
             .video-thumb {
                 position: relative;
@@ -2108,6 +2102,7 @@ $link_hover_color: #fff;
                         width: 100%;
                         padding-left: 15px;
                         padding-top: 10px;
+                        color: rgba(255, 255, 255, 0.678);
                     }
                     &:hover .test {
                         color: $font-w;
@@ -2279,7 +2274,7 @@ $link_hover_color: #fff;
             width: 1150px;
 
             @media(max-width: 1215px) {
-                width: 990px;
+                max-width: 90%;
             }
 
             .teacher-info {
@@ -2372,9 +2367,12 @@ $link_hover_color: #fff;
                     }
                 }
             }
+            
             .tabcontent {
                 animation: fadeInDown 1s;
-            } // 所有區塊的預設值
+            } 
+            // 所有區塊的預設值
+            
             .inner-section {
                 background: #fff;
                 color: $font-dark;
@@ -2523,14 +2521,19 @@ $link_hover_color: #fff;
                 &.qanda-wrapper {
                     padding: 15px 0;
                     background: none;
-                    .qanda-square {
+                    .qanda-square.row {
+
+                        flex-wrap: nowrap;
+
                         background: #fff;
                         border-radius: 5px;
                         padding: 2rem 1.5rem;
                         justify-content: flex-start;
                         align-content: flex-start;
+
                         .user__photo-wrapper {
                             text-align: center;
+
                             .user__photo {
                                 margin: 0 auto;
                             }
@@ -2895,7 +2898,241 @@ $link_hover_color: #fff;
                         }
                     }
                 }
-            } // 正式課程影片播放
+            
+            }
+
+            .left-part.col-8 {
+
+                .video-section-wrapper-md {
+                    display: none;
+    
+                    .inner-section{
+                        padding: 1rem 1rem;
+
+                        .left-part.col-5 {
+                            
+                            position: relative;
+
+                            padding-right: 1rem;
+
+                            .video-thumb-md {
+
+                                width: 100%;
+                                position: relative;
+        
+                                .video-poster {
+
+                                    width: 100%;
+                                    height: 200px;
+                                    
+                                    &::before{
+                                        content: '';
+                                        position: absolute;
+    
+                                        width: 100%;
+                                        height: 200px;
+                    
+                                        border-radius: 5px;
+                                        background-size: cover;
+                                        background-position: center;
+
+                                        filter: brightness(.4);
+                                        transition: .3s;
+                                    }
+                                
+                                    .play-btn {
+                                        position: relative;
+                                        height: 100%;
+                                        width: 100%;
+                                        text-align: center;
+                                        $height: 60px;
+                                        $width: 60px;
+                                        .test {
+                                            display: inline-block;
+                                            text-align: left;
+                                            width: 100%;
+                                            padding-left: 15px;
+                                            padding-top: 10px;
+                                            color: rgba(255, 255, 255, 0.678);
+                                        }
+                                        &:hover .test {
+                                            color: $font-w;
+                                        }
+                                        &::before {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            z-index: 1;
+                                            content: '\f04b';
+                                            font-family: 'Font Awesome 5 Free';
+                                            font-size: 25px;
+                                            font-weight: 900;
+                                            color: white;
+                                            line-height: 2.4;
+                                            vertical-align: middle;
+                                            background: rgba(0, 0, 0, 0.623);
+                                            border-radius: 100%;
+                                            height: $height;
+                                            width: $width;
+                                            margin-top: -$height / 2;
+                                            margin-left: -$width / 2;
+                                            padding: 0 0 0 5px;
+                                            transition: .3s;
+                                        }
+                                    }
+
+
+                                    &:hover::before {
+                                        filter: brightness(.5);
+                                    }
+                                    &:hover {
+                                        .play-btn::before {
+                                            background: rgba(54, 50, 44, 0.842);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .right-part.col-7 {
+                            .panel-wrapper {
+                                padding: 10px 10px;
+                                color: $font-dark;
+                                .panel-header {
+                                    font-size: 22px;
+                                    color: black;
+                                    max-height: 75px;
+                                    overflow: hidden;
+                                }
+                                .star-rating {
+                                    display: flex;
+                                    font-size: 16px;
+                                    justify-content: flex-start;
+                                    width: 100%;
+                                    div {
+                                        position: relative;
+                                        display: inline-block;
+                                        margin: 10px 0 0 0;
+                                        .star-progress {
+                                            position: relative;
+                                            margin-right: 5px;
+                                            &::before {
+                                                font-family: 'Font Awesome 5 Free';
+                                                content: '\f005';
+                                                color: lightgray;
+                                                font-weight: 900;
+                                                z-index: 0;
+                                                position: relative;
+                                                display: inline-block;
+                                            }
+                                        }
+                                        .star-progress-filled {
+                                            position: absolute;
+                                            overflow: hidden;
+                                            top: 0;
+                                            left: 0;
+                                            margin: 0;
+                                            &::before {
+                                                font-family: 'Font Awesome 5 Free';
+                                                content: '\f005';
+                                                color: #ffc240;
+                                                font-weight: 900;
+                                                z-index: 1;
+                                                position: relative;
+                                                display: inline-block;
+                                            }
+                                        }
+                                    }
+                                }
+                
+                                .panel-tag {
+                                    span {
+                                        margin-right: 10px;
+                                    }
+                                }
+                                .panel-price {
+                                    font-family: 'Open Sans';
+                                    font-size: 35px;
+                                    font-weight: 800;
+                                    color: $brown;
+                                    margin: 5px 0;
+                                }
+                                button {
+                                    background: $gold;
+                                    border: none;
+                                    border-radius: 5px;
+                                    padding: 10px 20px;
+                                    margin-bottom: 10px;
+                                    width: 100%;
+                                    font-size: 20px;
+                                    transition: .3s;
+                                    &:hover {
+                                        background-color: rgb(255, 166, 0);
+                                    }
+                                    &.add {
+                                        background: none;
+                                        border: 1px solid $font-bk;
+                                        &:hover {
+                                            background-color: $pink;
+                                            border-color: $pink;
+                                        }
+                                    }
+                                }
+                                .panel-cont {
+                                    font-size: 15px;
+                                    color: $font-gray;
+                                    .sidebar-box {
+                                        max-height: 120px;
+                                        position: relative;
+                                        overflow: hidden;
+                                        .read-more {
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            text-align: center;
+                                            margin: 0;
+                                            padding: 20px 0;
+                                            font-weight: 800;
+                                            a {
+                                                display: inline-block;
+                                                margin-top: 20px;
+                                                font-family: 'Open Sans';
+                                                color: $font-dark;
+                                                border-radius: 5px;
+                                                border: 1px solid $font-dark;
+                                                padding: 5px 10px;
+                                            }
+                                            /* "transparent" only works here because == rgba(0,0,0,0) */
+                                            background-image: linear-gradient(to bottom,
+                                            transparent,
+                                            #fff);
+                                        }
+                                    }
+                                    li {
+                                        margin-top: 3px;
+                                        i {
+                                            width: 25px;
+                                            padding-left: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                
+                        }
+                    }
+    
+                    @media(max-width: 1024px) {
+                        display: block;
+                        margin-top: 3rem;
+                    }
+    
+                }
+            }
+
+           
+
+            // 正式課程影片播放
             .main-player {
                 justify-items: center;
                 align-items: center;
@@ -2967,6 +3204,13 @@ $link_hover_color: #fff;
         }
 
         
+    }
+}
+
+.left-part.col-8 {
+    @media(max-width: 1024px) {
+        flex: 1 !important;
+        max-width: unset;
     }
 }
 
