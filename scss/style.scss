@@ -3390,6 +3390,365 @@ $link_hover_color: #fff;
                 }
             }
 
+            .assignment {
+
+                margin-bottom: 1rem;
+
+                .assignment-square {
+
+                    padding: 2rem 2rem;
+                   
+                    
+                    .main-assignment {
+                        padding-top: 0rem;
+                        padding-bottom: 3.5rem;
+
+                        &.signin {
+                            padding-bottom: .7rem;
+
+                            .inner-wrapper{
+                            
+                                &.signin {
+                                    margin-bottom: 0rem;
+
+                                    .top-text {
+                                        padding-top: .8rem;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .title {
+                            font-size: 20px;
+                        }
+
+                        textarea, input {
+                            width: 100%;
+                            font-size: 14px;
+                            font-weight: 300;
+                            padding: 5px 10px;
+                            color: $font-dark;
+
+                            text-decoration: none;
+                            box-shadow: none;
+
+                            border-width: 1px;
+                            border-color: rgb(168, 168, 168);
+                            border-radius: 5px;
+                            border-style: solid;
+
+                            &::placeholder {
+                                color: lightgray;
+                                display: inline-block;
+                            }
+                        }
+                        
+                        
+                        
+                        .btns {
+                            width: 100%;
+                            margin-top: .7rem;
+
+                            .code-wrapper {
+                                width: 100%;
+                                float: right;
+                            }
+                            
+                            .code {
+                                padding: 5px;
+                                border-radius: 5px;
+                                border: 1px solid $font-gray;
+                                &::placeholder {
+                                    font-size: 15px;
+                                    color: lightgray;
+                                }
+                            }
+
+                            i {
+                                cursor: pointer;
+                                padding: 8px 5px 0px 5px;
+                                margin-right: 10px;
+                                float: right;
+                            }
+
+                            button {
+                                float: right;
+                                background: $bgColor;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 5px 15px;
+                                margin-left: 10px;
+                                margin-top: 10px;
+                                transition: .2s;
+                                &:hover {
+                                    background: $font-gray;
+                                }
+                            }
+
+                            .code-img{
+                                float: right;
+                                img{
+                                    height: 34px;
+                                    width: auto;
+                                }
+                            }
+
+                            input.code {
+                                width: 30%;
+                                float: right;
+                            }
+
+                            .signin-btn {
+                                float: left;
+                            }
+                        }
+                    }
+
+
+                    .qa-pic{
+
+                        position: absolute;
+                        z-index: 1;
+
+                    }
+
+                    .inner-wrapper {
+
+                        margin-bottom: 2rem;
+
+
+                        .top-text{
+
+                            padding-left: 5rem;
+
+                            &.no-p {
+                                padding-left: 0rem;
+                            }
+
+                            span {
+                                margin-right: 10px;
+                            }
+
+                            .signin-btn {
+                                background: $bgColor;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 5px 15px;
+                                margin-left: 10px;
+                                transition: .2s;
+                                &:hover {
+                                    background: $font-gray;
+                                }
+                            }
+                        }
+                        .bot-text {
+
+                            padding-left: 5rem;
+                            padding-top: 1rem;
+
+                            &.no-p {
+                                padding-left: 0rem;
+                            }
+
+
+                        }
+                        
+                    }
+
+                    .hr {
+                        border-top: 1px solid lightgray;
+                    }
+
+                    #reply {
+                        padding-top: 2rem;
+                        padding-bottom: 3.5rem;
+                        display: none;
+
+                        .code-wrapper {
+                            width: 100%;
+                            float: right;
+                        }
+
+                        .btn-wrapper {
+                            width: 51%;
+                            float: right;
+                        }
+
+                        textarea, input {
+                            width: 100%;
+                            font-size: 14px;
+                            font-weight: 300;
+                            padding: 5px 10px;
+                            color: $font-dark;
+
+                            text-decoration: none;
+                            box-decoration: none;
+                            box-shadow: none;
+
+                            border-width: 1px;
+                            border-color: rgb(168, 168, 168);
+                            border-radius: 5px;
+                            border-style: solid;
+
+                            &::placeholder {
+                                color: lightgray;
+                                display: inline-block;
+                            }
+                        }
+
+                        
+                        .btns {
+                            width: 100%;
+                            margin-top: .7rem;
+                            float: right;
+
+                            .code {
+                                padding: 5px;
+                                border-radius: 5px;
+                                border: 1px solid $font-gray;
+                                &::placeholder {
+                                    font-size: 15px;
+                                    color: lightgray;
+                                }
+                            }
+
+                            i {
+                                cursor: pointer;
+                                padding: 8px 5px 0px 5px;
+                                margin-right: 10px;
+                                float: right;
+                            }
+
+                            button {
+
+                                background: $bgColor;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 5px 15px;
+                                margin-left: 10px;
+                                margin-top: 10px;
+                                transition: .2s;
+                                &:hover {
+                                    background: $font-gray;
+                                }
+                            }
+
+                            .code-img{
+                                float: right;
+                                img{
+                                    height: 34px;
+                                    width: auto;
+                                }
+                            }
+
+                            input.code {
+                                width: 20%;
+                                float: right;
+                            }
+                        }
+                    }
+
+                    .other-reply {
+                        padding-top: 2rem;
+                        padding-bottom: 1rem;
+                        padding: 2rem 1rem 1rem 5rem;
+
+                        .code-wrapper {
+                            width: 100%;
+                            float: right;
+                        }
+
+                        .btn-wrapper {
+                            float: right;
+                        }
+
+                        textarea, input {
+                            width: 100%;
+                            font-size: 14px;
+                            font-weight: 300;
+                            padding: 5px 10px;
+                            color: $font-dark;
+
+                            text-decoration: none;
+                            box-decoration: none;
+                            box-shadow: none;
+
+                            border-width: 1px;
+                            border-color: rgb(168, 168, 168);
+                            border-radius: 5px;
+                            border-style: solid;
+
+                            &::placeholder {
+                                color: lightgray;
+                                display: inline-block;
+                            }
+                        }
+
+                        
+                        .btns {
+                            width: 100%;
+                            margin-top: .7rem;
+
+                            .code {
+                                padding: 5px;
+                                border-radius: 5px;
+                                border: 1px solid $font-gray;
+                                &::placeholder {
+                                    font-size: 15px;
+                                    color: lightgray;
+                                }
+                            }
+
+                            i {
+                                cursor: pointer;
+                                padding: 8px 5px 0px 5px;
+                                margin-right: 10px;
+                                float: right;
+                            }
+
+                            button {
+
+                                background: $bgColor;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 5px 15px;
+                                margin-left: 10px;
+                                margin-top: 10px;
+                                transition: .2s;
+                                &:hover {
+                                    background: $font-gray;
+                                }
+                            }
+
+                            .code-img{
+                                float: right;
+                                img{
+                                    height: 34px;
+                                    width: auto;
+                                }
+                            }
+
+                            input.code {
+                                width: 20%;
+                                float: right;
+                            }
+                        }
+                    }
+
+                    
+                    .reply-wrapper {
+                        padding: 1rem 0;
+                        a#reply-btn{
+                            
+                            cursor: pointer;
+                            float: right;
+    
+                        }
+                    }
+                }
+            }
+
+
             .left-part.col-8 {
 
                 .video-section-wrapper-md {

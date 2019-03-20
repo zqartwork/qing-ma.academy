@@ -516,8 +516,8 @@
                             <button class="tablinks" onclick="openTab(event, 'Part1')">課程資訊</button>
                             <button class="tablinks en" onclick="openTab(event, 'Part2')">Q &
                                 A</button>
-                            <button class="tablinks" onclick="openTab(event, 'Part3')" id="defaultOpen">課程評價</button>
-                            <button class="tablinks" onclick="openTab(event, 'Part4')">作業區</button>
+                            <button class="tablinks" onclick="openTab(event, 'Part3')">課程評價</button>
+                            <button class="tablinks" onclick="openTab(event, 'Part4')" id="defaultOpen">作業繳交</button>
                         </div>
 
                         <!-- 第一部分 -->
@@ -903,134 +903,145 @@
 
                             </div>
                         </div>
+                        <!-- 第四部分 -->
+                        <div id="Part4" class="tabcontent">
 
-                        <div id="" class="tabcontent">
-                            <div class="rate-wrapper inner-section">
-                                <div class="title-b">課程評價 </div>
-                                <ul>
-                                    <!-- 會員主要評價區塊 -->
-                                    <li class="rate-square row margin-bottom-10">
+                            <div class="assignment ">
 
-                                        <div class="col-2 user__photo-wrapper">
-                                            <a href="personal-info.html" class="user__photo user__photo-70"
-                                                style="background-image: url(img/profile/portrait-006.jpg)"></a>
+                                <div class="title-b"> <span> 作業繳交 </span> </div>
+
+                                <!-- 會員主要留言區塊 - 未登入 -->
+                                <div class="assignment-square margin-bottom-10 inner-section ">
+                                    <div class="main-assignment signin">
+                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                            style="background-image: url(img/profile/nobody.png)">
                                         </div>
-                                        <div class="ratesection-main col-10">
-                                            <div class="chat-box ">
-                                                <ul>
-                                                    <li class="tag">
-                                                        <span class="name">這裡是會員名稱</span>
-                                                        <span class="star-rating">
-                                                            <fieldset class="rating">
-                                                                <input type="radio" id="star5" name="rating"
-                                                                    value="5" /><label class="full" for="star5"
-                                                                    title="非常好 - 5 顆星"></label>
-                                                                <input type="radio" id="star4half" name="rating"
-                                                                    value="4 and a half" /><label class="half"
-                                                                    for="star4half" title="很好 - 4.5 顆星"></label>
-                                                                <input type="radio" id="star4" name="rating"
-                                                                    value="4" /><label class="full" for="star4"
-                                                                    title="好 - 4 顆星"></label>
-                                                                <input type="radio" id="star3half" name="rating"
-                                                                    value="3 and a half" /><label class="half"
-                                                                    for="star3half" title="可 - 3.5 顆星"></label>
-                                                                <input type="radio" id="star3" name="rating"
-                                                                    value="3" /><label class="full" for="star3"
-                                                                    title="尚可 - 3 顆星"></label>
-                                                                <input type="radio" id="star2half" name="rating"
-                                                                    value="2 and a half" /><label class="half"
-                                                                    for="star2half" title="普通 - 2.5 顆星"></label>
-                                                                <input type="radio" id="star2" name="rating"
-                                                                    value="2" /><label class="full" for="star2"
-                                                                    title="偏不好 - 2 顆星"></label>
-                                                                <input type="radio" id="star1half" name="rating"
-                                                                    value="1 and a half" /><label class="half"
-                                                                    for="star1half" title="不好 - 1.5 顆星"></label>
-                                                                <input type="radio" id="star1" name="rating"
-                                                                    value="1" /><label class="full" for="star1"
-                                                                    title="很不好 - 1 star"></label>
-                                                                <input type="radio" id="starhalf" name="rating"
-                                                                    value="half" /><label class="half" for="starhalf"
-                                                                    title="非常不好 - 0.5 顆星"></label>
-                                                            </fieldset>
-                                                        </span>
-                                                        <span class="notice">請選擇</span>
-                                                    </li>
-                                                    <li class="cont padding-top-10 padding-bottom-10">
-                                                        <textarea name="" id="" cols="50" rows="3"
-                                                            placeholder="分享你對這個課程的想法吧！"></textarea>
-                                                    </li>
-                                                    <li class="row btns">
-                                                        <input type="text" class="col-3 code" placeholder="請輸入驗證碼">
-                                                        <i class="fas fa-sync-alt"></i>
-                                                        <img src="img/icon/captcha.ashx.gif" alt="" class="col-3">
-                                                        <button type="submit" class="col-2">送出</button>
-                                                    </li>
-                                                </ul>
+                                        <div class="inner-wrapper signin">
+                                            <div class="top-text">
+                                                <button type="submit" class="signin-btn"> 請先登入會員 </button>
                                             </div>
                                         </div>
-                                    </li>
-                                    <!-- 別人評價區塊 -->
-                                    <li class="rate-square row margin-bottom-10">
-                                        <!-- 頭像 -->
-                                        <div class="col user__photo-wrapper row">
-                                            <a href="personal-info.html" class="user__photo user__photo-70"
-                                                style="background-image: url(img/profile/portrait-001.jpg)"></a>
+                                    </div>
+                                </div>
+
+                                <!-- 會員主要留言區塊 - 已登入 -->
+                                <div class="assignment-square margin-bottom-10 inner-section">
+                                    <div class="main-assignment">
+                                        <div class="inner-wrapper">
+                                            <div class="top-text no-p">
+                                                <div class="title">作業標題</div>
+                                                <input type="text" class="assignment-title">
+                                            </div>
+                                            <div class="bot-text no-p">
+                                                <div class="title">作業內容（請將textarea置換成HTML編輯器）</div>
+                                                <textarea name="" id="" cols="50" rows="3"
+                                                    placeholder="請在這裡輸入想回覆的答案"></textarea>
+                                            </div>
+                                            <div class="btns">
+                                                <div class="code-wrapper">
+                                                    <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
+                                                    <span class="refresh"><i class="fas fa-sync-alt"></i></span>
+                                                    <input type="text" placeholder="請輸入驗證碼" class="code">
+                                                </div>
+                                                <button type="submit"> 送出 </button>
+                                            </div>
                                         </div>
-                                        <!-- 主要評價 -->
-                                        <div class="chat-box col-10">
-                                            <ul class="col-12">
-                                                <!-- 主要評價標示 -->
-                                                <li class="tag">
-                                                    <span class="name">這裡是會員名稱</span>
-                                                    <span class="date">2019-03-19</span>
+                                    </div>
+                                </div>
+
+                                <!-- 別人留言區塊 -->
+                                <div class="assignment-square margin-bottom-10 inner-section">
+                                    <div>
+                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                            style="background-image: url(img/profile/portrait-003.jpg)">
+                                        </div>
+                                        <div class="inner-wrapper">
+                                            <div class="top-text">
+                                                <span class="name">這裡是我的會員名稱</span>
+                                                <span class="time">2019-03-20</span>
+                                                <span class="like">
                                                     <a href="">
-                                                        <span class="like">
-                                                            <i class="far fa-heart"></i>
-                                                            <span class="num">10</span>
-                                                        </span>
+                                                        <i class="far fa-heart"></i><span class="num">10</span>
                                                     </a>
-                                                    <span class="star-rated-tag">
-                                                        <div class="star-rating">
-                                                            <div>
-                                                                <span class="star-progress"></span>
-                                                                <span class="star-progress-filled"
-                                                                    style="width: 100%;"></span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="star-progress"></span>
-                                                                <span class="star-progress-filled"
-                                                                    style="width: 100%;"></span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="star-progress"></span>
-                                                                <span class="star-progress-filled"
-                                                                    style="width: 100%;"></span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="star-progress"></span>
-                                                                <span class="star-progress-filled"
-                                                                    style="width: 100%;"></span>
-                                                            </div>
-                                                            <div>
-                                                                <span class="star-progress"></span>
-                                                                <span class="star-progress-filled"
-                                                                    style="width: 30%;"></span>
-                                                            </div>
-                                                        </div>
-                                                    </span>
-                                                </li>
-                                                <!-- 主要留言內容 -->
-                                                <li class="cont padding-top-10">
-                                                    <p>這堂課讓我受用無窮，非常喜歡！</p>
-                                                </li>
-                                            </ul>
+                                                </span>
+                                            </div>
+                                            <div class="bot-text">
+                                                <p>這裡是我想問的問題，請問您能告訴我解答嗎？購買這堂課能夠擁有什麼樣的權利或未來呢？有什麼更值得我相信的論點？</p>
+                                            </div>
                                         </div>
-                                    </li>
-                                </ul>
+
+                                        <!-- 其他用戶的回覆 -->
+                                        <div class="other-reply">
+                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                                style="background-image: url(img/profile/portrait-003.jpg)">
+                                            </div>
+                                            <div class="inner-wrapper">
+                                                <div class="top-text">
+                                                    <span class="name">這裡是我的會員名稱</span>
+                                                    <span class="time">2019-03-20</span>
+                                                    <span class="like">
+                                                        <a href="">
+                                                            <i class="far fa-heart"></i><span class="num">10</span>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <div class="bot-text">
+                                                    <p>這裡是我想問的問題，請問您能告訴我解答嗎？購買這堂課能夠擁有什麼樣的權利或未來呢？有什麼更值得我相信的論點？</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="hr"></div>
+
+                                        <!-- 用戶自己的回覆 -->
+                                        <div id="reply">
+                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                                style="background-image: url(img/profile/portrait-005.jpg)">
+                                            </div>
+                                            <div class="inner-wrapper">
+                                                <div class="top-text">
+                                                    <span class="name">我是會員名稱</span>
+                                                </div>
+                                                <div class="bot-text">
+                                                    <textarea name="" id="" cols="50" rows="3"
+                                                        placeholder="請在這裡輸入想回覆的答案"></textarea>
+                                                </div>
+                                                <div class="btns">
+                                                    <div class="code-wrapper">
+                                                        <span class="code-img"><img src="img/icon/001.jpg"
+                                                                alt=""></span>
+                                                        <span class="refresh"><i class="fas fa-sync-alt"></i></span>
+                                                        <input type="text" placeholder="請輸入驗證碼" class="code">
+                                                    </div>
+                                                    <div class="btn-wrapper">
+                                                        <button type="submit"> 送出 </button>
+                                                        <button type="submit" id="exitbtn"> 取消 </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="reply-wrapper">
+                                            <a id="reply-btn"><i class="fas fa-reply"></i> 回覆問題</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 尚未有人繳交作業 -->
+                                <div class=" rate-square margin-bottom-10 inner-section ">
+                                    <div class="main-rate signin">
+                                        <div class="inner-wrapper signin">
+                                            <div class="text-center">
+                                                <span> 尚未有人繳交作業，繳交關於這門課的專屬作業吧！ </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div id="Part4" class="tabcontent">
+
+                        <div id="" class="tabcontent">
                             <div class="homework-wrapper inner-section">
                                 <div class="title-b">作業區 </div>
                                 <ul>

@@ -3025,6 +3025,290 @@ button {
           .course-content-section .course-content-wrapper .main-container .rate .rate-square .reply-wrapper a#reply-btn {
             cursor: pointer;
             float: right; }
+    .course-content-section .course-content-wrapper .main-container .assignment {
+      margin-bottom: 1rem; }
+      .course-content-section .course-content-wrapper .main-container .assignment .assignment-square {
+        padding: 2rem 2rem; }
+        .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment {
+          padding-top: 0rem;
+          padding-bottom: 3.5rem; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment.signin {
+            padding-bottom: .7rem; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment.signin .inner-wrapper.signin {
+              margin-bottom: 0rem; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment.signin .inner-wrapper.signin .top-text {
+                padding-top: .8rem; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .title {
+            font-size: 20px; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea::-webkit-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea:-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea::-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea::placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns {
+            width: 100%;
+            margin-top: .7rem; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code-wrapper {
+              width: 100%;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns button {
+              float: right;
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns button:hover {
+                background: #969696; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code-img {
+              float: right; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns input.code {
+              width: 30%;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .signin-btn {
+              float: left; }
+        .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .qa-pic {
+          position: absolute;
+          z-index: 1; }
+        .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper {
+          margin-bottom: 2rem; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text {
+            padding-left: 5rem; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text.no-p {
+              padding-left: 0rem; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text span {
+              margin-right: 10px; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text .signin-btn {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text .signin-btn:hover {
+                background: #969696; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text {
+            padding-left: 5rem;
+            padding-top: 1rem; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text.no-p {
+              padding-left: 0rem; }
+        .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .hr {
+          border-top: 1px solid lightgray; }
+        .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply {
+          padding-top: 2rem;
+          padding-bottom: 3.5rem;
+          display: none; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btn-wrapper {
+            width: 51%;
+            float: right; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply textarea, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply textarea::-webkit-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply textarea:-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply textarea::-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply textarea::placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns {
+            width: 100%;
+            margin-top: .7rem;
+            float: right; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns button:hover {
+                background: #969696; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code-img {
+              float: right; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply {
+          padding-top: 2rem;
+          padding-bottom: 1rem;
+          padding: 2rem 1rem 1rem 5rem; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btn-wrapper {
+            float: right; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::-webkit-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea:-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::-ms-input-placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::placeholder, .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns {
+            width: 100%;
+            margin-top: .7rem; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns button:hover {
+                background: #969696; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code-img {
+              float: right; }
+              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .reply-wrapper {
+          padding: 1rem 0; }
+          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .reply-wrapper a#reply-btn {
+            cursor: pointer;
+            float: right; }
     .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md {
       display: none; }
       .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section {
