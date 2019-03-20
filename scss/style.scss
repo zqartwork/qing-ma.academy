@@ -2321,11 +2321,12 @@ $link_hover_color: #fff;
                     .car {
                         display: inline-block;
                         font-size: 18px;
-                        margin-left: 10px;
+                        @media (max-width: 425px) {
+                            font-size: 15px;
+                        }
                         a {
                             color: $font-bk;
                             opacity: .5;
-                            margin-left: 15px;
                             transition: .3s;
                             &:hover {
                                 opacity: 1;
@@ -2503,8 +2504,17 @@ $link_hover_color: #fff;
                         }
                         /* "transparent" only works here because == rgba(0,0,0,0) */
                         background-image: linear-gradient(to bottom,
-                        transparent,
-                        #fff);
+                        rgba(255, 255, 255, 0),
+                        rgb(255, 255, 255));
+                        background-image: -webkit-linear-gradient(top,
+                        rgba(255, 255, 255, 0),
+                        rgb(255, 255, 255));
+                        background-image: -moz-linear-gradient(top,
+                        rgba(255, 255, 255, 0),
+                        rgb(255, 255, 255));
+                        background-image: -o-linear-gradient(top,
+                        rgba(255, 255, 255, 0),
+                        rgb(255, 255, 255));
                     }
                     .sub-title {
                         font-weight: 600;
@@ -2950,6 +2960,7 @@ $link_hover_color: #fff;
                         }
 
                         .btn-wrapper {
+                            width: 51%;
                             float: right;
                         }
 
@@ -2979,6 +2990,7 @@ $link_hover_color: #fff;
                         .btns {
                             width: 100%;
                             margin-top: .7rem;
+                            float: right;
 
                             .code {
                                 padding: 5px;
@@ -3330,8 +3342,17 @@ $link_hover_color: #fff;
                                             }
                                             /* "transparent" only works here because == rgba(0,0,0,0) */
                                             background-image: linear-gradient(to bottom,
-                                            transparent,
-                                            #fff);
+                                            rgba(255, 255, 255, 0),
+                                            rgb(255, 255, 255));
+                                            background-image: -webkit-linear-gradient(top,
+                                            rgba(255, 255, 255, 0),
+                                            rgb(255, 255, 255));
+                                            background-image: -moz-linear-gradient(top,
+                                            rgba(255, 255, 255, 0),
+                                            rgb(255, 255, 255));
+                                            background-image: -o-linear-gradient(top,
+                                            rgba(255, 255, 255, 0),
+                                            rgb(255, 255, 255));
                                         }
                                     }
                                     li {
