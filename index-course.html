@@ -518,8 +518,8 @@
 
                         <!-- 第一部分 -->
                         <div id="Part1" class="tabcontent">
+                            <div class="title-b">課前資訊</div>
                             <div class="prepare inner-section">
-                                <div class="title">課前資訊</div>
                                 <div class="sidebar-box">
                                     <div class="cont box-inner">
                                         <ul>
@@ -593,10 +593,10 @@
                                             <li>這裡是列表的樣子</li>
                                         </ul>
                                         <pre>
-                    備註 1: 這部分是很特別的備註區域
-                    備註 2: 這部分是很特別的備註區域
-                    備註 3: 這部分是很特別的備註區域
-                    </pre>
+備註 1: 這部分是很特別的備註區域
+備註 2: 這部分是很特別的備註區域
+備註 3: 這部分是很特別的備註區域
+</pre>
                                         <a href="index.html">這裡是文章中超連結顯示的顏色 http://cookie.qing-maawards.com/academy</a>
                                     </div>
                                     <p class="read-more"><a href="#" class="button">Read More</a></p>
@@ -622,10 +622,27 @@
                             </div>
 
                         </div>
+
                         <div id="Part2" class="tabcontent">
+
                             <div class="qanda ">
-                                <div class="title"> <span> Q & A 問答區 </span> </div>
+
+                                <div class="title-b"> <span> Q & A 問答區 </span> </div>
+
                                 <!-- 會員主要留言區塊 - 未登入 -->
+                                <div class="qanda-square margin-bottom-10 inner-section ">
+                                    <div class="main-qanda signin">
+                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                            style="background-image: url(img/profile/nobody.png)">
+                                        </div>
+                                        <div class="inner-wrapper signin">
+                                            <div class="top-text">
+                                                <button type="submit" class="signin-btn"> 請先登入會員 </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- 會員主要留言區塊 - 已登入 -->
                                 <div class="qanda-square margin-bottom-10 inner-section">
                                     <div class="main-qanda">
@@ -641,15 +658,18 @@
                                                     placeholder="請在這裡輸入想回覆的答案"></textarea>
                                             </div>
                                             <div class="btns">
+                                                <div class="code-wrapper">
+                                                    <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
+                                                    <span class="refresh"><i class="fas fa-sync-alt"></i></span>
+                                                    <input type="text" placeholder="請輸入驗證碼" class="code">
+                                                </div>
                                                 <button type="submit"> 送出 </button>
-                                                <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
-                                                <span class="refresh"><i class="fas fa-sync-alt"></i></span>
-                                                <input type="text" placeholder="請輸入驗證碼" class="code">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
+                                <!-- 別人留言區塊 -->
                                 <div class="qanda-square margin-bottom-10 inner-section">
                                     <div>
                                         <div src="" alt="" class="user__photo user__photo-60 qa-pic"
@@ -669,7 +689,31 @@
                                                 <p>這裡是我想問的問題，請問您能告訴我解答嗎？購買這堂課能夠擁有什麼樣的權利或未來呢？有什麼更值得我相信的論點？</p>
                                             </div>
                                         </div>
+
+                                        <!-- 其他用戶的回覆 -->
+                                        <div class="other-reply">
+                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                                style="background-image: url(img/profile/portrait-003.jpg)">
+                                            </div>
+                                            <div class="inner-wrapper">
+                                                <div class="top-text">
+                                                    <span class="name">這裡是我的會員名稱</span>
+                                                    <span class="time">2019-03-20</span>
+                                                    <span class="like">
+                                                        <a href="">
+                                                            <i class="far fa-heart"></i><span class="num">10</span>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <div class="bot-text">
+                                                    <p>這裡是我想問的問題，請問您能告訴我解答嗎？購買這堂課能夠擁有什麼樣的權利或未來呢？有什麼更值得我相信的論點？</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="hr"></div>
+
+                                        <!-- 用戶自己的回覆 -->
                                         <div id="reply">
                                             <div src="" alt="" class="user__photo user__photo-60 qa-pic"
                                                 style="background-image: url(img/profile/portrait-005.jpg)">
@@ -683,11 +727,16 @@
                                                         placeholder="請在這裡輸入想回覆的答案"></textarea>
                                                 </div>
                                                 <div class="btns">
-                                                    <button type="submit"> 送出 </button>
-                                                    <button type="submit" id="exitbtn"> 取消 </button>
-                                                    <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
-                                                    <span class="refresh"><i class="fas fa-sync-alt"></i></span>
-                                                    <input type="text" placeholder="請輸入驗證碼" class="code">
+                                                    <div class="code-wrapper">
+                                                        <span class="code-img"><img src="img/icon/001.jpg"
+                                                                alt=""></span>
+                                                        <span class="refresh"><i class="fas fa-sync-alt"></i></span>
+                                                        <input type="text" placeholder="請輸入驗證碼" class="code">
+                                                    </div>
+                                                    <div class="btn-wrapper">
+                                                        <button type="submit"> 送出 </button>
+                                                        <button type="submit" id="exitbtn"> 取消 </button>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -697,12 +746,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 別人留言區塊 -->
                             </div>
                         </div>
                         <div id="Part3" class="tabcontent">
                             <div class="rate-wrapper inner-section">
-                                <div class="title">課程評價 </div>
+                                <div class="title-b">課程評價 </div>
                                 <ul>
                                     <!-- 會員主要評價區塊 -->
                                     <li class="rate-square row margin-bottom-10">
@@ -828,7 +876,7 @@
                         </div>
                         <div id="Part4" class="tabcontent">
                             <div class="homework-wrapper inner-section">
-                                <div class="title">作業區 </div>
+                                <div class="title-b">作業區 </div>
                                 <ul>
                                     <!-- 會員主要評價區塊 - 未登入 -->
                                     <!-- <li class="rate-square row margin-bottom-10">
@@ -859,7 +907,7 @@
                                             <div class="chat-box ">
                                                 <ul>
                                                     <li class="tag">
-                                                        <span class="title">作業標題</span>
+                                                        <span class="">作業標題</span>
                                                         <input type="text" class="col-12 code margin-top-10"
                                                             placeholder="請輸入驗證碼">
                                                     </li>
