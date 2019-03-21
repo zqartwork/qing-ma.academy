@@ -3706,7 +3706,7 @@ button {
   height: 100vh;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.418);
+  background: rgba(0, 0, 0, 0.801);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3721,7 +3721,7 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 80%;
+    width: 90%;
     height: 600px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -3743,19 +3743,41 @@ button {
       overflow: scroll;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+      border-left: 4px double #ffc24080; }
       .popup-video-wrapper .plyrlist-container .list-container .list-item {
+        width: 100%;
         color: #fff;
         font-weight: 300;
-        text-align: center;
+        text-align: left;
         padding: 20px 15px;
         cursor: pointer; }
-        .popup-video-wrapper .plyrlist-container .list-container .list-item:not(:first-child):hover, .popup-video-wrapper .plyrlist-container .list-container .list-item:not(:first-child):focus, .popup-video-wrapper .plyrlist-container .list-container .list-item:not(:first-child):active {
+        .popup-video-wrapper .plyrlist-container .list-container .list-item:not(.main):hover, .popup-video-wrapper .plyrlist-container .list-container .list-item:not(.main):focus, .popup-video-wrapper .plyrlist-container .list-container .list-item:not(.main):active {
           background: #ffc240;
           color: black; }
+        .popup-video-wrapper .plyrlist-container .list-container .list-item.active {
+          background: #ffc240;
+          color: black; }
+        .popup-video-wrapper .plyrlist-container .list-container .list-item.main {
+          border-bottom: 4px double #ffc24080; }
+          .popup-video-wrapper .plyrlist-container .list-container .list-item.main .exit:hover {
+            color: #ffc240; }
         .popup-video-wrapper .plyrlist-container .list-container .list-item .title-main {
           font-size: 20px;
           font-weight: 500; }
+      .popup-video-wrapper .plyrlist-container .list-container #slide-btn .title .chevron {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        .popup-video-wrapper .plyrlist-container .list-container #slide-btn .title .chevron.active {
+          -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+      .popup-video-wrapper .plyrlist-container .list-container #slide-list {
+        display: none; }
 
 footer {
   display: block;

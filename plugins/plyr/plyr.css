@@ -214,7 +214,7 @@ a.plyr__control::before {
     color: #fff;
     display: none;
     left: 50%;
-    padding: 15px;
+    padding: 25px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);

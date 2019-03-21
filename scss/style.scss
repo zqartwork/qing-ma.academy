@@ -4578,7 +4578,7 @@ $link_hover_color: #fff;
     top: 0;
     right: 0;
 
-    background: rgba(0, 0, 0, 0.418);
+    background: rgba(0, 0, 0, 0.801);
 
     display: flex;
 
@@ -4589,7 +4589,7 @@ $link_hover_color: #fff;
 
         position: relative;
         display: flex;
-        width: 80%;
+        width: 90%;
         height: 600px;
         justify-content: center;
 
@@ -4605,30 +4605,66 @@ $link_hover_color: #fff;
 
         .list-container {
             flex: .3;
-            background: #000;
+            background: $font-bk;
             max-height: 600px;
             overflow: scroll;
             align-items: center;
+            border-left: 4px double #ffc24080;
 
             .list-item {
+                width: 100%;
                 color: $font-w;
                 font-weight: 300;
 
-                text-align: center;
+                text-align: left;
                 padding: 20px 15px;
                 cursor: pointer;
 
-                &:not(:first-child):hover,
-                &:not(:first-child):focus,
-                &:not(:first-child):active {
+
+                &:not(.main):hover,
+                &:not(.main):focus,
+                &:not(.main):active {
                     background: #ffc240;
                     color: black;
+                }
+
+                &.active {
+                    background: #ffc240;
+                    color: black;
+                }
+
+                &.main {
+                    border-bottom: 4px double #ffc24080;
+
+                    .exit {
+                        &:hover {
+                            color: #ffc240;
+                        }
+                    }
                 }
 
                 .title-main {
                     font-size: 20px;
                     font-weight: 500;
                 }
+
+            }
+
+            #slide-btn {
+                .title {
+                    .chevron {
+                        transform: rotate(0deg);
+                        transition: .3s;
+
+                        &.active {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+
+            #slide-list {
+                display: none;
             }
         }
 

@@ -349,3 +349,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = new Plyr('#player');
 
 });
+
+$('#slide-btn').click(function () {
+    $('#slide-list').slideToggle();
+    $('#slide-btn .title .chevron').toggleClass('active');
+})
+
+$('.list-item.ls').click(function () {
+    $(this).toggleClass('active');
+})
