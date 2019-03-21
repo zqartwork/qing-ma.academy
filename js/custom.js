@@ -343,3 +343,9 @@ fileInput.addEventListener("change", function (event) {
     the_return.innerHTML = pathSplitL[pathSplitL.length - 1];
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+    const player = new Plyr('#player');
+
+});

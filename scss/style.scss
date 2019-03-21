@@ -3919,7 +3919,6 @@ $link_hover_color: #fff;
                                 padding: 8px 20px;
                                 border-radius: 5px;
                                 border: none;
-
                                 color: black;
                                 font-weight: 400;
                                 transition: .3s;
@@ -3936,17 +3935,14 @@ $link_hover_color: #fff;
                             }
 
                             .input-file-trigger {
-
                                 background: $bgColor;
                                 padding: 8px 20px;
                                 border-radius: 5px;
                                 border: none;
-
                                 color: black;
                                 font-size: 15px;
                                 font-weight: 400;
                                 transition: .3s;
-
                                 cursor: pointer;
 
                                 &:hover {
@@ -4001,8 +3997,6 @@ $link_hover_color: #fff;
                                 font-style: normal;
                                 font-weight: normal;
                             }
-
-
                         }
 
                         &.works {
@@ -4013,16 +4007,12 @@ $link_hover_color: #fff;
                                 position: relative;
 
                                 .as-img {
-
                                     background-position: center;
                                     background-repeat: no-repeat;
-
                                     height: 150px;
-
                                     border: 1px solid gray;
                                     border-radius: 5px;
                                     margin: 0 15px;
-
                                 }
 
                                 .bot-side {
@@ -4039,11 +4029,7 @@ $link_hover_color: #fff;
                                         padding-top: .6rem;
                                     }
                                 }
-
-
                             }
-
-
                         }
                     }
 
@@ -4581,6 +4567,74 @@ $link_hover_color: #fff;
         position: absolute;
         opacity: 0;
     }
+}
+
+.popup-video-wrapper {
+    position: fixed;
+    z-index: 9999;
+
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+
+    background: rgba(0, 0, 0, 0.418);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    .plyrlist-container {
+
+        position: relative;
+        display: flex;
+        width: 80%;
+        height: 600px;
+        justify-content: center;
+
+        .plyr-container {
+            flex: .7;
+            background: #000;
+            margin: 0;
+
+            video {
+                height: 600px;
+            }
+        }
+
+        .list-container {
+            flex: .3;
+            background: #000;
+            max-height: 600px;
+            overflow: scroll;
+            align-items: center;
+
+            .list-item {
+                color: $font-w;
+                font-weight: 300;
+
+                text-align: center;
+                padding: 20px 15px;
+                cursor: pointer;
+
+                &:not(:first-child):hover,
+                &:not(:first-child):focus,
+                &:not(:first-child):active {
+                    background: #ffc240;
+                    color: black;
+                }
+
+                .title-main {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+
+
+    }
+
 }
 
 footer {
