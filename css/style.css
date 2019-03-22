@@ -2508,6 +2508,23 @@ button {
               transition: .2s; }
               .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .signin-btn:hover {
                 background: #969696; }
+            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .time {
+              display: inline-block; }
+            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .name_teacher {
+              display: inline-block;
+              background: #474747;
+              color: #fff;
+              padding: 3px 15px;
+              border-radius: 15px;
+              font-size: 14px;
+              max-height: 27px;
+              overflow: hidden; }
+            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .name {
+              display: inline-block;
+              max-height: 27px;
+              overflow: hidden; }
+            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .like {
+              display: inline-block; }
           .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .bot-text {
             padding-left: 5rem;
             padding-top: 1rem; }
@@ -2836,8 +2853,10 @@ button {
             transition: .2s; }
             .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .signin-btn:hover {
               background: #969696; }
+          .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .time {
+            display: inline-block; }
           .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag {
-            float: right; }
+            display: inline-block; }
             .course-content-section .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating {
               display: -webkit-box;
               display: -ms-flexbox;
@@ -3265,7 +3284,8 @@ button {
                   left: 18px; }
                 .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper.works .col-6 .bot-side .info-wrapper {
                   padding-left: 5rem;
-                  padding-top: .6rem; }
+                  padding-top: .6rem;
+                  color: #474747; }
         .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .hr {
           border-top: 1px solid lightgray; }
         .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply {
@@ -3582,6 +3602,11 @@ button {
               .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button.add:hover {
                 background-color: #f3788d;
                 border-color: #f3788d; }
+            .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button#plyr-btn-m {
+              background: #8d0000;
+              color: #fff; }
+              .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button#plyr-btn-m:hover {
+                background-color: #d40909; }
           .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-cont {
             font-size: 15px;
             color: #969696; }
@@ -3704,6 +3729,7 @@ button {
   z-index: 9999;
   width: 100%;
   height: 100vh;
+  overflow: scroll;
   top: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.801);
@@ -3724,16 +3750,24 @@ button {
   .popup-video-wrapper.show {
     visibility: visible;
     opacity: 1; }
+  @media (max-width: 1150px) {
+    .popup-video-wrapper {
+      display: block;
+      height: unset; } }
   .popup-video-wrapper .plyrlist-container {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 90%;
+    width: 100%;
     height: 600px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    @media (max-width: 1150px) {
+      .popup-video-wrapper .plyrlist-container {
+        display: block;
+        height: unset; } }
     .popup-video-wrapper .plyrlist-container .plyr-container {
       -webkit-box-flex: .7;
       -ms-flex: .7;
@@ -3753,6 +3787,16 @@ button {
       -ms-flex-align: center;
       align-items: center;
       border-left: 4px double #ffc24080; }
+      @media (max-width: 1150px) {
+        .popup-video-wrapper .plyrlist-container .list-container {
+          border: none;
+          border-top: 4px double #ffc24080; } }
+      @media (max-width: 1150px) {
+        .popup-video-wrapper .plyrlist-container .list-container #exit {
+          position: fixed;
+          right: 1rem;
+          top: 1rem;
+          font-size: 30px; } }
       .popup-video-wrapper .plyrlist-container .list-container .list-item {
         width: 100%;
         color: #fff;

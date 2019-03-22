@@ -352,17 +352,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $('#plyr-btn').click(function () {
     $('#popup-v').addClass('show');
-})
+});
+
+$('#plyr-btn-m').click(function () {
+    $('#popup-v').addClass('show');
+});
 
 $('#exit').click(function () {
     $('#popup-v').removeClass('show');
-})
+});
 
 $('#slide-btn').click(function () {
     $('#slide-list').slideToggle();
     $('#slide-btn .title .chevron').toggleClass('active');
-})
+});
 
 $('.list-item.ls').click(function () {
     $(this).toggleClass('active');
-})
+});

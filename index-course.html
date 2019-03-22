@@ -491,6 +491,7 @@
                                         <div class="panel-price">
                                             NT$<span class="num">2,400</span>
                                         </div>
+                                        <button id="plyr-btn-m"><i class="far fa-eye"></i> 課程預覽</button>
                                         <button class="buy"><i class="fas fa-shopping-cart"></i> 立即購買</button>
                                         <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
                                         <div class="panel-cont">
@@ -516,11 +517,11 @@
 
                         <!-- 主要按鈕 -->
                         <div class="tab-wrapper row inner-section">
-                            <button class="tablinks" onclick="openTab(event, 'Part1')">課程資訊</button>
+                            <button class="tablinks" onclick="openTab(event, 'Part1')" id="defaultOpen">課程資訊</button>
                             <button class="tablinks en" onclick="openTab(event, 'Part2')">Q &
                                 A</button>
                             <button class="tablinks" onclick="openTab(event, 'Part3')">課程評價</button>
-                            <button class="tablinks" onclick="openTab(event, 'Part4')" id="defaultOpen">作業繳交</button>
+                            <button class="tablinks" onclick="openTab(event, 'Part4')">作業繳交</button>
                         </div>
 
                         <!-- 第一部分 -->
@@ -695,6 +696,27 @@
                                             </div>
                                             <div class="bot-text">
                                                 <p>這裡是我想問的問題，請問您能告訴我解答嗎？購買這堂課能夠擁有什麼樣的權利或未來呢？有什麼更值得我相信的論點？</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- 其他用戶的回覆 -->
+                                        <div class="other-reply">
+                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                                style="background-image: url(img/profile/portrait-003.jpg)">
+                                            </div>
+                                            <div class="inner-wrapper">
+                                                <div class="top-text">
+                                                    <span class="name_teacher">授課老師名稱</span>
+                                                    <span class="time">2019-03-20</span>
+                                                    <span class="like">
+                                                        <a href="">
+                                                            <i class="far fa-heart"></i><span class="num">10</span>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                                <div class="bot-text">
+                                                    <p>這裡是我想問的問題，請問您能告訴我解答嗎？購買這堂課能夠擁有什麼樣的權利或未來呢？有什麼更值得我相信的論點？</p>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -965,73 +987,6 @@
 
                                 <div class="title-b"> <span> 其他人的作業 </span> </div>
 
-                                <!-- 別人作業區塊 -->
-                                <div class="assignment-square margin-bottom-10 inner-section work">
-                                    <div>
-                                        <div class="inner-wrapper row works">
-                                            <a href="assignment.html" target="__blank" class="col-6">
-                                                <div class="as-img"
-                                                    style="background-image: url(img/lecture/lec-img-001.jpg);"></div>
-                                                <div class="bot-side">
-                                                    <div class="user__photo user__photo-50 as-p"
-                                                        style="background-image: url(img/profile/portrait-005.jpg);">
-                                                    </div>
-                                                    <div class="info-wrapper">
-                                                        <div class="as-title">第一份作業：我的自傳</div>
-                                                        <div class="name">CATHERINE LIANG</div>
-                                                    </div>
-                                                </div>
-
-                                            </a>
-                                            <a href="assignment.html" target="__blank" class="col-6">
-                                                <div class="as-img"
-                                                    style="background-image: url(img/lecture/lec-img-002.jpg);"></div>
-                                                <div class="bot-side">
-                                                    <div class="user__photo user__photo-50 as-p"
-                                                        style="background-image: url(img/profile/portrait-005.jpg);">
-                                                    </div>
-                                                    <div class="info-wrapper">
-                                                        <div class="as-title">第一份作業：我的自傳</div>
-                                                        <div class="name">CATHERINE LIANG</div>
-                                                    </div>
-                                                </div>
-
-                                            </a>
-                                        </div>
-                                        <div class="inner-wrapper row works">
-                                            <a href="assignment.html" target="__blank" class="col-6">
-                                                <div class="as-img"
-                                                    style="background-image: url(img/lecture/lec-img-001.jpg);"></div>
-                                                <div class="bot-side">
-                                                    <div class="user__photo user__photo-50 as-p"
-                                                        style="background-image: url(img/profile/portrait-005.jpg);">
-                                                    </div>
-                                                    <div class="info-wrapper">
-                                                        <div class="as-title">第一份作業：我的自傳</div>
-                                                        <div class="name">CATHERINE LIANG</div>
-                                                    </div>
-                                                </div>
-
-                                            </a>
-                                            <a href="assignment.html" target="__blank" class="col-6">
-                                                <div class="as-img"
-                                                    style="background-image: url(img/lecture/lec-img-002.jpg);"></div>
-                                                <div class="bot-side">
-                                                    <div class="user__photo user__photo-50 as-p"
-                                                        style="background-image: url(img/profile/portrait-005.jpg);">
-                                                    </div>
-                                                    <div class="info-wrapper">
-                                                        <div class="as-title">第一份作業：我的自傳</div>
-                                                        <div class="name">CATHERINE LIANG</div>
-                                                    </div>
-                                                </div>
-
-                                            </a>
-                                        </div>
-
-                                    </div>
-                                </div>
-
                                 <!-- 尚未有人繳交作業 -->
                                 <div class=" rate-square margin-bottom-10 inner-section ">
                                     <div class="main-rate signin">
@@ -1040,6 +995,98 @@
                                                 <span> 尚未有人繳交作業，繳交關於這門課的專屬作業吧！ </span>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- 別人作業區塊 -->
+                                <div class="assignment-square margin-bottom-10 inner-section work">
+                                    <div>
+                                        <div class="inner-wrapper row works">
+                                            <div class="col-6">
+                                                <a href="assignment.html" target="__blank">
+                                                    <div class="as-img"
+                                                        style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                                    </div>
+                                                </a>
+
+                                                <div class="bot-side">
+                                                    <a href="personal-info.html" target="__blank">
+                                                        <div class="user__photo user__photo-50 as-p"
+                                                            style="background-image: url(img/profile/portrait-005.jpg);">
+                                                        </div>
+                                                    </a>
+                                                    <div class="info-wrapper">
+                                                        <div class="as-title">第一份作業：我的自傳</div>
+                                                        <div class="name">CATHERINE LIANG</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-6">
+                                                <a href="assignment.html" target="__blank">
+                                                    <div class="as-img"
+                                                        style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                                    </div>
+                                                </a>
+
+                                                <div class="bot-side">
+                                                    <a href="personal-info.html" target="__blank">
+                                                        <div class="user__photo user__photo-50 as-p"
+                                                            style="background-image: url(img/profile/portrait-005.jpg);">
+                                                        </div>
+                                                    </a>
+                                                    <div class="info-wrapper">
+                                                        <div class="as-title">第一份作業：我的自傳</div>
+                                                        <div class="name">CATHERINE LIANG</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="inner-wrapper row works">
+                                            <div class="col-6">
+                                                <a href="assignment.html" target="__blank">
+                                                    <div class="as-img"
+                                                        style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                                    </div>
+                                                </a>
+
+                                                <div class="bot-side">
+                                                    <a href="personal-info.html" target="__blank">
+                                                        <div class="user__photo user__photo-50 as-p"
+                                                            style="background-image: url(img/profile/portrait-005.jpg);">
+                                                        </div>
+                                                    </a>
+                                                    <div class="info-wrapper">
+                                                        <div class="as-title">第一份作業：我的自傳</div>
+                                                        <div class="name">CATHERINE LIANG</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-6">
+                                                <a href="assignment.html" target="__blank">
+                                                    <div class="as-img"
+                                                        style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                                    </div>
+                                                </a>
+
+                                                <div class="bot-side">
+                                                    <a href="personal-info.html" target="__blank">
+                                                        <div class="user__photo user__photo-50 as-p"
+                                                            style="background-image: url(img/profile/portrait-005.jpg);">
+                                                        </div>
+                                                    </a>
+                                                    <div class="info-wrapper">
+                                                        <div class="as-title">第一份作業：我的自傳</div>
+                                                        <div class="name">CATHERINE LIANG</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
 

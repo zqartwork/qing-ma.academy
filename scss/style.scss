@@ -1607,6 +1607,7 @@ $link_hover_color: #fff;
                                     background-color: #e9a003;
                                 }
                             }
+
                         }
                     }
 
@@ -2562,6 +2563,7 @@ $link_hover_color: #fff;
                             border-color: $pink;
                         }
                     }
+                    
                 }
 
                 .panel-cont {
@@ -3118,6 +3120,28 @@ $link_hover_color: #fff;
                                     background: $font-gray;
                                 }
                             }
+                            .time {
+                                display: inline-block;
+                            }
+                            .name_teacher {
+                                display: inline-block;
+                                background: $font-dark;
+                                color: $font-w;
+                                padding: 3px 15px;
+                                border-radius: 15px;
+                                font-size: 14px;
+
+                                max-height: 27px;
+                                overflow: hidden;
+                            }
+                            .name {
+                                display: inline-block;
+                                max-height: 27px;
+                                overflow: hidden;
+                            }
+                            .like {
+                                display: inline-block;
+                            }
                         }
 
                         .bot-text {
@@ -3370,7 +3394,7 @@ $link_hover_color: #fff;
                                 float: right;
                                 margin-top: 5px;
                             }
-
+                            
                             .star-rating {
                                 float: right;
                                 width: 139px;
@@ -3511,9 +3535,11 @@ $link_hover_color: #fff;
                                     background: $font-gray;
                                 }
                             }
-
+                            .time {
+                                display: inline-block;
+                            }
                             .star-rated-tag {
-                                float: right;
+                                display: inline-block;
 
                                 .star-rating {
                                     display: flex;
@@ -4027,6 +4053,7 @@ $link_hover_color: #fff;
                                     .info-wrapper {
                                         padding-left: 5rem;
                                         padding-top: .6rem;
+                                        color: $font-dark;
                                     }
                                 }
                             }
@@ -4406,6 +4433,16 @@ $link_hover_color: #fff;
                                             border-color: $pink;
                                         }
                                     }
+                                                    
+                                    &#plyr-btn-m {
+                                        background: #8d0000;
+                                        color: $font-w;
+
+                                        &:hover {
+                                            background-color: #d40909;
+                                        }
+
+                                    }
                                 }
 
                                 .panel-cont {
@@ -4575,6 +4612,9 @@ $link_hover_color: #fff;
 
     width: 100%;
     height: 100vh;
+
+    overflow: scroll;
+
     top: 0;
     right: 0;
 
@@ -4594,14 +4634,22 @@ $link_hover_color: #fff;
         visibility: visible;
         opacity: 1;
     }
-
+    @media (max-width: 1150px) {
+        display: block;
+        height: unset;
+    }
     .plyrlist-container {
 
         position: relative;
         display: flex;
-        width: 90%;
+        width: 100%;
         height: 600px;
         justify-content: center;
+
+        @media (max-width: 1150px) {
+                display: block;
+                height: unset;
+            }
 
         .plyr-container {
             flex: .7;
@@ -4611,6 +4659,9 @@ $link_hover_color: #fff;
             video {
                 height: 600px;
             }
+
+            
+
         }
 
         .list-container {
@@ -4620,7 +4671,19 @@ $link_hover_color: #fff;
             overflow: scroll;
             align-items: center;
             border-left: 4px double #ffc24080;
-
+            @media (max-width: 1150px) {
+                border: none;
+                border-top: 4px double #ffc24080;
+            }
+            
+            #exit {
+                @media (max-width: 1150px) {
+                    position: fixed;
+                    right: 1rem;
+                    top: 1rem;
+                    font-size: 30px;
+                }
+            }
             .list-item {
                 width: 100%;
                 color: $font-w;
@@ -4675,6 +4738,7 @@ $link_hover_color: #fff;
 
             #slide-list {
                 display: none;
+
             }
         }
 
