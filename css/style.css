@@ -54,6 +54,9 @@ button {
   background-position: center;
   background-size: cover;
   border-radius: 100%; }
+  .user__photo-150 {
+    height: 150px;
+    width: 150px; }
   .user__photo-70 {
     height: 70px;
     width: 70px; }
@@ -2523,8 +2526,6 @@ button {
               display: inline-block;
               max-height: 27px;
               overflow: hidden; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .like {
-              display: inline-block; }
           .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .bot-text {
             padding-left: 5rem;
             padding-top: 1rem; }
@@ -3753,7 +3754,8 @@ button {
   @media (max-width: 1150px) {
     .popup-video-wrapper {
       display: block;
-      height: unset; } }
+      height: 100%;
+      overflow: scroll; } }
   .popup-video-wrapper .plyrlist-container {
     position: relative;
     display: -webkit-box;
@@ -3766,16 +3768,20 @@ button {
     justify-content: center; }
     @media (max-width: 1150px) {
       .popup-video-wrapper .plyrlist-container {
-        display: block;
-        height: unset; } }
+        display: block; } }
     .popup-video-wrapper .plyrlist-container .plyr-container {
       -webkit-box-flex: .7;
       -ms-flex: .7;
       flex: .7;
       background: #000;
-      margin: 0; }
+      margin: 0;
+      max-height: 600px;
+      overflow: hidden; }
       .popup-video-wrapper .plyrlist-container .plyr-container video {
         height: 600px; }
+        @media (max-width: 1150px) {
+          .popup-video-wrapper .plyrlist-container .plyr-container video {
+            height: 100%; } }
     .popup-video-wrapper .plyrlist-container .list-container {
       -webkit-box-flex: .3;
       -ms-flex: .3;
@@ -3830,6 +3836,27 @@ button {
           transform: rotate(90deg); }
       .popup-video-wrapper .plyrlist-container .list-container #slide-list {
         display: none; }
+
+.lec-info-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; }
+  .lec-info-wrapper .right-part {
+    width: 65%;
+    position: relative;
+    display: inline-block; }
+    .lec-info-wrapper .right-part .index__class {
+      position: relative;
+      width: 100%;
+      margin: 0; }
+      .lec-info-wrapper .right-part .index__class .flex-ls-wrapper {
+        position: relative;
+        width: 100%; }
+  .lec-info-wrapper .left-part {
+    width: 25%;
+    position: relative;
+    display: inline-block; }
 
 footer {
   display: block;

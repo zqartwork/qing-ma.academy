@@ -107,6 +107,11 @@ button {
     background-size: cover;
     border-radius: 100%;
 
+    &-150 {
+        height: 150px;
+        width: 150px;
+    }
+
     &-70 {
         height: 70px;
         width: 70px;
@@ -3139,9 +3144,6 @@ $link_hover_color: #fff;
                                 max-height: 27px;
                                 overflow: hidden;
                             }
-                            .like {
-                                display: inline-block;
-                            }
                         }
 
                         .bot-text {
@@ -4636,7 +4638,8 @@ $link_hover_color: #fff;
     }
     @media (max-width: 1150px) {
         display: block;
-        height: unset;
+        height: 100%;
+        overflow: scroll;
     }
     .plyrlist-container {
 
@@ -4648,16 +4651,20 @@ $link_hover_color: #fff;
 
         @media (max-width: 1150px) {
                 display: block;
-                height: unset;
             }
 
         .plyr-container {
             flex: .7;
             background: #000;
             margin: 0;
+            max-height: 600px;
+            overflow: hidden;
 
             video {
                 height: 600px;
+                @media (max-width: 1150px) {
+                    height: 100%;
+                }
             }
 
             
@@ -4745,6 +4752,39 @@ $link_hover_color: #fff;
 
     }
 
+}
+
+.lec-info-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    .right-part {
+
+        width: 65%;
+        position: relative;
+        display: inline-block;
+
+        .index__class {
+
+            position: relative;
+            width: 100%;
+            margin: 0;
+
+            .flex-ls-wrapper {
+
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+
+    .left-part {
+        width: 25%;
+        position: relative;
+        display: inline-block;
+    }
 }
 
 footer {
