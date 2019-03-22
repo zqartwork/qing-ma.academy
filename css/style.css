@@ -2224,7 +2224,7 @@ button {
             font-size: 25px;
             color: #969696;
             padding-top: 5px; }
-            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.face, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt {
+            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.fb, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt {
               height: 25px;
               width: 25px;
               background-size: cover;
@@ -2233,11 +2233,11 @@ button {
               -webkit-transition: .3s;
               -o-transition: .3s;
               transition: .3s; }
-              .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.face:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt:hover {
+              .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.fb:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt:hover {
                 opacity: 1; }
             .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins {
               background-image: url(../img/icon/ins.png); }
-            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.face {
+            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.fb {
               background-image: url(../img/icon/face.png); }
             .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt {
               background-image: url(../img/icon/yt.png); }
@@ -3840,23 +3840,48 @@ button {
 .lec-info-wrapper {
   width: 70%;
   margin: 0 auto;
-  position: relative;
-  overflow: hidden; }
-  .lec-info-wrapper .right-part {
-    width: 65%;
-    position: relative;
-    display: inline-block; }
-    .lec-info-wrapper .right-part .index__class {
-      position: relative;
-      width: 100%;
-      margin: 0; }
-      .lec-info-wrapper .right-part .index__class .flex-ls-wrapper {
-        position: relative;
-        width: 100%; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
   .lec-info-wrapper .left-part {
-    width: 25%;
-    position: relative;
-    display: inline-block; }
+    -webkit-box-flex: .3;
+    -ms-flex: .3;
+    flex: .3;
+    border: 1px solid red; }
+    .lec-info-wrapper .left-part .info-wrapper-left .info-container {
+      text-align: center; }
+      .lec-info-wrapper .left-part .info-wrapper-left .info-container .name {
+        font-size: 25px;
+        font-weight: 600; }
+      .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .fb,
+      .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .ins,
+      .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .yt {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        background-size: cover;
+        background-position: center;
+        opacity: .5;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .fb:hover,
+        .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .ins:hover,
+        .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .yt:hover {
+          opacity: 1; }
+      .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .fb {
+        background-image: url(../img/icon/face.png); }
+      .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .ins {
+        background-image: url(../img/icon/ins.png); }
+      .lec-info-wrapper .left-part .info-wrapper-left .info-container .btns .yt {
+        background-image: url(../img/icon/yt.png); }
+  .lec-info-wrapper .right-part {
+    -webkit-box-flex: .7;
+    -ms-flex: .7;
+    flex: .7;
+    border: 1px solid red; }
 
 footer {
   display: block;
