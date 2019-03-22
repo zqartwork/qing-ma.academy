@@ -346,7 +346,7 @@
                                         background-image: url(img/lecture/001.jpg);
                                     }
                                 </style>
-                                <div class="play-btn">
+                                <div class="play-btn" id="plyr-btn">
                                     <span class="test"><i class="fas fa-eye"></i> 課程預覽</span>
                                 </div>
                             </div>
@@ -969,7 +969,7 @@
                                 <div class="assignment-square margin-bottom-10 inner-section work">
                                     <div>
                                         <div class="inner-wrapper row works">
-                                            <div class="col-6">
+                                            <a href="assignment.html" target="__blank" class="col-6">
                                                 <div class="as-img"
                                                     style="background-image: url(img/lecture/lec-img-001.jpg);"></div>
                                                 <div class="bot-side">
@@ -982,8 +982,8 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
-                                            <div class="col-6">
+                                            </a>
+                                            <a href="assignment.html" target="__blank" class="col-6">
                                                 <div class="as-img"
                                                     style="background-image: url(img/lecture/lec-img-002.jpg);"></div>
                                                 <div class="bot-side">
@@ -996,10 +996,10 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
+                                            </a>
                                         </div>
                                         <div class="inner-wrapper row works">
-                                            <div class="col-6">
+                                            <a href="assignment.html" target="__blank" class="col-6">
                                                 <div class="as-img"
                                                     style="background-image: url(img/lecture/lec-img-001.jpg);"></div>
                                                 <div class="bot-side">
@@ -1012,8 +1012,8 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
-                                            <div class="col-6">
+                                            </a>
+                                            <a href="assignment.html" target="__blank" class="col-6">
                                                 <div class="as-img"
                                                     style="background-image: url(img/lecture/lec-img-002.jpg);"></div>
                                                 <div class="bot-side">
@@ -1026,7 +1026,7 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
+                                            </a>
                                         </div>
 
                                     </div>
@@ -1052,7 +1052,7 @@
             </div>
         </section>
     </div>
-    <div class="popup-video-wrapper">
+    <div class="popup-video-wrapper" id="popup-v">
         <div class="plyrlist-container">
             <div class="plyr-container">
                 <video controls crossorigin playsinline
@@ -1081,7 +1081,7 @@
             <div class="list-container">
                 <div class="list-item row main">
                     <div class="title-main col-11">美食攝影師：配色、擺盤、光影的視覺饗宴</div>
-                    <div class="title-main col-1 exit"><i class="fas fa-times-circle"></i></div>
+                    <div class="title-main col-1 exit"><i class="fas fa-times-circle" id="exit"></i></div>
                 </div>
                 <a href="#" class="list-item row">
                     <div class="col-2 icon"><i class="fas fa-play"></i></div>
@@ -1102,20 +1102,31 @@
                     </a>
                     <a href="#" class="list-item row">
                         <div class="col-2"></div>
-                        <div class="item col-8">單元一：必須擁有的配備</div>
+                        <div class="item col-8">單元二：必須擁有的配備</div>
                         <div class="col-2 time"> -03:03 </div>
                     </a>
                     <a href="#" class="list-item row">
                         <div class="col-2"></div>
-                        <div class="item col-8">單元一：必須擁有的配備</div>
+                        <div class="item col-8">單元三：必須擁有的配備</div>
                         <div class="col-2 time"> -03:03 </div>
                     </a>
                 </div>
                 <a href="#" class="list-item row">
                     <div class="col-2 icon"><i class="fas fa-lock"></i></div>
-                    <div class="col-8 title">五分鐘課程試看：試播集</div>
+                    <div class="col-8 title">第二章節：成為有美感的平凡人</div>
                     <div class="col-2 time"> -03:03 </div>
                 </a>
+                <a href="#" class="list-item row">
+                    <div class="col-2 icon"><i class="fas fa-lock"></i></div>
+                    <div class="col-8 title">第三章節：成為有美感的平凡人</div>
+                    <div class="col-2 time"> -03:03 </div>
+                </a>
+                <a href="#" class="list-item row">
+                    <div class="col-2 icon"><i class="fas fa-lock"></i></div>
+                    <div class="col-8 title">第四章節：成為有美感的平凡人</div>
+                    <div class="col-2 time"> -03:03 </div>
+                </a>
+
             </div>
         </div>
     </div>
@@ -1178,10 +1189,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
     <script onload="" src="plugins/mmenu/jquery.mmenu.all.js"></script>
     <script src="js/jquery.sticky.js"></script>

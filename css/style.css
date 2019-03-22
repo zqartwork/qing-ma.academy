@@ -3715,7 +3715,15 @@ button {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .popup-video-wrapper.show {
+    visibility: visible;
+    opacity: 1; }
   .popup-video-wrapper .plyrlist-container {
     position: relative;
     display: -webkit-box;
@@ -3750,7 +3758,7 @@ button {
         color: #fff;
         font-weight: 300;
         text-align: left;
-        padding: 20px 15px;
+        padding: 20px 15px 20px 30px;
         cursor: pointer; }
         .popup-video-wrapper .plyrlist-container .list-container .list-item:not(.main):hover, .popup-video-wrapper .plyrlist-container .list-container .list-item:not(.main):focus, .popup-video-wrapper .plyrlist-container .list-container .list-item:not(.main):active {
           background: #ffc240;
