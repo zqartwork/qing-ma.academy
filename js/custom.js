@@ -367,6 +367,7 @@ $('#plyr-btn-start').click(function () {
 
 $('#exit').click(function () {
     $('#popup-v').removeClass('show');
+    $('body').removeClass('noscroll');
 });
 
 $('#slide-btn').click(function () {

@@ -4032,9 +4032,12 @@ button {
     .purchasePop.modal .modal-content .modal-body .price {
       font-family: 'Open Sans';
       font-weight: 900;
-      font-size: 22px;
+      font-size: 28px;
       color: #ac7000;
-      margin-bottom: 10px; }
+      margin-bottom: 0px; }
+    .purchasePop.modal .modal-content .modal-body .name {
+      font-size: 15px;
+      font-weight: 300; }
     .purchasePop.modal .modal-content .modal-body .note {
       font-size: 18px; }
     .purchasePop.modal .modal-content .modal-body #payWay {

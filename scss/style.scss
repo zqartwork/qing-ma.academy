@@ -5040,9 +5040,14 @@ $link_hover_color: #fff;
             .price {
                 font-family: 'Open Sans';
                 font-weight: 900;
-                font-size: 22px;
+                font-size: 28px;
                 color: $brown;
-                margin-bottom: 10px;
+                margin-bottom: 0px;
+            }
+
+            .name {
+                font-size: 15px;
+                font-weight: 300;
             }
 
             .note {
