@@ -12,10 +12,10 @@ $(document).ready(function () {
 
     $('ul#nav ul.sub-menu').css('opacity', 0.0);
     $('ul#nav li').hover(function () {
-        $(this).find('.sub-menu').stop().animate({
-            opacity: 1.0
-        }, 300);
-    },
+            $(this).find('.sub-menu').stop().animate({
+                opacity: 1.0
+            }, 300);
+        },
         function () {
             $(this).find('.sub-menu').stop().animate({
                 opacity: 0.0
@@ -215,31 +215,31 @@ $('.master-main-slider').slick({
     slidesToShow: 5,
     autoplay: true,
     responsive: [{
-        breakpoint: 1150,
-        settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
+            breakpoint: 1150,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
         }
-    }, {
-        breakpoint: 768,
-        settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 3
-        }
-    },
-    {
-        breakpoint: 576,
-        settings: {
-            arrows: false,
-            centerMode: true,
-            centerPadding: '40px',
-            slidesToShow: 1
-        }
-    }
     ]
 
 });
@@ -355,6 +355,10 @@ $('#plyr-btn').click(function () {
 });
 
 $('#plyr-btn-m').click(function () {
+    $('#popup-v').addClass('show');
+});
+
+$('#plyr-btn-start').click(function () {
     $('#popup-v').addClass('show');
 });
 
