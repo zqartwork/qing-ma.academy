@@ -3964,6 +3964,32 @@ button {
       width: 100%; }
       .lec-info-wrapper .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-header .poster {
         background-size: cover; }
+  .lec-info-wrapper .assignment-section {
+    width: 100%;
+    padding: 0 1rem 2rem 1rem; }
+    .lec-info-wrapper .assignment-section .assignment-square {
+      width: 100%;
+      margin: 0; }
+      .lec-info-wrapper .assignment-section .assignment-square .inner-wrapper .col-3 {
+        padding: 0 10px; }
+        .lec-info-wrapper .assignment-section .assignment-square .inner-wrapper .col-3 .as-img {
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 150px;
+          border-radius: 5px;
+          border: 1px solid gray; }
+        .lec-info-wrapper .assignment-section .assignment-square .inner-wrapper .col-3 .bot-side {
+          padding-top: .6rem;
+          position: relative; }
+          .lec-info-wrapper .assignment-section .assignment-square .inner-wrapper .col-3 .bot-side .as-p {
+            position: absolute;
+            top: 10px;
+            left: 0px; }
+          .lec-info-wrapper .assignment-section .assignment-square .inner-wrapper .col-3 .bot-side .info-wrapper {
+            font-weight: 300;
+            padding-left: 4rem;
+            display: inline-block;
+            color: #474747; }
 
 footer {
   display: block;

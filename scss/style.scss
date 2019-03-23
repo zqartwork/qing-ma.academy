@@ -4750,7 +4750,6 @@ $link_hover_color: #fff;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-
     padding-top: 7rem;
 
     @media(max-width: 1150px) {
@@ -4766,12 +4765,8 @@ $link_hover_color: #fff;
         display: block;
     }
 
-
     .left-part {
-
-        flex: .3;
-        // border: 1px solid red;
-
+        flex: .3; // border: 1px solid red;
 
         @media(max-width: 1150px) {
             flex: .3;
@@ -4787,12 +4782,10 @@ $link_hover_color: #fff;
         }
 
         .info-wrapper-left {
-
             padding: 0rem .5rem;
             margin-bottom: 20px;
 
             .container {
-
                 // border: 1px solid red;
                 background: #fff;
                 border-radius: 5px;
@@ -4841,22 +4834,18 @@ $link_hover_color: #fff;
 
                 .c-info-container {
                     // border: 1px solid red;
-
                     width: 80%;
                     margin: 1rem auto;
                     font-weight: 300;
 
                     .row {
                         .col-6 {
-
                             .title {
                                 display: block;
-
                             }
 
                             .num {
                                 display: block;
-
                                 font-family: 'Open Sans';
                                 font-size: 25px;
                             }
@@ -4866,15 +4855,13 @@ $link_hover_color: #fff;
                             }
                         }
                     }
-
                 }
             }
         }
     }
 
     .right-part {
-        flex: .7;
-        // border: 1px solid red;
+        flex: .7; // border: 1px solid red;
 
         @media(max-width: 1150px) {
             flex: .7;
@@ -4889,7 +4876,6 @@ $link_hover_color: #fff;
         }
 
         .info-wrapper-right {
-
             // border: 1px solid red;
             padding: 0rem .5rem;
 
@@ -4897,7 +4883,6 @@ $link_hover_color: #fff;
 
                 // border: 1px solid red;
                 .intro-doc {
-
                     min-height: 392px;
                     background: #fff;
                     padding: .5rem 2rem 2rem 2rem;
@@ -4911,27 +4896,14 @@ $link_hover_color: #fff;
                 }
 
                 .product-container {
-
-                    padding: .5rem 2rem 2rem 2rem;
-                    // border: 1px solid red;
+                    padding: .5rem 2rem 2rem 2rem; // border: 1px solid red;
 
                     .course-wrapper {
                         // border: 1px solid red;
-
-
-
-
-
                     }
-
                 }
-
-
             }
-
-
         }
-
     }
 
     .index__class {
@@ -4960,7 +4932,54 @@ $link_hover_color: #fff;
         }
     }
 
-    .assignment-section {}
+    .assignment-section {
+        width: 100%;
+        // border: 1px solid red;
+        padding: 0 1rem 2rem 1rem;
+
+        .assignment-square {
+            width: 100%;
+
+            // border: 1px solid red;
+            margin: 0;
+
+            .inner-wrapper {
+
+                // border: 1px solid red;
+
+                .col-3 {
+                    padding: 0 10px;
+
+                    .as-img {
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        height: 150px;
+                        border-radius: 5px;
+                        border: 1px solid gray;
+                    }
+
+                    .bot-side {
+                        padding-top: .6rem;
+                        position: relative;
+
+                        .as-p {
+                            position: absolute;
+                            top: 10px;
+                            left: 0px;
+                        }
+
+                        .info-wrapper {
+                            font-weight: 300;
+                            padding-left: 4rem;
+                            display: inline-block;
+                            color: #474747;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 }
 
 footer {
