@@ -271,7 +271,7 @@
         </nav>
 
         <!-- 講師資訊主體 -->
-        <div class="lec-info-wrapper">
+        <div class="main-info-wrapper">
             <div class="left-part">
                 <div class="info-wrapper-left">
                     <div class="container">
@@ -330,6 +330,10 @@
                     <h3 class="title">已開設課程</h3>
                 </div>
                 <div class="flex-ls-wrapper row">
+                    <!-- 若是沒有開過課程的狀態 -->
+                    <div class="inner-section-info">
+                        <p>目前尚未開設課程</p>
+                    </div>
                     <!-- 已收藏課程 -->
                     <a class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs" href="index-course.html">
                         <div class="thumb thumb__on">
@@ -409,6 +413,7 @@
                         </div>
 
                     </a>
+                    <!-- 未收藏課程 -->
                     <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
                         <div class="thumb thumb__fund">
                             <ul>
@@ -575,10 +580,14 @@
                 <div class="title-wrapper">
                     <h3 class="title">課程作業</h3>
                 </div>
+                <!-- 若是沒有完成作業的狀態 -->
+                <div class="inner-section-info">
+                    <p>目前尚未完成作業</p>
+                </div>
                 <div class="assignment-square margin-bottom-10 inner-section work">
                     <div>
-                        <div class="inner-wrapper row works">
-                            <div class="col-3">
+                        <div class="inner-wrapper row works flex-wrap">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
                                 <a href="assignment.html" target="__blank">
                                     <div class="as-img" style="background-image: url(img/lecture/lec-img-001.jpg);">
                                     </div>
@@ -596,7 +605,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
                                 <a href="assignment.html" target="__blank">
                                     <div class="as-img" style="background-image: url(img/lecture/lec-img-001.jpg);">
                                     </div>
@@ -614,7 +623,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
                                 <a href="assignment.html" target="__blank">
                                     <div class="as-img" style="background-image: url(img/lecture/lec-img-001.jpg);">
                                     </div>
@@ -632,7 +641,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
                                 <a href="assignment.html" target="__blank">
                                     <div class="as-img" style="background-image: url(img/lecture/lec-img-001.jpg);">
                                     </div>
