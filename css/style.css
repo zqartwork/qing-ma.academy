@@ -3957,7 +3957,8 @@ button {
   .lec-info-wrapper .index__class {
     padding: 0;
     width: 100%;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    padding: 0 1rem; }
     .lec-info-wrapper .index__class .flex-ls-wrapper {
       min-width: unset;
       width: 100%; }

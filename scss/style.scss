@@ -4938,6 +4938,7 @@ $link_hover_color: #fff;
         padding: 0;
         width: 100%;
         margin-bottom: 2rem;
+        padding: 0 1rem;
 
         .title-wrapper {
             // border: 1px solid red;
@@ -4958,6 +4959,8 @@ $link_hover_color: #fff;
             }
         }
     }
+
+    .assignment-section {}
 }
 
 footer {
