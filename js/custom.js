@@ -352,14 +352,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $('#plyr-btn').click(function () {
     $('#popup-v').addClass('show');
+    $('body').addClass('noscroll');
 });
 
 $('#plyr-btn-m').click(function () {
     $('#popup-v').addClass('show');
+    $('body').addClass('noscroll');
 });
 
 $('#plyr-btn-start').click(function () {
     $('#popup-v').addClass('show');
+    $('body').addClass('noscroll');
 });
 
 $('#exit').click(function () {

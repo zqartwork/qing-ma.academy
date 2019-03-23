@@ -37,6 +37,10 @@ body {
     min-width: 375px;
 }
 
+.noscroll {
+    overflow: hidden;
+}
+
 a {
     color: white;
     outline: none;
@@ -2264,7 +2268,7 @@ $link_hover_color: #fff;
         width: 100%;
         height: 400px;
         position: absolute;
-        z-index: -1;
+        z-index: 0;
     }
 
     .row.main-container {
@@ -5008,6 +5012,70 @@ $link_hover_color: #fff;
                     }
                 }
 
+            }
+        }
+    }
+}
+
+.purchasePop.modal {
+
+    .modal-content {
+        width: 100%;
+
+        .modal-header {
+
+            .modal-title {
+                width: 100%;
+                text-align: left;
+
+                border: none;
+                font-size: 18px;
+            }
+        }
+
+        .modal-body {
+            font-size: 20px;
+            font-weight: 500;
+
+            .price {
+                font-family: 'Open Sans';
+                font-weight: 900;
+                font-size: 22px;
+                color: $brown;
+                margin-bottom: 10px;
+            }
+
+            .note {
+                font-size: 18px;
+            }
+
+            #payWay {
+                font-size: 16px;
+                width: 50%;
+                outline: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 5px;
+
+            }
+
+        }
+
+        .modal-footer {
+            .confirm {
+                color: black;
+                background-color: $gold;
+                border-color: $gold;
+                outline: none;
+
+                &:hover {
+                    background-color: $on;
+                }
+
+                &:active,
+                &:focus {
+                    outline: none;
+                }
             }
         }
     }

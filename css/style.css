@@ -12,6 +12,9 @@ body {
   background: #e4e4e4;
   min-width: 375px; }
 
+.noscroll {
+  overflow: hidden; }
+
 a {
   color: white;
   outline: none;
@@ -1869,7 +1872,7 @@ button {
     width: 100%;
     height: 400px;
     position: absolute;
-    z-index: -1; }
+    z-index: 0; }
   .video-main-section .row.main-container {
     margin: 0 auto;
     width: 1185px;
@@ -4015,6 +4018,41 @@ button {
             padding-left: 4rem;
             display: inline-block;
             color: #474747; }
+
+.purchasePop.modal .modal-content {
+  width: 100%; }
+  .purchasePop.modal .modal-content .modal-header .modal-title {
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-size: 18px; }
+  .purchasePop.modal .modal-content .modal-body {
+    font-size: 20px;
+    font-weight: 500; }
+    .purchasePop.modal .modal-content .modal-body .price {
+      font-family: 'Open Sans';
+      font-weight: 900;
+      font-size: 22px;
+      color: #ac7000;
+      margin-bottom: 10px; }
+    .purchasePop.modal .modal-content .modal-body .note {
+      font-size: 18px; }
+    .purchasePop.modal .modal-content .modal-body #payWay {
+      font-size: 16px;
+      width: 50%;
+      outline: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 5px; }
+  .purchasePop.modal .modal-content .modal-footer .confirm {
+    color: black;
+    background-color: #ffc240;
+    border-color: #ffc240;
+    outline: none; }
+    .purchasePop.modal .modal-content .modal-footer .confirm:hover {
+      background-color: #d69200; }
+    .purchasePop.modal .modal-content .modal-footer .confirm:active, .purchasePop.modal .modal-content .modal-footer .confirm:focus {
+      outline: none; }
 
 footer {
   display: block;
