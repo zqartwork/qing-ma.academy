@@ -499,14 +499,14 @@ button {
         border-top: 1px solid lightgray;
         padding-top: 10px;
         font-size: 18px; }
-        #logOut .user__option-wrapper .user__option-modal .modal__footer .logout__btn {
+        #logOut .user__option-wrapper .user__option-modal .modal__footer .signout {
           padding: 5px 10px 5px 12px;
           border-radius: 5px;
           font-family: 'Noto Sans TC';
           border: 1px solid lightgray;
           color: #474747;
           font-size: 16px; }
-          #logOut .user__option-wrapper .user__option-modal .modal__footer .logout__btn i {
+          #logOut .user__option-wrapper .user__option-modal .modal__footer .signout i {
             margin-left: 5px;
             color: #969696;
             font-size: 18px;
@@ -596,7 +596,7 @@ button {
   .search-input :-ms-input-placeholder {
     color: #eee; }
 
-.mmenu-place .logout__btn {
+.mmenu-place .signout {
   display: inline-block;
   padding: 0px 10px 0 12px;
   border-radius: 5px;
@@ -606,7 +606,7 @@ button {
   font-size: 16px;
   background: none;
   cursor: pointer; }
-  .mmenu-place .logout__btn i {
+  .mmenu-place .signout i {
     margin-left: 5px;
     color: #969696;
     font-size: 18px;
@@ -728,7 +728,7 @@ button {
     border-top: 1px solid lightgray;
     padding-top: 25px;
     font-size: 18px; }
-    .mmenu-place .user__option-modal.mm-listitem .modal__footer .logout__btn {
+    .mmenu-place .user__option-modal.mm-listitem .modal__footer .signout {
       display: inline-block;
       padding: 0px 10px 0 12px;
       border-radius: 5px;
@@ -736,7 +736,7 @@ button {
       border: 1px solid lightgray;
       color: #474747;
       font-size: 16px; }
-      .mmenu-place .user__option-modal.mm-listitem .modal__footer .logout__btn i {
+      .mmenu-place .user__option-modal.mm-listitem .modal__footer .signout i {
         margin-left: 5px;
         color: #969696;
         font-size: 18px;
