@@ -477,50 +477,6 @@ button {
             }
 
 
-            //login-search
-            .log-search {
-                display: inline-block;
-                // border: 1px solid red;
-
-                .control {
-                    position: relative;
-                    cursor: pointer;
-                    transition-duration: .3s;
-                    // border: 1px solid red;
-                    left: 0;
-                    top: 0;
-
-                    .btn-material {
-                        position: absolute;
-                        top: -1.5rem;
-                        width: 38px;
-                        height: 38px;
-                        border-radius: 100%;
-                        background: rgba(0, 0, 0, 0.432);
-                        box-sizing: border-box;
-                        outline: 0;
-                        transform-origin: 50%;
-                        transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-                    }
-
-                    .icon-material-search {
-                        position: absolute;
-                        color: #fff;
-                        transition: opacity 0.3s ease-in-out;
-                        top: -1.5rem;
-                        left: 10px;
-                        line-height: 40px;
-                        font-size: 18px;
-                    }
-
-                    &.left-shift-5rem {
-                        right: 13rem;
-                    }
-                }
-
-
-            }
-
         }
     }
 
@@ -549,6 +505,51 @@ button {
         }
     }
 }
+
+//login-search
+.log-search {
+    display: inline-block;
+    // border: 1px solid red;
+
+    .control {
+        position: relative;
+        cursor: pointer;
+        transition-duration: .3s;
+        // border: 1px solid red;
+        left: 0;
+        top: 0;
+
+        .btn-material {
+            position: absolute;
+            top: -1.5rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 100%;
+            background: rgba(0, 0, 0, 0.432);
+            box-sizing: border-box;
+            outline: 0;
+            transform-origin: 50%;
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .icon-material-search {
+            position: absolute;
+            color: #fff;
+            transition: opacity 0.3s ease-in-out;
+            top: -1.5rem;
+            left: 10px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+
+        &.left-shift-5rem {
+            right: 13rem;
+        }
+    }
+
+
+}
+
 
 
 #logOut {
@@ -735,7 +736,9 @@ button {
 
             .btn-material {
                 transform: scale(100);
-                background: -webkit-linear-gradient(left, #a87f33, #00000057);
+                background-image: -webkit-linear-gradient(left, #a87f33, #00000057);
+                background-image: -o-linear-gradient(left, #a87f33, #00000057);
+                background-image: linear-gradient(to right, #a87f33, #00000057);
                 opacity: .7;
                 z-index: unset;
             }
@@ -770,7 +773,7 @@ button {
 .search-input {
     position: absolute;
     top: -1.4rem;
-    right: -18rem;
+    right: -20rem;
     margin: auto;
     pointer-events: none;
     opacity: 0;

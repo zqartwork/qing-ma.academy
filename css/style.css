@@ -325,44 +325,6 @@ button {
                 filter: brightness(0); }
           .nav-before .nav-bar-wrapper .main-menu ul li:hover ul {
             left: 0%; }
-      .nav-before .nav-bar-wrapper .main-menu .log-search {
-        display: inline-block; }
-        .nav-before .nav-bar-wrapper .main-menu .log-search .control {
-          position: relative;
-          cursor: pointer;
-          -webkit-transition-duration: .3s;
-          -o-transition-duration: .3s;
-          transition-duration: .3s;
-          left: 0;
-          top: 0; }
-          .nav-before .nav-bar-wrapper .main-menu .log-search .control .btn-material {
-            position: absolute;
-            top: -1.5rem;
-            width: 38px;
-            height: 38px;
-            border-radius: 100%;
-            background: rgba(0, 0, 0, 0.432);
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            outline: 0;
-            -webkit-transform-origin: 50%;
-            -ms-transform-origin: 50%;
-            transform-origin: 50%;
-            -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-            -o-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-          .nav-before .nav-bar-wrapper .main-menu .log-search .control .icon-material-search {
-            position: absolute;
-            color: #fff;
-            -webkit-transition: opacity 0.3s ease-in-out;
-            -o-transition: opacity 0.3s ease-in-out;
-            transition: opacity 0.3s ease-in-out;
-            top: -1.5rem;
-            left: 10px;
-            line-height: 40px;
-            font-size: 18px; }
-          .nav-before .nav-bar-wrapper .main-menu .log-search .control.left-shift-5rem {
-            right: 13rem; }
   .nav-before.sticky {
     background-color: #474747;
     position: fixed;
@@ -381,6 +343,45 @@ button {
     .nav-before.sticky .log-search > button:hover {
       color: #000;
       border-color: #b39368; }
+
+.log-search {
+  display: inline-block; }
+  .log-search .control {
+    position: relative;
+    cursor: pointer;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
+    left: 0;
+    top: 0; }
+    .log-search .control .btn-material {
+      position: absolute;
+      top: -1.5rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 100%;
+      background: rgba(0, 0, 0, 0.432);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: 0;
+      -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+      transform-origin: 50%;
+      -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      -o-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+    .log-search .control .icon-material-search {
+      position: absolute;
+      color: #fff;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+      top: -1.5rem;
+      left: 10px;
+      line-height: 40px;
+      font-size: 16px; }
+    .log-search .control.left-shift-5rem {
+      right: 13rem; }
 
 #logOut {
   font-family: "Noto Sans TC";
@@ -537,7 +538,10 @@ button {
         -webkit-transform: scale(100);
         -ms-transform: scale(100);
         transform: scale(100);
-        background: -webkit-linear-gradient(left, #a87f33, #00000057);
+        background-image: -webkit-linear-gradient(left, #a87f33, #00000057);
+        background-image: -o-linear-gradient(left, #a87f33, #00000057);
+        background-image: -webkit-gradient(linear, left top, right top, from(#a87f33), to(#00000057));
+        background-image: linear-gradient(to right, #a87f33, #00000057);
         opacity: .7;
         z-index: unset; }
       .navbar.search-active .search-box .control .icon-material-search {
@@ -563,7 +567,7 @@ button {
 .search-input {
   position: absolute;
   top: -1.4rem;
-  right: -18rem;
+  right: -20rem;
   margin: auto;
   pointer-events: none;
   opacity: 0;
