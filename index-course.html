@@ -139,7 +139,7 @@
                 <!-- login-search-part -->
                 <div class="log-search">
                     <div class="search-box">
-                        <div class="control left-shift-5rem">
+                        <div class="control">
                             <div class="btn-material"></div>
                             <span class="material-icons icon-material-search"><i class="fas fa-search"></i></span>
                         </div>
@@ -148,8 +148,6 @@
                             <input class="input-search" placeholder="請輸入關鍵字" type="text">
                         </div>
                     </div>
-                </div>
-                <div class="log-search">
                     <!-- 尚未登入狀態 -->
                     <!-- <button id="logIn">LOGIN</button> -->
                     <!-- 登入狀態 -->
@@ -157,35 +155,37 @@
                         <div class="user__photo user__photo-30"
                             style="background-image:url(img/profile/portrait-005.jpg)"></div>
                         <span>我是會員名稱</span>
-                    </button>
-                    <div class="user__option-wrapper">
-                        <div class="arrow"></div>
-                        <div class="user__option-modal">
-                            <a href="#" class="modal__header row">
-                                <div class="col-3">
-                                    <div class="user__photo user__photo-50"
-                                        style="background-image:url(img/profile/portrait-005.jpg)"></div>
+                        <div class="user__option-wrapper">
+                            <div class="arrow"></div>
+                            <div class="user__option-modal">
+                                <a href="#" class="modal__header row">
+                                    <div class="col-3">
+                                        <div class="user__photo user__photo-50"
+                                            style="background-image:url(img/profile/portrait-005.jpg)"></div>
+                                    </div>
+                                    <div class="user__name col-9">嗨嗨我是餅乾 <i class="fas fa-edit"></i></div>
+                                </a>
+                                <div class="modal__body">
+                                    <ul>
+                                        <li id="point"><a><i class="fas fa-coins"></i>持有點數<span
+                                                    class="num emph">200</span>點
+                                                <i class="fas fa-question-circle" id="tooltip" data="toggle"
+                                                    title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i></a></li>
+                                        <li><a href=""><i class="fas fa-heart"></i>收藏課程</a></li>
+                                        <li><a href=""><i class="far fa-eye"></i>觀看紀錄</a></li>
+                                        <li><a href=""><i class="fas fa-shopping-cart"></i>購買歷程</a></li>
+                                        <li><a href=""><i class="fas fa-file-signature"></i>發佈資訊</a></li>
+                                        <li><a href=""><i class="far fa-handshake"></i>分享資源</a></li>
+                                        <li id="rec"><a href=""><i class="fas fa-award"></i>推薦好友</a></li>
+                                    </ul>
                                 </div>
-                                <div class="user__name col-9">嗨嗨我是餅乾 <i class="fas fa-edit"></i></div>
-                            </a>
-                            <div class="modal__body">
-                                <ul>
-                                    <li id="point"><a><i class="fas fa-coins"></i>持有點數<span class="num emph">200</span>點
-                                            <i class="fas fa-question-circle" id="tooltip" data="toggle"
-                                                title="透過與青馬系列網站互動獲得點數，可以購買課程或商品。"></i></a></li>
-                                    <li><a href=""><i class="fas fa-heart"></i>收藏課程</a></li>
-                                    <li><a href=""><i class="far fa-eye"></i>觀看紀錄</a></li>
-                                    <li><a href=""><i class="fas fa-shopping-cart"></i>購買歷程</a></li>
-                                    <li><a href=""><i class="fas fa-file-signature"></i>發佈資訊</a></li>
-                                    <li><a href=""><i class="far fa-handshake"></i>分享資源</a></li>
-                                    <li id="rec"><a href=""><i class="fas fa-award"></i>推薦好友</a></li>
-                                </ul>
-                            </div>
-                            <div class="modal__footer">
-                                <button class="logout__btn">登出<i class="fas fa-sign-out-alt"></i></button>
+                                <div class="modal__footer">
+                                    <button class="logout__btn">登出<i class="fas fa-sign-out-alt"></i></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+                    </button>
                 </div>
 
                 <!-- mmenu-hamburgur -->
@@ -336,7 +336,7 @@
                 </div>
 
                 <!-- 影片浮動區 購買前 -->
-                <div class="right-part  col-4 wow fadeInDown">
+                <div class="right-part  col-4 ">
                     <div class="video-section-wrapper">
                         <a style="cursor:pointer;">
                             <div class="video-thumb">
@@ -1340,10 +1340,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
     <script onload="" src="plugins/mmenu/jquery.mmenu.all.js"></script>
     <script src="js/jquery.sticky.js"></script>
@@ -1368,6 +1368,9 @@
     </script>
     <!-- search-bar-style -->
     <script>
+        $(document).ready(function () {
+            $('.icon-close').hide();
+        })
         $('.control').click(function () {
             $('.navbar').addClass('search-active');
             $('.input-search').focus();
@@ -1376,7 +1379,6 @@
         $('.icon-close').click(function () {
             $('.navbar').removeClass('search-active');
             $('.icon-close').hide();
-
         });
 
         // // 調整登入按鈕的位置

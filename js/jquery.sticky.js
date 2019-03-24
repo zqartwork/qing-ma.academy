@@ -125,7 +125,6 @@
               .css('position', 'absolute')
               .css('top', '')
               .css('bottom', 0)
-              .css('transition', '.5s')
               .css('z-index', '');
           } else {
             s.stickyElement
