@@ -567,7 +567,7 @@ button {
 .search-input {
   position: absolute;
   top: -1.5rem;
-  right: -18rem;
+  right: -31rem;
   margin: auto;
   pointer-events: none;
   opacity: 0;
@@ -584,12 +584,11 @@ button {
     height: 40px;
     line-height: 40px;
     border: 0;
-    background: transparent;
+    background: none;
     -webkit-appearance: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    outline: 0;
-    padding-left: 2rem; }
+    outline: 0; }
   .search-input ::-webkit-input-placeholder {
     color: #eee; }
   .search-input :-moz-placeholder {
