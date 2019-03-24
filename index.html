@@ -1634,6 +1634,37 @@
         </section>
 
     </div>
+    <!-- 購買後的彈出窗口 -->
+    <!-- Modal -->
+    <div class="purchasePop modal fade" id="purchasePop" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="">您選購的課程資訊如下</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="course-name">美食攝影師：配色、擺盤、光影的視覺饗宴</div>
+                    <div class="name">講師 ADA LIN - <span class="time">課程時間: 7.5 hr</span>
+                    </div>
+                    <div class="price"><span>NT$</span> <span class="num">2,400</span> </div>
+
+                    <div class="note">請選擇付款方式：</div>
+                    <select name="pay-way" id="payWay">
+                        <option value="transfer">ATM 匯款</option>
+                        <option value="credit">信用卡</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary confirm">送出</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-wrapper row">

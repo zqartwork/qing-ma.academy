@@ -1469,6 +1469,12 @@ $link_hover_color: #fff;
 
 .index__class {
     padding-top: 5rem;
+    margin: 2rem 0;
+
+    &.search-page {
+        padding-top: 0rem;
+    }
+
 
     @media(max-width: 576px) {
         padding-top: 3rem;
@@ -1476,6 +1482,8 @@ $link_hover_color: #fff;
 
     &.rec-class-section {
         padding-top: 6rem;
+
+
 
         @media(max-width: 991px) {
             padding-top: 4rem;
@@ -5088,6 +5096,92 @@ $link_hover_color: #fff;
         }
     }
 }
+
+// 搜尋結果頁面樣式
+
+.search-box-wrapper {
+    width: 100%;
+    padding-top: 7rem;
+    // border: 1px solid red;
+
+    .search-box-container {
+
+        // border: 1px solid red;
+
+        max-width: 1130px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        .search-box-bar {
+            // border: 1px solid red;
+            padding: 10px 10px;
+            text-align: center;
+            background: none;
+            width: 100%;
+
+            .search-box-input {
+                background: #fff;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 45px 0 0 45px;
+                outline: none;
+
+                width: 60%;
+
+                &::placeholder {
+                    color: lightgray;
+                }
+            }
+
+            .search-btn {
+                background: $font-gray;
+                border: none;
+                border: 1px solid $font-gray;
+                padding: 10px 15px;
+                border-radius: 0 45px 45px 0;
+
+                color: white;
+            }
+        }
+
+    }
+
+    .search-result-wrapper {
+        margin: 2rem 0;
+        background: lightgray;
+        padding: 2rem 0rem;
+        text-align: left;
+
+        .container {
+            max-width: 1150px;
+            width: 100%;
+
+            .title {
+                font-size: 22px;
+                font-weight: 500;
+
+                .text {
+                    font-weight: 300;
+                    font-size: 16px;
+                    margin-left: 5px;
+                }
+            }
+
+
+            #ty,
+            #filter {
+                padding: 5px 15px;
+                margin: 10px 5px 0 5px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 
 footer {
     display: block;
