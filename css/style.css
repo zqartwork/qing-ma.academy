@@ -734,6 +734,7 @@ button {
     font-size: 18px; }
     .mmenu-place .user__option-modal.mm-listitem .modal__footer .signout {
       display: inline-block;
+      background: none;
       padding: 0px 10px 0 12px;
       border-radius: 5px;
       font-family: 'Noto Sans TC';
