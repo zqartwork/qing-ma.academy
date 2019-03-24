@@ -397,6 +397,7 @@ button {
   padding: 5px 12px;
   border-radius: 40px;
   margin-top: .6rem;
+  font-size: 15px;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
@@ -468,7 +469,7 @@ button {
         #logOut .user__option-wrapper .user__option-modal .modal__body i {
           color: #969696;
           width: 25px;
-          font-size: 20px;
+          font-size: 18px;
           margin-right: 8px;
           -webkit-transition: .5s;
           -o-transition: .5s;
