@@ -555,8 +555,8 @@ button {
       .navbar.search-active .search-box .icon-close img {
         position: absolute;
         right: -1.2rem;
-        top: -1.2rem;
-        height: 2rem;
+        top: -0.9rem;
+        height: 1.5rem;
         width: auto; }
       .navbar.search-active .search-box .icon-close:hover {
         -webkit-transform: rotate(0);
@@ -567,7 +567,7 @@ button {
 .search-input {
   position: absolute;
   top: -1.4rem;
-  right: -20rem;
+  right: -18rem;
   margin: auto;
   pointer-events: none;
   opacity: 0;
