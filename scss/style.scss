@@ -2245,13 +2245,23 @@ $link_hover_color: #fff;
 
             .cont {
                 display: inline-block;
+                max-height: 72px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
                 -webkit-line-clamp: 3; // max nb lines to show
                 -webkit-box-orient: vertical;
                 margin-bottom: 1rem;
+
+                &:after {
+                    content: "...";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    padding: 0 5px;
+                }
             }
+
         }
 
         .box__footer {

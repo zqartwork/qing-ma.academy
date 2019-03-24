@@ -1828,6 +1828,7 @@ button {
       padding: 10px 0px; }
     .sub-index-section .sub-index-wrapper .box__body .cont {
       display: inline-block;
+      max-height: 72px;
       overflow: hidden;
       -o-text-overflow: ellipsis;
       text-overflow: ellipsis;
@@ -1835,6 +1836,12 @@ button {
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       margin-bottom: 1rem; }
+      .sub-index-section .sub-index-wrapper .box__body .cont:after {
+        content: "...";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 0 5px; }
     .sub-index-section .sub-index-wrapper .box__footer .continue {
       background: #969696;
       border: none;
