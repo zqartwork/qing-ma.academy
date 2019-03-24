@@ -2307,6 +2307,7 @@ $link_hover_color: #fff;
 
         .left-part {
             padding: 0 15px;
+            height: 100%;
         }
 
         .right-part {
@@ -2732,42 +2733,13 @@ $link_hover_color: #fff;
                         }
                     }
 
-                    .car {
+                    .more-info {
                         display: inline-block;
-                        min-width: auto;
-                        font-size: 0px;
-                        margin-left: 10px; // border: 1px solid red;
-
-                        a {
-                            color: $font-bk;
-                            padding: 0 1px;
-                            opacity: .5;
-                            transition: .3s;
-                            font-size: 18px;
-
-                            @media (max-width: 425px) {
-                                font-size: 15px;
-                            }
-
-                            &:hover {
-                                opacity: 1;
-                            }
-                        }
-                    }
-
-                    .about {
-                        display: inline-block;
-                        background: $font-gray;
                         border: none;
                         border-radius: 5px;
                         font-size: 15px;
-                        color: $font-w;
+                        color: $font-dark;
                         padding: 5px 15px;
-                        transition: .3s;
-
-                        &:hover {
-                            background: $font-dark;
-                        }
                     }
 
                     .btns {
