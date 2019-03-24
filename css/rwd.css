@@ -4,7 +4,9 @@
 
 @media (max-width: 1150px) {
   .nav-before .nav-bar-wrapper .main-menu,
-  .log-search {
+  .log-search,
+  #logOut,
+  #logIn {
     display: none; }
   .header {
     float: right;
