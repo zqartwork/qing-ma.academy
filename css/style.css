@@ -4100,56 +4100,6 @@ button {
             display: inline-block;
             color: #474747; }
 
-.purchasePop.modal .modal-content {
-  width: 100%; }
-  .purchasePop.modal .modal-content .modal-header .modal-title {
-    width: 100%;
-    text-align: left;
-    border: none;
-    font-size: 18px; }
-  .purchasePop.modal .modal-content .modal-body {
-    font-size: 20px;
-    font-weight: 500; }
-    .purchasePop.modal .modal-content .modal-body .price {
-      font-family: 'Open Sans';
-      font-weight: 900;
-      font-size: 28px;
-      color: #ac7000;
-      margin-bottom: 0px; }
-      .purchasePop.modal .modal-content .modal-body .price .cn {
-        font-size: 18px;
-        font-weight: 500; }
-      .purchasePop.modal .modal-content .modal-body .price .strike {
-        color: #969696;
-        font-weight: 500;
-        font-size: 18px;
-        text-decoration: line-through; }
-    .purchasePop.modal .modal-content .modal-body .name {
-      font-size: 15px;
-      font-weight: 300; }
-    .purchasePop.modal .modal-content .modal-body .notice {
-      font-size: 15px;
-      font-weight: 300;
-      color: #b90000; }
-    .purchasePop.modal .modal-content .modal-body .note {
-      font-size: 18px; }
-    .purchasePop.modal .modal-content .modal-body #payWay {
-      font-size: 16px;
-      width: 50%;
-      outline: none;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      padding: 5px; }
-  .purchasePop.modal .modal-content .modal-footer .confirm {
-    color: black;
-    background-color: #ffc240;
-    border-color: #ffc240;
-    outline: none; }
-    .purchasePop.modal .modal-content .modal-footer .confirm:hover {
-      background-color: #d69200; }
-    .purchasePop.modal .modal-content .modal-footer .confirm:active, .purchasePop.modal .modal-content .modal-footer .confirm:focus {
-      outline: none; }
-
 .search-box-wrapper {
   width: 100%;
   padding-top: 7rem; }
@@ -6790,6 +6740,108 @@ button {
                 padding-left: 2rem; }
               .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row .playlist ul li ol li.col-2 {
                 text-align: center; }
+
+.videoModal {
+  padding: 0rem 0 0 0;
+  margin: 0;
+  width: 100%;
+  padding-right: 20px !important;
+  z-index: 9999; }
+  .videoModal .modal-dialog {
+    max-width: 100%;
+    width: 957px; }
+    @media (max-width: 960px) {
+      .videoModal .modal-dialog {
+        width: 90%; } }
+    @media (max-width: 576px) {
+      .videoModal .modal-dialog {
+        width: 100%; } }
+    .videoModal .modal-dialog .modal-content {
+      width: 100%; }
+      .videoModal .modal-dialog .modal-content .modal-header {
+        width: 100%;
+        padding: 0; }
+        .videoModal .modal-dialog .modal-content .modal-header .close {
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin: 0;
+          color: #fff;
+          font-weight: 900; }
+      .videoModal .modal-dialog .modal-content .modal-body {
+        padding: 0; }
+        .videoModal .modal-dialog .modal-content .modal-body .list-container {
+          color: #474747; }
+          .videoModal .modal-dialog .modal-content .modal-body .list-container a {
+            color: #474747; }
+          .videoModal .modal-dialog .modal-content .modal-body .list-container .list-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid #d3d3d38e; }
+            .videoModal .modal-dialog .modal-content .modal-body .list-container .list-item .title-main {
+              font-weight: 700;
+              font-size: 18px; }
+            .videoModal .modal-dialog .modal-content .modal-body .list-container .list-item .title .chevron {
+              -webkit-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
+              -webkit-transition: .3s;
+              -o-transition: .3s;
+              transition: .3s; }
+              .videoModal .modal-dialog .modal-content .modal-body .list-container .list-item .title .chevron.active {
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg); }
+
+.purchasePop.modal .modal-content {
+  width: 100%; }
+  .purchasePop.modal .modal-content .modal-header .modal-title {
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-size: 18px; }
+  .purchasePop.modal .modal-content .modal-body {
+    font-size: 20px;
+    font-weight: 500; }
+    .purchasePop.modal .modal-content .modal-body .price {
+      font-family: 'Open Sans';
+      font-weight: 900;
+      font-size: 28px;
+      color: #ac7000;
+      margin-bottom: 0px; }
+      .purchasePop.modal .modal-content .modal-body .price .cn {
+        font-size: 18px;
+        font-weight: 500; }
+      .purchasePop.modal .modal-content .modal-body .price .strike {
+        color: #969696;
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: line-through; }
+    .purchasePop.modal .modal-content .modal-body .name {
+      font-size: 15px;
+      font-weight: 300; }
+    .purchasePop.modal .modal-content .modal-body .notice {
+      font-size: 15px;
+      font-weight: 300;
+      color: #b90000; }
+    .purchasePop.modal .modal-content .modal-body .note {
+      font-size: 18px; }
+    .purchasePop.modal .modal-content .modal-body #payWay {
+      font-size: 16px;
+      width: 50%;
+      outline: none;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 5px; }
+  .purchasePop.modal .modal-content .modal-footer .confirm {
+    color: black;
+    background-color: #ffc240;
+    border-color: #ffc240;
+    outline: none; }
+    .purchasePop.modal .modal-content .modal-footer .confirm:hover {
+      background-color: #d69200; }
+    .purchasePop.modal .modal-content .modal-footer .confirm:active, .purchasePop.modal .modal-content .modal-footer .confirm:focus {
+      outline: none; }
 
 footer {
   display: block;
