@@ -280,6 +280,7 @@ $lines-to-show: 3;
                         position: absolute;
                         right: 15px;
                         bottom: 15px;
+                        font-size: 0;
 
                         span {
                             display: inline-block;
@@ -290,8 +291,11 @@ $lines-to-show: 3;
                     &__on, &__free {
                         border-color: $red;
 
-                        .price span {
-                            font-size: 23px;
+                        .price {
+                            font-size: 0;
+                            span {
+                                font-size: 23px;
+                            }
                         }
 
                         .cont {

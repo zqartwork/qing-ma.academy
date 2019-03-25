@@ -1438,8 +1438,10 @@ button {
             font-size: 22px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb__on {
           border-color: #d69200; }
-          .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span {
-            font-size: 28px; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .price {
+            font-size: 0; }
+            .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span {
+              font-size: 28px; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont {
             max-height: 31px;
             overflow: hidden; }
@@ -1669,15 +1671,17 @@ button {
 
 .free-class-section.index__class .flex-ls-wrapper .class-thumb .thumb-body .cont,
 .free-class-section.index__class .flex-ls-wrapper .class-thumb .thumb-body .name {
-  max-height: 31px;
+  max-height: 25px;
   overflow: hidden; }
 
-.free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
-  color: #969696;
-  font-size: 22px; }
-  @media (max-width: 576px) {
-    .free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
-      color: #969696 !important; } }
+.free-class-section.index__class .flex-ls-wrapper .class-thumb .price {
+  font-size: 0; }
+  .free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
+    color: #969696;
+    font-size: 22px; }
+    @media (max-width: 576px) {
+      .free-class-section.index__class .flex-ls-wrapper .class-thumb .price span {
+        color: #969696 !important; } }
 
 .master-section {
   text-align: center;
@@ -2165,6 +2169,11 @@ button {
                 display: inline-block; }
         .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-tag span {
           margin-right: 10px; }
+        .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-bought {
+          padding: 1rem 0;
+          font-size: 0; }
+          .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-bought span {
+            font-size: 20px; }
         .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-price {
           font-family: 'Open Sans';
           font-size: 35px;
@@ -2283,7 +2292,8 @@ button {
           border-radius: 5px;
           font-size: 15px;
           color: #474747;
-          padding: 5px 15px; }
+          padding: 5px 15px;
+          margin: 10px 0; }
         .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns {
           display: inline-block;
           position: relative;
@@ -3644,6 +3654,11 @@ button {
                   display: inline-block; }
           .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-tag span {
             margin-right: 10px; }
+          .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought {
+            padding: 1rem 0;
+            font-size: 0; }
+            .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought span {
+              font-size: 20px; }
           .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-price {
             font-family: 'Open Sans';
             font-size: 35px;

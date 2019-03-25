@@ -1729,10 +1729,14 @@ $link_hover_color: #fff;
                 &__on {
                     border-color: $on;
 
-                    .price span {
-                        font-size: 28px;
-                    }
-
+                    .price{
+                        font-size: 0;
+                        span {
+                            font-size: 28px;
+                        }
+    
+                    } 
+                    
                     .cont {
                         max-height: 31px;
                         overflow: hidden;
@@ -2053,18 +2057,22 @@ $link_hover_color: #fff;
 
         .cont,
         .name {
-            max-height: 31px;
+            max-height: 25px;
             overflow: hidden;
         }
     }
 
-    .price span {
-        color: #969696;
-        font-size: 22px;
-
-        @media(max-width: 576px) {
-            color: #969696 !important;
+    .price {
+        font-size: 0;
+        span {
+            color: #969696;
+            font-size: 22px;
+    
+            @media(max-width: 576px) {
+                color: #969696 !important;
+            }
         }
+    
     }
 }
 
@@ -2687,6 +2695,14 @@ $link_hover_color: #fff;
                     }
                 }
 
+                .panel-bought {
+                    padding: 1rem 0;
+                    font-size: 0;
+                    span {
+                        font-size: 20px;
+                    }
+                }
+                
                 .panel-price {
                     font-family: 'Open Sans';
                     font-size: 35px;
@@ -2855,6 +2871,7 @@ $link_hover_color: #fff;
                         font-size: 15px;
                         color: $font-dark;
                         padding: 5px 15px;
+                        margin: 10px 0;
                     }
 
                     .btns {
@@ -4534,6 +4551,15 @@ $link_hover_color: #fff;
                                         margin-right: 10px;
                                     }
                                 }
+
+                                .panel-bought {
+                                    padding: 1rem 0;
+                                    font-size: 0;
+                                    span {
+                                        font-size: 20px;
+                                    }
+                                }
+                                
 
                                 .panel-price {
                                     font-family: 'Open Sans';

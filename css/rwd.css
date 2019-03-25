@@ -194,14 +194,17 @@
           display: inline;
           position: absolute;
           right: 15px;
-          bottom: 15px; }
+          bottom: 15px;
+          font-size: 0; }
           .index__class .flex-ls-wrapper .class-thumb .thumb .price span {
             display: inline-block;
             font-size: 22px; }
         .index__class .flex-ls-wrapper .class-thumb .thumb__on, .index__class .flex-ls-wrapper .class-thumb .thumb__free {
           border-color: #b90000; }
-          .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span, .index__class .flex-ls-wrapper .class-thumb .thumb__free .price span {
-            font-size: 23px; }
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .price, .index__class .flex-ls-wrapper .class-thumb .thumb__free .price {
+            font-size: 0; }
+            .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span, .index__class .flex-ls-wrapper .class-thumb .thumb__free .price span {
+              font-size: 23px; }
           .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont, .index__class .flex-ls-wrapper .class-thumb .thumb__free .cont {
             max-height: 31px;
             overflow: hidden; } }
