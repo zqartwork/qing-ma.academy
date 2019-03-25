@@ -6253,6 +6253,36 @@ $link_hover_color: #fff;
                 }
             }
 
+            .tag {
+                .fund-tag {
+                    
+                    .q-tt-1-btn{
+                        position: relative;
+                        .qtt {
+                            opacity: 0;
+                            visibility: hidden;
+                            position: absolute;
+                            bottom: 0;
+                            left: 150%;
+                            background: #000;
+                            width: 200px;
+
+                            padding: 5px 10px 5px 10px;
+                            border-radius: 5px;
+
+                            transition: .3s;
+                            font-size: 13px;
+                        }
+                        &:hover {
+                            .qtt {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+
             .title {
                 font-size: 32px;
                 font-weight: 500;
@@ -6479,6 +6509,34 @@ $link_hover_color: #fff;
                     .fund-tag {
                         color: $brown;
                         font-size: 18px;
+                        .q-tt-1-btn{
+                            position: relative;
+                            .qtt {
+                                opacity: 0;
+                                visibility: hidden;
+                                position: absolute;
+                                bottom: 0;
+                                left: 150%;
+                                background: #000;
+                                width: 200px;
+    
+                                padding: 5px 10px 5px 10px;
+                                border-radius: 5px;
+    
+                                transition: .3s;
+                                font-size: 13px;
+
+                                color: $font-w;
+                            }
+                            &:hover {
+                                .qtt {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+    
+
                     }
                     span {
                         margin-right: 10px;

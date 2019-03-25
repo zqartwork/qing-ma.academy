@@ -4932,6 +4932,25 @@ button {
           .video-main-section.fundpage .row.main-container .course-intro .cata span:hover {
             background: #fff;
             color: black; }
+      .video-main-section.fundpage .row.main-container .course-intro .tag .fund-tag .q-tt-1-btn {
+        position: relative; }
+        .video-main-section.fundpage .row.main-container .course-intro .tag .fund-tag .q-tt-1-btn .qtt {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          bottom: 0;
+          left: 150%;
+          background: #000;
+          width: 200px;
+          padding: 5px 10px 5px 10px;
+          border-radius: 5px;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s;
+          font-size: 13px; }
+        .video-main-section.fundpage .row.main-container .course-intro .tag .fund-tag .q-tt-1-btn:hover .qtt {
+          opacity: 1;
+          visibility: visible; }
       .video-main-section.fundpage .row.main-container .course-intro .title {
         font-size: 32px;
         font-weight: 500;
@@ -5102,6 +5121,26 @@ button {
         .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-tag .fund-tag {
           color: #ac7000;
           font-size: 18px; }
+          .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-tag .fund-tag .q-tt-1-btn {
+            position: relative; }
+            .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-tag .fund-tag .q-tt-1-btn .qtt {
+              opacity: 0;
+              visibility: hidden;
+              position: absolute;
+              bottom: 0;
+              left: 150%;
+              background: #000;
+              width: 200px;
+              padding: 5px 10px 5px 10px;
+              border-radius: 5px;
+              -webkit-transition: .3s;
+              -o-transition: .3s;
+              transition: .3s;
+              font-size: 13px;
+              color: #fff; }
+            .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-tag .fund-tag .q-tt-1-btn:hover .qtt {
+              opacity: 1;
+              visibility: visible; }
         .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-tag span {
           margin-right: 10px; }
         .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-bought {
