@@ -423,7 +423,7 @@
                                         background-image: url(img/lecture/001.jpg);
                                     }
                                 </style>
-                                <div class="play-btn" id="plyr-btn-start">
+                                <div class="play-btn" id="plyr-btn-start"  data-toggle="modal" data-target="#videoModal">
                                     <span class="test"><i class="fas fa-eye"></i> 開始上課</span>
                                 </div>
                             </div>
@@ -463,7 +463,7 @@
                             <div class="panel-bought">
                                 <span class="">[ NT$ 2,400 ] - 已購買課程</span>
                             </div>
-                            <button class="buy" id="plyr-btn"><i class="fas fa-eye"></i> 開始上課</button>
+                            <button class="buy" id="plyr-btn"  data-toggle="modal" data-target="#videoModal"><i class="fas fa-eye"></i> 開始上課</button>
                             <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
                         </div>
                     </div>
@@ -551,7 +551,8 @@
                                         <div class="panel-price">
                                             NT$<span class="num">2,400</span>
                                         </div>
-                                        <button id="plyr-btn-m"><i class="far fa-eye"></i> 課程預覽</button>
+                                        <button id="plyr-btn-m" data-toggle="modal" data-target="#videoModal"><i
+                                                class="far fa-eye"></i> 課程預覽</button>
                                         <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
                                                 class="fas fa-shopping-cart"></i> 立即購買</button>
                                         <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
@@ -622,7 +623,7 @@
                                         <div class="panel-bought">
                                             <span class="">[ NT$ 2,400 ] - 已購買課程</span>
                                         </div>
-                                        <button id="plyr-btn-m"><i class="far fa-eye"></i> 開始上課</button>
+                                        <button id="plyr-btn-m"  data-toggle="modal" data-target="#videoModal"><i class="far fa-eye"></i> 開始上課</button>
                                         <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
                                         <div class="panel-cont">
                                             <div class="sidebar-box">
@@ -1516,6 +1517,8 @@
                     <div class="list-container">
                         <div class="list-item row main">
                             <div class="title-main col-11">美食攝影師：配色、擺盤、光影的視覺饗宴</div>
+                            <span class="notice"> 共 4 個章節 / 15 個單元 / 5 項作業 </span>
+
                         </div>
                         <a href="#" class="list-item row">
                             <div class="col-1 icon"><i class="fas fa-play"></i></div>
@@ -1552,8 +1555,8 @@
                             <div class="col-2 time"> -03:03 </div>
                         </a>
                         <a href="#" class="list-item row">
-                            <div class="col-1 icon"><i class="fas fa-lock"></i></div>
-                            <div class="col-9 title">第三章節：成為有美感的平凡人</div>
+                            <div class="col-1 icon"><i class="far fa-file-alt"></i></div>
+                            <div class="col-9 title">作業一：試著做個簡單的體驗</div>
                             <div class="col-2 time"> -03:03 </div>
                         </a>
                         <a href="#" class="list-item row">
@@ -1566,7 +1569,6 @@
 
                 </div>
                 <div class="modal-footer">
-                    <span class="notice"> 共 4 個章節 / 15 個單元 / 5 項作業 </span>
 
                     <button type="button" class="btn btn-secondary bg-gold">繼續觀看：<span>第三章節</span></button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">離開</button>

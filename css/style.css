@@ -6797,10 +6797,6 @@ button {
       .videoModal .modal-dialog .modal-content .modal-footer {
         position: relative;
         font-size: 0; }
-        .videoModal .modal-dialog .modal-content .modal-footer .notice {
-          position: absolute;
-          left: 20px;
-          font-size: 15px; }
         .videoModal .modal-dialog .modal-content .modal-footer .bg-gold {
           background: #ffc240;
           color: #000;

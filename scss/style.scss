@@ -8610,11 +8610,7 @@ $link_hover_color: #fff;
                 position: relative;
                 font-size: 0;
 
-                .notice {
-                    position: absolute;
-                    left: 20px;
-                    font-size: 15px;
-                }
+                .notice {}
 
                 .bg-gold {
                     background: $gold;
