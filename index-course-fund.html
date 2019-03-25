@@ -283,6 +283,11 @@
         </nav>
 
         <section class="video-main-section fundpage">
+            <style>
+                .video-main-section.fundpage::before {
+                    background-image: url(../img/lecture/lec-img-005.jpg);
+                }
+            </style>
             <div class="row main-container">
 
                 <!-- 簡介區 -->
@@ -358,10 +363,10 @@
                             <div class="video-thumb">
                                 <style>
                                     .video-thumb::before {
-                                        background-image: url(img/lecture/001.jpg);
+                                        background-image: url(img/lecture/lec-img-005.jpg);
                                     }
                                 </style>
-                                <div class="play-btn" id="plyr-btn">
+                                <div class="play-btn" id="plyr-btn" data-toggle="modal" data-target="#popup-v">
                                     <span class="test"><i class="fas fa-eye"></i> 課程預覽</span>
                                 </div>
                             </div>
@@ -423,7 +428,7 @@
                             <div class="video-thumb">
                                 <style>
                                     .video-thumb::before {
-                                        background-image: url(img/lecture/001.jpg);
+                                        background-image: url(img/lecture/lec-img-005.jpg);
                                     }
                                 </style>
                                 <div class="play-btn" id="plyr-btn-start">
@@ -475,7 +480,7 @@
             </div>
         </section>
 
-        <section class="course-content-section">
+        <section class="course-content-section fundpage">
             <div class="course-content-wrapper">
                 <div class="main-container">
 
@@ -649,12 +654,10 @@
                         </div> -->
 
                         <!-- 主要按鈕 -->
-                        <div class="tab-wrapper row inner-section wow fadeInRight">
+                        <div class="tab-wrapper row inner-section wow fadeInRight fundpage">
                             <button class="tablinks" onclick="openTab(event, 'Part1')" id="defaultOpen">課程資訊</button>
-                            <button class="tablinks en" onclick="openTab(event, 'Part2')">Q &
-                                A</button>
-                            <button class="tablinks" onclick="openTab(event, 'Part3')">課程評價</button>
-                            <button class="tablinks" onclick="openTab(event, 'Part4')">作業繳交</button>
+                            <button class="tablinks" onclick="openTab(event, 'Part2')">預計單元</button>
+                            <button class="tablinks en" onclick="openTab(event, 'Part3')">Q & A</button>
                         </div>
 
                         <!-- 第一部分 -->
@@ -766,6 +769,24 @@
 
                         <!-- 第二部分 -->
                         <div id="Part2" class="tabcontent">
+                            <div class="title-b">預計單元</div>
+                            <div class="course-content inner-section">
+                                <div class="sidebar-box">
+                                    <div class="cont box-inner">
+                                        <div class="title">課程簡介</div>
+
+                                        <blockquote>第一主題：生活中的美食攝影</blockquote>
+
+                                        <blockquote>第二主題：生活中的美食攝影</blockquote>
+
+                                    </div>
+                                    <p class="read-more"><a href="#" class="button">Read More</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 第三部分 -->
+                        <div id="Part3" class="tabcontent">
 
                             <div class="qanda ">
 
@@ -947,534 +968,6 @@
                             </div>
                         </div>
 
-                        <!-- 第三部分 -->
-                        <div id="Part3" class="tabcontent">
-                            <div class="rate ">
-
-                                <div class="title-b"> <span> 課程評價 </span> </div>
-
-                                <!-- 尚未有評價 -->
-                                <div class=" rate-square margin-bottom-10 inner-section ">
-                                    <div class="main-rate signin">
-                                        <div class="inner-wrapper signin">
-                                            <div class="text-center">
-                                                <span> 尚未有評價，提供一些對這門課的想法吧！ </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 別人的評價可容五項後換頁 -->
-                                <!-- 別人評價區塊 -->
-                                <div class=" rate-square margin-bottom-10 inner-section">
-                                    <div>
-                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                            style="background-image: url(img/profile/portrait-003.jpg)">
-                                        </div>
-                                        <div class="inner-wrapper">
-                                            <div class="top-text">
-                                                <span class="name">這裡是我的會員名稱</span>
-                                                <span class="time">2019-03-20</span>
-                                                <span class="star-rated-tag">
-                                                    <div class="star-rating">
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 30%;"></span>
-                                                        </div>
-                                                    </div>
-                                                </span>
-
-                                            </div>
-                                            <div class="bot-text">
-                                                <p>這堂課讓我學會很多東西，而且只要在線上就能學習，實在非常幸運。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 別人評價區塊 -->
-                                <div class=" rate-square margin-bottom-10 inner-section">
-                                    <div>
-                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                            style="background-image: url(img/profile/portrait-003.jpg)">
-                                        </div>
-                                        <div class="inner-wrapper">
-                                            <div class="top-text">
-                                                <span class="name">這裡是我的會員名稱</span>
-                                                <span class="time">2019-03-20</span>
-                                                <span class="star-rated-tag">
-                                                    <div class="star-rating">
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 30%;"></span>
-                                                        </div>
-                                                    </div>
-                                                </span>
-
-                                            </div>
-                                            <div class="bot-text">
-                                                <p>這堂課讓我學會很多東西，而且只要在線上就能學習，實在非常幸運。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 別人評價區塊 -->
-                                <div class=" rate-square margin-bottom-10 inner-section">
-                                    <div>
-                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                            style="background-image: url(img/profile/portrait-003.jpg)">
-                                        </div>
-                                        <div class="inner-wrapper">
-                                            <div class="top-text">
-                                                <span class="name">這裡是我的會員名稱</span>
-                                                <span class="time">2019-03-20</span>
-                                                <span class="star-rated-tag">
-                                                    <div class="star-rating">
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 30%;"></span>
-                                                        </div>
-                                                    </div>
-                                                </span>
-
-                                            </div>
-                                            <div class="bot-text">
-                                                <p>這堂課讓我學會很多東西，而且只要在線上就能學習，實在非常幸運。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 別人評價區塊 -->
-                                <div class=" rate-square margin-bottom-10 inner-section">
-                                    <div>
-                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                            style="background-image: url(img/profile/portrait-003.jpg)">
-                                        </div>
-                                        <div class="inner-wrapper">
-                                            <div class="top-text">
-                                                <span class="name">這裡是我的會員名稱</span>
-                                                <span class="time">2019-03-20</span>
-                                                <span class="star-rated-tag">
-                                                    <div class="star-rating">
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 30%;"></span>
-                                                        </div>
-                                                    </div>
-                                                </span>
-
-                                            </div>
-                                            <div class="bot-text">
-                                                <p>這堂課讓我學會很多東西，而且只要在線上就能學習，實在非常幸運。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 別人評價區塊 -->
-                                <div class=" rate-square margin-bottom-10 inner-section">
-                                    <div>
-                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                            style="background-image: url(img/profile/portrait-003.jpg)">
-                                        </div>
-                                        <div class="inner-wrapper">
-                                            <div class="top-text">
-                                                <span class="name">這裡是我的會員名稱</span>
-                                                <span class="time">2019-03-20</span>
-                                                <span class="star-rated-tag">
-                                                    <div class="star-rating">
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 100%;"></span>
-                                                        </div>
-                                                        <div>
-                                                            <span class="star-progress"></span>
-                                                            <span class="star-progress-filled"
-                                                                style="width: 30%;"></span>
-                                                        </div>
-                                                    </div>
-                                                </span>
-
-                                            </div>
-                                            <div class="bot-text">
-                                                <p>這堂課讓我學會很多東西，而且只要在線上就能學習，實在非常幸運。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 頁碼置底 -->
-                                <div class="pagination-wrapper">
-                                    <div aria-label="..." class="container">
-                                        <ul class="pagination">
-                                            <li class="page-item">
-                                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                            </li>
-                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                            <!-- 目前所在的頁數會有 active -->
-                                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item">
-                                                <a class="page-link" href="#">Next</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <!-- 會員主要評價區塊 - 未登入 -->
-                                <div class=" rate-square margin-bottom-10 inner-section ">
-                                    <div class="main-rate signin">
-                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                            style="background-image: url(img/profile/nobody.png)">
-                                        </div>
-                                        <div class="inner-wrapper signin">
-                                            <div class="top-text">
-                                                <button type="submit" class="signin-btn"> 請先登入會員 </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 會員主要評價區塊 - 已登入 -->
-                                <div class=" rate-square margin-bottom-10 inner-section user">
-                                    <div class="main-rate">
-                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                            style="background-image: url(img/profile/portrait-005.jpg)">
-                                        </div>
-                                        <div class="inner-wrapper">
-                                            <div class="top-text">
-                                                <span class="name">我是會員名稱</span>
-                                                <span class="star-rating">
-                                                    <fieldset class="rating">
-                                                        <input type="radio" id="star5" name="rating" value="5" /><label
-                                                            class="full" for="star5" title="非常好 - 5 顆星"></label>
-                                                        <input type="radio" id="star4half" name="rating"
-                                                            value="4 and a half" /><label class="half" for="star4half"
-                                                            title="很好 - 4.5 顆星"></label>
-                                                        <input type="radio" id="star4" name="rating" value="4" /><label
-                                                            class="full" for="star4" title="好 - 4 顆星"></label>
-                                                        <input type="radio" id="star3half" name="rating"
-                                                            value="3 and a half" /><label class="half" for="star3half"
-                                                            title="可 - 3.5 顆星"></label>
-                                                        <input type="radio" id="star3" name="rating" value="3" /><label
-                                                            class="full" for="star3" title="尚可 - 3 顆星"></label>
-                                                        <input type="radio" id="star2half" name="rating"
-                                                            value="2 and a half" /><label class="half" for="star2half"
-                                                            title="普通 - 2.5 顆星"></label>
-                                                        <input type="radio" id="star2" name="rating" value="2" /><label
-                                                            class="full" for="star2" title="偏不好 - 2 顆星"></label>
-                                                        <input type="radio" id="star1half" name="rating"
-                                                            value="1 and a half" /><label class="half" for="star1half"
-                                                            title="不好 - 1.5 顆星"></label>
-                                                        <input type="radio" id="star1" name="rating" value="1" /><label
-                                                            class="full" for="star1" title="很不好 - 1 star"></label>
-                                                        <input type="radio" id="starhalf" name="rating"
-                                                            value="half" /><label class="half" for="starhalf"
-                                                            title="非常不好 - 0.5 顆星"></label>
-                                                    </fieldset>
-                                                </span>
-                                                <span class="note">請評分</span>
-                                            </div>
-                                            <div class="bot-text">
-                                                <textarea name="" id="" cols="50" rows="2"
-                                                    placeholder="請在這裡輸入您對這堂課的看法"></textarea>
-                                            </div>
-                                            <div class="btns">
-                                                <div class="code-wrapper">
-                                                    <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
-                                                    <span class="refresh"><i class="fas fa-sync-alt"></i></span>
-                                                    <input type="text" placeholder="請輸入驗證碼" class="code">
-                                                </div>
-                                                <button type="submit"> 送出 </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <!-- 第四部分 -->
-                        <div id="Part4" class="tabcontent">
-
-                            <div class="assignment ">
-
-                                <div class="title-b"> <span> 作業繳交 </span> </div>
-
-                                <!-- 會員主要作業區塊 - 未登入 -->
-                                <div class="assignment-square margin-bottom-10 inner-section ">
-                                    <div class="main-assignment signin">
-                                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                            style="background-image: url(img/profile/nobody.png)">
-                                        </div>
-                                        <div class="inner-wrapper signin">
-                                            <div class="top-text">
-                                                <button type="submit" class="signin-btn"> 請先登入會員 </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 會員主要作業區塊 - 已登入 -->
-                                <div class="assignment-square margin-bottom-10 inner-section">
-                                    <div class="main-assignment">
-                                        <div class="inner-wrapper">
-                                            <div class="top-text no-p">
-                                                <div class="title">作業標題</div>
-                                                <input type="text" class="assignment-title">
-                                            </div>
-                                            <div class="bot-text no-p">
-                                                <div class="title">作業內容（請將textarea置換成HTML編輯器）</div>
-                                                <textarea name="" id="" cols="50" rows="3"
-                                                    placeholder="請在這裡輸入想回覆的答案"></textarea>
-
-                                                <form action="#">
-                                                    <div class="input-file-container">
-                                                        <input class="input-file" id="my-file" type="file"
-                                                            style="display: none;">
-                                                        <label tabindex="0" for="my-file" class="input-file-trigger"><i
-                                                                class="far fa-file-alt"></i> &nbsp; 選擇作業檔案...</label>
-                                                    </div>
-                                                    <span class="file-return"></span>
-                                                </form>
-
-                                            </div>
-                                            <div class="btns">
-                                                <div class="code-wrapper">
-                                                    <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
-                                                    <span class="refresh"><i class="fas fa-sync-alt"></i></span>
-                                                    <input type="text" placeholder="請輸入驗證碼" class="code">
-                                                </div>
-                                                <button type="submit"> 送出 </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="title-b"> <span> 其他人的作業 </span> </div>
-
-                                <!-- 尚未有人繳交作業 -->
-                                <div class=" rate-square margin-bottom-10 inner-section ">
-                                    <div class="main-rate signin">
-                                        <div class="inner-wrapper signin">
-                                            <div class="text-center">
-                                                <span> 尚未有人繳交作業，繳交關於這門課的專屬作業吧！ </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- 別人作業區塊 -->
-                                <div class="assignment-square margin-bottom-10 inner-section work">
-                                    <div>
-                                        <div class="inner-wrapper row works">
-                                            <div class="col-6">
-                                                <a href="assignment.html" target="__blank">
-                                                    <div class="as-img"
-                                                        style="background-image: url(img/lecture/lec-img-001.jpg);">
-                                                    </div>
-                                                </a>
-
-                                                <div class="bot-side">
-                                                    <a href="infopage.html" target="__blank">
-                                                        <div class="user__photo user__photo-50 as-p"
-                                                            style="background-image: url(img/profile/portrait-005.jpg);">
-                                                        </div>
-                                                    </a>
-                                                    <div class="info-wrapper">
-                                                        <div class="as-title">第一份作業：我的自傳</div>
-                                                        <div class="name">CATHERINE LIANG</div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-6">
-                                                <a href="assignment.html" target="__blank">
-                                                    <div class="as-img"
-                                                        style="background-image: url(img/lecture/lec-img-001.jpg);">
-                                                    </div>
-                                                </a>
-
-                                                <div class="bot-side">
-                                                    <a href="infopage.html" target="__blank">
-                                                        <div class="user__photo user__photo-50 as-p"
-                                                            style="background-image: url(img/profile/portrait-005.jpg);">
-                                                        </div>
-                                                    </a>
-                                                    <div class="info-wrapper">
-                                                        <div class="as-title">第一份作業：我的自傳</div>
-                                                        <div class="name">CATHERINE LIANG</div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="inner-wrapper row works">
-                                            <div class="col-6">
-                                                <a href="assignment.html" target="__blank">
-                                                    <div class="as-img"
-                                                        style="background-image: url(img/lecture/lec-img-001.jpg);">
-                                                    </div>
-                                                </a>
-
-                                                <div class="bot-side">
-                                                    <a href="infopage.html" target="__blank">
-                                                        <div class="user__photo user__photo-50 as-p"
-                                                            style="background-image: url(img/profile/portrait-005.jpg);">
-                                                        </div>
-                                                    </a>
-                                                    <div class="info-wrapper">
-                                                        <div class="as-title">第一份作業：我的自傳</div>
-                                                        <div class="name">CATHERINE LIANG</div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-6">
-                                                <a href="assignment.html" target="__blank">
-                                                    <div class="as-img"
-                                                        style="background-image: url(img/lecture/lec-img-001.jpg);">
-                                                    </div>
-                                                </a>
-
-                                                <div class="bot-side">
-                                                    <a href="infopage.html" target="__blank">
-                                                        <div class="user__photo user__photo-50 as-p"
-                                                            style="background-image: url(img/profile/portrait-005.jpg);">
-                                                        </div>
-                                                    </a>
-                                                    <div class="info-wrapper">
-                                                        <div class="as-title">第一份作業：我的自傳</div>
-                                                        <div class="name">CATHERINE LIANG</div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <!-- 頁碼置底 -->
-                            <div class="pagination-wrapper">
-                                <div aria-label="..." class="container">
-                                    <ul class="pagination">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <!-- 目前所在的頁數會有 active -->
-                                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">Next</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
@@ -1484,7 +977,8 @@
     </div>
     <!-- 彈窗部分 -->
     <!-- 主要影片播放器 -->
-    <div class="popup-video-wrapper" id="popup-v">
+    <div class="popup-video-wrapper" id="popup-v" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
         <div class="plyrlist-container">
             <div class="plyr-container">
                 <video controls crossorigin playsinline
@@ -1513,7 +1007,9 @@
             <div class="list-container">
                 <div class="list-item row main">
                     <div class="title-main col-11">美食攝影師：配色、擺盤、光影的視覺饗宴</div>
-                    <div class="title-main col-1 exit"><i class="fas fa-times-circle" id="exit"></i></div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <a href="#" class="list-item row">
                     <div class="col-2 icon"><i class="fas fa-play"></i></div>
@@ -1562,23 +1058,33 @@
             </div>
         </div>
     </div>
-    <!-- 購買後的彈出窗口 -->
+    <!-- 金流彈出窗口 -->
     <!-- Modal -->
     <div class="purchasePop modal fade" id="purchasePop" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-title" id="">您選購的課程資訊如下</div>
+                    <div class="modal-title" id="">您預購的課程資訊如下</div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="course-name">美食攝影師：配色、擺盤、光影的視覺饗宴</div>
-                    <div class="name">講師 ADA LIN - <span class="time">課程時間: 7.5 hr</span>
+                    <div class="name">講師 ADA LIN - <span class="time">預計開課：2019-04-05</span>
                     </div>
-                    <div class="price"><span>NT$</span> <span class="num">2,400</span> </div>
+                    <div class="notice">
+                        如果募資失敗，將會全數退款。
+                    </div>
+                    <div class="price">
+                        <span class="cn">
+                            預購價格
+                            <i class="fas fa-caret-right"></i>
+                        </span>
+                        <span class="strike">NT$ 2,400</span>
+                        NT$<span class="num">1,600</span>
+                    </div>
 
                     <div class="note">請選擇付款方式：</div>
                     <select name="pay-way" id="payWay">
@@ -1710,6 +1216,50 @@
         $('.fa-question-circle').tooltip({
             placement: 'top'
         });
+    </script>
+    <!-- 倒數計時器 -->
+    <script>
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 60);
+            var minutes = Math.floor((t / 1000 / 60) % 60);
+            var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeClock(id, endtime) {
+            var clock = document.getElementById(id);
+            var daysSpan = clock.querySelector('.days');
+            var hoursSpan = clock.querySelector('.hours');
+            var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+                minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }
+
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+        initializeClock('clockdiv', deadline);
     </script>
     <script src="js/custom.js"></script>
 </body>

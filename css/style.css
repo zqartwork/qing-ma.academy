@@ -1944,7 +1944,6 @@ button {
   justify-content: center; }
   .video-main-section::before {
     content: '';
-    background-image: url(../img/lecture/001.jpg);
     background-size: cover;
     background-position: center;
     -webkit-filter: brightness(0.3);
@@ -2472,6 +2471,8 @@ button {
         max-height: 185px; }
       .course-content-section .course-content-wrapper .main-container .inner-section.course-content .sidebar-box {
         max-height: 500px; }
+      .course-content-section .course-content-wrapper .main-container .inner-section.course-content ul li {
+        list-style-type: disc !important; }
       .course-content-section .course-content-wrapper .main-container .inner-section.course-problem {
         margin-bottom: 2.36rem; }
         .course-content-section .course-content-wrapper .main-container .inner-section.course-problem .sidebar-box {
@@ -4115,9 +4116,21 @@ button {
       font-size: 28px;
       color: #ac7000;
       margin-bottom: 0px; }
+      .purchasePop.modal .modal-content .modal-body .price .cn {
+        font-size: 18px;
+        font-weight: 500; }
+      .purchasePop.modal .modal-content .modal-body .price .strike {
+        color: #969696;
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: line-through; }
     .purchasePop.modal .modal-content .modal-body .name {
       font-size: 15px;
       font-weight: 300; }
+    .purchasePop.modal .modal-content .modal-body .notice {
+      font-size: 15px;
+      font-weight: 300;
+      color: #b90000; }
     .purchasePop.modal .modal-content .modal-body .note {
       font-size: 18px; }
     .purchasePop.modal .modal-content .modal-body #payWay {
@@ -5217,6 +5230,1566 @@ button {
             .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-cont li i {
               width: 25px;
               padding-left: 3px; }
+
+.course-content-section.fundpage {
+  width: 100%; }
+  .course-content-section.fundpage .course-content-wrapper .main-container {
+    margin: 0 auto;
+    width: 1150px; }
+    @media (max-width: 1215px) {
+      .course-content-section.fundpage .course-content-wrapper .main-container {
+        max-width: 90%; } }
+    @media (max-width: 700px) {
+      .course-content-section.fundpage .course-content-wrapper .main-container {
+        max-width: 95%;
+        padding: 0 15px; } }
+    @media (max-width: 675px) {
+      .course-content-section.fundpage .course-content-wrapper .main-container {
+        max-width: 100%; } }
+    @media (max-width: 425px) {
+      .course-content-section.fundpage .course-content-wrapper .main-container {
+        padding: 10px; } }
+    .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info {
+      height: 100px;
+      font-size: 30px;
+      color: #474747; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .teacher-photo {
+        position: relative;
+        top: -25%;
+        left: 0%; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .teacher-photo::before {
+          position: absolute;
+          content: '';
+          height: 140px;
+          width: 140px;
+          background-size: cover;
+          background-position: center;
+          border-radius: 5px;
+          border: 3px solid #fff; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont {
+        padding-left: 10rem;
+        width: 100%;
+        font-size: 0px; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .name {
+          display: inline-block;
+          font-weight: 600;
+          padding-top: .5rem;
+          font-size: 30px; }
+          @media (max-width: 425px) {
+            .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .name {
+              display: block;
+              font-size: 25px;
+              width: 100%;
+              margin-bottom: -1rem; } }
+        .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .more-info {
+          display: inline-block;
+          border: none;
+          border-radius: 5px;
+          font-size: 15px;
+          color: #474747;
+          padding: 5px 15px;
+          margin: 10px 0; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns {
+          display: inline-block;
+          position: relative;
+          margin-top: 5px; }
+          @media (max-width: 425px) {
+            .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns {
+              display: block;
+              margin-top: -5px;
+              width: 100%; } }
+          .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a {
+            display: inline-block;
+            min-width: auto;
+            font-size: 25px;
+            color: #969696;
+            padding-top: 5px;
+            margin-right: 10px; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.ins, .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.fb, .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.yt {
+              height: 25px;
+              width: 25px;
+              background-size: cover;
+              background-position: center;
+              opacity: .5;
+              -webkit-transition: .3s;
+              -o-transition: .3s;
+              transition: .3s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.ins:hover, .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.fb:hover, .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.yt:hover {
+                opacity: 1; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.ins {
+              background-image: url(../img/icon/ins.png); }
+            .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.fb {
+              background-image: url(../img/icon/face.png); }
+            .course-content-section.fundpage .course-content-wrapper .main-container .teacher-info .cont .btns a.yt {
+              background-image: url(../img/icon/yt.png); }
+    .course-content-section.fundpage .course-content-wrapper .main-container .tabcontent {
+      -webkit-animation: fadeInDown 1s;
+      animation: fadeInDown 1s; }
+    .course-content-section.fundpage .course-content-wrapper .main-container .title {
+      color: #474747;
+      font-weight: 600;
+      font-size: 25px;
+      margin-top: 1rem;
+      margin-left: 0rem; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .title-b {
+        text-align: center;
+        background: #474747;
+        color: #fff;
+        padding: .5rem 0;
+        font-weight: 600;
+        font-size: 25px;
+        margin-top: 1rem;
+        margin-left: 0rem; }
+    .course-content-section.fundpage .course-content-wrapper .main-container .inner-section {
+      background: #fff;
+      color: #474747;
+      font-size: 16px;
+      font-weight: 300;
+      text-align: left;
+      width: 100%;
+      position: relative;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 5px; }
+      @media (max-width: 425px) {
+        .course-content-section.fundpage .course-content-wrapper .main-container .inner-section {
+          border-radius: 0 0 0 0; } }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section .title {
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 10px; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section img {
+        width: 100%; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section blockquote {
+        border-left: 5px solid #ffc240;
+        margin: 15px 0;
+        padding: 0px 20px;
+        font-size: 18px;
+        font-weight: 500; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .inner-section blockquote p {
+          font-size: .8em !important; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section p {
+        line-height: 1.8;
+        font-weight: 300; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section pre {
+        font-size: 14px;
+        line-height: 1.8em;
+        margin: 24px 0;
+        padding: 8px 16px;
+        border-radius: 0;
+        border: 0;
+        background-color: #e4e4e4; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section a {
+        color: #ac7000;
+        font-weight: 500;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .inner-section a:hover {
+          color: #d69200; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section .Q {
+        font-weight: 500;
+        font-size: 18px;
+        margin: 10px 0; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section .sidebar-box {
+        position: relative;
+        overflow: hidden; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .inner-section .sidebar-box .read-more {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 20px 0;
+          /* "transparent" only works here because == rgba(0,0,0,0) */
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+          background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+          background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);
+          background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), white);
+          background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), white); }
+          .course-content-section.fundpage .course-content-wrapper .main-container .inner-section .sidebar-box .read-more a.button {
+            display: inline-block;
+            margin-top: 20px;
+            font-family: 'Open Sans';
+            color: #474747;
+            border-radius: 5px;
+            border: 1px solid #474747;
+            padding: 3px 10px;
+            font-weight: 800; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .inner-section .sidebar-box .sub-title {
+          font-weight: 600; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .inner-section .sidebar-box .inner {
+          padding: 10px 0; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background: none;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0; }
+        @media (max-width: 425px) {
+          .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper {
+            margin-top: 0;
+            border-radius: 0 0 0 0; } }
+        .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper button {
+          padding: 10px;
+          width: 33.333333%;
+          background: #fff;
+          color: #474747;
+          font-weight: 500;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border: none;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper button:first-child {
+            border-radius: 5px 0px 0px 5px; }
+            @media (max-width: 425px) {
+              .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper button:first-child {
+                border-radius: 0 0 0 0; } }
+          .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper button:last-child {
+            border-radius: 0px 5px 5px 0px; }
+            @media (max-width: 425px) {
+              .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper button:last-child {
+                border-radius: 0 0 0 0; } }
+          .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper button:hover {
+            background: #4e4e4e2c; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.tab-wrapper button.active {
+            background: #474747;
+            color: #fff; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.prepare .sidebar-box {
+        max-height: 185px; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.course-content .sidebar-box {
+        max-height: 500px; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.course-problem {
+        margin-bottom: 2.36rem; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .inner-section.course-problem .sidebar-box {
+          max-height: 200px; }
+    .course-content-section.fundpage .course-content-wrapper .main-container .qanda {
+      margin-bottom: 1rem; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square {
+        padding: 2rem 2rem; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda {
+          padding-top: 0rem;
+          padding-bottom: 3.5rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda.signin {
+            padding-bottom: .7rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda.signin .inner-wrapper.signin {
+              margin-bottom: 0rem; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda.signin .inner-wrapper.signin .top-text {
+                padding-top: .8rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns {
+            width: 100%;
+            margin-top: .7rem;
+            padding-left: 4.5rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code-wrapper {
+              width: 100%;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns button {
+              float: right;
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns input.code {
+              width: 30%;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .signin-btn {
+              float: left; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .qa-pic {
+          position: absolute;
+          z-index: 1; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper {
+          margin-bottom: 2rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text {
+            padding-left: 5rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text span {
+              margin-right: 10px; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .signin-btn {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .signin-btn:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .time {
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .name_teacher {
+              display: inline-block;
+              background: #474747;
+              color: #fff;
+              padding: 3px 15px;
+              border-radius: 15px;
+              font-size: 14px;
+              max-height: 27px;
+              overflow: hidden; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .top-text .name {
+              display: inline-block;
+              max-height: 27px;
+              overflow: hidden; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .inner-wrapper .bot-text {
+            padding-left: 5rem;
+            padding-top: 1rem; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .hr {
+          border-top: 1px solid lightgray; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply {
+          padding-top: 2rem;
+          padding-bottom: 3.5rem;
+          display: none; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btn-wrapper {
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns {
+            width: 100%;
+            margin-top: .7rem;
+            float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square #reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply {
+          padding-top: 2rem;
+          padding-bottom: 1rem;
+          padding: 2rem 1rem 1rem 5rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btn-wrapper {
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns {
+            width: 100%;
+            margin-top: .7rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .reply-wrapper {
+          padding: 1rem 0; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .qanda .qanda-square .reply-wrapper a#reply-btn {
+            cursor: pointer;
+            float: right; }
+    .course-content-section.fundpage .course-content-wrapper .main-container .rate {
+      margin-bottom: 1rem; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square {
+        padding: 2rem 2rem 1.5rem 2rem; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square.user {
+          padding-bottom: 3rem; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate {
+          padding-top: 0rem;
+          padding-bottom: 3.5rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate.signin {
+            padding-bottom: .7rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate.signin .inner-wrapper.signin {
+              margin-bottom: 0rem; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate.signin .inner-wrapper.signin .top-text {
+                padding-top: .8rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .note {
+            display: block;
+            float: right;
+            margin-top: 5px; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating {
+            float: right;
+            width: 139px;
+            /***** CSS Magic to Highlight Stars on Hover *****/
+            /* hover previous stars in list */ }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating {
+              border: none; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input {
+              display: none; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > label:before {
+              margin: 3px;
+              font-size: 1.2em;
+              font-family: 'Font Awesome 5 Free';
+              display: inline-block;
+              content: "\f005";
+              font-weight: 900; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > .half:before {
+              content: "\f089";
+              position: absolute; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > label {
+              color: #ddd;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating:not(:checked) > label:hover,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating:not(:checked) > label:hover ~ label {
+              color: #ffc240; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked + label:hover,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label:hover,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > label:hover ~ input:checked ~ label,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label:hover ~ label {
+              color: #ffcb5c; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns {
+            width: 100%;
+            margin-top: .7rem;
+            padding-left: 4.5rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code-wrapper {
+              width: 100%;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns button {
+              float: right;
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns input.code {
+              width: 30%;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .signin-btn {
+              float: left; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .qa-pic {
+          position: absolute;
+          z-index: 1; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text {
+          padding-left: 5rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text span {
+            margin-right: 10px; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .signin-btn {
+            background: #e4e4e4;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-left: 10px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .signin-btn:hover {
+              background: #969696; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .time {
+            display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag {
+            display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              font-size: 16px;
+              -webkit-box-pack: start;
+              -ms-flex-pack: start;
+              justify-content: flex-start;
+              width: 100%; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div {
+                position: relative;
+                display: inline-block; }
+                .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div .star-progress {
+                  position: relative;
+                  margin-right: 5px; }
+                  .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div .star-progress::before {
+                    font-family: 'Font Awesome 5 Free';
+                    content: '\f005';
+                    color: lightgray;
+                    font-weight: 900;
+                    z-index: 0;
+                    position: relative;
+                    display: inline-block; }
+                .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div .star-progress-filled {
+                  position: absolute;
+                  overflow: hidden;
+                  top: 0;
+                  left: 0;
+                  margin: 0; }
+                  .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .top-text .star-rated-tag .star-rating div .star-progress-filled::before {
+                    font-family: 'Font Awesome 5 Free';
+                    content: '\f005';
+                    color: #ffc240;
+                    font-weight: 900;
+                    z-index: 1;
+                    position: relative;
+                    display: inline-block; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .inner-wrapper .bot-text {
+          padding-left: 5rem;
+          padding-top: 1rem; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .hr {
+          border-top: 1px solid lightgray; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply {
+          padding-top: 2rem;
+          padding-bottom: 3.5rem;
+          display: none; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btn-wrapper {
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns {
+            width: 100%;
+            margin-top: .7rem;
+            float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square #reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply {
+          padding-top: 2rem;
+          padding-bottom: 1rem;
+          padding: 2rem 1rem 1rem 5rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btn-wrapper {
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns {
+            width: 100%;
+            margin-top: .7rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .other-reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .reply-wrapper {
+          padding: 1rem 0; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .rate .rate-square .reply-wrapper a#reply-btn {
+            cursor: pointer;
+            float: right; }
+    .course-content-section.fundpage .course-content-wrapper .main-container .assignment {
+      margin-bottom: 1rem; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square {
+        padding: 2rem 2rem; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square.work {
+          background: none;
+          padding: 1rem 0rem 0 0; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment {
+          padding-top: 0rem;
+          padding-bottom: 3.5rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment.signin {
+            padding-bottom: .7rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment.signin .inner-wrapper.signin {
+              margin-bottom: 0rem; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment.signin .inner-wrapper.signin .top-text {
+                padding-top: .8rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .title {
+            font-size: 20px; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns {
+            width: 100%;
+            margin-top: .7rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code-wrapper {
+              width: 100%;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns button {
+              float: right;
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns input.code {
+              width: 30%;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .signin-btn {
+              float: left; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .qa-pic {
+          position: absolute;
+          z-index: 1; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper {
+          margin-bottom: 2rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text {
+            padding-left: 5rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text.no-p {
+              padding-left: 0rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text span {
+              margin-right: 10px; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text .signin-btn {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .top-text .signin-btn:hover {
+                background: #969696; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text {
+            padding-left: 5rem;
+            padding-top: 1rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text.no-p {
+              padding-left: 0rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .upload_btn {
+              background: #e4e4e4;
+              padding: 8px 20px;
+              border-radius: 5px;
+              border: none;
+              color: black;
+              font-weight: 400;
+              -webkit-transition: .3s;
+              -o-transition: .3s;
+              transition: .3s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .upload_btn:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .input-file-container {
+              position: relative;
+              display: inline-block;
+              margin-right: 10px; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .input-file-trigger {
+              background: #e4e4e4;
+              padding: 8px 20px;
+              border-radius: 5px;
+              border: none;
+              color: black;
+              font-size: 15px;
+              font-weight: 400;
+              -webkit-transition: .3s;
+              -o-transition: .3s;
+              transition: .3s;
+              cursor: pointer; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .input-file-trigger:hover {
+                background: #ffc240; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .js .input-file-trigger {
+              display: block;
+              padding: 14px 45px;
+              background: #39D2B4;
+              color: #fff;
+              font-size: 1em;
+              -webkit-transition: all .4s;
+              -o-transition: all .4s;
+              transition: all .4s;
+              cursor: pointer; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .js .input-file {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 225px;
+              opacity: 0;
+              padding: 14px 0;
+              cursor: pointer; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .js .input-file:hover + .input-file-trigger,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .js .input-file:focus + .input-file-trigger,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .js .input-file-trigger:hover,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .js .input-file-trigger:focus {
+              background: #34495E;
+              color: #39D2B4; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .file-return {
+              margin: 0; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .file-return:not(:empty) {
+              margin: 1em 0; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .js .file-return {
+              font-style: italic;
+              font-size: .9em;
+              font-weight: bold; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper .bot-text .js .file-return:not(:empty):before {
+              content: "Selected file: ";
+              font-style: normal;
+              font-weight: normal; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper.works {
+            width: 100%;
+            position: relative; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper.works .col-6 {
+              position: relative; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper.works .col-6 .as-img {
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 150px;
+                border: 1px solid gray;
+                border-radius: 5px;
+                margin: 0 15px; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper.works .col-6 .bot-side {
+                position: relative; }
+                .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper.works .col-6 .bot-side .as-p {
+                  position: absolute;
+                  top: 10px;
+                  left: 18px; }
+                .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .inner-wrapper.works .col-6 .bot-side .info-wrapper {
+                  padding-left: 5rem;
+                  padding-top: .6rem;
+                  color: #474747; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .hr {
+          border-top: 1px solid lightgray; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply {
+          padding-top: 2rem;
+          padding-bottom: 3.5rem;
+          display: none; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btn-wrapper {
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns {
+            width: 100%;
+            margin-top: .7rem;
+            float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square #reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply {
+          padding-top: 2rem;
+          padding-bottom: 1rem;
+          padding: 2rem 1rem 1rem 5rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .code-wrapper {
+            width: 100%;
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btn-wrapper {
+            float: right; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea,
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply input {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 300;
+            padding: 5px 10px;
+            color: #474747;
+            text-decoration: none;
+            box-decoration: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-width: 1px;
+            border-color: #a8a8a8;
+            border-radius: 5px;
+            border-style: solid; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::-webkit-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::-webkit-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea:-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply input:-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::-ms-input-placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::-ms-input-placeholder {
+              color: lightgray;
+              display: inline-block; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::placeholder,
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::placeholder {
+              color: lightgray;
+              display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns {
+            width: 100%;
+            margin-top: .7rem; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code {
+              padding: 5px;
+              border-radius: 5px;
+              border: 1px solid #969696; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::-webkit-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code:-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::-ms-input-placeholder {
+                font-size: 15px;
+                color: lightgray; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::placeholder {
+                font-size: 15px;
+                color: lightgray; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns i {
+              cursor: pointer;
+              padding: 8px 5px 0px 5px;
+              margin-right: 10px;
+              float: right; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns button {
+              background: #e4e4e4;
+              border: none;
+              border-radius: 5px;
+              padding: 5px 15px;
+              margin-left: 10px;
+              margin-top: 10px;
+              -webkit-transition: .2s;
+              -o-transition: .2s;
+              transition: .2s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns button:hover {
+                background: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code-img {
+              float: right; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code-img img {
+                height: 34px;
+                width: auto; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns input.code {
+              width: 20%;
+              float: right; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .reply-wrapper {
+          padding: 1rem 0; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .assignment .assignment-square .reply-wrapper a#reply-btn {
+            cursor: pointer;
+            float: right; }
+    .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md {
+      display: none; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section {
+        padding: 1rem 1rem; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 {
+          position: relative;
+          padding-right: 1rem; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md {
+            width: 100%;
+            position: relative; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md .video-poster {
+              width: 100%;
+              height: 200px; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md .video-poster::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 200px;
+                border-radius: 5px;
+                background-size: cover;
+                background-position: center;
+                -webkit-filter: brightness(0.4);
+                filter: brightness(0.4);
+                -webkit-transition: .3s;
+                -o-transition: .3s;
+                transition: .3s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md .video-poster .play-btn {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                text-align: center; }
+                .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md .video-poster .play-btn .test {
+                  display: inline-block;
+                  text-align: left;
+                  width: 100%;
+                  padding-left: 15px;
+                  padding-top: 10px;
+                  color: rgba(255, 255, 255, 0.678); }
+                .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md .video-poster .play-btn:hover .test {
+                  color: #fff; }
+                .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md .video-poster .play-btn::before {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  z-index: 1;
+                  content: '\f04b';
+                  font-family: 'Font Awesome 5 Free';
+                  font-size: 25px;
+                  font-weight: 900;
+                  color: white;
+                  line-height: 2.4;
+                  vertical-align: middle;
+                  background: rgba(0, 0, 0, 0.623);
+                  border-radius: 100%;
+                  height: 60px;
+                  width: 60px;
+                  margin-top: -30px;
+                  margin-left: -30px;
+                  padding: 0 0 0 5px;
+                  -webkit-transition: .3s;
+                  -o-transition: .3s;
+                  transition: .3s; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md .video-poster:hover::before {
+                -webkit-filter: brightness(0.5);
+                filter: brightness(0.5); }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .left-part.col-5 .video-thumb-md .video-poster:hover .play-btn::before {
+                background: rgba(54, 50, 44, 0.842); }
+        .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper {
+          padding: 10px 10px;
+          color: #474747; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-header {
+            font-size: 22px;
+            color: black;
+            max-height: 75px;
+            overflow: hidden; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .star-rating {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 16px;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            width: 100%; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .star-rating div {
+              position: relative;
+              display: inline-block;
+              margin: 10px 0 0 0; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .star-rating div .star-progress {
+                position: relative;
+                margin-right: 5px; }
+                .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .star-rating div .star-progress::before {
+                  font-family: 'Font Awesome 5 Free';
+                  content: '\f005';
+                  color: lightgray;
+                  font-weight: 900;
+                  z-index: 0;
+                  position: relative;
+                  display: inline-block; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .star-rating div .star-progress-filled {
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+                margin: 0; }
+                .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .star-rating div .star-progress-filled::before {
+                  font-family: 'Font Awesome 5 Free';
+                  content: '\f005';
+                  color: #ffc240;
+                  font-weight: 900;
+                  z-index: 1;
+                  position: relative;
+                  display: inline-block; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-tag span {
+            margin-right: 10px; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought {
+            padding: 1rem 0;
+            font-size: 0; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought span {
+              font-size: 20px; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-price {
+            font-family: 'Open Sans';
+            font-size: 35px;
+            font-weight: 800;
+            color: #ac7000;
+            margin: 5px 0; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button {
+            background: #ffc240;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 20px;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button:hover {
+              background-color: #ffa600; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button.add {
+              background: none;
+              border: 1px solid #000; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button.add:hover {
+                background-color: #f3788d;
+                border-color: #f3788d; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button#plyr-btn-m {
+              background: #8d0000;
+              color: #fff; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper button#plyr-btn-m:hover {
+                background-color: #d40909; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-cont {
+            font-size: 15px;
+            color: #969696; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-cont .sidebar-box {
+              max-height: 120px;
+              position: relative;
+              overflow: hidden; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-cont .sidebar-box .read-more {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                margin: 0;
+                padding: 20px 0;
+                font-weight: 800;
+                /* "transparent" only works here because == rgba(0,0,0,0) */
+                background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+                background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+                background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+                background-image: linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
+                background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 5%, #fff 100%);
+                background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 5%, #fff 100%);
+                background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 5%, #fff 100%);
+                background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 5%, #fff 100%); }
+                .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-cont .sidebar-box .read-more a {
+                  display: inline-block;
+                  margin-top: 20px;
+                  font-family: 'Open Sans';
+                  color: #474747;
+                  border-radius: 5px;
+                  border: 1px solid #474747;
+                  padding: 5px 10px; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-cont li {
+              margin-top: 3px; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-cont li i {
+                width: 25px;
+                padding-left: 3px; }
+      @media (max-width: 1024px) {
+        .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md {
+          display: block;
+          margin-top: 3rem; } }
+    .course-content-section.fundpage .course-content-wrapper .main-container .main-player {
+      justify-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      visibility: hidden;
+      opacity: 0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.486);
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .main-player.show {
+        visibility: visible;
+        opacity: 1; }
+      .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row {
+        margin: 0 auto;
+        width: 85%;
+        height: 68%;
+        padding: 20px;
+        background: #000;
+        justify-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row .canvas {
+          padding: 0; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row .canvas video {
+            width: 100%;
+            background: #000; }
+        .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row .playlist {
+          height: 100%;
+          max-height: 100%;
+          overflow: scroll;
+          color: white;
+          background: #000;
+          text-align: left;
+          padding: 0; }
+          .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row .playlist ul {
+            margin: 1rem 0; }
+            .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row .playlist ul li {
+              padding: 10px 15px;
+              font-weight: 200; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row .playlist ul li.title {
+                font-size: 18px;
+                font-weight: 500;
+                padding-left: 2rem; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .main-player .video-wrapper.row .playlist ul li ol li.col-2 {
+                text-align: center; }
 
 footer {
   display: block;
