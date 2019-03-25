@@ -51,7 +51,7 @@ button {
 
 .tooltip-inner {
   font-family: 'Noto Sans TC';
-  max-width: 65%;
+  max-width: 70%;
   font-size: 13px;
   padding: 8px 15px;
   color: #fff;
@@ -4212,6 +4212,660 @@ button {
         background-color: #474747;
         border-color: #474747;
         color: #fff; }
+
+.main-info-wrapper.assignmentpage {
+  width: 70%;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-top: 7rem; }
+  @media (max-width: 1150px) {
+    .main-info-wrapper.assignmentpage {
+      width: 85%; } }
+  @media (max-width: 768px) {
+    .main-info-wrapper.assignmentpage {
+      width: 90%; } }
+  @media (max-width: 576px) {
+    .main-info-wrapper.assignmentpage {
+      width: 100%;
+      display: block; } }
+  .main-info-wrapper.assignmentpage .left-part {
+    -webkit-box-flex: .3;
+    -ms-flex: .3;
+    flex: .3; }
+    @media (max-width: 1150px) {
+      .main-info-wrapper.assignmentpage .left-part {
+        -webkit-box-flex: .3;
+        -ms-flex: .3;
+        flex: .3; } }
+    @media (max-width: 768px) {
+      .main-info-wrapper.assignmentpage .left-part {
+        -webkit-box-flex: .4;
+        -ms-flex: .4;
+        flex: .4; } }
+    @media (max-width: 576px) {
+      .main-info-wrapper.assignmentpage .left-part {
+        display: block;
+        margin: 0 auto; } }
+    .main-info-wrapper.assignmentpage .left-part .info-wrapper-left {
+      padding: 0rem .5rem;
+      margin-bottom: 20px; }
+      .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container {
+        background: #fff;
+        border-radius: 5px;
+        padding: 2rem 0rem 1rem 0rem;
+        text-align: center; }
+        .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container .name {
+          font-size: 25px;
+          font-weight: 600; }
+        .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container .note {
+          padding: 10px 0;
+          border-bottom: 4px double lightgray;
+          margin-bottom: 10px; }
+        .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container .other {
+          width: 100%;
+          height: 200px;
+          padding: 0px 10px; }
+          .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container .other a {
+            padding: 5px; }
+            .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container .other a .assign {
+              background-size: cover;
+              background-position: center;
+              height: 100%;
+              width: 100%;
+              border-radius: 5px;
+              -webkit-filter: brightness(0.5);
+              filter: brightness(0.5); }
+              .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container .other a .assign:hover {
+                -webkit-filter: brightness(1);
+                filter: brightness(1); }
+        .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container a {
+          display: block;
+          padding: 5px 15px; }
+          .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container a .more {
+            padding: 0;
+            margin: 0;
+            color: #474747;
+            padding: 5px 10px;
+            border: 1px solid #969696;
+            border-radius: 5px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; }
+            .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container a .more:hover {
+              background: #969696;
+              color: #fff; }
+            .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container a .more.like:hover {
+              background: #f3788d;
+              border-color: #f3788d;
+              color: #fff; }
+          .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container a.like {
+            padding: 0;
+            margin: 10px 0 0 0;
+            color: #474747;
+            padding: 10px 10px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; }
+          .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container a.like.active {
+            padding: 0;
+            padding: 10px 10px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s;
+            background: #f3788d;
+            border-color: #f3788d;
+            color: #fff; }
+          .main-info-wrapper.assignmentpage .left-part .info-wrapper-left .container a.like:focus {
+            background: #f3788d;
+            border-color: #f3788d;
+            color: #fff; }
+  .main-info-wrapper.assignmentpage .right-part {
+    -webkit-box-flex: .7;
+    -ms-flex: .7;
+    flex: .7; }
+    @media (max-width: 1150px) {
+      .main-info-wrapper.assignmentpage .right-part {
+        -webkit-box-flex: .7;
+        -ms-flex: .7;
+        flex: .7; } }
+    @media (max-width: 768px) {
+      .main-info-wrapper.assignmentpage .right-part {
+        -webkit-box-flex: .6;
+        -ms-flex: .6;
+        flex: .6; } }
+    @media (max-width: 576px) {
+      .main-info-wrapper.assignmentpage .right-part {
+        display: block; } }
+    .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner {
+      min-height: unset;
+      background-size: cover;
+      background-position: center;
+      padding: 0; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper {
+        color: white;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.466);
+        padding: 1rem 2rem 2rem 2rem;
+        border-radius: 5px;
+        font-size: 0; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper h6 {
+          font-weight: 300;
+          border: none;
+          margin: 5px 0 0 0; }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper h6 i {
+            margin-left: 5px; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper .title {
+          border-color: white;
+          margin: 10px 0; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a {
+          display: inline-block;
+          font-size: 15px;
+          border-radius: 3px;
+          color: white; }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a.like {
+            padding: 0;
+            margin: 10px 0 0 0;
+            padding: 5px 15px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a.like.active {
+            padding: 0;
+            padding: 10px 10px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s;
+            background: #f3788d;
+            border-color: #f3788d;
+            color: #fff; }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a.like:focus {
+            background: #f3788d;
+            border-color: #f3788d;
+            color: #fff; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .content-wrapper {
+        font-weight: 300; }
+    .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section {
+      background: #fff;
+      color: #474747;
+      font-size: 16px;
+      font-weight: 300;
+      text-align: left;
+      width: 100%;
+      position: relative;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 5px; }
+      @media (max-width: 425px) {
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section {
+          border-radius: 0 0 0 0; } }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section .title {
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 10px; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section img {
+        width: 100%; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section blockquote {
+        border-left: 5px solid #ffc240;
+        margin: 15px 0;
+        padding: 0px 20px;
+        font-size: 18px;
+        font-weight: 500; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section blockquote p {
+          font-size: .8em !important; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section p {
+        line-height: 1.8;
+        font-weight: 300; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section pre {
+        font-size: 14px;
+        line-height: 1.8em;
+        margin: 24px 0;
+        padding: 8px 16px;
+        border-radius: 0;
+        border: 0;
+        background-color: #e4e4e4; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section a {
+        color: #ac7000;
+        font-weight: 500;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section a:hover {
+          color: #d69200; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section .Q {
+        font-weight: 500;
+        font-size: 18px;
+        margin: 10px 0; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section .sidebar-box {
+        position: relative;
+        overflow: hidden; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section .sidebar-box .read-more {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          padding: 20px 0;
+          /* "transparent" only works here because == rgba(0,0,0,0) */
+          background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+          background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+          background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);
+          background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), white);
+          background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), white); }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section .sidebar-box .read-more a.button {
+            display: inline-block;
+            margin-top: 20px;
+            font-family: 'Open Sans';
+            color: #474747;
+            border-radius: 5px;
+            border: 1px solid #474747;
+            padding: 3px 10px;
+            font-weight: 800; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section .sidebar-box .sub-title {
+          font-weight: 600; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section .sidebar-box .inner {
+          padding: 10px 0; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background: none;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 0; }
+        @media (max-width: 425px) {
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper {
+            margin-top: 0;
+            border-radius: 0 0 0 0; } }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper button {
+          padding: 10px;
+          width: 25%;
+          background: #fff;
+          color: #474747;
+          font-weight: 500;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border: none;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper button:first-child {
+            border-radius: 5px 0px 0px 5px; }
+            @media (max-width: 425px) {
+              .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper button:first-child {
+                border-radius: 0 0 0 0; } }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper button:last-child {
+            border-radius: 0px 5px 5px 0px; }
+            @media (max-width: 425px) {
+              .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper button:last-child {
+                border-radius: 0 0 0 0; } }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper button:hover {
+            background: #4e4e4e2c; }
+          .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.tab-wrapper button.active {
+            background: #474747;
+            color: #fff; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.prepare .sidebar-box {
+        max-height: 185px; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.course-content .sidebar-box {
+        max-height: 500px; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.course-problem {
+        margin-bottom: 2.36rem; }
+        .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section.course-problem .sidebar-box {
+          max-height: 200px; }
+  .main-info-wrapper.assignmentpage .rate {
+    width: 100%;
+    margin-bottom: 1rem; }
+    .main-info-wrapper.assignmentpage .rate .title {
+      padding-left: 10px; }
+    .main-info-wrapper.assignmentpage .rate .rate-square {
+      padding: 2rem 2rem 1.5rem 2rem;
+      background-color: #fff;
+      border-radius: 5px; }
+      .main-info-wrapper.assignmentpage .rate .rate-square.user {
+        padding-bottom: 3rem; }
+      .main-info-wrapper.assignmentpage .rate .rate-square .main-rate {
+        padding-top: 0rem;
+        padding-bottom: 3.5rem; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .main-rate.signin {
+          padding-bottom: .7rem; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate.signin .inner-wrapper.signin {
+            margin-bottom: 0rem; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .main-rate.signin .inner-wrapper.signin .top-text {
+              padding-top: .8rem; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .main-rate textarea,
+        .main-info-wrapper.assignmentpage .rate .rate-square .main-rate input {
+          width: 100%;
+          font-size: 14px;
+          font-weight: 300;
+          padding: 5px 10px;
+          color: #474747;
+          text-decoration: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border-width: 1px;
+          border-color: #a8a8a8;
+          border-radius: 5px;
+          border-style: solid; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate textarea::-webkit-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate input::-webkit-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate textarea:-ms-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate input:-ms-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate textarea::-ms-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate input::-ms-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate textarea::placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate input::placeholder {
+            color: lightgray;
+            display: inline-block; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .note {
+          display: block;
+          float: right;
+          margin-top: 5px; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating {
+          float: right;
+          width: 139px;
+          /***** CSS Magic to Highlight Stars on Hover *****/
+          /* hover previous stars in list */ }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating {
+            border: none; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > input {
+            display: none; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > label:before {
+            margin: 3px;
+            font-size: 1.2em;
+            font-family: 'Font Awesome 5 Free';
+            display: inline-block;
+            content: "\f005";
+            font-weight: 900; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > .half:before {
+            content: "\f089";
+            position: absolute; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > label {
+            color: #ddd;
+            float: right; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating:not(:checked) > label:hover,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating:not(:checked) > label:hover ~ label {
+            color: #ffc240; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked + label:hover,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label:hover,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > label:hover ~ input:checked ~ label,
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .top-text .star-rating .rating > input:checked ~ label:hover ~ label {
+            color: #ffcb5c; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns {
+          width: 100%;
+          margin-top: .7rem;
+          padding-left: 4.5rem; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code-wrapper {
+            width: 100%;
+            float: right; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #969696; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code::-webkit-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code:-ms-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code::-ms-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code::placeholder {
+              font-size: 15px;
+              color: lightgray; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns i {
+            cursor: pointer;
+            padding: 8px 5px 0px 5px;
+            margin-right: 10px;
+            float: right; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns button {
+            float: right;
+            background: #e4e4e4;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-left: 10px;
+            margin-top: 10px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns button:hover {
+              background: #969696; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code-img {
+            float: right; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code-img img {
+              height: 34px;
+              width: auto; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns input.code {
+            width: 30%;
+            float: right; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .signin-btn {
+            float: left; }
+      .main-info-wrapper.assignmentpage .rate .rate-square .qa-pic {
+        position: absolute;
+        z-index: 1; }
+      .main-info-wrapper.assignmentpage .rate .rate-square .inner-wrapper .top-text {
+        padding-left: 5rem;
+        font-size: 0px;
+        vertical-align: top; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .inner-wrapper .top-text span {
+          margin-right: 10px;
+          font-size: 16px; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .inner-wrapper .top-text .signin-btn {
+          background: #e4e4e4;
+          border: none;
+          border-radius: 5px;
+          padding: 5px 15px;
+          margin-left: 10px;
+          -webkit-transition: .2s;
+          -o-transition: .2s;
+          transition: .2s;
+          font-size: 14px; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .inner-wrapper .top-text .signin-btn:hover {
+            background: #969696; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .inner-wrapper .top-text .time {
+          display: inline-block;
+          font-size: 14px; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .inner-wrapper .top-text .name_teacher {
+          background: #474747;
+          color: #fff;
+          padding: 3px 15px;
+          border-radius: 15px;
+          font-size: 14px;
+          max-height: 27px;
+          overflow: hidden; }
+      .main-info-wrapper.assignmentpage .rate .rate-square .inner-wrapper .bot-text {
+        padding-left: 5rem;
+        padding-top: 1rem; }
+      .main-info-wrapper.assignmentpage .rate .rate-square .hr {
+        border-top: 1px solid lightgray; }
+      .main-info-wrapper.assignmentpage .rate .rate-square #reply {
+        padding-top: 2rem;
+        padding-bottom: 3.5rem;
+        display: none; }
+        .main-info-wrapper.assignmentpage .rate .rate-square #reply .code-wrapper {
+          width: 100%;
+          float: right; }
+        .main-info-wrapper.assignmentpage .rate .rate-square #reply .btn-wrapper {
+          float: right; }
+        .main-info-wrapper.assignmentpage .rate .rate-square #reply textarea,
+        .main-info-wrapper.assignmentpage .rate .rate-square #reply input {
+          width: 100%;
+          font-size: 14px;
+          font-weight: 300;
+          padding: 5px 10px;
+          color: #474747;
+          text-decoration: none;
+          box-decoration: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border-width: 1px;
+          border-color: #a8a8a8;
+          border-radius: 5px;
+          border-style: solid; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply textarea::-webkit-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply input::-webkit-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply textarea:-ms-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply input:-ms-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply textarea::-ms-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply input::-ms-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply textarea::placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply input::placeholder {
+            color: lightgray;
+            display: inline-block; }
+        .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns {
+          width: 100%;
+          margin-top: .7rem;
+          float: right; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #969696; }
+            .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code::-webkit-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code:-ms-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code::-ms-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code::placeholder {
+              font-size: 15px;
+              color: lightgray; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns i {
+            cursor: pointer;
+            padding: 8px 5px 0px 5px;
+            margin-right: 10px;
+            float: right; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns button {
+            background: #e4e4e4;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-left: 10px;
+            margin-top: 10px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; }
+            .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns button:hover {
+              background: #969696; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code-img {
+            float: right; }
+            .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code-img img {
+              height: 34px;
+              width: auto; }
+          .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns input.code {
+            width: 20%;
+            float: right; }
+      .main-info-wrapper.assignmentpage .rate .rate-square .other-reply {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding: 2rem 1rem 1rem 5rem; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .code-wrapper {
+          width: 100%;
+          float: right; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btn-wrapper {
+          float: right; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea,
+        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input {
+          width: 100%;
+          font-size: 14px;
+          font-weight: 300;
+          padding: 5px 10px;
+          color: #474747;
+          text-decoration: none;
+          box-decoration: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border-width: 1px;
+          border-color: #a8a8a8;
+          border-radius: 5px;
+          border-style: solid; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea::-webkit-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input::-webkit-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea:-ms-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input:-ms-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea::-ms-input-placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input::-ms-input-placeholder {
+            color: lightgray;
+            display: inline-block; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea::placeholder,
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input::placeholder {
+            color: lightgray;
+            display: inline-block; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns {
+          width: 100%;
+          margin-top: .7rem; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #969696; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code::-webkit-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code:-ms-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code::-ms-input-placeholder {
+              font-size: 15px;
+              color: lightgray; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code::placeholder {
+              font-size: 15px;
+              color: lightgray; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns i {
+            cursor: pointer;
+            padding: 8px 5px 0px 5px;
+            margin-right: 10px;
+            float: right; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns button {
+            background: #e4e4e4;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-left: 10px;
+            margin-top: 10px;
+            -webkit-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns button:hover {
+              background: #969696; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code-img {
+            float: right; }
+            .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code-img img {
+              height: 34px;
+              width: auto; }
+          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns input.code {
+            width: 20%;
+            float: right; }
+      .main-info-wrapper.assignmentpage .rate .rate-square .reply-wrapper {
+        padding: 1rem 0; }
+        .main-info-wrapper.assignmentpage .rate .rate-square .reply-wrapper a#reply-btn {
+          cursor: pointer;
+          float: right; }
 
 footer {
   display: block;
