@@ -193,10 +193,17 @@ button {
         display: inline-block;
         margin-right: 4px;
 
-        &.detail-num span {
-            font-size: 16px;
-            margin-left: 5px;
+        &.detail-num {
+
+            
+
+            span {
+                font-size: 16px;
+                margin-left: 5px;
+            }
+
         }
+        
 
         .star-progress {
             position: relative;
@@ -1573,6 +1580,10 @@ $link_hover_color: #fff;
                 height: 100%;
                 transition: .3s;
                 overflow: hidden;
+
+                a {
+                    color: $font-bk;
+                }
 
                 .thumb-tooltip {
                     visibility: hidden;
@@ -5192,6 +5203,38 @@ $link_hover_color: #fff;
     }
 }
 
+.pagination-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+
+    .container {
+        text-align: center;
+
+        .pagination {
+            justify-content: center;
+
+            .page-item {
+
+                .page-link {
+                    color: $font-dark;
+                    cursor: pointer;
+
+                    &:focus, &:active {
+                        outline: none;
+                    }
+                }
+                &.active {
+                    .page-link {
+                        background-color: $font-dark;
+                        border-color: $font-dark;
+                        color: $font-w;
+                    }
+                }
+            }
+        }
+    }
+}
 
 footer {
     display: block;

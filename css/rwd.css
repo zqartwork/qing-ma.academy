@@ -197,21 +197,20 @@
           bottom: 15px; }
           .index__class .flex-ls-wrapper .class-thumb .thumb .price span {
             display: inline-block;
-            color: #d68b00;
             font-size: 22px; }
-        .index__class .flex-ls-wrapper .class-thumb .thumb__on {
+        .index__class .flex-ls-wrapper .class-thumb .thumb__on, .index__class .flex-ls-wrapper .class-thumb .thumb__free {
           border-color: #b90000; }
-          .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span {
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .price span, .index__class .flex-ls-wrapper .class-thumb .thumb__free .price span {
             font-size: 23px; }
-          .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont {
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont, .index__class .flex-ls-wrapper .class-thumb .thumb__free .cont {
             max-height: 31px;
             overflow: hidden; } }
           @media (max-width: 575px) and (max-width: 425px) {
-            .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont {
+            .index__class .flex-ls-wrapper .class-thumb .thumb__on .cont, .index__class .flex-ls-wrapper .class-thumb .thumb__free .cont {
               max-height: 25px; } }
 
 @media (max-width: 575px) {
-          .index__class .flex-ls-wrapper .class-thumb .thumb__on .name {
+          .index__class .flex-ls-wrapper .class-thumb .thumb__on .name, .index__class .flex-ls-wrapper .class-thumb .thumb__free .name {
             max-height: 30px;
             overflow: hidden; }
         .index__class .flex-ls-wrapper .class-thumb .thumb__fund {

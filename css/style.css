@@ -1320,6 +1320,8 @@ button {
         -o-transition: .3s;
         transition: .3s;
         overflow: hidden; }
+        .index__class .flex-ls-wrapper .class-thumb .thumb a {
+          color: #000; }
         .index__class .flex-ls-wrapper .class-thumb .thumb .thumb-tooltip {
           visibility: hidden;
           z-index: 2;
@@ -4110,6 +4112,26 @@ button {
         outline: none;
         border-radius: 5px;
         cursor: pointer; }
+
+.pagination-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0; }
+  .pagination-wrapper .container {
+    text-align: center; }
+    .pagination-wrapper .container .pagination {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      .pagination-wrapper .container .pagination .page-item .page-link {
+        color: #474747;
+        cursor: pointer; }
+        .pagination-wrapper .container .pagination .page-item .page-link:focus, .pagination-wrapper .container .pagination .page-item .page-link:active {
+          outline: none; }
+      .pagination-wrapper .container .pagination .page-item.active .page-link {
+        background-color: #474747;
+        border-color: #474747;
+        color: #fff; }
 
 footer {
   display: block;

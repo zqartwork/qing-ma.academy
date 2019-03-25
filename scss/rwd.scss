@@ -283,12 +283,11 @@ $lines-to-show: 3;
 
                         span {
                             display: inline-block;
-                            color: rgb(214, 139, 0);
                             font-size: 22px;
                         }
                     }
 
-                    &__on {
+                    &__on, &__free {
                         border-color: $red;
 
                         .price span {
