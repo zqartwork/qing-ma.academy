@@ -342,7 +342,26 @@
             </ul>
         </section>
 
-
+        <!-- 搜尋BAR位置 -->
+        <div class="search-box-wrapper index">
+            <div class="intro-wrapper">
+                <span class="logo"> <img src="img/logo-school.png" alt=""> </span>
+                <div class="title">歡迎來到 青馬影藝學院，開始您的學習旅程吧！</div>
+                <div class="hot btns">
+                    <a href="index-course-ls.html" class="hot-1">影片後期</a>
+                    <a href="index-course-ls.html" class="hot-2">攝影技巧</a>
+                    <a href="index-course-ls.html" class="hot-3">專業配音</a>
+                    <a href="index-course-ls.html" class="hot-4">妝容教學</a>
+                    <a href="index-course-ls.html" class="hot-5">器材教學</a>
+                </div>
+                <div class="search-box-container">
+                    <div class="search-box-bar">
+                        <input type="search-text" class="search-box-input" placeholder="請輸入課程關鍵字">
+                        <button class="search-btn"> <i class="fas fa-search"></i> 搜尋課程</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- 課程列表開始 -->
         <!-- 推薦 Recommend -->
@@ -358,54 +377,67 @@
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                <!-- 第一格-->
                 <!-- 已收藏課程 -->
-                <a class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs" href="index-course.html">
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-6" href="index-course.html">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__on">
-                        <ul>
-                            <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
-                                    <div class="mark mark__on">已開課</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course.html">
+                            <ul>
+                                <li class="thumb-header liked">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                        <div class="mark mark__on">已開課</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="fas fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                    <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                </div> -->
-                            </li>
+                                </li>
 
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="add-mark"><i class="fas fa-heart"></i></li>
-                            <li class="price"><span>NT$</span> <span class="num">2,400</span></li>
-                        </ul>
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                                <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                            </div> -->
+                                </li>
+
+                                <!-- 已收藏會有這行 add-mark -->
+                                <li class="add-mark"><i class="fas fa-heart"></i></li>
+                                <li class="price"><span>NT$</span> <span class="num">2,400</span>
+                                </li>
+                            </ul>
+                        </a>
+                        <!-- 正式課程會有的浮板介紹 -->
                         <div class="thumb-tooltip right">
                             <div class="tooltip__header">
                                 <div class="update">課程內容最後上傳：2019/03/17</div>
@@ -420,63 +452,80 @@
 
                                 <div class="intro">
                                     課程簡介：
-                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？ 相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
+                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？
+                                    相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
                                     瀏覽這簡潔易明的資訊圖，學習如何應用這些簡單要訣，創作漂亮的相片。
                                 </div>
 
                             </div>
                             <div class="tooltip__footer">
                                 <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
-                                <button class="buy"><i class="far fa-credit-card"></i> 馬上購買</button>
+                                <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                        class="far fa-credit-card"></i>
+                                    馬上購買</button>
                             </div>
                         </div>
                     </div>
-
-                </a>
+                </div>
+                <!-- 第二格-->
                 <!-- 未收藏課程 -->
-                <a class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs" href="index-course.html">
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__on">
-                        <ul>
-                            <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
-                                    <div class="mark mark__on">已開課</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course.html">
+                            <ul>
+                                <li class="thumb-header">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                        <div class="mark mark__on">已開課</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="far fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                        <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                    </div> -->
-                            </li>
-                            <li class="price"><span>NT$</span> <span class="num">3,200</span></li>
-                        </ul>
+                                </li>
+
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                    <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                </div> -->
+                                </li>
+
+                                <li class="price"><span>NT$</span> <span class="num">2,400</span>
+                                </li>
+                            </ul>
+                        </a>
+                        <!-- 正式課程會有的浮板介紹 -->
                         <div class="thumb-tooltip right">
                             <div class="tooltip__header">
                                 <div class="update">課程內容最後上傳：2019/03/17</div>
@@ -491,66 +540,82 @@
 
                                 <div class="intro">
                                     課程簡介：
-                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？ 相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
+                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？
+                                    相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
                                     瀏覽這簡潔易明的資訊圖，學習如何應用這些簡單要訣，創作漂亮的相片。
                                 </div>
 
                             </div>
                             <div class="tooltip__footer">
                                 <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
-                                <button class="buy"><i class="far fa-credit-card"></i> 馬上購買</button>
+                                <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                        class="far fa-credit-card"></i>
+                                    馬上購買</button>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
+                <!-- 第三格-->
                 <!-- 已收藏課程 -->
-                <a class="class-thumb col-lg-3 col-md-4 hidden-sm show-575" href="index-course.html">
+                <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__on">
-                        <ul>
-                            <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
-                                    <div class="mark mark__on">已開課</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course.html">
+                            <ul>
+                                <li class="thumb-header liked">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                        <div class="mark mark__on">已開課</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="fas fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                        <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                    </div> -->
-                            </li>
+                                </li>
 
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="add-mark"><i class="fas fa-heart"></i></li>
-                            <li class="price"><span>NT$</span> <span class="num">2,400</span></li>
-                        </ul>
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                    <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                </div> -->
+                                </li>
+
+                                <!-- 已收藏會有這行 add-mark -->
+                                <li class="add-mark"><i class="fas fa-heart"></i></li>
+                                <li class="price"><span>NT$</span> <span class="num">2,400</span>
+                                </li>
+                            </ul>
+                        </a>
+                        <!-- 正式課程會有的浮板介紹 -->
                         <div class="thumb-tooltip right">
                             <div class="tooltip__header">
                                 <div class="update">課程內容最後上傳：2019/03/17</div>
@@ -565,63 +630,80 @@
 
                                 <div class="intro">
                                     課程簡介：
-                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？ 相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
+                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？
+                                    相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
                                     瀏覽這簡潔易明的資訊圖，學習如何應用這些簡單要訣，創作漂亮的相片。
                                 </div>
 
                             </div>
                             <div class="tooltip__footer">
                                 <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
-                                <button class="buy"><i class="far fa-credit-card"></i> 馬上購買</button>
+                                <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                        class="far fa-credit-card"></i>
+                                    馬上購買</button>
                             </div>
                         </div>
                     </div>
-
-                </a>
+                </div>
+                <!-- 第四格-->
                 <!-- 未收藏課程 -->
-                <a class="class-thumb col-lg-3 hidden-md show-575" href="index-course.html">
+                <div class="class-thumb col-lg-3 hidden-md show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__on">
-                        <ul>
-                            <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
-                                    <div class="mark mark__on">已開課</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course.html">
+                            <ul>
+                                <li class="thumb-header">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                        <div class="mark mark__on">已開課</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="far fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                            <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                        </div> -->
-                            </li>
-                            <li class="price"><span>NT$</span> <span class="num">3,200</span></li>
-                        </ul>
+                                </li>
+
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                    <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                </div> -->
+                                </li>
+
+                                <li class="price"><span>NT$</span> <span class="num">2,400</span>
+                                </li>
+                            </ul>
+                        </a>
+                        <!-- 正式課程會有的浮板介紹 -->
                         <div class="thumb-tooltip left">
                             <div class="tooltip__header">
                                 <div class="update">課程內容最後上傳：2019/03/17</div>
@@ -636,18 +718,21 @@
 
                                 <div class="intro">
                                     課程簡介：
-                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？ 相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
+                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？
+                                    相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
                                     瀏覽這簡潔易明的資訊圖，學習如何應用這些簡單要訣，創作漂亮的相片。
                                 </div>
 
                             </div>
-                            <div class="tooltip__footer left">
+                            <div class="tooltip__footer">
                                 <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
-                                <button class="buy"><i class="far fa-credit-card"></i> 馬上購買</button>
+                                <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                        class="far fa-credit-card"></i>
+                                    馬上購買</button>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
 
@@ -665,56 +750,61 @@
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                <!-- 第一格-->
                 <!-- 已收藏課程 -->
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-6" href="index-course.html">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
+                    <div class="thumb thumb__fund">
+                        <a href="index-course-fund.html">
+                            <ul>
+                                <li class="thumb-header liked">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
+                                        <div class="mark mark__fund">募資中</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="fas fa-heart"></i></button>
+                                    </div>
+                                </li>
+
+                                <li class="thumb-body">
+                                    <div class="title">合成相片怎麼做 Instagram 神人選集</div>
+                                    <div class="cont">
+                                        <div class="process__title">
+                                            <span class="titl">募資進度</span>
+                                            <span class="date">剩 <span class="num">20</span> 天</span>
+                                        </div>
+                                        <div class="process__bar">
+                                            <div class="process__thumb" style="width: 33.33333%;"></div>
+                                        </div>
+                                        <div class="process__people">
+                                            <span class="process__static"><span class="hidden-xs">已募資</span> <span
+                                                    class="num">33</span>%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="thumb-footer">
+                                    <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
+                                            class="num">1,200</span></div>
+                                </li>
+                                <!-- 已收藏會有這行 add-mark -->
+                                <li class="add-mark"><i class="fas fa-heart"></i></li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+                <!-- 第二格-->
+                <!-- 未收藏課程 -->
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
                             <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-005.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
-                            <li class="thumb-body">
-                                <div class="title">後製必備基礎工具（AE / PR）</div>
-                                <div class="cont">
-                                    <div class="process__title">
-                                        <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">20</span> 天</span>
-                                    </div>
-                                    <div class="process__bar">
-                                        <div class="process__thumb" style="width: 60%;"></div>
-                                    </div>
-                                    <div class="process__people">
-                                        <span class="process__static"><span class="hidden-xs"><span
-                                                    class="hidden-xs">已募資</span>
-                                            </span> <span class="num">20</span>
-                                            /30 人</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="thumb-footer">
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
-                                        class="num">1,400</span></div>
-                            </li>
 
-                        </ul>
-                    </div>
-                </div>
-                <!-- 未收藏課程 -->
-                <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
-                    <div class="thumb thumb__fund">
-                        <ul>
-                            <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-008.jpg);">
-                                    <div class="mark mark__fund">募資中</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
-                                </div>
-                            </li>
                             <li class="thumb-body">
                                 <div class="title">合成相片怎麼做 Instagram 神人選集</div>
                                 <div class="cont">
@@ -735,77 +825,86 @@
                                 <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
                                         class="num">1,200</span></div>
                             </li>
-
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
                         </ul>
                     </div>
                 </div>
+                <!-- 第三格-->
+                <!-- 已收藏課程 -->
                 <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__fund">
                         <ul>
                             <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-006.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
+
                             <li class="thumb-body">
-                                <div class="title">專業後製簡單做 - 奇異博士傳送門</div>
+                                <div class="title">合成相片怎麼做 Instagram 神人選集</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
                                         <span class="date">剩 <span class="num">20</span> 天</span>
                                     </div>
                                     <div class="process__bar">
-                                        <div class="process__thumb" style="width: 580%;"></div>
+                                        <div class="process__thumb" style="width: 33.33333%;"></div>
                                     </div>
                                     <div class="process__people">
                                         <span class="process__static"><span class="hidden-xs">已募資</span> <span
-                                                class="num">580</span>%</span>
+                                                class="num">33</span>%</span>
                                     </div>
                                 </div>
                             </li>
-                            <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
                                 <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
-                                        class="num">1,400</span></div>
+                                        class="num">1,200</span></div>
                             </li>
-
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
                         </ul>
                     </div>
                 </div>
+                <!-- 第四格-->
+                <!-- 未收藏課程 -->
                 <div class="class-thumb col-lg-3 hidden-md show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__fund">
                         <ul>
-                            <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-007.jpg);">
+                            <li class="thumb-header liked">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
                                     <div class="mark mark__fund">募資中</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
+
                             <li class="thumb-body">
-                                <div class="title">了解 Breaking 的深奧 - Body Control</div>
+                                <div class="title">合成相片怎麼做 Instagram 神人選集</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
                                         <span class="date">剩 <span class="num">20</span> 天</span>
                                     </div>
                                     <div class="process__bar">
-                                        <div class="process__thumb" style="width: 80%;"></div>
+                                        <div class="process__thumb" style="width: 33.33333%;"></div>
                                     </div>
                                     <div class="process__people">
                                         <span class="process__static"><span class="hidden-xs">已募資</span> <span
-                                                class="num">24</span>
-                                            /30 人</span>
+                                                class="num">33</span>%</span>
                                     </div>
                                 </div>
                             </li>
                             <li class="thumb-footer">
                                 <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
-                                        class="num">1,400</span></div>
+                                        class="num">1,200</span></div>
                             </li>
-
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -826,62 +925,67 @@
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                <!-- 第一格-->
                 <!-- 已收藏課程 -->
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-6" href="index-course.html">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
+                    <div class="thumb thumb__fund">
+                        <a href="index-course-fund.html">
+                            <ul>
+                                <li class="thumb-header liked">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
+                                        <div class="mark mark__fund">募資中</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="fas fa-heart"></i></button>
+                                    </div>
+                                </li>
+
+                                <li class="thumb-body">
+                                    <div class="title">合成相片怎麼做 Instagram 神人選集</div>
+                                    <div class="cont">
+                                        <div class="process__title">
+                                            <span class="titl">募資進度</span>
+                                            <span class="date">剩 <span class="num">20</span> 天</span>
+                                        </div>
+                                        <div class="process__bar">
+                                            <div class="process__thumb" style="width: 33.33333%;"></div>
+                                        </div>
+                                        <div class="process__people">
+                                            <span class="process__static"><span class="hidden-xs">已募資</span> <span
+                                                    class="num">33</span>%</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="thumb-footer">
+                                    <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
+                                            class="num">1,200</span></div>
+                                </li>
+                                <!-- 已收藏會有這行 add-mark -->
+                                <li class="add-mark"><i class="fas fa-heart"></i></li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+                <!-- 第二格-->
+                <!-- 未收藏課程 -->
                 <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__fund">
                         <ul>
-                            <!--喜歡會有標籤 liked-->
                             <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-009.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
-                            <li class="thumb-body">
-                                <div class="title">小資女的質感照 - 小成本大製作</div>
-                                <div class="cont">
-                                    <div class="process__title">
-                                        <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">3</span> 天</span>
-                                    </div>
-                                    <div class="process__bar">
-                                        <div class="process__thumb" style="width: 60%;"></div>
-                                    </div>
-                                    <div class="process__people">
-                                        <span class="process__static"><span class="hidden-xs"><span
-                                                    class="hidden-xs">已募資</span>
-                                            </span> <span class="num">20</span>
-                                            /30 人</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="thumb-footer">
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
-                                <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
-                                        class="num">800</span></div>
-                            </li>
 
-                        </ul>
-                    </div>
-                </div>
-                <!-- 未收藏課程 -->
-                <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
-                    <div class="thumb thumb__fund">
-                        <ul>
-                            <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-010.jpg);">
-                                    <div class="mark mark__fund">募資中</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
-                                </div>
-                            </li>
                             <li class="thumb-body">
-                                <div class="title">古典芭蕾走到現代芭蕾 - 從來不變</div>
+                                <div class="title">合成相片怎麼做 Instagram 神人選集</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">4</span> 天</span>
+                                        <span class="date">剩 <span class="num">20</span> 天</span>
                                     </div>
                                     <div class="process__bar">
                                         <div class="process__thumb" style="width: 33.33333%;"></div>
@@ -894,79 +998,88 @@
                             </li>
                             <li class="thumb-footer">
                                 <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
-                                        class="num">1,500</span></div>
+                                        class="num">1,200</span></div>
                             </li>
-
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
                         </ul>
                     </div>
                 </div>
+                <!-- 第三格-->
+                <!-- 已收藏課程 -->
                 <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__fund">
                         <ul>
                             <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-011.jpg);">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
                                     <div class="mark mark__fund">募資中</div>
                                     <!-- 收藏的愛心是 fas -->
                                     <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
+
                             <li class="thumb-body">
-                                <div class="title">喫貓所 - 我們是這樣愛著貓的攝影</div>
+                                <div class="title">合成相片怎麼做 Instagram 神人選集</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">5</span> 天</span>
+                                        <span class="date">剩 <span class="num">20</span> 天</span>
                                     </div>
                                     <div class="process__bar">
-                                        <div class="process__thumb" style="width: 580%;"></div>
+                                        <div class="process__thumb" style="width: 33.33333%;"></div>
                                     </div>
                                     <div class="process__people">
                                         <span class="process__static"><span class="hidden-xs">已募資</span> <span
-                                                class="num">580</span>%</span>
+                                                class="num">33</span>%</span>
                                     </div>
                                 </div>
                             </li>
-                            <!-- 已收藏會有這行 add-mark -->
                             <li class="thumb-footer">
-                                <div class="add-mark"><i class="fas fa-heart"></i></div>
                                 <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
-                                        class="num">1,100</span></div>
+                                        class="num">1,200</span></div>
                             </li>
-
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
                         </ul>
                     </div>
                 </div>
+                <!-- 第四格-->
+                <!-- 未收藏課程 -->
                 <div class="class-thumb col-lg-3 hidden-md show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__fund">
                         <ul>
-                            <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-012.jpg);">
+                            <li class="thumb-header liked">
+                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
                                     <div class="mark mark__fund">募資中</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
+                                    <!-- 收藏的愛心是 fas -->
+                                    <button class="add"><i class="fas fa-heart"></i></button>
                                 </div>
                             </li>
+
                             <li class="thumb-body">
-                                <div class="title">用顏色說故事 - 不只有畫面</div>
+                                <div class="title">合成相片怎麼做 Instagram 神人選集</div>
                                 <div class="cont">
                                     <div class="process__title">
                                         <span class="titl">募資進度</span>
-                                        <span class="date">剩 <span class="num">10</span> 天</span>
+                                        <span class="date">剩 <span class="num">20</span> 天</span>
                                     </div>
                                     <div class="process__bar">
-                                        <div class="process__thumb" style="width: 80%;"></div>
+                                        <div class="process__thumb" style="width: 33.33333%;"></div>
                                     </div>
                                     <div class="process__people">
                                         <span class="process__static"><span class="hidden-xs">已募資</span> <span
-                                                class="num">24</span>
-                                            /30 人</span>
+                                                class="num">33</span>%</span>
                                     </div>
                                 </div>
                             </li>
                             <li class="thumb-footer">
                                 <div class="price"><span><span class="pre">預購價</span> NT$</span> <span
-                                        class="num">1,400</span></div>
+                                        class="num">1,200</span></div>
                             </li>
-
+                            <!-- 已收藏會有這行 add-mark -->
+                            <li class="add-mark"><i class="fas fa-heart"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -988,54 +1101,67 @@
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                <!-- 第一格-->
                 <!-- 已收藏課程 -->
-                <a class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs" href="index-course.html">
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-6" href="index-course.html">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__on">
-                        <ul>
-                            <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
-                                    <div class="mark mark__on">已開課</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course.html">
+                            <ul>
+                                <li class="thumb-header liked">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                        <div class="mark mark__on">已開課</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="fas fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                        <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                    </div> -->
-                            </li>
+                                </li>
 
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="add-mark"><i class="fas fa-heart"></i></li>
-                            <li class="price"><span>NT$</span> <span class="num">2,400</span></li>
-                        </ul>
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                                    <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                                </div> -->
+                                </li>
+
+                                <!-- 已收藏會有這行 add-mark -->
+                                <li class="add-mark"><i class="fas fa-heart"></i></li>
+                                <li class="price"><span>NT$</span> <span class="num">2,400</span>
+                                </li>
+                            </ul>
+                        </a>
+                        <!-- 正式課程會有的浮板介紹 -->
                         <div class="thumb-tooltip right">
                             <div class="tooltip__header">
                                 <div class="update">課程內容最後上傳：2019/03/17</div>
@@ -1050,63 +1176,80 @@
 
                                 <div class="intro">
                                     課程簡介：
-                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？ 相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
+                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？
+                                    相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
                                     瀏覽這簡潔易明的資訊圖，學習如何應用這些簡單要訣，創作漂亮的相片。
                                 </div>
 
                             </div>
                             <div class="tooltip__footer">
                                 <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
-                                <button class="buy"><i class="far fa-credit-card"></i> 馬上購買</button>
+                                <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                        class="far fa-credit-card"></i>
+                                    馬上購買</button>
                             </div>
                         </div>
                     </div>
-
-                </a>
+                </div>
+                <!-- 第二格-->
                 <!-- 未收藏課程 -->
-                <a class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs" href="index-course.html">
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__on">
-                        <ul>
-                            <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
-                                    <div class="mark mark__on">已開課</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course.html">
+                            <ul>
+                                <li class="thumb-header">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                        <div class="mark mark__on">已開課</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="far fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                            <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                        </div> -->
-                            </li>
-                            <li class="price"><span>NT$</span> <span class="num">3,200</span></li>
-                        </ul>
+                                </li>
+
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                        <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                    </div> -->
+                                </li>
+
+                                <li class="price"><span>NT$</span> <span class="num">2,400</span>
+                                </li>
+                            </ul>
+                        </a>
+                        <!-- 正式課程會有的浮板介紹 -->
                         <div class="thumb-tooltip right">
                             <div class="tooltip__header">
                                 <div class="update">課程內容最後上傳：2019/03/17</div>
@@ -1121,66 +1264,82 @@
 
                                 <div class="intro">
                                     課程簡介：
-                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？ 相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
+                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？
+                                    相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
                                     瀏覽這簡潔易明的資訊圖，學習如何應用這些簡單要訣，創作漂亮的相片。
                                 </div>
 
                             </div>
                             <div class="tooltip__footer">
                                 <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
-                                <button class="buy"><i class="far fa-credit-card"></i> 馬上購買</button>
+                                <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                        class="far fa-credit-card"></i>
+                                    馬上購買</button>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
+                <!-- 第三格-->
                 <!-- 已收藏課程 -->
-                <a class="class-thumb col-lg-3 col-md-4 hidden-sm show-575" href="index-course.html">
+                <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__on">
-                        <ul>
-                            <li class="thumb-header liked">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
-                                    <div class="mark mark__on">已開課</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course.html">
+                            <ul>
+                                <li class="thumb-header liked">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                        <div class="mark mark__on">已開課</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="fas fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                            <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                        </div> -->
-                            </li>
+                                </li>
 
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="add-mark"><i class="fas fa-heart"></i></li>
-                            <li class="price"><span>NT$</span> <span class="num">2,400</span></li>
-                        </ul>
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                        <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                    </div> -->
+                                </li>
+
+                                <!-- 已收藏會有這行 add-mark -->
+                                <li class="add-mark"><i class="fas fa-heart"></i></li>
+                                <li class="price"><span>NT$</span> <span class="num">2,400</span>
+                                </li>
+                            </ul>
+                        </a>
+                        <!-- 正式課程會有的浮板介紹 -->
                         <div class="thumb-tooltip right">
                             <div class="tooltip__header">
                                 <div class="update">課程內容最後上傳：2019/03/17</div>
@@ -1195,63 +1354,80 @@
 
                                 <div class="intro">
                                     課程簡介：
-                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？ 相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
+                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？
+                                    相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
                                     瀏覽這簡潔易明的資訊圖，學習如何應用這些簡單要訣，創作漂亮的相片。
                                 </div>
 
                             </div>
                             <div class="tooltip__footer">
                                 <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
-                                <button class="buy"><i class="far fa-credit-card"></i> 馬上購買</button>
+                                <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                        class="far fa-credit-card"></i>
+                                    馬上購買</button>
                             </div>
                         </div>
                     </div>
-
-                </a>
+                </div>
+                <!-- 第四格-->
                 <!-- 未收藏課程 -->
-                <a class="class-thumb col-lg-3 hidden-md show-575" href="index-course.html">
+                <div class="class-thumb col-lg-3 hidden-md show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__on">
-                        <ul>
-                            <li class="thumb-header">
-                                <div class="poster" style="background-image: url(img/lecture/lec-img-002.jpg);">
-                                    <div class="mark mark__on">已開課</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course.html">
+                            <ul>
+                                <li class="thumb-header">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-001.jpg);">
+                                        <div class="mark mark__on">已開課</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="far fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                                <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                            </div> -->
-                            </li>
-                            <li class="price"><span>NT$</span> <span class="num">3,200</span></li>
-                        </ul>
+                                </li>
+
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                        <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                    </div> -->
+                                </li>
+
+                                <li class="price"><span>NT$</span> <span class="num">2,400</span>
+                                </li>
+                            </ul>
+                        </a>
+                        <!-- 正式課程會有的浮板介紹 -->
                         <div class="thumb-tooltip left">
                             <div class="tooltip__header">
                                 <div class="update">課程內容最後上傳：2019/03/17</div>
@@ -1266,18 +1442,21 @@
 
                                 <div class="intro">
                                     課程簡介：
-                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？ 相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
+                                    甚麼是構圖三分法和黃金比例？它們又如何影響相片效果？
+                                    相片的構圖技巧多不勝數，但只要學會以下兩種基本技巧，便能改善你的相片美感。
                                     瀏覽這簡潔易明的資訊圖，學習如何應用這些簡單要訣，創作漂亮的相片。
                                 </div>
 
                             </div>
-                            <div class="tooltip__footer left">
+                            <div class="tooltip__footer">
                                 <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
-                                <button class="buy"><i class="far fa-credit-card"></i> 馬上購買</button>
+                                <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                        class="far fa-credit-card"></i>
+                                    馬上購買</button>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
 
         </section>
@@ -1297,203 +1476,248 @@
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs">
+                <!-- 第一格-->
+                <!-- 已收藏課程 -->
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-6" href="index-course.html">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__free">
-                        <ul>
-                            <!-- 已收藏課程 -->
-                            <li class="thumb-header liked">
-                                <div class="poster"
-                                    style="background-image: url(http://img.youtube.com/vi/BmikzqP-9MU/mqdefault.jpg);">
-                                    <div class="mark mark__free">免費</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course-fund.html">
+                            <ul>
+                                <li class="thumb-header liked">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
+                                        <div class="mark mark__free">免費</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="fas fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                            <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                        </div> -->
-                            </li>
+                                </li>
 
-                            <li class="add-mark"><i class="fas fa-heart"></i></li>
-                            <li class="price"><span>NT$</span> <span class="num">免費</span></li>
-                        </ul>
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                        <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                    </div> -->
+                                </li>
+
+                                <!-- 已收藏會有這行 add-mark -->
+                                <li class="add-mark"><i class="fas fa-heart"></i></li>
+                                <li class="price price__free"><span>NT$</span> <span class="num">免費</span>
+                                </li>
+                            </ul>
+                        </a>
                     </div>
                 </div>
+                <!-- 第二格-->
                 <!-- 未收藏課程 -->
-                <div class="class-thumb col-lg-3 col-md-4 col-sm-6 hidden-xs">
+                <div class="class-thumb col-lg-3 col-md-4 col-sm-6">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__free">
-                        <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header">
-                                <div class="poster"
-                                    style="background-image: url(http://img.youtube.com/vi/w_JBF4CJ-9M/mqdefault.jpg);">
-                                    <div class="mark mark__free">免費</div>
-                                    <button class="add"><i class="far fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course-fund.html">
+                            <ul>
+                                <li class="thumb-header">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
+                                        <div class="mark mark__free">免費</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="far fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                                <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                            </div> -->
-                            </li>
-                            <li class="price"><span>NT$</span> <span class="num">免費</span></li>
-                        </ul>
+                                </li>
+
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                            <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                        </div> -->
+                                </li>
+
+                                <li class="price price__free"><span>NT$</span> <span class="num">免費</span>
+                                </li>
+                            </ul>
+                        </a>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 col-md-4 hidden-sm hidden-xs show-575">
+                <!-- 第三格-->
+                <!-- 已收藏課程 -->
+                <div class="class-thumb col-lg-3 col-md-4 hidden-sm show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__free">
-                        <ul>
-                            <li class="thumb-header liked">
-                                <div class="poster"
-                                    style="background-image: url(http://img.youtube.com/vi/Z3Jtk32ZzH8/mqdefault.jpg);">
-                                    <div class="mark mark__free">免費</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="fas fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course-fund.html">
+                            <ul>
+                                <li class="thumb-header liked">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
+                                        <div class="mark mark__free">免費</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="fas fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                                <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                            </div> -->
-                            </li>
+                                </li>
 
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="add-mark"><i class="fas fa-heart"></i></li>
-                            <li class="price"><span>NT$</span> <span class="num">免費</span></li>
-                        </ul>
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                            <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                        </div> -->
+                                </li>
+
+                                <!-- 已收藏會有這行 add-mark -->
+                                <li class="add-mark"><i class="fas fa-heart"></i></li>
+                                <li class="price price__free"><span>NT$</span> <span class="num">免費</span>
+                                </li>
+                            </ul>
+                        </a>
                     </div>
                 </div>
-                <div class="class-thumb col-lg-3 hidden-md hidden-xs show-575">
+                <!-- 第四格-->
+                <!-- 未收藏課程 -->
+                <div class="class-thumb col-lg-3 hidden-md show-575">
+                    <!-- 已開課 on 募資中 fund 免費 free -->
                     <div class="thumb thumb__free">
-                        <ul>
-                            <!--喜歡會有標籤 liked-->
-                            <li class="thumb-header">
-                                <div class="poster"
-                                    style="background-image: url(http://img.youtube.com/vi/OzF0_ldZmfE/mqdefault.jpg);">
-                                    <div class="mark mark__free">免費</div>
-                                    <!-- 收藏的愛心是 fas -->
-                                    <button class="add"><i class="far fa-heart"></i></button>
-                                </div>
-                            </li>
-                            <li class="thumb-body">
-                                <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
-                                <div class="name"><span>ADLINE METHOD</span> </div>
-                                <div class="cont">
-                                    <div class="star-rated">
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 100%;"></span>
-                                        </div>
-                                        <div>
-                                            <span class="star-progress"></span>
-                                            <span class="star-progress-filled" style="width: 30%;"></span>
-                                        </div>
-                                        <div class="detail-num"><span class="num">4.3</span> <span>(1,200)</span></div>
+                        <a href="index-course-fund.html">
+                            <ul>
+                                <li class="thumb-header">
+                                    <div class="poster" style="background-image: url(img/lecture/lec-img-003.jpg);">
+                                        <div class="mark mark__free">免費</div>
+                                        <!-- 收藏的愛心是 fas -->
+                                        <button class="add"><i class="far fa-heart"></i></button>
                                     </div>
-                                </div>
-                                <!-- <div class="time"><i class="far fa-clock"></i>
-                                                <span class="num">240</span> 分鐘&nbsp;&nbsp;
-                                            </div> -->
-                            </li>
+                                </li>
 
-                            <!-- 已收藏會有這行 add-mark -->
-                            <li class="add-mark"><i class="fas fa-heart"></i></li>
-                            <li class="price"><span>NT$</span> <span class="num">免費</span></li>
-                        </ul>
+                                <li class="thumb-body">
+                                    <!-- 課程名稱 -->
+                                    <div class="title">如何捕捉美好景物 - 認識攝影的技巧</div>
+
+                                    <!-- 從此之後正式課程內容與募資中課程不一樣的地方 -->
+
+                                    <!-- 講師名稱 -->
+                                    <div class="name"><span>ADLINE METHOD</span> </div>
+                                    <div class="cont">
+                                        <div class="star-rated">
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 100%;"></span>
+                                            </div>
+                                            <div>
+                                                <span class="star-progress"></span>
+                                                <span class="star-progress-filled" style="width: 30%;"></span>
+                                            </div>
+                                            <div class="detail-num"><span class="num">4.3</span>
+                                                <span>(1,200)</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="time"><i class="far fa-clock"></i>
+                                                            <span class="num">240</span> 分鐘&nbsp;&nbsp;
+                                                        </div> -->
+                                </li>
+
+                                <li class="price price__free"><span>NT$</span> <span class="num">免費</span>
+                                </li>
+                            </ul>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1724,10 +1948,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
     <script onload="" src="plugins/mmenu/jquery.mmenu.all.js"></script>
     <!-- 7.3.2 -->
