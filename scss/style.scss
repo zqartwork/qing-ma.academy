@@ -3942,7 +3942,7 @@ $link_hover_color: #fff;
 
                     &.work {
                         background: none;
-                        padding: 2rem 0rem;
+                        padding: 1rem 0rem 0 0;
                     }
 
                     .main-assignment {
@@ -5039,7 +5039,6 @@ $link_hover_color: #fff;
             padding: 0rem .5rem;
 
             .info-container {
-
                 // border: 1px solid red;
                 .intro-doc {
                     min-height: 392px;
@@ -5317,7 +5316,7 @@ $link_hover_color: #fff;
 .pagination-wrapper {
     width: 100%;
     text-align: center;
-    padding: 2rem 0;
+    padding: .5rem 0 0 0;
 
     .container {
         text-align: center;
@@ -5505,6 +5504,7 @@ $link_hover_color: #fff;
                     background-size: cover;
                     background-position: center;
                     padding: 0;
+                    border-radius: 5px;
 
                     .title-wrapper {
                         color: white;

@@ -3156,7 +3156,7 @@ button {
         padding: 2rem 2rem; }
         .course-content-section .course-content-wrapper .main-container .assignment .assignment-square.work {
           background: none;
-          padding: 2rem 0rem; }
+          padding: 1rem 0rem 0 0; }
         .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment {
           padding-top: 0rem;
           padding-bottom: 3.5rem; }
@@ -4196,7 +4196,7 @@ button {
 .pagination-wrapper {
   width: 100%;
   text-align: center;
-  padding: 2rem 0; }
+  padding: .5rem 0 0 0; }
   .pagination-wrapper .container {
     text-align: center; }
     .pagination-wrapper .container .pagination {
@@ -4345,7 +4345,8 @@ button {
       min-height: unset;
       background-size: cover;
       background-position: center;
-      padding: 0; }
+      padding: 0;
+      border-radius: 5px; }
       .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper {
         color: white;
         height: 100%;
