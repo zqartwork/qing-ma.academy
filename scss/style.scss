@@ -8573,6 +8573,12 @@ $link_hover_color: #fff;
 
                     a {
                         color: $font-dark;
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background-color: $gold;
+                        }
                     }
 
                     .list-item {
@@ -8597,6 +8603,23 @@ $link_hover_color: #fff;
                             }
                         }
                     }
+                }
+            }
+
+            .modal-footer {
+                position: relative;
+                font-size: 0;
+
+                .notice {
+                    position: absolute;
+                    left: 20px;
+                    font-size: 15px;
+                }
+
+                .bg-gold {
+                    background: $gold;
+                    color: $font-bk;
+                    border-color: $gold;
                 }
             }
         }

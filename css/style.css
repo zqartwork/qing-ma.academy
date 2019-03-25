@@ -6774,6 +6774,8 @@ button {
           color: #474747; }
           .videoModal .modal-dialog .modal-content .modal-body .list-container a {
             color: #474747; }
+            .videoModal .modal-dialog .modal-content .modal-body .list-container a:hover, .videoModal .modal-dialog .modal-content .modal-body .list-container a:focus, .videoModal .modal-dialog .modal-content .modal-body .list-container a:active {
+              background-color: #ffc240; }
           .videoModal .modal-dialog .modal-content .modal-body .list-container .list-item {
             padding: 15px 20px;
             cursor: pointer;
@@ -6792,6 +6794,17 @@ button {
                 -webkit-transform: rotate(0deg);
                 -ms-transform: rotate(0deg);
                 transform: rotate(0deg); }
+      .videoModal .modal-dialog .modal-content .modal-footer {
+        position: relative;
+        font-size: 0; }
+        .videoModal .modal-dialog .modal-content .modal-footer .notice {
+          position: absolute;
+          left: 20px;
+          font-size: 15px; }
+        .videoModal .modal-dialog .modal-content .modal-footer .bg-gold {
+          background: #ffc240;
+          color: #000;
+          border-color: #ffc240; }
 
 .purchasePop.modal .modal-content {
   width: 100%; }
