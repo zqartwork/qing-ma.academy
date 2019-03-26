@@ -2176,6 +2176,8 @@ button {
           font-size: 0; }
           .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-bought span {
             font-size: 20px; }
+            .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-bought span p {
+              font-size: 16px; }
         .video-main-section .row.main-container .video-section-wrapper .panel-wrapper .panel-price {
           font-family: 'Open Sans';
           font-size: 35px;
@@ -3666,6 +3668,8 @@ button {
             font-size: 0; }
             .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought span {
               font-size: 20px; }
+              .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought span p {
+                font-size: 16px; }
           .course-content-section .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-price {
             font-family: 'Open Sans';
             font-size: 35px;
@@ -5002,6 +5006,8 @@ button {
           font-size: 0; }
           .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-bought span {
             font-size: 20px; }
+            .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-bought span p {
+              font-size: 16px; }
         .video-main-section.fundpage .row.main-container .video-section-wrapper .panel-wrapper .panel-price {
           font-family: 'Open Sans';
           font-size: 35px;
@@ -5722,6 +5728,8 @@ button {
             font-size: 0; }
             .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought span {
               font-size: 20px; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought span p {
+                font-size: 16px; }
           .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-price {
             font-family: 'Open Sans';
             font-size: 35px;
