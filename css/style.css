@@ -2358,6 +2358,9 @@ button {
       margin-top: 1rem;
       padding: 1rem 2rem;
       border-radius: 5px; }
+      .course-content-section .course-content-wrapper .main-container .inner-section__doc ul {
+        list-style-type: circle;
+        padding-left: 20px; }
       @media (max-width: 425px) {
         .course-content-section .course-content-wrapper .main-container .inner-section {
           border-radius: 0 0 0 0; } }
@@ -5783,6 +5786,8 @@ button {
             font-size: 0; }
             .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought span {
               font-size: 20px; }
+              .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-bought span p {
+                font-size: 16px; }
           .course-content-section.fundpage .course-content-wrapper .main-container .left-part.col-8 .video-section-wrapper-md .inner-section .right-part .panel-wrapper .panel-price {
             font-family: 'Open Sans';
             font-size: 35px;
