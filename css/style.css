@@ -2279,6 +2279,8 @@ button {
         padding-left: 10rem;
         width: 100%;
         font-size: 0px; }
+        .course-content-section .course-content-wrapper .main-container .teacher-info .cont .name__freepage {
+          color: #474747; }
         .course-content-section .course-content-wrapper .main-container .teacher-info .cont .name {
           display: inline-block;
           font-weight: 600;
@@ -2307,6 +2309,11 @@ button {
               display: block;
               margin-top: -5px;
               width: 100%; } }
+          .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns.free-page {
+            display: inline-block; }
+            @media (max-width: 425px) {
+              .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns.free-page {
+                margin-top: 20px; } }
           .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a {
             display: inline-block;
             min-width: auto;
@@ -2445,6 +2452,12 @@ button {
           .course-content-section .course-content-wrapper .main-container .inner-section.tab-wrapper {
             margin-top: 0;
             border-radius: 0 0 0 0; } }
+        .course-content-section .course-content-wrapper .main-container .inner-section.tab-wrapper.threebtn button {
+          width: 33.333333%; }
+        .course-content-section .course-content-wrapper .main-container .inner-section.tab-wrapper.twobtn button {
+          width: 50%; }
+        .course-content-section .course-content-wrapper .main-container .inner-section.tab-wrapper.onebtn button {
+          width: 100%; }
         .course-content-section .course-content-wrapper .main-container .inner-section.tab-wrapper button {
           padding: 10px;
           width: 25%;

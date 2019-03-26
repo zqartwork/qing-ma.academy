@@ -2829,6 +2829,10 @@ $link_hover_color: #fff;
                     width: 100%;
                     font-size: 0px; // border: 1px solid red;
 
+                    .name__freepage {
+                        color: $font-dark;
+                    }
+
                     .name {
                         display: inline-block;
                         font-weight: 600;
@@ -2864,6 +2868,13 @@ $link_hover_color: #fff;
                             display: block;
                             margin-top: -5px;
                             width: 100%;
+                        }
+
+                        &.free-page {
+                            display: inline-block;
+                            @media(max-width: 425px) {
+                                margin-top: 20px;
+                            }
                         }
 
                         a {
@@ -3065,6 +3076,24 @@ $link_hover_color: #fff;
                     @media (max-width: 425px) {
                         margin-top: 0;
                         border-radius: 0 0 0 0;
+                    }
+
+                    &.threebtn {
+                        button {
+                            width: 33.333333%;
+                        }
+                    }
+
+                    &.twobtn {
+                        button {
+                            width: 50%;
+                        }
+                    }
+
+                    &.onebtn {
+                        button {
+                            width: 100%;
+                        }
                     }
 
                     button {
