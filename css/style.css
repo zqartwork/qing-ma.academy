@@ -4433,9 +4433,10 @@ button {
           margin: 10px 0; }
         .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a {
           display: inline-block;
-          font-size: 15px;
+          font-size: 0px;
           border-radius: 3px;
-          color: white; }
+          color: white;
+          cursor: pointer; }
           .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a.like {
             padding: 0;
             margin: 10px 0 0 0;
@@ -4443,6 +4444,9 @@ button {
             -webkit-transition: .2s;
             -o-transition: .2s;
             transition: .2s; }
+            .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a.like i, .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a.like .num {
+              font-size: 15px;
+              margin-right: 5px; }
           .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .intro-banner .title-wrapper a.like.active {
             padding: 0;
             padding: 10px 10px;

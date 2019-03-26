@@ -539,7 +539,8 @@ button {
 
     .control {
         position: relative;
-        cursor: pointer;
+        cursor: pointer;  
+         
         transition-duration: .3s; // border: 1px solid red;
         left: 0;
         top: 0;
@@ -766,7 +767,8 @@ button {
         }
 
         .icon-close {
-            cursor: pointer;
+            cursor: pointer;  
+             
             transition: all 0.3s ease-in-out;
             margin-top: 4px;
 
@@ -839,7 +841,8 @@ button {
         color: $font-dark;
         font-size: 16px;
         background: none;
-        cursor: pointer;
+        cursor: pointer;  
+         
 
         i {
             margin-left: 5px;
@@ -1271,7 +1274,8 @@ $link_hover_color: #fff;
                 width: 16px;
                 height: 16px;
                 border: none;
-                cursor: pointer;
+                cursor: pointer;  
+                 
                 border-radius: 50%;
                 border: 2px solid #fff;
                 box-shadow: 0 0 0 0 transparent;
@@ -1530,6 +1534,7 @@ $link_hover_color: #fff;
                     height: 16px;
                     border: none;
                     cursor: pointer;
+                     
                     border-radius: 50%;
                     border: 2px solid #fff;
                     box-shadow: 0 0 0 0 transparent;
@@ -1806,7 +1811,7 @@ $link_hover_color: #fff;
         .class-thumb {
             height: 390px; // background: gray;
             padding: 10px;
-            cursor: pointer;
+            cursor: pointer;  
             color: $font-bk;
 
             @media (max-width: 990px) {
@@ -2679,7 +2684,7 @@ $link_hover_color: #fff;
                 font-weight: 400;
 
                 span {
-                    cursor: pointer;
+                    cursor: pointer;  
                     margin: 10px 10px 10px 0;
                     padding: 5px;
                     border-radius: 5px;
@@ -3479,7 +3484,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -3632,7 +3637,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -3719,7 +3724,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -3759,7 +3764,7 @@ $link_hover_color: #fff;
                         padding: 1rem 0;
 
                         a#reply-btn {
-                            cursor: pointer;
+                            cursor: pointer;  
                             float: right;
                         }
                     }
@@ -3895,7 +3900,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4078,7 +4083,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4165,7 +4170,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4205,7 +4210,7 @@ $link_hover_color: #fff;
                         padding: 1rem 0;
 
                         a#reply-btn {
-                            cursor: pointer;
+                            cursor: pointer;  
                             float: right;
                         }
                     }
@@ -4286,7 +4291,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4397,7 +4402,7 @@ $link_hover_color: #fff;
                                 font-size: 15px;
                                 font-weight: 400;
                                 transition: .3s;
-                                cursor: pointer;
+                                cursor: pointer;  
 
                                 &:hover {
                                     background: $gold;
@@ -4411,7 +4416,7 @@ $link_hover_color: #fff;
                                 color: #fff;
                                 font-size: 1em;
                                 transition: all .4s;
-                                cursor: pointer;
+                                cursor: pointer;  
                             }
 
                             .js .input-file {
@@ -4421,7 +4426,7 @@ $link_hover_color: #fff;
                                 width: 225px;
                                 opacity: 0;
                                 padding: 14px 0;
-                                cursor: pointer;
+                                cursor: pointer;  
                             }
 
                             .js .input-file:hover+.input-file-trigger,
@@ -4544,7 +4549,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4631,7 +4636,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4671,7 +4676,7 @@ $link_hover_color: #fff;
                         padding: 1rem 0;
 
                         a#reply-btn {
-                            cursor: pointer;
+                            cursor: pointer;  
                             float: right;
                         }
                     }
@@ -5384,7 +5389,7 @@ $link_hover_color: #fff;
                 border: none;
                 outline: none;
                 border-radius: 5px;
-                cursor: pointer;
+                cursor: pointer;  
             }
         }
     }
@@ -5404,7 +5409,7 @@ $link_hover_color: #fff;
             .page-item {
                 .page-link {
                     color: $font-dark;
-                    cursor: pointer;
+                    cursor: pointer;  
 
                     &:focus,
                     &:active {
@@ -5612,15 +5617,21 @@ $link_hover_color: #fff;
 
                         a {
                             display: inline-block;
-                            font-size: 15px;
+                            font-size: 0px;
                             border-radius: 3px;
                             color: white;
+                            cursor: pointer;  
 
                             &.like {
                                 padding: 0;
                                 margin: 10px 0 0 0;
                                 padding: 5px 15px;
                                 transition: .2s;
+
+                                i, .num {
+                                    font-size: 15px;
+                                    margin-right: 5px;
+                                }
                             }
 
                             &.like.active {
@@ -5977,7 +5988,7 @@ $link_hover_color: #fff;
                     }
 
                     i {
-                        cursor: pointer;
+                        cursor: pointer;  
                         padding: 8px 5px 0px 5px;
                         margin-right: 10px;
                         float: right;
@@ -6126,7 +6137,7 @@ $link_hover_color: #fff;
                     }
 
                     i {
-                        cursor: pointer;
+                        cursor: pointer;  
                         padding: 8px 5px 0px 5px;
                         margin-right: 10px;
                         float: right;
@@ -6213,7 +6224,7 @@ $link_hover_color: #fff;
                     }
 
                     i {
-                        cursor: pointer;
+                        cursor: pointer;  
                         padding: 8px 5px 0px 5px;
                         margin-right: 10px;
                         float: right;
@@ -6253,7 +6264,7 @@ $link_hover_color: #fff;
                 padding: 1rem 0;
 
                 a#reply-btn {
-                    cursor: pointer;
+                    cursor: pointer;  
                     float: right;
                 }
             }
@@ -6326,7 +6337,7 @@ $link_hover_color: #fff;
                 font-weight: 400;
 
                 span {
-                    cursor: pointer;
+                    cursor: pointer;  
                     margin: 10px 10px 10px 0;
                     padding: 5px;
                     border-radius: 5px;
@@ -7161,7 +7172,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -7314,7 +7325,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -7401,7 +7412,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;
+                                cursor: pointer;  
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -7441,7 +7452,7 @@ $link_hover_color: #fff;
                         padding: 1rem 0;
 
                         a#reply-btn {
-                            cursor: pointer;
+                            cursor: pointer;  
                             float: right;
                         }
                     }
@@ -7932,7 +7943,7 @@ $link_hover_color: #fff;
 
                     .list-item {
                         padding: 15px 20px;
-                        cursor: pointer;
+                        cursor: pointer;  
                         border-bottom: 1px solid #d3d3d38e;
 
                         .title-main {
