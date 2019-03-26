@@ -223,7 +223,8 @@ button {
     display: inline-block;
     min-width: auto;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
+    max-width: 1150px;
     position: relative; }
     .nav-before .nav-bar-wrapper a.logo-set {
       color: #fff;
