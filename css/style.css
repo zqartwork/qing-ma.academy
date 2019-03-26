@@ -4263,6 +4263,9 @@ button {
       margin-top: 1rem;
       padding: 1rem 2rem;
       border-radius: 5px; }
+      .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section__doc ul {
+        list-style-type: circle;
+        padding-left: 20px; }
       @media (max-width: 425px) {
         .main-info-wrapper.assignmentpage .right-part .info-wrapper-right .info-container .inner-section {
           border-radius: 0 0 0 0; } }

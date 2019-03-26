@@ -5371,6 +5371,14 @@ $link_hover_color: #fff;
                     padding: 1rem 2rem;
                     border-radius: 5px;
 
+                    &__doc {
+
+                        ul {
+                            list-style-type: circle;
+                            padding-left: 20px;
+                        }
+                    }
+
                     @media (max-width: 425px) {
                         border-radius: 0 0 0 0;
                     }
