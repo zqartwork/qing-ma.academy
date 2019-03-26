@@ -351,15 +351,10 @@ button {
         top: 0;
 
         .nav-bar-wrapper {
-
             .main-menu {
-
                 ul {
-
                     li {
-
                         a {
-
                             border-radius: 3px;
                         }
                     }
@@ -552,8 +547,7 @@ button {
 
     .control {
         position: relative;
-        cursor: pointer;  
-         
+        cursor: pointer;
         transition-duration: .3s; // border: 1px solid red;
         left: 0;
         top: 0;
@@ -780,8 +774,7 @@ button {
         }
 
         .icon-close {
-            cursor: pointer;  
-             
+            cursor: pointer;
             transition: all 0.3s ease-in-out;
             margin-top: 4px;
 
@@ -854,8 +847,7 @@ button {
         color: $font-dark;
         font-size: 16px;
         background: none;
-        cursor: pointer;  
-         
+        cursor: pointer;
 
         i {
             margin-left: 5px;
@@ -1061,12 +1053,13 @@ $link_hover_color: #fff;
         opacity: 1;
         visibility: visible;
     }
+
     .slick-slide {
         position: relative;
         height: 33vw;
         min-height: 25vw;
         @extend %bv_hidden;
-    
+
         &::before {
             @extend %filled_obj;
             @extend %bv_hidden;
@@ -1074,7 +1067,7 @@ $link_hover_color: #fff;
             opacity: .3;
             z-index: 1;
         }
-    
+
         video {
             display: block;
             position: absolute;
@@ -1086,41 +1079,41 @@ $link_hover_color: #fff;
             height: auto;
             transform: translate(-50%, -50%);
         }
-    
+
         iframe {
             position: relative;
             pointer-events: none;
         }
-    
+
         figure {
             position: relative;
             height: 100%;
         }
-    
+
         .image-entity {
             width: 100%;
             opacity: 0;
             visibility: hidden;
         }
-    
+
         .loading {
             position: absolute;
             top: 44%;
             left: 0;
             width: 100%;
         }
-    
+
         .slide-media {
             animation: slideOut .4s cubic-bezier(0.4, 0.29, 0.01, 1);
         }
-    
+
         &.slick-active {
             z-index: 1;
-    
+
             .slide-media {
                 animation: slideIn 2.4s cubic-bezier(0.4, 0.29, 0.01, 1);
             }
-    
+
             .caption {
                 opacity: 1;
                 transform: translateY(0);
@@ -1128,6 +1121,7 @@ $link_hover_color: #fff;
             }
         }
     }
+
     .slide-image {
         opacity: 0;
         height: 33vw;
@@ -1136,11 +1130,12 @@ $link_hover_color: #fff;
         background-position: center; // background-color:rgba(#c46897,.38);
         // background-blend-mode:overlay;
         transition: all .8s ease;
-    
+
         &.show {
             opacity: 1;
         }
     }
+
     .slick-next,
     .slick-prev {
         position: absolute;
@@ -1287,8 +1282,7 @@ $link_hover_color: #fff;
                 width: 16px;
                 height: 16px;
                 border: none;
-                cursor: pointer;  
-                 
+                cursor: pointer;
                 border-radius: 50%;
                 border: 2px solid #fff;
                 box-shadow: 0 0 0 0 transparent;
@@ -1341,11 +1335,9 @@ $link_hover_color: #fff;
 }
 
 // sub-index 焦點頁面
-
 .slider-section-wrapper {
     width: 100%;
-    text-align: center;
-    // border: 1px solid red;
+    text-align: center; // border: 1px solid red;
     margin-top: 6rem;
     margin-bottom: 1rem;
 
@@ -1357,19 +1349,19 @@ $link_hover_color: #fff;
         transition: all 1.2s ease;
         width: 100%;
         max-width: 1150px;
-        
         margin: 0 auto;
-    
+
         &.slick-initialized {
             opacity: 1;
             visibility: visible;
         }
+
         .slick-slide {
             position: relative;
             height: unset;
             min-height: unset;
             @extend %bv_hidden;
-        
+
             &::before {
                 @extend %filled_obj;
                 @extend %bv_hidden;
@@ -1377,35 +1369,36 @@ $link_hover_color: #fff;
                 opacity: .3;
                 z-index: 1;
             }
+
             figure {
                 position: relative;
                 height: 100%;
             }
-        
+
             .image-entity {
                 width: 100%;
                 opacity: 0;
                 visibility: hidden;
             }
-        
+
             .loading {
                 position: absolute;
                 top: 44%;
                 left: 0;
                 width: 100%;
             }
-        
+
             .slide-media {
                 animation: slideOut .4s cubic-bezier(0.4, 0.29, 0.01, 1);
             }
-        
+
             &.slick-active {
                 z-index: 1;
-        
+
                 .slide-media {
                     animation: slideIn 2.4s cubic-bezier(0.4, 0.29, 0.01, 1);
                 }
-        
+
                 .caption {
                     opacity: 1;
                     transform: translateY(0);
@@ -1413,6 +1406,7 @@ $link_hover_color: #fff;
                 }
             }
         }
+
         .slide-image {
             opacity: 0;
             height: 380px;
@@ -1422,11 +1416,12 @@ $link_hover_color: #fff;
             // background-blend-mode:overlay;
             transition: all .8s ease;
             position: relative;
-        
+
             &.show {
                 opacity: 1;
             }
         }
+
         .slick-next,
         .slick-prev {
             position: absolute;
@@ -1438,44 +1433,45 @@ $link_hover_color: #fff;
             font-size: 90px;
             transition: .5s;
             top: 36%;
-    
+
             &:hover {
                 color: rgba(0, 0, 0, 0.829);
             }
-    
+
             @media (max-width: 1420px) {
                 font-size: 60px;
             }
-    
+
             @media (max-width: 990px) {
                 font-size: 50px;
             }
-    
+
             @media (max-width: 768px) {
                 font-size: 40px;
             }
-    
+
             @media (max-width: 425px) {
                 font-size: 40px;
                 top: 55%;
             }
         }
-    
+
         .slick-prev {
             left: -10%;
-    
+
             @media (max-width: 995px) {
                 left: 0%;
             }
         }
-    
+
         .slick-next {
             right: -10%;
-    
+
             @media (max-width: 995px) {
                 right: 0%;
             }
         }
+
         .cont {
             background-image: linear-gradient(to top, #000, #00000000);
             position: absolute;
@@ -1485,6 +1481,7 @@ $link_hover_color: #fff;
             height: 100%;
             width: 100%;
         }
+
         .caption {
             position: absolute;
             top: unset;
@@ -1494,12 +1491,10 @@ $link_hover_color: #fff;
             height: unset;
             background: unset;
             border-radius: unset;
-            
             padding: unset;
             margin-top: unset;
             margin-left: 2rem;
             margin-bottom: 1rem;
-
             text-align: left;
             color: #fff;
             font-size: 30px;
@@ -1508,12 +1503,12 @@ $link_hover_color: #fff;
             opacity: 0;
             transition: all .3s ease;
             transform: translateY(100px);
-    
+
             .slide-btn:hover,
             .slide-btn:focus {
                 box-shadow: inset 8.5em 0 0 0 var(--hover);
             }
-    
+
             button {
                 display: block;
                 margin: 10px 0;
@@ -1523,43 +1518,42 @@ $link_hover_color: #fff;
                 padding: 5px 15px;
                 color: var(--color);
                 transition: 0.25s;
-    
+
                 &:hover,
                 &:focus {
                     border-color: var(--hover);
                     color: #000;
                 }
-    
+
                 @media (max-width: 425px) {
                     font-size: 15px;
                 }
             }
-    
+
             .name {
                 display: block;
                 font-size: 18px;
-    
+
                 @media (max-width: 425px) {
                     font-size: 15px;
                 }
             }
         }
-    
+
         .slick-dots {
             text-align: center;
             padding-top: 15px;
-    
+
             li {
                 display: inline-block;
                 vertical-align: top;
                 margin: 0 8px;
-    
+
                 button {
                     width: 16px;
                     height: 16px;
                     border: none;
                     cursor: pointer;
-                     
                     border-radius: 50%;
                     border: 2px solid #fff;
                     box-shadow: 0 0 0 0 transparent;
@@ -1568,16 +1562,16 @@ $link_hover_color: #fff;
                     background-color: #fff;
                     transition: all .3s ease;
                     opacity: .4;
-    
+
                     &:focus {
                         outline: none;
                     }
-    
+
                     &:hover {
                         opacity: 1;
                     }
                 }
-    
+
                 &.slick-active {
                     button {
                         border-color: $bg_color;
@@ -1836,7 +1830,7 @@ $link_hover_color: #fff;
         .class-thumb {
             height: 390px; // background: gray;
             padding: 10px;
-            cursor: pointer;  
+            cursor: pointer;
             color: $font-bk;
 
             @media (max-width: 990px) {
@@ -2709,7 +2703,7 @@ $link_hover_color: #fff;
                 font-weight: 400;
 
                 span {
-                    cursor: pointer;  
+                    cursor: pointer;
                     margin: 10px 10px 10px 0;
                     padding: 5px;
                     border-radius: 5px;
@@ -2963,6 +2957,7 @@ $link_hover_color: #fff;
 
                     span {
                         font-size: 20px;
+
                         p {
                             font-size: 16px;
                         }
@@ -3159,6 +3154,7 @@ $link_hover_color: #fff;
 
                         &.free-page {
                             display: inline-block;
+
                             @media(max-width: 425px) {
                                 margin-top: 20px;
                             }
@@ -3509,7 +3505,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -3662,7 +3658,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -3749,7 +3745,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -3789,7 +3785,7 @@ $link_hover_color: #fff;
                         padding: 1rem 0;
 
                         a#reply-btn {
-                            cursor: pointer;  
+                            cursor: pointer;
                             float: right;
                         }
                     }
@@ -3925,7 +3921,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4108,7 +4104,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4195,7 +4191,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4235,7 +4231,7 @@ $link_hover_color: #fff;
                         padding: 1rem 0;
 
                         a#reply-btn {
-                            cursor: pointer;  
+                            cursor: pointer;
                             float: right;
                         }
                     }
@@ -4316,7 +4312,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4427,7 +4423,7 @@ $link_hover_color: #fff;
                                 font-size: 15px;
                                 font-weight: 400;
                                 transition: .3s;
-                                cursor: pointer;  
+                                cursor: pointer;
 
                                 &:hover {
                                     background: $gold;
@@ -4441,7 +4437,7 @@ $link_hover_color: #fff;
                                 color: #fff;
                                 font-size: 1em;
                                 transition: all .4s;
-                                cursor: pointer;  
+                                cursor: pointer;
                             }
 
                             .js .input-file {
@@ -4451,7 +4447,7 @@ $link_hover_color: #fff;
                                 width: 225px;
                                 opacity: 0;
                                 padding: 14px 0;
-                                cursor: pointer;  
+                                cursor: pointer;
                             }
 
                             .js .input-file:hover+.input-file-trigger,
@@ -4574,7 +4570,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4661,7 +4657,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -4701,7 +4697,7 @@ $link_hover_color: #fff;
                         padding: 1rem 0;
 
                         a#reply-btn {
-                            cursor: pointer;  
+                            cursor: pointer;
                             float: right;
                         }
                     }
@@ -4866,6 +4862,7 @@ $link_hover_color: #fff;
 
                                     span {
                                         font-size: 20px;
+
                                         p {
                                             font-size: 16px;
                                         }
@@ -5081,6 +5078,7 @@ $link_hover_color: #fff;
         opacity: 0;
     }
 }
+
 .main-info-wrapper {
     width: 70%;
     max-width: 1150px;
@@ -5414,7 +5412,7 @@ $link_hover_color: #fff;
                 border: none;
                 outline: none;
                 border-radius: 5px;
-                cursor: pointer;  
+                cursor: pointer;
             }
         }
     }
@@ -5434,7 +5432,7 @@ $link_hover_color: #fff;
             .page-item {
                 .page-link {
                     color: $font-dark;
-                    cursor: pointer;  
+                    cursor: pointer;
 
                     &:focus,
                     &:active {
@@ -5645,7 +5643,7 @@ $link_hover_color: #fff;
                             font-size: 0px;
                             border-radius: 3px;
                             color: white;
-                            cursor: pointer;  
+                            cursor: pointer;
 
                             &.like {
                                 padding: 0;
@@ -5653,7 +5651,8 @@ $link_hover_color: #fff;
                                 padding: 5px 15px;
                                 transition: .2s;
 
-                                i, .num {
+                                i,
+                                .num {
                                     font-size: 15px;
                                     margin-right: 5px;
                                 }
@@ -5694,7 +5693,6 @@ $link_hover_color: #fff;
                     border-radius: 5px;
 
                     &__doc {
-
                         ul {
                             list-style-type: circle;
                             padding-left: 20px;
@@ -6013,7 +6011,7 @@ $link_hover_color: #fff;
                     }
 
                     i {
-                        cursor: pointer;  
+                        cursor: pointer;
                         padding: 8px 5px 0px 5px;
                         margin-right: 10px;
                         float: right;
@@ -6162,7 +6160,7 @@ $link_hover_color: #fff;
                     }
 
                     i {
-                        cursor: pointer;  
+                        cursor: pointer;
                         padding: 8px 5px 0px 5px;
                         margin-right: 10px;
                         float: right;
@@ -6249,7 +6247,7 @@ $link_hover_color: #fff;
                     }
 
                     i {
-                        cursor: pointer;  
+                        cursor: pointer;
                         padding: 8px 5px 0px 5px;
                         margin-right: 10px;
                         float: right;
@@ -6289,7 +6287,7 @@ $link_hover_color: #fff;
                 padding: 1rem 0;
 
                 a#reply-btn {
-                    cursor: pointer;  
+                    cursor: pointer;
                     float: right;
                 }
             }
@@ -6362,7 +6360,7 @@ $link_hover_color: #fff;
                 font-weight: 400;
 
                 span {
-                    cursor: pointer;  
+                    cursor: pointer;
                     margin: 10px 10px 10px 0;
                     padding: 5px;
                     border-radius: 5px;
@@ -6671,6 +6669,7 @@ $link_hover_color: #fff;
 
                     span {
                         font-size: 20px;
+
                         p {
                             font-size: 16px;
                         }
@@ -6954,12 +6953,11 @@ $link_hover_color: #fff;
 
                 &__doc {
                     margin-bottom: 2rem;
-                    
+
                     ul {
                         list-style-type: circle;
                         padding-left: 20px;
                     }
-
                 }
 
                 .title {
@@ -7197,7 +7195,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -7350,7 +7348,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -7437,7 +7435,7 @@ $link_hover_color: #fff;
                             }
 
                             i {
-                                cursor: pointer;  
+                                cursor: pointer;
                                 padding: 8px 5px 0px 5px;
                                 margin-right: 10px;
                                 float: right;
@@ -7477,7 +7475,7 @@ $link_hover_color: #fff;
                         padding: 1rem 0;
 
                         a#reply-btn {
-                            cursor: pointer;  
+                            cursor: pointer;
                             float: right;
                         }
                     }
@@ -7581,10 +7579,10 @@ $link_hover_color: #fff;
                                     .fund-tag {
                                         color: $brown;
                                         font-size: 18px;
-                
+
                                         .q-tt-1-btn {
                                             position: relative;
-                
+
                                             .qtt {
                                                 opacity: 0;
                                                 visibility: hidden;
@@ -7599,7 +7597,7 @@ $link_hover_color: #fff;
                                                 font-size: 13px;
                                                 color: $font-w;
                                             }
-                
+
                                             &:hover {
                                                 .qtt {
                                                     opacity: 1;
@@ -7608,36 +7606,37 @@ $link_hover_color: #fff;
                                             }
                                         }
                                     }
-                
+
                                     span {
                                         margin-right: 10px;
                                     }
                                 }
-                
+
                                 .panel-bought {
                                     padding: 1rem 0;
                                     font-size: 0;
-                
+
                                     span {
                                         font-size: 20px;
+
                                         p {
                                             font-size: 16px;
                                         }
                                     }
                                 }
-                
+
                                 .panel-price {
                                     font-family: 'Open Sans';
                                     font-size: 35px;
                                     font-weight: 800;
                                     color: $brown;
                                     margin: 5px 0;
-                
+
                                     .cn {
                                         font-size: 18px;
                                         font-weight: 500;
                                     }
-                
+
                                     .strike {
                                         color: $font-gray;
                                         font-weight: 500;
@@ -7645,8 +7644,6 @@ $link_hover_color: #fff;
                                         text-decoration: line-through;
                                     }
                                 }
-                
-                
 
                                 .panel-header {
                                     font-size: 22px;
@@ -7713,6 +7710,7 @@ $link_hover_color: #fff;
 
                                     span {
                                         font-size: 20px;
+
                                         p {
                                             font-size: 16px;
                                         }
@@ -7968,7 +7966,7 @@ $link_hover_color: #fff;
 
                     .list-item {
                         padding: 15px 20px;
-                        cursor: pointer;  
+                        cursor: pointer;
                         border-bottom: 1px solid #d3d3d38e;
 
                         .title-main {
@@ -7977,7 +7975,6 @@ $link_hover_color: #fff;
                         }
 
                         .title {
-
                             .chevron {
                                 transform: rotate(0deg);
                                 transition: .3s;
@@ -7989,7 +7986,6 @@ $link_hover_color: #fff;
                         }
                     }
 
-                    
                     #slide-list {
                         display: none;
                     }
@@ -8073,7 +8069,6 @@ $link_hover_color: #fff;
                 margin-bottom: 10px;
                 padding: 5px;
             }
-
         }
 
         .modal-footer {
@@ -8097,33 +8092,38 @@ $link_hover_color: #fff;
 }
 
 //subindex 主要內容區塊
-
 .subindex.main-content-section {
     width: 100%;
 
     * {
-        border: 1px solid red;
+        // border: 1px solid red;
     }
 
     .main-wrapper {
         width: 100%;
         max-width: 1150px;
-        
         margin: 0 auto;
         display: flex;
 
-        .left-part{
+        .left-part {
             flex: .7;
 
             .news-wrapper {
-
                 .ns-block {
                     padding-right: 2rem;
                     height: 200px;
+                    width: 100%;
+                    max-width: 100%;
+                    max-height: 200px;
 
-                    .ns-header, .ns-body{
+                    overflow: hidden;
+
+                    .ns-header,
+                    .ns-body {
                         display: inline-block;
                         height: 100%;
+
+                        margin: 0;
                     }
 
                     .ns-header {
@@ -8132,15 +8132,86 @@ $link_hover_color: #fff;
 
                         .ns-img {
                             height: 100%;
-                            
                             background-size: cover;
                             background-position: center;
+                        }
+                    }
+
+                    .ns-body {
+                        width: 49.5%;
+                        height: 100%;
+                        max-height: 100%;
+
+                        overflow: hidden;
+                        cursor: default;
+
+                        .ns-title {
+                            font-size: 22px;
+                            max-height: 66px;
+                            overflow: hidden;
+                        }
+
+                        .tag {
+                            margin: 5px 0;
+                            font-size: 0;
+
+                            span {
+                                font-size: 14px;
+                                font-weight: 300;
+
+                                &.like {
+                                    margin-left: 10px;
+                                    color: $pink-hover;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+                        .ns-cont {
+                            position: relative;
+                            height: 75px;
+                            width: 100%;
+                            max-height: 100%;
+                            overflow: hidden;
+                            font-weight: 300;
+
+                            &:after {
+                                content: '…';
+                                position: absolute;
+                                z-index: 1;
+                                bottom: 0px;
+                                right: 0px;
+                                height: 25px;
+                                width: 20px;
+                                font-size: 20px;
+                                background: $bgColor;
+                                color: black;
+                            }
+                        }
+
+                        .ns-footer {
+                            width: 100%;
+
+                            .ns-btn {
+                                width: 100%;
+
+                                .more {
+                                    float: right;
+                                    color: black;
+                                    font-weight: 300;
+
+                                    &:hover {
+                                        color: $brown;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
         }
-        .right-part{
+
+        .right-part {
             flex: .3;
         }
     }
