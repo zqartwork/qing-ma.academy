@@ -658,7 +658,7 @@
                         <!-- 第一部分 -->
                         <div id="Part1" class="tabcontent">
                             <div class="title-b">課前資訊</div>
-                            <div class="prepare inner-section">
+                            <div class="prepare inner-section inner-section__doc">
                                 <div class="sidebar-box">
                                     <div class="cont box-inner">
                                         <ul>
@@ -1576,12 +1576,6 @@
             </div>
         </div>
     </div>
-    <div class="popup-video-wrapper" id="popup-v">
-        <div class="plyrlist-container">
-            <div class="plyr-container">
-            </div>
-        </div>
-    </div>
     <!-- 購買後的彈出窗口 -->
     <!-- Modal -->
     <div class="purchasePop modal fade" id="purchasePop" tabindex="-1" role="dialog"
@@ -1672,10 +1666,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
     <script type="text/javascript" src="plugins/slick/slick.min.js"></script>
     <script onload="" src="plugins/mmenu/jquery.mmenu.all.js"></script>
     <script src="js/jquery.sticky.js"></script>
@@ -1729,6 +1723,13 @@
     <script>
         $('.fa-question-circle').tooltip({
             placement: 'top'
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+            const player = new Plyr('#player');
+
         });
     </script>
     <script src="js/custom.js"></script>

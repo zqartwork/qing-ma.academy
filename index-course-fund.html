@@ -23,7 +23,6 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="plugins/mmenu/jquery.mmenu.all.css">
-    <link rel="stylesheet" href="plugins/video.js/dist/video-js.css">
 
     <!-- Animate.css v3.5.2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
@@ -366,7 +365,7 @@
                                         background-image: url(img/lecture/lec-img-005.jpg);
                                     }
                                 </style>
-                                <div class="play-btn" id="plyr-btn" data-toggle="modal" data-target="#popup-v">
+                                <div class="play-btn" id="plyr-btn" data-toggle="modal" data-target="#videoModal">
                                     <span class="test"><i class="fas fa-eye"></i> 課程預覽</span>
                                 </div>
                             </div>
@@ -514,6 +513,72 @@
                     <div class="left-part col-8">
 
                         <!-- 影片浮動區 手機板 購買前 -->
+                        <!-- <div class="video-section-wrapper-md">
+                            <div class="inner-section row">
+                                <div class="left-part col-5 ">
+                                    <a style="cursor:pointer;">
+                                        <div class="video-thumb-md">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="right-part col-12">
+                                    <div class="panel-wrapper">
+
+                                        <div class="panel-tag">
+                                            <span class="fund-tag">課程募資中
+                                                <span class="q-tt-1-btn">
+                                                    <i class="fas fa-question-circle ">
+                                                    </i>
+                                                    <span class="qtt">
+                                                        募資若沒有成功，將會全數退款給預購人。
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                        <div class="panel-header">
+                                            <span class="title">美食攝影師：配色、擺盤、光影的視覺饗宴</span>
+                                        </div>
+                                        <div class="panel-tag">
+                                            <span class="name">講師 - ADA LIN</span>
+                                            <span class="time"><i class="fas fa-clock"></i> 7.5 hr</span>
+                                        </div>
+                                        <div class="panel-price">
+
+                                            <span class="cn">
+                                                預購
+                                                <i class="fas fa-caret-right"></i>
+                                            </span>
+                                            <span class="strike">NT$ 2,400</span>
+                                            NT$<span class="num">1,600</span>
+                                        </div>
+                                        <button id="plyr-btn-m" data-toggle="modal" data-target="#videoModal"><i
+                                                class="far fa-eye"></i> 課程預覽</button>
+                                        <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
+                                                class="far fa-hand-point-up"></i> 預購課程</button>
+                                        <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
+                                        <div class="panel-cont">
+                                            <div class="sidebar-box">
+                                                <ul class="box-inner">
+                                                    <li>購買的課程內容包含：</li>
+                                                    <li><i class="fas fa-video"></i>450 分鐘的課程影片</li>
+                                                    <li><i class="far fa-newspaper"></i>10 則閱讀文章內容</li>
+                                                    <li><i class="fas fa-ribbon"></i>此課程終身存取權</li>
+                                                    <li><i class="fas fa-mobile-alt"></i>可透過行動裝置觀看</li>
+                                                    <li><i class="fas fa-medal"></i>結業證書</li>
+                                                </ul>
+                                                <p class="read-more"><a href="#" class="button">Read More</a></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- 影片浮動區 手機板 購買後 -->
                         <div class="video-section-wrapper-md">
                             <div class="inner-section row">
                                 <div class="left-part col-5 ">
@@ -524,44 +589,35 @@
                                 </div>
                                 <div class="right-part col-12">
                                     <div class="panel-wrapper">
+
+                                        <div class="panel-tag">
+                                            <span class="fund-tag">課程募資中
+                                                <span class="q-tt-1-btn">
+                                                    <i class="fas fa-question-circle ">
+                                                    </i>
+                                                    <span class="qtt">
+                                                        募資若沒有成功，將會全數退款給預購人。
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </div>
+
                                         <div class="panel-header">
                                             <span class="title">美食攝影師：配色、擺盤、光影的視覺饗宴</span>
                                         </div>
-                                        <div class="star-rating">
-                                            <div>
-                                                <span class="star-progress"></span>
-                                                <span class="star-progress-filled" style="width: 100%;"></span>
-                                            </div>
-                                            <div>
-                                                <span class="star-progress"></span>
-                                                <span class="star-progress-filled" style="width: 100%;"></span>
-                                            </div>
-                                            <div>
-                                                <span class="star-progress"></span>
-                                                <span class="star-progress-filled" style="width: 100%;"></span>
-                                            </div>
-                                            <div>
-                                                <span class="star-progress"></span>
-                                                <span class="star-progress-filled" style="width: 100%;"></span>
-                                            </div>
-                                            <div>
-                                                <span class="star-progress"></span>
-                                                <span class="star-progress-filled" style="width: 50%;"></span>
-                                            </div>
-                                            <div class="detail-num"><span class="num">4.5</span> <span>(1,200)</span>
-                                            </div>
-                                        </div>
-
                                         <div class="panel-tag">
                                             <span class="name">講師 - ADA LIN</span>
                                             <span class="time"><i class="fas fa-clock"></i> 7.5 hr</span>
                                         </div>
-                                        <div class="panel-price">
-                                            NT$<span class="num">2,400</span>
+                                        <div class="panel-bought">
+                                            <span class="">[ NT$ 1,600 ] - 已預購課程</span>
+                                            <p>課程預計於 2019-04-05 正式開課</p>
                                         </div>
-                                        <button id="plyr-btn-m"><i class="far fa-eye"></i> 課程預覽</button>
+
+                                        <button id="plyr-btn-m" data-toggle="modal" data-target="#videoModal"><i
+                                                class="far fa-eye"></i> 課程預覽</button>
                                         <button class="buy" data-toggle="modal" data-target="#purchasePop"><i
-                                                class="fas fa-shopping-cart"></i> 立即購買</button>
+                                                class="far fa-hand-point-up"></i> 預購課程</button>
                                         <button class="add"><i class="fas fa-heart"></i> 加入收藏</button>
                                         <div class="panel-cont">
                                             <div class="sidebar-box">
@@ -584,7 +640,6 @@
                             </div>
                         </div>
 
-                        <!-- 影片浮動區 手機板 購買後 -->
                         <!-- <div class="video-section-wrapper-md">
                             <div class="inner-section row">
                                 <div class="left-part col-5 ">
@@ -710,7 +765,7 @@
                                     <p class="read-more"><a href="#" class="button">Read More</a></p>
                                 </div>
                             </div>
-                            <div class="course-content inner-section">
+                            <div class="course-content inner-section inner-section__doc">
                                 <div class="sidebar-box">
                                     <div class="cont box-inner">
                                         <div class="title">課程簡介</div>
@@ -770,15 +825,35 @@
                         <!-- 第二部分 -->
                         <div id="Part2" class="tabcontent">
                             <div class="title-b">預計單元</div>
-                            <div class="course-content inner-section">
+                            <div class="course-content inner-section inner-section__doc">
                                 <div class="sidebar-box">
                                     <div class="cont box-inner">
                                         <div class="title">課程簡介</div>
 
                                         <blockquote>第一主題：生活中的美食攝影</blockquote>
-
+                                        <ul>
+                                            <li>單元一：這裡是單元的標題</li>
+                                            <li>單元二：這裡是單元的標題</li>
+                                            <li>單元三：這裡是單元的標題</li>
+                                            <li>單元四：這裡是單元的標題</li>
+                                            <li>單元五：這裡是單元的標題</li>
+                                        </ul>
                                         <blockquote>第二主題：生活中的美食攝影</blockquote>
-
+                                        <ul>
+                                            <li>單元一：這裡是單元的標題</li>
+                                            <li>單元二：這裡是單元的標題</li>
+                                            <li>單元三：這裡是單元的標題</li>
+                                            <li>單元四：這裡是單元的標題</li>
+                                            <li>單元五：這裡是單元的標題</li>
+                                        </ul>
+                                        <blockquote>第三主題：生活中的美食攝影</blockquote>
+                                        <ul>
+                                            <li>單元一：這裡是單元的標題</li>
+                                            <li>單元二：這裡是單元的標題</li>
+                                            <li>單元三：這裡是單元的標題</li>
+                                            <li>單元四：這裡是單元的標題</li>
+                                            <li>單元五：這裡是單元的標題</li>
+                                        </ul>
                                     </div>
                                     <p class="read-more"><a href="#" class="button">Read More</a></p>
                                 </div>
@@ -977,84 +1052,56 @@
     </div>
     <!-- 彈窗部分 -->
     <!-- 主要影片播放器 -->
-    <div class="popup-video-wrapper" id="popup-v" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-        aria-hidden="true">
-        <div class="plyrlist-container">
-            <div class="plyr-container">
-                <video controls crossorigin playsinline
-                    poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
-                    <!-- Video files -->
-                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                        type="video/mp4" size="576">
-                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
-                        type="video/mp4" size="720">
-                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
-                        type="video/mp4" size="1080">
-                    <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4"
-                        type="video/mp4" size="1440">
+    <div class="modal fade videoModal" id="videoModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <video controls crossorigin playsinline
+                        poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+                        <!-- Video files -->
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                            type="video/mp4" size="576">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+                            type="video/mp4" size="720">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+                            type="video/mp4" size="1080">
+                        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4"
+                            type="video/mp4" size="1440">
 
-                    <!-- Caption files -->
-                    <track kind="captions" label="English" srclang="en"
-                        src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
-                    <track kind="captions" label="Français" srclang="fr"
-                        src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+                        <!-- Caption files -->
+                        <track kind="captions" label="English" srclang="en"
+                            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
+                        <track kind="captions" label="Français" srclang="fr"
+                            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
 
-                    <!-- Fallback for browsers that don't support the <video> element -->
-                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
-                        download>Download</a>
-                </video>
-            </div>
-            <div class="list-container">
-                <div class="list-item row main">
-                    <div class="title-main col-11">美食攝影師：配色、擺盤、光影的視覺饗宴</div>
+                        <!-- Fallback for browsers that don't support the <video> element -->
+                        <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+                            download>Download</a>
+                    </video>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <a href="#" class="list-item row">
-                    <div class="col-2 icon"><i class="fas fa-play"></i></div>
-                    <div class="col-8 title">五分鐘課程試看：試播集</div>
-                    <div class="col-2 time"> -03:03 </div>
-                </a>
-                <div class="list-item row ls" id="slide-btn">
-                    <div class="col-2 icon"><i class="fas fa-list-ul"></i></div>
-                    <div class="col-8 title">第一章節：進入正式課程的起手式 &nbsp; &nbsp; <i class="fas fa-chevron-right chevron"></i>
-                    </div>
-                    <div class="col-2 time"> -03:03 </div>
-                </div>
-                <div id="slide-list">
-                    <a href="#" class="list-item row">
-                        <div class="col-2"></div>
-                        <div class="item col-8">單元一：必須擁有的配備</div>
-                        <div class="col-2 time"> -03:03 </div>
-                    </a>
-                    <a href="#" class="list-item row">
-                        <div class="col-2"></div>
-                        <div class="item col-8">單元二：必須擁有的配備</div>
-                        <div class="col-2 time"> -03:03 </div>
-                    </a>
-                    <a href="#" class="list-item row">
-                        <div class="col-2"></div>
-                        <div class="item col-8">單元三：必須擁有的配備</div>
-                        <div class="col-2 time"> -03:03 </div>
-                    </a>
-                </div>
-                <a href="#" class="list-item row">
-                    <div class="col-2 icon"><i class="fas fa-lock"></i></div>
-                    <div class="col-8 title">第二章節：成為有美感的平凡人</div>
-                    <div class="col-2 time"> -03:03 </div>
-                </a>
-                <a href="#" class="list-item row">
-                    <div class="col-2 icon"><i class="fas fa-lock"></i></div>
-                    <div class="col-8 title">第三章節：成為有美感的平凡人</div>
-                    <div class="col-2 time"> -03:03 </div>
-                </a>
-                <a href="#" class="list-item row">
-                    <div class="col-2 icon"><i class="fas fa-lock"></i></div>
-                    <div class="col-8 title">第四章節：成為有美感的平凡人</div>
-                    <div class="col-2 time"> -03:03 </div>
-                </a>
+                <div class="modal-body">
+                    <div class="list-container">
+                        <div class="list-item row main">
+                            <div class="title-main col-11">美食攝影師：配色、擺盤、光影的視覺饗宴</div>
+                            <span class="notice"> 共 4 個章節 / 15 個單元 / 5 項作業 </span>
 
+                        </div>
+                        <a href="#" class="list-item row">
+                            <div class="col-1 icon"><i class="fas fa-play"></i></div>
+                            <div class="col-9 title">五分鐘課程試看：試播集</div>
+                            <div class="col-2 time"> -03:03 </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary bg-gold">繼續觀看：<span>-02:15</span></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">離開</button>
+                </div>
             </div>
         </div>
     </div>
@@ -1260,6 +1307,13 @@
 
         var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
         initializeClock('clockdiv', deadline);
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+            const player = new Plyr('#player');
+
+        });
     </script>
     <script src="js/custom.js"></script>
 </body>

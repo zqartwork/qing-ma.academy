@@ -4752,139 +4752,6 @@ $link_hover_color: #fff;
         opacity: 0;
     }
 }
-
-.popup-video-wrapper {
-    position: fixed;
-    z-index: 9999;
-    width: 100%;
-    height: 100vh;
-    overflow: scroll;
-    top: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.801);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: .3s;
-
-    &.show {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    @media (max-width: 1150px) {
-        display: block;
-        height: 100%;
-        overflow: scroll;
-    }
-
-    .plyrlist-container {
-        position: relative;
-        display: flex;
-        width: 100%;
-        height: 600px;
-        justify-content: center;
-
-        @media (max-width: 1150px) {
-            display: block;
-        }
-
-        .plyr-container {
-            flex: .7;
-            background: #000;
-            margin: 0;
-            max-height: 600px;
-            overflow: hidden;
-
-            video {
-                height: 600px;
-
-                @media (max-width: 1150px) {
-                    height: 100%;
-                }
-            }
-        }
-
-        .list-container {
-            flex: .3;
-            background: $font-bk;
-            max-height: 600px;
-            overflow: scroll;
-            align-items: center;
-            border-left: 4px double #ffc24080;
-
-            @media (max-width: 1150px) {
-                border: none;
-                border-top: 4px double #ffc24080;
-            }
-
-            #exit {
-                @media (max-width: 1150px) {
-                    position: fixed;
-                    right: 1rem;
-                    top: 1rem;
-                    font-size: 30px;
-                }
-            }
-
-            .list-item {
-                width: 100%;
-                color: $font-w;
-                font-weight: 300;
-                text-align: left;
-                padding: 20px 15px 20px 30px;
-                cursor: pointer;
-
-                &:not(.main):hover,
-                &:not(.main):focus,
-                &:not(.main):active {
-                    background: #ffc240;
-                    color: black;
-                }
-
-                &.active {
-                    background: #ffc240;
-                    color: black;
-                }
-
-                &.main {
-                    border-bottom: 4px double #ffc24080;
-
-                    .exit {
-                        &:hover {
-                            color: #ffc240;
-                        }
-                    }
-                }
-
-                .title-main {
-                    font-size: 20px;
-                    font-weight: 500;
-                }
-            }
-
-            #slide-btn {
-                .title {
-                    .chevron {
-                        transform: rotate(0deg);
-                        transition: .3s;
-
-                        &.active {
-                            transform: rotate(90deg);
-                        }
-                    }
-                }
-            }
-
-            #slide-list {
-                display: none;
-            }
-        }
-    }
-}
-
 .main-info-wrapper {
     width: 70%;
     max-width: 1150px;
@@ -6739,6 +6606,16 @@ $link_hover_color: #fff;
                     border-radius: 0 0 0 0;
                 }
 
+                &__doc {
+                    margin-bottom: 2rem;
+                    
+                    ul {
+                        list-style-type: circle;
+                        padding-left: 20px;
+                    }
+
+                }
+
                 .title {
                     font-weight: 600;
                     font-size: 25px;
@@ -7261,918 +7138,6 @@ $link_hover_color: #fff;
                 }
             }
 
-            .rate {
-                margin-bottom: 1rem;
-
-                .rate-square {
-                    padding: 2rem 2rem 1.5rem 2rem;
-
-                    &.user {
-                        padding-bottom: 3rem;
-                    }
-
-                    .main-rate {
-                        padding-top: 0rem;
-                        padding-bottom: 3.5rem;
-
-                        &.signin {
-                            padding-bottom: .7rem;
-
-                            .inner-wrapper {
-                                &.signin {
-                                    margin-bottom: 0rem;
-
-                                    .top-text {
-                                        padding-top: .8rem;
-                                    }
-                                }
-                            }
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .top-text {
-                            .note {
-                                display: block;
-                                float: right;
-                                margin-top: 5px;
-                            }
-
-                            .star-rating {
-                                float: right;
-                                width: 139px;
-
-                                .rating {
-                                    border: none;
-                                }
-
-                                .rating>input {
-                                    display: none;
-                                }
-
-                                .rating>label:before {
-                                    margin: 3px;
-                                    font-size: 1.2em;
-                                    font-family: 'Font Awesome 5 Free';
-                                    display: inline-block;
-                                    content: "\f005";
-                                    font-weight: 900;
-                                }
-
-                                .rating>.half:before {
-                                    content: "\f089";
-                                    position: absolute;
-                                }
-
-                                .rating>label {
-                                    color: #ddd;
-                                    float: right;
-                                }
-
-                                /***** CSS Magic to Highlight Stars on Hover *****/
-                                .rating>input:checked~label,
-                                /* show gold star when clicked */
-                                .rating:not(:checked)>label:hover,
-                                /* hover current star */
-                                .rating:not(:checked)>label:hover~label {
-                                    color: #ffc240;
-                                }
-
-                                /* hover previous stars in list */
-                                .rating>input:checked+label:hover,
-                                /* hover current star when changing rating */
-                                .rating>input:checked~label:hover,
-                                .rating>label:hover~input:checked~label,
-                                /* lighten current selection */
-                                .rating>input:checked~label:hover~label {
-                                    color: #ffcb5c;
-                                }
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-                            padding-left: 4.5rem;
-
-                            .code-wrapper {
-                                width: 100%;
-                                float: right;
-                            }
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                float: right;
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 30%;
-                                float: right;
-                            }
-
-                            .signin-btn {
-                                float: left;
-                            }
-                        }
-                    }
-
-                    .qa-pic {
-                        position: absolute;
-                        z-index: 1;
-                    }
-
-                    .inner-wrapper {
-                        .top-text {
-                            padding-left: 5rem;
-
-                            span {
-                                margin-right: 10px;
-                            }
-
-                            .signin-btn {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .time {
-                                display: inline-block;
-                            }
-
-                            .star-rated-tag {
-                                display: inline-block;
-
-                                .star-rating {
-                                    display: flex;
-                                    font-size: 16px;
-                                    justify-content: flex-start;
-                                    width: 100%;
-
-                                    div {
-                                        position: relative;
-                                        display: inline-block;
-
-                                        .star-progress {
-                                            position: relative;
-                                            margin-right: 5px;
-
-                                            &::before {
-                                                font-family: 'Font Awesome 5 Free';
-                                                content: '\f005';
-                                                color: lightgray;
-                                                font-weight: 900;
-                                                z-index: 0;
-                                                position: relative;
-                                                display: inline-block;
-                                            }
-                                        }
-
-                                        .star-progress-filled {
-                                            position: absolute;
-                                            overflow: hidden;
-                                            top: 0;
-                                            left: 0;
-                                            margin: 0;
-
-                                            &::before {
-                                                font-family: 'Font Awesome 5 Free';
-                                                content: '\f005';
-                                                color: #ffc240;
-                                                font-weight: 900;
-                                                z-index: 1;
-                                                position: relative;
-                                                display: inline-block;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .bot-text {
-                            padding-left: 5rem;
-                            padding-top: 1rem;
-                        }
-                    }
-
-                    .hr {
-                        border-top: 1px solid lightgray;
-                    }
-
-                    #reply {
-                        padding-top: 2rem;
-                        padding-bottom: 3.5rem;
-                        display: none;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-                            float: right;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
-
-                    .other-reply {
-                        padding-top: 2rem;
-                        padding-bottom: 1rem;
-                        padding: 2rem 1rem 1rem 5rem;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
-
-                    .reply-wrapper {
-                        padding: 1rem 0;
-
-                        a#reply-btn {
-                            cursor: pointer;
-                            float: right;
-                        }
-                    }
-                }
-            }
-
-            .assignment {
-                margin-bottom: 1rem;
-
-                .assignment-square {
-                    padding: 2rem 2rem;
-
-                    &.work {
-                        background: none;
-                        padding: 1rem 0rem 0 0;
-                    }
-
-                    .main-assignment {
-                        padding-top: 0rem;
-                        padding-bottom: 3.5rem;
-
-                        &.signin {
-                            padding-bottom: .7rem;
-
-                            .inner-wrapper {
-                                &.signin {
-                                    margin-bottom: 0rem;
-
-                                    .top-text {
-                                        padding-top: .8rem;
-                                    }
-                                }
-                            }
-                        }
-
-                        .title {
-                            font-size: 20px;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-
-                            .code-wrapper {
-                                width: 100%;
-                                float: right;
-                            }
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                float: right;
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 30%;
-                                float: right;
-                            }
-
-                            .signin-btn {
-                                float: left;
-                            }
-                        }
-                    }
-
-                    .qa-pic {
-                        position: absolute;
-                        z-index: 1;
-                    }
-
-                    .inner-wrapper {
-                        margin-bottom: 2rem;
-
-                        .top-text {
-                            padding-left: 5rem;
-
-                            &.no-p {
-                                padding-left: 0rem;
-                            }
-
-                            span {
-                                margin-right: 10px;
-                            }
-
-                            .signin-btn {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-                        }
-
-                        .bot-text {
-                            padding-left: 5rem;
-                            padding-top: 1rem;
-
-                            &.no-p {
-                                padding-left: 0rem;
-                            }
-
-                            .upload_btn {
-                                background: $bgColor;
-                                padding: 8px 20px;
-                                border-radius: 5px;
-                                border: none;
-                                color: black;
-                                font-weight: 400;
-                                transition: .3s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .input-file-container {
-                                position: relative;
-                                display: inline-block;
-                                margin-right: 10px;
-                            }
-
-                            .input-file-trigger {
-                                background: $bgColor;
-                                padding: 8px 20px;
-                                border-radius: 5px;
-                                border: none;
-                                color: black;
-                                font-size: 15px;
-                                font-weight: 400;
-                                transition: .3s;
-                                cursor: pointer;
-
-                                &:hover {
-                                    background: $gold;
-                                }
-                            }
-
-                            .js .input-file-trigger {
-                                display: block;
-                                padding: 14px 45px;
-                                background: #39D2B4;
-                                color: #fff;
-                                font-size: 1em;
-                                transition: all .4s;
-                                cursor: pointer;
-                            }
-
-                            .js .input-file {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 225px;
-                                opacity: 0;
-                                padding: 14px 0;
-                                cursor: pointer;
-                            }
-
-                            .js .input-file:hover+.input-file-trigger,
-                            .js .input-file:focus+.input-file-trigger,
-                            .js .input-file-trigger:hover,
-                            .js .input-file-trigger:focus {
-                                background: #34495E;
-                                color: #39D2B4;
-                            }
-
-                            .file-return {
-                                margin: 0;
-                            }
-
-                            .file-return:not(:empty) {
-                                margin: 1em 0;
-                            }
-
-                            .js .file-return {
-                                font-style: italic;
-                                font-size: .9em;
-                                font-weight: bold;
-                            }
-
-                            .js .file-return:not(:empty):before {
-                                content: "Selected file: ";
-                                font-style: normal;
-                                font-weight: normal;
-                            }
-                        }
-
-                        &.works {
-                            width: 100%;
-                            position: relative;
-
-                            .col-6 {
-                                position: relative;
-
-                                .as-img {
-                                    background-position: center;
-                                    background-repeat: no-repeat;
-                                    height: 150px;
-                                    border: 1px solid gray;
-                                    border-radius: 5px;
-                                    margin: 0 15px;
-                                }
-
-                                .bot-side {
-                                    position: relative;
-
-                                    .as-p {
-                                        position: absolute;
-                                        top: 10px;
-                                        left: 18px;
-                                    }
-
-                                    .info-wrapper {
-                                        padding-left: 5rem;
-                                        padding-top: .6rem;
-                                        color: $font-dark;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    .hr {
-                        border-top: 1px solid lightgray;
-                    }
-
-                    #reply {
-                        padding-top: 2rem;
-                        padding-bottom: 3.5rem;
-                        display: none;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-                            float: right;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
-
-                    .other-reply {
-                        padding-top: 2rem;
-                        padding-bottom: 1rem;
-                        padding: 2rem 1rem 1rem 5rem;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
-
-                    .reply-wrapper {
-                        padding: 1rem 0;
-
-                        a#reply-btn {
-                            cursor: pointer;
-                            float: right;
-                        }
-                    }
-                }
-            }
-
             .left-part.col-8 {
                 .video-section-wrapper-md {
                     display: none;
@@ -8265,6 +7230,74 @@ $link_hover_color: #fff;
                             .panel-wrapper {
                                 padding: 10px 10px;
                                 color: $font-dark;
+
+                                .panel-tag {
+                                    .fund-tag {
+                                        color: $brown;
+                                        font-size: 18px;
+                
+                                        .q-tt-1-btn {
+                                            position: relative;
+                
+                                            .qtt {
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                position: absolute;
+                                                bottom: 0;
+                                                left: 150%;
+                                                background: #000;
+                                                width: 200px;
+                                                padding: 5px 10px 5px 10px;
+                                                border-radius: 5px;
+                                                transition: .3s;
+                                                font-size: 13px;
+                                                color: $font-w;
+                                            }
+                
+                                            &:hover {
+                                                .qtt {
+                                                    opacity: 1;
+                                                    visibility: visible;
+                                                }
+                                            }
+                                        }
+                                    }
+                
+                                    span {
+                                        margin-right: 10px;
+                                    }
+                                }
+                
+                                .panel-bought {
+                                    padding: 1rem 0;
+                                    font-size: 0;
+                
+                                    span {
+                                        font-size: 20px;
+                                    }
+                                }
+                
+                                .panel-price {
+                                    font-family: 'Open Sans';
+                                    font-size: 35px;
+                                    font-weight: 800;
+                                    color: $brown;
+                                    margin: 5px 0;
+                
+                                    .cn {
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                    }
+                
+                                    .strike {
+                                        color: $font-gray;
+                                        font-weight: 500;
+                                        font-size: 18px;
+                                        text-decoration: line-through;
+                                    }
+                                }
+                
+                
 
                                 .panel-header {
                                     font-size: 22px;
@@ -8594,14 +7627,19 @@ $link_hover_color: #fff;
                         .title {
 
                             .chevron {
-                                transform: rotate(90deg);
+                                transform: rotate(0deg);
                                 transition: .3s;
 
                                 &.active {
-                                    transform: rotate(0deg);
+                                    transform: rotate(90deg);
                                 }
                             }
                         }
+                    }
+
+                    
+                    #slide-list {
+                        display: none;
                     }
                 }
             }
@@ -8683,6 +7721,7 @@ $link_hover_color: #fff;
                 margin-bottom: 10px;
                 padding: 5px;
             }
+
         }
 
         .modal-footer {
