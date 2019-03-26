@@ -35,6 +35,15 @@ h6 {
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
 
+blockquote {
+  border-left: 5px solid #ffc240;
+  margin: 15px 0;
+  padding: 0px 20px;
+  font-size: 18px;
+  font-weight: 500; }
+  blockquote p {
+    font-size: .8em !important; }
+
 .col {
   padding: 0; }
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
@@ -1035,8 +1044,8 @@ button {
 .slider-section-wrapper {
   width: 100%;
   text-align: center;
-  border: 1px solid red;
-  margin-top: 7rem; }
+  margin-top: 6rem;
+  margin-bottom: 1rem; }
   .slider-section-wrapper .subindex.main-slider {
     height: unset;
     min-height: unset;
@@ -1142,6 +1151,17 @@ button {
       @media (max-width: 995px) {
         .slider-section-wrapper .subindex.main-slider .slick-next {
           right: 0%; } }
+    .slider-section-wrapper .subindex.main-slider .cont {
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(#00000000));
+      background-image: -webkit-linear-gradient(bottom, #000, #00000000);
+      background-image: -o-linear-gradient(bottom, #000, #00000000);
+      background-image: linear-gradient(to top, #000, #00000000);
+      position: absolute;
+      top: unset;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%; }
     .slider-section-wrapper .subindex.main-slider .caption {
       position: absolute;
       top: unset;
@@ -1154,6 +1174,7 @@ button {
       padding: unset;
       margin-top: unset;
       margin-left: 2rem;
+      margin-bottom: 1rem;
       text-align: left;
       color: #fff;
       font-size: 30px;
@@ -6258,6 +6279,39 @@ button {
       background-color: #d69200; }
     .purchasePop.modal .modal-content .modal-footer .confirm:active, .purchasePop.modal .modal-content .modal-footer .confirm:focus {
       outline: none; }
+
+.subindex.main-content-section {
+  width: 100%; }
+  .subindex.main-content-section * {
+    border: 1px solid red; }
+  .subindex.main-content-section .main-wrapper {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .subindex.main-content-section .main-wrapper .left-part {
+      -webkit-box-flex: .7;
+      -ms-flex: .7;
+      flex: .7; }
+      .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block {
+        padding-right: 2rem;
+        height: 200px; }
+        .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-header, .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body {
+          display: inline-block;
+          height: 100%; }
+        .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-header {
+          width: 50%;
+          padding-right: 1rem; }
+          .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-header .ns-img {
+            height: 100%;
+            background-size: cover;
+            background-position: center; }
+    .subindex.main-content-section .main-wrapper .right-part {
+      -webkit-box-flex: .3;
+      -ms-flex: .3;
+      flex: .3; }
 
 footer {
   display: block;

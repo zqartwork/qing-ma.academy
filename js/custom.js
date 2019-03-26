@@ -244,6 +244,11 @@ $('.master-main-slider').slick({
 
 });
 
+$('.main-slider.subindex').slick({
+    autoplay: true
+});
+
+
 var $el, $ps, $up, totalHeight;
 
 $(".read-more .button").click(function () {

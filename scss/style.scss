@@ -60,6 +60,19 @@ h6 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+blockquote {
+    border-left: 5px solid #ffc240;
+    margin: 15px 0;
+    padding: 0px 20px;
+
+    p {
+        font-size: .8em !important;
+    }
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .col {
 
     &-1,
@@ -1327,11 +1340,14 @@ $link_hover_color: #fff;
     }
 }
 
+// sub-index 焦點頁面
+
 .slider-section-wrapper {
     width: 100%;
     text-align: center;
-    border: 1px solid red;
-    margin-top: 7rem;
+    // border: 1px solid red;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
 
     .subindex.main-slider {
         height: unset;
@@ -1460,7 +1476,15 @@ $link_hover_color: #fff;
                 right: 0%;
             }
         }
-    
+        .cont {
+            background-image: linear-gradient(to top, #000, #00000000);
+            position: absolute;
+            top: unset;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
         .caption {
             position: absolute;
             top: unset;
@@ -1474,6 +1498,7 @@ $link_hover_color: #fff;
             padding: unset;
             margin-top: unset;
             margin-left: 2rem;
+            margin-bottom: 1rem;
 
             text-align: left;
             color: #fff;
@@ -8067,6 +8092,56 @@ $link_hover_color: #fff;
                     outline: none;
                 }
             }
+        }
+    }
+}
+
+//subindex 主要內容區塊
+
+.subindex.main-content-section {
+    width: 100%;
+
+    * {
+        border: 1px solid red;
+    }
+
+    .main-wrapper {
+        width: 100%;
+        max-width: 1150px;
+        
+        margin: 0 auto;
+        display: flex;
+
+        .left-part{
+            flex: .7;
+
+            .news-wrapper {
+
+                .ns-block {
+                    padding-right: 2rem;
+                    height: 200px;
+
+                    .ns-header, .ns-body{
+                        display: inline-block;
+                        height: 100%;
+                    }
+
+                    .ns-header {
+                        width: 50%;
+                        padding-right: 1rem;
+
+                        .ns-img {
+                            height: 100%;
+                            
+                            background-size: cover;
+                            background-position: center;
+                        }
+                    }
+                }
+            }
+        }
+        .right-part{
+            flex: .3;
         }
     }
 }
