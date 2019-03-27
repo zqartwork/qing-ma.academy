@@ -6286,61 +6286,61 @@ button {
   .subindex.main-content-section .main-wrapper {
     width: 100%;
     max-width: 1150px;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
     .subindex.main-content-section .main-wrapper .left-part {
-      -webkit-box-flex: .7;
-      -ms-flex: .7;
-      flex: .7; }
-      .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block {
+      -webkit-box-flex: .65;
+      -ms-flex: .65;
+      flex: .65; }
+      .subindex.main-content-section .main-wrapper .left-part .ns-block {
         padding-right: 2rem;
         height: 200px;
         width: 100%;
         max-width: 100%;
         max-height: 200px;
         overflow: hidden; }
-        .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-header,
-        .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body {
+        .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-header,
+        .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body {
           display: inline-block;
           height: 100%;
           margin: 0; }
-        .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-header {
+        .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-header {
           width: 50%;
           padding-right: 1rem; }
-          .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-header .ns-img {
+          .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-header .ns-img {
             height: 100%;
             background-size: cover;
             background-position: center; }
-        .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body {
+        .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body {
           width: 49.5%;
           height: 100%;
           max-height: 100%;
           overflow: hidden;
           cursor: default; }
-          .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .ns-title {
+          .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .ns-title {
             font-size: 22px;
             max-height: 66px;
             overflow: hidden; }
-          .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .tag {
+          .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .tag {
             margin: 5px 0;
             font-size: 0; }
-            .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .tag span {
+            .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .tag span {
               font-size: 14px;
               font-weight: 300; }
-              .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .tag span.like {
+              .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .tag span.like {
                 margin-left: 10px;
                 color: #eb3654;
                 cursor: pointer; }
-          .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .ns-cont {
+          .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .ns-cont {
             position: relative;
             height: 75px;
             width: 100%;
             max-height: 100%;
             overflow: hidden;
             font-weight: 300; }
-            .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .ns-cont:after {
+            .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .ns-cont:after {
               content: '…';
               position: absolute;
               z-index: 1;
@@ -6351,20 +6351,60 @@ button {
               font-size: 20px;
               background: #e4e4e4;
               color: black; }
-          .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .ns-footer {
+          .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .ns-footer {
             width: 100%; }
-            .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .ns-footer .ns-btn {
+            .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .ns-footer .ns-btn {
               width: 100%; }
-              .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .ns-footer .ns-btn .more {
+              .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .ns-footer .ns-btn .more {
                 float: right;
                 color: black;
                 font-weight: 300; }
-                .subindex.main-content-section .main-wrapper .left-part .news-wrapper .ns-block .ns-body .ns-footer .ns-btn .more:hover {
+                .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .ns-footer .ns-btn .more:hover {
                   color: #ac7000; }
     .subindex.main-content-section .main-wrapper .right-part {
-      -webkit-box-flex: .3;
-      -ms-flex: .3;
-      flex: .3; }
+      -webkit-box-flex: .35;
+      -ms-flex: .35;
+      flex: .35; }
+  .subindex.main-content-section .info-wrapper {
+    margin-bottom: 1rem; }
+  .subindex.main-content-section .conf {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .subindex.main-content-section .conf span {
+      margin-right: 8px; }
+  .subindex.main-content-section .cata {
+    display: inline-block;
+    background: #000;
+    height: 28px;
+    width: 52px;
+    position: relative;
+    margin-right: 8px;
+    border-radius: 3px; }
+    .subindex.main-content-section .cata__ac:before {
+      content: '活動';
+      color: #ff526f;
+      position: absolute;
+      top: 2px;
+      left: 10px; }
+    .subindex.main-content-section .cata__rc:before {
+      content: '徵才';
+      color: #52e5ff;
+      position: absolute;
+      top: 1px;
+      left: 10px; }
+    .subindex.main-content-section .cata__cp:before {
+      content: '優惠';
+      color: #ffcd2b;
+      position: absolute;
+      top: 2px;
+      left: 10px; }
+  .subindex.main-content-section .date {
+    color: gray; }
+  .subindex.main-content-section .title {
+    display: inline-block;
+    font-weight: 500;
+    margin-top: .5rem; }
 
 footer {
   display: block;

@@ -8102,107 +8102,105 @@ $link_hover_color: #fff;
     .main-wrapper {
         width: 100%;
         max-width: 1150px;
-        margin: 0 auto;
+        margin: 2rem auto;
         display: flex;
 
         .left-part {
-            flex: .7;
+            flex: .65;
 
-            .news-wrapper {
-                .ns-block {
-                    padding-right: 2rem;
-                    height: 200px;
-                    width: 100%;
-                    max-width: 100%;
-                    max-height: 200px;
+            .ns-block {
+                padding-right: 2rem;
+                height: 200px;
+                width: 100%;
+                max-width: 100%;
+                max-height: 200px;
+
+                overflow: hidden;
+
+                .ns-header,
+                .ns-body {
+                    display: inline-block;
+                    height: 100%;
+
+                    margin: 0;
+                }
+
+                .ns-header {
+                    width: 50%;
+                    padding-right: 1rem;
+
+                    .ns-img {
+                        height: 100%;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+
+                .ns-body {
+                    width: 49.5%;
+                    height: 100%;
+                    max-height: 100%;
 
                     overflow: hidden;
+                    cursor: default;
 
-                    .ns-header,
-                    .ns-body {
-                        display: inline-block;
-                        height: 100%;
-
-                        margin: 0;
-                    }
-
-                    .ns-header {
-                        width: 50%;
-                        padding-right: 1rem;
-
-                        .ns-img {
-                            height: 100%;
-                            background-size: cover;
-                            background-position: center;
-                        }
-                    }
-
-                    .ns-body {
-                        width: 49.5%;
-                        height: 100%;
-                        max-height: 100%;
-
+                    .ns-title {
+                        font-size: 22px;
+                        max-height: 66px;
                         overflow: hidden;
-                        cursor: default;
+                    }
 
-                        .ns-title {
-                            font-size: 22px;
-                            max-height: 66px;
-                            overflow: hidden;
-                        }
+                    .tag {
+                        margin: 5px 0;
+                        font-size: 0;
 
-                        .tag {
-                            margin: 5px 0;
-                            font-size: 0;
-
-                            span {
-                                font-size: 14px;
-                                font-weight: 300;
-
-                                &.like {
-                                    margin-left: 10px;
-                                    color: $pink-hover;
-                                    cursor: pointer;
-                                }
-                            }
-                        }
-
-                        .ns-cont {
-                            position: relative;
-                            height: 75px;
-                            width: 100%;
-                            max-height: 100%;
-                            overflow: hidden;
+                        span {
+                            font-size: 14px;
                             font-weight: 300;
 
-                            &:after {
-                                content: '…';
-                                position: absolute;
-                                z-index: 1;
-                                bottom: 0px;
-                                right: 0px;
-                                height: 25px;
-                                width: 20px;
-                                font-size: 20px;
-                                background: $bgColor;
-                                color: black;
+                            &.like {
+                                margin-left: 10px;
+                                color: $pink-hover;
+                                cursor: pointer;
                             }
                         }
+                    }
 
-                        .ns-footer {
+                    .ns-cont {
+                        position: relative;
+                        height: 75px;
+                        width: 100%;
+                        max-height: 100%;
+                        overflow: hidden;
+                        font-weight: 300;
+
+                        &:after {
+                            content: '…';
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 0px;
+                            right: 0px;
+                            height: 25px;
+                            width: 20px;
+                            font-size: 20px;
+                            background: $bgColor;
+                            color: black;
+                        }
+                    }
+
+                    .ns-footer {
+                        width: 100%;
+
+                        .ns-btn {
                             width: 100%;
 
-                            .ns-btn {
-                                width: 100%;
+                            .more {
+                                float: right;
+                                color: black;
+                                font-weight: 300;
 
-                                .more {
-                                    float: right;
-                                    color: black;
-                                    font-weight: 300;
-
-                                    &:hover {
-                                        color: $brown;
-                                    }
+                                &:hover {
+                                    color: $brown;
                                 }
                             }
                         }
@@ -8212,8 +8210,58 @@ $link_hover_color: #fff;
         }
 
         .right-part {
-            flex: .3;
+            flex: .35;
         }
+    }
+    .info-wrapper {
+        margin-bottom: 1rem;
+    }
+    .conf {
+        display: flex;
+
+        span {
+            margin-right: 8px;
+        }
+    }
+    .cata {
+        display: inline-block;
+        background: #000;
+        height: 28px;
+        width: 52px;
+        position: relative;
+        margin-right: 8px;
+
+        border-radius: 3px;
+
+        &__ac:before {
+            content: '活動';
+            color: #ff526f;
+            position: absolute;
+            top: 2px;
+            left: 10px;
+        }
+        &__rc:before {
+            content: '徵才';
+            color: #52e5ff;
+            position: absolute;
+            top: 1px;
+            left: 10px;
+        }
+        &__cp:before {
+            content: '優惠';
+            color: #ffcd2b;
+            position: absolute;
+            top: 2px;
+            left: 10px;
+        }
+    }
+    .date {
+        color: gray;
+    }
+    .title {
+        display: inline-block;
+        font-weight: 500;
+        margin-top: .5rem;
     }
 }
 
