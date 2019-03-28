@@ -1190,14 +1190,16 @@ button {
       -webkit-transform: translateY(100px);
       -ms-transform: translateY(100px);
       transform: translateY(100px); }
+      .slider-section-wrapper .subindex.main-slider .caption.sub {
+        max-width: 80%; }
       .slider-section-wrapper .subindex.main-slider .caption .slide-btn:hover,
       .slider-section-wrapper .subindex.main-slider .caption .slide-btn:focus {
         -webkit-box-shadow: inset 8.5em 0 0 0 var(--hover);
         box-shadow: inset 8.5em 0 0 0 var(--hover); }
-      .slider-section-wrapper .subindex.main-slider .caption button {
+      .slider-section-wrapper .subindex.main-slider .caption button, .slider-section-wrapper .subindex.main-slider .caption a {
         display: block;
         margin: 10px 0;
-        font-size: 15px;
+        font-size: 18px;
         background: none;
         border: 1px solid white;
         padding: 5px 15px;
@@ -1205,12 +1207,14 @@ button {
         -webkit-transition: 0.25s;
         -o-transition: 0.25s;
         transition: 0.25s; }
-        .slider-section-wrapper .subindex.main-slider .caption button:hover, .slider-section-wrapper .subindex.main-slider .caption button:focus {
+        .slider-section-wrapper .subindex.main-slider .caption button:hover, .slider-section-wrapper .subindex.main-slider .caption button:focus, .slider-section-wrapper .subindex.main-slider .caption a:hover, .slider-section-wrapper .subindex.main-slider .caption a:focus {
           border-color: var(--hover);
           color: #000; }
         @media (max-width: 425px) {
-          .slider-section-wrapper .subindex.main-slider .caption button {
+          .slider-section-wrapper .subindex.main-slider .caption button, .slider-section-wrapper .subindex.main-slider .caption a {
             font-size: 15px; } }
+      .slider-section-wrapper .subindex.main-slider .caption a {
+        display: inline-block; }
       .slider-section-wrapper .subindex.main-slider .caption .name {
         display: block;
         font-size: 18px; }
@@ -5194,11 +5198,10 @@ button {
     .subindex.main-content-section .main-wrapper .left-part {
       padding: 0 1rem 0 0; }
       .subindex.main-content-section .main-wrapper .left-part .ns-block {
-        height: 250px;
         width: 100%;
         max-width: 100%;
-        max-height: 250px;
         background: #fff;
+        margin-bottom: 20px;
         overflow: hidden; }
         .subindex.main-content-section .main-wrapper .left-part .ns-block.forum {
           height: unset;
@@ -5209,12 +5212,11 @@ button {
           height: 100%;
           margin: 0; }
         .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-header {
-          width: 50%; }
+          width: 100%; }
           .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-header.forum {
             width: 15%;
             max-width: 15%;
             overflow: hidden;
-            position: relative;
             padding: .8rem; }
             .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-header.forum .user__photo.forum {
               border-radius: 0;
@@ -5225,7 +5227,7 @@ button {
             background-size: cover;
             background-position: center; }
         .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body {
-          width: 48%;
+          width: 50%;
           height: 100%;
           max-height: 100%;
           overflow: hidden;
@@ -5248,7 +5250,10 @@ button {
             overflow: hidden; }
           .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .tag {
             margin: 5px 0;
-            font-size: 0; }
+            font-size: 0;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center; }
             .subindex.main-content-section .main-wrapper .left-part .ns-block .ns-body .tag span {
               font-size: 14px;
               font-weight: 300; }
@@ -5326,7 +5331,7 @@ button {
         width: 100%;
         height: 100%; }
   .subindex.main-content-section .fb-page {
-    padding: 1em 1em; }
+    padding: 0em 1em; }
   .subindex.main-content-section .conf {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5359,12 +5364,21 @@ button {
       position: absolute;
       top: 2px;
       left: 10px; }
+    .subindex.main-content-section .cata-ns {
+      display: inline-block;
+      background: #000;
+      color: #ffcd2b;
+      position: relative;
+      padding: 2px 10px;
+      margin-right: 8px;
+      border-radius: 3px; }
   .subindex.main-content-section .date {
     color: gray; }
   .subindex.main-content-section .title {
     display: inline-block;
     font-weight: 500;
-    margin-top: .5rem; }
+    margin-top: .5rem;
+    margin-bottom: .5rem; }
   .subindex.main-content-section .pagination-wrapper {
     margin-top: 1rem; }
 

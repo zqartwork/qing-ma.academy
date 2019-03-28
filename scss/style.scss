@@ -1506,15 +1506,19 @@ $link_hover_color: #fff;
             transition: all .3s ease;
             transform: translateY(100px);
 
+            &.sub {
+                max-width: 80%;
+            }
+
             .slide-btn:hover,
             .slide-btn:focus {
                 box-shadow: inset 8.5em 0 0 0 var(--hover);
             }
 
-            button {
+            button,a  {
                 display: block;
                 margin: 10px 0;
-                font-size: 15px;
+                font-size: 18px;
                 background: none;
                 border: 1px solid white;
                 padding: 5px 15px;
@@ -1530,6 +1534,10 @@ $link_hover_color: #fff;
                 @media (max-width: 425px) {
                     font-size: 15px;
                 }
+            }
+
+            a {
+                display: inline-block;
             }
 
             .name {
@@ -6709,11 +6717,10 @@ $link_hover_color: #fff;
             padding: 0 1rem 0 0;
 
             .ns-block {
-                height: 250px;
                 width: 100%;
                 max-width: 100%;
-                max-height: 250px;
                 background: #fff;
+                margin-bottom: 20px;
 
                 overflow: hidden;
 
@@ -6731,15 +6738,13 @@ $link_hover_color: #fff;
                 }
 
                 .ns-header {
-                    width: 50%;
+                    width: 100%;
+                    $length: 100px;
 
                     &.forum {
                         width: 15%;
                         max-width: 15%;
                         overflow: hidden;
-
-                        position: relative;
-                        $length: 100px;
 
                         padding: .8rem;
 
@@ -6750,6 +6755,7 @@ $link_hover_color: #fff;
                             width: 100%;
                         }
                     }
+                    
                     .ns-img {
                         height: 100%;
                         background-size: cover;
@@ -6758,7 +6764,7 @@ $link_hover_color: #fff;
                 }
 
                 .ns-body {
-                    width: 48%;
+                    width: 50%;
                     height: 100%;
                     max-height: 100%;
 
@@ -6793,6 +6799,8 @@ $link_hover_color: #fff;
                     .tag {
                         margin: 5px 0;
                         font-size: 0;
+
+                        align-items: center; 
 
                         span {
                             font-size: 14px;
@@ -6854,6 +6862,7 @@ $link_hover_color: #fff;
             padding: 0 0 0 1rem;
         }
     }
+
     .info-wrapper {
         position: relative;
         padding: 1em 1.5em;
@@ -6907,7 +6916,7 @@ $link_hover_color: #fff;
     }
 
     .fb-page {
-        padding: 1em 1em;
+        padding: 0em 1em;
     }
 
     .conf {
@@ -6917,6 +6926,7 @@ $link_hover_color: #fff;
             margin-right: 8px;
         }
     }
+
     .cata {
         display: inline-block;
         background: #000;
@@ -6948,14 +6958,27 @@ $link_hover_color: #fff;
             top: 2px;
             left: 10px;
         }
+        &-ns {
+            display: inline-block;
+            background: #000;
+            color: #ffcd2b;
+            position: relative;
+            padding: 2px 10px;
+            margin-right: 8px;
+
+            border-radius: 3px;
+        }
     }
+
     .date {
         color: gray;
     }
+
     .title {
         display: inline-block;
         font-weight: 500;
         margin-top: .5rem;
+        margin-bottom: .5rem;
     }
 
     .pagination-wrapper {
