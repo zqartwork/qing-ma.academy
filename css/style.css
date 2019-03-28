@@ -1341,7 +1341,8 @@ button {
       .slider-section-wrapper .subindex.main-slider .caption .slide-btn:focus {
         -webkit-box-shadow: inset 8.5em 0 0 0 var(--hover);
         box-shadow: inset 8.5em 0 0 0 var(--hover); }
-      .slider-section-wrapper .subindex.main-slider .caption button, .slider-section-wrapper .subindex.main-slider .caption a {
+      .slider-section-wrapper .subindex.main-slider .caption button,
+      .slider-section-wrapper .subindex.main-slider .caption a {
         display: block;
         margin: 10px 0;
         font-size: 18px;
@@ -1352,11 +1353,14 @@ button {
         -webkit-transition: 0.25s;
         -o-transition: 0.25s;
         transition: 0.25s; }
-        .slider-section-wrapper .subindex.main-slider .caption button:hover, .slider-section-wrapper .subindex.main-slider .caption button:focus, .slider-section-wrapper .subindex.main-slider .caption a:hover, .slider-section-wrapper .subindex.main-slider .caption a:focus {
+        .slider-section-wrapper .subindex.main-slider .caption button:hover, .slider-section-wrapper .subindex.main-slider .caption button:focus,
+        .slider-section-wrapper .subindex.main-slider .caption a:hover,
+        .slider-section-wrapper .subindex.main-slider .caption a:focus {
           border-color: var(--hover);
           color: #000; }
         @media (max-width: 425px) {
-          .slider-section-wrapper .subindex.main-slider .caption button, .slider-section-wrapper .subindex.main-slider .caption a {
+          .slider-section-wrapper .subindex.main-slider .caption button,
+          .slider-section-wrapper .subindex.main-slider .caption a {
             font-size: 15px; } }
       .slider-section-wrapper .subindex.main-slider .caption a {
         display: inline-block; }
@@ -5180,6 +5184,12 @@ button {
     background: lightgray;
     padding: 2rem 0rem;
     text-align: left; }
+    .search-box-wrapper .search-result-wrapper.subindex {
+      background: none;
+      padding: 0;
+      margin: 1rem 0; }
+      .search-box-wrapper .search-result-wrapper.subindex .container {
+        padding: 0; }
     .search-box-wrapper .search-result-wrapper .container {
       max-width: 1150px;
       width: 100%; }
@@ -5587,7 +5597,7 @@ footer {
     margin: 0 auto;
     height: 100%; }
     .nspage.subindex.main-content-section .main-container .title-wrapper {
-      height: 300px;
+      height: 250px;
       color: white;
       padding: 0 1rem;
       -webkit-box-align: end;
@@ -5615,8 +5625,17 @@ footer {
             .nspage.subindex.main-content-section .main-container .title-wrapper .tag-wrapper span.like:hover, .nspage.subindex.main-content-section .main-container .title-wrapper .tag-wrapper span.like:active, .nspage.subindex.main-content-section .main-container .title-wrapper .tag-wrapper span.like:focus, .nspage.subindex.main-content-section .main-container .title-wrapper .tag-wrapper span.like.liked {
               background: #f3788d;
               border-radius: 3px; }
+        .nspage.subindex.main-content-section .main-container .title-wrapper .tag-wrapper .index-line .idb {
+          border-radius: 3px;
+          -webkit-transition: .3s;
+          -o-transition: .3s;
+          transition: .3s; }
+          .nspage.subindex.main-content-section .main-container .title-wrapper .tag-wrapper .index-line .idb:hover {
+            background: #fff;
+            color: black; }
     .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section {
-      border-radius: 0; }
+      border-radius: 0;
+      padding-top: 1rem; }
       .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a {
         color: #ac7000;
         font-weight: 500;
@@ -5695,12 +5714,19 @@ footer {
           .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user .more:hover {
             background: #969696;
             color: white; }
+    .nspage.subindex.main-content-section .main-container .container {
+      margin-top: 4rem; }
+      .nspage.subindex.main-content-section .main-container .container .left-part {
+        margin-top: -6rem; }
 
-#addModal .modal-title, #likeModal .modal-title {
+#addModal .modal-title,
+#likeModal .modal-title {
   border: none; }
 
-#addModal .modal-body .title, #likeModal .modal-body .title {
+#addModal .modal-body .title,
+#likeModal .modal-body .title {
   color: #b39368; }
 
-#addModal .modal-body .num, #likeModal .modal-body .num {
+#addModal .modal-body .num,
+#likeModal .modal-body .num {
   color: #b90000; }
