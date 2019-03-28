@@ -375,3 +375,10 @@ function onFocus() {
 function onBlur() {
     deactivateSearchbox(document.querySelector('.searchbox'));
 };
+
+//userarticle img-responsive
+$("#userarticle img").css({
+    "width": 'auto',
+    "maxWidth": '100%',
+    'height': 'auto'
+});

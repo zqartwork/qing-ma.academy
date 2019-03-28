@@ -16,9 +16,6 @@ $pink: #f3788d;
 $pink-hover:#eb3654;
 $on: #d69200;
 $fund: #7e6530;
-$font-size: 26px;
-$line-height: 1.4;
-$lines-to-show: 3;
 
 %cn {
     font-family: $font-cn;
@@ -803,7 +800,7 @@ button {
 .search-input {
     position: absolute;
     top: -1.5rem;
-    right: -31rem;
+    right: -22rem;
     margin: auto;
     pointer-events: none;
     opacity: 0;
@@ -1769,6 +1766,30 @@ $link_hover_color: #fff;
         }
     }
 
+    &.free-class-section .flex-ls-wrapper .class-thumb {
+        .thumb-body {
+    
+            .cont,
+            .name {
+                max-height: 25px;
+                overflow: hidden;
+            }
+        }
+    
+        .price {
+            font-size: 0;
+    
+            span {
+                color: #969696;
+                font-size: 22px;
+    
+                @media(max-width: 576px) {
+                    color: #969696 !important;
+                }
+            }
+        }
+    }
+
     .flex-ls-wrapper {
         margin: 0 auto;
         flex-wrap: wrap;
@@ -1894,10 +1915,10 @@ $link_hover_color: #fff;
                             display: block;
                             display: -webkit-box;
                             max-width: 300px;
-                            height: 16px * $line-height * 7;
+                            height: 16px * 1.4 * 7;
                             margin: 0 auto;
                             font-size: 16px;
-                            line-height: $line-height;
+                            line-height: 1.4;
                             -webkit-line-clamp: 7;
                             -webkit-box-orient: vertical;
                             overflow: hidden;
@@ -2315,30 +2336,6 @@ $link_hover_color: #fff;
     }
 }
 
-.free-class-section.index__class .flex-ls-wrapper .class-thumb {
-    .thumb-body {
-
-        .cont,
-        .name {
-            max-height: 25px;
-            overflow: hidden;
-        }
-    }
-
-    .price {
-        font-size: 0;
-
-        span {
-            color: #969696;
-            font-size: 22px;
-
-            @media(max-width: 576px) {
-                color: #969696 !important;
-            }
-        }
-    }
-}
-
 .master-section {
     text-align: center;
     width: 100%;
@@ -2670,7 +2667,215 @@ $link_hover_color: #fff;
         position: absolute;
         z-index: 0;
     }
+    &.fundpage {
+        
+    @media (max-width: 768px) {
+        height: 500px;
+    }
 
+    &::before {
+
+        @media (max-width: 768px) {
+            height: 500px;
+        }
+    }
+
+    .row.main-container {
+
+            .tag {
+                .fund-tag {
+                    .q-tt-1-btn {
+                        position: relative;
+
+                        .qtt {
+                            opacity: 0;
+                            visibility: hidden;
+                            position: absolute;
+                            bottom: 0;
+                            left: 150%;
+                            background: #000;
+                            width: 200px;
+                            padding: 5px 10px 5px 10px;
+                            border-radius: 5px;
+                            transition: .3s;
+                            font-size: 13px;
+                        }
+
+                        &:hover {
+                            .qtt {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+                .funding-process-wrapper {
+                    .cont {
+                        width: 40%;
+                        display: inline-block;
+                        margin-right: 10px;
+
+                        @media (max-width: 482px) {
+                            width: 100%;
+                        }
+
+                        .process__title {
+                            width: 100%;
+                            font-size: 16px;
+
+                            .date {
+                                float: right;
+                                margin-right: 3px;
+
+                                .num {
+                                    color: $font-w;
+                                }
+                            }
+                        }
+
+                        .process__bar {
+                            width: 100%;
+                            height: 10px;
+                            border-radius: 10px;
+                            background: $bgColor;
+                            overflow: hidden;
+                            margin: 5px 0;
+
+                            .process__thumb {
+                                height: 15px;
+                                max-width: 100%;
+                                background-image: linear-gradient(to right, $on, $gold);
+                            }
+                        }
+
+                        .process__people {
+                            width: 100%;
+
+                            .process__static {
+                                font-size: 16px;
+                                display: inline-block;
+                                width: 100%;
+                                text-align: left;
+
+                                .num {
+                                    color: $font-w;
+                                }
+                            }
+                        }
+                    }
+
+                    #clockdiv {
+                        font-family: sans-serif;
+                        color: #fff;
+                        display: inline-block;
+                        font-weight: 100;
+                        text-align: right;
+                        font-size: 20px;
+
+                        @media (max-width: 482px) {
+                            margin-top: 15px;
+                            width: 100%;
+                            text-align: left;
+                        }
+                    }
+
+                    #clockdiv>div {
+                        padding: 10px;
+                        border-radius: 3px;
+                        background: rgba(0, 0, 0, 0.479);
+                        display: inline-block;
+                    }
+
+                    #clockdiv div>span {
+                        padding: 5px;
+                        border-radius: 3px;
+                        background: rgb(0, 0, 0);
+                        display: inline-block;
+                    }
+
+                    .smalltext {
+                        text-align: center;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+        .video-section-wrapper {
+
+            .panel-wrapper {
+
+                .panel-header {
+                }
+
+                .panel-tag {
+                    .fund-tag {
+                        color: $brown;
+                        font-size: 18px;
+
+                        .q-tt-1-btn {
+                            position: relative;
+
+                            .qtt {
+                                opacity: 0;
+                                visibility: hidden;
+                                position: absolute;
+                                bottom: 0;
+                                left: 150%;
+                                background: #000;
+                                width: 200px;
+                                padding: 5px 10px 5px 10px;
+                                border-radius: 5px;
+                                transition: .3s;
+                                font-size: 13px;
+                                color: $font-w;
+                            }
+
+                            &:hover {
+                                .qtt {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+
+                    span {
+                        margin-right: 10px;
+                    }
+                }
+
+                .panel-bought {
+                    padding: 1rem 0;
+                    font-size: 0;
+
+                    span {
+                        font-size: 20px;
+
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .panel-price {
+
+                    .cn {
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    .strike {
+                        color: $font-gray;
+                        font-weight: 500;
+                        font-size: 18px;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+
+    }
     .row.main-container {
         margin: 0 auto;
         width: 1185px;
@@ -3241,6 +3446,7 @@ $link_hover_color: #fff;
                 border-radius: 5px;
 
                 &__doc {
+
                     ul {
                         list-style-type: circle;
                         padding-left: 20px;
@@ -4801,7 +5007,66 @@ $link_hover_color: #fff;
                             .panel-wrapper {
                                 padding: 10px 10px;
                                 color: $font-dark;
-
+                                &.fundpage {
+                                    .panel-tag {
+                                        .fund-tag {
+                                            color: $brown;
+                                            font-size: 18px;
+    
+                                            .q-tt-1-btn {
+                                                position: relative;
+    
+                                                .qtt {
+                                                    opacity: 0;
+                                                    visibility: hidden;
+                                                    position: absolute;
+                                                    bottom: 0;
+                                                    left: 150%;
+                                                    background: #000;
+                                                    width: 200px;
+                                                    padding: 5px 10px 5px 10px;
+                                                    border-radius: 5px;
+                                                    transition: .3s;
+                                                    font-size: 13px;
+                                                    color: $font-w;
+                                                }
+    
+                                                &:hover {
+                                                    .qtt {
+                                                        opacity: 1;
+                                                        visibility: visible;
+                                                    }
+                                                }
+                                            }
+                                        }
+    
+                                        span {
+                                            margin-right: 10px;
+                                        }
+                                    }
+    
+                                    .panel-price {
+    
+                                        .cn {
+                                            font-size: 18px;
+                                            font-weight: 500;
+                                        }
+    
+                                        .strike {
+                                            color: $font-gray;
+                                            font-weight: 500;
+                                            font-size: 18px;
+                                            text-decoration: line-through;
+                                        }
+                                    }
+    
+                                    .panel-header {
+                                        font-size: 22px;
+                                        color: black;
+                                        max-height: 75px;
+                                        overflow: hidden;
+                                    }
+                                }
                                 .panel-header {
                                     font-size: 22px;
                                     color: black;
@@ -5346,171 +5611,16 @@ $link_hover_color: #fff;
     }
 }
 
-// 搜尋結果頁面樣式
-.search-box-wrapper {
-    width: 100%;
-    padding-top: 7rem; // border: 1px solid red;
-
-    .search-box-container {
-        // border: 1px solid red;
-        max-width: 1130px;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-
-        .search-box-bar {
-            // border: 1px solid red;
-            padding: 10px 10px;
-            text-align: center;
-            background: none;
-            width: 100%;
-
-            .search-box-input {
-                background: #fff;
-                padding: 10px 15px;
-                border: none;
-                border-radius: 45px 0 0 45px;
-                outline: none;
-                width: 60%;
-
-                &::placeholder {
-                    color: lightgray;
-                }
-            }
-
-            .search-btn {
-                background: $font-gray;
-                border: none;
-                border: 1px solid $font-gray;
-                padding: 10px 15px;
-                border-radius: 0 45px 45px 0;
-                color: white;
-            }
-        }
-    }
-
-    .search-result-wrapper {
-        margin: 2rem 0;
-        background: lightgray;
-        padding: 2rem 0rem;
-        text-align: left;
-
-        .container {
-            max-width: 1150px;
-            width: 100%;
-
-            .title {
-                font-size: 22px;
-                font-weight: 500;
-
-                .text {
-                    font-weight: 300;
-                    font-size: 16px;
-                    margin-left: 5px;
-                }
-            }
-
-            #ty,
-            #filter {
-                padding: 5px 15px;
-                margin: 10px 5px 0 5px;
-                border: none;
-                outline: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        }
-    }
-}
-
-.pagination-wrapper {
-    width: 100%;
-    text-align: center;
-    padding: .5rem 0 0 0;
-
-    .container {
-        text-align: center;
-
-        .pagination {
-            justify-content: center;
-
-            .page-item {
-                .page-link {
-                    color: $font-dark;
-                    cursor: pointer;
-
-                    &:focus,
-                    &:active {
-                        outline: none;
-                    }
-                }
-
-                &.active {
-                    .page-link {
-                        background-color: $font-dark;
-                        border-color: $font-dark;
-                        color: $font-w;
-                    }
-                }
-            }
-        }
-    }
-}
-
 //作業內頁樣式
 .main-info-wrapper.assignmentpage {
-    width: 70%;
-    max-width: 1150px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 7rem;
-
-    @media(max-width: 1150px) {
-        width: 85%;
-    }
-
-    @media(max-width: 768px) {
-        width: 90%;
-    }
-
-    @media(max-width: 576px) {
-        width: 100%;
-        display: block;
-    }
-
+    
     .left-part {
-        flex: .3; // border: 1px solid red;
-
-        @media(max-width: 1150px) {
-            flex: .3;
-        }
-
-        @media(max-width: 768px) {
-            flex: .4;
-        }
-
-        @media(max-width: 576px) {
-            display: block;
-            margin: 0 auto;
-        }
 
         .info-wrapper-left {
-            padding: 0rem .5rem;
-            margin-bottom: 20px;
 
             .container {
-                // border: 1px solid red;
-                background: #fff;
-                border-radius: 5px;
-                padding: 2rem 0rem 1rem 0rem;
-                text-align: center;
-
-                .photo-wrapper {}
 
                 .name {
-                    font-size: 25px;
-                    font-weight: 600;
                 }
 
                 .note {
@@ -5596,20 +5706,6 @@ $link_hover_color: #fff;
     }
 
     .right-part {
-        flex: .7; // border: 1px solid red;
-
-        @media(max-width: 1150px) {
-            flex: .7;
-        }
-
-        @media(max-width: 768px) {
-            flex: .6;
-        }
-
-        @media(max-width: 576px) {
-            display: block;
-        }
-
         .info-wrapper-right {
             .info-container {
                 .intro-banner {
@@ -5684,7 +5780,6 @@ $link_hover_color: #fff;
                         font-weight: 300;
                     }
                 }
-
                 .inner-section {
                     background: #fff;
                     color: $font-dark;
@@ -6300,1623 +6395,118 @@ $link_hover_color: #fff;
     }
 }
 
-// 募資中課程內頁樣式
-.video-main-section.fundpage {
-    margin: 0 auto;
+// 搜尋結果頁面樣式
+.search-box-wrapper {
     width: 100%;
-    height: 400px;
-    justify-items: center;
-    justify-content: center;
+    padding-top: 7rem; // border: 1px solid red;
 
-    @media (max-width: 768px) {
-        height: 500px;
-    }
-
-    &::before {
-        content: '';
-        background-image: url(../img/lecture/001.jpg);
-        background-size: cover;
-        background-position: center;
-        filter: brightness(.3);
+    .search-box-container {
+        // border: 1px solid red;
+        max-width: 1130px;
         width: 100%;
-        height: 400px;
-        position: absolute;
-        z-index: 0;
+        margin: 0 auto;
+        text-align: center;
 
-        @media (max-width: 768px) {
-            height: 500px;
+        .search-box-bar {
+            // border: 1px solid red;
+            padding: 10px 10px;
+            text-align: center;
+            background: none;
+            width: 100%;
+
+            .search-box-input {
+                background: #fff;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 45px 0 0 45px;
+                outline: none;
+                width: 60%;
+
+                &::placeholder {
+                    color: lightgray;
+                }
+            }
+
+            .search-btn {
+                background: $font-gray;
+                border: none;
+                border: 1px solid $font-gray;
+                padding: 10px 15px;
+                border-radius: 0 45px 45px 0;
+                color: white;
+            }
         }
     }
 
-    .row.main-container {
-        margin: 0 auto;
-        width: 1185px;
-        padding: 0;
+    .search-result-wrapper {
+        margin: 2rem 0;
+        background: lightgray;
+        padding: 2rem 0rem;
+        text-align: left;
 
-        @media(max-width: 1215px) {
-            max-width: 990px;
-        }
-
-        @media(max-width: 1024px) {
-            max-width: 90%;
-        }
-
-        .left-part,
-        .right-part {
-            float: left;
-        }
-
-        .left-part {
-            padding: 0 15px;
-            height: 100%;
-        }
-
-        .right-part {
-            padding: 0 0 0 25px;
-        }
-
-        .course-intro {
-            color: #fff;
-            margin-top: 6rem;
-            height: 14vw;
-
-            .cata {
-                height: 30px;
-                font-weight: 400;
-
-                span {
-                    cursor: pointer;
-                    margin: 10px 10px 10px 0;
-                    padding: 5px;
-                    border-radius: 5px;
-                    transition: .3s;
-
-                    &:hover {
-                        background: #fff;
-                        color: black;
-                    }
-                }
-            }
-
-            .tag {
-                .fund-tag {
-                    .q-tt-1-btn {
-                        position: relative;
-
-                        .qtt {
-                            opacity: 0;
-                            visibility: hidden;
-                            position: absolute;
-                            bottom: 0;
-                            left: 150%;
-                            background: #000;
-                            width: 200px;
-                            padding: 5px 10px 5px 10px;
-                            border-radius: 5px;
-                            transition: .3s;
-                            font-size: 13px;
-                        }
-
-                        &:hover {
-                            .qtt {
-                                opacity: 1;
-                                visibility: visible;
-                            }
-                        }
-                    }
-                }
-            }
+        .container {
+            max-width: 1150px;
+            width: 100%;
 
             .title {
-                font-size: 32px;
+                font-size: 22px;
                 font-weight: 500;
-                margin-bottom: 10px;
-                max-height: 48px;
-                overflow: hidden;
+
+                .text {
+                    font-weight: 300;
+                    font-size: 16px;
+                    margin-left: 5px;
+                }
             }
 
-            .cont {
-                color: lightgray;
-                font-weight: 100;
-
-                .short {
-                    display: inline-block;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3; // max nb lines to show
-                    -webkit-box-orient: vertical;
-                    margin-bottom: 1rem;
-                }
-
-                .item {
-                    display: inline-block;
-                    width: 100%;
-                    overflow: hidden;
-
-                    .row {
-                        width: 100%;
-                        justify-content: flex-start;
-
-                        span {
-                            margin-right: 15px;
-
-                            &.update {
-                                font-size: 12px;
-                                font-style: italic;
-                                line-height: 2;
-                            }
-                        }
-                    }
-                }
-
-                .funding-process-wrapper {
-                    .cont {
-                        width: 40%;
-                        display: inline-block;
-                        margin-right: 10px;
-
-                        @media (max-width: 482px) {
-                            width: 100%;
-                        }
-
-                        .process__title {
-                            width: 100%;
-                            font-size: 16px;
-
-                            .date {
-                                float: right;
-                                margin-right: 3px;
-
-                                .num {
-                                    color: $font-w;
-                                }
-                            }
-                        }
-
-                        .process__bar {
-                            width: 100%;
-                            height: 10px;
-                            border-radius: 10px;
-                            background: $bgColor;
-                            overflow: hidden;
-                            margin: 5px 0;
-
-                            .process__thumb {
-                                height: 15px;
-                                max-width: 100%;
-                                background-image: linear-gradient(to right, $on, $gold);
-                            }
-                        }
-
-                        .process__people {
-                            width: 100%;
-
-                            .process__static {
-                                font-size: 16px;
-                                display: inline-block;
-                                width: 100%;
-                                text-align: left;
-
-                                .num {
-                                    color: $font-w;
-                                }
-                            }
-                        }
-                    }
-
-                    #clockdiv {
-                        font-family: sans-serif;
-                        color: #fff;
-                        display: inline-block;
-                        font-weight: 100;
-                        text-align: right;
-                        font-size: 20px;
-
-                        @media (max-width: 482px) {
-                            margin-top: 15px;
-                            width: 100%;
-                            text-align: left;
-                        }
-                    }
-
-                    #clockdiv>div {
-                        padding: 10px;
-                        border-radius: 3px;
-                        background: rgba(0, 0, 0, 0.479);
-                        display: inline-block;
-                    }
-
-                    #clockdiv div>span {
-                        padding: 5px;
-                        border-radius: 3px;
-                        background: rgb(0, 0, 0);
-                        display: inline-block;
-                    }
-
-                    .smalltext {
-                        text-align: center;
-                        font-size: 16px;
-                    }
-                }
+            #ty,
+            #filter {
+                padding: 5px 15px;
+                margin: 10px 5px 0 5px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
             }
         }
+    }
+}
 
-        .video-section-wrapper {
-            background-color: #fff;
-            padding: 1rem 1rem 1rem 1rem;
-            margin-top: 6rem;
-            border-radius: 5px;
+.pagination-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: .5rem 0 0 0;
 
-            .video-thumb {
-                position: relative;
-                height: 200px;
-                width: 100%;
+    .container {
+        text-align: center;
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    background-size: cover;
-                    background-position: center;
-                    filter: brightness(.5);
-                    border-radius: 5px;
-                    transition: .3s;
+        .pagination {
+            justify-content: center;
+
+            .page-item {
+                .page-link {
+                    color: $font-dark;
+                    cursor: pointer;
+
+                    &:focus,
+                    &:active {
+                        outline: none;
+                    }
                 }
 
-                .play-btn {
-                    position: relative;
-                    height: 100%;
-                    width: 100%;
-                    text-align: center;
-                    $height: 60px;
-                    $width: 60px;
-
-                    .test {
-                        display: inline-block;
-                        text-align: left;
-                        width: 100%;
-                        padding-left: 15px;
-                        padding-top: 10px;
-                        color: rgba(255, 255, 255, 0.678);
-                    }
-
-                    &:hover .test {
+                &.active {
+                    .page-link {
+                        background-color: $font-dark;
+                        border-color: $font-dark;
                         color: $font-w;
                     }
-
-                    &::before {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        z-index: 0;
-                        content: '\f04b';
-                        font-family: 'Font Awesome 5 Free';
-                        font-size: 25px;
-                        font-weight: 900;
-                        color: white;
-                        line-height: 2.4;
-                        vertical-align: middle;
-                        background: rgba(0, 0, 0, 0.623);
-                        border-radius: 100%;
-                        height: $height;
-                        width: $width;
-                        margin-top: -$height / 2;
-                        margin-left: -$width / 2;
-                        padding: 0 0 0 5px;
-                        transition: .3s;
-                    }
-                }
-
-                &:hover::before {
-                    filter: brightness(.55);
-                }
-
-                &:hover {
-                    .play-btn::before {
-                        background: rgba(54, 50, 44, 0.842);
-                    }
-                }
-            }
-
-            .panel-wrapper {
-                padding: 10px 10px;
-                color: $font-dark;
-
-                .panel-header {
-                    font-size: 22px;
-                    color: black;
-                    max-height: 66px;
-                    overflow: hidden;
-                }
-
-                .panel-tag {
-                    .fund-tag {
-                        color: $brown;
-                        font-size: 18px;
-
-                        .q-tt-1-btn {
-                            position: relative;
-
-                            .qtt {
-                                opacity: 0;
-                                visibility: hidden;
-                                position: absolute;
-                                bottom: 0;
-                                left: 150%;
-                                background: #000;
-                                width: 200px;
-                                padding: 5px 10px 5px 10px;
-                                border-radius: 5px;
-                                transition: .3s;
-                                font-size: 13px;
-                                color: $font-w;
-                            }
-
-                            &:hover {
-                                .qtt {
-                                    opacity: 1;
-                                    visibility: visible;
-                                }
-                            }
-                        }
-                    }
-
-                    span {
-                        margin-right: 10px;
-                    }
-                }
-
-                .panel-bought {
-                    padding: 1rem 0;
-                    font-size: 0;
-
-                    span {
-                        font-size: 20px;
-
-                        p {
-                            font-size: 16px;
-                        }
-                    }
-                }
-
-                .panel-price {
-                    font-family: 'Open Sans';
-                    font-size: 35px;
-                    font-weight: 800;
-                    color: $brown;
-                    margin: 5px 0;
-
-                    .cn {
-                        font-size: 18px;
-                        font-weight: 500;
-                    }
-
-                    .strike {
-                        color: $font-gray;
-                        font-weight: 500;
-                        font-size: 18px;
-                        text-decoration: line-through;
-                    }
-                }
-
-                button {
-                    background: $gold;
-                    border: none;
-                    border-radius: 5px;
-                    padding: 10px 20px;
-                    margin-bottom: 10px;
-                    width: 100%;
-                    font-size: 20px;
-                    transition: .3s;
-
-                    &:hover {
-                        background-color: rgb(255, 166, 0);
-                    }
-
-                    &.add {
-                        background: none;
-                        border: 1px solid $font-bk;
-
-                        &:hover {
-                            background-color: $pink;
-                            border-color: $pink;
-                        }
-                    }
-                }
-
-                .panel-cont {
-                    font-size: 15px;
-                    color: $font-gray;
-
-                    .sidebar-box {
-                        max-height: 120px;
-                        position: relative;
-                        overflow: hidden;
-
-                        .read-more {
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            text-align: center;
-                            margin: 0;
-                            padding: 20px 0;
-                            font-weight: 800;
-
-                            a {
-                                display: inline-block;
-                                margin-top: 20px;
-                                font-family: 'Open Sans';
-                                color: $font-dark;
-                                border-radius: 5px;
-                                border: 1px solid $font-dark;
-                                padding: 5px 10px;
-                            }
-
-                            /* "transparent" only works here because == rgba(0,0,0,0) */
-                            background-image: linear-gradient(top,
-                            rgba(255, 255, 255, 0) 0%,
-                            #fff 100%);
-                            background-image: -o-linear-gradient(top,
-                            rgba(255, 255, 255, 0) 0%,
-                            #fff 100%);
-                            background-image: -moz-linear-gradient(top,
-                            rgba(255, 255, 255, 0) 0%,
-                            #fff 100%);
-                            background-image: -webkit-linear-gradient(top,
-                            rgba(255, 255, 255, 0) 0%,
-                            #fff 100%);
-                            background-image: -ms-linear-gradient(top,
-                            rgba(255, 255, 255, 0) 0%,
-                            #fff 100%);
-                        }
-                    }
-
-                    li {
-                        margin-top: 3px;
-
-                        i {
-                            width: 25px;
-                            padding-left: 3px;
-                        }
-                    }
                 }
             }
         }
     }
 }
 
-.course-content-section.fundpage {
-    width: 100%;
-
-    .course-content-wrapper {
-        .main-container {
-            margin: 0 auto;
-            width: 1150px;
-
-            @media(max-width: 1215px) {
-                max-width: 90%;
-            }
-
-            @media(max-width: 700px) {
-                max-width: 95%;
-                padding: 0 15px;
-            }
-
-            @media(max-width: 675px) {
-                max-width: 100%;
-            }
-
-            @media (max-width: 425px) {
-                padding: 10px;
-            }
-
-            .teacher-info {
-                height: 100px;
-                font-size: 30px;
-                color: $font-dark; // border: 1px solid red;
-
-                .teacher-photo {
-                    position: relative;
-                    top: -25%;
-                    left: 0%;
-
-                    &::before {
-                        position: absolute;
-                        content: '';
-                        height: 140px;
-                        width: 140px;
-                        background-size: cover;
-                        background-position: center;
-                        border-radius: 5px;
-                        border: 3px solid $font-w;
-                    }
-                }
-
-                .cont {
-                    padding-left: 10rem;
-                    width: 100%;
-                    font-size: 0px; // border: 1px solid red;
-
-                    .name {
-                        display: inline-block;
-                        font-weight: 600;
-                        padding-top: .5rem;
-                        font-size: 30px; // border: 1px solid red;
-
-                        @media (max-width: 425px) {
-                            display: block;
-                            font-size: 25px;
-                            width: 100%;
-                            margin-bottom: -1rem;
-                        }
-                    }
-
-                    .more-info {
-                        display: inline-block;
-                        border: none;
-                        border-radius: 5px;
-                        font-size: 15px;
-                        color: $font-dark;
-                        padding: 5px 15px;
-                        margin: 10px 0;
-                    }
-
-                    .btns {
-                        display: inline-block;
-                        position: relative;
-                        margin-top: 5px;
-                        $L: 30px; // border: 1px solid red;
-
-                        @media(max-width: 425px) {
-                            $L: 25px;
-                            display: block;
-                            margin-top: -5px;
-                            width: 100%;
-                        }
-
-                        a {
-                            display: inline-block;
-                            min-width: auto;
-                            font-size: 25px;
-                            color: $font-gray;
-                            padding-top: 5px;
-                            margin-right: 10px;
-
-                            &.ins,
-                            &.fb,
-                            &.yt {
-                                height: $L;
-                                width: $L;
-                                background-size: cover;
-                                background-position: center;
-                                opacity: .5;
-                                transition: .3s;
-
-                                &:hover {
-                                    opacity: 1;
-                                }
-                            }
-
-                            &.ins {
-                                background-image: url(../img/icon/ins.png);
-                            }
-
-                            &.fb {
-                                background-image: url(../img/icon/face.png);
-                            }
-
-                            &.yt {
-                                background-image: url(../img/icon/yt.png);
-                            }
-                        }
-                    }
-                }
-            }
-
-            .tabcontent {
-                animation: fadeInDown 1s;
-            }
-
-            // 所有區塊的預設值
-            .title {
-                color: $font-dark;
-                font-weight: 600;
-                font-size: 25px;
-                margin-top: 1rem;
-                margin-left: 0rem;
-
-                &-b {
-                    text-align: center;
-                    background: $font-dark;
-                    color: $font-w;
-                    padding: .5rem 0;
-                    font-weight: 600;
-                    font-size: 25px;
-                    margin-top: 1rem;
-                    margin-left: 0rem;
-                }
-            }
-
-            .inner-section {
-                background: #fff;
-                color: $font-dark;
-                font-size: 16px;
-                font-weight: 300;
-                text-align: left;
-                width: 100%;
-                position: relative;
-                margin-top: 1rem;
-                padding: 1rem 2rem;
-                border-radius: 5px;
-
-                @media (max-width: 425px) {
-                    border-radius: 0 0 0 0;
-                }
-
-                &__doc {
-                    margin-bottom: 2rem;
-
-                    ul {
-                        list-style-type: circle;
-                        padding-left: 20px;
-                    }
-                }
-
-                .title {
-                    font-weight: 600;
-                    font-size: 25px;
-                    margin-bottom: 10px;
-                }
-
-                img {
-                    width: 100%;
-                }
-
-                blockquote {
-                    border-left: 5px solid #ffc240;
-                    margin: 15px 0;
-                    padding: 0px 20px;
-
-                    p {
-                        font-size: .8em !important;
-                    }
-
-                    font-size: 18px;
-                    font-weight: 500;
-                }
-
-                p {
-                    line-height: 1.8;
-                    font-weight: 300;
-                }
-
-                pre {
-                    font-size: 14px;
-                    line-height: 1.8em;
-                    margin: 24px 0;
-                    padding: 8px 16px;
-                    border-radius: 0;
-                    border: 0;
-                    background-color: $bgColor;
-                }
-
-                a {
-                    color: $brown;
-                    font-weight: 500;
-                    transition: .3s;
-
-                    &:hover {
-                        color: $on;
-                    }
-                }
-
-                .Q {
-                    font-weight: 500;
-                    font-size: 18px;
-                    margin: 10px 0;
-                }
-
-                .sidebar-box {
-                    position: relative;
-                    overflow: hidden;
-
-                    .read-more {
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        text-align: center;
-                        margin: 0;
-                        padding: 20px 0;
-
-                        a.button {
-                            display: inline-block;
-                            margin-top: 20px;
-                            font-family: 'Open Sans';
-                            color: $font-dark;
-                            border-radius: 5px;
-                            border: 1px solid $font-dark;
-                            padding: 3px 10px;
-                            font-weight: 800;
-                        }
-
-                        /* "transparent" only works here because == rgba(0,0,0,0) */
-                        background-image: linear-gradient(to bottom,
-                        rgba(255, 255, 255, 0),
-                        rgb(255, 255, 255));
-                        background-image: -webkit-linear-gradient(top,
-                        rgba(255, 255, 255, 0),
-                        rgb(255, 255, 255));
-                        background-image: -moz-linear-gradient(top,
-                        rgba(255, 255, 255, 0),
-                        rgb(255, 255, 255));
-                        background-image: -o-linear-gradient(top,
-                        rgba(255, 255, 255, 0),
-                        rgb(255, 255, 255));
-                    }
-
-                    .sub-title {
-                        font-weight: 600;
-                    }
-
-                    .inner {
-                        padding: 10px 0;
-                    }
-                }
-
-                // 最上方TAB按鈕
-                &.tab-wrapper {
-                    justify-content: space-between;
-                    background: none;
-                    padding-right: 0;
-                    padding-left: 0;
-                    padding-bottom: 0;
-
-                    @media (max-width: 425px) {
-                        margin-top: 0;
-                        border-radius: 0 0 0 0;
-                    }
-
-                    button {
-                        padding: 10px;
-                        width: 33.333333%;
-                        background: #fff;
-                        color: $font-dark;
-                        font-weight: 500;
-                        box-shadow: none;
-                        border: none;
-                        transition: .3s;
-
-                        &:first-child {
-                            border-radius: 5px 0px 0px 5px;
-
-                            @media (max-width: 425px) {
-                                border-radius: 0 0 0 0;
-                            }
-                        }
-
-                        &:last-child {
-                            border-radius: 0px 5px 5px 0px;
-
-                            @media (max-width: 425px) {
-                                border-radius: 0 0 0 0;
-                            }
-                        }
-
-                        &:hover {
-                            background: #4e4e4e2c;
-                        }
-
-                        &.active {
-                            background: $font-dark;
-                            color: $font-w;
-                        }
-                    }
-                }
-
-                &.prepare .sidebar-box {
-                    max-height: 185px;
-                }
-
-                &.course-content .sidebar-box {
-                    max-height: 500px;
-                }
-
-                &.course-problem {
-                    margin-bottom: 2.36rem;
-
-                    .sidebar-box {
-                        max-height: 200px;
-                    }
-                }
-            }
-
-            .qanda {
-                margin-bottom: 1rem;
-
-                .qanda-square {
-                    padding: 2rem 2rem;
-
-                    .main-qanda {
-                        padding-top: 0rem;
-                        padding-bottom: 3.5rem;
-
-                        &.signin {
-                            padding-bottom: .7rem;
-
-                            .inner-wrapper {
-                                &.signin {
-                                    margin-bottom: 0rem;
-
-                                    .top-text {
-                                        padding-top: .8rem;
-                                    }
-                                }
-                            }
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-                            padding-left: 4.5rem;
-
-                            .code-wrapper {
-                                width: 100%;
-                                float: right;
-                            }
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                float: right;
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 30%;
-                                float: right;
-                            }
-
-                            .signin-btn {
-                                float: left;
-                            }
-                        }
-                    }
-
-                    .qa-pic {
-                        position: absolute;
-                        z-index: 1;
-                    }
-
-                    .inner-wrapper {
-                        margin-bottom: 2rem;
-
-                        .top-text {
-                            padding-left: 5rem;
-
-                            span {
-                                margin-right: 10px;
-                            }
-
-                            .signin-btn {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .time {
-                                display: inline-block;
-                            }
-
-                            .name_teacher {
-                                display: inline-block;
-                                background: $font-dark;
-                                color: $font-w;
-                                padding: 3px 15px;
-                                border-radius: 15px;
-                                font-size: 14px;
-                                max-height: 27px;
-                                overflow: hidden;
-                            }
-
-                            .name {
-                                display: inline-block;
-                                max-height: 27px;
-                                overflow: hidden;
-                            }
-                        }
-
-                        .bot-text {
-                            padding-left: 5rem;
-                            padding-top: 1rem;
-                        }
-                    }
-
-                    .hr {
-                        border-top: 1px solid lightgray;
-                    }
-
-                    #reply {
-                        padding-top: 2rem;
-                        padding-bottom: 3.5rem;
-                        display: none;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-                            float: right;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
-
-                    .other-reply {
-                        padding-top: 2rem;
-                        padding-bottom: 1rem;
-                        padding: 2rem 1rem 1rem 5rem;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
-
-                    .reply-wrapper {
-                        padding: 1rem 0;
-
-                        a#reply-btn {
-                            cursor: pointer;
-                            float: right;
-                        }
-                    }
-                }
-            }
-
-            .left-part.col-8 {
-                .video-section-wrapper-md {
-                    display: none;
-
-                    .inner-section {
-                        padding: 1rem 1rem;
-
-                        .left-part.col-5 {
-                            position: relative;
-                            padding-right: 1rem;
-
-                            .video-thumb-md {
-                                width: 100%;
-                                position: relative;
-
-                                .video-poster {
-                                    width: 100%;
-                                    height: 200px;
-
-                                    &::before {
-                                        content: '';
-                                        position: absolute;
-                                        width: 100%;
-                                        height: 200px;
-                                        border-radius: 5px;
-                                        background-size: cover;
-                                        background-position: center;
-                                        filter: brightness(.4);
-                                        transition: .3s;
-                                    }
-
-                                    .play-btn {
-                                        position: relative;
-                                        height: 100%;
-                                        width: 100%;
-                                        text-align: center;
-                                        $height: 60px;
-                                        $width: 60px;
-
-                                        .test {
-                                            display: inline-block;
-                                            text-align: left;
-                                            width: 100%;
-                                            padding-left: 15px;
-                                            padding-top: 10px;
-                                            color: rgba(255, 255, 255, 0.678);
-                                        }
-
-                                        &:hover .test {
-                                            color: $font-w;
-                                        }
-
-                                        &::before {
-                                            position: absolute;
-                                            top: 50%;
-                                            left: 50%;
-                                            z-index: 1;
-                                            content: '\f04b';
-                                            font-family: 'Font Awesome 5 Free';
-                                            font-size: 25px;
-                                            font-weight: 900;
-                                            color: white;
-                                            line-height: 2.4;
-                                            vertical-align: middle;
-                                            background: rgba(0, 0, 0, 0.623);
-                                            border-radius: 100%;
-                                            height: $height;
-                                            width: $width;
-                                            margin-top: -$height / 2;
-                                            margin-left: -$width / 2;
-                                            padding: 0 0 0 5px;
-                                            transition: .3s;
-                                        }
-                                    }
-
-                                    &:hover::before {
-                                        filter: brightness(.5);
-                                    }
-
-                                    &:hover {
-                                        .play-btn::before {
-                                            background: rgba(54, 50, 44, 0.842);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        .right-part {
-                            .panel-wrapper {
-                                padding: 10px 10px;
-                                color: $font-dark;
-
-                                .panel-tag {
-                                    .fund-tag {
-                                        color: $brown;
-                                        font-size: 18px;
-
-                                        .q-tt-1-btn {
-                                            position: relative;
-
-                                            .qtt {
-                                                opacity: 0;
-                                                visibility: hidden;
-                                                position: absolute;
-                                                bottom: 0;
-                                                left: 150%;
-                                                background: #000;
-                                                width: 200px;
-                                                padding: 5px 10px 5px 10px;
-                                                border-radius: 5px;
-                                                transition: .3s;
-                                                font-size: 13px;
-                                                color: $font-w;
-                                            }
-
-                                            &:hover {
-                                                .qtt {
-                                                    opacity: 1;
-                                                    visibility: visible;
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    span {
-                                        margin-right: 10px;
-                                    }
-                                }
-
-                                .panel-bought {
-                                    padding: 1rem 0;
-                                    font-size: 0;
-
-                                    span {
-                                        font-size: 20px;
-
-                                        p {
-                                            font-size: 16px;
-                                        }
-                                    }
-                                }
-
-                                .panel-price {
-                                    font-family: 'Open Sans';
-                                    font-size: 35px;
-                                    font-weight: 800;
-                                    color: $brown;
-                                    margin: 5px 0;
-
-                                    .cn {
-                                        font-size: 18px;
-                                        font-weight: 500;
-                                    }
-
-                                    .strike {
-                                        color: $font-gray;
-                                        font-weight: 500;
-                                        font-size: 18px;
-                                        text-decoration: line-through;
-                                    }
-                                }
-
-                                .panel-header {
-                                    font-size: 22px;
-                                    color: black;
-                                    max-height: 75px;
-                                    overflow: hidden;
-                                }
-
-                                .star-rating {
-                                    display: flex;
-                                    font-size: 16px;
-                                    justify-content: flex-start;
-                                    width: 100%;
-
-                                    div {
-                                        position: relative;
-                                        display: inline-block;
-                                        margin: 10px 0 0 0;
-
-                                        .star-progress {
-                                            position: relative;
-                                            margin-right: 5px;
-
-                                            &::before {
-                                                font-family: 'Font Awesome 5 Free';
-                                                content: '\f005';
-                                                color: lightgray;
-                                                font-weight: 900;
-                                                z-index: 0;
-                                                position: relative;
-                                                display: inline-block;
-                                            }
-                                        }
-
-                                        .star-progress-filled {
-                                            position: absolute;
-                                            overflow: hidden;
-                                            top: 0;
-                                            left: 0;
-                                            margin: 0;
-
-                                            &::before {
-                                                font-family: 'Font Awesome 5 Free';
-                                                content: '\f005';
-                                                color: #ffc240;
-                                                font-weight: 900;
-                                                z-index: 1;
-                                                position: relative;
-                                                display: inline-block;
-                                            }
-                                        }
-                                    }
-                                }
-
-                                .panel-tag {
-                                    span {
-                                        margin-right: 10px;
-                                    }
-                                }
-
-                                .panel-bought {
-                                    padding: 1rem 0;
-                                    font-size: 0;
-
-                                    span {
-                                        font-size: 20px;
-
-                                        p {
-                                            font-size: 16px;
-                                        }
-                                    }
-                                }
-
-                                .panel-price {
-                                    font-family: 'Open Sans';
-                                    font-size: 35px;
-                                    font-weight: 800;
-                                    color: $brown;
-                                    margin: 5px 0;
-                                }
-
-                                button {
-                                    background: $gold;
-                                    border: none;
-                                    border-radius: 5px;
-                                    padding: 10px 20px;
-                                    margin-bottom: 10px;
-                                    width: 100%;
-                                    font-size: 20px;
-                                    transition: .3s;
-
-                                    &:hover {
-                                        background-color: rgb(255, 166, 0);
-                                    }
-
-                                    &.add {
-                                        background: none;
-                                        border: 1px solid $font-bk;
-
-                                        &:hover {
-                                            background-color: $pink;
-                                            border-color: $pink;
-                                        }
-                                    }
-
-                                    &#plyr-btn-m {
-                                        background: #8d0000;
-                                        color: $font-w;
-
-                                        &:hover {
-                                            background-color: #d40909;
-                                        }
-                                    }
-                                }
-
-                                .panel-cont {
-                                    font-size: 15px;
-                                    color: $font-gray;
-
-                                    .sidebar-box {
-                                        max-height: 120px;
-                                        position: relative;
-                                        overflow: hidden;
-
-                                        .read-more {
-                                            position: absolute;
-                                            bottom: 0;
-                                            left: 0;
-                                            width: 100%;
-                                            text-align: center;
-                                            margin: 0;
-                                            padding: 20px 0;
-                                            font-weight: 800;
-
-                                            a {
-                                                display: inline-block;
-                                                margin-top: 20px;
-                                                font-family: 'Open Sans';
-                                                color: $font-dark;
-                                                border-radius: 5px;
-                                                border: 1px solid $font-dark;
-                                                padding: 5px 10px;
-                                            }
-
-                                            /* "transparent" only works here because == rgba(0,0,0,0) */
-                                            background-image: linear-gradient(top,
-                                            rgba(255, 255, 255, 0) 0%,
-                                            #fff 100%);
-                                            background-image: -o-linear-gradient(top,
-                                            rgba(255, 255, 255, 0) 0%,
-                                            #fff 5%,
-                                            #fff 100%);
-                                            background-image: -moz-linear-gradient(top,
-                                            rgba(255, 255, 255, 0) 0%,
-                                            #fff 5%,
-                                            #fff 100%);
-                                            background-image: -webkit-linear-gradient(top,
-                                            rgba(255, 255, 255, 0) 0%,
-                                            #fff 5%,
-                                            #fff 100%);
-                                            background-image: -ms-linear-gradient(top,
-                                            rgba(255, 255, 255, 0) 0%,
-                                            #fff 5%,
-                                            #fff 100%);
-                                        }
-                                    }
-
-                                    li {
-                                        margin-top: 3px;
-
-                                        i {
-                                            width: 25px;
-                                            padding-left: 3px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    @media(max-width: 1024px) {
-                        display: block;
-                        margin-top: 3rem;
-                    }
-                }
-            }
-
-            // 正式課程影片播放
-            .main-player {
-                justify-items: center;
-                align-items: center;
-                justify-content: center;
-                align-content: center;
-                width: 100%;
-                height: 100vh;
-                position: fixed;
-                z-index: 9999;
-                top: 0;
-                visibility: hidden;
-                opacity: 0;
-                text-align: center;
-                background: rgba(0, 0, 0, 0.486);
-                transition: .5s;
-
-                &.show {
-                    visibility: visible;
-                    opacity: 1;
-                }
-
-                .video-wrapper.row {
-                    margin: 0 auto;
-                    width: 85%;
-                    height: 68%;
-                    padding: 20px;
-                    background: #000;
-                    justify-items: center;
-                    align-items: center;
-                    justify-content: center;
-                    align-content: center;
-
-                    .canvas {
-                        padding: 0;
-
-                        video {
-                            width: 100%;
-                            background: #000;
-                        }
-                    }
-
-                    .playlist {
-                        height: 100%;
-                        max-height: 100%;
-                        overflow: scroll;
-                        color: white;
-                        background: #000;
-                        text-align: left;
-                        padding: 0;
-
-                        ul {
-                            // background: red;
-                            margin: 1rem 0;
-
-                            li {
-                                // background: pink;
-                                // border: 1px solid red;
-                                padding: 10px 15px;
-                                font-weight: 200;
-
-                                &.title {
-                                    font-size: 18px;
-                                    font-weight: 500;
-                                    padding-left: 2rem;
-                                }
-
-                                ol {
-                                    li.col-2 {
-                                        text-align: center;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
+// 影片彈窗
 .videoModal {
     padding: 0rem 0 0 0;
     margin: 0;
