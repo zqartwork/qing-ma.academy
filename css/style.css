@@ -5577,7 +5577,7 @@ footer {
       border-radius: 3px; }
   .subindex.main-content-section .date {
     color: gray; }
-  .subindex.main-content-section .title {
+  .subindex.main-content-section .title-sub {
     display: inline-block;
     font-weight: 500;
     margin-top: .5rem;
@@ -5606,7 +5606,7 @@ footer {
     .nspage.subindex.main-content-section .main-container .title-wrapper {
       height: 250px;
       color: white;
-      padding: 0 1rem;
+      padding: 0 2rem;
       -webkit-box-align: end;
       -ms-flex-align: end;
       align-items: flex-end; }
@@ -5643,6 +5643,8 @@ footer {
     .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section {
       border-radius: 0;
       padding-top: 1rem; }
+      .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.msg {
+        padding-top: 2rem; }
       .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a {
         color: #ac7000;
         font-weight: 500;
@@ -5723,8 +5725,10 @@ footer {
             color: white; }
     .nspage.subindex.main-content-section .main-container .container {
       margin-top: 4rem; }
+      .nspage.subindex.main-content-section .main-container .container.margin-top-0 {
+        margin-top: 0px; }
       .nspage.subindex.main-content-section .main-container .container .left-part {
-        margin-top: -6rem; }
+        margin-top: -4rem; }
 
 #addModal .modal-title,
 #likeModal .modal-title {
