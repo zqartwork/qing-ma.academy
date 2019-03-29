@@ -57,6 +57,8 @@ body {
     overflow: hidden;
 }
 
+
+
 a {
     color: white;
     outline: none;
@@ -575,6 +577,112 @@ button {
             max-height: 200px;
         }
     }
+}
+
+.tab-pane.active {
+    position: relative;
+    height: 1540px;
+}
+
+.pane {
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.other-reply {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding: 2rem 1rem 1rem 5rem;
+
+    .code-wrapper {
+        width: 100%;
+        float: right;
+    }
+
+    .btn-wrapper {
+        float: right;
+    }
+
+    textarea,
+    input {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 5px 10px;
+        color: $font-dark;
+        text-decoration: none;
+        box-decoration: none;
+        box-shadow: none;
+        border-width: 1px;
+        border-color: rgb(168, 168, 168);
+        border-radius: 5px;
+        border-style: solid;
+
+        &::placeholder {
+            color: lightgray;
+            display: inline-block;
+        }
+    }
+
+    .btns {
+        width: 100%;
+        margin-top: .7rem;
+
+        .code {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid $font-gray;
+
+            &::placeholder {
+                font-size: 15px;
+                color: lightgray;
+            }
+        }
+
+        i {
+            cursor: pointer;
+            padding: 8px 5px 0px 5px;
+            margin-right: 10px;
+            float: right;
+        }
+
+        button {
+            background: $bgColor;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-left: 10px;
+            margin-top: 10px;
+            transition: .2s;
+
+            &:hover {
+                background: $font-gray;
+            }
+        }
+
+        .code-img {
+            float: right;
+
+            img {
+                height: 30px;
+                width: auto;
+            }
+        }
+
+        input.code {
+            width: 20%;
+            float: right;
+        }
+    }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: $font-dark;
+}
+
+.nav-link {
+    margin: 5px 0;
 }
 
 // before-sticky
@@ -3671,7 +3779,11 @@ $link_hover_color: #fff;
 
                 &-b {
                     text-align: center;
-                    background: $font-dark;
+                    background: none;
+                    background-image: url(../img/banner/002.jpg);
+                    background-position: center;
+                    background-size: cover;
+
                     color: $font-w;
                     padding: .5rem 0;
                     font-weight: 600;
@@ -3989,7 +4101,7 @@ $link_hover_color: #fff;
                                 float: right;
 
                                 img {
-                                    height: 34px;
+                                    height: 30px;
                                     width: auto;
                                 }
                             }
@@ -4141,7 +4253,7 @@ $link_hover_color: #fff;
                                 float: right;
 
                                 img {
-                                    height: 34px;
+                                    height: 30px;
                                     width: auto;
                                 }
                             }
@@ -4153,92 +4265,6 @@ $link_hover_color: #fff;
                         }
                     }
 
-                    .other-reply {
-                        padding-top: 2rem;
-                        padding-bottom: 1rem;
-                        padding: 2rem 1rem 1rem 5rem;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
 
                     .reply-wrapper {
                         padding: 1rem 0;
@@ -4405,7 +4431,7 @@ $link_hover_color: #fff;
                                 float: right;
 
                                 img {
-                                    height: 34px;
+                                    height: 30px;
                                     width: auto;
                                 }
                             }
@@ -4587,94 +4613,7 @@ $link_hover_color: #fff;
                                 float: right;
 
                                 img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
-
-                    .other-reply {
-                        padding-top: 2rem;
-                        padding-bottom: 1rem;
-                        padding: 2rem 1rem 1rem 5rem;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
+                                    height: 30px;
                                     width: auto;
                                 }
                             }
@@ -4796,7 +4735,7 @@ $link_hover_color: #fff;
                                 float: right;
 
                                 img {
-                                    height: 34px;
+                                    height: 30px;
                                     width: auto;
                                 }
                             }
@@ -5053,94 +4992,7 @@ $link_hover_color: #fff;
                                 float: right;
 
                                 img {
-                                    height: 34px;
-                                    width: auto;
-                                }
-                            }
-
-                            input.code {
-                                width: 20%;
-                                float: right;
-                            }
-                        }
-                    }
-
-                    .other-reply {
-                        padding-top: 2rem;
-                        padding-bottom: 1rem;
-                        padding: 2rem 1rem 1rem 5rem;
-
-                        .code-wrapper {
-                            width: 100%;
-                            float: right;
-                        }
-
-                        .btn-wrapper {
-                            float: right;
-                        }
-
-                        textarea,
-                        input {
-                            width: 100%;
-                            font-size: 14px;
-                            font-weight: 300;
-                            padding: 5px 10px;
-                            color: $font-dark;
-                            text-decoration: none;
-                            box-decoration: none;
-                            box-shadow: none;
-                            border-width: 1px;
-                            border-color: rgb(168, 168, 168);
-                            border-radius: 5px;
-                            border-style: solid;
-
-                            &::placeholder {
-                                color: lightgray;
-                                display: inline-block;
-                            }
-                        }
-
-                        .btns {
-                            width: 100%;
-                            margin-top: .7rem;
-
-                            .code {
-                                padding: 5px;
-                                border-radius: 5px;
-                                border: 1px solid $font-gray;
-
-                                &::placeholder {
-                                    font-size: 15px;
-                                    color: lightgray;
-                                }
-                            }
-
-                            i {
-                                cursor: pointer;
-                                padding: 8px 5px 0px 5px;
-                                margin-right: 10px;
-                                float: right;
-                            }
-
-                            button {
-                                background: $bgColor;
-                                border: none;
-                                border-radius: 5px;
-                                padding: 5px 15px;
-                                margin-left: 10px;
-                                margin-top: 10px;
-                                transition: .2s;
-
-                                &:hover {
-                                    background: $font-gray;
-                                }
-                            }
-
-                            .code-img {
-                                float: right;
-
-                                img {
-                                    height: 34px;
+                                    height: 30px;
                                     width: auto;
                                 }
                             }
@@ -6386,7 +6238,7 @@ $link_hover_color: #fff;
                         float: right;
 
                         img {
-                            height: 34px;
+                            height: 30px;
                             width: auto;
                         }
                     }
@@ -6534,94 +6386,7 @@ $link_hover_color: #fff;
                         float: right;
 
                         img {
-                            height: 34px;
-                            width: auto;
-                        }
-                    }
-
-                    input.code {
-                        width: 20%;
-                        float: right;
-                    }
-                }
-            }
-
-            .other-reply {
-                padding-top: 2rem;
-                padding-bottom: 1rem;
-                padding: 2rem 1rem 1rem 5rem;
-
-                .code-wrapper {
-                    width: 100%;
-                    float: right;
-                }
-
-                .btn-wrapper {
-                    float: right;
-                }
-
-                textarea,
-                input {
-                    width: 100%;
-                    font-size: 14px;
-                    font-weight: 300;
-                    padding: 5px 10px;
-                    color: $font-dark;
-                    text-decoration: none;
-                    box-decoration: none;
-                    box-shadow: none;
-                    border-width: 1px;
-                    border-color: rgb(168, 168, 168);
-                    border-radius: 5px;
-                    border-style: solid;
-
-                    &::placeholder {
-                        color: lightgray;
-                        display: inline-block;
-                    }
-                }
-
-                .btns {
-                    width: 100%;
-                    margin-top: .7rem;
-
-                    .code {
-                        padding: 5px;
-                        border-radius: 5px;
-                        border: 1px solid $font-gray;
-
-                        &::placeholder {
-                            font-size: 15px;
-                            color: lightgray;
-                        }
-                    }
-
-                    i {
-                        cursor: pointer;
-                        padding: 8px 5px 0px 5px;
-                        margin-right: 10px;
-                        float: right;
-                    }
-
-                    button {
-                        background: $bgColor;
-                        border: none;
-                        border-radius: 5px;
-                        padding: 5px 15px;
-                        margin-left: 10px;
-                        margin-top: 10px;
-                        transition: .2s;
-
-                        &:hover {
-                            background: $font-gray;
-                        }
-                    }
-
-                    .code-img {
-                        float: right;
-
-                        img {
-                            height: 34px;
+                            height: 30px;
                             width: auto;
                         }
                     }
@@ -6708,6 +6473,74 @@ $link_hover_color: #fff;
 
                 .title {
                     color: white;
+
+                    &.frame {
+                        font-size: 0;
+
+                        span {
+                            display: inline-block;
+                            border: 1px solid white;
+                            font-size: 22px;
+
+                            padding: 5px 15px;
+
+                            &.frm-q {
+                                font-size: 20px;
+                                border:none;
+                                position: relative;
+
+                                .tri {
+                                    position: absolute;
+                                    z-index: 0;
+                                    top: 25%;
+                                    left: 80%;
+
+                                    width: 20px;
+                                    height: 20px;
+                                    padding: 0;
+
+                                    background: #000;
+                                    font-size: 13px;
+                                    transform: rotate(45deg);
+
+                                    border-radius: 3px;
+                                    border: none;
+
+                                    visibility: hidden;
+                                    opacity: 0;
+
+                                    transition: .3s;
+                                }
+
+                                .frm-ttp {
+                                    position: absolute;
+                                    z-index: 0;
+                                    top: 0;
+                                    left: 90%;
+
+                                    width: 500%;
+
+                                    background: #000;
+                                    font-size: 13px;
+                                    padding: 8px 10px 8px 13px;
+
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    transition: .3s;
+                                }
+
+                                &:hover {
+                                    .tri, .frm-ttp {
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                }
+
+                                
+                            }
+                        }
+                        
+                    }
                 }
             }
         }
@@ -7182,6 +7015,9 @@ footer {
             .more {
                 float: right;
             }
+            .cata-wrapper {
+                margin-bottom: 2rem;
+            }
         }
     }
 
@@ -7236,6 +7072,10 @@ footer {
                 height: 100%;
             }
         }
+
+        &.row {
+            align-items: center;
+        }
     }
 
     .fb-page {
@@ -7253,35 +7093,22 @@ footer {
     .cata {
         display: inline-block;
         background: #000;
-        height: 28px;
-        width: 52px;
         position: relative;
         margin-right: 8px;
+        padding: 2px 8px;
 
         border-radius: 3px;
 
-        &__ac:before {
-            content: '活動';
+        &__ac{
             color: #ff526f;
-            position: absolute;
-            top: 2px;
-            left: 10px;
         }
 
-        &__rc:before {
-            content: '徵才';
+        &__rc {
             color: #52e5ff;
-            position: absolute;
-            top: 1px;
-            left: 10px;
         }
 
-        &__cp:before {
-            content: '優惠';
+        &__cp{
             color: #ffcd2b;
-            position: absolute;
-            top: 2px;
-            left: 10px;
         }
 
         &-ns {
@@ -7310,6 +7137,22 @@ footer {
     .pagination-wrapper {
         margin-top: 1rem;
     }
+
+    .start {
+        position: absolute;
+        right: 1rem;
+        z-index: 1;
+        cursor: pointer;
+        display: block;
+
+        font-size: 16px;
+        background: $font-dark;
+
+        padding: 8px 15px;
+        color: white;
+        border-radius: 3px;
+    }
+    
 }
 
 //sub-ns-page 
@@ -7343,7 +7186,7 @@ footer {
             align-items: flex-end;
 
             .tag-wrapper {
-                padding: 2rem 0;
+                padding: .5rem 0;
                 font-size: 0;
 
                 .title {
@@ -7408,23 +7251,31 @@ footer {
                     color: $brown;
                     font-weight: 500;
                     transition: .3s;
+                    
+                    &.set {
+                        font-size: 0;
+                    }
 
                     &:hover {
                         color: $on;
                     }
 
-                    span.shr {
+                    span{
+                        &.shr {
+                        display: inline-block;
                         background: #000;
                         color: white;
                         padding: 3px 10px;
                         border-radius: 3px;
                         font-size: 12px;
                         margin-right: 10px;
+                        margin-top: 10px;
 
                         transition: .3s;
 
                         &__fb {
                             background: $fb;
+
                         }
 
                         &__inst {
@@ -7443,6 +7294,12 @@ footer {
                         &:hover {
                             filter: brightness(1.2);
                         }
+                        .num {
+                            display: inline-block;
+                            font-size: 12px;
+                        }
+                    }
+
                     }
                 }
 

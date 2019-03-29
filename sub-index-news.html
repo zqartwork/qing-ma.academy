@@ -210,7 +210,7 @@
         <div class="nspage subindex main-content-section course-content-section">
             <style>
                 .nspage::before {
-                    background-image: url(../img/sub-index/news-002.jpg);
+                    background-image: url(img/sub-index/news-002.jpg);
                 }
             </style>
             <div class="nspage main-container row course-content-wrapper">
@@ -307,11 +307,14 @@
                                 <a href=""><span class="shr shr__line">Line</span></a>
 
                                 <h6 class="margin-bottom-10">收藏或喜歡此文章 <i class="fas fa-cart-arrow-down"></i></h6>
-                                <a href="" data-toggle="modal" data-target="#addModal"><span class="shr"> <i
-                                            class="far fa-heart"></i> 收藏 <span class="num">0</span>
-                                    </span></a>
-                                <a href="" data-toggle="modal" data-target="#likeModal"><span class="shr"> <i
-                                            class="far fa-thumbs-up"></i> 按讚 <span class="num">0</span></span></a>
+                                <a href="" data-toggle="modal" data-target="#addModal" class="set">
+                                    <span class="shr"> <i class="far fa-heart"></i> 收藏0
+                                    </span>
+                                </a>
+                                <a href="" data-toggle="modal" data-target="#likeModal" class="set">
+                                    <span class="shr"> <i class="far fa-thumbs-up"></i> 按讚0
+                                    </span>
+                                </a>
 
                             </div>
 
@@ -336,6 +339,49 @@
                                 <div class="rate ">
 
                                     <div class="title-b"> <span> 留言區 </span> </div>
+
+
+                                    <!-- 會員主要評價區塊 - 未登入 -->
+                                    <div class=" rate-square margin-bottom-10 inner-section msg">
+                                        <div class="main-rate signin">
+                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                                style="background-image: url(img/profile/nobody.png)">
+                                            </div>
+                                            <div class="inner-wrapper signin">
+                                                <div class="top-text">
+                                                    <button type="submit" class="signin-btn"> 請先登入會員 </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 會員主要評價區塊 - 已登入 -->
+                                    <div class=" rate-square margin-bottom-10 inner-section user msg">
+                                        <div class="main-rate">
+                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
+                                                style="background-image: url(img/profile/portrait-005.jpg)">
+                                            </div>
+                                            <div class="inner-wrapper">
+                                                <div class="top-text">
+                                                    <span class="name">我是會員名稱</span>
+                                                </div>
+                                                <div class="bot-text">
+                                                    <textarea name="" id="" cols="50" rows="2"
+                                                        placeholder="請在這裡輸入您對這堂課的看法"></textarea>
+                                                </div>
+                                                <div class="btns">
+                                                    <div class="code-wrapper">
+                                                        <span class="code-img"><img src="img/icon/001.jpg"
+                                                                alt=""></span>
+                                                        <span class="refresh"><i class="fas fa-sync-alt"></i></span>
+                                                        <input type="text" placeholder="請輸入驗證碼" class="code">
+                                                    </div>
+                                                    <button type="submit"> 送出 </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                     <!-- 尚未有評價 -->
                                     <div class=" rate-square margin-bottom-10 inner-section msg">
@@ -386,48 +432,6 @@
                                             </ul>
                                         </div>
                                     </div>
-
-                                    <!-- 會員主要評價區塊 - 未登入 -->
-                                    <div class=" rate-square margin-bottom-10 inner-section msg">
-                                        <div class="main-rate signin">
-                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                                style="background-image: url(img/profile/nobody.png)">
-                                            </div>
-                                            <div class="inner-wrapper signin">
-                                                <div class="top-text">
-                                                    <button type="submit" class="signin-btn"> 請先登入會員 </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 會員主要評價區塊 - 已登入 -->
-                                    <div class=" rate-square margin-bottom-10 inner-section user msg">
-                                        <div class="main-rate">
-                                            <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                                                style="background-image: url(img/profile/portrait-005.jpg)">
-                                            </div>
-                                            <div class="inner-wrapper">
-                                                <div class="top-text">
-                                                    <span class="name">我是會員名稱</span>
-                                                </div>
-                                                <div class="bot-text">
-                                                    <textarea name="" id="" cols="50" rows="2"
-                                                        placeholder="請在這裡輸入您對這堂課的看法"></textarea>
-                                                </div>
-                                                <div class="btns">
-                                                    <div class="code-wrapper">
-                                                        <span class="code-img"><img src="img/icon/001.jpg"
-                                                                alt=""></span>
-                                                        <span class="refresh"><i class="fas fa-sync-alt"></i></span>
-                                                        <input type="text" placeholder="請輸入驗證碼" class="code">
-                                                    </div>
-                                                    <button type="submit"> 送出 </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
 
@@ -441,7 +445,7 @@
                                 <div class="info-wrapper type1">
                                     <div class="conf">
                                         <!-- 優惠標誌 cata__cp -->
-                                        <span class="cata cata__cp"></span>
+                                        <span class="cata cata__cp">優惠</span>
                                         <span class="date"> 2018-11-12 ~ 11-15 </span>
                                     </div>
                                     <span class="title-sub"> 大三元攝影器材出租 會員優惠 9 折 </span>
@@ -451,7 +455,7 @@
                                 <div class="info-wrapper type1">
                                     <div class="conf">
                                         <!-- 徵才標誌 cata__rc -->
-                                        <span class="cata cata__rc"></span>
+                                        <span class="cata cata__rc">徵才</span>
                                         <span class="date"> 2018-11-12 ~ 11-15 </span>
                                     </div>
                                     <span class="title-sub"> 復興商工媒體傳播組 元旦展 演員急徵 </span>
@@ -461,7 +465,7 @@
                                 <div class="info-wrapper type1">
                                     <div class="conf">
                                         <!-- 活動標誌 cata__ac -->
-                                        <span class="cata cata__ac"></span>
+                                        <span class="cata cata__ac">活動</span>
                                         <span class="date"> 2018-11-12 ~ 11-15 </span>
                                     </div>
                                     <span class="title-sub"> 第三屆爺奶影像故事記錄競賽 </span>
@@ -470,7 +474,7 @@
                             <a href="#">
                                 <div class="info-wrapper type1">
                                     <div class="conf">
-                                        <span class="cata cata__ac"></span>
+                                        <span class="cata cata__ac">活動</span>
                                         <span class="date"> 2018-11-12 ~ 11-15 </span>
                                     </div>
                                     <span class="title-sub"> 唐墨慶典 - 茄萣好時刻攝影比賽 </span>
@@ -479,7 +483,7 @@
                             <a href="#">
                                 <div class="info-wrapper type1">
                                     <div class="conf">
-                                        <span class="cata cata__rc"></span>
+                                        <span class="cata cata__rc">徵才</span>
                                         <span class="date"> 2018-11-12 ~ 11-15 </span>
                                     </div>
                                     <span class="title-sub"> 世新學生製片 劇情短片《守夜》 </span>
@@ -501,7 +505,7 @@
                             <blockquote>Facebook 粉絲團</blockquote>
                             <div class="fb-page" data-href="https://www.facebook.com/youthgoldenhorse/"
                                 data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
-                                data-hide-cover="false" data-show-facepile="true" height="500">
+                                data-hide-cover="false" data-show-facepile="true" height="500" width="320">
                                 <div cite="https://www.facebook.com/youthgoldenhorse/" class="fb-xfbml-parse-ignore"><a
                                         href="https://www.facebook.com/youthgoldenhorse/">財團法人全球華人青馬影展文化藝術基金會</a></div>
                             </div>

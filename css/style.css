@@ -368,6 +368,106 @@ button {
     .inner-section.course-problem .sidebar-box {
       max-height: 200px; }
 
+.tab-pane.active {
+  position: relative;
+  height: 1540px; }
+
+.pane {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.other-reply {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding: 2rem 1rem 1rem 5rem; }
+  .other-reply .code-wrapper {
+    width: 100%;
+    float: right; }
+  .other-reply .btn-wrapper {
+    float: right; }
+  .other-reply textarea,
+  .other-reply input {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px 10px;
+    color: #474747;
+    text-decoration: none;
+    box-decoration: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-width: 1px;
+    border-color: #a8a8a8;
+    border-radius: 5px;
+    border-style: solid; }
+    .other-reply textarea::-webkit-input-placeholder,
+    .other-reply input::-webkit-input-placeholder {
+      color: lightgray;
+      display: inline-block; }
+    .other-reply textarea:-ms-input-placeholder,
+    .other-reply input:-ms-input-placeholder {
+      color: lightgray;
+      display: inline-block; }
+    .other-reply textarea::-ms-input-placeholder,
+    .other-reply input::-ms-input-placeholder {
+      color: lightgray;
+      display: inline-block; }
+    .other-reply textarea::placeholder,
+    .other-reply input::placeholder {
+      color: lightgray;
+      display: inline-block; }
+  .other-reply .btns {
+    width: 100%;
+    margin-top: .7rem; }
+    .other-reply .btns .code {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #969696; }
+      .other-reply .btns .code::-webkit-input-placeholder {
+        font-size: 15px;
+        color: lightgray; }
+      .other-reply .btns .code:-ms-input-placeholder {
+        font-size: 15px;
+        color: lightgray; }
+      .other-reply .btns .code::-ms-input-placeholder {
+        font-size: 15px;
+        color: lightgray; }
+      .other-reply .btns .code::placeholder {
+        font-size: 15px;
+        color: lightgray; }
+    .other-reply .btns i {
+      cursor: pointer;
+      padding: 8px 5px 0px 5px;
+      margin-right: 10px;
+      float: right; }
+    .other-reply .btns button {
+      background: #e4e4e4;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 15px;
+      margin-left: 10px;
+      margin-top: 10px;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
+      .other-reply .btns button:hover {
+        background: #969696; }
+    .other-reply .btns .code-img {
+      float: right; }
+      .other-reply .btns .code-img img {
+        height: 30px;
+        width: auto; }
+    .other-reply .btns input.code {
+      width: 20%;
+      float: right; }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: #474747; }
+
+.nav-link {
+  margin: 5px 0; }
+
 .nav-before {
   background-color: #00000067;
   width: 100%;
@@ -2845,7 +2945,10 @@ button {
       margin-left: 0rem; }
       .course-content-section .course-content-wrapper .main-container .title-b {
         text-align: center;
-        background: #474747;
+        background: none;
+        background-image: url(../img/banner/002.jpg);
+        background-position: center;
+        background-size: cover;
         color: #fff;
         padding: .5rem 0;
         font-weight: 600;
@@ -3078,7 +3181,7 @@ button {
             .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code-img {
               float: right; }
               .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns .code-img img {
-                height: 34px;
+                height: 30px;
                 width: auto; }
             .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .main-qanda .btns input.code {
               width: 30%;
@@ -3205,93 +3308,9 @@ button {
             .course-content-section .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code-img {
               float: right; }
               .course-content-section .course-content-wrapper .main-container .qanda .qanda-square #reply .btns .code-img img {
-                height: 34px;
+                height: 30px;
                 width: auto; }
             .course-content-section .course-content-wrapper .main-container .qanda .qanda-square #reply .btns input.code {
-              width: 20%;
-              float: right; }
-        .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply {
-          padding-top: 2rem;
-          padding-bottom: 1rem;
-          padding: 2rem 1rem 1rem 5rem; }
-          .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .code-wrapper {
-            width: 100%;
-            float: right; }
-          .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btn-wrapper {
-            float: right; }
-          .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea,
-          .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply input {
-            width: 100%;
-            font-size: 14px;
-            font-weight: 300;
-            padding: 5px 10px;
-            color: #474747;
-            text-decoration: none;
-            box-decoration: none;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            border-width: 1px;
-            border-color: #a8a8a8;
-            border-radius: 5px;
-            border-style: solid; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea::-webkit-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply input::-webkit-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea:-ms-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply input:-ms-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea::-ms-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply input::-ms-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply textarea::placeholder,
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply input::placeholder {
-              color: lightgray;
-              display: inline-block; }
-          .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns {
-            width: 100%;
-            margin-top: .7rem; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code {
-              padding: 5px;
-              border-radius: 5px;
-              border: 1px solid #969696; }
-              .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code::-webkit-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code:-ms-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code::-ms-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code::placeholder {
-                font-size: 15px;
-                color: lightgray; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns i {
-              cursor: pointer;
-              padding: 8px 5px 0px 5px;
-              margin-right: 10px;
-              float: right; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns button {
-              background: #e4e4e4;
-              border: none;
-              border-radius: 5px;
-              padding: 5px 15px;
-              margin-left: 10px;
-              margin-top: 10px;
-              -webkit-transition: .2s;
-              -o-transition: .2s;
-              transition: .2s; }
-              .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns button:hover {
-                background: #969696; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code-img {
-              float: right; }
-              .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns .code-img img {
-                height: 34px;
-                width: auto; }
-            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .other-reply .btns input.code {
               width: 20%;
               float: right; }
         .course-content-section .course-content-wrapper .main-container .qanda .qanda-square .reply-wrapper {
@@ -3423,7 +3442,7 @@ button {
             .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code-img {
               float: right; }
               .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns .code-img img {
-                height: 34px;
+                height: 30px;
                 width: auto; }
             .course-content-section .course-content-wrapper .main-container .rate .rate-square .main-rate .btns input.code {
               width: 30%;
@@ -3574,93 +3593,9 @@ button {
             .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code-img {
               float: right; }
               .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns .code-img img {
-                height: 34px;
+                height: 30px;
                 width: auto; }
             .course-content-section .course-content-wrapper .main-container .rate .rate-square #reply .btns input.code {
-              width: 20%;
-              float: right; }
-        .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply {
-          padding-top: 2rem;
-          padding-bottom: 1rem;
-          padding: 2rem 1rem 1rem 5rem; }
-          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .code-wrapper {
-            width: 100%;
-            float: right; }
-          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btn-wrapper {
-            float: right; }
-          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea,
-          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input {
-            width: 100%;
-            font-size: 14px;
-            font-weight: 300;
-            padding: 5px 10px;
-            color: #474747;
-            text-decoration: none;
-            box-decoration: none;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            border-width: 1px;
-            border-color: #a8a8a8;
-            border-radius: 5px;
-            border-style: solid; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::-webkit-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input::-webkit-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea:-ms-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input:-ms-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::-ms-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input::-ms-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply textarea::placeholder,
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply input::placeholder {
-              color: lightgray;
-              display: inline-block; }
-          .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns {
-            width: 100%;
-            margin-top: .7rem; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code {
-              padding: 5px;
-              border-radius: 5px;
-              border: 1px solid #969696; }
-              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::-webkit-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code:-ms-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::-ms-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code::placeholder {
-                font-size: 15px;
-                color: lightgray; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns i {
-              cursor: pointer;
-              padding: 8px 5px 0px 5px;
-              margin-right: 10px;
-              float: right; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns button {
-              background: #e4e4e4;
-              border: none;
-              border-radius: 5px;
-              padding: 5px 15px;
-              margin-left: 10px;
-              margin-top: 10px;
-              -webkit-transition: .2s;
-              -o-transition: .2s;
-              transition: .2s; }
-              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns button:hover {
-                background: #969696; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code-img {
-              float: right; }
-              .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns .code-img img {
-                height: 34px;
-                width: auto; }
-            .course-content-section .course-content-wrapper .main-container .rate .rate-square .other-reply .btns input.code {
               width: 20%;
               float: right; }
         .course-content-section .course-content-wrapper .main-container .rate .rate-square .reply-wrapper {
@@ -3759,7 +3694,7 @@ button {
             .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code-img {
               float: right; }
               .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns .code-img img {
-                height: 34px;
+                height: 30px;
                 width: auto; }
             .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .main-assignment .btns input.code {
               width: 30%;
@@ -3963,93 +3898,9 @@ button {
             .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code-img {
               float: right; }
               .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns .code-img img {
-                height: 34px;
+                height: 30px;
                 width: auto; }
             .course-content-section .course-content-wrapper .main-container .assignment .assignment-square #reply .btns input.code {
-              width: 20%;
-              float: right; }
-        .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply {
-          padding-top: 2rem;
-          padding-bottom: 1rem;
-          padding: 2rem 1rem 1rem 5rem; }
-          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .code-wrapper {
-            width: 100%;
-            float: right; }
-          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btn-wrapper {
-            float: right; }
-          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea,
-          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input {
-            width: 100%;
-            font-size: 14px;
-            font-weight: 300;
-            padding: 5px 10px;
-            color: #474747;
-            text-decoration: none;
-            box-decoration: none;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-            border-width: 1px;
-            border-color: #a8a8a8;
-            border-radius: 5px;
-            border-style: solid; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::-webkit-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::-webkit-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea:-ms-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input:-ms-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::-ms-input-placeholder,
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::-ms-input-placeholder {
-              color: lightgray;
-              display: inline-block; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply textarea::placeholder,
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply input::placeholder {
-              color: lightgray;
-              display: inline-block; }
-          .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns {
-            width: 100%;
-            margin-top: .7rem; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code {
-              padding: 5px;
-              border-radius: 5px;
-              border: 1px solid #969696; }
-              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::-webkit-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code:-ms-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::-ms-input-placeholder {
-                font-size: 15px;
-                color: lightgray; }
-              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code::placeholder {
-                font-size: 15px;
-                color: lightgray; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns i {
-              cursor: pointer;
-              padding: 8px 5px 0px 5px;
-              margin-right: 10px;
-              float: right; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns button {
-              background: #e4e4e4;
-              border: none;
-              border-radius: 5px;
-              padding: 5px 15px;
-              margin-left: 10px;
-              margin-top: 10px;
-              -webkit-transition: .2s;
-              -o-transition: .2s;
-              transition: .2s; }
-              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns button:hover {
-                background: #969696; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code-img {
-              float: right; }
-              .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns .code-img img {
-                height: 34px;
-                width: auto; }
-            .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .other-reply .btns input.code {
               width: 20%;
               float: right; }
         .course-content-section .course-content-wrapper .main-container .assignment .assignment-square .reply-wrapper {
@@ -4924,7 +4775,7 @@ button {
         .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code-img {
           float: right; }
           .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns .code-img img {
-            height: 34px;
+            height: 30px;
             width: auto; }
         .main-info-wrapper.assignmentpage .rate .rate-square .main-rate .btns input.code {
           width: 30%;
@@ -5049,93 +4900,9 @@ button {
         .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code-img {
           float: right; }
           .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns .code-img img {
-            height: 34px;
+            height: 30px;
             width: auto; }
         .main-info-wrapper.assignmentpage .rate .rate-square #reply .btns input.code {
-          width: 20%;
-          float: right; }
-    .main-info-wrapper.assignmentpage .rate .rate-square .other-reply {
-      padding-top: 2rem;
-      padding-bottom: 1rem;
-      padding: 2rem 1rem 1rem 5rem; }
-      .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .code-wrapper {
-        width: 100%;
-        float: right; }
-      .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btn-wrapper {
-        float: right; }
-      .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea,
-      .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input {
-        width: 100%;
-        font-size: 14px;
-        font-weight: 300;
-        padding: 5px 10px;
-        color: #474747;
-        text-decoration: none;
-        box-decoration: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        border-width: 1px;
-        border-color: #a8a8a8;
-        border-radius: 5px;
-        border-style: solid; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea::-webkit-input-placeholder,
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input::-webkit-input-placeholder {
-          color: lightgray;
-          display: inline-block; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea:-ms-input-placeholder,
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input:-ms-input-placeholder {
-          color: lightgray;
-          display: inline-block; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea::-ms-input-placeholder,
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input::-ms-input-placeholder {
-          color: lightgray;
-          display: inline-block; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply textarea::placeholder,
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply input::placeholder {
-          color: lightgray;
-          display: inline-block; }
-      .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns {
-        width: 100%;
-        margin-top: .7rem; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code {
-          padding: 5px;
-          border-radius: 5px;
-          border: 1px solid #969696; }
-          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code::-webkit-input-placeholder {
-            font-size: 15px;
-            color: lightgray; }
-          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code:-ms-input-placeholder {
-            font-size: 15px;
-            color: lightgray; }
-          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code::-ms-input-placeholder {
-            font-size: 15px;
-            color: lightgray; }
-          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code::placeholder {
-            font-size: 15px;
-            color: lightgray; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns i {
-          cursor: pointer;
-          padding: 8px 5px 0px 5px;
-          margin-right: 10px;
-          float: right; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns button {
-          background: #e4e4e4;
-          border: none;
-          border-radius: 5px;
-          padding: 5px 15px;
-          margin-left: 10px;
-          margin-top: 10px;
-          -webkit-transition: .2s;
-          -o-transition: .2s;
-          transition: .2s; }
-          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns button:hover {
-            background: #969696; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code-img {
-          float: right; }
-          .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns .code-img img {
-            height: 34px;
-            width: auto; }
-        .main-info-wrapper.assignmentpage .rate .rate-square .other-reply .btns input.code {
           width: 20%;
           float: right; }
     .main-info-wrapper.assignmentpage .rate .rate-square .reply-wrapper {
@@ -5195,6 +4962,54 @@ button {
         padding: 0 1rem 0 1rem; }
         .search-box-wrapper .search-result-wrapper.subindex .container .title {
           color: white; }
+          .search-box-wrapper .search-result-wrapper.subindex .container .title.frame {
+            font-size: 0; }
+            .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span {
+              display: inline-block;
+              border: 1px solid white;
+              font-size: 22px;
+              padding: 5px 15px; }
+              .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q {
+                font-size: 20px;
+                border: none;
+                position: relative; }
+                .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q .tri {
+                  position: absolute;
+                  z-index: 0;
+                  top: 25%;
+                  left: 80%;
+                  width: 20px;
+                  height: 20px;
+                  padding: 0;
+                  background: #000;
+                  font-size: 13px;
+                  -webkit-transform: rotate(45deg);
+                  -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
+                  border-radius: 3px;
+                  border: none;
+                  visibility: hidden;
+                  opacity: 0;
+                  -webkit-transition: .3s;
+                  -o-transition: .3s;
+                  transition: .3s; }
+                .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q .frm-ttp {
+                  position: absolute;
+                  z-index: 0;
+                  top: 0;
+                  left: 90%;
+                  width: 500%;
+                  background: #000;
+                  font-size: 13px;
+                  padding: 8px 10px 8px 13px;
+                  visibility: hidden;
+                  opacity: 0;
+                  -webkit-transition: .3s;
+                  -o-transition: .3s;
+                  transition: .3s; }
+                .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q:hover .tri, .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q:hover .frm-ttp {
+                  visibility: visible;
+                  opacity: 1; }
     .search-box-wrapper .search-result-wrapper .container {
       max-width: 1150px;
       width: 100%; }
@@ -5495,6 +5310,8 @@ footer {
       padding: 0 0 0 1rem; }
       .subindex.main-content-section .main-container .right-part .more {
         float: right; }
+      .subindex.main-content-section .main-container .right-part .cata-wrapper {
+        margin-bottom: 2rem; }
   .subindex.main-content-section .info-wrapper {
     position: relative;
     padding: 1em 1.5em;
@@ -5533,6 +5350,10 @@ footer {
       .subindex.main-content-section .info-wrapper.type1:hover:after, .subindex.main-content-section .info-wrapper.type1:hover:before {
         width: 100%;
         height: 100%; }
+    .subindex.main-content-section .info-wrapper.row {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
   .subindex.main-content-section .fb-page {
     padding: 0em 1em; }
   .subindex.main-content-section .conf {
@@ -5544,29 +5365,16 @@ footer {
   .subindex.main-content-section .cata {
     display: inline-block;
     background: #000;
-    height: 28px;
-    width: 52px;
     position: relative;
     margin-right: 8px;
+    padding: 2px 8px;
     border-radius: 3px; }
-    .subindex.main-content-section .cata__ac:before {
-      content: '活動';
-      color: #ff526f;
-      position: absolute;
-      top: 2px;
-      left: 10px; }
-    .subindex.main-content-section .cata__rc:before {
-      content: '徵才';
-      color: #52e5ff;
-      position: absolute;
-      top: 1px;
-      left: 10px; }
-    .subindex.main-content-section .cata__cp:before {
-      content: '優惠';
-      color: #ffcd2b;
-      position: absolute;
-      top: 2px;
-      left: 10px; }
+    .subindex.main-content-section .cata__ac {
+      color: #ff526f; }
+    .subindex.main-content-section .cata__rc {
+      color: #52e5ff; }
+    .subindex.main-content-section .cata__cp {
+      color: #ffcd2b; }
     .subindex.main-content-section .cata-ns {
       display: inline-block;
       background: #000;
@@ -5584,6 +5392,17 @@ footer {
     margin-bottom: .5rem; }
   .subindex.main-content-section .pagination-wrapper {
     margin-top: 1rem; }
+  .subindex.main-content-section .start {
+    position: absolute;
+    right: 1rem;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    background: #474747;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 3px; }
 
 .nspage.subindex.main-content-section {
   position: relative;
@@ -5611,7 +5430,7 @@ footer {
       -ms-flex-align: end;
       align-items: flex-end; }
       .nspage.subindex.main-content-section .main-container .title-wrapper .tag-wrapper {
-        padding: 2rem 0;
+        padding: .5rem 0;
         font-size: 0; }
         .nspage.subindex.main-content-section .main-container .title-wrapper .tag-wrapper .title {
           display: block;
@@ -5651,15 +5470,19 @@ footer {
         -webkit-transition: .3s;
         -o-transition: .3s;
         transition: .3s; }
+        .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a.set {
+          font-size: 0; }
         .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a:hover {
           color: #d69200; }
         .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a span.shr {
+          display: inline-block;
           background: #000;
           color: white;
           padding: 3px 10px;
           border-radius: 3px;
           font-size: 12px;
           margin-right: 10px;
+          margin-top: 10px;
           -webkit-transition: .3s;
           -o-transition: .3s;
           transition: .3s; }
@@ -5678,6 +5501,9 @@ footer {
           .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a span.shr:hover {
             -webkit-filter: brightness(1.2);
             filter: brightness(1.2); }
+          .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a span.shr .num {
+            display: inline-block;
+            font-size: 12px; }
       .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer {
         padding-bottom: 20px; }
         .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer img {
