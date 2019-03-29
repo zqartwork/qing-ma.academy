@@ -6649,6 +6649,11 @@ $link_hover_color: #fff;
 .search-box-wrapper {
     width: 100%;
     padding-top: 7rem; // border: 1px solid red;
+    
+    &.subindex {
+        padding: 5rem 0 1rem 0;
+        background-image: url(../img/banner/002.jpg);
+        background-position-y: center;    }
 
     .search-box-container {
         // border: 1px solid red;
@@ -6696,11 +6701,14 @@ $link_hover_color: #fff;
 
         &.subindex {
             background: none;
-            padding: 0;
             margin: 1rem 0;
 
             .container {
-                padding: 0;
+                padding: 0 1rem 0 1rem;
+
+                .title {
+                    color: white;
+                }
             }
         }
 
@@ -6725,7 +6733,7 @@ $link_hover_color: #fff;
                 margin: 10px 5px 0 5px;
                 border: none;
                 outline: none;
-                border-radius: 5px;
+                border-radius: 3px;
                 cursor: pointer;
             }
         }
@@ -7024,7 +7032,7 @@ footer {
         margin: 1rem auto;
 
         .left-part {
-            padding: 0 1rem 0 0;
+            padding: 0 1rem 0 1rem;
 
             .ns-block {
                 width: 100%;
@@ -7171,6 +7179,9 @@ footer {
 
         .right-part {
             padding: 0 0 0 1rem;
+            .more {
+                float: right;
+            }
         }
     }
 
