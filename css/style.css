@@ -368,15 +368,6 @@ button {
     .inner-section.course-problem .sidebar-box {
       max-height: 200px; }
 
-.tab-pane.active {
-  position: relative;
-  height: 1540px; }
-
-.pane {
-  position: absolute;
-  top: 0;
-  left: 0; }
-
 .other-reply {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -461,12 +452,6 @@ button {
     .other-reply .btns input.code {
       width: 20%;
       float: right; }
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  background: #474747; }
-
-.nav-link {
-  margin: 5px 0; }
 
 .nav-before {
   background-color: #00000067;
@@ -5007,7 +4992,8 @@ button {
                   -webkit-transition: .3s;
                   -o-transition: .3s;
                   transition: .3s; }
-                .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q:hover .tri, .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q:hover .frm-ttp {
+                .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q:hover .tri,
+                .search-box-wrapper .search-result-wrapper.subindex .container .title.frame span.frm-q:hover .frm-ttp {
                   visibility: visible;
                   opacity: 1; }
     .search-box-wrapper .search-result-wrapper .container {
@@ -5312,6 +5298,30 @@ footer {
         float: right; }
       .subindex.main-content-section .main-container .right-part .cata-wrapper {
         margin-bottom: 2rem; }
+      .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap; }
+        .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata .navbar-brand {
+          margin: 0; }
+        .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata .navbar-nav {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          width: 100%; }
+        .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata .nav-link {
+          display: block;
+          width: 100%;
+          margin: 10px 0 0 0;
+          padding: 10px 15px;
+          border-radius: 3px; }
+          .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata .nav-link.active {
+            background: #474747;
+            color: white; }
+        .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata .navbar-toggler {
+          float: right; }
   .subindex.main-content-section .info-wrapper {
     position: relative;
     padding: 1em 1.5em;
@@ -5319,7 +5329,7 @@ footer {
     background-color: #fff;
     cursor: pointer;
     outline: none;
-    margin: 1em 0.8em; }
+    margin: 1em 1em 0 0; }
     .subindex.main-content-section .info-wrapper.type1 {
       color: #474747; }
       .subindex.main-content-section .info-wrapper.type1::after, .subindex.main-content-section .info-wrapper.type1::before {
@@ -5543,12 +5553,21 @@ footer {
           border: 1px solid #969696;
           padding: 5px 15px;
           font-size: 0px;
-          margin: 10px 0; }
+          margin: 10px 0;
+          float: left; }
           .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user .more span {
             font-size: 15px; }
           .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user .more:hover {
             background: #969696;
             color: white; }
+        .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .intro {
+          max-height: 72px;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical; }
     .nspage.subindex.main-content-section .main-container .container {
       margin-top: 4rem; }
       .nspage.subindex.main-content-section .main-container .container.margin-top-0 {
