@@ -6995,6 +6995,31 @@ footer {
             .more {
                 float: right;
             }
+
+            .supplier.row {
+                flex-wrap: wrap;
+                .col-md-4,.col-sm-6 {
+                    padding: 0;
+                }
+                .sup-body {
+                    width: 100%;
+                    padding: .5rem 1rem .5rem 1rem;
+
+                    text-align: center;
+
+                    .title {
+                        font-weight: 600;
+                        font-size: 16px;
+
+                        color: $font-dark;
+                    }
+
+                    .sub-title {
+                        color: $font-gray;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
 
         .right-part {
