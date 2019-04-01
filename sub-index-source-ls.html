@@ -10,7 +10,7 @@
         content="為促進全球華人影視相關科系青年相互交流相互了解，青馬基金會搭建結合影、視、音、藝文創的影視專屬平台。同時也創造更多、更寬、更高的展演舞台與機會，並謀求更加多元多樣的實習與學習、更加具備發展潛能的就業與創業。">
     <meta property="og:image" content="http://www.youthgoldenhorse.taipei/images/big5/newpic/0459_20181004012.png" />
 
-    <title>課程作業：作業標題 [ 待改 ]</title>
+    <title>青馬資訊廣場</title>
     <!-- icons -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -25,15 +25,15 @@
     <link rel="stylesheet" type="text/css" href="plugins/mmenu/jquery.mmenu.all.css">
     <!-- Animate.css v3.5.2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    <!-- cdnjs : use a specific version of Video.js (change the version numbers as necessary) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video-js.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video.min.js"></script>
 
     <!-- core.css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rwd.css">
     <link rel="stylesheet" href="css/animate.css">
     <!-- 20190311-built -->
-    <link rel="stylesheet" href="plugins/plyr/plyr.css">
-    <script src="plugins/plyr/plyr.js"></script>
-
 </head>
 
 <body>
@@ -41,7 +41,7 @@
     <div class="wrapper">
 
         <!-- nav-bar -->
-        <nav class="navbar navbar-expand-lg navbar-light nav-before" id="nav-top">
+        <nav class="navbar navbar-expand-lg navbar-light nav-before subindex" id="nav-top">
             <div class="nav-bar-wrapper">
 
                 <!-- logo__set -->
@@ -60,44 +60,8 @@
                 <!-- dropdown-menu -->
                 <div class="main-menu">
                     <ul id="nav">
-                        <li><a class="cursor-default">關於青馬</a>
-                            <ul class="sub-menu">
-                                <div class="bg-fix">
-                                    <li><a href="http://www.youthgoldenhorse.org/" target="__blank">青馬基金會</a></li>
-                                    <li><a href="http://www.youthgoldenhorse.com/" target="__blank">青馬影展</a></li>
-                                    <li><a href="http://www.youthgoldenhorse.org/base?p=base" target="__blank">創客台北</a>
-                                    </li>
-                                    <li><a href="http://www.youthgoldenhorse.org/youthleague?p=base"
-                                            target="__blank">青馬台瘋館</a></li>
-                                    <li>
-                                        <a href="https://moviecool.asia/" target="__blank"><img
-                                                src="img/supplier/016.png" height="15" width="auto" alt=""
-                                                class="moviecool-mmenu">影史庫</a>
-                                    </li>
-                                </div>
-
-                            </ul>
-                        </li>
-                        <li><a class="cursor-default">探索課程</a>
-                            <ul class="sub-menu">
-                                <div class="bg-fix-sm">
-                                    <li><a href="index-course-ls.html">推薦課程</a></li>
-                                    <li><a href="index-course-ls.html">舞蹈</a></li>
-                                    <li><a href="index-course-ls.html">影片後期</a></li>
-                                    <li><a href="index-course-ls.html">攝影技巧</a></li>
-                                    <li><a href="index-course-ls.html">軟體教學</a></li>
-                                    <li><a href="index-course-ls.html">器材介紹</a></li>
-                                    <li><a href="index-course-ls.html">配音</a></li>
-                                    <li><a href="index-course-ls.html">空拍教學</a></li>
-                                    <li><a href="index-course-ls.html">影片分享</a></li>
-                                    <li><a href="index-course-ls.html">音樂教學</a></li>
-                                    <li><a href="index-course-ls.html">器材教學</a></li>
-                                    <li><a href="index-course-ls.html">妝容教學</a></li>
-                                    <li><a href="index-course-ls.html">其他</a></li>
-                                </div>
-                            </ul>
-                        </li>
-                        <li><a href="sub-index.html">資源廣場</a>
+                        <li><a href="index.html">回到學院</a></li>
+                        <li><a href="sub-index-source-ls.html">資源廣場</a>
                             <ul class="sub-menu">
                                 <div class="bg-fix-sm">
                                     <li><a href="sub-index-source-ls.html">配對人才</a></li>
@@ -110,29 +74,13 @@
                         <li><a href="sub-index.html">資訊廣場</a>
                             <ul class="sub-menu">
                                 <div class="bg-fix-sm">
-                                    <li><a href="/about/history">相關新聞</a></li>
-                                    <li><a href="/about/team">影藝專題</a></li>
-                                    <li><a href="/about/address">學院論壇</a></li>
+                                    <li><a href="sub-index-news-ls.html">青馬新聞</a></li>
+                                    <li><a href="sub-index-project-ls.html">影藝專題</a></li>
+                                    <li><a href="sub-index-forum-ls.html">學院論壇</a></li>
                                 </div>
                             </ul>
                         </li>
 
-                        <!-- search-part -->
-                        <div class="log-search">
-                            <div class="search-box">
-                                <div class="control">
-                                    <div class="btn-material">
-                                    </div>
-                                    <span class="material-icons icon-material-search">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                </div>
-                                <span class="icon-close material-icons"><img src="img/icon/x.svg"></span>
-                                <div class="search-input">
-                                    <input class="input-search" placeholder="請輸入關鍵字" type="text">
-                                </div>
-                            </div>
-                        </div>
                         <!-- 尚未登入狀態 -->
                         <!-- <button id="logIn">LOGIN</button> -->
                         <!-- 登入狀態 -->
@@ -221,9 +169,9 @@
                         </li>
                         <li><a class="cur-arr"><i class="fas fa-scroll"></i> 資訊廣場</a>
                             <ul>
-                                <li><a href="/about/history">相關新聞</a></li>
-                                <li><a href="/about/team">影藝專題</a></li>
-                                <li><a href="/about/address">青馬學院論壇</a></li>
+                                <li><a href="sub-index-news-ls.html">新聞</a></li>
+                                <li><a href="sub-index-project-ls.html">專題</a></li>
+                                <li><a href="sub-index-forum-ls.html">青馬學院論壇</a></li>
                             </ul>
                         </li>
                         <!-- mmenu 尚未登入區塊 -->
@@ -265,204 +213,184 @@
 
         </nav>
 
-        <!-- 講師資訊主體 -->
-        <div class="main-info-wrapper assignmentpage">
+        <!-- 搜尋BAR位置 -->
+        <div class="search-box-wrapper subindex">
+            <div class="search-box-container subindex">
 
-
-            <div class="left-part">
-                <div class="info-wrapper-left fadeInLeft wow">
-                    <div class="container">
-                        <div class="photo-wrapper">
-                            <a href="infopage.html">
-                                <div class="user__photo user__photo-150"
-                                    style="background-image: url(img/profile/portrait-005.jpg)"></div>
-                            </a>
-                        </div>
-                        <div class="name">Ada Lin</div>
-                        <div class="note">
-                            <div>其他作業成品</div>
-                            <div><i class="fas fa-sort-down"></i></div>
-                        </div>
-                        <div class="other row">
-                            <a href="assignment.html" class="col-6">
-                                <div class="assign" style="background-image: url(img/lecture/lec-img-014.jpg)"></div>
-                            </a>
-                            <a href="assignment.html" class="col-6">
-                                <div class="assign" style="background-image: url(img/lecture/lec-img-013.jpg)"></div>
-                            </a>
-                            <a href="assignment.html" class="col-6">
-                                <div class="assign" style="background-image: url(img/lecture/lec-img-012.jpg)"></div>
-                            </a>
-                            <a href="assignment.html" class="col-6">
-                                <div class="assign" style="background-image: url(img/lecture/lec-img-011.jpg)"></div>
-                            </a>
-                        </div>
-                        <a href="infopage.html" class="">
-                            <div class="more">更多作品</div>
-                        </a>
+            </div>
+            <div class="search-result-wrapper subindex">
+                <div class="container">
+                    <div class="title frame"> <span>資源廣場</span>
+                        <span class="frm-q"><i class="fas fa-question-circle"></i>
+                            <span class="tri"></span>
+                            <div class="frm-ttp">資源廣場匯集所有青馬合作廠商優惠、各界徵才消息、限時影藝活動，歡迎大家踴躍運用！</div>
+                        </span>
 
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="right-part">
-                <div class="info-wrapper-right fadeInRight wow">
-                    <div class="info-container">
-                        <div class="intro-banner" style="background-image: url(img/lecture/lec-img-015.jpg)">
-                            <div class="title-wrapper">
-                                <h6>美食攝影師：配色、擺盤、光影的視覺饗宴 <i class="fas fa-angle-right"></i> 第一章節：攝影的技巧 <i
-                                        class="fas fa-angle-right"></i> 作業一</h6>
-                                <h3 class="title">作業標題 - 第一份作業：我的自傳</h3>
-                                <h6> 發表日期：2019-03-25 </h6>
-                                <a href="#" class="like">
-                                    <i class="far fa-heart"></i> <span class="num">10</span>
-                                </a>
-                                <!-- 喜歡此作品後的樣式 class加上active-->
-                                <!-- <a href="#" class="like active">
-                                        <i class="far fa-heart"></i> 喜歡此作品
-                                    </a> -->
-                            </div>
-                        </div>
-                        <div class="inner-section inner-section__doc">
-                            <blockquote>為什麼你一定要學會手機攝影？</blockquote>
-                            <h1>這裡是H1的樣子</h1>
-                            <h2>這裡是H2的樣子</h2>
-                            <h3>這裡是H3的樣子</h3>
-                            <h4>這裡是H4的樣子</h4>
-                            <h5>這裡是H5的樣子</h5>
-                            <h6>這裡是H6的樣子</h6>
-                            <img src="img/lecture/lec-img-011.jpg" alt="">
-                            <p>
-                                在智慧型手機人手一機的時代，隨著手機的軟硬體規格越來越進步，手機已成為最常被使用的拍攝工具，尤其近幾年來雙鏡頭也開始成為高階手機的標準配備，因此手機攝影已逐漸能夠應用在各種拍攝場景：無論是日常生活之間的記錄，或者是旅遊的風景攝影，甚至是想要進行創作或者商業拍攝，只要掌握幾個簡單的構圖技巧以及拍攝心法，便能夠拍攝出色的作品；尤其目前對應手機攝影的外接配件也逐漸齊備，相較於數位相機動輒上萬的配件來說，手機攝影也無非是個適合攝影入門的開端。
 
-                                因此，就讓我們一起揮別笨重的數位相機，開始試著用手機來捕捉美好的畫面吧！
-                            </p>
-                            <ul>
-                                <li>這裡是列表的樣子</li>
-                                <li>這裡是列表的樣子</li>
-                                <li>這裡是列表的樣子</li>
-                                <li>這裡是列表的樣子</li>
-                                <li>這裡是列表的樣子</li>
-                                <li>這裡是列表的樣子</li>
+        <div class="main-content-section subindex">
+            <div class="main-container row">
+                <div class="col-lg-4 col-xs-12 right-part">
+                    <nav class=" navbar-expand-lg navbar-light info-wrapper frmcata">
+
+                        <blockquote class="navbar-brand" href="#">資源類別</blockquote>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#frmToggleData"
+                            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="frmToggleData">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link active">
+
+                                        <i class="fas fa-globe-asia"></i> &nbsp; 全部
+
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">
+
+                                        <i class="fas fa-users"></i> &nbsp; 徵才消息
+
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">
+
+                                        <i class="far fa-calendar-check"></i> &nbsp; 活動公告
+
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">
+
+                                        <i class="fas fa-coins"></i> &nbsp; 廠商優惠
+
+                                    </a>
+                                </li>
                             </ul>
-                            <pre>
-備註 1: 這部分是很特別的備註區域
-備註 2: 這部分是很特別的備註區域
-備註 3: 這部分是很特別的備註區域
-</pre>
-                            <a href="index.html">這裡是文章中超連結顯示的顏色
-                                http://cookie.qing-maawards.com/academy</a>
                         </div>
-                    </div>
+                    </nav>
                 </div>
-            </div>
+                <div class="col-lg-8 col-xs-12 left-part">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-all" role="tabpanel"
+                            aria-labelledby="v-pills-all-tab">
+                            <blockquote>資源廣場 <i class="fas fa-angle-right"></i> &nbsp; 全部</blockquote>
 
-            <div class="rate wow fadeInUp">
-
-                <h3 class="title"> <span> 留言區 </span> </h3>
-
-                <!-- 會員主要評價區塊 - 未登入 -->
-                <div class=" rate-square margin-bottom-10 inner-section ">
-                    <div class="main-rate signin">
-                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                            style="background-image: url(img/profile/nobody.png)">
-                        </div>
-                        <div class="inner-wrapper signin">
-                            <div class="top-text">
-                                <button type="submit" class="signin-btn"> 請先登入會員 </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 尚未有評價 -->
-                <div class=" rate-square margin-bottom-10 inner-section ">
-                    <div class="main-rate signin">
-                        <div class="inner-wrapper signin">
-                            <div class="text-center">
-                                <span> 尚未有作業評價，提供一些對這項作業作品的想法吧！ </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 會員主要評價區塊 - 已登入 -->
-                <div class=" rate-square margin-bottom-10 inner-section user">
-                    <div class="main-rate">
-                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                            style="background-image: url(img/profile/portrait-005.jpg)">
-                        </div>
-                        <div class="inner-wrapper">
-                            <div class="top-text">
-                                <span class="name">我是會員名稱</span>
-                            </div>
-                            <div class="bot-text">
-                                <textarea name="" id="" cols="50" rows="2" placeholder="請在這裡輸入您對此作業作品的看法"></textarea>
-                            </div>
-                            <div class="btns">
-                                <div class="code-wrapper">
-                                    <span class="code-img"><img src="img/icon/001.jpg" alt=""></span>
-                                    <span class="refresh"><i class="fas fa-sync-alt"></i></span>
-                                    <input type="text" placeholder="請輸入驗證碼" class="code">
+                            <div class="ns-block forum">
+                                <div class="ns-body forum">
+                                    <div class="user-wrapper row">
+                                        <span class="cata cata__ac">活動</span>
+                                        <a href="infopage.html" class="row">
+                                            <span class="user__name">嗨嗨我是餅乾</span>
+                                        </a>
+                                        <span class="date">2018-11-21~12-06</span>
+                                        <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
+                                        </span>
+                                    </div>
+                                    <a href="sub-index-forum.html">
+                                        <div class="ns-title">
+                                            唐墨慶典-茄萣好時刻攝影比賽
+                                        </div>
+                                        <div class="ns-cont forum">
+                                            作品使用手機拍攝，像素值需達800萬以上之原始拍攝尺寸，彩色、黑白照片不限定，照片拍攝時間需
+                                            介於107年1月1日至12月3日之間，混合評審，每人參賽作品以5張相片為限。寬景、連作拒收，交件
+                                            格式為JPEG檔案，檔案名稱請改為姓名、連絡電話、作品名稱、拍攝地點、拍攝時間，電郵至youledaservice@gmail.com信箱。
+                                        </div>
+                                    </a>
                                 </div>
-                                <button type="submit"> 送出 </button>
+                                <a href="sub-index-forum.html">
+                                    <div class="ns-header forum">
+                                        <div class="user__photo forum" style="background-image: url()"></div>
+                                    </div>
+                                </a>
                             </div>
+                            <div class="ns-block forum">
+                                <div class="ns-body forum">
+                                    <div class="user-wrapper row">
+                                        <span class="cata cata__rc">徵才</span>
+                                        <a href="infopage.html" class="row">
+                                            <span class="user__name">嗨嗨我是餅乾</span>
+                                        </a>
+                                        <span class="date">2018-11-21~12-06</span>
+                                        <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
+                                        </span>
+                                    </div>
+                                    <a href="sub-index-forum.html">
+                                        <div class="ns-title">
+                                            世新學生製片 劇情短片《守夜》
+                                        </div>
+                                        <div class="ns-cont forum">
+                                            林信哲有位昏迷的妻子周雅慧，平常工作忙碌的他沒有閒暇時間親自照顧周雅慧，
+                                            因此他請了二十四小時的居家看護來幫他照顧。一天照顧周雅慧的婆婆因病而不能繼續工作，
+                                            林信哲於是找了一位新看護——蔡佳恩來接手。蔡佳恩年輕又充滿活力，在工作服務時總是充滿熱情，
+                                            這為內心乾涸已久的林信哲注入了新的活水。一開始林信哲壓抑住自己的內心波動。
+                                            但經過跟蔡佳恩的相處後，漸漸的，林信哲外表不像過去邋遢，工作開始有起色，
+                                            自己的內心心態也逐漸好轉，然而相處時間一長，林信哲開始動搖，
+                                            開始懷疑自己是否對蔡佳恩有其他想法，開始懷疑自己有沒有資格再去談一場戀愛。
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="sub-index-forum.html">
+                                    <div class="ns-header forum">
+                                        <div class="user__photo forum" style="background-image: url()"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="ns-block forum">
+                                <div class="ns-body forum">
+                                    <div class="user-wrapper row">
+                                        <span class="cata cata__cp">優惠</span>
+                                        <a href="infopage.html" class="row">
+                                            <span class="user__name">嗨嗨我是餅乾</span>
+                                        </a>
+                                        <span class="date">2018-11-21</span>
+                                        <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
+                                        </span>
+                                    </div>
+                                    <a href="sub-index-forum.html">
+                                        <div class="ns-title">
+                                            大三元攝影器材出租優惠
+                                        </div>
+                                        <div class="ns-cont forum">
+                                            加入青馬系列網站會員，即可獲得租借器材優惠 9 折！
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="sub-index-forum.html">
+                                    <div class="ns-header forum">
+                                        <div class="user__photo forum"
+                                            style="background-image: url(https://lh3.googleusercontent.com/HBPWRTjpzzjIUBSmrcdCVFhOx0cLekEY0PGhTCcZ9FHi3cVv0WersHuf9tdbRFkUSXmyujDzGQ=w1080-h608-p-no-v0)">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 頁碼置底 -->
+                            <div class="pagination-wrapper">
+                                <div aria-label="..." class="container">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" tabindex="-1">上一頁</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <!-- 目前所在的頁數會有 active -->
+                                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">下一頁</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-
-                <!-- 別人評價區塊 -->
-                <div class=" rate-square margin-bottom-10 inner-section">
-                    <div>
-                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                            style="background-image: url(img/profile/portrait-003.jpg)">
-                        </div>
-                        <div class="inner-wrapper">
-                            <div class="top-text">
-                                <span class="name">這裡是我的會員名稱</span>
-                                <span class="time">2019-03-20</span>
-                            </div>
-                            <div class="bot-text">
-                                <p>這項作業讓我看到了不一樣的見解，超級有幫助的！</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 別人評價區塊 -->
-                <div class=" rate-square margin-bottom-10 inner-section">
-                    <div>
-                        <div src="" alt="" class="user__photo user__photo-60 qa-pic"
-                            style="background-image: url(img/profile/portrait-003.jpg)">
-                        </div>
-                        <div class="inner-wrapper">
-                            <div class="top-text">
-                                <span class="name_teacher">這裡是老師名稱</span>
-                                <span class="time">2019-03-20</span>
-                            </div>
-                            <div class="bot-text">
-                                <p>很高興能夠在這堂課看到這樣完成度的作品，表現得非常好！</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- 頁碼置底 -->
-            <div class="pagination-wrapper">
-                <div aria-label="..." class="container">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" tabindex="-1">上一頁</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <!-- 目前所在的頁數會有 active -->
-                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">下一頁</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -584,6 +512,9 @@
                 placement: 'top'
             });
         </script>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2"></script>
 </body>
 
 </html>

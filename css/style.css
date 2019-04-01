@@ -5232,13 +5232,14 @@ footer {
           width: 50%;
           height: 100%;
           max-height: 100%;
+          vertical-align: top;
           overflow: hidden;
           cursor: default;
           padding: 1rem 1rem; }
           .subindex.main-content-section .main-container .left-part .ns-block .ns-body.forum {
             width: 83%; }
             .subindex.main-content-section .main-container .left-part .ns-block .ns-body.forum .user-wrapper {
-              margin-bottom: 10px;
+              margin-bottom: 0px;
               font-size: 0; }
               .subindex.main-content-section .main-container .left-part .ns-block .ns-body.forum .user-wrapper span {
                 margin-right: 10px;

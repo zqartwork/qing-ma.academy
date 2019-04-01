@@ -6903,6 +6903,7 @@ footer {
                     width: 50%;
                     height: 100%;
                     max-height: 100%;
+                    vertical-align: top;
 
                     overflow: hidden;
                     cursor: default;
@@ -6912,7 +6913,7 @@ footer {
                         width: 83%;
 
                         .user-wrapper {
-                            margin-bottom: 10px;
+                            margin-bottom: 0px;
                             font-size: 0;
 
                             span {
