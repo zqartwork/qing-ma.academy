@@ -4987,6 +4987,7 @@ button {
                   background: #000;
                   font-size: 13px;
                   padding: 8px 10px 8px 13px;
+                  border-radius: 3px;
                   visibility: hidden;
                   opacity: 0;
                   -webkit-transition: .3s;
