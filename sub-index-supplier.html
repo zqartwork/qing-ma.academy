@@ -10,7 +10,7 @@
         content="為促進全球華人影視相關科系青年相互交流相互了解，青馬基金會搭建結合影、視、音、藝文創的影視專屬平台。同時也創造更多、更寬、更高的展演舞台與機會，並謀求更加多元多樣的實習與學習、更加具備發展潛能的就業與創業。">
     <meta property="og:image" content="http://www.youthgoldenhorse.taipei/images/big5/newpic/0459_20181004012.png" />
 
-    <title>青馬資訊廣場</title>
+    <title>個人資訊頁面</title>
     <!-- icons -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -25,15 +25,15 @@
     <link rel="stylesheet" type="text/css" href="plugins/mmenu/jquery.mmenu.all.css">
     <!-- Animate.css v3.5.2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
-    <!-- cdnjs : use a specific version of Video.js (change the version numbers as necessary) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video-js.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video.min.js"></script>
 
     <!-- core.css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/rwd.css">
     <link rel="stylesheet" href="css/animate.css">
     <!-- 20190311-built -->
+    <link rel="stylesheet" href="plugins/plyr/plyr.css">
+    <script src="plugins/plyr/plyr.js"></script>
+
 </head>
 
 <body>
@@ -176,8 +176,8 @@
                         </li>
                         <!-- mmenu 尚未登入區塊 -->
                         <!-- <li>
-                                <a href="/" class="login__btn"><i class="fas fa-sign-out-alt"></i>登入</a>
-                            </li> -->
+                                    <a href="/" class="login__btn"><i class="fas fa-sign-out-alt"></i>登入</a>
+                                </li> -->
 
                         <!-- mmenu 已登入區塊 -->
                         <div class="user__option-modal">
@@ -213,90 +213,94 @@
 
         </nav>
 
-        <!-- 搜尋BAR位置 -->
-        <div class="search-box-wrapper subindex">
-            <div class="search-box-container subindex">
 
-            </div>
-            <div class="search-result-wrapper subindex">
-                <div class="container">
-                    <div class="title frame"> <span>資源廣場</span>
-                        <span class="frm-q"><i class="fas fa-question-circle"></i>
-                            <span class="tri"></span>
-                            <div class="frm-ttp">資源廣場匯集所有青馬合作廠商優惠、各界人才配對、限時影藝活動，歡迎大家踴躍運用！</div>
-                        </span>
+        <!-- 講師資訊主體 -->
+        <div class="main-info-wrapper">
 
-                    </div>
-                    <select name="filter" id="filter" style="float: right;">
-                        <option value="none">排序選擇</option>
-                        <option value="new">最新</option>
-                        <option value="most">最熱門</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+            <div class="supplier-header-section header-section"
+                style="background-image: url(https://cms.qn.img-space.com/product/158/767/ceguFrIb2dcNc.jpg)"></div>
 
-
-        <div class="main-content-section subindex">
-            <div class="main-container row">
-                <div class="col-lg-4 col-xs-12 right-part">
-                    <nav class=" navbar-expand-lg navbar-light info-wrapper frmcata">
-
-                        <blockquote class="navbar-brand" href="#">資源類別</blockquote>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#frmToggleData"
-                            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="frmToggleData">
-                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                                <li class="nav-item active">
-                                    <a class="nav-link active">
-
-                                        <i class="fas fa-globe-asia"></i> &nbsp; 全部
-
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">
-
-                                        <i class="fas fa-users"></i> &nbsp; 配對人才
-
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">
-
-                                        <i class="far fa-calendar-check"></i> &nbsp; 活動公告
-
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">
-
-                                        <i class="fas fa-coins"></i> &nbsp; 廠商優惠
-
-                                    </a>
-                                </li>
-                            </ul>
+            <div class="left-part">
+                <div class="info-wrapper-left fadeInLeft wow">
+                    <div class="container inner-section">
+                        <div class="photo-wrapper">
+                            <div class="user__photo user__photo-150 supplier"
+                                style="background-image: url(img/supplier/infopage/001.jpg)"></div>
                         </div>
-                    </nav>
-                </div>
-                <div class="col-lg-8 col-xs-12 left-part">
-                    <blockquote>資源廣場 <i class="fas fa-angle-right"></i> &nbsp; 全部</blockquote>
+                        <div class="name">大三元攝影器材出租店</div>
 
-                    <div class="ns-block forum">
-                        <div class="ns-body forum">
-                            <div class="user-wrapper row">
-                                <span class="cata cata__ac">活動</span>
-                                <a href="infopage.html" class="row">
-                                    <span class="user__name">嗨嗨我是餅乾</span>
-                                </a>
-                                <span class="date">2018-11-21~12-06</span>
-                                <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
-                                </span>
+                        <div class="btns">
+                            <a href="#">
+                                <div class="fb"></div>
+                            </a>
+                            <a href="mailto:threeredlens@gmail.com">
+                                <div class="mail"></div>
+                            </a>
+                        </div>
+
+                        <div class="sub-title">
+                            <blockquote>相關服務</blockquote>
+                            CANON & NIKON機身 | 鏡頭 | 閃光燈 | 穩定器 | 麥克風 | 滑軌 | 滑軌 | 持續燈<br>
+                            Wi-Ho!出國上網分享器<br>
+                            RIMOWA行李箱 租賃<br>
+                            大三元客製化影業服務<br>
+                            大三元精緻茶飲系列
+                        </div>
+                    </div>
+                </div>
+                <div class="left-part source">
+                    <a href="sub-index-source.html">
+                        <div class="ns-block forum info-wrapper type1">
+                            <div class="ns-body forum">
+                                <div class="user-wrapper row">
+                                    <span class="cata cata__ac">活動</span>
+                                    <span class="user__name">大三元攝影器材</span>
+                                    <span class="date">2018-11-21~12-06</span>
+                                    <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
+                                    </span>
+                                </div>
+                                <div class="ns-title">
+                                    唐墨慶典-茄萣好時刻攝影比賽
+                                </div>
+                                <!-- <div class="ns-cont forum">
+                                    作品使用手機拍攝，像素值需達800萬以上之原始拍攝尺寸，彩色、黑白照片不限定，照片拍攝時間需
+                                    介於107年1月1日至12月3日之間，混合評審，每人參賽作品以5張相片為限。寬景、連作拒收，交件
+                                    格式為JPEG檔案，檔案名稱請改為姓名、連絡電話、作品名稱、拍攝地點、拍攝時間，電郵至youledaservice@gmail.com信箱。
+                                </div> -->
                             </div>
-                            <a href="sub-index-source.html">
+                        </div>
+                    </a>
+                    <a href="sub-index-source.html">
+                        <div class="ns-block forum info-wrapper type1">
+                            <div class="ns-body forum">
+                                <div class="user-wrapper row">
+                                    <span class="cata cata__ac">活動</span>
+                                    <span class="user__name">大三元攝影器材</span>
+                                    <span class="date">2018-11-21~12-06</span>
+                                    <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
+                                    </span>
+                                </div>
+                                <div class="ns-title">
+                                    唐墨慶典-茄萣好時刻攝影比賽
+                                </div>
+                                <!-- <div class="ns-cont forum">
+                                        作品使用手機拍攝，像素值需達800萬以上之原始拍攝尺寸，彩色、黑白照片不限定，照片拍攝時間需
+                                        介於107年1月1日至12月3日之間，混合評審，每人參賽作品以5張相片為限。寬景、連作拒收，交件
+                                        格式為JPEG檔案，檔案名稱請改為姓名、連絡電話、作品名稱、拍攝地點、拍攝時間，電郵至youledaservice@gmail.com信箱。
+                                    </div> -->
+                            </div>
+                        </div>
+                    </a>
+                    <a href="sub-index-source.html">
+                        <div class="ns-block forum info-wrapper type1">
+                            <div class="ns-body forum">
+                                <div class="user-wrapper row">
+                                    <span class="cata cata__ac">活動</span>
+                                    <span class="user__name">大三元攝影器材</span>
+                                    <span class="date">2018-11-21~12-06</span>
+                                    <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
+                                    </span>
+                                </div>
                                 <div class="ns-title">
                                     唐墨慶典-茄萣好時刻攝影比賽
                                 </div>
@@ -305,56 +309,30 @@
                                             介於107年1月1日至12月3日之間，混合評審，每人參賽作品以5張相片為限。寬景、連作拒收，交件
                                             格式為JPEG檔案，檔案名稱請改為姓名、連絡電話、作品名稱、拍攝地點、拍攝時間，電郵至youledaservice@gmail.com信箱。
                                         </div> -->
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ns-block forum">
-                        <div class="ns-body forum">
-                            <div class="user-wrapper row">
-                                <span class="cata cata__rc">徵才</span>
-                                <a href="infopage.html" class="row">
-                                    <span class="user__name">嗨嗨我是餅乾</span>
-                                </a>
-                                <span class="date">2018-11-21~12-06</span>
-                                <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
-                                </span>
                             </div>
-                            <a href="sub-index-source.html">
+                        </div>
+                    </a>
+                    <a href="sub-index-source.html">
+                        <div class="ns-block forum info-wrapper type1">
+                            <div class="ns-body forum">
+                                <div class="user-wrapper row">
+                                    <span class="cata cata__ac">活動</span>
+                                    <span class="user__name">大三元攝影器材</span>
+                                    <span class="date">2018-11-21~12-06</span>
+                                    <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
+                                    </span>
+                                </div>
                                 <div class="ns-title">
-                                    世新學生製片 劇情短片《守夜》
+                                    唐墨慶典-茄萣好時刻攝影比賽
                                 </div>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="ns-block forum">
-                        <div class="ns-body forum">
-                            <div class="user-wrapper row">
-                                <span class="cata cata__cp">優惠</span>
-                                <a href="infopage.html" class="row">
-                                    <span class="user__name">嗨嗨我是餅乾</span>
-                                </a>
-                                <span class="date">2018-11-21</span>
-                                <span class="like"> <i class="far fa-heart"></i> <span class="num">0</span>
-                                </span>
+                                <!-- <div class="ns-cont forum">
+                                                作品使用手機拍攝，像素值需達800萬以上之原始拍攝尺寸，彩色、黑白照片不限定，照片拍攝時間需
+                                                介於107年1月1日至12月3日之間，混合評審，每人參賽作品以5張相片為限。寬景、連作拒收，交件
+                                                格式為JPEG檔案，檔案名稱請改為姓名、連絡電話、作品名稱、拍攝地點、拍攝時間，電郵至youledaservice@gmail.com信箱。
+                                            </div> -->
                             </div>
-                            <a href="sub-index-source.html">
-                                <div class="ns-title">
-                                    大三元攝影器材出租優惠
-                                </div>
-                                <div class="ns-cont forum">
-                                    加入青馬系列網站會員，即可獲得租借器材優惠 9 折！
-                                </div>
-                            </a>
                         </div>
-                        <a href="sub-index-source.html">
-                            <div class="ns-header forum">
-                                <div class="user__photo forum"
-                                    style="background-image: url(https://lh3.googleusercontent.com/HBPWRTjpzzjIUBSmrcdCVFhOx0cLekEY0PGhTCcZ9FHi3cVv0WersHuf9tdbRFkUSXmyujDzGQ=w1080-h608-p-no-v0)">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    </a>
                     <!-- 頁碼置底 -->
                     <div class="pagination-wrapper">
                         <div aria-label="..." class="container">
@@ -375,8 +353,85 @@
 
                 </div>
             </div>
+            <div class="right-part">
+                <div class="info-wrapper-right fadeInRight wow margin-bottom-50">
+                    <div class="info-container">
+                        <div class="inner-section" id="userartical">
+                            <div class="title-wrapper">
+                                <h4 class="title">企業介紹</h3>
+                            </div>
+                            <div class="content-wrapper">
+                                <p>大三元 影業 / 租賃 有限公司<br>
+                                    秉持著「優質器材、親切服務、安心交易」的服務原則<br>
+                                    提供客戶便利的攝錄影器材 / 出國WiFi分享器租賃平台</p>
+                            </div>
+                            <div class="title-wrapper">
+                                <h4 class="title">起源</h3>
+                            </div>
+                            <div class="content-wrapper">
+                                <blockquote>「大三元攝影器材出租店」起源於老闆就學時期因喜愛登山，為記錄走過的足跡，進而對攝影結下不解之緣。</blockquote>
+                                <p>出社會後歷經職場磨練，決定於2010年創業成立大三元攝影攝影器材出租，<br>
+                                    創業初期因無足夠資金，以巷弄內自家客廳充當租賃場所，<br>
+                                    因老闆阿男熱情並親切的服務，與客戶建立良好的互動，<br>
+                                    並以客為尊的服務態度，經客人口耳相傳&轉介紹，<br>
+                                    辛苦打底３年後建立穩定客源，於2013年轉為實體店面服務大眾，<br>
+                                    因應客戶多元市場需求，同年與日本特樂通股份有限公司合作出國上網Wi-Fi分享器租賃事業，<br>
+                                    成為貴公司台灣唯一代理店，並同年增加行李箱界的LV品牌「RIMOWA」行李箱租賃服務，<br>
+                                    2017年底更獨步全台供應 ili翻譯機 / Travis翻譯機...等多款翻譯機租賃服務，<br>
+                                    一步一腳印，逐步達成一條龍式的全方位服務。</p>
+                            </div>
+                            <div class="title-wrapper">
+                                <h4 class="title">目標</h3>
+                            </div>
+                            <div class="content-wrapper">
+                                <blockquote>更親民！更多實作！</blockquote>
+                                <p>
+                                    2018年10月08日，
+                                    我們締造了大三元本年度第一場的體驗實做研習講座，
+                                    這一直是大三元的目標與方向，往後我們還會秉持這份熱誠，
+                                    走入更多場校園演講，一步一步走下去!
+                                </p>
+                                <img src="http://www.youthgoldenhorse.com/UserFiles/images/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-12%20%E4%B8%8B%E5%8D%882_17_45.png"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
+        <!-- 金流 -->
+        <!-- Modal -->
+        <div class="purchasePop modal fade" id="purchasePop" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title" id="">您選購的課程資訊如下</div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="course-name">如何捕捉美好景物 - 認識攝影的技巧</div>
+                        <div class="name">講師 ADLINIE METHOD - <span class="time">課程時間: 7.5 hr</span>
+                        </div>
+                        <div class="price"><span>NT$</span> <span class="num">3,200</span> </div>
+
+                        <div class="note">請選擇付款方式：</div>
+                        <select name="pay-way" id="payWay">
+                            <option value="transfer">ATM 匯款</option>
+                            <option value="credit">信用卡</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary confirm">送出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <div class="footer-wrapper row">
@@ -494,9 +549,6 @@
                 placement: 'top'
             });
         </script>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2"></script>
 </body>
 
 </html>
