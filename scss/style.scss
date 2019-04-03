@@ -545,6 +545,7 @@ button {
         margin-right: 4px;
 
         &.detail-num {
+            font-size: 0;
             span {
                 font-size: 16px;
                 margin-left: 5px;
@@ -1194,7 +1195,7 @@ button {
 
         .btn-material {
             position: absolute;
-            top: -1.5rem;
+            top: -3rem;
             width: 38px;
             height: 38px;
             border-radius: 100%;
@@ -1209,7 +1210,7 @@ button {
             position: absolute;
             color: #fff;
             transition: opacity 0.3s ease-in-out;
-            top: -1.5rem;
+            top: -3rem;
             left: 10px;
             line-height: 40px;
             font-size: 16px;
@@ -1390,11 +1391,12 @@ button {
 
     .icon-close {
         opacity: 1;
-        transform: rotate(-90deg);
     }
 
     .search-box {
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 5rem;
 
         .control {
             cursor: default;
@@ -1415,19 +1417,14 @@ button {
 
         .icon-close {
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
             margin-top: 4px;
 
             img {
                 position: absolute;
-                right: -1rem;
-                top: -1rem;
-                height: 1.5rem;
+                right: 0rem;
+                top: 1rem;
+                height: 2.5rem;
                 width: auto;
-            }
-
-            &:hover {
-                transform: rotate(0);
             }
         }
     }
@@ -1437,8 +1434,8 @@ button {
 
 .search-input {
     position: absolute;
-    top: -1.5rem;
-    right: -22rem;
+    top: 1rem;
+    right: 0rem;
     margin: auto;
     pointer-events: none;
     opacity: 0;
