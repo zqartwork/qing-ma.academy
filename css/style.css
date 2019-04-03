@@ -63,6 +63,9 @@ blockquote {
 button {
   outline: none !important; }
 
+.bold {
+  font-weight: 600; }
+
 .cursor-default {
   cursor: default; }
 
@@ -201,21 +204,22 @@ button {
       cursor: default;
       padding: 1rem 1rem; }
       .left-part.source .ns-block .ns-body.forum {
-        width: 83%; }
+        width: 100%; }
         .left-part.source .ns-block .ns-body.forum .user-wrapper {
           margin-bottom: 0px;
           font-size: 0; }
           .left-part.source .ns-block .ns-body.forum .user-wrapper span {
             margin-right: 10px;
-            font-size: 16px; }
+            font-size: 15px; }
           .left-part.source .ns-block .ns-body.forum .user-wrapper .like {
             color: #eb3654;
             cursor: pointer; }
       .left-part.source .ns-block .ns-body .ns-title {
-        font-size: 18px;
+        font-size: 16px;
         max-height: 66px;
         overflow: hidden;
-        color: #474747; }
+        color: #474747;
+        font-weight: 600; }
       .left-part.source .ns-block .ns-body .tag {
         margin: 5px 0;
         font-size: 0;
@@ -803,45 +807,6 @@ button {
       color: #000;
       border-color: #b39368; }
 
-.log-search {
-  display: inline-block; }
-  .log-search .control {
-    position: relative;
-    cursor: pointer;
-    -webkit-transition-duration: .3s;
-    -o-transition-duration: .3s;
-    transition-duration: .3s;
-    left: 0;
-    top: 0; }
-    .log-search .control .btn-material {
-      position: absolute;
-      top: -3rem;
-      width: 38px;
-      height: 38px;
-      border-radius: 100%;
-      background: rgba(0, 0, 0, 0.432);
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      outline: 0;
-      -webkit-transform-origin: 50%;
-      -ms-transform-origin: 50%;
-      transform-origin: 50%;
-      -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-      -o-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-      transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-    .log-search .control .icon-material-search {
-      position: absolute;
-      color: #fff;
-      -webkit-transition: opacity 0.3s ease-in-out;
-      -o-transition: opacity 0.3s ease-in-out;
-      transition: opacity 0.3s ease-in-out;
-      top: -3rem;
-      left: 10px;
-      line-height: 40px;
-      font-size: 16px; }
-    .log-search .control.left-shift-5rem {
-      right: 13rem; }
-
 #logOut {
   font-family: "Noto Sans TC";
   float: right;
@@ -1050,6 +1015,40 @@ button {
     opacity: 1; }
   .search-input :-ms-input-placeholder {
     color: #eee; }
+
+.log-search {
+  display: inline-block; }
+  .log-search .control {
+    position: absolute;
+    bottom: .5rem; }
+    .log-search .control .btn-material {
+      position: absolute;
+      top: -3rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 100%;
+      background: rgba(0, 0, 0, 0.432);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: 0;
+      -webkit-transform-origin: 50%;
+      -ms-transform-origin: 50%;
+      transform-origin: 50%;
+      -webkit-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      -o-transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+    .log-search .control .icon-material-search {
+      position: absolute;
+      color: #fff;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+      top: -3rem;
+      left: 10px;
+      line-height: 40px;
+      font-size: 16px; }
+    .log-search .control.left-shift-5rem {
+      right: 13rem; }
 
 .mmenu-place .signout {
   display: inline-block;
@@ -3421,7 +3420,10 @@ button {
             width: 100%;
             float: right; }
           .course-content-section .course-content-wrapper .main-container .qanda .qanda-square #reply .btn-wrapper {
-            float: right; }
+            float: right;
+            font-size: 0; }
+            .course-content-section .course-content-wrapper .main-container .qanda .qanda-square #reply .btn-wrapper button {
+              font-size: 15px; }
           .course-content-section .course-content-wrapper .main-container .qanda .qanda-square #reply textarea,
           .course-content-section .course-content-wrapper .main-container .qanda .qanda-square #reply input {
             width: 100%;
@@ -4451,7 +4453,8 @@ button {
         text-align: center; }
         .main-info-wrapper .left-part .info-wrapper-left .container .name {
           font-size: 25px;
-          font-weight: 600; }
+          font-weight: 600;
+          padding: 0 1rem; }
         .main-info-wrapper .left-part .info-wrapper-left .container .sub-title {
           color: #969696;
           padding: 1rem 2rem;
@@ -5454,14 +5457,19 @@ footer {
               font-size: 0; }
               .subindex.main-content-section .main-container .left-part .ns-block .ns-body.forum .user-wrapper span {
                 margin-right: 10px;
-                font-size: 16px; }
+                font-size: 15px; }
               .subindex.main-content-section .main-container .left-part .ns-block .ns-body.forum .user-wrapper .like {
                 color: #eb3654;
-                cursor: pointer; }
+                cursor: pointer;
+                font-size: 0; }
+                .subindex.main-content-section .main-container .left-part .ns-block .ns-body.forum .user-wrapper .like i, .subindex.main-content-section .main-container .left-part .ns-block .ns-body.forum .user-wrapper .like span {
+                  font-size: 15px;
+                  margin-right: 5px; }
           .subindex.main-content-section .main-container .left-part .ns-block .ns-body .ns-title {
-            font-size: 22px;
+            font-size: 18px;
             max-height: 66px;
-            overflow: hidden; }
+            overflow: hidden;
+            margin-top: 5px; }
           .subindex.main-content-section .main-container .left-part .ns-block .ns-body .tag {
             margin: 5px 0;
             font-size: 0;
@@ -5548,6 +5556,8 @@ footer {
           .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata .nav-link.active {
             background: #474747;
             color: white; }
+          .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata .nav-link i {
+            width: 20px; }
         .subindex.main-content-section .main-container .right-part .navbar-expand-lg.frmcata .navbar-toggler {
           float: right; }
   .subindex.main-content-section .info-wrapper {
@@ -5766,6 +5776,10 @@ footer {
           .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a span.shr .num {
             display: inline-block;
             font-size: 12px; }
+          .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a span.shr.shr-h {
+            font-size: 0; }
+            .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a span.shr.shr-h span, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section a span.shr.shr-h i {
+              font-size: 12px; }
       .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer {
         padding-bottom: 20px; }
         .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer img {

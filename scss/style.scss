@@ -131,6 +131,10 @@ button {
     @extend %cn;
 }
 
+.bold {
+    font-weight: 600;
+}
+
 .cursor-default {
     cursor: default;
 }
@@ -328,7 +332,7 @@ button {
             padding: 1rem 1rem;
 
             &.forum {
-                width: 83%;
+                width: 100%;
 
                 .user-wrapper {
                     margin-bottom: 0px;
@@ -336,7 +340,7 @@ button {
 
                     span {
                         margin-right: 10px;
-                        font-size: 16px;
+                        font-size: 15px;
                     }
 
                     .like {
@@ -347,10 +351,11 @@ button {
             }
 
             .ns-title {
-                font-size: 18px;
+                font-size: 16px;
                 max-height: 66px;
                 overflow: hidden;
                 color: $font-dark;
+                font-weight: 600;
             }
 
             .tag {
@@ -1182,46 +1187,6 @@ button {
     }
 }
 
-//login-search
-.log-search {
-    display: inline-block; // border: 1px solid red;
-
-    .control {
-        position: relative;
-        cursor: pointer;
-        transition-duration: .3s; // border: 1px solid red;
-        left: 0;
-        top: 0;
-
-        .btn-material {
-            position: absolute;
-            top: -3rem;
-            width: 38px;
-            height: 38px;
-            border-radius: 100%;
-            background: rgba(0, 0, 0, 0.432);
-            box-sizing: border-box;
-            outline: 0;
-            transform-origin: 50%;
-            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .icon-material-search {
-            position: absolute;
-            color: #fff;
-            transition: opacity 0.3s ease-in-out;
-            top: -3rem;
-            left: 10px;
-            line-height: 40px;
-            font-size: 16px;
-        }
-
-        &.left-shift-5rem {
-            right: 13rem;
-        }
-    }
-}
-
 #logOut {
     font-family: $font-cn;
     float: right;
@@ -1471,6 +1436,43 @@ button {
 
     :-ms-input-placeholder {
         color: #eee;
+    }
+}
+
+//login-search
+.log-search {
+    display: inline-block; // border: 1px solid red;
+
+    .control {
+        position: absolute;
+        bottom: .5rem;
+
+        .btn-material {
+            position: absolute;
+            top: -3rem;
+            width: 38px;
+            height: 38px;
+            border-radius: 100%;
+            background: rgba(0, 0, 0, 0.432);
+            box-sizing: border-box;
+            outline: 0;
+            transform-origin: 50%;
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .icon-material-search {
+            position: absolute;
+            color: #fff;
+            transition: opacity 0.3s ease-in-out;
+            top: -3rem;
+            left: 10px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+
+        &.left-shift-5rem {
+            right: 13rem;
+        }
     }
 }
 
@@ -4479,6 +4481,11 @@ $link_hover_color: #fff;
 
                         .btn-wrapper {
                             float: right;
+                            font-size: 0;
+
+                            button {
+                                font-size: 15px;
+                            }
                         }
 
                         textarea,
@@ -5794,6 +5801,8 @@ $link_hover_color: #fff;
                 .name {
                     font-size: 25px;
                     font-weight: 600;
+                    
+                    padding: 0 1rem;
                 }
 
                 .sub-title {
@@ -7240,20 +7249,26 @@ footer {
 
                             span {
                                 margin-right: 10px;
-                                font-size: 16px;
+                                font-size: 15px;
                             }
 
                             .like {
                                 color: $pink-hover;
                                 cursor: pointer;
+                            font-size: 0;
+                                i, span {
+                                    font-size: 15px;
+                                    margin-right: 5px;
+                                }
                             }
                         }
                     }
 
                     .ns-title {
-                        font-size: 22px;
+                        font-size: 18px;
                         max-height: 66px;
                         overflow: hidden;
+                        margin-top: 5px;
                     }
 
                     .tag {
@@ -7376,6 +7391,10 @@ footer {
                     &.active {
                         background: $font-dark;
                         color: white;
+                    }
+
+                    i{
+                        width: 20px;
                     }
                 }
 
@@ -7700,6 +7719,13 @@ footer {
                             .num {
                                 display: inline-block;
                                 font-size: 12px;
+                            }
+
+                            &.shr-h {
+                                font-size: 0;
+                                span, i {
+                                    font-size: 12px;
+                                }
                             }
                         }
 
