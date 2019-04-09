@@ -1,22 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Noto+Sans+TC:100,300,400,500,700,900|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=chinese-traditional,cyrillic,cyrillic-ext,greek,greek-ext,japanese,latin-ext,vietnamese');
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+// 字體
 $font-cn: 'Noto Sans TC';
 $font-en: 'Lato';
+// 背景預設顏色
 $bgColor: #e4e4e4;
+// 文字顏色設定
 $font-d: #b39368;
 $font-w: #fff;
 $font-dark: #474747;
 $font-bk: #000;
 $font-gray: #969696;
+// 金色咖啡色選集
 $gold: #ffc240;
+$on: #d69200;
 $brown: #ac7000;
+$fund: #7e6530;
+// 紅藍色
 $red: #b90000;
 $blue: #3a9bd3;
+// 粉紅色
 $pink: #f3788d;
 $pink-hover:#eb3654;
-$on: #d69200;
-$fund: #7e6530;
+// LOGO色
 $fb: #3b5998;
+$twt: #00aced;
+$line:#00c300;
 $ins1: #405DE6;
 $ins2:#5851DB;
 $ins3:#833AB4;
@@ -27,57 +36,74 @@ $ins7:#F56040;
 $ins8:#F77737;
 $ins9:#FCAF45;
 $ins10: #FFDC80;
-$twt: #00aced;
-$line:#00c300;
 
+// 中文字體
 %cn {
     font-family: $font-cn;
 }
 
+// 英文字體
 %en {
     font-family: $font-en;
 }
 
-html,
-body {
-    background-color: $bgColor;
-    font-family: $font-cn, $font-en;
-    outline: none;
+.bg-gray {
     background: $bgColor;
-    min-width: 375px;
 }
 
+.bg-white {
+    background: #fff;
+}
+
+// popup時背景不滾動-insert在custom.js裡面
+
+.noscroll {
+    overflow: hidden;
+}
+
+html,
+body {
+    font-family: $font-cn, $font-en;
+
+    outline: none;
+    background: $bgColor;
+
+    min-width: 375px;
+
+    a {
+        color: white;
+        outline: none;
+        text-decoration: none !important;
+    }
+
+}
+
+// 主要包裝，限制最大寬度在1150px
 .main-container {
     width: 100%;
     margin: 0 auto;
     max-width: 1150px;
 }
 
-.noscroll {
-    overflow: hidden;
+// 編輯器文章內的title們
+#userarticle {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding-top: .5rem;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
 }
 
-
-
-a {
-    color: white;
-    outline: none;
-    text-decoration: none !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding-top: .5rem;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-}
-
+// 重要註解hightlight
 blockquote {
     border-left: 5px solid #ffc240;
     margin: 15px 0;
@@ -91,6 +117,7 @@ blockquote {
     font-weight: 500;
 }
 
+// 歸零 flex-box
 .col {
 
     &-1,
@@ -111,34 +138,31 @@ blockquote {
     padding: 0;
 }
 
-.bg-gray {
-    background: $bgColor;
-}
-
-.bg-white {
-    background: #fff;
-}
-
 .row {
     margin: 0;
 }
+
 
 button {
     outline: none !important;
 }
 
+// 英文字體
 .en {
     @extend %en;
 }
 
+// 中文字體
 .cn {
     @extend %cn;
 }
 
+// 加重字體
 .bold {
     font-weight: 600;
 }
 
+// 鼠標設定
 .cursor-pointer {
     cursor: pointer;
 }
@@ -147,7 +171,7 @@ button {
     cursor: default;
 }
 
-// 提示腳標客製化 Tooltip-part
+// 提示腳標客製化 Tooltip-part -- 可以改
 .tooltip-inner {
     font-family: 'Noto Sans TC';
     max-width: 70%;
@@ -160,13 +184,17 @@ button {
     border-radius: 4px
 }
 
+// 610 之前都藏起來
 .show-610 {
     display: none;
 }
 
+// 使用者頭貼
 .user__photo {
+
     display: inline-block;
     overflow: hidden;
+
     background-position: center;
     background-size: cover;
     border-radius: 100%;
@@ -174,6 +202,16 @@ button {
     &-150 {
         height: 150px;
         width: 150px;
+    }
+
+    &-100 {
+        height: 100px;
+        width: 100px;
+    }
+
+    &-90 {
+        height: 90px;
+        width: 90px;
     }
 
     &-80 {
@@ -207,7 +245,7 @@ button {
 }
 
 .right:hover {
-    transform: translateX(6px);
+    // transform: translateX(6px);
 }
 
 .left-part.source {
@@ -429,9 +467,12 @@ button {
 
     .supplier.row {
         flex-wrap: wrap;
-        .col-md-4,.col-sm-6 {
+
+        .col-md-4,
+        .col-sm-6 {
             padding: 0;
         }
+
         .sup-body {
             width: 100%;
             padding: .5rem 1rem .5rem 1rem;
@@ -559,6 +600,7 @@ button {
 
         &.detail-num {
             font-size: 0;
+
             span {
                 font-size: 16px;
                 margin-left: 5px;
@@ -1023,15 +1065,14 @@ button {
 
     .nav-bar-wrapper {
         display: inline-block;
-        min-width: auto;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 1150px;
         position: relative;
 
+        @extend .main-container;
+
+        // 左側logo設置
         a.logo-set {
-            color: $font-w;
             transition: .5s;
+            color: $font-w;
 
             li {
                 float: left;
@@ -1082,8 +1123,8 @@ button {
             padding: 1rem .5rem;
 
             a {
-                display: inline-block;
                 color: $font-w;
+                display: inline-block;
                 text-decoration: none; // border: 1px solid red;
                 border-radius: 5px;
                 transition: .5s;
@@ -1121,6 +1162,7 @@ button {
                         left: -100000%;
                         z-index: 9999;
 
+                        // 寬型下拉選單
                         .bg-fix {
                             background: #000;
                             padding-top: 10px;
@@ -1129,6 +1171,7 @@ button {
                             border-bottom-right-radius: 5px;
                         }
 
+                        // 窄型下拉選單
                         .bg-fix-sm {
                             background: #000;
                             padding-top: 10px;
@@ -1201,16 +1244,21 @@ button {
 
 #logOut {
     font-family: $font-cn;
-    float: right;
-    background: none;
-    border: 1px solid white;
+    font-size: 14px;
     color: $font-w;
+
+    float: right;
     display: flex;
     align-items: center;
+
+    background: none;
+
     padding: 5px 12px;
-    border-radius: 40px;
     margin-top: .6rem;
-    font-size: 15px;
+
+    border-radius: 40px;
+    border: 1px solid white;
+
     transition: .3s;
 
     .user__photo {
@@ -2270,14 +2318,17 @@ $link_hover_color: #fff;
     width: 100%;
 
     .three-part {
+
         padding-top: 1rem;
         padding-bottom: 1rem;
+
         position: relative;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         text-align: center;
+
         width: 100%;
         background-image: linear-gradient(to right, rgb(100, 100, 100), rgb(134, 87, 32));
         margin-bottom: 0;
@@ -2400,6 +2451,7 @@ $link_hover_color: #fff;
     }
 }
 
+// 課程列表部分
 .index__class {
     padding-top: 2rem;
     margin: 2rem 0;
@@ -2479,7 +2531,7 @@ $link_hover_color: #fff;
 
         .coursetitle {
             color: $font-dark;
-            font-size: 28px;
+            font-size: 25px;
 
             img {
                 margin-bottom: 10px;
@@ -2492,7 +2544,10 @@ $link_hover_color: #fff;
 
             .more {
                 float: right;
-                font-size: 20px;
+                margin-right: 10px;
+
+                font-size: 18px;
+
                 line-height: 50px;
                 color: $font-dark;
                 transition: .2s;
@@ -3217,7 +3272,7 @@ $link_hover_color: #fff;
 
     .title {
         color: $font-dark;
-        font-size: 28px;
+        font-size: 25px;
 
         img {
             margin-bottom: 10px;
@@ -3230,10 +3285,12 @@ $link_hover_color: #fff;
 
         .more {
             float: right;
-            font-size: 20px;
+            font-size: 18px;
             line-height: 50px;
             color: $font-dark;
             transition: .2s;
+
+            margin-right: 10px;
 
             &:hover {
                 text-decoration: none;
@@ -5813,7 +5870,7 @@ $link_hover_color: #fff;
                 .name {
                     font-size: 25px;
                     font-weight: 600;
-                    
+
                     padding: 0 1rem;
                 }
 
@@ -7267,8 +7324,10 @@ footer {
                             .like {
                                 color: $pink-hover;
                                 cursor: pointer;
-                            font-size: 0;
-                                i, span {
+                                font-size: 0;
+
+                                i,
+                                span {
                                     font-size: 15px;
                                     margin-right: 5px;
                                 }
@@ -7346,9 +7405,12 @@ footer {
 
             .supplier.row {
                 flex-wrap: wrap;
-                .col-md-4,.col-sm-6 {
+
+                .col-md-4,
+                .col-sm-6 {
                     padding: 0;
                 }
+
                 .sup-body {
                     width: 100%;
                     padding: .5rem 1rem .5rem 1rem;
@@ -7405,7 +7467,7 @@ footer {
                         color: white;
                     }
 
-                    i{
+                    i {
                         width: 20px;
                     }
                 }
@@ -7638,24 +7700,24 @@ footer {
                     position: relative;
                     margin-right: 8px;
                     padding: 2px 8px;
-            
+
                     border-radius: 3px;
-            
+
                     &__ac {
                         color: #ff526f;
                         border: 1px solid #ff526f;
                     }
-            
+
                     &__rc {
                         color: #52e5ff;
                         border: 1px solid #52e5ff;
                     }
-            
+
                     &__cp {
                         color: #ffcd2b;
                         border: 1px solid #ffcd2b;
                     }
-            
+
                     &-ns {
                         display: inline-block;
                         background: #000;
@@ -7663,11 +7725,11 @@ footer {
                         position: relative;
                         padding: 2px 10px;
                         margin-right: 8px;
-            
+
                         border-radius: 3px;
                     }
                 }
-            
+
             }
         }
 
@@ -7735,7 +7797,9 @@ footer {
 
                             &.shr-h {
                                 font-size: 0;
-                                span, i {
+
+                                span,
+                                i {
                                     font-size: 12px;
                                 }
                             }
@@ -7900,8 +7964,9 @@ footer {
     * {
         border: none;
         letter-spacing: 1px;
-        
+
     }
+
     .sticker {
         position: fixed;
         z-index: 1;
@@ -7939,19 +8004,19 @@ footer {
                     right: 50px;
 
                     animation: stickerstar 2s ease-out,
-                               stickerover 1s 2s cubic-bezier(0, .8, .5, 1.5) infinite;
+                        stickerover 1s 2s cubic-bezier(0, .8, .5, 1.5) infinite;
                 }
 
-                
+
             }
 
             .count {
-                
+
                 width: 100%;
                 border-bottom: 1px solid #ff7235;
                 color: black;
-                
-                div{
+
+                div {
                     margin: 10px;
 
                     strong {
@@ -7985,6 +8050,7 @@ footer {
             }
         }
     }
+
     .how {
         position: relative;
 
@@ -8019,6 +8085,7 @@ footer {
             margin: 0;
         }
     }
+
     .how::before {
         content: "";
         position: absolute;
@@ -8051,7 +8118,7 @@ footer {
         }
 
     }
-    
+
     p {
         font-weight: 300;
         font-size: 17px;
@@ -8072,7 +8139,7 @@ footer {
         h5 {
             margin: 0;
         }
-        
+
         .text-purple {
             color: #6600ff !important;
         }
@@ -8093,7 +8160,7 @@ footer {
             color: #fe4e01 !important;
         }
 
-        .row-flex > div[class*="col-"] {
+        .row-flex>div[class*="col-"] {
             padding: 30px 15px;
             text-align: center;
         }
@@ -8110,11 +8177,14 @@ footer {
                 font-size: 18px;
                 font-weight: 500;
 
-                &:hover, &:focus, &:active {
+                &:hover,
+                &:focus,
+                &:active {
                     text-decoration: none;
                 }
             }
         }
+
         .card-body {
             padding: 2rem 3rem;
         }
@@ -8141,6 +8211,7 @@ footer {
 
     .radio-inline {
         margin: 0;
+
         i {
             margin: 0 5px;
         }
