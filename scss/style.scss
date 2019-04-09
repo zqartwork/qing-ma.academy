@@ -139,6 +139,10 @@ button {
     font-weight: 600;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .cursor-default {
     cursor: default;
 }
@@ -1985,7 +1989,7 @@ $link_hover_color: #fff;
 .slider-section-wrapper {
     width: 100%;
     text-align: center; // border: 1px solid red;
-    margin-top: 7rem;
+    padding-top: 7rem;
     margin-bottom: 1rem;
 
     .subindex.main-slider {
