@@ -39,7 +39,7 @@ body {
 #userarticle h4,
 #userarticle h5,
 #userarticle h6 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-top: 20px;
   padding-top: .5rem;
   padding-bottom: 8px;
@@ -5854,7 +5854,6 @@ footer {
           border-radius: 3px;
           font-size: 12px;
           margin-right: 10px;
-          margin-top: 10px;
           -webkit-transition: .3s;
           -o-transition: .3s;
           transition: .3s; }

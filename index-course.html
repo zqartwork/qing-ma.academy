@@ -54,11 +54,12 @@
     }
 </style>
 
-<body>
+<body ONDRAGSTART="window.event.returnValue=false" onSelectStart="event.returnValue=false"
+    ONCONTEXTMENU="window.event.returnValue=false">
     <div class="wrapper">
 
         <!-- nav-bar -->
-        <nav class="navbar navbar-expand-lg navbar-light nav-before" id="nav-top">
+        <nav class="navbar nav-before" id="nav-top">
             <div class="nav-bar-wrapper">
 
                 <!-- logo__set -->
@@ -114,12 +115,12 @@
                                 </div>
                             </ul>
                         </li>
-                        <li><a href="sub-index.html">資源廣場</a>
+                        <li><a href="sub-index-source-ls.html">資源廣場</a>
                             <ul class="sub-menu">
                                 <div class="bg-fix-sm">
                                     <li><a href="sub-index-source-ls.html">配對人才</a></li>
-                                    <li><a href="sub-index-source-ls.html">商家優惠</a></li>
-                                    <li><a href="sub-index-source-ls.html">限時活動</a></li>
+                                    <li><a href="sub-index-source-ls.html">廠商優惠</a></li>
+                                    <li><a href="sub-index-source-ls.html">活動公告</a></li>
                                     <li><a href="sub-index-supplier-ls.html">合作廠商</a></li>
                                 </div>
                             </ul>
@@ -127,9 +128,9 @@
                         <li><a href="sub-index.html">資訊廣場</a>
                             <ul class="sub-menu">
                                 <div class="bg-fix-sm">
-                                    <li><a href="/about/history">相關新聞</a></li>
-                                    <li><a href="/about/team">影藝專題</a></li>
-                                    <li><a href="/about/address">學院論壇</a></li>
+                                    <li><a href="sub-index-news-ls.html">青馬新聞</a></li>
+                                    <li><a href="sub-index-project-ls.html">影藝專題</a></li>
+                                    <li><a href="sub-index-forum-ls.html">學院論壇</a></li>
                                 </div>
                             </ul>
                         </li>
@@ -174,7 +175,7 @@
                 </button>
 
                 <!-- search-part -->
-                <div class="log-search">
+                <div class="log-search cursor-pointer">
                     <div class="search-box">
                         <div class="control">
                             <div class="btn-material">
@@ -231,25 +232,26 @@
                                 <li><a href="index-course-ls.html">其他</a></li>
                             </ul>
                         </li>
-                        <li><a class="cur-arr"><i class="fas fa-bullhorn"></i> 資源廣場</a>
+                        <li><a class="cursor-pointer" href="sub-index-source-ls.html"><i class="fas fa-bullhorn"></i>
+                                資源廣場</a>
                             <ul>
                                 <li><a href="sub-index-source-ls.html">配對人才</a></li>
-                                <li><a href="sub-index-source-ls.html">商家優惠</a></li>
-                                <li><a href="sub-index-source-ls.html">限時活動</a></li>
+                                <li><a href="sub-index-source-ls.html">廠商優惠</a></li>
+                                <li><a href="sub-index-source-ls.html">活動公告</a></li>
                                 <li><a href="sub-index-supplier-ls.html">合作廠商</a></li>
                             </ul>
                         </li>
-                        <li><a class="cur-arr"><i class="fas fa-scroll"></i> 資訊廣場</a>
+                        <li><a class="cursor-pointer" href="sub-index.html"><i class="fas fa-scroll"></i> 資訊廣場</a>
                             <ul>
-                                <li><a href="/about/history">相關新聞</a></li>
-                                <li><a href="/about/team">影藝專題</a></li>
-                                <li><a href="/about/address">青馬學院論壇</a></li>
+                                <li><a href="sub-index-news-ls.html">青馬新聞</a></li>
+                                <li><a href="sub-index-project-ls.html">影藝專題</a></li>
+                                <li><a href="sub-index-forum-ls.html">學院論壇</a></li>
                             </ul>
                         </li>
                         <!-- mmenu 尚未登入區塊 -->
                         <!-- <li>
-                                <a href="/" class="login__btn"><i class="fas fa-sign-out-alt"></i>登入</a>
-                            </li> -->
+                                    <a href="/" class="login__btn"><i class="fas fa-sign-out-alt"></i>登入</a>
+                                </li> -->
 
                         <!-- mmenu 已登入區塊 -->
                         <div class="user__option-modal">
