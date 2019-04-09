@@ -395,6 +395,9 @@ button {
 .padding-top-50 {
   padding-top: 50px; }
 
+.padding-top-5rem {
+  padding-top: 5rem; }
+
 .margin-top-10 {
   margin-top: 10px; }
 
@@ -5865,3 +5868,72 @@ footer {
   height: 350px;
   margin: 0;
   padding: 0; }
+
+.center-section {
+  width: 100%;
+  text-align: center;
+  padding: 10rem 0 5rem 0; }
+  .center-section .title404 {
+    font-size: 150px;
+    font-weight: 600;
+    font-family: 'Open Sans'; }
+  .center-section .subtitle {
+    font-size: 20px; }
+
+.donate .sticker {
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 380px;
+  background: none;
+  border-radius: 10px; }
+  .donate .sticker .row {
+    background: #ff4d00;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    border: 0; }
+    .donate .sticker .row .title {
+      color: white;
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding: 10px 0 10px 0;
+      margin: 0;
+      width: 100%;
+      border-bottom: 1px solid #ff7235; }
+      .donate .sticker .row .title .canimg {
+        position: absolute;
+        top: -35px;
+        right: 50px;
+        -webkit-animation: stickerstar 2s ease-out, stickerover 1s 2s cubic-bezier(0, 0.8, 0.5, 1.5) infinite;
+        animation: stickerstar 2s ease-out, stickerover 1s 2s cubic-bezier(0, 0.8, 0.5, 1.5) infinite; }
+    .donate .sticker .row .count {
+      width: 100%;
+      border-bottom: 1px solid #ff7235;
+      color: black; }
+      .donate .sticker .row .count div {
+        margin: 10px; }
+        .donate .sticker .row .count div strong {
+          margin: 5px;
+          font-weight: 900; }
+    .donate .sticker .row .txt {
+      color: black;
+      padding: 2rem 0 1rem 0; }
+      .donate .sticker .row .txt .go {
+        display: block;
+        background: #fff;
+        padding: .5rem 1.5rem;
+        margin: .5rem auto;
+        font-size: 18px;
+        font-family: 'Open Sans';
+        font-weight: 900;
+        color: #ff4d00;
+        border-radius: 2rem;
+        max-width: 100px; }

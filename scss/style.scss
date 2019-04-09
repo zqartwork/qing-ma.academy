@@ -610,6 +610,10 @@ button {
     &-50 {
         padding-top: 50px;
     }
+
+    &-5rem {
+        padding-top: 5rem;
+    }
 }
 
 .margin-top {
@@ -7865,4 +7869,105 @@ footer {
 
     margin: 0;
     padding: 0;
+}
+
+.center-section {
+    width: 100%;
+
+    text-align: center;
+    padding: 10rem 0 5rem 0;
+
+    .title404 {
+        font-size: 150px;
+        font-weight: 600;
+        font-family: 'Open Sans';
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+}
+
+.donate {
+    .sticker {
+        position: fixed;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        max-width: 380px;
+        background: none;
+        border-radius: 10px;
+
+        .row {
+            background: #ff4d00;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px 10px 0 0;
+            border: 0;
+
+            .title {
+                color: white;
+                font-size: 16px;
+
+                letter-spacing: 1px;
+                padding: 10px 0 10px 0;
+                margin: 0;
+                width: 100%;
+
+                border-bottom: 1px solid #ff7235;
+
+                .canimg {
+                    position: absolute;
+                    top: -35px;
+                    right: 50px;
+
+                    animation: stickerstar 2s ease-out,
+                               stickerover 1s 2s cubic-bezier(0, .8, .5, 1.5) infinite;
+                }
+            }
+
+            .count {
+                
+                width: 100%;
+                border-bottom: 1px solid #ff7235;
+                color: black;
+                
+                div{
+                    margin: 10px;
+
+                    strong {
+                        margin: 5px;
+                        font-weight: 900;
+                    }
+                }
+            }
+
+            .txt {
+
+                color: black;
+                padding: 2rem 0 1rem 0;
+
+                .go {
+                    display: block;
+
+                    background: #fff;
+                    padding: .5rem 1.5rem;
+                    margin: .5rem auto;
+
+                    font-size: 18px;
+                    font-family: 'Open Sans';
+                    font-weight: 900;
+
+                    color: #ff4d00;
+
+                    border-radius: 2rem;
+                    max-width: 100px;
+                }
+            }
+        }
+    }
 }

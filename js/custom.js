@@ -382,3 +382,15 @@ $("#userarticle img").css({
     "maxWidth": '100%',
     'height': 'auto'
 });
+
+// 能量易開罐
+$(function () {
+    $(".sticker").delay(3000).animate({ bottom: -200 }, "slow");
+    $(".sticker").hover(
+        function () {
+            $(this).stop(true, false).animate({ bottom: 0 }, 'slow');
+        },
+        function () {
+            $(this).stop(true, false).animate({ bottom: -200 }, 'slow');
+        });
+});

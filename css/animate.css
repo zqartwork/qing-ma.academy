@@ -2742,3 +2742,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
 }
+
+@keyframes stickerstar{
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateZ(5deg);
+  }
+}
+@keyframes stickerover{
+  0% {
+    transform: rotateZ(5deg);
+  }
+  50% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(5deg);
+  }
+}
