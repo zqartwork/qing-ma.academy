@@ -376,12 +376,6 @@ function onBlur() {
     deactivateSearchbox(document.querySelector('.searchbox'));
 };
 
-//userarticle img-responsive
-$("#userarticle img").css({
-    "width": 'auto',
-    "maxWidth": '100%',
-    'height': 'auto'
-});
 
 // 能量易開罐
 $(function () {
@@ -393,4 +387,16 @@ $(function () {
         function () {
             $(this).stop(true, false).animate({ bottom: -200 }, 'slow');
         });
+});
+
+//userarticle img-responsive
+$("#userarticle img").css({
+    "width": 'auto',
+    "maxWidth": '100%',
+    'height': 'auto'
+});
+$(".img-responsive").css({
+    "width": 'auto',
+    "maxWidth": '100%',
+    'height': 'auto'
 });
