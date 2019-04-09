@@ -749,6 +749,105 @@
         </div>
     </div>
 
+    <!-- 能量易開罐 -->
+    <div class="donate">
+        <div class="sticker">
+            <a href="#" data-toggle="modal" data-target="#pay">
+                <ul class="row">
+                    <li class="col-xs-12 title">
+                        <figcaption>給老師一個鼓勵，贊助他吧──<img src="img/donate/donate-sticker.png" class="canimg"></figcaption>
+                    </li>
+                    <li class="col-xs-12 count row">
+                        <div class="col-xs-6 leftbox">本影片共<span><strong>15人</strong>贊助</span></div>
+                        <div class="col-xs-6">累積金額<span><strong>15000元</strong></span></div>
+                    </li>
+                    <li class="col-xs-12 txt">
+                        鼓勵作者繼續推出更多優質課程<br>請作者喝罐飲料！
+                        <span class="go">GO</span>
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </div>
+
+    <!-- 能量易開罐 Modal -->
+    <div class="modal fade" id="pay" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <div style="background:#000336"><img src="img/donate/donate-title.jpg" class="img-responsive"></div>
+
+                <p class="text-center tag-in-modal"><a href="donate-page.html" target="_blank"><i
+                            class="fas fa-question-circle"></i>甚麼是能量易開罐?</a></p>
+                <div class="modal-body">
+                    <form class="form form-horizontal">
+                        <div class="formmedium">
+                            <p>付款方式</p>
+                            <div class="row">
+                                <div class="well list well-sm col-sm-6 col-xs-12">
+                                    <label class="radio-inline">
+                                        <input name="optradio" type="radio">
+                                        <i class="far fa-credit-card"></i> 信用卡付款</label>
+                                </div>
+                                <div class="well list well-sm col-sm-6 col-xs-12">
+                                    <label class="radio-inline">
+                                        <input name="optradio" type="radio">
+                                        <i class="fas fa-dollar-sign"></i> ATM轉帳或銀行臨櫃繳款</label>
+                                </div>
+                            </div>
+
+                            <div class="well well-sm">
+                                <div class="form-group row margin-bottom-10">
+                                    <label class="control-label col-sm-1">姓名</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" type="text">
+                                    </div>
+                                    <label class="control-label col-sm-1">暱稱</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group  row margin-bottom-10">
+                                    <label class="control-label col-sm-1">MAIL</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" type="text">
+                                    </div>
+                                    <label class="control-label col-sm-1">電話</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" type="text">
+                                    </div>
+                                </div>
+
+
+                                <select class="form-control margin-bottom-10">
+                                    <option value="">請他喝一罐...</option>
+                                    <option value="">加油 易開罐 $40元</option>
+                                    <option value="1">看見希望 易開罐 $90元</option>
+                                    <option value="2">好棒棒 易開罐 $120元</option>
+                                    <option value="2">太優秀 易開罐 $180元</option>
+                                    <option value="2">神功力 易開罐 $250元</option>
+                                </select>
+
+                                <textarea class="form-control margintop-20" placeholder="給作者一些鼓勵的話..."></textarea>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="submit">下一步</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
     <footer>
         <div class="footer-wrapper row">
             <div class="col-lg-4 col-sm-12 wow fadeInLeft">
@@ -875,6 +974,19 @@
         });
     </script>
     <script src="js/custom.js"></script>
+    <script>
+        // 能量易開罐
+        $(function () {
+            $(".sticker").delay(3000).animate({ bottom: -200 }, "slow");
+            $(".sticker").hover(
+                function () {
+                    $(this).stop(true, false).animate({ bottom: 0 }, 'slow');
+                },
+                function () {
+                    $(this).stop(true, false).animate({ bottom: -200 }, 'slow');
+                });
+        });
+    </script>
 </body>
 
 </html>

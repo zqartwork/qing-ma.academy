@@ -1472,29 +1472,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- donate -->
-                        <div class="donate">
-                            <div class="sticker">
-                                <a href="#" data-toggle="modal" data-target="#pay">
-                                    <ul class="row">
-                                        <li class="col-xs-12 title">
-                                            <figcaption>給老師一個鼓勵，贊助他吧──<img src="img/donate/donate-sticker.png"
-                                                    class="canimg"></figcaption>
-                                        </li>
-                                        <li class="col-xs-12 count row">
-                                            <div class="col-xs-6 leftbox">本影片共<span><strong>15人</strong>贊助</span></div>
-                                            <div class="col-xs-6">累積金額<span><strong>15000元</strong></span></div>
-                                        </li>
-                                        <li class="col-xs-12 txt">
-                                            鼓勵作者繼續推出更多優質課程<br>請作者喝罐飲料！
-                                            <span class="go">GO</span>
-                                        </li>
-                                    </ul>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
@@ -1627,6 +1604,27 @@
                     <button type="button" class="btn btn-primary confirm">送出</button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- 能量易開罐 -->
+    <div class="donate">
+        <div class="sticker">
+            <a href="#" data-toggle="modal" data-target="#pay">
+                <ul class="row">
+                    <li class="col-xs-12 title">
+                        <figcaption>給老師一個鼓勵，贊助他吧──<img src="img/donate/donate-sticker.png" class="canimg"></figcaption>
+                    </li>
+                    <li class="col-xs-12 count row">
+                        <div class="col-xs-6 leftbox">本影片共<span><strong>15人</strong>贊助</span></div>
+                        <div class="col-xs-6">累積金額<span><strong>15000元</strong></span></div>
+                    </li>
+                    <li class="col-xs-12 txt">
+                        鼓勵作者繼續推出更多優質課程<br>請作者喝罐飲料！
+                        <span class="go">GO</span>
+                    </li>
+                </ul>
+            </a>
         </div>
     </div>
 
@@ -1833,6 +1831,19 @@
         });
     </script>
     <script src="js/custom.js"></script>
+    <script>
+        // 能量易開罐
+        $(function () {
+            $(".sticker").delay(3000).animate({ bottom: -200 }, "slow");
+            $(".sticker").hover(
+                function () {
+                    $(this).stop(true, false).animate({ bottom: 0 }, 'slow');
+                },
+                function () {
+                    $(this).stop(true, false).animate({ bottom: -200 }, 'slow');
+                });
+        });
+    </script>
 </body>
 
 </html>
