@@ -4097,7 +4097,8 @@ $link_hover_color: #fff;
 
                             &.ins,
                             &.fb,
-                            &.yt {
+                            &.yt,
+                            &.add {
                                 height: $L;
                                 width: $L;
                                 background-size: cover;
@@ -4120,6 +4121,10 @@ $link_hover_color: #fff;
 
                             &.yt {
                                 background-image: url(../img/icon/yt.png);
+                            }
+
+                            &.add {
+                                background-image: url(../img/icon/add.png);
                             }
                         }
                     }
@@ -5823,7 +5828,7 @@ $link_hover_color: #fff;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 7rem;
+    padding-top: 9rem;
 
     @media(max-width: 1150px) {
         width: 85%;
@@ -5887,7 +5892,8 @@ $link_hover_color: #fff;
                     .fb,
                     .ins,
                     .yt,
-                    .mail {
+                    .mail,
+                    .add {
                         display: inline-block;
                         height: $L;
                         width: $L;
@@ -5915,6 +5921,9 @@ $link_hover_color: #fff;
 
                     .mail {
                         background-image: url(../img/icon/mail.png);
+                    }
+                    .add {
+                        background-image: url(../img/icon/add.png);
                     }
                 }
 
@@ -7837,7 +7846,8 @@ footer {
 
                             &.ins,
                             &.fb,
-                            &.yt {
+                            &.yt,
+                            &.add {
                                 height: $L;
                                 width: $L;
                                 background-size: cover;
@@ -7860,6 +7870,10 @@ footer {
 
                             &.yt {
                                 background-image: url(../img/icon/yt.png);
+                            }
+
+                            &.add {
+                                background-image: url(../img/icon/add.png);
                             }
                         }
 

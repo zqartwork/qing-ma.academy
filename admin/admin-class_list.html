@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>青馬學院/會員中心/達人課程</title>
+
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="plugins/mmenu/jquery.mmenu.all.css" rel="stylesheet" />
+  <link href="css/admin.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar-custom">
+  <div id="wrapper" class="admin">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="top-area"></div>
+      <div class="container-fluid navigation"> <a href="index.html" class="navbar-brand">
+          <ul class="home">
+            <li class="img"><img src="img/logo-school.png" class="" alt="青馬影展">
+              <span class="title">青馬學院 - 會員中心</span>
+            </li>
+          </ul>
+        </a>
+        <ul class="nav top pull-right">
+          <li class="p-x"><a href="https://www.youthgoldenhorse.org/" target="_blank">青馬基金會</a></li>
+          <li class="p-x"><a href="http://www.youthgoldenhorse.com/" target="_blank">青馬影展</a></li>
+          <li class="nav-search p-x">
+            <form action="#">
+              <label for="search"></label>
+              <input type="text" id="search" placeholder="Search...">
+              <i id="search" class="glyphicon glyphicon-search"></i>
+            </form>
+          </li>
+          <li><a href="#menu" class="mmenu switch"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 登入後使用此(側拉選單/ICON白) -->
+
+          <li><a href="admin-login.html" class="login"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 尚未登入使用此(彈出視窗/ICON灰) -->
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- admin -->
+    <!--wrapper start-->
+    <div class="container-fluid">
+      <article>
+        <div class="row-flex">
+          <!--left nav-->
+          <nav id="sidebar" class="col-sm-2 hidden-xs">
+            <ul class="sidebar-menu">
+              <li class="text-right">會員中心</li>
+              <li><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span>會員資料</span></a></li>
+              <li class="active"><a href="admin-youtuber-step1.html"><i
+                    class="glyphicon glyphicon-open"></i><span>上傳影片</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-film"></i><span>影片管理</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-heart"></i><span>最愛影片</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-eye-open"></i><span>觀看歷史</span></a></li>
+              <li><a href="admin-point.html"><i class="glyphicon glyphicon-fire"></i><span>推廣點數</span></a></li>
+            </ul>
+          </nav>
+          <!--/left nav-->
+          <section class="col-sm-10">
+            <div class="panel-body col-sm-10">
+              <div class="tag point btn">
+                <h6>新增提案<i class="glyphicon glyphicon-open"></i></h6>
+              </div>
+              <hr>
+              <h5 class="text-center">影片上傳紀錄</h5>
+              <hr>
+              <table class="table table-bordered">
+                <thead>
+                  <tr class="only-hide"> 　　
+                    <th width="60%">名稱</th>
+                    <th width="10%">狀態</th>
+                    <th width="10%">人數</th>
+                    <th width="10%">期限</th>
+                    <th width="10%">編輯</th>
+                  </tr>
+                </thead>
+                <tbody class="class">
+                  <tr class="alert-default"> 　　
+                    <td data-th="2018/07/17">
+                      <ul>
+                        <li class="col-sm-2"><img src="img/cover/05.jpg" class="img-responsive"></li>
+                        <li class="col-sm-10">
+                          <div> <span>2018/07/28</span> <i class="glyphicon glyphicon-heart"></i>15 <i
+                              class="glyphicon glyphicon-eye-open"></i>11 </div>
+                          <h5>如何燃起你內心的"戲"胞魂-專業演員技巧教學</h5>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="提案審核狀態">提案<br>審核中</td>
+                    <td data-th="募資情況"></td>
+                    <td data-th="剩餘時間">10天</td>
+                    <td data-th="編輯"><a class="btn ring btn-default" href="#"><i
+                          class="glyphicon glyphicon-pencil"></i></a></td>
+                  </tr>
+                  <tr class="alert-warning"> 　　
+                    <td data-th="2018/07/17">
+                      <ul>
+                        <li class="col-sm-2"><img src="img/cover/05.jpg" class="img-responsive"></li>
+                        <li class="col-sm-10">
+                          <div> <span>2018/07/28</span> <i class="glyphicon glyphicon-heart"></i>15 <i
+                              class="glyphicon glyphicon-eye-open"></i>11 </div>
+                          <h5>如何燃起你內心的"戲"胞魂-專業演員技巧教學</h5>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="提案審核狀態">募資中</td>
+                    <td data-th="募資情況">60/100</td>
+                    <td data-th="剩餘時間">50天</td>
+                    <td data-th="編輯"> <a class="btn ring btn-warning" href="#"><i
+                          class="glyphicon glyphicon-trash"></i></a></td>
+                  </tr>
+                  <tr class="alert-danger"> 　　
+                    <td data-th="2018/07/17">
+                      <ul>
+                        <li class="col-sm-2"><img src="img/cover/05.jpg" class="img-responsive"></li>
+                        <li class="col-sm-10">
+                          <div> <span>2018/07/28</span> <i class="glyphicon glyphicon-heart"></i>15 <i
+                              class="glyphicon glyphicon-eye-open"></i>11 </div>
+                          <h5>如何燃起你內心的"戲"胞魂-專業演員技巧教學</h5>
+                        </li>
+                      </ul>
+                    </td>
+                    <td data-th="提案審核狀態">募資成功</td>
+                    <td data-th="募資情況">150/100</label></td>
+                    <td data-th="剩餘時間" class="text-center">
+                      <span>期限11/30</span>
+                      <button type="button" class="btn ring btn-danger">上傳單元課程<i
+                          class="glyphicon glyphicon-open"></i></button>
+                    </td>
+                    <td data-th="編輯"><a class="btn ring btn-danger" href="#"><i
+                          class="glyphicon glyphicon-pencil"></i></a></td>
+                  </tr>
+                  <tr class="alert-danger"> 　　
+                    <td data-th="2018/07/17">
+                      <ul>
+                        <li class="col-sm-2"><img src="img/cover/05.jpg" class="img-responsive"></li>
+                        <li class="col-sm-10">
+                          <div> <span>2018/07/28</span> <i class="glyphicon glyphicon-heart"></i>15 <i
+                              class="glyphicon glyphicon-eye-open"></i>11 </div>
+                          <h5>如何燃起你內心的"戲"胞魂-專業演員技巧教學</h5>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="提案審核狀態">募資成功</td>
+                    <td data-th="募資情況">130/100</td>
+                    <td data-th="剩餘時間">單元審核中</td>
+                    <td data-th="編輯"> <a class="btn ring btn-danger" href="#"><i
+                          class="glyphicon glyphicon-pencil"></i></a></td>
+                  </tr>
+                  <tr class="alert-success"> 　　
+                    <td data-th="2018/07/17">
+                      <ul>
+                        <li class="col-sm-2"><img src="img/cover/05.jpg" class="img-responsive"></li>
+                        <li class="col-sm-10">
+                          <div> <span>2018/07/28</span> <i class="glyphicon glyphicon-heart"></i>15 <i
+                              class="glyphicon glyphicon-eye-open"></i>11 </div>
+                          <h5>如何燃起你內心的"戲"胞魂-專業演員技巧教學</h5>
+                        </li>
+                      </ul>
+                    </td>
+                    <td class="提案審核狀態">募資成功</td>
+                    <td data-th="募資情況">130/100</td>
+                    <td data-th="剩餘時間">已成功上架</td>
+                    <td data-th="編輯"> <a class="btn ring btn-success" href="#"><i
+                          class="glyphicon glyphicon-pencil"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav class="text-center">
+                <p>總共有1,239筆資料，目前顯示1-20筆</p>
+                <ul class="pagination pagination-sm">
+                  <li><a href="#"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+                </ul>
+              </nav>
+            </div>
+            <!--panel-body-->
+
+          </section>
+        </div>
+        <!--row-flex-->
+      </article>
+    </div>
+    <!--/wrapper-->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>SITE MAP</h5>
+                <ul>
+                  <li><a href="#">關於我們</a></li>
+                  <li><a href="#">最新消息</a></li>
+                  <li><a href="#">影展訊息</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>CONTACT</h5>
+                <p> 台北市中山區長春路210號2樓 2F.，No.210，ChangChun Road, Zhongshan Dist，Taipei City 10487，Taiwan（R.O.C） </p>
+                <ul>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-earphone"></i> </span> Phone I
+                    +886-2-2506-3611 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-print"></i> </span> Fax I
+                    +886-2-2506-3220 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-envelope"></i> </span>
+                    polly@youthgoldenhorse.org </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Follow us</h5>
+                <ul>
+                  <li>青馬基金會</li>
+                  <li>FACEBOOK</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="text-left">
+                  <p>全球華人青馬影展文化藝術基金會 © 2018 版权所有 BY Global Chinese Qing-Ma Film Festival Culture And Arts Foundation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInRight" data-wow-delay="0.1s">
+                <div class="text-right"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="glyphicon glyphicon-chevron-up active"></i></a>
+
+  <!-- mmenu -->
+  <nav id="menu">
+    <ul>
+      <li><a href="#">Hi KEVIN<i class="glyphicon glyphicon-edit"></i></a></li>
+      <li><a href="#">
+          <p>您目前擁有<span>100</span></p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-open"></i>上傳</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-film"></i>管理</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-heart"></i>最愛</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-eye-open"></i>紀錄</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-fire"></i>推廣</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-retweet"></i>資源</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-off"></i>登出</p>
+        </a> </li>
+      <li>
+        <form>
+          <div class="input-group">
+            <input class="form-control" name="txtKeyword" id="txtKeyword" value="" placeholder="關鍵字" maxlength=""
+              type="text">
+            <i class="input-group-btn">
+              <button type="submit" class="btn btn-default">查詢</button>
+            </i> </div>
+        </form>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <!--延遲加載-->
+  <script src="plugins/mmenu/jquery.mmenu.all.js"></script>
+  <!--SILDNAV MMENU-->
+  <script>
+    jQuery(document).ready(function ($) {
+
+      $("#menu").mmenu({
+        "extensions": [
+          "pagedim-black",
+          "position-right",
+          "theme-white",
+          "listview-justify",
+          "shadow-page"
+        ],
+        "navbar": false,
+        "iconPanels": true,
+        "navbars": [
+          {
+            "position": "bottom",
+            "content": [
+              "<a  href='http://www.youthgoldenhorse.com/' target='_blank'>影  展</a>",
+              "<a  href='https://www.youthgoldenhorse.org/' target='_blank'>基金會</a>",
+              "<a  href='https://zh-tw.facebook.com/youthgoldenhorse/' target='_blank'>FB</a>"
+            ]
+          }
+        ]
+      });
+
+
+    });
+  </script>
+  <script src="js/jquery.uploadfile.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#fileuploader").uploadFile({
+        url: "upload.php",
+        fileName: "myfile"
+      });
+
+    });
+  </script>
+  <script src="js/custom.js"></script>
+  <!--custom-->
+</body>
+
+</html>

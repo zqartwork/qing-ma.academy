@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>青馬影展/會員中心/上傳影片</title>
+
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+  <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="plugins/mmenu/jquery.mmenu.all.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css">
+  <link href="css/admin.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar-custom">
+  <div id="wrapper" class="admin">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="top-area"></div>
+      <div class="container-fluid navigation"> <a href="index.html" class="navbar-brand">
+          <ul class="home">
+            <li class="img"><img src="img/logo-school.png" class="" alt="青馬影展">
+              <span class="title">青馬學院 - 會員中心</span>
+            </li>
+          </ul>
+        </a>
+        <ul class="nav top pull-right">
+          <li class="p-x"><a href="https://www.youthgoldenhorse.org/" target="_blank">青馬基金會</a></li>
+          <li class="p-x"><a href="http://www.youthgoldenhorse.com/" target="_blank">青馬影展</a></li>
+          <li class="nav-search p-x">
+            <form action="#">
+              <label for="search"></label>
+              <input type="text" id="search" placeholder="Search...">
+              <i id="search" class="glyphicon glyphicon-search"></i>
+            </form>
+          </li>
+          <li><a href="#menu" class="mmenu switch"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 登入後使用此(側拉選單/ICON白) -->
+
+          <li><a href="admin-login.html" class="login"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 尚未登入使用此(彈出視窗/ICON灰) -->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- admin -->
+    <!--wrapper start-->
+    <div class="container-fluid">
+      <article>
+        <div class="row-flex">
+          <!--left nav-->
+          <nav id="sidebar" class="col-sm-2 hidden-xs">
+            <ul class="sidebar-menu">
+              <li class="text-right">會員中心</li>
+              <li><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span>會員資料</span></a></li>
+              <li class="active"><a href="admin-upload.html"><i
+                    class="glyphicon glyphicon-open"></i><span>上傳影片</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-film"></i><span>影片管理</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-heart"></i><span>最愛影片</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-eye-open"></i><span>觀看歷史</span></a></li>
+              <li><a href="admin-point.html"><i class="glyphicon glyphicon-fire"></i><span>推廣點數</span></a></li>
+            </ul>
+          </nav>
+          <!--/left nav-->
+
+          <section class="col-sm-10">
+            <ul class="row row-flex step">
+              <li class="col-xs-3 active">1.權益條款</li>
+              <li class="col-xs-3">2.報名資料</li>
+              <li class="col-xs-3">3.上傳影片</li>
+              <li class="col-xs-3">4.儲存發佈</li>
+            </ul>
+            <form>
+              <div class="panel-body col-sm-10">
+                <!--form-->
+
+                <div class="form form-horizontal col-sm-12">
+                  <h2>線上報名權益規章</h2>
+                  <ul class="count">
+                    <li>若您所提供之個人資料，經檢舉或主辦單位發現不足以確認您的身分真實性或其他個人資料冒用、盜用、資料不實等情形，主辦單位有權停止您的報名資格，若有不便之處敬請見諒。</li>
+                    <li>
+                      請勿利用上傳空間進行任何不法行為，任何經由本服務以上載的資訊、資料如文字、軟體、音樂、音訊、照片、圖形、視訊或其他形式的資料（以下簡稱「內容」），無論係公開還是私下傳送，均由內容提供者自行承擔責任。
+                    </li>
+                    <li>本站無法控制傳送之內容，因此不保證內容的正確性、完整性或合法性，本站均不為任何內容負責。</li>
+                    <li>本站有權依法停止傳輸任何前述內容並採取相應行動，包括但不限於暫停用戶使用本服務的全部或部分，保存有關記錄，並向有關機關報告以及協助其調查。</li>
+                    <li>您同意如因本站出現中斷或故障等現象，而造成使用者使用上的不便、資料喪失、錯誤、或其他損害時，本站及其管理者毋須負任何法律責任。</li>
+                  </ul>
+                  <hr>
+                  <h2>個人資料保護法</h2>
+                  <ul class="count">
+                    <li>蒐集您的個人資料，目的在進行「第零屆全球華人青馬影展」之相關工作，在處理及使用您的個人資料是受到個人資料保護法及相關法令之規範。</li>
+                    <li>蒐集與使用您的個人資料如報名表單內，包含申請人基本資料、創作團隊資料、以及影片相關資料。</li>
+                    <li>您同意主辦單位因聯繫所需，以您所提供的個人資料與您進行聯絡；並同意主辦單位於您報名錄取後繼續處理及使用您的個人資料。</li>
+                    <li>若您所提供之個人資料，經檢舉或主辦單位發現不足以確認您的身分真實性或其他個人資料冒用、盜用、資料不實等情形，主辦單位有權停止您的報名資格，若有不便之處敬請見諒。</li>
+                  </ul>
+                  <hr>
+                  <div class="col-sm-12 bg-warning">
+                    <input value="" type="checkbox">
+                    我已詳讀並同意以上報名權益規章/個資保護法</div>
+                  <hr>
+                </div>
+
+                <!--  form Buttons -->
+                <div class="col-sm-12 form-group sent text-center">
+                  <button class="btn btn-default btn-black white" type="submit"
+                    onclick="location.href='admin-upload-2.html';">同意並送出</button>
+                </div>
+              </div>
+              <!--panel-body-->
+            </form>
+          </section>
+        </div>
+        <!--row-flex-->
+      </article>
+    </div>
+    <!--/wrapper-->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>SITE MAP</h5>
+                <ul>
+                  <li><a href="#">關於我們</a></li>
+                  <li><a href="#">最新消息</a></li>
+                  <li><a href="#">影展訊息</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>CONTACT</h5>
+                <p> 台北市中山區長春路210號2樓 2F.，No.210，ChangChun Road, Zhongshan Dist，Taipei City 10487，Taiwan（R.O.C） </p>
+                <ul>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-earphone"></i> </span> Phone I
+                    +886-2-2506-3611 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-print"></i> </span> Fax I
+                    +886-2-2506-3220 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-envelope"></i> </span>
+                    polly@youthgoldenhorse.org </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Follow us</h5>
+                <ul>
+                  <li>青馬基金會</li>
+                  <li>FACEBOOK</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="text-left">
+                  <p>全球華人青馬影展文化藝術基金會 © 2018 版权所有 BY Global Chinese Qing-Ma Film Festival Culture And Arts Foundation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInRight" data-wow-delay="0.1s">
+                <div class="text-right"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+  <!-- mmenu -->
+  <nav id="menu">
+    <ul>
+      <li><a href="#">Hi KEVIN<i class="glyphicon glyphicon-edit"></i></a></li>
+      <li><a href="#">
+          <p>您目前擁有<span>100</span></p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-open"></i>上傳</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-film"></i>管理</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-heart"></i>最愛</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-eye-open"></i>紀錄</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-fire"></i>推廣</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-off"></i>登出</p>
+        </a> </li>
+    </ul>
+  </nav>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <!--延遲加載-->
+  <script src="js/owl.carousel.min.js"></script>
+  <!--上方輪播-->
+  <script src="plugins/slick/slick.js"></script>
+  <!--下方輪播-->
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+      $(".variable").slick({
+        centerMode: true,
+        variableWidth: true
+      });
+
+    });
+  </script>
+  <script src="plugins/mmenu/jquery.mmenu.all.js"></script>
+  <!--SILDNAV MMENU-->
+  <script>
+    jQuery(document).ready(function ($) {
+
+      $("#menu").mmenu({
+        "extensions": [
+          "pagedim-black",
+          "position-right",
+          "theme-white",
+          "listview-justify",
+          "shadow-page"
+        ],
+        "navbar": false,
+        "iconPanels": true,
+        "navbars": [
+          {
+            "position": "bottom",
+            "content": [
+              "<a class='fa fa-envelope' href='#/'></a>",
+              "<a class='fa fa-twitter' href='#/'></a>",
+              "<a class='fa fa-facebook' href='#/'></a>"
+            ]
+          }
+        ]
+      });
+
+
+    });
+  </script>
+  <script src="js/custom.js"></script>
+  <!--custom-->
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

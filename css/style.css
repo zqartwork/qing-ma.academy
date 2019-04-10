@@ -3114,7 +3114,7 @@ button {
             color: #969696;
             padding-top: 5px;
             margin-right: 10px; }
-            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.ins, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.ins, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.fb, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.fb, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.fb, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.yt, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.yt {
+            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.ins, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.ins, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.fb, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.fb, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.fb, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.yt, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.yt, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.add, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.add, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.add {
               height: 25px;
               width: 25px;
               background-size: cover;
@@ -3123,7 +3123,7 @@ button {
               -webkit-transition: .3s;
               -o-transition: .3s;
               transition: .3s; }
-              .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins:hover, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.ins:hover, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.ins:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.fb:hover, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.fb:hover, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.fb:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt:hover, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.yt:hover, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.yt:hover {
+              .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins:hover, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.ins:hover, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.ins:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.fb:hover, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.fb:hover, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.fb:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt:hover, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.yt:hover, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.yt:hover, .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.add:hover, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.add:hover, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.add:hover {
                 opacity: 1; }
             .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.ins, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.ins, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.ins {
               background-image: url(../img/icon/ins.png); }
@@ -3131,6 +3131,8 @@ button {
               background-image: url(../img/icon/face.png); }
             .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.yt, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.yt, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.yt {
               background-image: url(../img/icon/yt.png); }
+            .course-content-section .course-content-wrapper .main-container .teacher-info .cont .btns a.add, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .teacher-info .cont .btns a.add, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .teacher-info .cont .btns a.add {
+              background-image: url(../img/icon/add.png); }
     .course-content-section .course-content-wrapper .main-container .tabcontent, .course-content-section .course-content-wrapper .nav-before .nav-bar-wrapper .tabcontent, .nav-before .course-content-section .course-content-wrapper .nav-bar-wrapper .tabcontent {
       -webkit-animation: fadeInDown 1s;
       animation: fadeInDown 1s; }
@@ -4503,7 +4505,7 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-top: 7rem; }
+  padding-top: 9rem; }
   @media (max-width: 1150px) {
     .main-info-wrapper {
       width: 85%; } }
@@ -4553,7 +4555,8 @@ button {
           .main-info-wrapper .left-part .info-wrapper-left .container .btns .fb,
           .main-info-wrapper .left-part .info-wrapper-left .container .btns .ins,
           .main-info-wrapper .left-part .info-wrapper-left .container .btns .yt,
-          .main-info-wrapper .left-part .info-wrapper-left .container .btns .mail {
+          .main-info-wrapper .left-part .info-wrapper-left .container .btns .mail,
+          .main-info-wrapper .left-part .info-wrapper-left .container .btns .add {
             display: inline-block;
             height: 30px;
             width: 30px;
@@ -4566,7 +4569,8 @@ button {
             .main-info-wrapper .left-part .info-wrapper-left .container .btns .fb:hover,
             .main-info-wrapper .left-part .info-wrapper-left .container .btns .ins:hover,
             .main-info-wrapper .left-part .info-wrapper-left .container .btns .yt:hover,
-            .main-info-wrapper .left-part .info-wrapper-left .container .btns .mail:hover {
+            .main-info-wrapper .left-part .info-wrapper-left .container .btns .mail:hover,
+            .main-info-wrapper .left-part .info-wrapper-left .container .btns .add:hover {
               opacity: 1; }
           .main-info-wrapper .left-part .info-wrapper-left .container .btns .fb {
             background-image: url(../img/icon/face.png); }
@@ -4576,6 +4580,8 @@ button {
             background-image: url(../img/icon/yt.png); }
           .main-info-wrapper .left-part .info-wrapper-left .container .btns .mail {
             background-image: url(../img/icon/mail.png); }
+          .main-info-wrapper .left-part .info-wrapper-left .container .btns .add {
+            background-image: url(../img/icon/add.png); }
         .main-info-wrapper .left-part .info-wrapper-left .container .c-info-container {
           width: 80%;
           margin: 1rem auto;
@@ -5900,7 +5906,7 @@ footer {
           color: #969696;
           margin-right: 3px;
           margin-top: 5px; }
-          .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.ins, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.fb, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.fb, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.fb, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.yt, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt {
+          .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.ins, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.fb, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.fb, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.fb, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.yt, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.add, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.add, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.add {
             height: 30px;
             width: 30px;
             background-size: cover;
@@ -5909,7 +5915,7 @@ footer {
             -webkit-transition: .3s;
             -o-transition: .3s;
             transition: .3s; }
-            .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.ins:hover, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins:hover, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins:hover, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.fb:hover, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.fb:hover, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.fb:hover, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.yt:hover, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt:hover, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt:hover {
+            .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.ins:hover, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins:hover, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins:hover, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.fb:hover, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.fb:hover, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.fb:hover, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.yt:hover, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt:hover, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt:hover, .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.add:hover, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.add:hover, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.add:hover {
               opacity: 1; }
           .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.ins, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.ins {
             background-image: url(../img/icon/ins.png); }
@@ -5917,6 +5923,8 @@ footer {
             background-image: url(../img/icon/face.png); }
           .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.yt, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.yt {
             background-image: url(../img/icon/yt.png); }
+          .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user a.add, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.add, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user a.add {
+            background-image: url(../img/icon/add.png); }
         .nspage.subindex.main-content-section .main-container .news-wrapper .inner-section.writer .user .more, .nspage.subindex.main-content-section .nav-before .nav-bar-wrapper .news-wrapper .inner-section.writer .user .more, .nav-before .nspage.subindex.main-content-section .nav-bar-wrapper .news-wrapper .inner-section.writer .user .more {
           border: 1px solid #969696;
           padding: 5px 15px;

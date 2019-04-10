@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>青馬學院/會員中心/資源廣場</title>
+
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="plugins/mmenu/jquery.mmenu.all.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css">
+  <link href="css/admin.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="navbar-custom">
+  <div id="wrapper" class="admin">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="top-area"></div>
+      <div class="container-fluid navigation"> <a href="index.html" class="navbar-brand">
+          <ul class="home">
+            <li class="img"><img src="img/logo-school.png" class="" alt="青馬影展">
+              <span class="title">青馬學院 - 會員中心</span>
+            </li>
+          </ul>
+        </a>
+        <ul class="nav top pull-right">
+          <li class="p-x"><a href="https://www.youthgoldenhorse.org/" target="_blank">青馬基金會</a></li>
+          <li class="p-x"><a href="http://www.youthgoldenhorse.com/" target="_blank">青馬影展</a></li>
+          <li class="nav-search p-x">
+            <form action="#">
+              <label for="search"></label>
+              <input type="text" id="search" placeholder="Search...">
+              <i id="search" class="glyphicon glyphicon-search"></i>
+            </form>
+          </li>
+          <li><a href="#menu" class="mmenu switch"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 登入後使用此(側拉選單/ICON白) -->
+
+          <li><a href="admin-login.html" class="login"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 尚未登入使用此(彈出視窗/ICON灰) -->
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- admin -->
+    <!--wrapper start-->
+    <div class="container-fluid">
+      <article>
+        <div class="row-flex">
+          <!--left nav-->
+          <nav id="sidebar" class="col-sm-2 hidden-xs">
+            <ul class="sidebar-menu">
+              <li class="text-right">會員中心</li>
+              <li><a href="admin.html"><i class="glyphicon glyphicon-folder-open"></i><span>我的收藏</span></a></li>
+              <li><a href="admin-upload.html"><i class="glyphicon glyphicon-shopping-cart"></i><span>已購買課程</span></a>
+              </li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-pushpin"></i><span>我的追蹤</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-pencil"></i><span>發表文章</span></a></li>
+              <li class="active"><a href="admin-list.html"><i
+                    class="glyphicon glyphicon-eye-open"></i><span>建立活動</span></a></li>
+              <li><a href="admin-point.html"><i class="glyphicon glyphicon-qrcode"></i><span>推廣點數</span></a></li>
+              <li><a href="admin-point.html"><i class="glyphicon glyphicon-list-alt"></i><span>資訊廣場</span></a></li>
+              <li><a href="admin-resource-list.html"><i class="glyphicon glyphicon-retweet"></i><span>資源廣場</span></a>
+              </li>
+            </ul>
+          </nav>
+          <!--/left nav-->
+
+          <section class="col-sm-10">
+            <ul class="row row-flex tabbtn">
+              <li class="col-xs-4 active"><a href="admin-resource-active.html">推廣活動</a></li>
+              <li class="col-xs-4"><a href="admin-resource-offer.html">廠商優惠</a></li>
+              <li class="col-xs-4"><a href="admin-resource-pair.html">人才配對</a></li>
+            </ul>
+            <form>
+              <div class="panel-body col-sm-10">
+                <!--form-->
+                <div class="form form-horizontal">
+                  <div class="form-group row text-center">
+                    <h6 class="paddingtop-20">填寫活動訊息</h6>
+                  </div>
+                  <div class="form-group row">
+                    <label class="control-label col-sm-2" for="">名稱</label>
+                    <div class="col-sm-10">
+                      <input class="form-control" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2">類別</label>
+                    <div class="col-sm-4">
+                      <select class="form-control">
+                        <option value="">活動</option>
+                        <option value="1">徵才</option>
+                        <option value="2">優惠</option>
+                      </select>
+                    </div>
+                    <label class="control-label col-sm-2" for="">時間</label>
+                    <div class="col-sm-4">
+                      <select class="form-control">
+                        <option value="">...</option>
+                        <option value="1">...</option>
+                        <option value="2">...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="control-label col-sm-2" for="">網址</label>
+                    <div class="col-sm-10">
+                      <input class="form-control" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="content"><i class="fa fa-star text-danger"
+                        aria-hidden="true"></i>簡介</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="content"><i class="fa fa-star text-danger"
+                        aria-hidden="true"></i>內容</label>
+                    <div class="col-sm-10"> HTML編輯器 </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="content"><i class="fa fa-star text-danger"
+                        aria-hidden="true"></i>封面</label>
+                    <div class="col-sm-10 row">
+                      <div class="col-sm-4"> <img src="img/cover/18.jpg" class="img-responsive" alt="">
+                        <div class="text-center paddingtop-20">
+                          <input class="btn btn-default" type="file">
+                        </div>
+                      </div>
+                      <div class="col-sm-8">請提供 JPEG、PNG 或 BMP 檔，尺寸須符合 (16:9)，至少 1280 x 720 px，2MB 以內。 </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="">聯絡人</label>
+                    <div class="col-sm-4">
+                      <input class="form-control" type="text">
+                    </div>
+                    <label class="control-label col-sm-2" for="">EMAIL</label>
+                    <div class="col-sm-4">
+                      <input class="form-control" placeholder="" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-sm-2" for="">YOUTUBE</label>
+                    <div class="col-sm-4">
+                      <input class="form-control" type="text">
+                    </div>
+                    <label class="control-label col-sm-2" for="">FB</label>
+                    <div class="col-sm-4">
+                      <input class="form-control" placeholder="" type="text">
+                    </div>
+                  </div>
+
+
+                  <div class="form-group row">
+                    <label class="control-label col-sm-2" for="">電話</label>
+                    <div class="col-sm-4">
+                      <input class="form-control" placeholder="" type="text">
+                    </div>
+                    <label class="control-label col-sm-2" for="">地址</label>
+                    <div class="col-sm-4">
+                      <input class="form-control" placeholder="" type="text">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="control-label col-sm-2" for="">備註</label>
+                    <div class="col-sm-10">
+                      <input class="form-control" placeholder="" type="text">
+                    </div>
+                  </div>
+
+                  <!--  form Buttons -->
+                  <div class="col-sm-12 form-group sent text-center">
+                    <button class="btn btn-default btn-black white" type="submit">儲存發佈</button>
+                    <button class="btn btn-default" type="button">取消</button>
+                  </div>
+                </div>
+              </div>
+              <!--panel-body-->
+            </form>
+          </section>
+        </div>
+        <!--row-flex-->
+      </article>
+    </div>
+    <!--/wrapper-->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>SITE MAP</h5>
+                <ul>
+                  <li><a href="#">關於我們</a></li>
+                  <li><a href="#">最新消息</a></li>
+                  <li><a href="#">影展訊息</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>CONTACT</h5>
+                <p> 台北市中山區長春路210號2樓 2F.，No.210，ChangChun Road, Zhongshan Dist，Taipei City 10487，Taiwan（R.O.C） </p>
+                <ul>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-earphone"></i> </span> Phone I
+                    +886-2-2506-3611 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-print"></i> </span> Fax I
+                    +886-2-2506-3220 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-envelope"></i> </span>
+                    polly@youthgoldenhorse.org </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Follow us</h5>
+                <ul>
+                  <li>青馬基金會</li>
+                  <li>FACEBOOK</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="text-left">
+                  <p>全球華人青馬影展文化藝術基金會 © 2018 版权所有 BY Global Chinese Qing-Ma Film Festival Culture And Arts Foundation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInRight" data-wow-delay="0.1s">
+                <div class="text-right"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="glyphicon glyphicon-chevron-up active"></i></a>
+
+  <!-- mmenu -->
+
+  <nav id="menu">
+    <ul>
+      <li><a href="#">Hi KEVIN<i class="glyphicon glyphicon-edit"></i></a></li>
+      <li><a href="#">
+          <p>您目前擁有<span>100</span></p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-folder-open"></i>收　藏</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-shopping-cart"></i>已購買</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-pushpin"></i>追　蹤</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-pencil"></i>發　表</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-th-list"></i>活　動</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-off"></i>登　出</p>
+        </a> </li>
+      <li>
+        <form>
+          <div class="input-group">
+            <input class="form-control" name="txtKeyword" id="txtKeyword" value="" placeholder="關鍵字" maxlength=""
+              type="text">
+            <i class="input-group-btn">
+              <button type="submit" class="btn btn-default">查詢</button>
+            </i> </div>
+        </form>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <!--延遲加載-->
+  <script src="plugins/slick/slick.js"></script>
+  <!--下方輪播-->
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+      $(".variable").slick({
+        centerMode: true,
+        variableWidth: true
+      });
+
+    });
+  </script>
+  <script src="plugins/mmenu/jquery.mmenu.all.js"></script>
+  <!--SILDNAV MMENU-->
+  <script>
+    jQuery(document).ready(function ($) {
+
+      $("#menu").mmenu({
+        "extensions": [
+          "pagedim-black",
+          "position-right",
+          "theme-white",
+          "listview-justify",
+          "shadow-page"
+        ],
+        "navbar": false,
+        "iconPanels": true,
+        "navbars": [
+          {
+            "position": "bottom",
+            "content": [
+              "<a  href='http://www.youthgoldenhorse.com/' target='_blank'>影  展</a>",
+              "<a  href='https://www.youthgoldenhorse.org/' target='_blank'>基金會</a>",
+              "<a  href='https://zh-tw.facebook.com/youthgoldenhorse/' target='_blank'>FB</a>"
+            ]
+          }
+        ]
+      });
+
+
+    });
+  </script>
+  <script src="js/custom.js"></script>
+  <!--custom-->
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

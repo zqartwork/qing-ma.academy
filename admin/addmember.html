@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>青馬影展/註冊帳號</title>
+
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="plugins/mmenu/jquery.mmenu.all.css" rel="stylesheet" />
+  <link href="css/admin.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar-custom">
+  <div id="wrapper" class="admin">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="top-area"></div>
+      <div class="container-fluid navigation"> <a href="index.html" class="navbar-brand">
+          <ul class="home">
+            <li class="img"><img src="img/logo-school.png" class="" alt="青馬影展">
+              <span class="title">青馬學院 - 會員中心</span>
+            </li>
+          </ul>
+        </a>
+        <ul class="nav top pull-right">
+          <li class="p-x"><a href="https://www.youthgoldenhorse.org/" target="_blank">青馬基金會</a></li>
+          <li class="p-x"><a href="http://www.youthgoldenhorse.com/" target="_blank">青馬影展</a></li>
+          <li class="nav-search p-x">
+            <form action="#">
+              <label for="search"></label>
+              <input type="text" id="search" placeholder="Search...">
+              <i id="search" class="glyphicon glyphicon-search"></i>
+            </form>
+          </li>
+          <li><a href="#menu" class="mmenu switch"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 登入後使用此(側拉選單/ICON白) -->
+
+          <li><a href="admin-login.html" class="login"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 尚未登入使用此(彈出視窗/ICON灰) -->
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- admin -->
+    <!--wrapper start-->
+    <div class="container-fluid">
+      <article class="min-h">
+        <section>
+          <div class="panel-body text-center">
+            <h2>註冊會員</h2>
+            <hr>
+            <p>會員資料攸關您的權益，請儘量詳實填寫以下資料</p>
+            <hr>
+            <form>
+              <div class="form form-horizontal text-left formmedium">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="">姓名</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="">EMAIL</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-xs-2" for="">生日</label>
+                  <div class="col-xs-4">
+                    <input class="form-control" type="text" placeholder="">
+                  </div>
+                  <label class="control-label col-xs-2">性別</label>
+                  <div class="col-xs-4">
+                    <label class="radio-inline">
+                      <input name="optradio" type="radio">
+                      男</label>
+                    <label class="radio-inline">
+                      <input name="optradio" type="radio">
+                      女</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="">暱稱</label>
+                  <div class="col-sm-4">
+                    <input class="form-control" type="text" placeholder="">
+                  </div>
+                  <label class="control-label col-sm-2" for="">電話</label>
+                  <div class="col-sm-4">
+                    <input class="form-control" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="">地址</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2">學校</label>
+                  <div class="col-sm-4">
+                    <select class="form-control">
+                      <option value="">銘傳</option>
+                      <option value="1">台藝大</option>
+                      <option value="2">台科大</option>
+                    </select>
+                  </div>
+                  <label class="control-label col-sm-2" for="">科系</label>
+                  <div class="col-sm-4">
+                    <input class="form-control" type="text">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="">密碼</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="">確認密碼</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" placeholder="請再次輸入密碼">
+                  </div>
+                </div>
+                <!-- form CLICK-->
+                <div class="form-group">
+                  <label class="control-label col-sm-2">可複選</label>
+                  <div class="col-sm-10">
+                    <label class="checkbox-inline">
+                      <input value="" type="checkbox">
+                      Option 1</label>
+                    <label class="checkbox-inline">
+                      <input value="" type="checkbox">
+                      Option 2</label>
+                    <label class="checkbox-inline">
+                      <input value="" type="checkbox">
+                      Option 3</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="content"><i class="fa fa-star text-danger"
+                      aria-hidden="true"></i>自我介紹</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+                <h6 class="form-group text-center col-sm-12">財團法人全球華人青馬影展文化藝術基金會互動平台會員規範</h6>
+                <p class="form-group col-sm-12">
+                  財團法人全球華人青馬影展文化藝術基金會為保障會員之權益，請於註冊成為會員並使用財團法人全球華人青馬影展文化藝術基金會之互動平台服務前，詳細閱讀財團法人全球華人青馬影展文化藝術基金會互動平台(以下簡稱「青馬平台」)所有內容，同意遵守以下所有內容。
+                </p>
+                <p class="form-group text-center col-sm-12">遵守本會員規範及法律規定</p>
+                <ul class="count form-group col-sm-12">
+                  <li>
+                    您註冊青馬平台官網註冊後，即成為會員，可使用青馬平台之各項服務，當會員開始使用青馬平台之各項服務時，即表示已閱讀、瞭解和同意接受本會員規範及所有注意事項之拘束，並承諾遵守相關法規及一切國際網際網路規定與慣例，若會員不同意本會員規範之內容，會員應立即停止使用青馬平台。
+                  </li>
+                  <li>
+                    青馬平台會員應遵守之法律規定，請參考中華民國刑法、電腦處理個人資料保護法、專利法、著作權法、商標法、智慧財產權相關法規、消費者保護法、公平交易法、兒童及少年性交易防制條例、性侵害犯罪防治法、藥事法、野生動物保育法、毒品危害防治條例及槍砲彈藥刀械管制條例等相關法律規定。
+                  </li>
+                </ul>
+                <div class="form-group col-sm-12 bg-warning">
+                  <input value="" type="checkbox">
+                  我已詳讀並同意以上權益規章</div>
+                <hr>
+                <div class="form-group col-xs-12 text-left">
+                  <div class="col-xs-6 row">
+                    <input class="form-control" name="txtKeyword" value="" placeholder="請輸入圖形驗證碼" maxlength=""
+                      type="text">
+                  </div>
+                  <div class="col-xs-6"> <img src="img/icon/captcha.ashx.gif" alt="若看不清楚，請點選更新按鈕" width="136"
+                      height="34" class="pull-left"> <i class="glyphicon glyphicon-refresh"></i> </div>
+                </div>
+                <!--  form Buttons -->
+                <div class="col-sm-12 form-group sent text-center">
+                  <button class="btn btn-default btn-black white" type="submit">Save</button>
+                  <button class="btn btn-default" type="button">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </article>
+    </div>
+    <!--/wrapper-->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>SITE MAP</h5>
+                <ul>
+                  <li><a href="#">關於我們</a></li>
+                  <li><a href="#">最新消息</a></li>
+                  <li><a href="#">影展訊息</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>CONTACT</h5>
+                <p> 台北市中山區長春路210號2樓 2F.，No.210，ChangChun Road, Zhongshan Dist，Taipei City 10487，Taiwan（R.O.C） </p>
+                <ul>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-earphone"></i> </span> Phone I
+                    +886-2-2506-3611 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-print"></i> </span> Fax I
+                    +886-2-2506-3220 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-envelope"></i> </span>
+                    polly@youthgoldenhorse.org </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Follow us</h5>
+                <ul>
+                  <li>青馬基金會</li>
+                  <li>FACEBOOK</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="text-left">
+                  <p>全球華人青馬影展文化藝術基金會 © 2018 版权所有 BY Global Chinese Qing-Ma Film Festival Culture And Arts Foundation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInRight" data-wow-delay="0.1s">
+                <div class="text-right"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+  <!-- mmenu -->
+  <nav id="menu">
+
+    <ul>
+      <li><a href="#">Hi KEVIN<i class="glyphicon glyphicon-edit"></i></a></li>
+      <li><a href="#">
+          <p>您目前擁有<span>100</span></p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-open"></i>上傳</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-film"></i>管理</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-heart"></i>最愛</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-eye-open"></i>紀錄</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-fire"></i>推廣</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-retweet"></i>資源</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-off"></i>登出</p>
+        </a> </li>
+      <li>
+        <form>
+          <div class="input-group">
+            <input class="form-control" name="txtKeyword" id="txtKeyword" value="" placeholder="關鍵字" maxlength=""
+              type="text">
+            <i class="input-group-btn"><button type="submit" class="btn btn-default">查詢</button></i>
+          </div>
+        </form>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <!--延遲加載-->
+  <script src="plugins/mmenu/jquery.mmenu.all.js"></script>
+  <!--SILDNAV MMENU-->
+  <script>
+    jQuery(document).ready(function ($) {
+
+      $("#menu").mmenu({
+        "extensions": [
+          "pagedim-black",
+          "position-right",
+          "theme-white",
+          "listview-justify",
+          "shadow-page"
+        ],
+        "navbar": false,
+        "iconPanels": true,
+        "navbars": [
+          {
+            "position": "bottom",
+            "content": [
+              "<a class='fa fa-envelope' href='#/'></a>",
+              "<a class='fa fa-twitter' href='#/'></a>",
+              "<a class='fa fa-facebook' href='#/'></a>"
+            ]
+          }
+        ]
+      });
+
+
+    });
+  </script>
+  <script src="js/custom.js"></script>
+  <!--custom-->
+
+</body>
+
+</html>

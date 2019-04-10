@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>青馬學院/會員中心/達人課程</title>
+
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="plugins/mmenu/jquery.mmenu.all.css" rel="stylesheet" />
+  <link href="css/admin.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar-custom">
+  <div id="wrapper" class="admin">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="top-area"></div>
+      <div class="container-fluid navigation"> <a href="index.html" class="navbar-brand">
+          <ul class="home">
+            <li class="img"><img src="img/logo-school.png" class="" alt="青馬影展">
+              <span class="title">青馬學院 - 會員中心</span>
+            </li>
+          </ul>
+        </a>
+        <ul class="nav top pull-right">
+          <li class="p-x"><a href="https://www.youthgoldenhorse.org/" target="_blank">青馬基金會</a></li>
+          <li class="p-x"><a href="http://www.youthgoldenhorse.com/" target="_blank">青馬影展</a></li>
+          <li class="nav-search p-x">
+            <form action="#">
+              <label for="search"></label>
+              <input type="text" id="search" placeholder="Search...">
+              <i id="search" class="glyphicon glyphicon-search"></i>
+            </form>
+          </li>
+          <li><a href="#menu" class="mmenu switch"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 登入後使用此(側拉選單/ICON白) -->
+
+          <li><a href="admin-login.html" class="login"><i class="glyphicon glyphicon-user"></i></a></li>
+          <!-- 尚未登入使用此(彈出視窗/ICON灰) -->
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- admin -->
+    <!--wrapper start-->
+    <div class="container-fluid">
+      <article>
+        <div class="row-flex">
+          <!--left nav-->
+          <nav id="sidebar" class="col-sm-2 hidden-xs">
+            <ul class="sidebar-menu">
+              <li class="text-right">會員中心</li>
+              <li><a href="admin.html"><i class="glyphicon glyphicon-user"></i><span>會員資料</span></a></li>
+              <li class="active"><a href="admin-upload.html"><i
+                    class="glyphicon glyphicon-open"></i><span>上傳影片</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-film"></i><span>影片管理</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-heart"></i><span>最愛影片</span></a></li>
+              <li><a href="admin-list.html"><i class="glyphicon glyphicon-eye-open"></i><span>觀看歷史</span></a></li>
+              <li><a href="admin-point.html"><i class="glyphicon glyphicon-fire"></i><span>推廣點數</span></a></li>
+            </ul>
+          </nav>
+          <!--/left nav-->
+
+          <section class="col-sm-10">
+            <div class="panel-body col-sm-10">
+              <h2 class="text-center">達人(youtuber)課程上傳</h2>
+
+              <div class="form form-horizontal col-sm-12">
+                <div class="form-group row text-center paddingtop-20">
+                  <h6 class="paddingtop-20">課程資料</h6>
+                </div>
+
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="">課程名稱</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="content"><i class="fa fa-star text-danger"
+                      aria-hidden="true"></i>前導說明</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control"
+                      placeholder="首頁簡介,請提供20字內簡述。（如:SONY 85mm f1.4 GM，我最喜歡的SONY鏡頭！）"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="content"><i class="fa fa-star text-danger"
+                      aria-hidden="true"></i>課程章節</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" placeholder="如:I:鏡頭開箱&#13;&#10;II:人物散景&#13;&#10;II:夜景"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="content"><i class="fa fa-star text-danger"
+                      aria-hidden="true"></i>課後成效</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+
+
+                <div class="row-flex upload">
+                  <link href="css/uploadfile.min.css" rel="stylesheet">
+                  <div class="col-sm-6">
+                    <div class="tag upload">
+
+                      <p>檔案限制500MB內</p>
+                      <div id="fileuploader">
+                        <h6>上傳試看片<i class="glyphicon glyphicon-hand-up"></i></h6>
+                      </div>
+                      <div class="ajax-file-upload">
+                        <h6>刪除<i class="glyphicon glyphicon-trash"></i></h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="tag upload">
+
+                      <p>檔案限制1G內</p>
+                      <div id="fileuploader2">
+                        <h6>上傳正式片<i class="glyphicon glyphicon-hand-up"></i></h6>
+                      </div>
+                      <div class="ajax-file-upload">
+                        <h6>刪除<i class="glyphicon glyphicon-trash"></i></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr>
+                <h6 class="text-center">上傳封面/圖片/照片/影片預覽圖</h6>
+                <hr>
+
+                <div class="form-group">
+
+                  <div class="col-sm-4"> <img src="img/cover/18.jpg" class="img-responsive" alt="">
+                    <div class="text-center paddingtop-20">
+                      <input class="btn btn-default" type="file">此圖片同時預設為首頁封面圖<br>(尺寸:16比9)</input>
+                    </div>
+                  </div>
+                  <div class="col-sm-4"> <img src="img/cover/18.jpg" class="img-responsive" alt="">
+                    <div class="text-center paddingtop-20">
+                      <input class="btn btn-default" type="file"></input>
+                    </div>
+                  </div>
+                  <div class="col-sm-4"> <img src="img/cover/18.jpg" class="img-responsive" alt="">
+                    <div class="text-center paddingtop-20">
+                      <input class="btn btn-default" type="file"></input>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+
+
+
+
+                <!--  form Buttons -->
+                <div class="col-sm-12 form-group sent text-center row">
+                  <button class="btn btn-default btn-black white" type="submit">儲存並發布</button>
+                </div>
+              </div>
+            </div>
+            <!--panel-body-->
+          </section>
+        </div>
+        <!--row-flex-->
+      </article>
+    </div>
+    <!--/wrapper-->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>SITE MAP</h5>
+                <ul>
+                  <li><a href="#">關於我們</a></li>
+                  <li><a href="#">最新消息</a></li>
+                  <li><a href="#">影展訊息</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>CONTACT</h5>
+                <p> 台北市中山區長春路210號2樓 2F.，No.210，ChangChun Road, Zhongshan Dist，Taipei City 10487，Taiwan（R.O.C） </p>
+                <ul>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-earphone"></i> </span> Phone I
+                    +886-2-2506-3611 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-print"></i> </span> Fax I
+                    +886-2-2506-3220 </li>
+                  <li> <span class="fa-stack fa-lg"> <i class="glyphicon glyphicon-envelope"></i> </span>
+                    polly@youthgoldenhorse.org </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <h5>Follow us</h5>
+                <ul>
+                  <li>青馬基金會</li>
+                  <li>FACEBOOK</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="text-left">
+                  <p>全球華人青馬影展文化藝術基金會 © 2018 版权所有 BY Global Chinese Qing-Ma Film Festival Culture And Arts Foundation</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInRight" data-wow-delay="0.1s">
+                <div class="text-right"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="scrollup"><i class="glyphicon glyphicon-chevron-up active"></i></a>
+
+  <!-- mmenu -->
+  <nav id="menu">
+    <ul>
+      <li><a href="#">Hi KEVIN<i class="glyphicon glyphicon-edit"></i></a></li>
+      <li><a href="#">
+          <p>您目前擁有<span>100</span></p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-open"></i>上傳</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-film"></i>管理</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-heart"></i>最愛</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-eye-open"></i>紀錄</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-fire"></i>推廣</p>
+        </a></li>
+      <li><a href="#">
+          <p><i class="glyphicon glyphicon-off"></i>登出</p>
+        </a> </li>
+    </ul>
+  </nav>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <!--延遲加載-->
+  <script src="plugins/mmenu/jquery.mmenu.all.js"></script>
+  <!--SILDNAV MMENU-->
+  <script>
+    jQuery(document).ready(function ($) {
+
+      $("#menu").mmenu({
+        "extensions": [
+          "pagedim-black",
+          "position-right",
+          "theme-white",
+          "listview-justify",
+          "shadow-page"
+        ],
+        "navbar": false,
+        "iconPanels": true,
+        "navbars": [
+          {
+            "position": "bottom",
+            "content": [
+              "<a class='fa fa-envelope' href='#/'></a>",
+              "<a class='fa fa-twitter' href='#/'></a>",
+              "<a class='fa fa-facebook' href='#/'></a>"
+            ]
+          }
+        ]
+      });
+
+
+    });
+  </script>
+  <script src="js/jquery.uploadfile.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#fileuploader").uploadFile({
+        url: "upload.php",
+        fileName: "myfile"
+      });
+
+      $("#fileuploader2").uploadFile({
+        url: "upload.php",
+        fileName: "myfile"
+      });
+
+      $("#fileuploader3").uploadFile({
+        url: "upload.php",
+        fileName: "myfile"
+      });
+
+    });
+  </script>
+  <script src="js/custom.js"></script>
+  <!--custom-->
+</body>
+
+</html>
