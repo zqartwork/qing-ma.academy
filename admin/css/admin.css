@@ -34,9 +34,17 @@
               border-right: 5px solid #ffc240;
               background: #ffffff50; }
   .wrapper.admin .main-info-wrapper {
-    width: 100%;
-    margin-left: 3em;
+    width: 70%;
+    max-width: 1150px;
     padding-top: 5em; }
+    @media (max-width: 1150px) {
+      .wrapper.admin .main-info-wrapper {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto; } }
+    @media (max-width: 620px) {
+      .wrapper.admin .main-info-wrapper {
+        width: 80%; } }
 
 @media (max-width: 1150px) {
   .wrapper.admin .container-fluid .navbar-default .sidebar-collapse {
