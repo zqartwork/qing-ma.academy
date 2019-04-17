@@ -1,4 +1,5 @@
-;(function(root, factory) {
+;
+(function (root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], factory);
   } else if (typeof exports === 'object') {
@@ -6,285 +7,2185 @@
   } else {
     root.jquery_mmenu_all_js = factory(root.jQuery);
   }
-}(this, function(jQuery) {
-/*
- * jQuery mmenu v7.0.3
- * @requires jQuery 1.7.0 or later
- *
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- * www.frebsite.nl
- *
- * License: CC-BY-NC-4.0
- * http://creativecommons.org/licenses/by-nc/4.0/
- */
-!function(e){function t(){e[n].glbl||(l={$wndw:e(window),$docu:e(document),$html:e("html"),$body:e("body")},s={},a={},r={},e.each([s,a,r],function(e,t){t.add=function(e){e=e.split(" ");for(var n=0,i=e.length;n<i;n++)t[e[n]]=t.mm(e[n])}}),s.mm=function(e){return"mm-"+e},s.add("wrapper menu panels panel nopanel navbar listview nolistview listitem btn hidden"),s.umm=function(e){return"mm-"==e.slice(0,3)&&(e=e.slice(3)),e},a.mm=function(e){return"mm-"+e},a.add("parent child title"),r.mm=function(e){return e+".mm"},r.add("transitionend webkitTransitionEnd click scroll resize keydown mousedown mouseup touchstart touchmove touchend orientationchange"),e[n]._c=s,e[n]._d=a,e[n]._e=r,e[n].glbl=l)}var n="mmenu",i="7.0.3";if(!(e[n]&&e[n].version>i)){e[n]=function(e,t,n){return this.$menu=e,this._api=["bind","getInstance","initPanels","openPanel","closePanel","closeAllPanels","setSelected"],this.opts=t,this.conf=n,this.vars={},this.cbck={},this.mtch={},"function"==typeof this.___deprecated&&this.___deprecated(),this._initHooks(),this._initWrappers(),this._initAddons(),this._initExtensions(),this._initMenu(),this._initPanels(),this._initOpened(),this._initAnchors(),this._initMatchMedia(),"function"==typeof this.___debug&&this.___debug(),this},e[n].version=i,e[n].uniqueId=0,e[n].wrappers={},e[n].addons={},e[n].defaults={hooks:{},extensions:[],wrappers:[],navbar:{add:!0,title:"Menu",titleLink:"parent"},onClick:{setSelected:!0},slidingSubmenus:!0},e[n].configuration={classNames:{divider:"Divider",inset:"Inset",nolistview:"NoListview",nopanel:"NoPanel",panel:"Panel",selected:"Selected",spacer:"Spacer",vertical:"Vertical"},clone:!1,openingInterval:25,panelNodetype:"ul, ol, div",transitionDuration:400},e[n].prototype={getInstance:function(){return this},initPanels:function(e){this._initPanels(e)},openPanel:function(t,i){if(this.trigger("openPanel:before",t),t&&t.length&&(t.is("."+s.panel)||(t=t.closest("."+s.panel)),t.is("."+s.panel))){var r=this;if("boolean"!=typeof i&&(i=!0),t.parent("."+s.listitem+"_vertical").length)t.parents("."+s.listitem+"_vertical").addClass(s.listitem+"_opened").children("."+s.panel).removeClass(s.hidden),this.openPanel(t.parents("."+s.panel).not(function(){return e(this).parent("."+s.listitem+"_vertical").length}).first()),this.trigger("openPanel:start",t),this.trigger("openPanel:finish",t);else{if(t.hasClass(s.panel+"_opened"))return;var l=this.$pnls.children("."+s.panel),o=this.$pnls.children("."+s.panel+"_opened");if(!e[n].support.csstransitions)return o.addClass(s.hidden).removeClass(s.panel+"_opened"),t.removeClass(s.hidden).addClass(s.panel+"_opened"),this.trigger("openPanel:start",t),void this.trigger("openPanel:finish",t);l.not(t).removeClass(s.panel+"_opened-parent");for(var d=t.data(a.parent);d;)d=d.closest("."+s.panel),d.parent("."+s.listitem+"_vertical").length||d.addClass(s.panel+"_opened-parent"),d=d.data(a.parent);l.removeClass(s.panel+"_highest").not(o).not(t).addClass(s.hidden),t.removeClass(s.hidden);var c=function(){o.removeClass(s.panel+"_opened"),t.addClass(s.panel+"_opened"),t.hasClass(s.panel+"_opened-parent")?(o.addClass(s.panel+"_highest"),t.removeClass(s.panel+"_opened-parent")):(o.addClass(s.panel+"_opened-parent"),t.addClass(s.panel+"_highest")),r.trigger("openPanel:start",t)},h=function(){o.removeClass(s.panel+"_highest").addClass(s.hidden),t.removeClass(s.panel+"_highest"),r.trigger("openPanel:finish",t)};i&&!t.hasClass(s.panel+"_noanimation")?setTimeout(function(){r.__transitionend(t,function(){h()},r.conf.transitionDuration),c()},r.conf.openingInterval):(c(),h())}this.trigger("openPanel:after",t)}},closePanel:function(e){this.trigger("closePanel:before",e);var t=e.parent();t.hasClass(s.listitem+"_vertical")&&(t.removeClass(s.listitem+"_opened"),e.addClass(s.hidden),this.trigger("closePanel",e)),this.trigger("closePanel:after",e)},closeAllPanels:function(e){this.trigger("closeAllPanels:before"),this.$pnls.find("."+s.listview).children().removeClass(s.listitem+"_selected").filter("."+s.listitem+"_vertical").removeClass(s.listitem+"_opened");var t=this.$pnls.children("."+s.panel),n=e&&e.length?e:t.first();this.$pnls.children("."+s.panel).not(n).removeClass(s.panel+"_opened").removeClass(s.panel+"_opened-parent").removeClass(s.panel+"_highest").addClass(s.hidden),this.openPanel(n,!1),this.trigger("closeAllPanels:after")},togglePanel:function(e){var t=e.parent();t.hasClass(s.listitem+"_vertical")&&this[t.hasClass(s.listitem+"_opened")?"closePanel":"openPanel"](e)},setSelected:function(e){this.trigger("setSelected:before",e),this.$menu.find("."+s.listitem+"_selected").removeClass(s.listitem+"_selected"),e.addClass(s.listitem+"_selected"),this.trigger("setSelected:after",e)},bind:function(e,t){this.cbck[e]=this.cbck[e]||[],this.cbck[e].push(t)},trigger:function(){var e=this,t=Array.prototype.slice.call(arguments),n=t.shift();if(this.cbck[n])for(var i=0,s=this.cbck[n].length;i<s;i++)this.cbck[n][i].apply(e,t)},matchMedia:function(e,t,n){var i={yes:t,no:n};this.mtch[e]=this.mtch[e]||[],this.mtch[e].push(i)},_initHooks:function(){for(var e in this.opts.hooks)this.bind(e,this.opts.hooks[e])},_initWrappers:function(){this.trigger("initWrappers:before");for(var t=0;t<this.opts.wrappers.length;t++){var i=e[n].wrappers[this.opts.wrappers[t]];"function"==typeof i&&i.call(this)}this.trigger("initWrappers:after")},_initAddons:function(){this.trigger("initAddons:before");var t;for(t in e[n].addons)e[n].addons[t].add.call(this),e[n].addons[t].add=function(){};for(t in e[n].addons)e[n].addons[t].setup.call(this);this.trigger("initAddons:after")},_initExtensions:function(){this.trigger("initExtensions:before");var e=this;this.opts.extensions.constructor===Array&&(this.opts.extensions={all:this.opts.extensions});for(var t in this.opts.extensions)this.opts.extensions[t]=this.opts.extensions[t].length?s.menu+"_"+this.opts.extensions[t].join(" "+s.menu+"_"):"",this.opts.extensions[t]&&!function(t){e.matchMedia(t,function(){this.$menu.addClass(this.opts.extensions[t])},function(){this.$menu.removeClass(this.opts.extensions[t])})}(t);this.trigger("initExtensions:after")},_initMenu:function(){this.trigger("initMenu:before");this.conf.clone&&(this.$orig=this.$menu,this.$menu=this.$orig.clone(),this.$menu.add(this.$menu.find("[id]")).filter("[id]").each(function(){e(this).attr("id",s.mm(e(this).attr("id")))})),this.$menu.attr("id",this.$menu.attr("id")||this.__getUniqueId()),this.$pnls=e('<div class="'+s.panels+'" />').append(this.$menu.children(this.conf.panelNodetype)).prependTo(this.$menu),this.$menu.addClass(s.menu).parent().addClass(s.wrapper),this.trigger("initMenu:after")},_initPanels:function(t){this.trigger("initPanels:before",t),t=t||this.$pnls.children(this.conf.panelNodetype);var n=e(),i=this,a=function(t){t.filter(i.conf.panelNodetype).each(function(t){var r=i._initPanel(e(this));if(r){i._initNavbar(r),i._initListview(r),n=n.add(r);var l=r.children("."+s.listview).children("li").children(i.conf.panelNodeType).add(r.children("."+i.conf.classNames.panel));l.length&&a(l)}})};a(t),this.trigger("initPanels:after",n)},_initPanel:function(e){this.trigger("initPanel:before",e);if(e.hasClass(s.panel))return e;if(this.__refactorClass(e,this.conf.classNames.panel,s.panel),this.__refactorClass(e,this.conf.classNames.nopanel,s.nopanel),this.__refactorClass(e,this.conf.classNames.inset,s.listview+"_inset"),e.filter("."+s.listview+"_inset").addClass(s.nopanel),e.hasClass(s.nopanel))return!1;var t=e.hasClass(this.conf.classNames.vertical)||!this.opts.slidingSubmenus;e.removeClass(this.conf.classNames.vertical);var n=e.attr("id")||this.__getUniqueId();e.is("ul, ol")&&(e.removeAttr("id"),e.wrap("<div />"),e=e.parent()),e.attr("id",n),e.addClass(s.panel+" "+s.hidden);var i=e.parent("li");return t?i.addClass(s.listitem+"_vertical"):e.appendTo(this.$pnls),i.length&&(i.data(a.child,e),e.data(a.parent,i)),this.trigger("initPanel:after",e),e},_initNavbar:function(t){if(this.trigger("initNavbar:before",t),!t.children("."+s.navbar).length){var n=t.data(a.parent),i=e('<div class="'+s.navbar+'" />'),r=this.__getPanelTitle(t,this.opts.navbar.title),l="";if(n&&n.length){if(n.hasClass(s.listitem+"_vertical"))return;if(n.parent().is("."+s.listview))var o=n.children("a, span").not("."+s.btn+"_next");else var o=n.closest("."+s.panel).find('a[href="#'+t.attr("id")+'"]');o=o.first(),n=o.closest("."+s.panel);var d=n.attr("id");switch(r=this.__getPanelTitle(t,e("<span>"+o.text()+"</span>").text()),this.opts.navbar.titleLink){case"anchor":l=o.attr("href");break;case"parent":l="#"+d}i.append('<a class="'+s.btn+" "+s.btn+"_prev "+s.navbar+'__btn" href="#'+d+'" />')}else if(!this.opts.navbar.title)return;this.opts.navbar.add&&t.addClass(s.panel+"_has-navbar"),i.append('<a class="'+s.navbar+'__title"'+(l.length?' href="'+l+'"':"")+">"+r+"</a>").prependTo(t),this.trigger("initNavbar:after",t)}},_initListview:function(t){this.trigger("initListview:before",t);var n=this.__childAddBack(t,"ul, ol");this.__refactorClass(n,this.conf.classNames.nolistview,s.nolistview);var i=n.not("."+s.nolistview).addClass(s.listview).children().addClass(s.listitem);this.__refactorClass(i,this.conf.classNames.selected,s.listitem+"_selected"),this.__refactorClass(i,this.conf.classNames.divider,s.listitem+"_divider"),this.__refactorClass(i,this.conf.classNames.spacer,s.listitem+"_spacer");var r=t.data(a.parent);if(r&&r.is("."+s.listitem)&&!r.children("."+s.btn+"_next").length){var l=r.children("a, span").first(),o=e('<a class="'+s.btn+'_next" href="#'+t.attr("id")+'" />').insertBefore(l);l.is("span")&&o.addClass(s.btn+"_fullwidth")}this.trigger("initListview:after",t)},_initOpened:function(){this.trigger("initOpened:before");var e=this.$pnls.find("."+s.listitem+"_selected").removeClass(s.listitem+"_selected").last().addClass(s.listitem+"_selected"),t=e.length?e.closest("."+s.panel):this.$pnls.children("."+s.panel).first();this.openPanel(t,!1),this.trigger("initOpened:after")},_initAnchors:function(){this.trigger("initAnchors:before");var t=this;l.$body.on(r.click+"-oncanvas","a[href]",function(i){var a=e(this),r=a.attr("href"),l=t.$menu.find(a).length,o=a.is("."+s.listitem+" > a"),d=a.is('[rel="external"]')||a.is('[target="_blank"]');if(l&&r.length>1&&"#"==r.slice(0,1))try{var c=t.$menu.find(r);if(c.is("."+s.panel))return t[a.parent().hasClass(s.listitem+"_vertical")?"togglePanel":"openPanel"](c),void i.preventDefault()}catch(h){}var f={close:null,setSelected:null,preventDefault:"#"==r.slice(0,1)};for(var p in e[n].addons){var u=e[n].addons[p].clickAnchor.call(t,a,l,o,d);if(u){if("boolean"==typeof u)return void i.preventDefault();"object"==typeof u&&(f=e.extend({},f,u))}}l&&o&&!d&&(t.__valueOrFn(a,t.opts.onClick.setSelected,f.setSelected)&&t.setSelected(e(i.target).parent()),t.__valueOrFn(a,t.opts.onClick.preventDefault,f.preventDefault)&&i.preventDefault(),t.__valueOrFn(a,t.opts.onClick.close,f.close)&&t.opts.offCanvas&&"function"==typeof t.close&&t.close())}),this.trigger("initAnchors:after")},_initMatchMedia:function(){var e=this;for(var t in this.mtch)!function(){var n=t,i=window.matchMedia(n);e._fireMatchMedia(n,i),i.addListener(function(t){e._fireMatchMedia(n,t)})}()},_fireMatchMedia:function(e,t){for(var n=t.matches?"yes":"no",i=0;i<this.mtch[e].length;i++)this.mtch[e][i][n].call(this)},_getOriginalMenuId:function(){var e=this.$menu.attr("id");return this.conf.clone&&e&&e.length&&(e=s.umm(e)),e},__api:function(){var t=this,n={};return e.each(this._api,function(e){var i=this;n[i]=function(){var e=t[i].apply(t,arguments);return"undefined"==typeof e?n:e}}),n},__valueOrFn:function(e,t,n){if("function"==typeof t){var i=t.call(e[0]);if("undefined"!=typeof i)return i}return"function"!=typeof t&&"undefined"!=typeof t||"undefined"==typeof n?t:n},__getPanelTitle:function(t,i){var s;return"function"==typeof this.opts.navbar.title&&(s=this.opts.navbar.title.call(t[0])),"undefined"==typeof s&&(s=t.data(a.title)),"undefined"!=typeof s?s:"string"==typeof i?e[n].i18n(i):e[n].i18n(e[n].defaults.navbar.title)},__refactorClass:function(e,t,n){return e.filter("."+t).removeClass(t).addClass(n)},__findAddBack:function(e,t){return e.find(t).add(e.filter(t))},__childAddBack:function(e,t){return e.children(t).add(e.filter(t))},__filterListItems:function(e){return e.not("."+s.listitem+"_divider").not("."+s.hidden)},__filterListItemAnchors:function(e){return this.__filterListItems(e).children("a").not("."+s.btn+"_next")},__openPanelWoAnimation:function(e){e.hasClass(s.panel+"_noanimation")||(e.addClass(s.panel+"_noanimation"),this.__transitionend(e,function(){e.removeClass(s.panel+"_noanimation")},this.conf.openingInterval),this.openPanel(e))},__transitionend:function(e,t,n){var i=!1,s=function(n){"undefined"!=typeof n&&n.target!=e[0]||(i||(e.off(r.transitionend),e.off(r.webkitTransitionEnd),t.call(e[0])),i=!0)};e.on(r.transitionend,s),e.on(r.webkitTransitionEnd,s),setTimeout(s,1.1*n)},__getUniqueId:function(){return s.mm(e[n].uniqueId++)}},e.fn[n]=function(i,s){t(),i=e.extend(!0,{},e[n].defaults,i),s=e.extend(!0,{},e[n].configuration,s);var a=e();return this.each(function(){var t=e(this);if(!t.data(n)){var r=new e[n](t,i,s);r.$menu.data(n,r.__api()),a=a.add(r.$menu)}}),a},e[n].i18n=function(){var t={};return function(n){switch(typeof n){case"object":return e.extend(t,n),t;case"string":return t[n]||n;case"undefined":default:return t}}}(),e[n].support={touch:"ontouchstart"in window||navigator.msMaxTouchPoints||!1,csstransitions:function(){return"undefined"==typeof Modernizr||"undefined"==typeof Modernizr.csstransitions||Modernizr.csstransitions}(),csstransforms:function(){return"undefined"==typeof Modernizr||"undefined"==typeof Modernizr.csstransforms||Modernizr.csstransforms}(),csstransforms3d:function(){return"undefined"==typeof Modernizr||"undefined"==typeof Modernizr.csstransforms3d||Modernizr.csstransforms3d}()};var s,a,r,l}}(jQuery);
-/*
- * jQuery mmenu offCanvas add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var t="mmenu",n="offCanvas";e[t].addons[n]={setup:function(){if(this.opts[n]){var i=this.opts[n],s=this.conf[n];r=e[t].glbl,this._api=e.merge(this._api,["open","close","setPage"]),"object"!=typeof i&&(i={}),i=this.opts[n]=e.extend(!0,{},e[t].defaults[n],i),"string"!=typeof s.pageSelector&&(s.pageSelector="> "+s.pageNodetype),this.vars.opened=!1;var a=[o.menu+"_offcanvas"];e[t].support.csstransforms||a.push(o["no-csstransforms"]),e[t].support.csstransforms3d||a.push(o["no-csstransforms3d"]),this.bind("initMenu:after",function(){var e=this;this.setPage(r.$page),this._initBlocker(),this["_initWindow_"+n](),this.$menu.addClass(a.join(" ")).parent("."+o.wrapper).removeClass(o.wrapper),this.$menu[s.menuInsertMethod](s.menuInsertSelector);var t=window.location.hash;if(t){var i=this._getOriginalMenuId();i&&i==t.slice(1)&&setTimeout(function(){e.open()},1e3)}}),this.bind("open:start:sr-aria",function(){this.__sr_aria(this.$menu,"hidden",!1)}),this.bind("close:finish:sr-aria",function(){this.__sr_aria(this.$menu,"hidden",!0)}),this.bind("initMenu:after:sr-aria",function(){this.__sr_aria(this.$menu,"hidden",!0)})}},add:function(){o=e[t]._c,i=e[t]._d,s=e[t]._e,o.add("slideout page no-csstransforms3d"),i.add("style")},clickAnchor:function(e,t){var i=this;if(this.opts[n]){var s=this._getOriginalMenuId();if(s&&e.is('[href="#'+s+'"]')){if(t)return this.open(),!0;var a=e.closest("."+o.menu);if(a.length){var p=a.data("mmenu");if(p&&p.close)return p.close(),i.__transitionend(a,function(){i.open()},i.conf.transitionDuration),!0}return this.open(),!0}if(r.$page)return s=r.$page.first().attr("id"),s&&e.is('[href="#'+s+'"]')?(this.close(),!0):void 0}}},e[t].defaults[n]={blockUI:!0,moveBackground:!0},e[t].configuration[n]={pageNodetype:"div",pageSelector:null,noPageSelector:[],wrapPageIfNeeded:!0,menuInsertMethod:"prependTo",menuInsertSelector:"body"},e[t].prototype.open=function(){if(this.trigger("open:before"),!this.vars.opened){var e=this;this._openSetup(),setTimeout(function(){e._openFinish()},this.conf.openingInterval),this.trigger("open:after")}},e[t].prototype._openSetup=function(){var t=this,a=this.opts[n];this.closeAllOthers(),r.$page.each(function(){e(this).data(i.style,e(this).attr("style")||"")}),r.$wndw.trigger(s.resize+"-"+n,[!0]);var p=[o.wrapper+"_opened"];a.blockUI&&p.push(o.wrapper+"_blocking"),"modal"==a.blockUI&&p.push(o.wrapper+"_modal"),a.moveBackground&&p.push(o.wrapper+"_background"),r.$html.addClass(p.join(" ")),setTimeout(function(){t.vars.opened=!0},this.conf.openingInterval),this.$menu.addClass(o.menu+"_opened")},e[t].prototype._openFinish=function(){var e=this;this.__transitionend(r.$page.first(),function(){e.trigger("open:finish")},this.conf.transitionDuration),this.trigger("open:start"),r.$html.addClass(o.wrapper+"_opening")},e[t].prototype.close=function(){if(this.trigger("close:before"),this.vars.opened){var t=this;this.__transitionend(r.$page.first(),function(){t.$menu.removeClass(o.menu+"_opened");var n=[o.wrapper+"_opened",o.wrapper+"_blocking",o.wrapper+"_modal",o.wrapper+"_background"];r.$html.removeClass(n.join(" ")),r.$page.each(function(){e(this).attr("style",e(this).data(i.style))}),t.vars.opened=!1,t.trigger("close:finish")},this.conf.transitionDuration),this.trigger("close:start"),r.$html.removeClass(o.wrapper+"_opening"),this.trigger("close:after")}},e[t].prototype.closeAllOthers=function(){r.$body.find("."+o.menu+"_offcanvas").not(this.$menu).each(function(){var n=e(this).data(t);n&&n.close&&n.close()})},e[t].prototype.setPage=function(t){this.trigger("setPage:before",t);var i=this,s=this.conf[n];t&&t.length||(t=r.$body.find(s.pageSelector),s.noPageSelector.length&&(t=t.not(s.noPageSelector.join(", "))),t.length>1&&s.wrapPageIfNeeded&&(t=t.wrapAll("<"+this.conf[n].pageNodetype+" />").parent())),t.each(function(){e(this).attr("id",e(this).attr("id")||i.__getUniqueId())}),t.addClass(o.page+" "+o.slideout),r.$page=t,this.trigger("setPage:after",t)},e[t].prototype["_initWindow_"+n]=function(){r.$wndw.off(s.keydown+"-"+n).on(s.keydown+"-"+n,function(e){if(r.$html.hasClass(o.wrapper+"_opened")&&9==e.keyCode)return e.preventDefault(),!1});var e=0;r.$wndw.off(s.resize+"-"+n).on(s.resize+"-"+n,function(t,n){if(1==r.$page.length&&(n||r.$html.hasClass(o.wrapper+"_opened"))){var i=r.$wndw.height();(n||i!=e)&&(e=i,r.$page.css("minHeight",i))}})},e[t].prototype._initBlocker=function(){var t=this;this.opts[n].blockUI&&(r.$blck||(r.$blck=e('<div class="'+o.page+"__blocker "+o.slideout+'" />')),r.$blck.appendTo(r.$body).off(s.touchstart+"-"+n+" "+s.touchmove+"-"+n).on(s.touchstart+"-"+n+" "+s.touchmove+"-"+n,function(e){e.preventDefault(),e.stopPropagation(),r.$blck.trigger(s.mousedown+"-"+n)}).off(s.mousedown+"-"+n).on(s.mousedown+"-"+n,function(e){e.preventDefault(),r.$html.hasClass(o.wrapper+"_modal")||(t.closeAllOthers(),t.close())}))};var o,i,s,r}(jQuery);
-/*
- * jQuery mmenu screenReader add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){var i="mmenu",n="screenReader";t[i].addons[n]={setup:function(){var a=this,o=this.opts[n],h=this.conf[n];s=t[i].glbl,"boolean"==typeof o&&(o={aria:o,text:o}),"object"!=typeof o&&(o={}),o=this.opts[n]=t.extend(!0,{},t[i].defaults[n],o),o.aria&&(this.bind("initAddons:after",function(){this.bind("initMenu:after",function(){this.trigger("initMenu:after:sr-aria")}),this.bind("initNavbar:after",function(){this.trigger("initNavbar:after:sr-aria",arguments[0])}),this.bind("openPanel:start",function(){this.trigger("openPanel:start:sr-aria",arguments[0])}),this.bind("close:start",function(){this.trigger("close:start:sr-aria")}),this.bind("close:finish",function(){this.trigger("close:finish:sr-aria")}),this.bind("open:start",function(){this.trigger("open:start:sr-aria")}),this.bind("initOpened:after",function(){this.trigger("initOpened:after:sr-aria")})}),this.bind("updateListview",function(){this.$pnls.find("."+e.listview).children().each(function(){a.__sr_aria(t(this),"hidden",t(this).is("."+e.hidden))})}),this.bind("openPanel:start",function(t){var i=this.$menu.find("."+e.panel).not(t).not(t.parents("."+e.panel)),n=t.add(t.find("."+e.listitem+"_vertical ."+e.listitem+"_opened").children("."+e.panel));this.__sr_aria(i,"hidden",!0),this.__sr_aria(n,"hidden",!1)}),this.bind("closePanel",function(t){this.__sr_aria(t,"hidden",!0)}),this.bind("initPanels:after",function(i){var n=i.find("."+e.btn).each(function(){a.__sr_aria(t(this),"owns",t(this).attr("href").replace("#",""))});this.__sr_aria(n,"haspopup",!0)}),this.bind("initNavbar:after",function(t){var i=t.children("."+e.navbar);this.__sr_aria(i,"hidden",!t.hasClass(e.panel+"_has-navbar"))}),o.text&&(this.bind("initlistview:after",function(t){var i=t.find("."+e.listview).find("."+e.btn+"_fullwidth").parent().children("span");this.__sr_aria(i,"hidden",!0)}),"parent"==this.opts.navbar.titleLink&&this.bind("initNavbar:after",function(t){var i=t.children("."+e.navbar),n=!!i.children("."+e.btn+"_prev").length;this.__sr_aria(i.children("."+e.title),"hidden",n)}))),o.text&&(this.bind("initAddons:after",function(){this.bind("setPage:after",function(){this.trigger("setPage:after:sr-text",arguments[0])})}),this.bind("initNavbar:after",function(n){var r=n.children("."+e.navbar),a=r.children("."+e.title).text(),s=t[i].i18n(h.text.closeSubmenu);a&&(s+=" ("+a+")"),r.children("."+e.btn+"_prev").html(this.__sr_text(s))}),this.bind("initListview:after",function(n){var s=n.data(r.parent);if(s&&s.length){var o=s.children("."+e.btn+"_next"),d=o.nextAll("span, a").first().text(),l=t[i].i18n(h.text[o.parent().is("."+e.listitem+"_vertical")?"toggleSubmenu":"openSubmenu"]);d&&(l+=" ("+d+")"),o.html(a.__sr_text(l))}}))},add:function(){e=t[i]._c,r=t[i]._d,a=t[i]._e,e.add("sronly")},clickAnchor:function(t,i){}},t[i].defaults[n]={aria:!0,text:!0},t[i].configuration[n]={text:{closeMenu:"Close menu",closeSubmenu:"Close submenu",openSubmenu:"Open submenu",toggleSubmenu:"Toggle submenu"}},t[i].prototype.__sr_aria=function(t,i,n){t.prop("aria-"+i,n)[n?"attr":"removeAttr"]("aria-"+i,n)},t[i].prototype.__sr_role=function(t,i){t.prop("role",i)[i?"attr":"removeAttr"]("role",i)},t[i].prototype.__sr_text=function(t){return'<span class="'+e.sronly+'">'+t+"</span>"};var e,r,a,s}(jQuery);
-/*
- * jQuery mmenu scrollBugFix add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(o){var t="mmenu",n="scrollBugFix";o[t].addons[n]={setup:function(){var r=this.opts[n];this.conf[n];i=o[t].glbl,o[t].support.touch&&this.opts.offCanvas&&this.opts.offCanvas.blockUI&&("boolean"==typeof r&&(r={fix:r}),"object"!=typeof r&&(r={}),r=this.opts[n]=o.extend(!0,{},o[t].defaults[n],r),r.fix&&(this.bind("open:start",function(){this.$pnls.children("."+e.panel+"_opened").scrollTop(0)}),this.bind("initMenu:after",function(){this["_initWindow_"+n]()})))},add:function(){e=o[t]._c,r=o[t]._d,s=o[t]._e},clickAnchor:function(o,t){}},o[t].defaults[n]={fix:!0},o[t].prototype["_initWindow_"+n]=function(){var t=this;i.$docu.off(s.touchmove+"-"+n).on(s.touchmove+"-"+n,function(o){i.$html.hasClass(e.wrapper+"_opened")&&o.preventDefault()});var r=!1;i.$body.off(s.touchstart+"-"+n).on(s.touchstart+"-"+n,"."+e.panels+"> ."+e.panel,function(o){i.$html.hasClass(e.wrapper+"_opened")&&(r||(r=!0,0===o.currentTarget.scrollTop?o.currentTarget.scrollTop=1:o.currentTarget.scrollHeight===o.currentTarget.scrollTop+o.currentTarget.offsetHeight&&(o.currentTarget.scrollTop-=1),r=!1))}).off(s.touchmove+"-"+n).on(s.touchmove+"-"+n,"."+e.panels+"> ."+e.panel,function(t){i.$html.hasClass(e.wrapper+"_opened")&&o(this)[0].scrollHeight>o(this).innerHeight()&&t.stopPropagation()}),i.$wndw.off(s.orientationchange+"-"+n).on(s.orientationchange+"-"+n,function(){t.$pnls.children("."+e.panel+"_opened").scrollTop(0).css({"-webkit-overflow-scrolling":"auto"}).css({"-webkit-overflow-scrolling":"touch"})})};var e,r,s,i}(jQuery);
-/*
- * jQuery mmenu autoHeight add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){var e="mmenu",i="autoHeight";t[e].addons[i]={setup:function(){var h=this.opts[i];this.conf[i];if(a=t[e].glbl,"boolean"==typeof h&&h&&(h={height:"auto"}),"string"==typeof h&&(h={height:h}),"object"!=typeof h&&(h={}),h=this.opts[i]=t.extend(!0,{},t[e].defaults[i],h),"auto"==h.height||"highest"==h.height){this.bind("initMenu:after",function(){this.$menu.addClass(n.menu+"_autoheight")});var s=function(e){if(!this.opts.offCanvas||this.vars.opened){var i=Math.max(parseInt(this.$pnls.css("top"),10),0)||0,s=Math.max(parseInt(this.$pnls.css("bottom"),10),0)||0,a=0;this.$menu.addClass(n.menu+"_autoheight-measuring"),"auto"==h.height?(e=e||this.$pnls.children("."+n.panel+"_opened"),e.parent("."+n.listitem+"_vertical").length&&(e=e.parents("."+n.panel).not(function(){return t(this).parent("."+n.listitem+"_vertical").length})),e.length||(e=this.$pnls.children("."+n.panel)),a=e.first().outerHeight()):"highest"==h.height&&this.$pnls.children("."+n.panel).each(function(){var e=t(this);e.parent("."+n.listitem+"_vertical").length&&(e=e.parents("."+n.panel).not(function(){return t(this).parent("."+n.listitem+"_vertical").length})),a=Math.max(a,e.first().outerHeight())}),this.$menu.height(a+i+s).removeClass(n.menu+"_autoheight-measuring")}};this.opts.offCanvas&&this.bind("open:start",s),"highest"==h.height&&this.bind("initPanels:after",s),"auto"==h.height&&(this.bind("updateListview",s),this.bind("openPanel:start",s),this.bind("closePanel",s))}},add:function(){n=t[e]._c,h=t[e]._d,s=t[e]._e,s.add("resize")},clickAnchor:function(t,e){}},t[e].defaults[i]={height:"default"};var n,h,s,a}(jQuery);
-/*
- * jQuery mmenu backButton add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(n){var t="mmenu",o="backButton";n[t].addons[o]={setup:function(){function e(){l=[c],this.$pnls.children("."+i.panel+"_opened-parent").add(s.$pnls.children("."+i.panel+"_opened")).each(function(){l.push("#"+n(this).attr("id"))})}if(this.opts.offCanvas){var s=this,h=this.opts[o];this.conf[o];a=n[t].glbl,"boolean"==typeof h&&(h={close:h}),"object"!=typeof h&&(h={}),h=n.extend(!0,{},n[t].defaults[o],h);var c="#"+this.$menu.attr("id");if(h.close){var l=[];this.bind("open:finish",function(){history.pushState(null,document.title,c)}),this.bind("open:finish",e),this.bind("openPanel:finish",e),this.bind("close:finish",function(){l=[],history.back(),history.pushState(null,document.title,location.pathname+location.search)}),n(window).on("popstate",function(t){if(s.vars.opened&&l.length){l=l.slice(0,-1);var o=l[l.length-1];o==c?s.close():(s.openPanel(n(o)),history.pushState(null,document.title,c))}})}h.open&&n(window).on("popstate",function(n){s.vars.opened||location.hash!=c||s.open()})}},add:function(){return window.history&&window.history.pushState?(i=n[t]._c,e=n[t]._d,void(s=n[t]._e)):void(n[t].addons[o].setup=function(){})},clickAnchor:function(n,t){}},n[t].defaults[o]={close:!1,open:!1};var i,e,s,a}(jQuery);
-/*
- * jQuery mmenu columns add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var n="mmenu",i="columns";e[n].addons[i]={setup:function(){function l(e){var n=e.data(s.parent);if(n&&(n=n.closest("."+a.panel),n.length)){var i=n.attr("class");if(i&&(i=i.split(a.panel+"_columns-")[1]))for(i=parseInt(i.split(" ")[0],10)+1;i>0;){var l=this.$pnls.children("."+a.panel+"_columns-"+i);if(!l.length){i=-1;break}i++,l.removeClass(r).addClass(a.hidden)}}}var o=this.opts[i];this.conf[i];if(t=e[n].glbl,"boolean"==typeof o&&(o={add:o}),"number"==typeof o&&(o={add:!0,visible:o}),"object"!=typeof o&&(o={}),"number"==typeof o.visible&&(o.visible={min:o.visible,max:o.visible}),o=this.opts[i]=e.extend(!0,{},e[n].defaults[i],o),o.add){o.visible.min=Math.max(1,Math.min(6,o.visible.min)),o.visible.max=Math.max(o.visible.min,Math.min(6,o.visible.max));for(var d="",p="",m=0;m<=o.visible.max;m++)d+=" "+a.menu+"_columns-"+m,p+=" "+a.panel+"_columns-"+m;d.length&&(d=d.slice(1),p=p.slice(1));var r=p+" "+a.panel+"_opened "+a.panel+"_opened-parent "+a.panel+"_highest",c=function(n){var i=this.$pnls.children("."+a.panel+"_opened-parent").length;n.hasClass(a.panel+"_opened-parent")||i++,i=Math.min(o.visible.max,Math.max(o.visible.min,i)),this.$menu.removeClass(d).addClass(a.menu+"_columns-"+i),this.$pnls.children("."+a.panel).removeClass(p).filter("."+a.panel+"_opened-parent").add(n).slice(-o.visible.max).each(function(n){e(this).addClass(a.panel+"_columns-"+n)})};this.bind("openPanel:before",l),this.bind("openPanel:start",c)}},add:function(){a=e[n]._c,s=e[n]._d,l=e[n]._e},clickAnchor:function(e,n){}},e[n].defaults[i]={add:!1,visible:{min:1,max:3}};var a,s,l,t}(jQuery);
-/*
- * jQuery mmenu counters add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){var e="mmenu",n="counters";t[e].addons[n]={setup:function(){var s=this,d=this.opts[n];this.conf[n];if(c=t[e].glbl,"boolean"==typeof d&&(d={add:d,update:d}),"object"!=typeof d&&(d={}),d=this.opts[n]=t.extend(!0,{},t[e].defaults[n],d),this.bind("initListview:after",function(t){var e=this.conf.classNames[n].counter;this.__refactorClass(t.find("."+e),e,i.counter)}),d.add&&this.bind("initListview:after",function(e){var n;switch(d.addTo){case"panels":n=e;break;default:n=e.filter(d.addTo)}n.each(function(){var e=t(this).data(a.parent);e&&(e.children("."+i.counter).length||e.prepend(t('<em class="'+i.counter+'" />')))})}),d.update){var r=function(e){e=e||this.$pnls.children("."+i.panel),e.each(function(){var e=t(this),n=e.data(a.parent);if(n){var c=n.children("em."+i.counter);c.length&&(e=e.children("."+i.listview),e.length&&c.html(s.__filterListItems(e.children()).length))}})};this.bind("initListview:after",r),this.bind("updateListview",r)}},add:function(){i=t[e]._c,a=t[e]._d,s=t[e]._e,i.add("counter")},clickAnchor:function(t,e){}},t[e].defaults[n]={add:!1,addTo:"panels",count:!1},t[e].configuration.classNames[n]={counter:"Counter"};var i,a,s,c}(jQuery);
-/*
- * jQuery mmenu dividers add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(i){var e="mmenu",t="dividers";i[e].addons[t]={setup:function(){var s=this,a=this.opts[t];this.conf[t];if(l=i[e].glbl,"boolean"==typeof a&&(a={add:a,fixed:a}),"object"!=typeof a&&(a={}),a=this.opts[t]=i.extend(!0,{},i[e].defaults[t],a),a.type&&this.bind("initMenu:after",function(){this.$menu.addClass(n.menu+"_"+t+"-"+a.type)}),a.add&&this.bind("initListview:after",function(e){var t;switch(a.addTo){case"panels":t=e;break;default:t=e.filter(a.addTo)}t.length&&(t.children("."+n.listitem+"_divider").remove(),t.find("."+n.listview).each(function(){var e="";s.__filterListItems(i(this).children()).each(function(){var t=i.trim(i(this).children("a, span").text()).slice(0,1).toLowerCase();t!=e&&t.length&&(e=t,i('<li class="'+n.listitem+" "+n.listitem+'_divider">'+t+"</li>").insertBefore(this))})}))}),a.fixed){this.bind("initPanels:after",function(){"undefined"==typeof this.$fixeddivider&&(this.$fixeddivider=i('<ul class="'+n.listview+" "+n.listview+'_fixeddivider"><li class="'+n.listitem+" "+n.listitem+'_divider"></li></ul>').appendTo(this.$pnls).children())});var o=function(e){if(e=e||this.$pnls.children("."+n.panel+"_opened"),!e.is(":hidden")){var t=e.find("."+n.listitem+"_divider").not("."+n.hidden),s=e.scrollTop()||0,d="";t.each(function(){i(this).position().top+s<s+1&&(d=i(this).text())}),this.$fixeddivider.text(d),this.$pnls[d.length?"addClass":"removeClass"](n.panel+"_dividers")}};this.bind("open:start",o),this.bind("openPanel:start",o),this.bind("updateListview",o),this.bind("initPanel:after",function(i){i.off(d.scroll+"-"+t+" "+d.touchmove+"-"+t).on(d.scroll+"-"+t+" "+d.touchmove+"-"+t,function(e){i.hasClass(n.panel+"_opened")&&o.call(s,i)})})}},add:function(){n=i[e]._c,s=i[e]._d,d=i[e]._e,d.add("scroll")},clickAnchor:function(i,e){}},i[e].defaults[t]={add:!1,addTo:"panels",fixed:!1,type:null};var n,s,d,l}(jQuery);
-/*
- * jQuery mmenu drag add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){function n(e,n,t){return e<n&&(e=n),e>t&&(e=t),e}function t(t,o,i){var r,p,d,f=this,u={events:"panleft panright",typeLower:"x",typeUpper:"X",open_dir:"right",close_dir:"left",negative:!1},c="width",l=u.open_dir,m=function(e){e<=t.maxStartPos&&(g=1)},h=function(){return e("."+s.slideout)},g=0,_=0,v=0,b=this.opts.extensions.all,w="undefined"==typeof b?"left":b.indexOf(s.menu+"_position-right")>-1?"right":b.indexOf(s.menu+"_position-top")>-1?"top":b.indexOf(s.menu+"_position-bottom")>-1?"bottom":"left",y="undefined"==typeof b?"back":b.indexOf(s.menu+"_position-top")>-1||b.indexOf(s.menu+"_position-bottom")>-1||b.indexOf(s.menu+"_position-front")>-1?"front":"back";switch(w){case"top":case"bottom":u.events="panup pandown",u.typeLower="y",u.typeUpper="Y",c="height"}switch(w){case"right":case"bottom":u.negative=!0,m=function(e){e>=i.$wndw[c]()-t.maxStartPos&&(g=1)}}switch(w){case"right":u.open_dir="left",u.close_dir="right";break;case"top":u.open_dir="down",u.close_dir="up";break;case"bottom":u.open_dir="up",u.close_dir="down"}switch(y){case"front":h=function(){return f.$menu}}var x,O=this.__valueOrFn(this.$menu,t.node,i.$page);"string"==typeof O&&(O=e(O));var $=new Hammer(O[0],this.opts[a].vendors.hammer);$.on("panstart",function(e){m(e.center[u.typeLower]),x=h(),l=u.open_dir}),$.on(u.events+" panend",function(e){g>0&&e.preventDefault()}),$.on(u.events,function(e){if(r=e["delta"+u.typeUpper],u.negative&&(r=-r),r!=_&&(l=r>=_?u.open_dir:u.close_dir),_=r,_>t.threshold&&1==g){if(i.$html.hasClass(s.wrapper+"_opened"))return;g=2,f._openSetup(),f.trigger("open:start"),i.$html.addClass(s.dragging),v=n(i.$wndw[c]()*o[c].perc,o[c].min,o[c].max)}2==g&&(p=n(_,10,v)-("front"==y?v:0),u.negative&&(p=-p),d="translate"+u.typeUpper+"("+p+"px )",x.css({"-webkit-transform":"-webkit-"+d,transform:d}))}),$.on("panend",function(e){2==g&&(i.$html.removeClass(s.dragging),x.css("transform",""),f[l==u.open_dir?"_openFinish":"close"]()),g=0})}function o(e,n,t,o){var i=this,p=e.data(r.parent);if(p){p=p.closest("."+s.panel);var d=new Hammer(e[0],i.opts[a].vendors.hammer),f=null;d.on("panright",function(e){f||(i.openPanel(p),f=setTimeout(function(){clearTimeout(f),f=null},i.conf.openingInterval+i.conf.transitionDuration))})}}var i="mmenu",a="drag";e[i].addons[a]={setup:function(){if(this.opts.offCanvas){var n=this.opts[a],s=this.conf[a];d=e[i].glbl,"boolean"==typeof n&&(n={menu:n,panels:n}),"object"!=typeof n&&(n={}),"boolean"==typeof n.menu&&(n.menu={open:n.menu}),"object"!=typeof n.menu&&(n.menu={}),"boolean"==typeof n.panels&&(n.panels={close:n.panels}),"object"!=typeof n.panels&&(n.panels={}),n=this.opts[a]=e.extend(!0,{},e[i].defaults[a],n),n.menu.open&&this.bind("setPage:after",function(){t.call(this,n.menu,s.menu,d)}),n.panels.close&&this.bind("initPanel:after",function(e){o.call(this,e,n.panels,s.panels,d)})}},add:function(){return"function"!=typeof Hammer||Hammer.VERSION<2?(e[i].addons[a].add=function(){},void(e[i].addons[a].setup=function(){})):(s=e[i]._c,r=e[i]._d,p=e[i]._e,void s.add("dragging"))},clickAnchor:function(e,n){}},e[i].defaults[a]={menu:{open:!1,maxStartPos:100,threshold:50},panels:{close:!1},vendors:{hammer:{}}},e[i].configuration[a]={menu:{width:{perc:.8,min:140,max:440},height:{perc:.8,min:140,max:880}},panels:{}};var s,r,p,d}(jQuery);
-/*
- * jQuery mmenu dropdown add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){var o="mmenu",e="dropdown";t[o].addons[e]={setup:function(){if(this.opts.offCanvas){var r=this,f=this.opts[e],p=this.conf[e];if(a=t[o].glbl,"boolean"==typeof f&&f&&(f={drop:f}),"object"!=typeof f&&(f={}),"string"==typeof f.position&&(f.position={of:f.position}),f=this.opts[e]=t.extend(!0,{},t[o].defaults[e],f),f.drop){var l;this.bind("initMenu:after",function(){if(this.$menu.addClass(i.menu+"_"+e),"string"!=typeof f.position.of){var o=this._getOriginalMenuId();o&&o.length&&(f.position.of='[href="#'+o+'"]')}"string"==typeof f.position.of&&(l=t(f.position.of),f.event=f.event.split(" "),1==f.event.length&&(f.event[1]=f.event[0]),"hover"==f.event[0]&&l.on(s.mouseenter+"-"+e,function(){r.open()}),"hover"==f.event[1]&&this.$menu.on(s.mouseleave+"-"+e,function(){r.close()}))}),this.bind("open:start",function(){this.$menu.data(n.style,this.$menu.attr("style")||""),a.$html.addClass(i.wrapper+"_dropdown")}),this.bind("close:finish",function(){this.$menu.attr("style",this.$menu.data(n.style)),a.$html.removeClass(i.wrapper+"_dropdown")});var h=function(t,o){var e=o[0],n=o[1],s="x"==t?"scrollLeft":"scrollTop",r="x"==t?"outerWidth":"outerHeight",h="x"==t?"left":"top",u="x"==t?"right":"bottom",d="x"==t?"width":"height",c="x"==t?"maxWidth":"maxHeight",m=null,v=a.$wndw[s](),x=l.offset()[h]-=v,b=x+l[r](),w=a.$wndw[d](),g=p.offset.button[t]+p.offset.viewport[t];if(f.position[t])switch(f.position[t]){case"left":case"bottom":m="after";break;case"right":case"top":m="before"}null===m&&(m=x+(b-x)/2<w/2?"after":"before");var $,y;return"after"==m?($="x"==t?x:b,y=w-($+g),e[h]=$+p.offset.button[t],e[u]="auto",f.tip&&n.push(i.menu+"_tip-"+("x"==t?"left":"top"))):($="x"==t?b:x,y=$-g,e[u]="calc( 100% - "+($-p.offset.button[t])+"px )",e[h]="auto",f.tip&&n.push(i.menu+"_tip-"+("x"==t?"right":"bottom"))),e[c]=Math.min(p[d].max,y),[e,n]},u=function(t){if(this.vars.opened){this.$menu.attr("style",this.$menu.data(n.style));var o=[{},[]];o=h.call(this,"y",o),o=h.call(this,"x",o),this.$menu.css(o[0]),f.tip&&this.$menu.removeClass(i.tipleft+" "+i.tipright+" "+i.tiptop+" "+i.tipbottom).addClass(o[1].join(" "))}};this.bind("open:start",u),a.$wndw.on(s.resize+"-"+e,function(t){u.call(r)}),this.opts.offCanvas.blockUI||a.$wndw.on(s.scroll+"-"+e,function(t){u.call(r)})}}},add:function(){i=t[o]._c,n=t[o]._d,s=t[o]._e,i.add("dropdown"),s.add("mouseenter mouseleave resize scroll")},clickAnchor:function(t,o){}},t[o].defaults[e]={drop:!1,event:"click",position:{},tip:!0},t[o].configuration[e]={offset:{button:{x:-5,y:5},viewport:{x:20,y:20}},height:{max:880},width:{max:440}};var i,n,s,a}(jQuery);
-/*
- * jQuery mmenu fixedElements add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(s){var t="mmenu",i="fixedElements";s[t].addons[i]={setup:function(){if(this.opts.offCanvas){var n=(this.opts[i],this.conf[i]);c=s[t].glbl;var o=function(t){var o=this.conf.classNames[i].fixed,f=t.find("."+o);this.__refactorClass(f,o,e.slideout),f[n.elemInsertMethod](n.elemInsertSelector);var a=this.conf.classNames[i].sticky,r=t.find("."+a);this.__refactorClass(r,a,e.sticky),r=t.find("."+e.sticky),r.length&&(this.bind("open:start",function(){if("hidden"==c.$html.css("overflow")){var t=c.$wndw.scrollTop()+n.sticky.offset;r.each(function(){s(this).css("top",parseInt(s(this).css("top"),10)+t)})}}),this.bind("close:finish",function(){r.css("top","")}))};this.bind("setPage:after",o)}},add:function(){e=s[t]._c,n=s[t]._d,o=s[t]._e,e.add("sticky")},clickAnchor:function(s,t){}},s[t].configuration[i]={sticky:{offset:0},elemInsertMethod:"appendTo",elemInsertSelector:"body"},s[t].configuration.classNames[i]={fixed:"Fixed",sticky:"Sticky"};var e,n,o,c}(jQuery);
-/*
- * jQuery mmenu iconbar add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(a){var t="mmenu",n="iconbar";a[t].addons[n]={setup:function(){function s(a){f.removeClass(e.iconbar+"__tab_selected");var t=f.filter('[href="#'+a.attr("id")+'"]');if(t.length)t.addClass(e.iconbar+"__tab_selected");else{var n=a.data(i.parent);n&&n.length&&s(n.closest("."+e.panel))}}var d=this,c=this.opts[n];this.conf[n];if(r=a[t].glbl,c instanceof Array&&(c={add:!0,top:c}),c.add){var l=null;if(a.each(["top","bottom"],function(t,n){var i=c[n];i instanceof Array||(i=[i]);for(var o=a('<div class="'+e.iconbar+"__"+n+'" />'),r=0,s=i.length;r<s;r++)o.append(i[r]);o.children().length&&(l||(l=a('<div class="'+e.iconbar+'" />')),l.append(o))}),l&&(this.bind("initMenu:after",function(){this.$menu.addClass(e.menu+"_iconbar-"+c.size).prepend(l)}),"tabs"==c.type)){l.addClass(e.iconbar+"_tabs");var f=l.find("a");f.on(o.click+"-"+n,function(t){var n=a(this);if(n.hasClass(e.iconbar+"__tab_selected"))return void t.stopImmediatePropagation();try{var i=a(n.attr("href"));i.hasClass(e.panel)&&(t.preventDefault(),t.stopImmediatePropagation(),d.__openPanelWoAnimation(i))}catch(o){}}),this.bind("openPanel:start",s)}}},add:function(){e=a[t]._c,i=a[t]._d,o=a[t]._e,e.add(n)},clickAnchor:function(a,t){}},a[t].defaults[n]={add:!1,size:40,top:[],bottom:[]},a[t].configuration[n]={};var e,i,o,r}(jQuery);
-/*
- * jQuery mmenu iconPanels add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var i="mmenu",n="iconPanels";e[i].addons[n]={setup:function(){var a=this,l=this.opts[n],d=(this.conf[n],!1);if(s=e[i].glbl,"boolean"==typeof l&&(l={add:l}),"number"!=typeof l&&"string"!=typeof l||(l={add:!0,visible:l}),"object"!=typeof l&&(l={}),"first"==l.visible&&(d=!0,l.visible=1),l=this.opts[n]=e.extend(!0,{},e[i].defaults[n],l),l.visible=Math.min(3,Math.max(1,l.visible)),l.visible++,l.add){for(var r="",o=0;o<=l.visible;o++)r+=" "+t.panel+"_iconpanel-"+o;r.length&&(r=r.slice(1));var c=function(i){if(!i.parent("."+t.listitem+"_vertical").length){var n=a.$pnls.children("."+t.panel).removeClass(r);d&&n.removeClass(t.panel+"_iconpanel-first").first().addClass(t.panel+"_iconpanel-first"),n.filter("."+t.panel+"_opened-parent").removeClass(t.hidden).not(function(){return e(this).parent("."+t.listitem+"_vertical").length}).add(i).slice(-l.visible).each(function(i){e(this).addClass(t.panel+"_iconpanel-"+i)})}};this.bind("initMenu:after",function(){var e=[t.menu+"_iconpanel-"+l.size];l.hideNavbar&&e.push(t.menu+"_hidenavbar"),l.hideDivider&&e.push(t.menu+"_hidedivider"),this.$menu.addClass(e.join(" "))}),this.bind("openPanel:start",c),this.bind("initPanels:after",function(e){c.call(a,a.$pnls.children("."+t.panel+"_opened"))}),this.bind("initListview:after",function(e){!l.blockPanel||e.parent("."+t.listitem+"_vertical").length||e.children("."+t.panel+"__blocker").length||e.prepend('<a href="#'+e.closest("."+t.panel).attr("id")+'" class="'+t.panel+'__blocker" />')})}},add:function(){t=e[i]._c,a=e[i]._d,l=e[i]._e},clickAnchor:function(e,i){}},e[i].defaults[n]={add:!1,blockPanel:!0,hideDivider:!1,hideNavbar:!0,size:40,visible:3};var t,a,l,s}(jQuery);
-/*
- * jQuery mmenu keyboardNavigation add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(n){function e(e,t){e=e||this.$pnls.children("."+i.panel+"_opened");var a=n(),s=this.$menu.children("."+i.mm("navbars_top")+", ."+i.mm("navbars_bottom")).children("."+i.navbar);s.find(r).filter(":focus").length||("default"==t&&(a=e.children("."+i.listview).find("a[href]").not("."+i.hidden),a.length||(a=e.find(r).not("."+i.hidden)),a.length||(a=s.find(r).not("."+i.hidden))),a.length||(a=this.$menu.children("."+i.tabstart)),a.first().focus())}var t="mmenu",a="keyboardNavigation";n[t].addons[a]={setup:function(){if(!n[t].support.touch){var s=this.opts[a];this.conf[a];if(d=n[t].glbl,"boolean"!=typeof s&&"string"!=typeof s||(s={enable:s}),"object"!=typeof s&&(s={}),s=this.opts[a]=n.extend(!0,{},n[t].defaults[a],s),s.enable){var o=n('<button class="'+i.tabstart+'" tabindex="0" type="button" />'),r=n('<button class="'+i.tabend+'" tabindex="0" type="button" />');this.bind("initMenu:after",function(){s.enhance&&this.$menu.addClass(i.menu+"_keyboardfocus"),this["_initWindow_"+a](s.enhance)}),this.bind("initOpened:before",function(){this.$menu.prepend(o).append(r).children("."+i.mm("navbars-top")+", ."+i.mm("navbars-bottom")).children("."+i.navbar).children("a."+i.title).attr("tabindex",-1)}),this.bind("open:finish",function(){e.call(this,null,s.enable)}),this.bind("openPanel:finish",function(n){e.call(this,n,s.enable)}),this.bind("initOpened:after:sr-aria",function(){var n=this.$menu.children("."+i.tabstart+", ."+i.tabend);this.__sr_aria(n,"hidden",!0),this.__sr_role(n,"presentation")})}}},add:function(){i=n[t]._c,s=n[t]._d,o=n[t]._e,i.add("tabstart tabend"),o.add("focusin keydown")},clickAnchor:function(n,e){}},n[t].defaults[a]={enable:!1,enhance:!1},n[t].configuration[a]={},n[t].prototype["_initWindow_"+a]=function(e){d.$wndw.off(o.keydown+"-offCanvas"),d.$wndw.off(o.focusin+"-"+a).on(o.focusin+"-"+a,function(e){if(d.$html.hasClass(i.wrapper+"_opened")){var t=n(e.target);t.is("."+i.tabend)&&t.parent().find("."+i.tabstart).focus()}}),d.$wndw.off(o.keydown+"-"+a).on(o.keydown+"-"+a,function(e){var t=n(e.target),a=t.closest("."+i.menu);if(a.length){a.data("mmenu");if(t.is("input, textarea"));else switch(e.keyCode){case 13:(t.is(".mm-toggle")||t.is(".mm-check"))&&t.trigger(o.click);break;case 32:case 37:case 38:case 39:case 40:e.preventDefault()}}}),e&&d.$wndw.off(o.keydown+"-"+a).on(o.keydown+"-"+a,function(e){var t=n(e.target),a=t.closest("."+i.menu);if(a.length){var o=a.data("mmenu");if(t.is("input"))switch(e.keyCode){case 27:t.val("")}else switch(e.keyCode){case 8:var d=a.find("."+i.panel+"_opened").data(s.parent);d&&d.length&&o.openPanel(d.closest("."+i.panel));break;case 27:a.hasClass(i.menu+"_offcanvas")&&o.close()}}})};var i,s,o,d,r="input, select, textarea, button, label, a[href]"}(jQuery);
-/*
- * jQuery mmenu lazySubmenus add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(n){var e="mmenu",i="lazySubmenus";n[e].addons[i]={setup:function(){var t=this.opts[i];this.conf[i];a=n[e].glbl,"boolean"==typeof t&&(t={load:t}),"object"!=typeof t&&(t={}),t=this.opts[i]=n.extend(!0,{},n[e].defaults[i],t),t.load&&(this.bind("initMenu:after",function(){this.$pnls.find("li").children(this.conf.panelNodetype).not("."+l.inset).not("."+l.nolistview).not("."+l.nopanel).addClass(l.panel+"_lazysubmenu "+l.nolistview+" "+l.nopanel)}),this.bind("initPanels:before",function(n){n=n||this.$pnls.children(this.conf.panelNodetype),this.__findAddBack(n,"."+l.panel+"_lazysubmenu").not("."+l.panel+"_lazysubmenu ."+l.panel+"_lazysubmenu").removeClass(l.panel+"_lazysubmenu "+l.nolistview+" "+l.nopanel)}),this.bind("initOpened:before",function(){var n=this.$pnls.find("."+this.conf.classNames.selected).parents("."+l.panel+"_lazysubmenu");n.length&&(n.removeClass(l.panel+"_lazysubmenu "+l.nolistview+" "+l.nopanel),this.initPanels(n.last()))}),this.bind("openPanel:before",function(n){var e=this.__findAddBack(n,"."+l.panel+"_lazysubmenu").not("."+l.panel+"_lazysubmenu ."+l.panel+"_lazysubmenu");e.length&&this.initPanels(e)}))},add:function(){l=n[e]._c,t=n[e]._d,s=n[e]._e},clickAnchor:function(n,e){}},n[e].defaults[i]={load:!1},n[e].configuration[i]={};var l,t,s,a}(jQuery);
-/*
- * jQuery mmenu navbar add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(n){var t="mmenu",a="navbars";n[t].addons[a]={setup:function(){var o=this,r=this.opts[a],i=this.conf[a];if(s=n[t].glbl,"undefined"!=typeof r){r instanceof Array||(r=[r]);var c={},d={};r.length&&(n.each(r,function(s){var f=r[s];"boolean"==typeof f&&f&&(f={}),"object"!=typeof f&&(f={}),"undefined"==typeof f.content&&(f.content=["prev","title"]),f.content instanceof Array||(f.content=[f.content]),f=n.extend(!0,{},o.opts.navbar,f);var l=n('<div class="'+e.navbar+'" />'),u=f.height;"number"!=typeof u?u=1:(u=Math.min(4,Math.max(1,u)),u>1&&l.addClass(e.navbar+"_size-"+u));var v=f.position;switch(v){case"bottom":break;default:v="top"}c[v]||(c[v]=0),c[v]+=u,d[v]||(d[v]=n('<div class="'+e.navbars+"_"+v+'" />')),d[v].append(l);for(var p=0,b=f.content.length;p<b;p++){var h=n[t].addons[a][f.content[p]]||null;h?h.call(o,l,f,i):(h=f.content[p],h instanceof n||(h=n(f.content[p])),l.append(h))}var m=n[t].addons[a][f.type]||null;m&&m.call(o,l,f,i),l.children("."+e.btn).length&&l.addClass(e.navbar+"_has-btns")}),this.bind("initMenu:after",function(){for(var n in c)this.$menu.addClass(e.menu+"_navbar_"+n+"-"+c[n]),this.$menu["bottom"==n?"append":"prepend"](d[n])}))}},add:function(){e=n[t]._c,o=n[t]._d,r=n[t]._e,e.add(a)},clickAnchor:function(n,t){}},n[t].configuration[a]={breadcrumbs:{separator:"/",removeFirst:!1}},n[t].configuration.classNames[a]={};var e,o,r,s}(jQuery);
-/*
- * jQuery mmenu pageScroll add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){function e(t){a&&a.length&&a.is(":visible")&&o.$html.add(o.$body).animate({scrollTop:a.offset().top+t}),a=!1}function i(t){try{return!("#"==t||"#"!=t.slice(0,1)||!o.$page.find(t).length)}catch(e){return!1}}var s="mmenu",n="pageScroll";t[s].addons[n]={setup:function(){var r=this,a=this.opts[n],c=this.conf[n];if(o=t[s].glbl,"boolean"==typeof a&&(a={scroll:a}),a=this.opts[n]=t.extend(!0,{},t[s].defaults[n],a),a.scroll&&this.bind("close:finish",function(){e(c.scrollOffset)}),a.update){var r=this,d=[],h=[];r.bind("initListview:after",function(e){r.__filterListItemAnchors(e.find("."+l.listview).children("li")).each(function(){var e=t(this).attr("href");i(e)&&d.push(e)}),h=d.reverse()});var p=-1;o.$wndw.on(f.scroll+"-"+n,function(e){for(var i=o.$wndw.scrollTop(),s=0;s<h.length;s++)if(t(h[s]).offset().top<i+c.updateOffset){p!==s&&(p=s,r.setSelected(r.__filterListItemAnchors(r.$pnls.children("."+l.panel+"_opened").find("."+l.listview).children("li")).filter('[href="'+h[s]+'"]').parent()));break}})}},add:function(){l=t[s]._c,r=t[s]._d,f=t[s]._e},clickAnchor:function(s,r,f){if(a=!1,r&&f&&this.opts.offCanvas&&this.opts[n].scroll&&o.$page&&o.$page.length){var c=s.attr("href");if(i(c)){if(a=t(c),!this.$menu.hasClass(l.mm("sidebar-expanded"))||!o.$html.is('[class*="'+l.mm("sidebar-expanded")+'"]'))return{close:!0};e(this.conf[n].scrollOffset)}}}},t[s].defaults[n]={scroll:!1,update:!1},t[s].configuration[n]={scrollOffset:0,updateOffset:50};var l,r,f,o,a=!1}(jQuery);
-/*
- * jQuery mmenu RTL add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){var e="mmenu",n="rtl";t[e].addons[n]={setup:function(){var u=this.opts[n];this.conf[n];i=t[e].glbl,"object"!=typeof u&&(u={use:u}),u=this.opts[n]=t.extend(!0,{},t[e].defaults[n],u),"boolean"!=typeof u.use&&(u.use="rtl"==(i.$html.attr("dir")||"").toLowerCase()),u.use&&this.bind("initMenu:after",function(){this.$menu.addClass(s.menu+"_rtl")})},add:function(){s=t[e]._c,u=t[e]._d,o=t[e]._e},clickAnchor:function(t,e){}},t[e].defaults[n]={use:"detect"};var s,u,o,i}(jQuery);
-/*
- * jQuery mmenu searchfield add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){function n(e,n){if(n)for(var s in n)e.attr(s,n[s])}function s(e){switch(e){case 9:case 16:case 17:case 18:case 37:case 38:case 39:case 40:return!0}return!1}var a="mmenu",t="searchfield";e[a].addons[t]={setup:function(){var n=this,s=this.opts[t],i=this.conf[t];r=e[a].glbl,"boolean"==typeof s&&(s={add:s}),"object"!=typeof s&&(s={}),"boolean"==typeof s.panel&&(s.panel={add:s.panel}),"object"!=typeof s.panel&&(s.panel={}),s.add&&("panel"==s.addTo&&(s.panel.add=!0),s.panel.add&&(s.showSubPanels=!1,s.panel.splash&&(s.cancel=!0)),s=this.opts[t]=e.extend(!0,{},e[a].defaults[t],s),i=this.conf[t]=e.extend(!0,{},e[a].configuration[t],i),this.bind("close:start",function(){this.$menu.find("."+l.searchfield).children("input").blur()}),this.bind("initPanels:after",function(a){var t=e();s.panel.add&&(t=this._initSearchPanel(a));var l;switch(s.addTo){case"panels":l=a;break;case"panel":l=t;break;default:l=this.$menu.find(s.addTo)}if(l.each(function(){var a=n._initSearchfield(e(this));s.search&&n._initSearching(a)}),s.noResults){var i=s.panel.add?t:a;i.each(function(){n._initNoResultsMsg(e(this))})}}))},add:function(){l=e[a]._c,i=e[a]._d,d=e[a]._e,l.add("searchfield"),i.add("searchfield"),d.add("input focus blur")},clickAnchor:function(e,n){if(e.hasClass(l.searchfield+"__btn")){if(e.hasClass(l.btn+"_clear")){var s=e.closest("."+l.searchfield).find("input");return s.val(""),this.search(s),!0}if(e.hasClass(l.btn+"_next"))return e.closest("."+l.searchfield).submit(),!0}}},e[a].defaults[t]={add:!1,addTo:"panels",noResults:"No results found.",placeholder:"Search",panel:{add:!1,dividers:!0,fx:"none",id:null,splash:null,title:"Search"},search:!0,showTextItems:!1,showSubPanels:!0},e[a].configuration[t]={clear:!1,form:!1,input:!1,submit:!1};var l,i,d,r;e[a].prototype._initSearchPanel=function(n){var s=this.opts[t];this.conf[t];if(this.$pnls.children("."+l.panel+"_search").length)return e();var a=e('<div class="'+l.panel+'_search " />').append("<ul />").appendTo(this.$pnls);switch(s.panel.id&&a.attr("id",s.panel.id),s.panel.title&&a.attr("data-mm-title",s.panel.title),s.panel.fx){case!1:break;case"none":a.addClass(l.panel+"_noanimation");break;default:a.addClass(l.panel+"_fx-"+s.panel.fx)}return s.panel.splash&&a.append('<div class="'+l.panel+'__searchsplash">'+s.panel.splash+"</div>"),this._initPanels(a),a},e[a].prototype._initSearchfield=function(s){var i=this.opts[t],d=this.conf[t];if(!s.parent("."+l.listitem+"_vertical").length&&!s.find("."+l.searchfield).length){var r=e("<"+(d.form?"form":"div")+' class="'+l.searchfield+'" />'),h=e('<div class="'+l.searchfield+'__input" />'),c=e('<input placeholder="'+e[a].i18n(i.placeholder)+'" type="text" autocomplete="off" />');return h.append(c).appendTo(r),s.hasClass(l.searchfield)?s.replaceWith(r):(s.prepend(r),s.hasClass(l.panel)&&s.addClass(l.panel+"_has-searchfield")),n(c,d.input),d.clear&&e('<a class="'+l.btn+" "+l.btn+"_clear "+l.searchfield+'__btn" href="#" />').appendTo(h),n(r,d.form),d.form&&d.submit&&!d.clear&&e('<a class="'+l.btn+" "+l.btn+"_next "+l.searchfield+'__btn" href="#" />').appendTo(h),i.cancel&&e('<a href="#" class="'+l.searchfield+'__cancel">'+e[a].i18n("cancel")+"</a>").appendTo(r),r}},e[a].prototype._initSearching=function(n){var a=this,r=this.opts[t],h=(this.conf[t],{});n.closest("."+l.panel+"_search").length?(h.$pnls=this.$pnls.find("."+l.panel),h.$nrsp=n.closest("."+l.panel)):n.closest("."+l.panel).length?(h.$pnls=n.closest("."+l.panel),h.$nrsp=h.$pnls):(h.$pnls=this.$pnls.find("."+l.panel),h.$nrsp=this.$menu),r.panel.add&&(h.$pnls=h.$pnls.not("."+l.panel+"_search"));var c=n.find("input"),p=n.find("."+l.searchfield+"__cancel"),o=this.$pnls.children("."+l.panel+"_search"),f=h.$pnls.find("."+l.listitem);h.$itms=f.not("."+l.listitem+"_divider"),h.$dvdr=f.filter("."+l.listitem+"_divider"),r.panel.add&&r.panel.splash&&c.off(d.focus+"-"+t+"-splash").on(d.focus+"-"+t+"-splash",function(e){a.openPanel(o)}),r.cancel&&(c.off(d.focus+"-"+t+"-cancel").on(d.focus+"-"+t+"-cancel",function(e){p.addClass(l.searchfield+"__cancel-active")}),p.off(d.click+"-"+t+"-splash").on(d.click+"-"+t+"-splash",function(n){n.preventDefault(),e(this).removeClass(l.searchfield+"__cancel-active"),o.hasClass(l.panel+"_opened")&&a.openPanel(a.$pnls.children("."+l.panel+"_opened-parent").last())})),r.panel.add&&"panel"==r.addTo&&this.bind("openPanel:finish",function(e){e[0]===o[0]&&c.focus()}),c.data(i.searchfield,h).off(d.input+"-"+t).on(d.input+"-"+t,function(e){s(e.keyCode)||a.search(c)}),this.search(c)},e[a].prototype._initNoResultsMsg=function(n){var s=this.opts[t];this.conf[t];if(n.closest("."+l.panel).length||(n=this.$pnls.children("."+l.panel).first()),!n.children("."+l.panel+"__noresultsmsg").length){var i=n.children("."+l.listview).first(),d=e('<div class="'+l.panel+"__noresultsmsg "+l.hidden+'" />').append(e[a].i18n(s.noResults));i.length?d.insertAfter(i):d.prependTo(n)}},e[a].prototype.search=function(n,s){var a=this,d=this.opts[t];this.conf[t];n=n||this.$menu.find("."+l.searchfield).chidren("input").first(),s=s||n.val(),s=s.toLowerCase().trim();var r="a",h="a, span",c=n.data(i.searchfield),p=n.closest("."+l.searchfield),o=p.find("."+l.btn),f=this.$pnls.children("."+l.panel+"_search"),u=c.$pnls,_=c.$itms,v=c.$dvdr,m=c.$nrsp;if(_.removeClass(l.listitem+"_nosubitems").find("."+l.btn+"_fullwidth-search").removeClass(l.btn+"_fullwidth-search "+l.btn+"_fullwidth"),f.children("."+l.listview).empty(),u.scrollTop(0),s.length){if(_.add(v).addClass(l.hidden),_.each(function(){var n=e(this),a=r;(d.showTextItems||d.showSubPanels&&n.find("."+l.btn+"_next"))&&(a=h),n.children(a).not("."+l.btn+"_next").text().toLowerCase().indexOf(s)>-1&&n.removeClass(l.hidden)}),d.panel.add){var b=e();u.each(function(){var n=a.__filterListItems(e(this).find("."+l.listitem)).clone(!0);n.length&&(d.panel.dividers&&(b=b.add('<li class="'+l.listitem+" "+l.listitem+'_divider">'+e(this).find("."+l.navbar+"__title").text()+"</li>")),b=b.add(n))}),b.find("."+l.mm("toggle")).remove().end().find("."+l.mm("check")).remove().end().find("."+l.btn).remove(),f.children("."+l.listview).append(b),this.openPanel(f)}else d.showSubPanels&&u.each(function(n){var s=e(this);a.__filterListItems(s.find("."+l.listitem)).each(function(){var n=e(this),s=n.data(i.child);s&&s.find("."+l.listview).children().removeClass(l.hidden)})}),e(u.get().reverse()).each(function(s){var t=e(this),d=t.data(i.parent);d&&(a.__filterListItems(t.find("."+l.listitem)).length?d.hasClass(l.hidden)&&d.removeClass(l.hidden).children("."+l.btn+"_next").not("."+l.btn+"_fullwidth").addClass(l.btn+"_fullwidth").addClass(l.btn+"_fullwidth-search"):n.closest("."+l.panel).length||((t.hasClass(l.panel+"_opened")||t.hasClass(l.panel+"_opened-parent"))&&setTimeout(function(){a.openPanel(d.closest("."+l.panel))},(s+1)*(1.5*a.conf.openingInterval)),d.addClass(l.listitem+"_nosubitems")))}),this.__filterListItems(u.find("."+l.listitem)).each(function(){e(this).prevAll("."+l.listitem+"_divider").first().removeClass(l.hidden)});o.removeClass(l.hidden),m.find("."+l.panel+"__noresultsmsg")[_.not("."+l.hidden).length?"addClass":"removeClass"](l.hidden),d.panel.add&&(d.panel.splash&&f.find("."+l.panel+"__searchsplash").addClass(l.hidden),_.add(v).removeClass(l.hidden))}else _.add(v).removeClass(l.hidden),o.addClass(l.hidden),m.find("."+l.panel+"__noresultsmsg").addClass(l.hidden),d.panel.add&&(d.panel.splash?f.find("."+l.panel+"__searchsplash").removeClass(l.hidden):n.closest("."+l.panel+"_search").length||this.openPanel(this.$pnls.children("."+l.panel+"_opened-parent").last()));this.trigger("updateListview")}}(jQuery);
-/*
- * jQuery mmenu sectionIndexer add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var a="mmenu",n="sectionIndexer";e[a].addons[n]={setup:function(){var r=this,d=this.opts[n];this.conf[n];s=e[a].glbl,"boolean"==typeof d&&(d={add:d}),"object"!=typeof d&&(d={}),d=this.opts[n]=e.extend(!0,{},e[a].defaults[n],d);var h=null;this.bind("initPanels:after",function(a){if(d.add){var s;switch(d.addTo){case"panels":s=a;break;default:s=e(d.addTo,this.$menu).filter("."+i.panel)}s.find("."+i.listitem+"_divider").closest("."+i.panel).addClass(i.panel+"_has-sectionindexer"),h||(h=e('<div class="'+i.sectionindexer+'" />').prependTo(this.$menu).append('<a href="#a">a</a><a href="#b">b</a><a href="#c">c</a><a href="#d">d</a><a href="#e">e</a><a href="#f">f</a><a href="#g">g</a><a href="#h">h</a><a href="#i">i</a><a href="#j">j</a><a href="#k">k</a><a href="#l">l</a><a href="#m">m</a><a href="#n">n</a><a href="#o">o</a><a href="#p">p</a><a href="#q">q</a><a href="#r">r</a><a href="#s">s</a><a href="#t">t</a><a href="#u">u</a><a href="#v">v</a><a href="#w">w</a><a href="#x">x</a><a href="#y">y</a><a href="#z">z</a>'),h.on(t.mouseover+"-"+n+" "+t.touchstart+"-"+n,"a",function(a){var n=e(a.target).attr("href").slice(1),t=r.$pnls.children("."+i.panel+"_opened"),s=t.find("."+i.listview),d=-1,h=t.scrollTop();t.scrollTop(0),s.children("."+i.listitem+"_divider").not("."+i.hidden).each(function(){d<0&&n==e(this).text().slice(0,1).toLowerCase()&&(d=e(this).position().top)}),t.scrollTop(d>-1?d:h)}));var o=function(e){e=e||this.$pnls.children("."+i.panel+"_opened"),this.$menu[(e.hasClass(i.panel+"_has-sectionindexer")?"add":"remove")+"Class"](i.menu+"_has-sectionindexer")};this.bind("openPanel:start",o),this.bind("initPanels:after",o)}})},add:function(){i=e[a]._c,r=e[a]._d,t=e[a]._e,i.add("sectionindexer"),t.add("mouseover")},clickAnchor:function(e,a){if(e.parent().is("."+i.indexer))return!0}},e[a].defaults[n]={add:!1,addTo:"panels"};var i,r,t,s}(jQuery);
-/*
- * jQuery mmenu setSelected add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var t="mmenu",n="setSelected";e[t].addons[n]={setup:function(){var a=this,r=this.opts[n];this.conf[n];if(l=e[t].glbl,"boolean"==typeof r&&(r={hover:r,parent:r}),"object"!=typeof r&&(r={}),r=this.opts[n]=e.extend(!0,{},e[t].defaults[n],r),"detect"==r.current){var d=function(e){e=e.split("?")[0].split("#")[0];var t=a.$menu.find('a[href="'+e+'"], a[href="'+e+'/"]');t.length?a.setSelected(t.parent(),!0):(e=e.split("/").slice(0,-1),e.length&&d(e.join("/")))};this.bind("initMenu:after",function(){d(window.location.href)})}else r.current||this.bind("initListview:after",function(e){e.find("."+i.listview).children("."+i.listitem+"_selected").removeClass(i.listitem+"_selected")});r.hover&&this.bind("initMenu:after",function(){this.$menu.addClass(i.menu+"_selected-hover")}),r.parent&&(this.bind("openPanel:finish",function(e){this.$pnls.find("."+i.listview).find("."+i.listitem+"_selected-parent").removeClass(i.listitem+"_selected-parent");for(var t=e.data(s.parent);t;)t.not("."+i.listitem+"_vertical").addClass(i.listitem+"_selected-parent"),t=t.closest("."+i.panel).data(s.parent)}),this.bind("initMenu:after",function(){this.$menu.addClass(i.menu+"_selected-parent")}))},add:function(){i=e[t]._c,s=e[t]._d,a=e[t]._e},clickAnchor:function(e,t){}},e[t].defaults[n]={current:!0,hover:!1,parent:!1};var i,s,a,l}(jQuery);
-/*
- * jQuery mmenu sidebar add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var s="mmenu",d="sidebar";e[s].addons[d]={setup:function(){if(this.opts.offCanvas){var n=this.opts[d];this.conf[d];l=e[s].glbl,("string"==typeof n||"boolean"==typeof n&&n||"number"==typeof n)&&(n={expanded:n}),"object"!=typeof n&&(n={}),"boolean"==typeof n.collapsed&&n.collapsed&&(n.collapsed="all"),"string"!=typeof n.collapsed&&"number"!=typeof n.collapsed||(n.collapsed={use:n.collapsed}),"object"!=typeof n.collapsed&&(n.collapsed={}),"number"==typeof n.collapsed.use&&(n.collapsed.use="(min-width: "+n.collapsed.use+"px)"),"boolean"==typeof n.expanded&&n.expanded&&(n.expanded="all"),"string"!=typeof n.expanded&&"number"!=typeof n.expanded||(n.expanded={use:n.expanded}),"object"!=typeof n.expanded&&(n.expanded={}),"number"==typeof n.expanded.use&&(n.expanded.use="(min-width: "+n.expanded.use+"px)"),n=this.opts[d]=e.extend(!0,{},e[s].defaults[d],n);var t=a.wrapper+"_sidebar-collapsed-"+n.collapsed.size,i=a.wrapper+"_sidebar-expanded-"+n.expanded.size;n.collapsed.use&&(this.bind("initMenu:after",function(){this.$menu.addClass(a.menu+"_sidebar-collapsed"),n.collapsed.blockMenu&&this.opts.offCanvas&&!this.$menu.children("."+a.menu+"__blocker").length&&this.$menu.prepend('<a class="'+a.menu+'__blocker" href="#'+this.$menu.attr("id")+'" />'),n.collapsed.hideNavbar&&this.$menu.addClass(a.menu+"_hidenavbar"),n.collapsed.hideDivider&&this.$menu.addClass(a.menu+"_hidedivider")}),"boolean"==typeof n.collapsed.use?this.bind("initMenu:after",function(){l.$html.addClass(t)}):this.matchMedia(n.collapsed.use,function(){l.$html.addClass(t)},function(){l.$html.removeClass(t)})),n.expanded.use&&(this.bind("initMenu:after",function(){this.$menu.addClass(a.menu+"_sidebar-expanded")}),"boolean"==typeof n.expanded.use?this.bind("initMenu:after",function(){l.$html.addClass(i),this.open()}):this.matchMedia(n.expanded.use,function(){l.$html.addClass(i),l.$html.hasClass(a.wrapper+"_sidebar-closed")||this.open()},function(){l.$html.removeClass(i),this.close()}),this.bind("close:start",function(){l.$html.hasClass(i)&&l.$html.addClass(a.wrapper+"_sidebar-closed")}),this.bind("open:start",function(){l.$html.removeClass(a.wrapper+"_sidebar-closed")}))}},add:function(){a=e[s]._c,n=e[s]._d,t=e[s]._e},clickAnchor:function(e,s,n){if(this.opts[d].expanded.use&&l.$html.is('[class*="'+a.wrapper+'_sidebar-expanded-"]')&&s&&n)return{close:!1}}},e[s].defaults[d]={collapsed:{use:!1,size:40,blockMenu:!0,hideDivider:!1,hideNavbar:!0},expanded:{use:!1,size:30}},e[s].configuration[d]={};var a,n,t,l}(jQuery);
-/*
- * jQuery mmenu toggles add-on
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){var e="mmenu",c="toggles";t[e].addons[c]={setup:function(){var s=this;this.opts[c],this.conf[c];a=t[e].glbl,this.bind("initPanels:after",function(e){this.__refactorClass(e.find("input"),this.conf.classNames[c].toggle,n.toggle),this.__refactorClass(e.find("input"),this.conf.classNames[c].check,n.check),e.find("input."+n.toggle+", input."+n.check).each(function(){var e=t(this),c=e.closest("li"),i=e.hasClass(n.toggle)?"toggle":"check",a=e.attr("id")||s.__getUniqueId();c.children('label[for="'+a+'"]').length||(e.attr("id",a),c.prepend(e),t('<label for="'+a+'" class="'+n[i]+'"></label>').insertBefore(c.children("a, span").last()))})})},add:function(){n=t[e]._c,s=t[e]._d,i=t[e]._e,n.add("toggle check")},clickAnchor:function(t,e){}},t[e].configuration.classNames[c]={toggle:"Toggle",check:"Check"};var n,s,i,a}(jQuery);
-/*
- * jQuery mmenu navbar add-on breadcrumbs content
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(a){var r="mmenu",n="navbars",e="breadcrumbs";a[r].addons[n][e]=function(n,e,s){var t=this,i=a[r]._c,b=a[r]._d;i.add("separator");var c=a('<span class="'+i.navbar+'__breadcrumbs" />').appendTo(n);this.bind("initNavbar:after",function(r){if(!r.children("."+i.navbar).children("."+i.navbar+"__breadcrumbs").length){r.removeClass(i.panel+"_has-navbar");for(var n=[],e=a('<span class="'+i.navbar+'__breadcrumbs"></span>'),t=r,c=!0;t&&t.length;){if(t.is("."+i.panel)||(t=t.closest("."+i.panel)),!t.parent("."+i.listitem+"_vertical").length){var d=t.children("."+i.navbar).children("."+i.navbar+"__title").text();d.length&&n.unshift(c?"<span>"+d+"</span>":'<a href="#'+t.attr("id")+'">'+d+"</a>"),c=!1}t=t.data(b.parent)}s.breadcrumbs.removeFirst&&n.shift(),e.append(n.join('<span class="'+i.separator+'">'+s.breadcrumbs.separator+"</span>")).appendTo(r.children("."+i.navbar))}}),this.bind("openPanel:start",function(a){var r=a.find("."+i.navbar+"__breadcrumbs");r.length&&c.html(r.html()||"")}),this.bind("initNavbar:after:sr-aria",function(r){r.children("."+i.navbar).children("."+i.breadcrumbs).children("a").each(function(){t.__sr_aria(a(this),"owns",a(this).attr("href").slice(1))})})}}(jQuery);
-/*
- * jQuery mmenu navbar add-on close content
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){var e="mmenu",n="navbars",a="close";t[e].addons[n][a]=function(n,a){var s=t[e]._c;t[e].glbl;s.add("close");var r=t('<a class="'+s.btn+" "+s.btn+"_close "+s.navbar+'__btn" href="#" />').appendTo(n);this.bind("setPage:after",function(t){r.attr("href","#"+t.attr("id"))}),this.bind("setPage:after:sr-text",function(n){r.html(this.__sr_text(t[e].i18n(this.conf.screenReader.text.closeMenu))),this.__sr_aria(r,"owns",r.attr("href").slice(1))})}}(jQuery);
-/*
- * jQuery mmenu navbar add-on next content
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(a){var n="mmenu",t="navbars",e="next";a[n].addons[t][e]=function(e,s){var r,i,h,d=a[n]._c,o=a('<a class="'+d.btn+" "+d.btn+"_next "+d.navbar+'__btn" href="#" />').appendTo(e);this.bind("openPanel:start",function(a){r=a.find("."+this.conf.classNames[t].panelNext),i=r.attr("href"),h=r.html(),i?o.attr("href",i):o.removeAttr("href"),o[i||h?"removeClass":"addClass"](d.hidden),o.html(h)}),this.bind("openPanel:start:sr-aria",function(a){this.__sr_aria(o,"hidden",o.hasClass(d.hidden)),this.__sr_aria(o,"owns",(o.attr("href")||"").slice(1))})},a[n].configuration.classNames[t].panelNext="Next"}(jQuery);
-/*
- * jQuery mmenu navbar add-on prev content
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(a){var n="mmenu",r="navbars",e="prev";a[n].addons[r][e]=function(e,t){var i=a[n]._c,s=a('<a class="'+i.btn+" "+i.btn+"_prev "+i.navbar+'__btn" href="#" />').appendTo(e);this.bind("initNavbar:after",function(a){a.removeClass(i.panel+"_has-navbar")});var h,l,d;this.bind("openPanel:start",function(a){a.parent("."+i.listitem+"_vertical").length||(h=a.find("."+this.conf.classNames[r].panelPrev),h.length||(h=a.children("."+i.navbar).children("."+i.btn+"_prev")),l=h.attr("href"),d=h.html(),l?s.attr("href",l):s.removeAttr("href"),s[l||d?"removeClass":"addClass"](i.hidden),s.html(d))}),this.bind("initNavbar:after:sr-aria",function(a){var n=a.children("."+i.navbar);this.__sr_aria(n,"hidden",!0)}),this.bind("openPanel:start:sr-aria",function(a){this.__sr_aria(s,"hidden",s.hasClass(i.hidden)),this.__sr_aria(s,"owns",(s.attr("href")||"").slice(1))})},a[n].configuration.classNames[r].panelPrev="Prev"}(jQuery);
-/*
- * jQuery mmenu navbar add-on searchfield content
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(s){var e="mmenu",a="navbars",d="searchfield";s[e].addons[a][d]=function(a,d){var i=s[e]._c,t=s('<div class="'+i.searchfield+'" />').appendTo(a);"object"!=typeof this.opts.searchfield&&(this.opts.searchfield={}),this.opts.searchfield.add=!0,this.opts.searchfield.addTo=t}}(jQuery);
-/*
- * jQuery mmenu navbar add-on tabs content
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(a){var t="mmenu",e="navbars",n="tabs";a[t].addons[e][n]=function(n,s,r){function i(a){c.removeClass(d.navbar+"__tab_selected");var t=c.filter('[href="#'+a.attr("id")+'"]');if(t.length)t.addClass(d.navbar+"__tab_selected");else{var e=a.data(l.parent);e&&e.length&&i(e.closest("."+d.panel))}}var d=a[t]._c,l=a[t]._d,o=a[t]._e,_=this,c=n.children("a");n.addClass(d.navbar+"_tabs").parent().addClass(d.navbars+"_has-tabs"),c.on(o.click+"-"+e,function(t){t.preventDefault();var e=a(this);if(e.hasClass(d.navbar+"__tab_selected"))return void t.stopImmediatePropagation();try{_.__openPanelWoAnimation(a(e.attr("href"))),t.stopImmediatePropagation()}catch(n){}}),this.bind("openPanel:start",i)}}(jQuery);
-/*
- * jQuery mmenu navbar add-on title content
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(t){var a="mmenu",e="navbars",n="title";t[a].addons[e][n]=function(n,i){var r,s,l,h=t[a]._c,d=t('<a class="'+h.navbar+'__title" />').appendTo(n);this.bind("openPanel:start",function(t){t.parent("."+h.listitem+"_vertical").length||(l=t.find("."+this.conf.classNames[e].panelTitle),l.length||(l=t.children("."+h.navbar).children("."+h.navbar+"__title")),r=l.attr("href"),s=l.html()||i.title,r?d.attr("href",r):d.removeAttr("href"),d[r||s?"removeClass":"addClass"](h.hidden),d.html(s))});var o;this.bind("openPanel:start:sr-aria",function(t){if(this.opts.screenReader.text&&(o||(o=this.$menu.children("."+h.navbars+"_top, ."+h.navbars+"_bottom").children("."+h.navbar).children("."+h.btn+"_prev")),o.length)){var a=!0;"parent"==this.opts.navbar.titleLink&&(a=!o.hasClass(h.hidden)),this.__sr_aria(d,"hidden",a)}})},t[a].configuration.classNames[e].panelTitle="Title"}(jQuery);
-/*
- * jQuery mmenu Angular wrapper
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var n="mmenu",t="angular";e[n].wrappers[t]=function(){this.opts.onClick={close:!0,preventDefault:!1,setSelected:!0}}}(jQuery);
-/*
- * jQuery mmenu Bootstrap 3 wrapper
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(n){var e="mmenu",a="bootstrap3";n[e].wrappers[a]=function(){this.$menu.hasClass("navbar-collapse")&&(this.conf.classNames.selected="active",this.conf.classNames.divider="divider",this.conf.clone=!0,this.opts.initMenu=function(n){for(var e="",a=["nav-tabs","nav-pills","navbar-nav"],t=0;t<a.length;t++)if(n.find("."+a[t]).length){e=a[t];break}e.length&&(i.menu.call(this),i.dropdown.call(this),i[e.split("nav-").join("").split("-nav").join("")].call(this))})};var i={menu:function(){this.$menu.children().removeClass("nav").find(".sr-only").remove().end().find(".divider:empty").remove();for(var n=["role","aria-haspopup","aria-expanded"],e=0;e<n.length;e++)this.$menu.find("["+n[e]+"]").removeAttr(n[e])},dropdown:function(){var e=this.$menu.find(".dropdown");e.removeClass("dropdown"),e.children(".dropdown-toggle").find(".caret").remove().end().each(function(){n(this).replaceWith("<span>"+n(this).html()+"</span>")}),e.children(".dropdown-menu").removeClass("dropdown-menu")},tabs:function(){this.$menu.children().removeClass("nav-tabs")},pills:function(){this.$menu.children().removeClass("nav-pills")},navbar:function(){var n=this;this.$menu.removeClass("collapse navbar-collapse").wrapInner("<div />").children().children().removeClass("navbar-left navbar-right navbar-nav navbar-text navbar-btn");var e=this.$menu.find(".navbar-form");this.conf.searchform={form:{action:e.attr("action"),method:e.attr("method")},input:{name:e.find("input").attr("name")},submit:!0},e.remove(),(this.$orig||this.$menu).closest(".navbar").find(".navbar-header").find(".navbar-toggle").off("click").on("click",function(e){n.open(),e.stopImmediatePropagation(),e.preventDefault()})}}}(jQuery);
-/*
- * jQuery mmenu Bootstrap 4 wrapper
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(n){function e(e){for(var a=n("<a />"),t=["href","title","target"],r=0;r<t.length;r++)"undefined"!=typeof e.attr(t[r])&&a.attr(t[r],e.attr(t[r]));return a.html(e.html()),a.find(".sr-only").remove(),a}function a(a){var t=n("<ul />");return a.find(".dropdown-item, .dropdown-divider").each(function(){var a=n(this),r=n("<li />");a.hasClass("dropdown-divider")?r.addClass("Divider"):r.append(e(a)),t.append(r)}),t}function t(t){var r=n("<ul />");return t.find(".nav-item").each(function(){var t=n(this),i=n("<li />");if(t.hasClass("active")&&i.addClass("Selected"),!t.hasClass("nav-link")){var o=t.children(".dropdown-menu");o.length&&i.append(a(o)),t=t.children(".nav-link")}i.prepend(e(t)),r.append(i)}),r}var r="mmenu",i="bootstrap4";n[r].wrappers[i]=function(){var e=this;if(this.$menu.hasClass("navbar-collapse")){this.conf.clone=!1;var r=n("<nav />"),i=n("<div />");r.append(i),this.$menu.children().each(function(){var r=n(this);switch(!0){case r.hasClass("navbar-nav"):i.append(t(r));break;case r.hasClass("dropdown-menu"):i.append(a(r));break;case r.hasClass("form-inline"):e.conf.searchfield.form={action:r.attr("action")||null,method:r.attr("method")||null},e.conf.searchfield.input={name:r.find("input").attr("name")||null},e.conf.searchfield.clear=!1,e.conf.searchfield.submit=!0;break;default:i.append(r.clone(!0))}}),this.bind("initMenu:before",function(){r.prependTo("body"),this.$menu=r}),this.$menu.parent().find(".navbar-toggler").removeAttr("data-target").removeAttr("aria-controls").off("click").on("click",function(n){n.preventDefault(),n.stopImmediatePropagation(),e.open()})}}}(jQuery);
-/*
- * jQuery mmenu jQuery Mobile wrapper
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var n="mmenu",t="jqueryMobile";e[n].wrappers[t]=function(){var n=this;this.opts.onClick.close=!1,this.conf.offCanvas.pageSelector="div.ui-page-active",e("body").on("pagecontainerchange",function(e,t){"function"==typeof n.close&&(n.close(),n.setPage(t.toPage))}),this.bind("initAnchors:after",function(){e("body").on("click",".mm-listview a",function(n){n.isDefaultPrevented()||(n.preventDefault(),e("body").pagecontainer("change",this.href))})})}}(jQuery);
-/*
- * jQuery mmenu Magento wrapper
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(e){var n="mmenu",a="magento";e[n].wrappers[a]=function(){this.conf.classNames.selected="active"}}(jQuery);
-/*
- * jQuery mmenu Olark wrapper
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(n){var o="mmenu",a="olark";n[o].wrappers[a]=function(){this.conf.offCanvas.noPageSelector.push("#olark")}}(jQuery);
-/*
- * jQuery mmenu Turbolinks wrapper
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(n){var t="mmenu",o="turbolinks";n[t].wrappers[o]=function(){var o,r;n(document).on("turbolinks:before-visit",function(){r=n("html"),o=r.attr("class"),o=n.grep(o.split(/\s+/),function(n){return!/mm-/.test(n)}).join(" ")}).on("turbolinks:load",function(){"undefined"!=typeof r&&(r.attr("class",o),n[t].glbl=!1)})}}(jQuery);
-/*
- * jQuery mmenu WordPress wrapper
- * mmenu.frebsite.nl
- *
- * Copyright (c) Fred Heusschen
- */
-!function(s){var e="mmenu",n="wordpress";s[e].wrappers[n]=function(){this.conf.classNames.selected="current-menu-item",s("#wpadminbar").css("position","fixed").addClass("mm-slideout")}}(jQuery);
-return true;
+}(this, function (jQuery) {
+  /*!
+   * jQuery mmenu v7.3.2
+   * @requires jQuery 1.7.0 or later
+   *
+   * mmenujs.com
+   *
+   * Copyright (c) Fred Heusschen
+   * www.frebsite.nl
+   *
+   * License: CC-BY-NC-4.0
+   * http://creativecommons.org/licenses/by-nc/4.0/
+   */
+  ! function (t) {
+    var e, n, i, s, a, r = "mmenu";
+    t[r] && t[r].version > "7.3.2" || (t[r] = function (t, e, n) {
+      return this.$menu = t, this._api = ["bind", "getInstance", "initPanels", "openPanel", "closePanel", "closeAllPanels", "setSelected"], this.opts = e, this.conf = n, this.vars = {}, this.cbck = {}, this.mtch = {}, "function" == typeof this.___deprecated && this.___deprecated(), this._initWrappers(), this._initAddons(), this._initExtensions(), this._initHooks(), this._initMenu(), this._initPanels(), this._initOpened(), this._initAnchors(), this._initMatchMedia(), "function" == typeof this.___debug && this.___debug(), this
+    }, t[r].version = "7.3.2", t[r].uniqueId = 0, t[r].wrappers = {}, t[r].addons = {}, t[r].defaults = {
+      hooks: {},
+      extensions: [],
+      wrappers: [],
+      navbar: {
+        add: !0,
+        title: "青馬影藝學院",
+        titleLink: "parent"
+      },
+      onClick: {
+        setSelected: !0
+      },
+      slidingSubmenus: !0
+    }, t[r].configuration = {
+      classNames: {
+        divider: "Divider",
+        inset: "Inset",
+        nolistview: "NoListview",
+        nopanel: "NoPanel",
+        panel: "Panel",
+        selected: "Selected",
+        spacer: "Spacer",
+        vertical: "Vertical"
+      },
+      clone: !1,
+      language: null,
+      openingInterval: 25,
+      panelNodetype: "ul, ol, div",
+      transitionDuration: 400
+    }, t[r].prototype = {
+      getInstance: function () {
+        return this
+      },
+      initPanels: function (t) {
+        this._initPanels(t)
+      },
+      openPanel: function (e, s) {
+        if (this.trigger("openPanel:before", e), e && e.length && (e.is("." + n.panel) || (e = e.closest("." + n.panel)), e.is("." + n.panel))) {
+          var a = this;
+          if ("boolean" != typeof s && (s = !0), e.parent("." + n.listitem + "_vertical").length) e.parents("." + n.listitem + "_vertical").addClass(n.listitem + "_opened").children("." + n.panel).removeClass(n.hidden), this.openPanel(e.parents("." + n.panel).not(function () {
+            return t(this).parent("." + n.listitem + "_vertical").length
+          }).first()), this.trigger("openPanel:start", e), this.trigger("openPanel:finish", e);
+          else {
+            if (e.hasClass(n.panel + "_opened")) return;
+            var l = this.$pnls.children("." + n.panel),
+              o = this.$pnls.children("." + n.panel + "_opened");
+            if (!t[r].support.csstransitions) return o.addClass(n.hidden).removeClass(n.panel + "_opened"), e.removeClass(n.hidden).addClass(n.panel + "_opened"), this.trigger("openPanel:start", e), void this.trigger("openPanel:finish", e);
+            l.not(e).removeClass(n.panel + "_opened-parent");
+            for (var d = e.data(i.parent); d;)(d = d.closest("." + n.panel)).parent("." + n.listitem + "_vertical").length || d.addClass(n.panel + "_opened-parent"), d = d.data(i.parent);
+            l.removeClass(n.panel + "_highest").not(o).not(e).addClass(n.hidden), e.removeClass(n.hidden);
+            var c = function () {
+                o.removeClass(n.panel + "_opened"), e.addClass(n.panel + "_opened"), e.hasClass(n.panel + "_opened-parent") ? (o.addClass(n.panel + "_highest"), e.removeClass(n.panel + "_opened-parent")) : (o.addClass(n.panel + "_opened-parent"), e.addClass(n.panel + "_highest")), a.trigger("openPanel:start", e)
+              },
+              h = function () {
+                o.removeClass(n.panel + "_highest").addClass(n.hidden), e.removeClass(n.panel + "_highest"), a.trigger("openPanel:finish", e)
+              };
+            s && !e.hasClass(n.panel + "_noanimation") ? setTimeout(function () {
+              a.__transitionend(e, function () {
+                h()
+              }, a.conf.transitionDuration), c()
+            }, a.conf.openingInterval) : (c(), h())
+          }
+          this.trigger("openPanel:after", e)
+        }
+      },
+      closePanel: function (t) {
+        this.trigger("closePanel:before", t);
+        var e = t.parent();
+        e.hasClass(n.listitem + "_vertical") && (e.removeClass(n.listitem + "_opened"), t.addClass(n.hidden), this.trigger("closePanel", t)), this.trigger("closePanel:after", t)
+      },
+      closeAllPanels: function (t) {
+        this.trigger("closeAllPanels:before"), this.$pnls.find("." + n.listview).children().removeClass(n.listitem + "_selected").filter("." + n.listitem + "_vertical").removeClass(n.listitem + "_opened");
+        var e = this.$pnls.children("." + n.panel),
+          i = t && t.length ? t : e.first();
+        this.$pnls.children("." + n.panel).not(i).removeClass(n.panel + "_opened").removeClass(n.panel + "_opened-parent").removeClass(n.panel + "_highest").addClass(n.hidden), this.openPanel(i, !1), this.trigger("closeAllPanels:after")
+      },
+      togglePanel: function (t) {
+        var e = t.parent();
+        e.hasClass(n.listitem + "_vertical") && this[e.hasClass(n.listitem + "_opened") ? "closePanel" : "openPanel"](t)
+      },
+      setSelected: function (t) {
+        this.trigger("setSelected:before", t), this.$menu.find("." + n.listitem + "_selected").removeClass(n.listitem + "_selected"), t.addClass(n.listitem + "_selected"), this.trigger("setSelected:after", t)
+      },
+      bind: function (t, e) {
+        this.cbck[t] = this.cbck[t] || [], this.cbck[t].push(e)
+      },
+      trigger: function () {
+        var t = Array.prototype.slice.call(arguments),
+          e = t.shift();
+        if (this.cbck[e])
+          for (var n = 0, i = this.cbck[e].length; n < i; n++) this.cbck[e][n].apply(this, t)
+      },
+      matchMedia: function (t, e, n) {
+        var i = {
+          yes: e,
+          no: n
+        };
+        this.mtch[t] = this.mtch[t] || [], this.mtch[t].push(i)
+      },
+      i18n: function (e) {
+        return t[r].i18n(e, this.conf.language)
+      },
+      _initHooks: function () {
+        for (var t in this.opts.hooks) this.bind(t, this.opts.hooks[t])
+      },
+      _initWrappers: function () {
+        this.trigger("initWrappers:before");
+        for (var e = 0; e < this.opts.wrappers.length; e++) {
+          var n = t[r].wrappers[this.opts.wrappers[e]];
+          "function" == typeof n && n.call(this)
+        }
+        this.trigger("initWrappers:after")
+      },
+      _initAddons: function () {
+        var e;
+        for (e in this.trigger("initAddons:before"), t[r].addons) t[r].addons[e].add.call(this), t[r].addons[e].add = function () {};
+        for (e in t[r].addons) t[r].addons[e].setup.call(this);
+        this.trigger("initAddons:after")
+      },
+      _initExtensions: function () {
+        this.trigger("initExtensions:before");
+        var t = this;
+        for (var e in this.opts.extensions.constructor === Array && (this.opts.extensions = {
+            all: this.opts.extensions
+          }), this.opts.extensions) this.opts.extensions[e] = this.opts.extensions[e].length ? n.menu + "_" + this.opts.extensions[e].join(" " + n.menu + "_") : "", this.opts.extensions[e] && function (e) {
+          t.matchMedia(e, function () {
+            this.$menu.addClass(this.opts.extensions[e])
+          }, function () {
+            this.$menu.removeClass(this.opts.extensions[e])
+          })
+        }(e);
+        this.trigger("initExtensions:after")
+      },
+      _initMenu: function () {
+        this.trigger("initMenu:before");
+        this.conf.clone && (this.$orig = this.$menu, this.$menu = this.$orig.clone(), this.$menu.add(this.$menu.find("[id]")).filter("[id]").each(function () {
+          t(this).attr("id", n.mm(t(this).attr("id")))
+        })), this.$menu.attr("id", this.$menu.attr("id") || this.__getUniqueId()), this.$pnls = t('<div class="' + n.panels + '" />').append(this.$menu.children(this.conf.panelNodetype)).prependTo(this.$menu), this.$menu.addClass(n.menu).parent().addClass(n.wrapper), this.trigger("initMenu:after")
+      },
+      _initPanels: function (e) {
+        this.trigger("initPanels:before", e), e = e || this.$pnls.children(this.conf.panelNodetype);
+        var i = t(),
+          s = this,
+          a = function (e) {
+            e.filter(s.conf.panelNodetype).each(function (e) {
+              var r = s._initPanel(t(this));
+              if (r) {
+                s._initNavbar(r), s._initListview(r), i = i.add(r);
+                var l = r.children("." + n.listview).children("li").children(s.conf.panelNodetype).add(r.children("." + s.conf.classNames.panel));
+                l.length && a(l)
+              }
+            })
+          };
+        a(e), this.trigger("initPanels:after", i)
+      },
+      _initPanel: function (t) {
+        this.trigger("initPanel:before", t);
+        if (t.hasClass(n.panel)) return t;
+        if (this.__refactorClass(t, this.conf.classNames.panel, n.panel), this.__refactorClass(t, this.conf.classNames.nopanel, n.nopanel), this.__refactorClass(t, this.conf.classNames.inset, n.listview + "_inset"), t.filter("." + n.listview + "_inset").addClass(n.nopanel), t.hasClass(n.nopanel)) return !1;
+        var e = t.hasClass(this.conf.classNames.vertical) || !this.opts.slidingSubmenus;
+        t.removeClass(this.conf.classNames.vertical);
+        var s = t.attr("id") || this.__getUniqueId();
+        t.is("ul, ol") && (t.removeAttr("id"), t.wrap("<div />"), t = t.parent()), t.attr("id", s), t.addClass(n.panel + " " + n.hidden);
+        var a = t.parent("li");
+        return e ? a.addClass(n.listitem + "_vertical") : t.appendTo(this.$pnls), a.length && (a.data(i.child, t), t.data(i.parent, a)), this.trigger("initPanel:after", t), t
+      },
+      _initNavbar: function (e) {
+        if (this.trigger("initNavbar:before", e), !e.children("." + n.navbar).length) {
+          var s = e.data(i.parent),
+            a = t('<div class="' + n.navbar + '" />'),
+            r = this.__getPanelTitle(e, this.opts.navbar.title),
+            l = "";
+          if (s && s.length) {
+            if (s.hasClass(n.listitem + "_vertical")) return;
+            if (s.parent().is("." + n.listview)) var o = s.children("a, span").not("." + n.btn + "_next");
+            else o = s.closest("." + n.panel).find('a[href="#' + e.attr("id") + '"]');
+            var d = (s = (o = o.first()).closest("." + n.panel)).attr("id");
+            switch (r = this.__getPanelTitle(e, t("<span>" + o.text() + "</span>").text()), this.opts.navbar.titleLink) {
+              case "anchor":
+                l = o.attr("href") || "";
+                break;
+              case "parent":
+                l = "#" + d
+            }
+            a.append('<a class="' + n.btn + " " + n.btn + "_prev " + n.navbar + '__btn" href="#' + d + '" />')
+          } else if (!this.opts.navbar.title) return;
+          this.opts.navbar.add && e.addClass(n.panel + "_has-navbar"), a.append('<a class="' + n.navbar + '__title"' + (l.length ? ' href="' + l + '"' : "") + ">" + r + "</a>").prependTo(e), this.trigger("initNavbar:after", e)
+        }
+      },
+      _initListview: function (e) {
+        this.trigger("initListview:before", e);
+        var s = this.__childAddBack(e, "ul, ol");
+        this.__refactorClass(s, this.conf.classNames.nolistview, n.nolistview);
+        var a = s.not("." + n.nolistview).addClass(n.listview).children().addClass(n.listitem);
+        this.__refactorClass(a, this.conf.classNames.selected, n.listitem + "_selected"), this.__refactorClass(a, this.conf.classNames.divider, n.listitem + "_divider"), this.__refactorClass(a, this.conf.classNames.spacer, n.listitem + "_spacer"), a.children("a, span").not("." + n.btn).addClass(n.listitem + "__text");
+        var r = e.data(i.parent);
+        if (r && r.is("." + n.listitem) && !r.children("." + n.btn).length) {
+          var l = r.children("a, span").first(),
+            o = t('<a class="' + n.btn + " " + n.btn + "_next " + n.listitem + '__btn" href="#' + e.attr("id") + '" />');
+          o.insertAfter(l), l.is("span") && (o.addClass(n.listitem + "__text").html(l.html()), l.remove())
+        }
+        this.trigger("initListview:after", e)
+      },
+      _initOpened: function () {
+        this.trigger("initOpened:before");
+        var t = this.$pnls.find("." + n.listitem + "_selected").removeClass(n.listitem + "_selected").last().addClass(n.listitem + "_selected"),
+          e = t.length ? t.closest("." + n.panel) : this.$pnls.children("." + n.panel).first();
+        this.openPanel(e, !1), this.trigger("initOpened:after")
+      },
+      _initAnchors: function () {
+        this.trigger("initAnchors:before");
+        var e = this;
+        a.$body.on(s.click + "-oncanvas", "a[href]", function (i) {
+          var s = t(this),
+            a = s.attr("href"),
+            l = e.$menu.find(s).length,
+            o = s.is("." + n.listitem + " > a"),
+            d = s.is('[rel="external"]') || s.is('[target="_blank"]');
+          if (l && a.length > 1 && "#" == a.slice(0, 1)) try {
+            var c = e.$menu.find(a);
+            if (c.is("." + n.panel)) return e[s.parent().hasClass(n.listitem + "_vertical") ? "togglePanel" : "openPanel"](c), void i.preventDefault()
+          } catch (t) {}
+          var h = {
+            close: null,
+            setSelected: null,
+            preventDefault: "#" == a.slice(0, 1)
+          };
+          for (var p in t[r].addons) {
+            var f = t[r].addons[p].clickAnchor.call(e, s, l, o, d);
+            if (f) {
+              if ("boolean" == typeof f) return void i.preventDefault();
+              "object" == typeof f && (h = t.extend({}, h, f))
+            }
+          }
+          l && o && !d && (e.__valueOrFn(s, e.opts.onClick.setSelected, h.setSelected) && e.setSelected(t(i.target).parent()), e.__valueOrFn(s, e.opts.onClick.preventDefault, h.preventDefault) && i.preventDefault(), e.__valueOrFn(s, e.opts.onClick.close, h.close) && e.opts.offCanvas && "function" == typeof e.close && e.close())
+        }), this.trigger("initAnchors:after")
+      },
+      _initMatchMedia: function () {
+        var t = this;
+        for (var e in this.mtch) ! function () {
+          var n = e,
+            i = window.matchMedia(n);
+          t._fireMatchMedia(n, i), i.addListener(function (e) {
+            t._fireMatchMedia(n, e)
+          })
+        }()
+      },
+      _fireMatchMedia: function (t, e) {
+        for (var n = e.matches ? "yes" : "no", i = 0; i < this.mtch[t].length; i++) this.mtch[t][i][n].call(this)
+      },
+      _getOriginalMenuId: function () {
+        var t = this.$menu.attr("id");
+        return this.conf.clone && t && t.length && (t = n.umm(t)), t
+      },
+      __api: function () {
+        var e = this,
+          n = {};
+        return t.each(this._api, function (t) {
+          var i = this;
+          n[i] = function () {
+            var t = e[i].apply(e, arguments);
+            return void 0 === t ? n : t
+          }
+        }), n
+      },
+      __valueOrFn: function (t, e, n) {
+        if ("function" == typeof e) {
+          var i = e.call(t[0]);
+          if (void 0 !== i) return i
+        }
+        return "function" != typeof e && void 0 !== e || void 0 === n ? e : n
+      },
+      __getPanelTitle: function (e, n) {
+        var s;
+        return "function" == typeof this.opts.navbar.title && (s = this.opts.navbar.title.call(e[0])), void 0 === s && (s = e.data(i.title)), void 0 !== s ? s : "string" == typeof n ? this.i18n(n) : this.i18n(t[r].defaults.navbar.title)
+      },
+      __refactorClass: function (t, e, n) {
+        return t.filter("." + e).removeClass(e).addClass(n)
+      },
+      __findAddBack: function (t, e) {
+        return t.find(e).add(t.filter(e))
+      },
+      __childAddBack: function (t, e) {
+        return t.children(e).add(t.filter(e))
+      },
+      __filterListItems: function (t) {
+        return t.not("." + n.listitem + "_divider").not("." + n.hidden)
+      },
+      __filterListItemAnchors: function (t) {
+        return this.__filterListItems(t).children("a").not("." + n.btn + "_next")
+      },
+      __openPanelWoAnimation: function (t) {
+        t.hasClass(n.panel + "_noanimation") || (t.addClass(n.panel + "_noanimation"), this.__transitionend(t, function () {
+          t.removeClass(n.panel + "_noanimation")
+        }, this.conf.openingInterval), this.openPanel(t))
+      },
+      __transitionend: function (t, e, n) {
+        var i = !1,
+          a = function (n) {
+            void 0 !== n && n.target != t[0] || (i || (t.off(s.transitionend), t.off(s.webkitTransitionEnd), e.call(t[0])), i = !0)
+          };
+        t.on(s.transitionend, a), t.on(s.webkitTransitionEnd, a), setTimeout(a, 1.1 * n)
+      },
+      __getUniqueId: function () {
+        return n.mm(t[r].uniqueId++)
+      }
+    }, t.fn[r] = function (e, l) {
+      ! function () {
+        if (t[r].glbl) return;
+        a = {
+          $wndw: t(window),
+          $docu: t(document),
+          $html: t("html"),
+          $body: t("body")
+        }, n = {}, i = {}, s = {}, t.each([n, i, s], function (t, e) {
+          e.add = function (t) {
+            t = t.split(" ");
+            for (var n = 0, i = t.length; n < i; n++) e[t[n]] = e.mm(t[n])
+          }
+        }), n.mm = function (t) {
+          return "mm-" + t
+        }, n.add("wrapper menu panels panel nopanel navbar listview nolistview listitem btn hidden"), n.umm = function (t) {
+          return "mm-" == t.slice(0, 3) && (t = t.slice(3)), t
+        }, i.mm = function (t) {
+          return "mm-" + t
+        }, i.add("parent child title"), s.mm = function (t) {
+          return t + ".mm"
+        }, s.add("transitionend webkitTransitionEnd click scroll resize keydown mousedown mouseup touchstart touchmove touchend orientationchange"), t[r]._c = n, t[r]._d = i, t[r]._e = s, t[r].glbl = a
+      }();
+      var o = t();
+      return this.each(function () {
+        var n = t(this);
+        if (!n.data(r)) {
+          var i = jQuery.extend(!0, {}, t[r].defaults, e),
+            s = jQuery.extend(!0, {}, t[r].configuration, l),
+            a = new t[r](n, i, s);
+          a.$menu.data(r, a.__api()), o = o.add(a.$menu)
+        }
+      }), o
+    }, t[r].i18n = (e = {}, function (n, i) {
+      switch (typeof n) {
+        case "object":
+          return "string" == typeof i && (void 0 === e[i] && (e[i] = {}), t.extend(e[i], n)), e;
+        case "string":
+          return "string" == typeof i && void 0 !== e[i] && e[i][n] || n;
+        case "undefined":
+        default:
+          return e
+      }
+    }), t[r].support = {
+      touch: "ontouchstart" in window || navigator.msMaxTouchPoints || !1,
+      csstransitions: "undefined" == typeof Modernizr || void 0 === Modernizr.csstransitions || Modernizr.csstransitions
+    })
+  }(jQuery);
+  ! function (e) {
+    var t, n, i, o, r = "offCanvas";
+    e.mmenu.addons[r] = {
+      setup: function () {
+        if (this.opts[r]) {
+          var n = this.opts[r],
+            i = this.conf[r];
+          o = e.mmenu.glbl, this._api = e.merge(this._api, ["open", "close", "setPage"]), "object" != typeof n && (n = {}), n = this.opts[r] = e.extend(!0, {}, e.mmenu.defaults[r], n), "string" != typeof i.page.selector && (i.page.selector = "> " + i.page.nodetype), this.vars.opened = !1;
+          var s = [t.menu + "_offcanvas"];
+          this.bind("initMenu:after", function () {
+            var e = this;
+            this._initBlocker(), this.setPage(o.$page), this._initWindow_offCanvas(), this.$menu.addClass(s.join(" ")).parent("." + t.wrapper).removeClass(t.wrapper), this.$menu[i.menu.insertMethod](i.menu.insertSelector);
+            var n = window.location.hash;
+            if (n) {
+              var r = this._getOriginalMenuId();
+              r && r == n.slice(1) && setTimeout(function () {
+                e.open()
+              }, 1e3)
+            }
+          }), this.bind("setPage:after", function (e) {
+            o.$blck && o.$blck.children("a").attr("href", "#" + e.attr("id"))
+          }), this.bind("open:start:sr-aria", function () {
+            this.__sr_aria(this.$menu, "hidden", !1)
+          }), this.bind("close:finish:sr-aria", function () {
+            this.__sr_aria(this.$menu, "hidden", !0)
+          }), this.bind("initMenu:after:sr-aria", function () {
+            this.__sr_aria(this.$menu, "hidden", !0)
+          }), this.bind("initBlocker:after:sr-text", function () {
+            o.$blck.children("a").html(this.__sr_text(this.i18n(this.conf.screenReader.text.closeMenu)))
+          })
+        }
+      },
+      add: function () {
+        t = e.mmenu._c, n = e.mmenu._d, i = e.mmenu._e, t.add("slideout page no-csstransforms3d"), n.add("style")
+      },
+      clickAnchor: function (e, n) {
+        var i = this;
+        if (this.opts[r]) {
+          var s = this._getOriginalMenuId();
+          if (s && e.is('[href="#' + s + '"]')) {
+            if (n) return this.open(), !0;
+            var a = e.closest("." + t.menu);
+            if (a.length) {
+              var p = a.data("mmenu");
+              if (p && p.close) return p.close(), i.__transitionend(a, function () {
+                i.open()
+              }, i.conf.transitionDuration), !0
+            }
+            return this.open(), !0
+          }
+          if (o.$page) return (s = o.$page.first().attr("id")) && e.is('[href="#' + s + '"]') ? (this.close(), !0) : void 0
+        }
+      }
+    }, e.mmenu.defaults[r] = {
+      blockUI: !0,
+      moveBackground: !0
+    }, e.mmenu.configuration[r] = {
+      menu: {
+        insertMethod: "prependTo",
+        insertSelector: "body"
+      },
+      page: {
+        nodetype: "div",
+        selector: null,
+        noSelector: [],
+        wrapIfNeeded: !0
+      }
+    }, e.mmenu.prototype.open = function () {
+      if (this.trigger("open:before"), !this.vars.opened) {
+        var e = this;
+        this._openSetup(), setTimeout(function () {
+          e._openFinish()
+        }, this.conf.openingInterval), this.trigger("open:after")
+      }
+    }, e.mmenu.prototype._openSetup = function () {
+      var s = this,
+        a = this.opts[r];
+      this.closeAllOthers(), o.$page.each(function () {
+        e(this).data(n.style, e(this).attr("style") || "")
+      }), o.$wndw.trigger(i.resize + "-" + r, [!0]);
+      var p = [t.wrapper + "_opened"];
+      a.blockUI && p.push(t.wrapper + "_blocking"), "modal" == a.blockUI && p.push(t.wrapper + "_modal"), a.moveBackground && p.push(t.wrapper + "_background"), o.$html.addClass(p.join(" ")), setTimeout(function () {
+        s.vars.opened = !0
+      }, this.conf.openingInterval), this.$menu.addClass(t.menu + "_opened")
+    }, e.mmenu.prototype._openFinish = function () {
+      var e = this;
+      this.__transitionend(o.$page.first(), function () {
+        e.trigger("open:finish")
+      }, this.conf.transitionDuration), this.trigger("open:start"), o.$html.addClass(t.wrapper + "_opening")
+    }, e.mmenu.prototype.close = function () {
+      if (this.trigger("close:before"), this.vars.opened) {
+        var i = this;
+        this.__transitionend(o.$page.first(), function () {
+          i.$menu.removeClass(t.menu + "_opened");
+          var r = [t.wrapper + "_opened", t.wrapper + "_blocking", t.wrapper + "_modal", t.wrapper + "_background"];
+          o.$html.removeClass(r.join(" ")), o.$page.each(function () {
+            var t = e(this).data(n.style);
+            e(this).attr("style", t)
+          }), i.vars.opened = !1, i.trigger("close:finish")
+        }, this.conf.transitionDuration), this.trigger("close:start"), o.$html.removeClass(t.wrapper + "_opening"), this.trigger("close:after")
+      }
+    }, e.mmenu.prototype.closeAllOthers = function () {
+      o.$body.find("." + t.menu + "_offcanvas").not(this.$menu).each(function () {
+        var t = e(this).data("mmenu");
+        t && t.close && t.close()
+      })
+    }, e.mmenu.prototype.setPage = function (n) {
+      this.trigger("setPage:before", n);
+      var i = this,
+        s = this.conf[r];
+      n && n.length || (n = o.$body.find(s.page.selector).not("." + t.menu).not("." + t.wrapper + "__blocker"), s.page.noSelector.length && (n = n.not(s.page.noSelector.join(", "))), n.length > 1 && s.page.wrapIfNeeded && (n = n.wrapAll("<" + this.conf[r].page.nodetype + " />").parent())), n.addClass(t.page + " " + t.slideout).each(function () {
+        e(this).attr("id", e(this).attr("id") || i.__getUniqueId())
+      }), o.$page = n, this.trigger("setPage:after", n)
+    }, e.mmenu.prototype._initWindow_offCanvas = function () {
+      o.$wndw.off(i.keydown + "-" + r).on(i.keydown + "-" + r, function (e) {
+        if (o.$html.hasClass(t.wrapper + "_opened") && 9 == e.keyCode) return e.preventDefault(), !1
+      });
+      var e = 0;
+      o.$wndw.off(i.resize + "-" + r).on(i.resize + "-" + r, function (n, i) {
+        if (1 == o.$page.length && (i || o.$html.hasClass(t.wrapper + "_opened"))) {
+          var r = o.$wndw.height();
+          (i || r != e) && (e = r, o.$page.css("minHeight", r))
+        }
+      })
+    }, e.mmenu.prototype._initBlocker = function () {
+      var n = this,
+        s = this.opts[r],
+        a = this.conf[r];
+      this.trigger("initBlocker:before"), s.blockUI && (o.$blck || (o.$blck = e('<div class="' + t.wrapper + "__blocker " + t.slideout + '" />').append("<a />")), o.$blck.appendTo(a.menu.insertSelector).off(i.touchstart + "-" + r + " " + i.touchmove + "-" + r).on(i.touchstart + "-" + r + " " + i.touchmove + "-" + r, function (e) {
+        e.preventDefault(), e.stopPropagation(), o.$blck.trigger(i.mousedown + "-" + r)
+      }).off(i.mousedown + "-" + r).on(i.mousedown + "-" + r, function (e) {
+        e.preventDefault(), o.$html.hasClass(t.wrapper + "_modal") || (n.closeAllOthers(), n.close())
+      }), this.trigger("initBlocker:after"))
+    }
+  }(jQuery);
+  ! function (t) {
+    var i, n, e = "screenReader";
+    t.mmenu.addons[e] = {
+      setup: function () {
+        var r = this,
+          a = this.opts[e],
+          s = this.conf[e];
+        t.mmenu.glbl, "boolean" == typeof a && (a = {
+          aria: a,
+          text: a
+        }), "object" != typeof a && (a = {}), (a = this.opts[e] = t.extend(!0, {}, t.mmenu.defaults[e], a)).aria && (this.bind("initAddons:after", function () {
+          this.bind("initMenu:after", function () {
+            this.trigger("initMenu:after:sr-aria")
+          }), this.bind("initNavbar:after", function () {
+            this.trigger("initNavbar:after:sr-aria", arguments[0])
+          }), this.bind("openPanel:start", function () {
+            this.trigger("openPanel:start:sr-aria", arguments[0])
+          }), this.bind("close:start", function () {
+            this.trigger("close:start:sr-aria")
+          }), this.bind("close:finish", function () {
+            this.trigger("close:finish:sr-aria")
+          }), this.bind("open:start", function () {
+            this.trigger("open:start:sr-aria")
+          }), this.bind("initOpened:after", function () {
+            this.trigger("initOpened:after:sr-aria")
+          })
+        }), this.bind("updateListview", function () {
+          this.$pnls.find("." + i.listview).children().each(function () {
+            r.__sr_aria(t(this), "hidden", t(this).is("." + i.hidden))
+          })
+        }), this.bind("openPanel:start", function (t) {
+          var n = this.$menu.find("." + i.panel).not(t).not(t.parents("." + i.panel)),
+            e = t.add(t.find("." + i.listitem + "_vertical ." + i.listitem + "_opened").children("." + i.panel));
+          this.__sr_aria(n, "hidden", !0), this.__sr_aria(e, "hidden", !1)
+        }), this.bind("closePanel", function (t) {
+          this.__sr_aria(t, "hidden", !0)
+        }), this.bind("initPanels:after", function (n) {
+          var e = n.find("." + i.btn).each(function () {
+            r.__sr_aria(t(this), "owns", t(this).attr("href").replace("#", ""))
+          });
+          this.__sr_aria(e, "haspopup", !0)
+        }), this.bind("initNavbar:after", function (t) {
+          var n = t.children("." + i.navbar);
+          this.__sr_aria(n, "hidden", !t.hasClass(i.panel + "_has-navbar"))
+        }), a.text && "parent" == this.opts.navbar.titleLink && this.bind("initNavbar:after", function (t) {
+          var n = t.children("." + i.navbar),
+            e = !!n.children("." + i.btn + "_prev").length;
+          this.__sr_aria(n.children("." + i.title), "hidden", e)
+        })), a.text && (this.bind("initAddons:after", function () {
+          this.bind("setPage:after", function () {
+            this.trigger("setPage:after:sr-text", arguments[0])
+          }), this.bind("initBlocker:after", function () {
+            this.trigger("initBlocker:after:sr-text")
+          })
+        }), this.bind("initNavbar:after", function (t) {
+          var n = t.children("." + i.navbar),
+            e = this.i18n(s.text.closeSubmenu);
+          n.children("." + i.btn + "_prev").html(this.__sr_text(e))
+        }), this.bind("initListview:after", function (t) {
+          var e = t.data(n.parent);
+          if (e && e.length) {
+            var a = e.children("." + i.btn + "_next"),
+              o = this.i18n(s.text[a.parent().is("." + i.listitem + "_vertical") ? "toggleSubmenu" : "openSubmenu"]);
+            a.append(r.__sr_text(o))
+          }
+        }))
+      },
+      add: function () {
+        i = t.mmenu._c, n = t.mmenu._d, t.mmenu._e, i.add("sronly")
+      },
+      clickAnchor: function (t, i) {}
+    }, t.mmenu.defaults[e] = {
+      aria: !0,
+      text: !0
+    }, t.mmenu.configuration[e] = {
+      text: {
+        closeMenu: "Close menu",
+        closeSubmenu: "Close submenu",
+        openSubmenu: "Open submenu",
+        toggleSubmenu: "Toggle submenu"
+      }
+    }, t.mmenu.prototype.__sr_aria = function (t, i, n) {
+      t.prop("aria-" + i, n)[n ? "attr" : "removeAttr"]("aria-" + i, n)
+    }, t.mmenu.prototype.__sr_role = function (t, i) {
+      t.prop("role", i)[i ? "attr" : "removeAttr"]("role", i)
+    }, t.mmenu.prototype.__sr_text = function (t) {
+      return '<span class="' + i.sronly + '">' + t + "</span>"
+    }
+  }(jQuery);
+  ! function (o) {
+    var t, n, e, r = "scrollBugFix";
+    o.mmenu.addons[r] = {
+      setup: function () {
+        var n = this.opts[r];
+        this.conf[r];
+        e = o.mmenu.glbl, o.mmenu.support.touch && this.opts.offCanvas && this.opts.offCanvas.blockUI && ("boolean" == typeof n && (n = {
+          fix: n
+        }), "object" != typeof n && (n = {}), (n = this.opts[r] = o.extend(!0, {}, o.mmenu.defaults[r], n)).fix && (this.bind("open:start", function () {
+          this.$pnls.children("." + t.panel + "_opened").scrollTop(0)
+        }), this.bind("initMenu:after", function () {
+          this["_initWindow_" + r]()
+        })))
+      },
+      add: function () {
+        t = o.mmenu._c, o.mmenu._d, n = o.mmenu._e
+      },
+      clickAnchor: function (o, t) {}
+    }, o.mmenu.defaults[r] = {
+      fix: !0
+    }, o.mmenu.prototype["_initWindow_" + r] = function () {
+      var s = this;
+      o(document).off(n.touchmove + "-" + r).on(n.touchmove + "-" + r, function (o) {
+        e.$html.hasClass(t.wrapper + "_opened") && o.preventDefault()
+      });
+      var i = !1;
+      e.$body.off(n.touchstart + "-" + r).on(n.touchstart + "-" + r, "." + t.panels + "> ." + t.panel, function (o) {
+        e.$html.hasClass(t.wrapper + "_opened") && (i || (i = !0, 0 === o.currentTarget.scrollTop ? o.currentTarget.scrollTop = 1 : o.currentTarget.scrollHeight === o.currentTarget.scrollTop + o.currentTarget.offsetHeight && (o.currentTarget.scrollTop -= 1), i = !1))
+      }).off(n.touchmove + "-" + r).on(n.touchmove + "-" + r, "." + t.panels + "> ." + t.panel, function (n) {
+        e.$html.hasClass(t.wrapper + "_opened") && o(this)[0].scrollHeight > o(this).innerHeight() && n.stopPropagation()
+      }), e.$wndw.off(n.orientationchange + "-" + r).on(n.orientationchange + "-" + r, function () {
+        s.$pnls.children("." + t.panel + "_opened").scrollTop(0).css({
+          "-webkit-overflow-scrolling": "auto"
+        }).css({
+          "-webkit-overflow-scrolling": "touch"
+        })
+      })
+    }
+  }(jQuery);
+  ! function (t) {
+    var e, i = "autoHeight";
+    t.mmenu.addons[i] = {
+      setup: function () {
+        var n = this.opts[i];
+        this.conf[i];
+        if (t.mmenu.glbl, "boolean" == typeof n && n && (n = {
+            height: "auto"
+          }), "string" == typeof n && (n = {
+            height: n
+          }), "object" != typeof n && (n = {}), "auto" == (n = this.opts[i] = t.extend(!0, {}, t.mmenu.defaults[i], n)).height || "highest" == n.height) {
+          this.bind("initMenu:after", function () {
+            this.$menu.addClass(e.menu + "_autoheight")
+          });
+          var h = function (i) {
+            if (!this.opts.offCanvas || this.vars.opened) {
+              var h = Math.max(parseInt(this.$pnls.css("top"), 10), 0) || 0,
+                s = Math.max(parseInt(this.$pnls.css("bottom"), 10), 0) || 0,
+                a = 0;
+              this.$menu.addClass(e.menu + "_autoheight-measuring"), "auto" == n.height ? ((i = i || this.$pnls.children("." + e.panel + "_opened")).parent("." + e.listitem + "_vertical").length && (i = i.parents("." + e.panel).not(function () {
+                return t(this).parent("." + e.listitem + "_vertical").length
+              })), i.length || (i = this.$pnls.children("." + e.panel)), a = i.first().outerHeight()) : "highest" == n.height && this.$pnls.children("." + e.panel).each(function () {
+                var i = t(this);
+                i.parent("." + e.listitem + "_vertical").length && (i = i.parents("." + e.panel).not(function () {
+                  return t(this).parent("." + e.listitem + "_vertical").length
+                })), a = Math.max(a, i.first().outerHeight())
+              }), this.$menu.height(a + h + s).removeClass(e.menu + "_autoheight-measuring")
+            }
+          };
+          this.opts.offCanvas && this.bind("open:start", h), "highest" == n.height && this.bind("initPanels:after", h), "auto" == n.height && (this.bind("updateListview", h), this.bind("openPanel:start", h), this.bind("closePanel", h))
+        }
+      },
+      add: function () {
+        e = t.mmenu._c, t.mmenu._d, t.mmenu._e.add("resize")
+      },
+      clickAnchor: function (t, e) {}
+    }, t.mmenu.defaults[i] = {
+      height: "default"
+    }
+  }(jQuery);
+  ! function (n) {
+    var t, e = "backButton";
+    n.mmenu.addons[e] = {
+      setup: function () {
+        if (this.opts.offCanvas) {
+          var o = this,
+            i = this.opts[e];
+          this.conf[e];
+          n.mmenu.glbl, "boolean" == typeof i && (i = {
+            close: i
+          }), "object" != typeof i && (i = {}), i = n.extend(!0, {}, n.mmenu.defaults[e], i);
+          var s = "#" + this.$menu.attr("id");
+          if (i.close) {
+            var a = [];
+
+            function u() {
+              a = [s], this.$pnls.children("." + t.panel + "_opened-parent").add(o.$pnls.children("." + t.panel + "_opened")).each(function () {
+                a.push("#" + n(this).attr("id"))
+              })
+            }
+            this.bind("open:finish", function () {
+              history.pushState(null, document.title, s)
+            }), this.bind("open:finish", u), this.bind("openPanel:finish", u), this.bind("close:finish", function () {
+              a = [], history.back(), history.pushState(null, document.title, location.pathname + location.search)
+            }), n(window).on("popstate", function (t) {
+              if (o.vars.opened && a.length) {
+                var e = (a = a.slice(0, -1))[a.length - 1];
+                e == s ? o.close() : (o.openPanel(n(e)), history.pushState(null, document.title, s))
+              }
+            })
+          }
+          i.open && n(window).on("popstate", function (n) {
+            o.vars.opened || location.hash != s || o.open()
+          })
+        }
+      },
+      add: function () {
+        window.history && window.history.pushState ? (t = n.mmenu._c, n.mmenu._d, n.mmenu._e) : n.mmenu.addons[e].setup = function () {}
+      },
+      clickAnchor: function (n, t) {}
+    }, n.mmenu.defaults[e] = {
+      close: !1,
+      open: !1
+    }
+  }(jQuery);
+  ! function (e) {
+    var n, i;
+    e.mmenu.addons.columns = {
+      setup: function () {
+        var s = this.opts.columns;
+        this.conf.columns;
+        if (e.mmenu.glbl, "boolean" == typeof s && (s = {
+            add: s
+          }), "number" == typeof s && (s = {
+            add: !0,
+            visible: s
+          }), "object" != typeof s && (s = {}), "number" == typeof s.visible && (s.visible = {
+            min: s.visible,
+            max: s.visible
+          }), (s = this.opts.columns = e.extend(!0, {}, e.mmenu.defaults.columns, s)).add) {
+          s.visible.min = Math.max(1, Math.min(6, s.visible.min)), s.visible.max = Math.max(s.visible.min, Math.min(6, s.visible.max));
+          for (var a = "", l = "", t = 0; t <= s.visible.max; t++) a += " " + n.menu + "_columns-" + t, l += " " + n.panel + "_columns-" + t;
+          a.length && (a = a.slice(1), l = l.slice(1));
+          var m = l + " " + n.panel + "_opened " + n.panel + "_opened-parent " + n.panel + "_highest";
+          this.bind("openPanel:before", function (e) {
+            var s = e.data(i.parent);
+            if (s && (s = s.closest("." + n.panel)).length) {
+              var a = s.attr("class");
+              if (a && (a = a.split(n.panel + "_columns-")[1]))
+                for (a = parseInt(a.split(" ")[0], 10) + 1; a > 0;) {
+                  var l = this.$pnls.children("." + n.panel + "_columns-" + a);
+                  if (!l.length) {
+                    a = -1;
+                    break
+                  }
+                  a++, l.removeClass(m).addClass(n.hidden)
+                }
+            }
+          }), this.bind("openPanel:start", function (i) {
+            var t = this.$pnls.children("." + n.panel + "_opened-parent").length;
+            i.hasClass(n.panel + "_opened-parent") || t++, t = Math.min(s.visible.max, Math.max(s.visible.min, t)), this.$menu.removeClass(a).addClass(n.menu + "_columns-" + t), this.$pnls.children("." + n.panel).removeClass(l).filter("." + n.panel + "_opened-parent").add(i).slice(-s.visible.max).each(function (i) {
+              e(this).addClass(n.panel + "_columns-" + i)
+            })
+          })
+        }
+      },
+      add: function () {
+        n = e.mmenu._c, i = e.mmenu._d, e.mmenu._e
+      },
+      clickAnchor: function (e, n) {}
+    }, e.mmenu.defaults.columns = {
+      add: !1,
+      visible: {
+        min: 1,
+        max: 3
+      }
+    }
+  }(jQuery);
+  ! function (t) {
+    var n, e;
+    t.mmenu.addons.counters = {
+      setup: function () {
+        var i = this,
+          s = this.opts.counters;
+        this.conf.counters;
+        if (t.mmenu.glbl, "boolean" == typeof s && (s = {
+            add: s,
+            update: s
+          }), "object" != typeof s && (s = {}), s = this.opts.counters = t.extend(!0, {}, t.mmenu.defaults.counters, s), this.bind("initListview:after", function (t) {
+            var e = this.conf.classNames.counters.counter;
+            this.__refactorClass(t.find("." + e), e, n.counter)
+          }), s.add && this.bind("initListview:after", function (i) {
+            var a;
+            switch (s.addTo) {
+              case "panels":
+                a = i;
+                break;
+              default:
+                a = i.filter(s.addTo)
+            }
+            a.each(function () {
+              var i = t(this).data(e.parent);
+              i && (i.find("." + n.counter).length || i.children("." + n.btn).prepend(t('<span class="' + n.counter + '" />')))
+            })
+          }), s.update) {
+          var a = function (s) {
+            (s = s || this.$pnls.children("." + n.panel)).each(function () {
+              var s = t(this),
+                a = s.data(e.parent);
+              if (a) {
+                var c = a.find("." + n.counter);
+                c.length && (s = s.children("." + n.listview)).length && c.html(i.__filterListItems(s.children()).length)
+              }
+            })
+          };
+          this.bind("initListview:after", a), this.bind("updateListview", a)
+        }
+      },
+      add: function () {
+        n = t.mmenu._c, e = t.mmenu._d, t.mmenu._e, n.add("counter")
+      },
+      clickAnchor: function (t, n) {}
+    }, t.mmenu.defaults.counters = {
+      add: !1,
+      addTo: "panels",
+      count: !1
+    }, t.mmenu.configuration.classNames.counters = {
+      counter: "Counter"
+    }
+  }(jQuery);
+  ! function (i) {
+    var e, t, d = "dividers";
+    i.mmenu.addons.dividers = {
+      setup: function () {
+        var n = this,
+          s = this.opts.dividers;
+        this.conf.dividers;
+        if (i.mmenu.glbl, "boolean" == typeof s && (s = {
+            add: s,
+            fixed: s
+          }), "object" != typeof s && (s = {}), (s = this.opts.dividers = i.extend(!0, {}, i.mmenu.defaults.dividers, s)).type && this.bind("initMenu:after", function () {
+            this.$menu.addClass(e.menu + "_" + d + "-" + s.type)
+          }), s.add && this.bind("initListview:after", function (t) {
+            var d;
+            switch (s.addTo) {
+              case "panels":
+                d = t;
+                break;
+              default:
+                d = t.filter(s.addTo)
+            }
+            d.length && (d.children("." + e.listitem + "_divider").remove(), d.find("." + e.listview).each(function () {
+              var t = "";
+              n.__filterListItems(i(this).children()).each(function () {
+                var d = i.trim(i(this).children("a, span").text()).slice(0, 1).toLowerCase();
+                d != t && d.length && (t = d, i('<li class="' + e.listitem + " " + e.listitem + '_divider">' + d + "</li>").insertBefore(this))
+              })
+            }))
+          }), s.fixed) {
+          this.bind("initPanels:before", function () {
+            void 0 === this.$fixeddivider && (this.$fixeddivider = i('<ul class="' + e.listview + " " + e.listview + '_fixeddivider"><li class="' + e.listitem + " " + e.listitem + '_divider"></li></ul>').appendTo(this.$pnls).children())
+          });
+          var l = function (t) {
+            if (!(t = t || this.$pnls.children("." + e.panel + "_opened")).is(":hidden")) {
+              var d = t.find("." + e.listitem + "_divider").not("." + e.hidden),
+                n = t.scrollTop() || 0,
+                s = "";
+              d.each(function () {
+                i(this).position().top + n < n + 1 && (s = i(this).text())
+              }), this.$fixeddivider.text(s), this.$pnls[s.length ? "addClass" : "removeClass"](e.panel + "_dividers")
+            }
+          };
+          this.bind("open:start", l), this.bind("openPanel:start", l), this.bind("updateListview", l), this.bind("initPanel:after", function (i) {
+            i.off(t.scroll + "-" + d + " " + t.touchmove + "-" + d).on(t.scroll + "-" + d + " " + t.touchmove + "-" + d, function (t) {
+              i.hasClass(e.panel + "_opened") && l.call(n, i)
+            })
+          })
+        }
+      },
+      add: function () {
+        e = i.mmenu._c, i.mmenu._d, (t = i.mmenu._e).add("scroll")
+      },
+      clickAnchor: function (i, e) {}
+    }, i.mmenu.defaults.dividers = {
+      add: !1,
+      addTo: "panels",
+      fixed: !1,
+      type: null
+    }
+  }(jQuery);
+  ! function (n) {
+    var e, t, o, i = "drag";
+
+    function a(n, e, t) {
+      return n < e && (n = e), n > t && (n = t), n
+    }
+    n.mmenu.addons[i] = {
+      setup: function () {
+        if (this.opts.offCanvas) {
+          var s = this.opts[i],
+            r = this.conf[i];
+          o = n.mmenu.glbl, "boolean" == typeof s && (s = {
+            menu: s,
+            panels: s
+          }), "object" != typeof s && (s = {}), "boolean" == typeof s.menu && (s.menu = {
+            open: s.menu
+          }), "object" != typeof s.menu && (s.menu = {}), "boolean" == typeof s.panels && (s.panels = {
+            close: s.panels
+          }), "object" != typeof s.panels && (s.panels = {}), (s = this.opts[i] = n.extend(!0, {}, n.mmenu.defaults[i], s)).menu.open && this.bind("setPage:after", function () {
+            (function (t, o, s) {
+              var r, p, m, u, c = this,
+                d = {
+                  events: "panleft panright",
+                  typeLower: "x",
+                  typeUpper: "X",
+                  open_dir: "right",
+                  close_dir: "left",
+                  negative: !1
+                },
+                f = "width",
+                l = d.open_dir,
+                h = function (n) {
+                  n <= t.maxStartPos && (_ = 1)
+                },
+                g = function () {
+                  return n("." + e.slideout)
+                },
+                _ = 0,
+                v = 0,
+                b = 0,
+                w = this.opts.extensions.all,
+                y = void 0 === w ? "left" : w.indexOf(e.menu + "_position-right") > -1 ? "right" : w.indexOf(e.menu + "_position-top") > -1 ? "top" : w.indexOf(e.menu + "_position-bottom") > -1 ? "bottom" : "left",
+                x = void 0 === w ? "back" : w.indexOf(e.menu + "_position-top") > -1 || w.indexOf(e.menu + "_position-bottom") > -1 || w.indexOf(e.menu + "_position-front") > -1 ? "front" : "back";
+              switch (y) {
+                case "top":
+                case "bottom":
+                  d.events = "panup pandown", d.typeLower = "y", d.typeUpper = "Y", f = "height"
+              }
+              switch (y) {
+                case "right":
+                case "bottom":
+                  d.negative = !0, h = function (n) {
+                    n >= s.$wndw[f]() - t.maxStartPos && (_ = 1)
+                  }
+              }
+              switch (y) {
+                case "right":
+                  d.open_dir = "left", d.close_dir = "right";
+                  break;
+                case "top":
+                  d.open_dir = "down", d.close_dir = "up";
+                  break;
+                case "bottom":
+                  d.open_dir = "up", d.close_dir = "down"
+              }
+              switch (x) {
+                case "front":
+                  g = function () {
+                    return c.$menu
+                  }
+              }
+              var O = this.__valueOrFn(this.$menu, t.node, s.$page);
+              "string" == typeof O && (O = n(O));
+              var $ = new Hammer(O[0], this.opts[i].vendors.hammer);
+              $.on("panstart", function (n) {
+                h(n.center[d.typeLower]), u = g(), l = d.open_dir
+              }), $.on(d.events + " panend", function (n) {
+                _ > 0 && n.preventDefault()
+              }), $.on(d.events, function (n) {
+                if (r = n["delta" + d.typeUpper], d.negative && (r = -r), r != v && (l = r >= v ? d.open_dir : d.close_dir), (v = r) > t.threshold && 1 == _) {
+                  if (s.$html.hasClass(e.wrapper + "_opened")) return;
+                  _ = 2, c._openSetup(), c.trigger("open:start"), s.$html.addClass(e.dragging), b = a(s.$wndw[f]() * o[f].perc, o[f].min, o[f].max)
+                }
+                2 == _ && (p = a(v, 10, b) - ("front" == x ? b : 0), d.negative && (p = -p), m = "translate" + d.typeUpper + "(" + p + "px )", u.css({
+                  "-webkit-transform": "-webkit-" + m,
+                  transform: m
+                }))
+              }), $.on("panend", function (n) {
+                2 == _ && (s.$html.removeClass(e.dragging), u.css("transform", ""), c[l == d.open_dir ? "_openFinish" : "close"]()), _ = 0
+              })
+            }).call(this, s.menu, r.menu, o)
+          }), s.panels.close && this.bind("initPanel:after", function (n) {
+            (function (n, o, a, s) {
+              var r = this,
+                p = n.data(t.parent);
+              if (p) {
+                p = p.closest("." + e.panel);
+                var m = new Hammer(n[0], r.opts[i].vendors.hammer),
+                  u = null;
+                m.on("panright", function (n) {
+                  u || (r.openPanel(p), u = setTimeout(function () {
+                    clearTimeout(u), u = null
+                  }, r.conf.openingInterval + r.conf.transitionDuration))
+                })
+              }
+            }).call(this, n, s.panels, r.panels, o)
+          })
+        }
+      },
+      add: function () {
+        if ("function" != typeof Hammer || Hammer.VERSION < 2) return n.mmenu.addons[i].add = function () {}, void(n.mmenu.addons[i].setup = function () {});
+        e = n.mmenu._c, t = n.mmenu._d, n.mmenu._e, e.add("dragging")
+      },
+      clickAnchor: function (n, e) {}
+    }, n.mmenu.defaults[i] = {
+      menu: {
+        open: !1,
+        maxStartPos: 100,
+        threshold: 50
+      },
+      panels: {
+        close: !1
+      },
+      vendors: {
+        hammer: {}
+      }
+    }, n.mmenu.configuration[i] = {
+      menu: {
+        width: {
+          perc: .8,
+          min: 140,
+          max: 440
+        },
+        height: {
+          perc: .8,
+          min: 140,
+          max: 880
+        }
+      },
+      panels: {}
+    }
+  }(jQuery);
+  ! function (t) {
+    var o, e, n, i, s = "dropdown";
+    t.mmenu.addons.dropdown = {
+      setup: function () {
+        if (this.opts.offCanvas) {
+          var r = this,
+            a = this.opts.dropdown,
+            p = this.conf.dropdown;
+          if (i = t.mmenu.glbl, "boolean" == typeof a && a && (a = {
+              drop: a
+            }), "object" != typeof a && (a = {}), "string" == typeof a.position && (a.position = {
+              of: a.position
+            }), (a = this.opts.dropdown = t.extend(!0, {}, t.mmenu.defaults.dropdown, a)).drop) {
+            var f;
+            this.bind("initMenu:after", function () {
+              if (this.$menu.addClass(o.menu + "_" + s), "string" != typeof a.position.of) {
+                var e = this._getOriginalMenuId();
+                e && e.length && (a.position.of = '[href="#' + e + '"]')
+              }
+              "string" == typeof a.position.of && (f = t(a.position.of), a.event = a.event.split(" "), 1 == a.event.length && (a.event[1] = a.event[0]), "hover" == a.event[0] && f.on(n.mouseenter + "-" + s, function () {
+                r.open()
+              }), "hover" == a.event[1] && this.$menu.on(n.mouseleave + "-" + s, function () {
+                r.close()
+              }))
+            }), this.bind("open:start", function () {
+              this.$menu.data(e.style, this.$menu.attr("style") || ""), i.$html.addClass(o.wrapper + "_dropdown")
+            }), this.bind("close:finish", function () {
+              this.$menu.attr("style", this.$menu.data(e.style)), i.$html.removeClass(o.wrapper + "_dropdown")
+            });
+            var d = function (t, e) {
+                var n, s, r = e[0],
+                  d = e[1],
+                  u = "x" == t ? "scrollLeft" : "scrollTop",
+                  l = "x" == t ? "outerWidth" : "outerHeight",
+                  h = "x" == t ? "left" : "top",
+                  m = "x" == t ? "right" : "bottom",
+                  c = "x" == t ? "width" : "height",
+                  w = "x" == t ? "maxWidth" : "maxHeight",
+                  v = null,
+                  x = i.$wndw[u](),
+                  b = f.offset()[h] -= x,
+                  g = b + f[l](),
+                  $ = i.$wndw[c](),
+                  y = p.offset.button[t] + p.offset.viewport[t];
+                if (a.position[t]) switch (a.position[t]) {
+                  case "left":
+                  case "bottom":
+                    v = "after";
+                    break;
+                  case "right":
+                  case "top":
+                    v = "before"
+                }
+                return null === v && (v = b + (g - b) / 2 < $ / 2 ? "after" : "before"), "after" == v ? (s = $ - ((n = "x" == t ? b : g) + y), r[h] = n + p.offset.button[t], r[m] = "auto", a.tip && d.push(o.menu + "_tip-" + ("x" == t ? "left" : "top"))) : (s = (n = "x" == t ? g : b) - y, r[m] = "calc( 100% - " + (n - p.offset.button[t]) + "px )", r[h] = "auto", a.tip && d.push(o.menu + "_tip-" + ("x" == t ? "right" : "bottom"))), a.fitViewport && (r[w] = Math.min(p[c].max, s)), [r, d]
+              },
+              u = function (t) {
+                if (this.vars.opened) {
+                  this.$menu.attr("style", this.$menu.data(e.style));
+                  var n = [{},
+                    []
+                  ];
+                  n = d.call(this, "y", n), n = d.call(this, "x", n), this.$menu.css(n[0]), a.tip && this.$menu.removeClass(o.tipleft + " " + o.tipright + " " + o.tiptop + " " + o.tipbottom).addClass(n[1].join(" "))
+                }
+              };
+            this.bind("open:start", u), i.$wndw.on(n.resize + "-" + s, function (t) {
+              u.call(r)
+            }), this.opts.offCanvas.blockUI || i.$wndw.on(n.scroll + "-" + s, function (t) {
+              u.call(r)
+            })
+          }
+        }
+      },
+      add: function () {
+        o = t.mmenu._c, e = t.mmenu._d, n = t.mmenu._e, o.add("dropdown"), n.add("mouseenter mouseleave resize scroll")
+      },
+      clickAnchor: function (t, o) {}
+    }, t.mmenu.defaults.dropdown = {
+      drop: !1,
+      fitViewport: !0,
+      event: "click",
+      position: {},
+      tip: !0
+    }, t.mmenu.configuration.dropdown = {
+      offset: {
+        button: {
+          x: -5,
+          y: 5
+        },
+        viewport: {
+          x: 20,
+          y: 20
+        }
+      },
+      height: {
+        max: 880
+      },
+      width: {
+        max: 440
+      }
+    }
+  }(jQuery);
+  ! function (s) {
+    var t, e, n = "fixedElements";
+    s.mmenu.addons[n] = {
+      setup: function () {
+        if (this.opts.offCanvas) {
+          this.opts[n];
+          var i = this.conf[n];
+          e = s.mmenu.glbl;
+          this.bind("setPage:after", function (o) {
+            var c = this.conf.classNames[n].fixed,
+              f = o.find("." + c);
+            this.__refactorClass(f, c, t.slideout), f[i.elemInsertMethod](i.elemInsertSelector);
+            var a = this.conf.classNames[n].sticky,
+              d = o.find("." + a);
+            this.__refactorClass(d, a, t.sticky), (d = o.find("." + t.sticky)).length && (this.bind("open:start", function () {
+              if ("hidden" == e.$html.css("overflow")) {
+                var t = e.$wndw.scrollTop() + i.sticky.offset;
+                d.each(function () {
+                  s(this).css("top", parseInt(s(this).css("top"), 10) + t)
+                })
+              }
+            }), this.bind("close:finish", function () {
+              d.css("top", "")
+            }))
+          })
+        }
+      },
+      add: function () {
+        t = s.mmenu._c, s.mmenu._d, s.mmenu._e, t.add("sticky")
+      },
+      clickAnchor: function (s, t) {}
+    }, s.mmenu.configuration[n] = {
+      sticky: {
+        offset: 0
+      },
+      elemInsertMethod: "appendTo",
+      elemInsertSelector: "body"
+    }, s.mmenu.configuration.classNames[n] = {
+      fixed: "Fixed",
+      sticky: "Sticky"
+    }
+  }(jQuery);
+  ! function (a) {
+    var n, e, t;
+    a.mmenu.addons.iconbar = {
+      setup: function () {
+        var i = this,
+          o = this.opts.iconbar;
+        this.conf.iconbar;
+        if (a.mmenu.glbl, o instanceof Array && (o = {
+            add: !0,
+            top: o
+          }), o.add) {
+          var r = null;
+          if (a.each(["top", "bottom"], function (e, t) {
+              var i = o[t];
+              i instanceof Array || (i = [i]);
+              for (var s = a('<div class="' + n.iconbar + "__" + t + '" />'), c = 0, d = i.length; c < d; c++) s.append(i[c]);
+              s.children().length && (r || (r = a('<div class="' + n.iconbar + '" />')), r.append(s))
+            }), r && (this.bind("initMenu:after", function () {
+              var a = n.menu + "_iconbar";
+              o.size && (a += " " + n.menu + "_iconbar-" + o.size), this.$menu.addClass(a).prepend(r)
+            }), "tabs" == o.type)) {
+            r.addClass(n.iconbar + "_tabs");
+            var s = r.find("a");
+            s.on(t.click + "-iconbar", function (e) {
+              var t = a(this);
+              if (t.hasClass(n.iconbar + "__tab_selected")) e.stopImmediatePropagation();
+              else try {
+                var o = a(t.attr("href"));
+                o.hasClass(n.panel) && (e.preventDefault(), e.stopImmediatePropagation(), i.openPanel(o, !1))
+              } catch (a) {}
+            }), this.bind("openPanel:start", function a(t) {
+              s.removeClass(n.iconbar + "__tab_selected");
+              var i = s.filter('[href="#' + t.attr("id") + '"]');
+              if (i.length) i.addClass(n.iconbar + "__tab_selected");
+              else {
+                var o = t.data(e.parent);
+                o && o.length && a(o.closest("." + n.panel))
+              }
+            })
+          }
+        }
+      },
+      add: function () {
+        n = a.mmenu._c, e = a.mmenu._d, t = a.mmenu._e, n.add("iconbar")
+      },
+      clickAnchor: function (a, n) {}
+    }, a.mmenu.defaults.iconbar = {
+      add: !1,
+      top: [],
+      bottom: []
+    }, a.mmenu.configuration.iconbar = {}
+  }(jQuery);
+  ! function (e) {
+    var i, n = "iconPanels";
+    e.mmenu.addons[n] = {
+      setup: function () {
+        var a = this,
+          t = this.opts[n],
+          l = (this.conf[n], !1);
+        e.mmenu.glbl, "boolean" == typeof t && (t = {
+          add: t
+        }), "number" != typeof t && "string" != typeof t || (t = {
+          add: !0,
+          visible: t
+        }), "object" != typeof t && (t = {}), "first" == t.visible && (l = !0, t.visible = 1), (t = this.opts[n] = e.extend(!0, {}, e.mmenu.defaults[n], t)).visible = Math.min(3, Math.max(1, t.visible)), t.visible++;
+        var s = "";
+        if (!l) {
+          for (var d = 0; d <= t.visible; d++) s += " " + i.panel + "_iconpanel-" + d;
+          s.length && (s = s.slice(1))
+        }
+        if (t.add) {
+          var r = function (n) {
+            if (!n.parent("." + i.listitem + "_vertical").length) {
+              var d = a.$pnls.children("." + i.panel);
+              l ? d.removeClass(i.panel + "_iconpanel-first").first().addClass(i.panel + "_iconpanel-first") : d.removeClass(s).filter("." + i.panel + "_opened-parent").removeClass(i.hidden).not(function () {
+                return e(this).parent("." + i.listitem + "_vertical").length
+              }).add(n).slice(-t.visible).each(function (n) {
+                e(this).addClass(i.panel + "_iconpanel-" + n)
+              })
+            }
+          };
+          this.bind("initMenu:after", function () {
+            var e = [i.menu + "_iconpanel"];
+            t.size && e.push(i.menu + "_iconpanel-" + t.size), t.hideNavbar && e.push(i.menu + "_hidenavbar"), t.hideDivider && e.push(i.menu + "_hidedivider"), this.$menu.addClass(e.join(" "))
+          }), this.bind("openPanel:start", r), this.bind("initPanels:after", function (e) {
+            r.call(a, a.$pnls.children("." + i.panel + "_opened"))
+          }), this.bind("initListview:after", function (e) {
+            !t.blockPanel || e.parent("." + i.listitem + "_vertical").length || e.children("." + i.panel + "__blocker").length || e.prepend('<a href="#' + e.closest("." + i.panel).attr("id") + '" class="' + i.panel + '__blocker" />')
+          })
+        }
+      },
+      add: function () {
+        i = e.mmenu._c, e.mmenu._d, e.mmenu._e
+      },
+      clickAnchor: function (e, i) {}
+    }, e.mmenu.defaults[n] = {
+      add: !1,
+      blockPanel: !0,
+      hideDivider: !1,
+      hideNavbar: !0,
+      visible: 3
+    }
+  }(jQuery);
+  ! function (n) {
+    var e, t, a, i, s = "keyboardNavigation";
+    n.mmenu.addons[s] = {
+      setup: function () {
+        if (!n.mmenu.support.touch) {
+          var t = this.opts[s];
+          this.conf[s];
+          if (i = n.mmenu.glbl, "boolean" != typeof t && "string" != typeof t || (t = {
+              enable: t
+            }), "object" != typeof t && (t = {}), (t = this.opts[s] = n.extend(!0, {}, n.mmenu.defaults[s], t)).enable) {
+            var a = n('<button class="' + e.tabstart + '" />'),
+              o = n('<button class="' + e.tabend + '" />'),
+              r = n('<button class="' + e.tabend + '" />');
+            this.bind("initMenu:after", function () {
+              t.enhance && this.$menu.addClass(e.menu + "_keyboardfocus"), this["_initWindow_" + s](t.enhance)
+            }), this.bind("initOpened:before", function () {
+              this.$menu.prepend(a).append(o).children("." + e.mm("navbars-top") + ", ." + e.mm("navbars-bottom")).children("." + e.navbar).children("a." + e.title).attr("tabindex", -1)
+            }), this.bind("initBlocker:after", function () {
+              i.$blck.append(r).children("a").addClass(e.tabstart)
+            }), this.bind("open:finish", function () {
+              d.call(this, null, t.enable)
+            }), this.bind("openPanel:finish", function (n) {
+              d.call(this, n, t.enable)
+            }), this.bind("initOpened:after:sr-aria", function () {
+              var n = this.$menu.add(i.$blck).children("." + e.tabstart + ", ." + e.tabend);
+              this.__sr_aria(n, "hidden", !0), this.__sr_role(n, "presentation")
+            })
+          }
+        }
+      },
+      add: function () {
+        e = n.mmenu._c, t = n.mmenu._d, a = n.mmenu._e, e.add("tabstart tabend"), a.add("focusin keydown")
+      },
+      clickAnchor: function (n, e) {}
+    }, n.mmenu.defaults[s] = {
+      enable: !1,
+      enhance: !1
+    }, n.mmenu.configuration[s] = {}, n.mmenu.prototype["_initWindow_" + s] = function (o) {
+      i.$wndw.off(a.keydown + "-offCanvas"), i.$wndw.off(a.focusin + "-" + s).on(a.focusin + "-" + s, function (t) {
+        if (i.$html.hasClass(e.wrapper + "_opened")) {
+          var a = n(t.target);
+          if (a.is("." + e.tabend)) {
+            var s = n();
+            a.parent().is("." + e.menu) && i.$blck && (s = i.$blck), a.parent().is("." + e.wrapper + "__blocker") && (s = i.$body.find("." + e.menu + "_offcanvas").filter("." + e.menu + "_opened")), s.length || (s = a.parent()), s.children("." + e.tabstart).focus()
+          }
+        }
+      }), i.$wndw.off(a.keydown + "-" + s).on(a.keydown + "-" + s, function (t) {
+        var i = n(t.target),
+          s = i.closest("." + e.menu);
+        if (s.length) {
+          s.data("mmenu");
+          if (i.is("input, textarea"));
+          else switch (t.keyCode) {
+            case 13:
+              (i.is(".mm-toggle") || i.is(".mm-check")) && i.trigger(a.click);
+              break;
+            case 32:
+            case 37:
+            case 38:
+            case 39:
+            case 40:
+              t.preventDefault()
+          }
+        }
+      }), o && i.$wndw.off(a.keydown + "-" + s).on(a.keydown + "-" + s, function (a) {
+        var i = n(a.target),
+          s = i.closest("." + e.menu);
+        if (s.length) {
+          var o = s.data("mmenu");
+          if (i.is("input")) switch (a.keyCode) {
+            case 27:
+              i.val("")
+          } else switch (a.keyCode) {
+            case 8:
+              var d = s.find("." + e.panel + "_opened").data(t.parent);
+              d && d.length && o.openPanel(d.closest("." + e.panel));
+              break;
+            case 27:
+              s.hasClass(e.menu + "_offcanvas") && o.close()
+          }
+        }
+      })
+    };
+    var o = "input, select, textarea, button, label, a[href]";
+
+    function d(t, a) {
+      t = t || this.$pnls.children("." + e.panel + "_opened");
+      var i = n(),
+        s = this.$menu.children("." + e.mm("navbars_top") + ", ." + e.mm("navbars_bottom")).children("." + e.navbar);
+      s.find(o).filter(":focus").length || ("default" == a && ((i = t.children("." + e.listview).find("a[href]").not("." + e.hidden)).length || (i = t.find(o).not("." + e.hidden)), i.length || (i = s.find(o).not("." + e.hidden))), i.length || (i = this.$menu.children("." + e.tabstart)), i.first().focus())
+    }
+  }(jQuery);
+  ! function (n) {
+    var e, i = "lazySubmenus";
+    n.mmenu.addons[i] = {
+      setup: function () {
+        var l = this.opts[i];
+        this.conf[i];
+        n.mmenu.glbl, "boolean" == typeof l && (l = {
+          load: l
+        }), "object" != typeof l && (l = {}), (l = this.opts[i] = n.extend(!0, {}, n.mmenu.defaults[i], l)).load && (this.bind("initMenu:after", function () {
+          this.$pnls.find("li").children(this.conf.panelNodetype).not("." + e.inset).not("." + e.nolistview).not("." + e.nopanel).addClass(e.panel + "_lazysubmenu " + e.nolistview + " " + e.nopanel)
+        }), this.bind("initPanels:before", function (n) {
+          n = n || this.$pnls.children(this.conf.panelNodetype), this.__findAddBack(n, "." + e.panel + "_lazysubmenu").not("." + e.panel + "_lazysubmenu ." + e.panel + "_lazysubmenu").removeClass(e.panel + "_lazysubmenu " + e.nolistview + " " + e.nopanel)
+        }), this.bind("initOpened:before", function () {
+          var n = this.$pnls.find("." + this.conf.classNames.selected).parents("." + e.panel + "_lazysubmenu");
+          n.length && (n.removeClass(e.panel + "_lazysubmenu " + e.nolistview + " " + e.nopanel), this.initPanels(n.last()))
+        }), this.bind("openPanel:before", function (n) {
+          var i = this.__findAddBack(n, "." + e.panel + "_lazysubmenu").not("." + e.panel + "_lazysubmenu ." + e.panel + "_lazysubmenu");
+          i.length && this.initPanels(i)
+        }))
+      },
+      add: function () {
+        e = n.mmenu._c, n.mmenu._d, n.mmenu._e
+      },
+      clickAnchor: function (n, e) {}
+    }, n.mmenu.defaults[i] = {
+      load: !1
+    }, n.mmenu.configuration[i] = {}
+  }(jQuery);
+  ! function (n) {
+    var a;
+    n.mmenu.addons.navbars = {
+      setup: function () {
+        var t = this,
+          e = this.opts.navbars,
+          o = this.conf.navbars;
+        if (n.mmenu.glbl, void 0 !== e) {
+          e instanceof Array || (e = [e]);
+          var r = {},
+            s = {};
+          e.length && (n.each(e, function (i) {
+            var c = e[i];
+            "boolean" == typeof c && c && (c = {}), "object" != typeof c && (c = {}), void 0 === c.content && (c.content = ["prev", "title"]), c.content instanceof Array || (c.content = [c.content]), c = n.extend(!0, {}, t.opts.navbar, c);
+            var d = n('<div class="' + a.navbar + '" />'),
+              v = c.height;
+            "number" != typeof v ? v = 1 : (v = Math.min(4, Math.max(1, v))) > 1 && d.addClass(a.navbar + "_size-" + v);
+            var m = c.position;
+            switch (m) {
+              case "bottom":
+                break;
+              default:
+                m = "top"
+            }
+            r[m] || (r[m] = 0), r[m] += v, s[m] || (s[m] = n('<div class="' + a.navbars + "_" + m + '" />')), s[m].append(d);
+            for (var u = 0, b = c.content.length; u < b; u++) {
+              var l = n.mmenu.addons.navbars[c.content[u]] || null;
+              l ? l.call(t, d, c, o) : ((l = c.content[u]) instanceof n || (l = n(c.content[u])), d.append(l))
+            }
+            var f = n.mmenu.addons.navbars[c.type] || null;
+            f && f.call(t, d, c, o), d.children("." + a.btn).length && d.addClass(a.navbar + "_has-btns")
+          }), this.bind("initMenu:after", function () {
+            for (var n in r) this.$menu.addClass(a.menu + "_navbar_" + n + "-" + r[n]), this.$menu["bottom" == n ? "append" : "prepend"](s[n])
+          }))
+        }
+      },
+      add: function () {
+        a = n.mmenu._c, n.mmenu._d, n.mmenu._e, a.add("navbars")
+      },
+      clickAnchor: function (n, a) {}
+    }, n.mmenu.configuration.navbars = {
+      breadcrumbs: {
+        separator: "/",
+        removeFirst: !1
+      }
+    }, n.mmenu.configuration.classNames.navbars = {}
+  }(jQuery);
+  ! function (e) {
+    var t, n, i, s = "pageScroll";
+    e.mmenu.addons[s] = {
+      setup: function () {
+        var r = this,
+          o = this.opts[s],
+          a = this.conf[s];
+        if (i = e.mmenu.glbl, "boolean" == typeof o && (o = {
+            scroll: o
+          }), (o = this.opts[s] = e.extend(!0, {}, e.mmenu.defaults[s], o)).scroll && this.bind("close:finish", function () {
+            l(a.scrollOffset)
+          }), o.update) {
+          var c = [],
+            d = [];
+          (r = this).bind("initListview:after", function (n) {
+            r.__filterListItemAnchors(n.find("." + t.listview).children("li")).each(function () {
+              var t = e(this).attr("href");
+              f(t) && c.push(t)
+            }), d = c.reverse()
+          });
+          var u = -1;
+          i.$wndw.on(n.scroll + "-" + s, function (n) {
+            for (var s = i.$wndw.scrollTop(), l = 0; l < d.length; l++)
+              if (e(d[l]).offset().top < s + a.updateOffset) {
+                u !== l && (u = l, r.setSelected(r.__filterListItemAnchors(r.$pnls.children("." + t.panel + "_opened").find("." + t.listview).children("li")).filter('[href="' + d[l] + '"]').parent()));
+                break
+              }
+          })
+        }
+      },
+      add: function () {
+        t = e.mmenu._c, e.mmenu._d, n = e.mmenu._e
+      },
+      clickAnchor: function (n, o, a) {
+        if (r = !1, o && a && this.opts.offCanvas && this.opts[s].scroll && i.$page && i.$page.length) {
+          var c = n.attr("href");
+          if (f(c)) {
+            if (r = e(c), !this.$menu.is("." + t.menu + "_sidebar-expanded") || !i.$html.is("." + t.wrapper + "_sidebar-expanded")) return {
+              close: !0
+            };
+            l(this.conf[s].scrollOffset)
+          }
+        }
+      }
+    }, e.mmenu.defaults[s] = {
+      scroll: !1,
+      update: !1
+    }, e.mmenu.configuration[s] = {
+      scrollOffset: 0,
+      updateOffset: 50
+    };
+    var r = !1;
+
+    function l(e) {
+      r && r.length && r.is(":visible") && i.$html.add(i.$body).animate({
+        scrollTop: r.offset().top + e
+      }), r = !1
+    }
+
+    function f(e) {
+      try {
+        return !("#" == e || "#" != e.slice(0, 1) || !i.$page.find(e).length)
+      } catch (e) {
+        return !1
+      }
+    }
+  }(jQuery);
+  ! function (e) {
+    var n, s, a, t = "searchfield";
+
+    function i(e, n) {
+      if (n)
+        for (var s in n) e.attr(s, n[s])
+    }
+    e.mmenu.addons[t] = {
+      setup: function () {
+        var s = this,
+          a = this.opts[t],
+          i = this.conf[t];
+        e.mmenu.glbl, "boolean" == typeof a && (a = {
+          add: a
+        }), "object" != typeof a && (a = {}), "boolean" == typeof a.panel && (a.panel = {
+          add: a.panel
+        }), "object" != typeof a.panel && (a.panel = {}), a.add && ("panel" == a.addTo && (a.panel.add = !0), a.panel.add && (a.showSubPanels = !1, a.panel.splash && (a.cancel = !0)), a = this.opts[t] = e.extend(!0, {}, e.mmenu.defaults[t], a), i = this.conf[t] = e.extend(!0, {}, e.mmenu.configuration[t], i), this.bind("close:start", function () {
+          this.$menu.find("." + n.searchfield).children("input").blur()
+        }), this.bind("initPanels:after", function (n) {
+          var t, i = e();
+          switch (a.panel.add && (i = this._initSearchPanel(n)), a.addTo) {
+            case "panels":
+              t = n;
+              break;
+            case "panel":
+              t = i;
+              break;
+            default:
+              t = this.$menu.find(a.addTo)
+          }(t.each(function () {
+            var n = s._initSearchfield(e(this));
+            a.search && n.length && s._initSearching(n)
+          }), a.noResults) && (a.panel.add ? i : n).each(function () {
+            s._initNoResultsMsg(e(this))
+          })
+        }))
+      },
+      add: function () {
+        n = e.mmenu._c, s = e.mmenu._d, a = e.mmenu._e, n.add("searchfield"), s.add("searchfield"), a.add("input focus blur")
+      },
+      clickAnchor: function (e, s) {
+        if (e.hasClass(n.searchfield + "__btn")) {
+          if (e.hasClass(n.btn + "_close")) {
+            var a = e.closest("." + n.searchfield).find("input");
+            return a.val(""), this.search(a), !0
+          }
+          if (e.hasClass(n.btn + "_next")) return e.closest("." + n.searchfield).submit(), !0
+        }
+      }
+    }, e.mmenu.defaults[t] = {
+      add: !1,
+      addTo: "panels",
+      noResults: "No results found.",
+      placeholder: "搜尋課程關鍵字",
+      panel: {
+        add: !1,
+        dividers: !0,
+        fx: "none",
+        id: null,
+        splash: null,
+        title: "Search"
+      },
+      search: !0,
+      showTextItems: !1,
+      showSubPanels: !0
+    }, e.mmenu.configuration[t] = {
+      clear: !1,
+      form: !1,
+      input: !1,
+      submit: !1
+    }, e.mmenu.prototype._initSearchPanel = function (s) {
+      var a = this.opts[t];
+      this.conf[t];
+      if (this.$pnls.children("." + n.panel + "_search").length) return e();
+      var i = e('<div class="' + n.panel + '_search " />').append("<ul />").appendTo(this.$pnls);
+      switch (a.panel.id && i.attr("id", a.panel.id), a.panel.title && i.attr("data-mm-title", a.panel.title), a.panel.fx) {
+        case !1:
+          break;
+        case "none":
+          i.addClass(n.panel + "_noanimation");
+          break;
+        default:
+          i.addClass(n.panel + "_fx-" + a.panel.fx)
+      }
+      return a.panel.splash && i.append('<div class="' + n.panel + '__searchsplash">' + a.panel.splash + "</div>"), this._initPanels(i), i
+    }, e.mmenu.prototype._initSearchfield = function (s) {
+      var a = this.opts[t],
+        l = this.conf[t];
+      if (s.parent("." + n.listitem + "_vertical").length) return e();
+      if (s.find("." + n.searchfield).length) return s.find("." + n.searchfield);
+      var d = e("<" + (l.form ? "form" : "div") + ' class="' + n.searchfield + '" />'),
+        h = e('<div class="' + n.searchfield + '__input" />'),
+        r = e('<input placeholder="' + this.i18n(a.placeholder) + '" type="text" autocomplete="off" />');
+      return h.append(r).appendTo(d), s.prepend(d), s.hasClass(n.panel) && s.addClass(n.panel + "_has-searchfield"), i(r, l.input), l.clear && e('<a class="' + n.btn + " " + n.btn + "_close " + n.searchfield + '__btn" href="#" />').appendTo(h), i(d, l.form), l.form && l.submit && !l.clear && e('<a class="' + n.btn + " " + n.btn + "_next " + n.searchfield + '__btn" href="#" />').appendTo(h), a.cancel && e('<a href="#" class="' + n.searchfield + '__cancel">' + this.i18n("cancel") + "</a>").appendTo(d), d
+    }, e.mmenu.prototype._initSearching = function (i) {
+      var l = this,
+        d = this.opts[t],
+        h = (this.conf[t], {});
+      i.closest("." + n.panel + "_search").length ? (h.$pnls = this.$pnls.find("." + n.panel), h.$nrsp = i.closest("." + n.panel)) : i.closest("." + n.panel).length ? (h.$pnls = i.closest("." + n.panel), h.$nrsp = h.$pnls) : (h.$pnls = this.$pnls.find("." + n.panel), h.$nrsp = this.$menu), h.$pnls = h.$pnls.not(function () {
+        return e(this).parent("." + n.listitem + "_vertical").length
+      }), d.panel.add && (h.$pnls = h.$pnls.not("." + n.panel + "_search"));
+      var r = i.find("input"),
+        c = i.find("." + n.searchfield + "__cancel"),
+        p = this.$pnls.children("." + n.panel + "_search"),
+        o = h.$pnls.find("." + n.listitem);
+      h.$itms = o.not("." + n.listitem + "_divider"), h.$dvdr = o.filter("." + n.listitem + "_divider"), d.panel.add && d.panel.splash && r.off(a.focus + "-" + t + "-splash").on(a.focus + "-" + t + "-splash", function (e) {
+        l.openPanel(p)
+      }), d.cancel && (r.off(a.focus + "-" + t + "-cancel").on(a.focus + "-" + t + "-cancel", function (e) {
+        c.addClass(n.searchfield + "__cancel-active")
+      }), c.off(a.click + "-" + t + "-splash").on(a.click + "-" + t + "-splash", function (s) {
+        s.preventDefault(), e(this).removeClass(n.searchfield + "__cancel-active"), p.hasClass(n.panel + "_opened") && l.openPanel(l.$pnls.children("." + n.panel + "_opened-parent").last())
+      })), d.panel.add && "panel" == d.addTo && this.bind("openPanel:finish", function (e) {
+        e[0] === p[0] && r.focus()
+      }), r.data(s.searchfield, h).off(a.input + "-" + t).on(a.input + "-" + t, function (e) {
+        (function (e) {
+          switch (e) {
+            case 9:
+            case 16:
+            case 17:
+            case 18:
+            case 37:
+            case 38:
+            case 39:
+            case 40:
+              return !0
+          }
+          return !1
+        })(e.keyCode) || l.search(r)
+      }), this.search(r)
+    }, e.mmenu.prototype._initNoResultsMsg = function (s) {
+      var a = this.opts[t];
+      this.conf[t];
+      if (s.closest("." + n.panel).length || (s = this.$pnls.children("." + n.panel).first()), !s.children("." + n.panel + "__noresultsmsg").length) {
+        var i = s.children("." + n.listview).first(),
+          l = e('<div class="' + n.panel + "__noresultsmsg " + n.hidden + '" />').append(this.i18n(a.noResults));
+        i.length ? l.insertAfter(i) : l.prependTo(s)
+      }
+    }, e.mmenu.prototype.search = function (a, i) {
+      var l = this,
+        d = this.opts[t];
+      this.conf[t];
+      a = a || this.$menu.find("." + n.searchfield).chidren("input").first(), i = (i = i || a.val()).toLowerCase().trim();
+      var h = a.data(s.searchfield),
+        r = a.closest("." + n.searchfield).find("." + n.btn),
+        c = this.$pnls.children("." + n.panel + "_search"),
+        p = h.$pnls,
+        o = h.$itms,
+        f = h.$dvdr,
+        u = h.$nrsp;
+      if (o.removeClass(n.listitem + "_nosubitems").find("." + n.btn + "_fullwidth-search").removeClass(n.btn + "_fullwidth-search " + n.btn + "_fullwidth"), c.children("." + n.listview).empty(), p.scrollTop(0), i.length) {
+        if (o.add(f).addClass(n.hidden), o.each(function () {
+            var s = e(this),
+              a = "a";
+            (d.showTextItems || d.showSubPanels && s.find("." + n.btn + "_next")) && (a = "a, span"), s.children(a).not("." + n.btn + "_next").text().toLowerCase().indexOf(i) > -1 && s.removeClass(n.hidden)
+          }), d.panel.add) {
+          var m = e();
+          p.each(function () {
+            var s = l.__filterListItems(e(this).find("." + n.listitem)).clone(!0);
+            s.length && (d.panel.dividers && (m = m.add('<li class="' + n.listitem + " " + n.listitem + '_divider">' + e(this).find("." + n.navbar + "__title").text() + "</li>")), m = m.add(s))
+          }), m.find("." + n.mm("toggle")).remove().end().find("." + n.mm("check")).remove().end().find("." + n.btn).remove(), c.children("." + n.listview).append(m), this.openPanel(c)
+        } else d.showSubPanels && p.each(function (a) {
+          var t = e(this);
+          l.__filterListItems(t.find("." + n.listitem)).each(function () {
+            var a = e(this).data(s.child);
+            a && a.find("." + n.listview).children().removeClass(n.hidden)
+          })
+        }), e(p.get().reverse()).each(function (t) {
+          var i = e(this),
+            d = i.data(s.parent);
+          d && (l.__filterListItems(i.find("." + n.listitem)).length ? d.hasClass(n.hidden) && d.removeClass(n.hidden).children("." + n.btn + "_next").not("." + n.btn + "_fullwidth").addClass(n.btn + "_fullwidth").addClass(n.btn + "_fullwidth-search") : a.closest("." + n.panel).length || ((i.hasClass(n.panel + "_opened") || i.hasClass(n.panel + "_opened-parent")) && setTimeout(function () {
+            l.openPanel(d.closest("." + n.panel))
+          }, (t + 1) * (1.5 * l.conf.openingInterval)), d.addClass(n.listitem + "_nosubitems")))
+        }), this.__filterListItems(p.find("." + n.listitem)).each(function () {
+          e(this).prevAll("." + n.listitem + "_divider").first().removeClass(n.hidden)
+        });
+        r.removeClass(n.hidden), u.find("." + n.panel + "__noresultsmsg")[o.not("." + n.hidden).length ? "addClass" : "removeClass"](n.hidden), d.panel.add && (d.panel.splash && c.find("." + n.panel + "__searchsplash").addClass(n.hidden), o.add(f).removeClass(n.hidden))
+      } else o.add(f).removeClass(n.hidden), r.addClass(n.hidden), u.find("." + n.panel + "__noresultsmsg").addClass(n.hidden), d.panel.add && (d.panel.splash ? c.find("." + n.panel + "__searchsplash").removeClass(n.hidden) : a.closest("." + n.panel + "_search").length || this.openPanel(this.$pnls.children("." + n.panel + "_opened-parent").last()));
+      this.trigger("updateListview")
+    }
+  }(jQuery);
+  ! function (e) {
+    var a, n, i = "sectionIndexer";
+    e.mmenu.addons[i] = {
+      setup: function () {
+        var r = this,
+          t = this.opts[i];
+        this.conf[i];
+        e.mmenu.glbl, "boolean" == typeof t && (t = {
+          add: t
+        }), "object" != typeof t && (t = {}), t = this.opts[i] = e.extend(!0, {}, e.mmenu.defaults[i], t);
+        var s = null;
+        this.bind("initPanels:after", function (d) {
+          if (t.add) {
+            var h;
+            switch (t.addTo) {
+              case "panels":
+                h = d;
+                break;
+              default:
+                h = (h = e(t.addTo, this.$menu)).filter("." + a.panel)
+            }
+            h.find("." + a.listitem + "_divider").closest("." + a.panel).addClass(a.panel + "_has-sectionindexer"), s || (s = e('<div class="' + a.sectionindexer + '" />').prependTo(this.$menu).append('<a href="#a">a</a><a href="#b">b</a><a href="#c">c</a><a href="#d">d</a><a href="#e">e</a><a href="#f">f</a><a href="#g">g</a><a href="#h">h</a><a href="#i">i</a><a href="#j">j</a><a href="#k">k</a><a href="#l">l</a><a href="#m">m</a><a href="#n">n</a><a href="#o">o</a><a href="#p">p</a><a href="#q">q</a><a href="#r">r</a><a href="#s">s</a><a href="#t">t</a><a href="#u">u</a><a href="#v">v</a><a href="#w">w</a><a href="#x">x</a><a href="#y">y</a><a href="#z">z</a>')).on(n.mouseover + "-" + i + " " + n.touchstart + "-" + i, "a", function (n) {
+              var i = e(n.target).attr("href").slice(1),
+                t = r.$pnls.children("." + a.panel + "_opened"),
+                s = t.find("." + a.listview),
+                d = -1,
+                h = t.scrollTop();
+              t.scrollTop(0), s.children("." + a.listitem + "_divider").not("." + a.hidden).each(function () {
+                d < 0 && i == e(this).text().slice(0, 1).toLowerCase() && (d = e(this).position().top)
+              }), t.scrollTop(d > -1 ? d : h)
+            });
+            var o = function (e) {
+              e = e || this.$pnls.children("." + a.panel + "_opened"), this.$menu[(e.hasClass(a.panel + "_has-sectionindexer") ? "add" : "remove") + "Class"](a.menu + "_has-sectionindexer")
+            };
+            this.bind("openPanel:start", o), this.bind("initPanels:after", o)
+          }
+        })
+      },
+      add: function () {
+        a = e.mmenu._c, e.mmenu._d, n = e.mmenu._e, a.add("sectionindexer"), n.add("mouseover")
+      },
+      clickAnchor: function (e, n) {
+        if (e.parent().is("." + a.indexer)) return !0
+      }
+    }, e.mmenu.defaults[i] = {
+      add: !1,
+      addTo: "panels"
+    }
+  }(jQuery);
+  ! function (e) {
+    var t, n, i = "setSelected";
+    e.mmenu.addons[i] = {
+      setup: function () {
+        var s = this,
+          a = this.opts[i];
+        this.conf[i];
+        if (e.mmenu.glbl, "boolean" == typeof a && (a = {
+            hover: a,
+            parent: a
+          }), "object" != typeof a && (a = {}), "detect" == (a = this.opts[i] = e.extend(!0, {}, e.mmenu.defaults[i], a)).current) {
+          var l = function (e) {
+            e = e.split("?")[0].split("#")[0];
+            var t = s.$menu.find('a[href="' + e + '"], a[href="' + e + '/"]');
+            t.length ? s.setSelected(t.parent(), !0) : (e = e.split("/").slice(0, -1)).length && l(e.join("/"))
+          };
+          this.bind("initMenu:after", function () {
+            l(window.location.href)
+          })
+        } else a.current || this.bind("initListview:after", function (e) {
+          e.find("." + t.listview).children("." + t.listitem + "_selected").removeClass(t.listitem + "_selected")
+        });
+        a.hover && this.bind("initMenu:after", function () {
+          this.$menu.addClass(t.menu + "_selected-hover")
+        }), a.parent && (this.bind("openPanel:finish", function (e) {
+          this.$pnls.find("." + t.listview).find("." + t.listitem + "_selected-parent").removeClass(t.listitem + "_selected-parent");
+          for (var i = e.data(n.parent); i;) i.not("." + t.listitem + "_vertical").addClass(t.listitem + "_selected-parent"), i = i.closest("." + t.panel).data(n.parent)
+        }), this.bind("initMenu:after", function () {
+          this.$menu.addClass(t.menu + "_selected-parent")
+        }))
+      },
+      add: function () {
+        t = e.mmenu._c, n = e.mmenu._d, e.mmenu._e
+      },
+      clickAnchor: function (e, t) {}
+    }, e.mmenu.defaults[i] = {
+      current: !0,
+      hover: !1,
+      parent: !1
+    }
+  }(jQuery);
+  ! function (e) {
+    var d, s;
+    e.mmenu.addons.sidebar = {
+      setup: function () {
+        if (this.opts.offCanvas) {
+          var a = this.opts.sidebar;
+          this.conf.sidebar;
+          s = e.mmenu.glbl, ("string" == typeof a || "boolean" == typeof a && a || "number" == typeof a) && (a = {
+            expanded: a
+          }), "object" != typeof a && (a = {}), "boolean" == typeof a.collapsed && a.collapsed && (a.collapsed = "all"), "string" != typeof a.collapsed && "number" != typeof a.collapsed || (a.collapsed = {
+            use: a.collapsed
+          }), "object" != typeof a.collapsed && (a.collapsed = {}), "number" == typeof a.collapsed.use && (a.collapsed.use = "(min-width: " + a.collapsed.use + "px)"), "boolean" == typeof a.expanded && a.expanded && (a.expanded = "all"), "string" != typeof a.expanded && "number" != typeof a.expanded || (a.expanded = {
+            use: a.expanded
+          }), "object" != typeof a.expanded && (a.expanded = {}), "number" == typeof a.expanded.use && (a.expanded.use = "(min-width: " + a.expanded.use + "px)"), a = this.opts.sidebar = e.extend(!0, {}, e.mmenu.defaults.sidebar, a);
+          var n = d.wrapper + "_sidebar-collapsed";
+          a.collapsed.size && (n += " " + d.wrapper + "_sidebar-collapsed-" + a.collapsed.size);
+          var i = d.wrapper + "_sidebar-expanded";
+          a.expanded.size && (i += " " + d.wrapper + "_sidebar-expanded-" + a.expanded.size), a.collapsed.use && (this.bind("initMenu:after", function () {
+            this.$menu.addClass(d.menu + "_sidebar-collapsed"), a.collapsed.blockMenu && this.opts.offCanvas && !this.$menu.children("." + d.menu + "__blocker").length && this.$menu.prepend('<a class="' + d.menu + '__blocker" href="#' + this.$menu.attr("id") + '" />'), a.collapsed.hideNavbar && this.$menu.addClass(d.menu + "_hidenavbar"), a.collapsed.hideDivider && this.$menu.addClass(d.menu + "_hidedivider")
+          }), "boolean" == typeof a.collapsed.use ? this.bind("initMenu:after", function () {
+            s.$html.addClass(n)
+          }) : this.matchMedia(a.collapsed.use, function () {
+            s.$html.addClass(n)
+          }, function () {
+            s.$html.removeClass(n)
+          })), a.expanded.use && (this.bind("initMenu:after", function () {
+            this.$menu.addClass(d.menu + "_sidebar-expanded")
+          }), "boolean" == typeof a.expanded.use ? this.bind("initMenu:after", function () {
+            s.$html.addClass(i), this.open()
+          }) : this.matchMedia(a.expanded.use, function () {
+            s.$html.addClass(i), s.$html.hasClass(d.wrapper + "_sidebar-closed") || this.open()
+          }, function () {
+            s.$html.removeClass(i), this.close()
+          }), this.bind("close:start", function () {
+            s.$html.hasClass(i) && s.$html.addClass(d.wrapper + "_sidebar-closed")
+          }), this.bind("open:start", function () {
+            s.$html.removeClass(d.wrapper + "_sidebar-closed")
+          }))
+        }
+      },
+      add: function () {
+        d = e.mmenu._c, e.mmenu._d, e.mmenu._e
+      },
+      clickAnchor: function (e, a, n) {
+        if (this.opts.sidebar.expanded.use && s.$html.is("." + d.wrapper + "_sidebar-expanded") && a && n) return {
+          close: !1
+        }
+      }
+    }, e.mmenu.defaults.sidebar = {
+      collapsed: {
+        use: !1,
+        blockMenu: !0,
+        hideDivider: !1,
+        hideNavbar: !0
+      },
+      expanded: {
+        use: !1
+      }
+    }, e.mmenu.configuration.sidebar = {}
+  }(jQuery);
+  ! function (e) {
+    var t;
+    e.mmenu.addons.toggles = {
+      setup: function () {
+        var s = this;
+        this.opts.toggles, this.conf.toggles;
+        e.mmenu.glbl, this.bind("initPanels:after", function (n) {
+          this.__refactorClass(n.find("input"), this.conf.classNames.toggles.toggle, t.toggle), this.__refactorClass(n.find("input"), this.conf.classNames.toggles.check, t.check), n.find("input." + t.toggle + ", input." + t.check).each(function () {
+            var n = e(this),
+              l = n.closest("li"),
+              c = n.hasClass(t.toggle) ? "toggle" : "check",
+              i = n.attr("id") || s.__getUniqueId();
+            l.children('label[for="' + i + '"]').length || (n.attr("id", i), l.prepend(n), e('<label for="' + i + '" class="' + t[c] + '"></label>').insertAfter(l.children("." + t.listitem + "__text").last()))
+          })
+        })
+      },
+      add: function () {
+        t = e.mmenu._c, e.mmenu._d, e.mmenu._e, t.add("toggle check")
+      },
+      clickAnchor: function (e, t) {}
+    }, e.mmenu.configuration.classNames.toggles = {
+      toggle: "Toggle",
+      check: "Check"
+    }
+  }(jQuery);
+  ! function (a) {
+    a.mmenu.addons.navbars.breadcrumbs = function (r, n, e) {
+      var s = this,
+        t = a.mmenu._c,
+        i = a.mmenu._d;
+      t.add("separator");
+      var b = a('<span class="' + t.navbar + '__breadcrumbs" />').appendTo(r);
+      this.bind("initNavbar:after", function (r) {
+        if (!r.children("." + t.navbar).children("." + t.navbar + "__breadcrumbs").length) {
+          r.removeClass(t.panel + "_has-navbar");
+          for (var n = [], s = a('<span class="' + t.navbar + '__breadcrumbs"></span>'), b = r, c = !0; b && b.length;) {
+            if (b.is("." + t.panel) || (b = b.closest("." + t.panel)), !b.parent("." + t.listitem + "_vertical").length) {
+              var d = b.children("." + t.navbar).children("." + t.navbar + "__title").text();
+              d.length && n.unshift(c ? "<span>" + d + "</span>" : '<a href="#' + b.attr("id") + '">' + d + "</a>"), c = !1
+            }
+            b = b.data(i.parent)
+          }
+          e.breadcrumbs.removeFirst && n.shift(), s.append(n.join('<span class="' + t.separator + '">' + e.breadcrumbs.separator + "</span>")).appendTo(r.children("." + t.navbar))
+        }
+      }), this.bind("openPanel:start", function (a) {
+        var r = a.find("." + t.navbar + "__breadcrumbs");
+        r.length && b.html(r.html() || "")
+      }), this.bind("initNavbar:after:sr-aria", function (r) {
+        r.children("." + t.navbar).children("." + t.breadcrumbs).children("a").each(function () {
+          s.__sr_aria(a(this), "owns", a(this).attr("href").slice(1))
+        })
+      })
+    }
+  }(jQuery);
+  ! function (t) {
+    t.mmenu.addons.navbars.close = function (e, n) {
+      var s = t.mmenu._c;
+      t.mmenu.glbl;
+      s.add("close");
+      var a = t('<a class="' + s.btn + " " + s.btn + "_close " + s.navbar + '__btn" href="#" />').appendTo(e);
+      this.bind("setPage:after", function (t) {
+        a.attr("href", "#" + t.attr("id"))
+      }), this.bind("setPage:after:sr-text", function (t) {
+        a.html(this.__sr_text(this.i18n(this.conf.screenReader.text.closeMenu))), this.__sr_aria(a, "owns", a.attr("href").slice(1))
+      })
+    }
+  }(jQuery);
+  ! function (a) {
+    a.mmenu.addons.navbars.next = function (n, t) {
+      var e, s, r, i = a.mmenu._c,
+        h = a('<a class="' + i.btn + " " + i.btn + "_next " + i.navbar + '__btn" href="#" />').appendTo(n);
+      this.bind("openPanel:start", function (a) {
+        e = a.find("." + this.conf.classNames.navbars.panelNext), s = e.attr("href"), r = e.html(), s ? h.attr("href", s) : h.removeAttr("href"), h[s || r ? "removeClass" : "addClass"](i.hidden), h.html(r)
+      }), this.bind("openPanel:start:sr-aria", function (a) {
+        this.__sr_aria(h, "hidden", h.hasClass(i.hidden)), this.__sr_aria(h, "owns", (h.attr("href") || "").slice(1))
+      })
+    }, a.mmenu.configuration.classNames.navbars.panelNext = "Next"
+  }(jQuery);
+  ! function (a) {
+    a.mmenu.addons.navbars.prev = function (n, r) {
+      var e, t, i, s = a.mmenu._c,
+        h = a('<a class="' + s.btn + " " + s.btn + "_prev " + s.navbar + '__btn" href="#" />').appendTo(n);
+      this.bind("initNavbar:after", function (a) {
+        a.removeClass(s.panel + "_has-navbar")
+      }), this.bind("openPanel:start", function (a) {
+        a.parent("." + s.listitem + "_vertical").length || ((e = a.find("." + this.conf.classNames.navbars.panelPrev)).length || (e = a.children("." + s.navbar).children("." + s.btn + "_prev")), t = e.attr("href"), i = e.html(), t ? h.attr("href", t) : h.removeAttr("href"), h[t || i ? "removeClass" : "addClass"](s.hidden), h.html(i))
+      }), this.bind("initNavbar:after:sr-aria", function (a) {
+        var n = a.children("." + s.navbar);
+        this.__sr_aria(n, "hidden", !0)
+      }), this.bind("openPanel:start:sr-aria", function (a) {
+        this.__sr_aria(h, "hidden", h.hasClass(s.hidden)), this.__sr_aria(h, "owns", (h.attr("href") || "").slice(1))
+      })
+    }, a.mmenu.configuration.classNames.navbars.panelPrev = "Prev"
+  }(jQuery);
+  ! function (e) {
+    e.mmenu.addons.navbars.searchfield = function (s, t) {
+      e.mmenu._c;
+      "object" != typeof this.opts.searchfield && (this.opts.searchfield = {}), this.opts.searchfield.add = !0, this.opts.searchfield.addTo = s
+    }
+  }(jQuery);
+  ! function (a) {
+    a.mmenu.addons.navbars.tabs = function (e, t, n) {
+      var s = a.mmenu._c,
+        r = a.mmenu._d,
+        l = a.mmenu._e,
+        d = this,
+        i = e.children("a");
+      e.addClass(s.navbar + "_tabs").parent().addClass(s.navbars + "_has-tabs"), i.on(l.click + "-navbars", function (e) {
+        e.preventDefault();
+        var t = a(this);
+        if (t.hasClass(s.navbar + "__tab_selected")) e.stopImmediatePropagation();
+        else try {
+          d.openPanel(a(t.attr("href")), !1), e.stopImmediatePropagation()
+        } catch (a) {}
+      }), this.bind("openPanel:start", function a(e) {
+        i.removeClass(s.navbar + "__tab_selected");
+        var t = i.filter('[href="#' + e.attr("id") + '"]');
+        if (t.length) t.addClass(s.navbar + "__tab_selected");
+        else {
+          var n = e.data(r.parent);
+          n && n.length && a(n.closest("." + s.panel))
+        }
+      })
+    }
+  }(jQuery);
+  ! function (t) {
+    t.mmenu.addons.navbars.title = function (a, n) {
+      var e, i, r, s, l = t.mmenu._c,
+        h = t('<a class="' + l.navbar + '__title" />').appendTo(a);
+      this.bind("openPanel:start", function (t) {
+        t.parent("." + l.listitem + "_vertical").length || ((r = t.find("." + this.conf.classNames.navbars.panelTitle)).length || (r = t.children("." + l.navbar).children("." + l.navbar + "__title")), e = r.attr("href"), i = r.html() || n.title, e ? h.attr("href", e) : h.removeAttr("href"), h[e || i ? "removeClass" : "addClass"](l.hidden), h.html(i))
+      }), this.bind("openPanel:start:sr-aria", function (t) {
+        if (this.opts.screenReader.text && (s || (s = this.$menu.children("." + l.navbars + "_top, ." + l.navbars + "_bottom").children("." + l.navbar).children("." + l.btn + "_prev")), s.length)) {
+          var a = !0;
+          "parent" == this.opts.navbar.titleLink && (a = !s.hasClass(l.hidden)), this.__sr_aria(h, "hidden", a)
+        }
+      })
+    }, t.mmenu.configuration.classNames.navbars.panelTitle = "Title"
+  }(jQuery);
+  jQuery.mmenu.wrappers.angular = function () {
+    this.opts.onClick = {
+      close: !0,
+      preventDefault: !1,
+      setSelected: !0
+    }
+  };
+  ! function (n) {
+    n.mmenu.wrappers.bootstrap3 = function () {
+      if (this.$menu.hasClass("navbar-collapse")) {
+        this.conf.classNames.selected = "active", this.conf.classNames.divider = "divider", this.conf.clone = !0, this.opts.hooks = this.opts.hooks || {};
+        for (var n = "", e = ["nav-tabs", "nav-pills", "navbar-nav"], t = 0; t < e.length; t++)
+          if (this.$menu.find("." + e[t]).length) {
+            n = e[t];
+            break
+          } n.length && (this.opts.hooks["initMenu:before"] = function () {
+          "navbar-nav" == n && this.$menu.wrapInner("<div />")
+        }, this.opts.hooks["initMenu:after"] = function () {
+          a.menu.call(this), a.dropdown.call(this), a[n.split("nav-").join("").split("-nav").join("")].call(this)
+        })
+      }
+    };
+    var a = {
+      menu: function () {
+        this.$menu.find(".nav").removeClass("nav").end().find(".sr-only").remove().end().find(".divider:empty").remove();
+        for (var n = ["role", "aria-haspopup", "aria-expanded"], a = 0; a < n.length; a++) this.$menu.find("[" + n[a] + "]").removeAttr(n[a])
+      },
+      dropdown: function () {
+        var a = this.$menu.find(".dropdown");
+        a.removeClass("dropdown"), a.children(".dropdown-toggle").find(".caret").remove().end().each(function () {
+          n(this).replaceWith("<span>" + n(this).html() + "</span>")
+        }), a.children(".dropdown-menu").removeClass("dropdown-menu")
+      },
+      tabs: function () {
+        this.$menu.find(".nav-tabs").removeClass("nav-tabs")
+      },
+      pills: function () {
+        this.$menu.find(".nav-pills").removeClass("nav-pills")
+      },
+      navbar: function () {
+        var n = this;
+        this.$menu.removeClass("collapse navbar-collapse").find('[class*="navbar-"]').removeClass("navbar-left navbar-right navbar-nav navbar-text navbar-btn");
+        var a = this.$menu.find(".navbar-form");
+        this.conf.searchform = {
+          form: {
+            action: a.attr("action"),
+            method: a.attr("method")
+          },
+          input: {
+            name: a.find("input").attr("name")
+          },
+          submit: !0
+        }, a.remove(), (this.$orig || this.$menu).closest(".navbar").find(".navbar-header").find(".navbar-toggle").off("click").on("click", function (a) {
+          n.open(), a.stopImmediatePropagation(), a.preventDefault()
+        })
+      }
+    }
+  }(jQuery);
+  ! function (a) {
+    function n(n) {
+      for (var e = n.is("a") ? a("<a />") : a("<span />"), t = ["href", "title", "target"], r = 0; r < t.length; r++) void 0 !== n.attr(t[r]) && e.attr(t[r], n.attr(t[r]));
+      return e.html(n.html()), e.find(".sr-only").remove(), e
+    }
+
+    function e(e) {
+      var t = a("<ul />");
+      return e.children().each(function () {
+        var e = a(this),
+          r = a("<li />");
+        e.hasClass("dropdown-divider") ? r.addClass("Divider") : e.hasClass("dropdown-item") && r.append(n(e)), t.append(r)
+      }), t
+    }
+    a.mmenu.wrappers.bootstrap4 = function () {
+      var t = this;
+      if (this.$menu.hasClass("navbar-collapse")) {
+        this.conf.clone = !1;
+        var r = a("<nav />"),
+          i = a("<div />");
+        r.append(i), this.$menu.children().each(function () {
+          var r, s, o = a(this);
+          switch (!0) {
+            case o.hasClass("navbar-nav"):
+              i.append((r = o, s = a("<ul />"), r.find(".nav-item").each(function () {
+                var t = a(this),
+                  r = a("<li />");
+                if (t.hasClass("active") && r.addClass("Selected"), !t.hasClass("nav-link")) {
+                  var i = t.children(".dropdown-menu");
+                  i.length && r.append(e(i)), t = t.children(".nav-link")
+                }
+                r.prepend(n(t)), s.append(r)
+              }), s));
+              break;
+            case o.hasClass("dropdown-menu"):
+              i.append(e(o));
+              break;
+            case o.hasClass("form-inline"):
+              t.conf.searchfield.form = {
+                action: o.attr("action") || null,
+                method: o.attr("method") || null
+              }, t.conf.searchfield.input = {
+                name: o.find("input").attr("name") || null
+              }, t.conf.searchfield.clear = !1, t.conf.searchfield.submit = !0;
+              break;
+            default:
+              i.append(o.clone(!0))
+          }
+        }), this.bind("initMenu:before", function () {
+          r.prependTo("body"), this.$menu = r
+        }), this.$menu.parent().find(".navbar-toggler").removeAttr("data-target").removeAttr("aria-controls").off("click").on("click", function (a) {
+          a.preventDefault(), a.stopImmediatePropagation(), t[t.vars.opened ? "close" : "open"]()
+        })
+      }
+    }
+  }(jQuery);
+  ! function (e) {
+    e.mmenu.wrappers.jqueryMobile = function () {
+      var n = this;
+      this.opts.onClick.close = !1, this.conf.offCanvas.page.selector = "div.ui-page-active", e("body").on("pagecontainerchange", function (e, t) {
+        "function" == typeof n.close && (n.close(), n.setPage(t.toPage))
+      }), this.bind("initAnchors:after", function () {
+        e("body").on("click", ".mm-listview a", function (n) {
+          n.isDefaultPrevented() || (n.preventDefault(), e("body").pagecontainer("change", e(this).attr("href")))
+        })
+      })
+    }
+  }(jQuery);
+  jQuery.mmenu.wrappers.magento = function () {
+    this.conf.classNames.selected = "active"
+  };
+  jQuery.mmenu.wrappers.olark = function () {
+    this.conf.offCanvas.page.noSelector.push("#olark")
+  };
+  ! function (n) {
+    n.mmenu.wrappers.turbolinks = function () {
+      var t, o;
+      n(document).on("turbolinks:before-visit", function () {
+        o = n("html"), t = o.attr("class"), t = n.grep(t.split(/\s+/), function (n) {
+          return !/mm-/.test(n)
+        }).join(" ")
+      }).on("turbolinks:load", function () {
+        void 0 !== o && (o.attr("class", t), n.mmenu.glbl = !1)
+      })
+    }
+  }(jQuery);
+  ! function (s) {
+    s.mmenu.wrappers.wordpress = function () {
+      this.conf.classNames.selected = "current-menu-item", s("#wpadminbar").css("position", "fixed").addClass("mm-slideout")
+    }
+  }(jQuery);
+  jQuery.mmenu.i18n({
+    Menu: "Menü"
+  }, "de");
+  jQuery.mmenu.i18n({
+    "Close menu": "Menü schließen",
+    "Close submenu": "Untermenü schließen",
+    "Open submenu": "Untermenü öffnen",
+    "Toggle submenu": "Untermenü wechseln"
+  }, "de");
+  jQuery.mmenu.i18n({
+    Search: "Suche",
+    "No results found.": "Keine Ergebnisse gefunden.",
+    cancel: "beenden"
+  }, "de");
+  jQuery.mmenu.i18n({
+    Menu: "منو"
+  }, "fa");
+  jQuery.mmenu.i18n({
+    "Close menu": "بستن منو",
+    "Close submenu": "بستن زیرمنو",
+    "Open submenu": "بازکردن زیرمنو",
+    "Toggle submenu": "سوییچ زیرمنو"
+  }, "fa");
+  jQuery.mmenu.i18n({
+    Search: "جستجو",
+    "No results found.": "نتیجه‌ای یافت نشد.",
+    cancel: "انصراف"
+  }, "fa");
+  jQuery.mmenu.i18n({
+    Menu: "Menu"
+  }, "nl");
+  jQuery.mmenu.i18n({
+    "Close menu": "Menu sluiten",
+    "Close submenu": "Submenu sluiten",
+    "Open submenu": "Submenu openen",
+    "Toggle submenu": "Submenu wisselen"
+  }, "nl");
+  jQuery.mmenu.i18n({
+    Search: "Zoeken",
+    "No results found.": "Geen resultaten gevonden.",
+    cancel: "annuleren"
+  }, "nl");
+  jQuery.mmenu.i18n({
+    Menu: "Меню"
+  }, "ru");
+  jQuery.mmenu.i18n({
+    "Close menu": "Закрыть меню",
+    "Close submenu": "Закрыть подменю",
+    "Open submenu": "Открыть подменю",
+    "Toggle submenu": "Переключить подменю"
+  }, "ru");
+  jQuery.mmenu.i18n({
+    Search: "Найти",
+    "No results found.": "Ничего не найдено.",
+    "Search results": "Результаты поиска"
+  }, "ru");
+  return jQuery.mmenu;
 }));

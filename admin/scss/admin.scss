@@ -1,0 +1,12 @@
+.wrapper.admin {
+    .container-fluid {
+        border: 1px solid red;
+
+        padding-top: 5em;
+
+        .navbar-default {
+            background-color: transparent;
+    border-color: #2f4050;
+        }
+    }
+}

@@ -1,0 +1,339 @@
+$font-cn: 'Noto Sans TC';
+$font-en: 'Lato';
+$bgColor: #e4e4e4;
+$font-d: #b39368;
+$font-w: #fff;
+$font-dark: #474747;
+$font-bk: #000;
+$font-gray: #969696;
+$gold: #ffc240;
+$brown: #ac7000;
+$red: #b90000;
+$blue: #3a9bd3;
+$on: #d69200;
+$fund: #7e6530;
+$font-size: 26px;
+$line-height: 1.4;
+$lines-to-show: 3;
+
+
+@media (min-width: 1151px) {
+    .header {
+        display: none;
+    }
+}
+
+@media (max-width: 1150px) {
+
+    .nav-before .nav-bar-wrapper .main-menu,
+    .log-search,
+    #logOut,
+    #logIn {
+        display: none;
+    }
+
+    .header {
+        float: right;
+        font-size: 2rem;
+        margin-top: 0.4rem;
+
+        &:hover a {
+            color: white;
+        }
+    }
+
+    .nav-bar-wrappe .mm-searchfield input {
+        width: 80%;
+    }
+
+    .mm-navbars_top {
+        height: 1rem;
+    }
+
+    .mm-navbars_top .mm-navbar .mm-navbar__title {
+        height: 80px;
+        color: black;
+        margin-top: 5px;
+        line-height: 30px;
+        transition: .5s;
+
+        &:hover {
+            color: #b39368;
+        }
+    }
+
+    .mm-panels>.mm-panel {
+        top: 3rem;
+    }
+
+    #menu ul li a i {
+        color: $font-gray;
+        font-size: 18px;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 20px;
+    }
+
+    #menu ul li a.cur-arr {
+        cursor: default;
+    }
+
+    #menu .moviecool-mmenu {
+        filter: brightness(0.4);
+        margin-right: 5px;
+        margin-top: -3px;
+        margin-left: 2px;
+    }
+}
+
+@media(max-width: 575px) {
+    .nav-before {
+        background-color: $font-dark;
+    }
+
+    .index__class {
+        .flex-ls-wrapper {
+            width: 100%;
+
+            .title-wrapper.col-12 {
+                margin-bottom: 0;
+
+                .coursetitle {
+                    @media(max-width: 425px) {
+                        font-size: 25px;
+                    }
+
+                    .more {
+                        line-height: 40px;
+                    }
+
+                    img {
+                        width: 60px;
+                        margin-right: 5px;
+
+
+                    }
+                }
+            }
+
+            .class-thumb {
+                height: 180px;
+                padding: 5px 0;
+
+                @media(max-width: 425px) {
+                    height: 180px;
+                }
+
+                .thumb {
+                    border: none;
+
+                    ul {
+                        display: flex;
+                        flex: wrap;
+
+                        .thumb-header {
+                            flex: 0.45;
+                            height: 100%;
+                            overflow: hidden;
+
+                            .poster {
+                                position: relative;
+                                display: inline-block;
+                                width: 100%;
+                                height: 200px;
+                                background-position: center;
+                                background-size: cover;
+
+                                .add {
+                                    opacity: 1;
+                                    visibility: visible;
+                                    top: 70%;
+                                    left: 15%;
+                                    color: #ffc240;
+                                    border-color: #ffc240;
+                                    background: #fff;
+
+                                    @media(max-width: 575px) {
+                                        display: none;
+                                    }
+
+                                    @media(max-width: 425px) {
+                                        display: none;
+                                    }
+                                }
+
+                                .mark {
+                                    height: 40px;
+                                    width: 180px;
+                                    transform: rotate(-45deg);
+                                    left: -25%;
+                                    top: 8%;
+                                    font-size: 20px;
+                                    line-height: 30px;
+
+                                    @media(max-width: 425px) {
+                                        left: -35%;
+                                        top: 8%;
+                                        font-size: 16px;
+                                        height: 35px;
+                                        line-height: 27px;
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                        .thumb-body {
+                            flex: 0.55;
+                            display: inline-block;
+
+                            .title {
+                                display: inline-block;
+                                font-size: 20px;
+                                padding: 10px 15px 0px 15px;
+                                max-height: 80px;
+                                overflow: hidden;
+
+                                @media(max-width: 425px) {
+                                    font-size: 20px;
+                                    max-height: 65px;
+                                }
+                            }
+
+                            .cont,
+                            .time,
+                            .name,
+                            .progress {
+                                padding: 0px 15px;
+                                color: $font-gray;
+                                font-size: 15px;
+
+                                span.star {
+                                    color: $gold;
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .cont {
+                                .process__title {
+                                    width: 100%;
+                                    font-size: 15px;
+
+                                    .date {
+                                        float: right;
+                                        margin-right: 3px;
+
+                                        .num {
+                                            color: $red;
+                                        }
+                                    }
+                                }
+
+                                .process__bar {
+                                    width: 100%;
+                                    height: 10px;
+                                    border-radius: 10px;
+                                    background: $bgColor;
+                                    overflow: hidden;
+                                    margin: 5px 0 0 0;
+
+                                    .process__thumb {
+                                        height: 15px;
+                                        max-width: 100%;
+                                        background-image: linear-gradient(to right, $on, $gold);
+                                    }
+                                }
+
+                                .process__people {
+                                    width: 100%;
+
+                                    .process__static {
+                                        font-size: 15px;
+                                        display: inline-block;
+                                        width: 100%;
+                                        text-align: left;
+
+                                        .num {
+                                            color: $red;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .name {}
+
+                            .cont {
+                                .process__people {
+                                    .process__static {
+                                        .hidden-xs {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .price {
+                        display: inline;
+                        position: absolute;
+                        right: 15px;
+                        bottom: 15px;
+                        font-size: 0;
+
+                        span {
+                            display: inline-block;
+                            font-size: 22px;
+                        }
+                    }
+
+                    &__on, &__free {
+                        border-color: $red;
+
+                        .price {
+                            font-size: 0;
+                            span {
+                                font-size: 23px;
+                            }
+                        }
+
+                        .cont {
+                            max-height: 31px;
+                            overflow: hidden;
+
+                            @media(max-width: 425px) {
+                                max-height: 25px;
+                            }
+                        }
+
+                        .name {
+                            max-height: 30px;
+                            overflow: hidden;
+                        }
+                    }
+
+                    &__fund {
+                        border-color: $blue;
+
+                        .price span {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .add-mark {
+                        display: none;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+@media(max-width: 425px) {
+    .flex-ls-wrapper {
+        min-width: 425px;
+    }
+}
