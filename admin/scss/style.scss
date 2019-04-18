@@ -61,6 +61,11 @@ $ins10: #FFDC80;
     overflow: hidden;
 }
 
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
 html,
 body {
     font-family: $font-cn, $font-en;

@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Noto+Sans+TC:100,300,400,500,700,900|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=chinese-traditional,cyrillic,cyrillic-ext,greek,greek-ext,japanese,latin-ext,vietnamese');
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+// 字體
+$font-cn: 'Noto Sans TC';
+$font-en: 'Lato';
+// 背景預設顏色
+$bgColor: #f3f3f3;
+// 文字顏色設定
+$font-d: #b39368;
+$font-w: #fff;
+$font-dark: #474747;
+$font-bk: #000;
+$font-gray: #969696;
+// 金色咖啡色選集
+$gold: #ffc240;
+$on: #d69200;
+$brown: #ac7000;
+$fund: #7e6530;
+// 紅藍色
+$red: #b90000;
+$blue: #3a9bd3;
+// 粉紅色
+$pink: #f3788d;
+$pink-hover:#eb3654;
+// LOGO色
+$fb: #3b5998;
+$twt: #00aced;
+$line:#00c300;
+$ins1: #405DE6;
+$ins2:#5851DB;
+$ins3:#833AB4;
+$ins4:#C13584;
+$ins5:#E1306C;
+$ins6:#FD1D1D;
+$ins7:#F56040;
+$ins8:#F77737;
+$ins9:#FCAF45;
+$ins10: #FFDC80;
+
 .wrapper.admin {
     color: #474747;
 
@@ -14,6 +53,52 @@
         }
     }
 
+    .title {
+        color: $font-dark;
+        font-size: 24px;
+        font-weight: 600;
+
+        border-bottom: 1px solid #c8c8c8;
+        padding: 5px 0;
+    }
+
+    .edit-title {
+        min-width: 412px;
+        overflow: hidden;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 4px 15px;
+
+        &-warning {
+            background-color: #ffc240;
+
+            &:hover {
+                background-color: $on;
+            }
+        }
+    }
+
+    td {
+        color: rgba(71, 71, 71, .7);
+    }
+
+    input,select {
+        height: 35px;
+        padding: 0 10px;
+    }
+
+    select {
+        padding: 0 10px;
+    }
+
+    .item-default {
+        font-size: 16px;
+        min-width: 88px;
+        overflow: hidden;
+    }
+
     .container-fluid {
         border: 1px solid red;
 
@@ -26,7 +111,6 @@
 
             .sidebar-collapse {
 
-                
                 width: 275px;
                 transition: .5s;
 
@@ -52,12 +136,33 @@
                 }
             }
         }
+
+        .wrapper {
+            padding: 0 10px;
+
+            * {
+                margin: 5px 0;
+            }
+        }
+        .banner {
+            height: 200px;
+            width: 100%;
+            max-height: 200px;
+            overflow: hidden;
+
+            background-position: center;
+            background-size: cover;
+        }
+        .rem {
+            color: hsla(0, 0%, 28%, 0.7);
+            font-size: 15px;
+        }
     }
 
     .main-info-wrapper {
         width: 70%;
         max-width: 1150px;
-        padding-top: 5em;
+        padding-top: 0em;
 
         @media (max-width: 1150px) {
             width: 90%;
@@ -68,6 +173,95 @@
         @media (max-width: 620px) {
             width: 80%;
         }
+
+        .notice {
+            width: 100%;
+            background: hsla(3, 100%, 50%, 0.349);
+
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+
+            padding: 10px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 1rem 0;
+            font-size: 15px;
+
+            a {
+                display: inline-block;
+                border: 1px solid white;
+                background: none;
+                color: white;
+                padding: 2px 15px;
+                margin-left: 10px;
+
+                border-radius: 3px;
+
+            }
+        }
+
+        .inner-section {
+            border-radius: 0;
+            padding-top: 1rem;
+
+            a {
+                span {
+                    &.shr {
+                        display: inline-block;
+                        background: #000;
+                        color: white;
+                        padding: 3px 10px;
+                        border-radius: 3px;
+                        font-size: 12px;
+                        margin-right: 10px;
+
+                        transition: .3s;
+
+                        &__fb {
+                            background: $fb;
+
+                        }
+
+                        &__inst {
+                            background: none;
+                            background-image: linear-gradient(to right, $ins1, $ins2, $ins3, $ins4, $ins5, $ins6, $ins7, $ins8, $ins9, $ins10);
+                        }
+
+                        &__twt {
+                            background: $twt;
+                        }
+
+                        &__line {
+                            background: $line;
+                        }
+
+                        &:hover {
+                            filter: brightness(1.2);
+                        }
+
+                        .num {
+                            display: inline-block;
+                            font-size: 12px;
+                        }
+
+                        &.shr-h {
+                            font-size: 0;
+
+                            span,
+                            i {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
     }
 }
 @media (max-width: 1150px) {
@@ -82,3 +276,65 @@
     }
 }
 
+// 開關
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 28px;
+
+    float: right;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #7E6530;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #7E6530;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

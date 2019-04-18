@@ -237,16 +237,17 @@
         </nav>
 
         <div class="container-fluid row">
+
             <nav class="navbar-default navbar-static-side" role="navigation">
                 <div class="nav sidebar-collapse">
                     <ul>
-                        <li class="active">
+                        <li>
                             <a href="admin-v2.1.html">
                                 <i class="fa fa-th-large"></i>
                                 <span class="nav-label">會員中心</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="edit.html">
                                 <i class="fa fa-edit"></i>
                                 <span class="nav-label">編輯會員資料</span>
@@ -311,153 +312,138 @@
                 </div>
             </nav>
 
-            <!-- 講師資訊主體 -->
-            <div class="main-info-wrapper row">
-                <div class="notice col-12">
-                    <span class="text">此為個人頁面的預覽畫面，如果要改動個人檔案請至左側「編輯會員資料」或者 </span>
-                    <a href="edit.html"> 編輯個人檔案 </a>
+            <div class="container row col-9 padding-top-50 justify-content-between">
+                <div class="left-part col-lg-3 col-sm-12 ">
+                    <div class="wrapper row justify-content-center text-center">
+                        <div class="img col-lg-12 col-sm-6">
+                            <img src="img/profile/portrait-005.jpg" alt="" class="rounded-circle img-responsive">
+                        </div>
+                        <div class="col-12"><button type="button" class="btn btn-dark">上傳個人照片</button></div>
+                        <div class="rem col-12">( 照片像素最大 300 x 300 pixel )</div>
+                    </div>
+
                 </div>
-                <div class="supplier-header-section header-section"
-                    style="background-image: url(img/banner/002.jpg); z-index: -1;">
-                </div>
-                <div class="left-part">
-                    <div class="info-wrapper-left fadeInLeft wow">
-                        <div class="container">
-                            <div class="photo-wrapper">
-                                <div class="user__photo user__photo-150"
-                                    style="background-image: url(img/profile/portrait-005.jpg)"></div>
-                            </div>
-                            <div class="name">Ada Lin</div>
+                <div class="right-part col-lg-9 col-md-12 mb-5" id="userarticle">
+                    <div class="row justify-content-start">
+                        <div class="img col-12 banner" style="background-image: url(img/banner/002.jpg)">
+                        </div>
+                    </div>
+                    <div class="col-12 row align-items-center pt-3">
+                        <button class="btn btn-dark mr-2">上傳封面圖片</button>
+                        <div class="rem">( 上傳圖片最佳像素為 1920 x  350 pixel )</div>
+                    </div>
+                    <div class="apply-btn mt-3 mb-3 float-right">
+                        <button class="btn btn-warning mr-2">申請成為廠商</button>
+                        <button class="btn btn-warning">申請成為講師</button>
+                    </div>
 
-                            <button class="btn btn-outline-dark margin-top-10 margin-bottom-10">追蹤 <span
-                                    class="num">0</span> </button>
-                            <button class="btn btn-outline-dark margin-top-10 margin-bottom-10">喜歡 <span
-                                    class="num">0</span> </button>
+                    <div class="title mt-3">編輯會員資料</div>
 
-                            <div class="btns ">
-                                <a href="#">
-                                    <div class="fb"></div>
-                                </a>
-
-                                <a href="#">
-                                    <div class="ins"></div>
-                                </a>
-                                <a href="#">
-                                    <div class="add"></div>
-                                </a>
-                                <!-- 站內信 -->
-
-                                <a href="#">
-                                    <div class="mail"></div>
-                                </a>
-                            </div>
-                            <div class="c-info-container">
-                                <div class="row">
-                                    <div class="col-6 left-part-m">
-                                        <div class="title">參與課程</div>
-                                        <div class="num">12</div>
+                    <table class="table table-borderless table-responsive">
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="item-default">真實姓名</th>
+                                <td>梁占青 ( 如果需要更改請通知客服 )</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="item-default">帳號</th>
+                                <td>zqartworkofficial@gmail.com ( 如果需要更改請通知客服 )</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="item-default">密碼</th>
+                                <td>*******000
+                                    <button type="button" class="ml-5 btn btn-dark">修改密碼</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="item-default">暱稱 ( 請勿超過十個字 )</th>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control col-6" placeholder=""
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-dark" type="button" id="button-addon2">檢查重複</button>
+                                        </div>
                                     </div>
-                                    <div class="col-6 right-part-m">
-                                        <div class="title">開設課程</div>
-                                        <div class="num">6</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="item-default">性別</th>
+                                <td>
+                                    <select class="custom-select col-3" id="inputGroupSelect02">
+                                        <option selected>請選擇</option>
+                                        <option value="1">男性</option>
+                                        <option value="2">女性</option>
+                                        <option value="3">不公開</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="item-default">電話 ( 範例：0900-000-000 )</th>
+                                <td>
+                                    <input type="tel" class="form-control col-6" placeholder=""
+                                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="item-default">生日</th>
+                                <td>
+                                    1996 / 02 / 13
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr class="">
+                                <th scope="row" class="item-default">連絡地址</th>
+                                <td class="row">
+                                    <div class="col-3">
+                                        <select class="custom-select" id="inputGroupSelect02">
+                                            <option selected>請選擇</option>
+                                            <option value="1">台北市</option>
+                                            <option value="2">台中市</option>
+                                            <option value="3">高雄市</option>
+                                        </select>
                                     </div>
-                                </div>
-                            </div>
-
-                        </div>
+                                    <div class="col-8 ml-1">
+                                        <input type="tel" class="form-control" placeholder=""
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr class="">
+                                <th scope="row" class="item-default">學校與系所</th>
+                                <td class="row">
+                                    <div class="col-4">
+                                        <select class="custom-select" id="inputGroupSelect02">
+                                            <option selected>請選擇</option>
+                                            <option value="1">國立台灣大學</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-7 ml-1">
+                                        <input type="tel" class="form-control" placeholder=""
+                                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark">確定送出資料</button>
                     </div>
-                    <div class="info-wrapper-left fadeInLeft wow">
-                        <div class="container inner-section">
-                            <div class="margin-bottom-10 margin-top-10">分享個人頁面</div>
-                            <a href="">
-                                <span class="shr shr__fb">Facebook</span>
-                            </a>
-                            <a href="">
-                                <span class="shr shr__inst">Instagram</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="right-part">
-                    <div class="info-wrapper-right fadeInRight wow">
-                        <div class="info-container">
-                            <div class="intro-doc" id="userarticle">
-                                <div class="title-wrapper">
-                                    <h4 class="title">關於我</h4>
-                                </div>
-                                <div class="content-wrapper">
-                                    <p>美術科班出身，畢業於實踐大學工業產品設計學系，不務正業的來玩人機介面，目前於amazon官方第三方軟體公司擔任設計師。從大學開始接案，擁有七年業界經歷。</p>
-                                </div>
-                                <div class="title-wrapper">
-                                    <h4 class="title">經歷</h4>
-                                </div>
-                                <div class="content-wrapper">
-                                    <p>Gooday Studio 的攝影師，熱愛美食、設計以及藝術！ NOM 飲食文化誌長期配合攝影師，並累積與野宴燒肉、樂法、OK 超商等廠商合作經驗。
-                                        攝影作品曾獲國家地理攝影大賽、法國Px3、美國MPA及IPPAWARDS等多項國際獎項；曾受蘋果日報、VOGUE、Condé Nast
-                                        Traveler以及DIGI
-                                        PHOTO雜誌專訪。 現為Apple及HUAWEI官方特約手機攝影師。</p>
-                                </div>
-                                <div class="title-wrapper">
-                                    <h4 class="title">個人網站</h4>
-                                </div>
-                                <div class="content-wrapper">
-                                    <p>GitHub：https://github.com/zqartwork <br>
-                                        YouTube：嗨嗨我是餅乾 <br>
-                                        Facebook：嗨嗨我是餅乾</p>
-                                </div>
-                                <div class="title-wrapper">
-                                    <h4 class="title">興趣與專長</h4>
-                                </div>
-                                <div class="content-wrapper">
-                                    <p>攝影、品嚐美食寫部落格。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="option col-12 margin-bottom-50">
-                    <div class="title-wrapper" id="userarticle">
-                        <h4 class="title">已開設的課程</h4>
-                    </div>
-                    <div class="content-wrapper">
-                        <span>是否在個人頁面顯示 於 青馬影藝學院 內開設的課程，不論是免費、募資中或者已開課的課程？</span>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="title-wrapper" id="userarticle">
-                        <h4 class="title">已參與的課程</h4>
-                    </div>
-                    <div class="content-wrapper">
-                        <span>是否在個人頁面顯示 於 青馬影藝學院 內購買的課程，不論是免費、募資中或者已開課的課程？</span>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="title-wrapper" id="userarticle">
-                        <h4 class="title">已收藏的課程</h4>
-                    </div>
-                    <div class="content-wrapper">
-                        <span>是否在個人頁面顯示 於 青馬影藝學院 內收藏的課程，不論是免費、募資中或者已開課的課程？</span>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div class="title-wrapper" id="userarticle">
-                        <h4 class="title">已完成的課程作品</h4>
-                    </div>
-                    <div class="content-wrapper">
-                        <span>是否在個人頁面顯示 於 青馬影藝學院 內的課程作品？</span>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
                 </div>
             </div>
 
