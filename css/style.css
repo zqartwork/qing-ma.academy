@@ -813,7 +813,7 @@ button {
       color: #000;
       border-color: #b39368; }
 
-#logOut {
+#logOut, #logIn {
   font-family: "Noto Sans TC";
   font-size: 14px;
   color: #fff;
@@ -832,12 +832,12 @@ button {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
-  #logOut .user__photo {
+  #logOut .user__photo, #logIn .user__photo {
     margin-right: 5px; }
-  #logOut:hover {
+  #logOut:hover, #logIn:hover {
     background: #fff;
     color: #000; }
-  #logOut .user__option-wrapper {
+  #logOut .user__option-wrapper, #logIn .user__option-wrapper {
     margin-top: 5px;
     position: absolute;
     top: 90%;
@@ -846,9 +846,9 @@ button {
     display: none;
     min-width: 272px;
     text-align: left; }
-    #logOut .user__option-wrapper.show {
+    #logOut .user__option-wrapper.show, #logIn .user__option-wrapper.show {
       display: initial; }
-    #logOut .user__option-wrapper .arrow {
+    #logOut .user__option-wrapper .arrow, #logIn .user__option-wrapper .arrow {
       height: 15px;
       width: 15px;
       background: #e4e4e4;
@@ -859,14 +859,14 @@ button {
       z-index: 1;
       right: 10%;
       border-top-left-radius: 4px; }
-    #logOut .user__option-wrapper .user__option-modal {
+    #logOut .user__option-wrapper .user__option-modal, #logIn .user__option-wrapper .user__option-modal {
       background: #e4e4e4;
       margin-top: 8px;
       padding: 15px 25px;
       border-radius: 4px;
       -webkit-box-shadow: 0 0 5px #00000057;
       box-shadow: 0 0 5px #00000057; }
-      #logOut .user__option-wrapper .user__option-modal .modal__header {
+      #logOut .user__option-wrapper .user__option-modal .modal__header, #logIn .user__option-wrapper .user__option-modal .modal__header {
         justify-items: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
@@ -876,14 +876,14 @@ button {
         justify-content: center;
         border-bottom: 1px solid lightgray;
         padding-bottom: 8px; }
-        #logOut .user__option-wrapper .user__option-modal .modal__header .user__name {
+        #logOut .user__option-wrapper .user__option-modal .modal__header .user__name, #logIn .user__option-wrapper .user__option-modal .modal__header .user__name {
           font-size: 18px;
           color: #474747;
           letter-spacing: 0.02rem;
           -webkit-transition: .3s;
           -o-transition: .3s;
           transition: .3s; }
-          #logOut .user__option-wrapper .user__option-modal .modal__header .user__name i {
+          #logOut .user__option-wrapper .user__option-modal .modal__header .user__name i, #logIn .user__option-wrapper .user__option-modal .modal__header .user__name i {
             margin-left: 5px;
             color: #969696;
             font-size: 20px;
@@ -891,13 +891,14 @@ button {
             -o-transition: .3s;
             transition: .3s; }
           #logOut .user__option-wrapper .user__option-modal .modal__header .user__name:hover,
-          #logOut .user__option-wrapper .user__option-modal .modal__header .user__name:hover i {
+          #logOut .user__option-wrapper .user__option-modal .modal__header .user__name:hover i, #logIn .user__option-wrapper .user__option-modal .modal__header .user__name:hover,
+          #logIn .user__option-wrapper .user__option-modal .modal__header .user__name:hover i {
             color: black; }
-      #logOut .user__option-wrapper .user__option-modal .modal__body {
+      #logOut .user__option-wrapper .user__option-modal .modal__body, #logIn .user__option-wrapper .user__option-modal .modal__body {
         color: #474747;
         letter-spacing: 0.02rem;
         line-height: 55px; }
-        #logOut .user__option-wrapper .user__option-modal .modal__body i {
+        #logOut .user__option-wrapper .user__option-modal .modal__body i, #logIn .user__option-wrapper .user__option-modal .modal__body i {
           color: #969696;
           width: 25px;
           font-size: 18px;
@@ -905,24 +906,24 @@ button {
           -webkit-transition: .5s;
           -o-transition: .5s;
           transition: .5s; }
-        #logOut .user__option-wrapper .user__option-modal .modal__body a {
+        #logOut .user__option-wrapper .user__option-modal .modal__body a, #logIn .user__option-wrapper .user__option-modal .modal__body a {
           color: #474747; }
-          #logOut .user__option-wrapper .user__option-modal .modal__body a:hover {
+          #logOut .user__option-wrapper .user__option-modal .modal__body a:hover, #logIn .user__option-wrapper .user__option-modal .modal__body a:hover {
             color: black; }
-            #logOut .user__option-wrapper .user__option-modal .modal__body a:hover i {
+            #logOut .user__option-wrapper .user__option-modal .modal__body a:hover i, #logIn .user__option-wrapper .user__option-modal .modal__body a:hover i {
               color: black; }
-        #logOut .user__option-wrapper .user__option-modal .modal__body #point {
+        #logOut .user__option-wrapper .user__option-modal .modal__body #point, #logIn .user__option-wrapper .user__option-modal .modal__body #point {
           margin-top: 10px;
           cursor: default; }
-          #logOut .user__option-wrapper .user__option-modal .modal__body #point a:hover {
+          #logOut .user__option-wrapper .user__option-modal .modal__body #point a:hover, #logIn .user__option-wrapper .user__option-modal .modal__body #point a:hover {
             color: #474747;
             cursor: default; }
-          #logOut .user__option-wrapper .user__option-modal .modal__body #point .emph {
+          #logOut .user__option-wrapper .user__option-modal .modal__body #point .emph, #logIn .user__option-wrapper .user__option-modal .modal__body #point .emph {
             margin: 0 10px;
             font-size: 25px;
             color: #ac7000;
             font-weight: 600; }
-      #logOut .user__option-wrapper .user__option-modal .modal__footer {
+      #logOut .user__option-wrapper .user__option-modal .modal__footer, #logIn .user__option-wrapper .user__option-modal .modal__footer {
         width: 100%;
         text-align: right;
         color: #474747;
@@ -931,14 +932,14 @@ button {
         border-top: 1px solid lightgray;
         padding-top: 10px;
         font-size: 18px; }
-        #logOut .user__option-wrapper .user__option-modal .modal__footer .signout {
+        #logOut .user__option-wrapper .user__option-modal .modal__footer .signout, #logIn .user__option-wrapper .user__option-modal .modal__footer .signout {
           padding: 5px 10px 5px 12px;
           border-radius: 5px;
           font-family: 'Noto Sans TC';
           border: 1px solid lightgray;
           color: #474747;
           font-size: 16px; }
-          #logOut .user__option-wrapper .user__option-modal .modal__footer .signout i {
+          #logOut .user__option-wrapper .user__option-modal .modal__footer .signout i, #logIn .user__option-wrapper .user__option-modal .modal__footer .signout i {
             margin-left: 5px;
             color: #969696;
             font-size: 18px;
