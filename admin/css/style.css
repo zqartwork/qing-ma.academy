@@ -5970,8 +5970,6 @@ footer {
 .header-section {
   background-size: cover;
   background-position: center;
-  -webkit-filter: brightness(0.4);
-  filter: brightness(0.4);
   position: absolute;
   left: 0;
   top: 0;
