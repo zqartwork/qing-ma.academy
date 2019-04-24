@@ -6,7 +6,7 @@ $font-en: 'Lato';
 // 背景預設顏色
 $bgColor: #f3f3f3;
 // 文字顏色設定
-$font-d: #b39368;
+$font-d: #A48357;
 $font-w: #fff;
 $font-dark: #474747;
 $font-bk: #000;
@@ -37,6 +37,34 @@ $ins8:#F77737;
 $ins9:#FCAF45;
 $ins10: #FFDC80;
 
+.d-color {
+    color: $font-d;
+}
+
+.exbold {
+    font-weight: 700;
+}
+
+.f{
+    &-18 {
+        font-size: 18px;
+    }
+    &-16 {
+        font-size: 16px;
+    }
+    &-14 {
+        font-size: 14px;
+    }
+    &-12 {
+        font-size: 12px;
+    }
+    &-10 {
+        font-size: 10px;
+    }
+}
+.mw-1100 {
+    max-width: 1100px;
+}
 .wrapper.admin {
     color: #474747;
 
@@ -337,4 +365,57 @@ $ins10: #FFDC80;
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .qmc-card {
+      background-size: 400%;
+      background-position: center;
+
+      width: 384px;
+      height: 230px;
+      border-radius: 10px;
+
+      padding: 1rem 1.5rem;
+      
+      .en-title {
+          font-family: 'Open sans';
+      }
+      .qmc-point {
+          font-size: 65px;
+      }
+
+      .card-body {
+          padding: .8rem 1.5rem;
+      }
+  }
+  .qmc-tips {
+      max-width: 350px;
+      width: 100%;
+  }
+
+  .card-part {
+      width: 780px;
+  }
+
+  .point-table {
+
+    font-size: 14px;
+
+    &.table thead th {
+        border-bottom: none;
+    }
+    &.table .thead-dark th {
+        background: #474747;
+    }
+    tbody tr {
+        background: #fff;
+        border: 1px solid #DDDDDD;
+    }
+    label {
+        margin-bottom: 0;
+    }
+  }
+
+  .warning {
+      color: $red;
   }
