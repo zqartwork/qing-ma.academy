@@ -2006,16 +2006,22 @@
     </script>
     <!-- search-bar-style -->
     <script>
-        $('.control').click(function () {
-            $('.navbar').addClass('search-active');
-            $('.input-search').focus();
-            $('.icon-close').show();
-        });
-        $('.icon-close').click(function () {
-            $('.navbar').removeClass('search-active');
-            $('.icon-close').hide();
+        $(document).ready(function () {
+            $('.control').click(function () {
+                $('.navbar').addClass('search-active');
+                $('.input-search').focus();
+                $('.icon-close').show();
+            });
+            $('.icon-close').click(function () {
+                $('.navbar').removeClass('search-active');
+                $('.icon-close').hide();
 
-        });
+            });
+            $('.fa-question-circle').tooltip({
+                placement: 'top'
+            });
+
+        })
 
         // // 調整登入按鈕的位置
         // $('#logIn').click(function () {
@@ -2032,9 +2038,6 @@
     <!-- slick-arrows 調整 -->
     <script src="js/custom.js"></script>
     <script>
-        $('.fa-question-circle').tooltip({
-            placement: 'top'
-        });
     </script>
 
 </body>
